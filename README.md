@@ -11,7 +11,7 @@ It is much needed as a synthesis of developments happening in the software build
 - [Pogues](https://github.com/InseeFr/Pogues)
 - [Eno](https://github.com/InseeFr/Eno/)
 - [Lunatic](https://github.com/InseeFr/Lunatic/)
-- Stromae
+- [Stromae V2](https://github.com/InseeFr/Stromae/tree/v2-develop)
 - [Queen](https://github.com/InseeFr/Queen)
 
 Documentation will also be provided through this initiative and synchronisation with the overall steering tool of the data collection system.
@@ -25,7 +25,7 @@ C'est une synthèse nécessaire des développements produits dans les différent
 - [Pogues](https://github.com/InseeFr/Pogues)
 - [Eno](https://github.com/InseeFr/Eno/)
 - [Lunatic](https://github.com/InseeFr/Lunatic/)
-- Stromae
+- [Stromae V2](https://github.com/InseeFr/Stromae/tree/v2-develop)
 - [Queen](https://github.com/InseeFr/Queen)
 
 De la documentation sera également fournie à travers ce dépôt ainsi qu'une synchronisation avec l'outil de pilotage global de la filière de collecte.
