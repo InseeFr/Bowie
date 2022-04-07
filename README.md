@@ -6,7 +6,7 @@
 
 This repo is for keeping track of progress of the Survey Design product built at Insee and communicating results (or lack thereof).
 
-It is much needed as a synthesis of developments happening in the software building blocks of this product:
+It is a much needed as a synthesis of developments happening in the software building blocks of this product:
 
 - [Pogues](https://github.com/InseeFr/Pogues)
 - [Eno](https://github.com/InseeFr/Eno/)
