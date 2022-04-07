@@ -29,3 +29,7 @@ C'est une synthèse nécessaire des développements produits dans les différent
 - [Queen](https://github.com/InseeFr/Queen)
 
 De la documentation sera également fournie à travers ce dépôt ainsi qu'une synchronisation avec l'outil de pilotage global de la filière de collecte.
+
+# Progress 🔮
+
+Currently, progress is being tracked through [the roadmap kanban for 2022](https://github.com/InseeFr/Umbrella/projects/1).
