@@ -8,15 +8,19 @@ assignees: ''
 ---
 
 # Business case
-
 _here describe the business case_
 
 # Stack
-
 _here describe the impact on the product softwares, linking to related issues_
 
 ## Pogues
-<issue #999>
+_link to project issues_
+
+## Eno
+_link to project issues_
+
+## Lunatic
+_link to project issues_
 
 # Progress
 _describe progress_
