@@ -13,6 +13,9 @@ _here describe the business case_
 # Stack
 _here describe the impact on the product softwares, linking to related issues_
 
+## DDI
+_impact of the business case on the DDI use_
+
 ## Pogues
 _link to project issues_
 
