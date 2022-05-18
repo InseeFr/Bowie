@@ -1,0 +1,5425 @@
+{
+  "owner": "TEST",
+  "ComponentGroup": [
+    {
+      "MemberReference": [
+        "j6p0ti5h",
+        "j6p3dkx6",
+        "j6p0np9q",
+        "j6p0s7o5",
+        "j3343qhx",
+        "j6q9h8tj",
+        "kiq71eoi",
+        "k5nvty2o",
+        "k5nw1fir",
+        "k5nw0w05",
+        "k5nvu98z",
+        "k5nw8ei1",
+        "k5nw9dk4",
+        "k5nw6hr0",
+        "k5nweurr",
+        "kiq51oqq",
+        "j6z06z1e",
+        "j3341528",
+        "j3343clt",
+        "j6qdfhvw",
+        "j4nw5cqz",
+        "j6qe0h9q",
+        "j334akov",
+        "j6p29i81",
+        "j6qefnga",
+        "j6yzoc6g",
+        "j4nw88h2",
+        "j6qe237q",
+        "j4nwc63q",
+        "k9cg2q5t",
+        "j6qejudb",
+        "kbkjvgel",
+        "j6qeh91y",
+        "j6p2lwuj",
+        "j6qfx9qe",
+        "j6qg8rc6",
+        "jvxux0mi",
+        "jvxwy68n",
+        "kiq5mr0b",
+        "kiq612ky",
+        "kiq5u8d5",
+        "kiq66gtw",
+        "kiq5r8wu",
+        "kiq5xw5p",
+        "kiq65x3c",
+        "kiq651zv",
+        "j6z12s2d",
+        "j6z0z3us",
+        "idendquest"
+      ],
+      "Label": [
+        "Components for page 1"
+      ],
+      "id": "kn8j1ws4",
+      "Name": "PAGE_1"
+    }
+  ],
+  "agency": "fr.insee",
+  "genericName": "QUESTIONNAIRE",
+  "Label": [
+    "Questionnaire SIMPSONS"
+  ],
+  "Name": "m1",
+  "Variables": {
+    "Variable": [
+      {
+        "Formula": "$PERCENTAGE_EXPENSES11$ + $PERCENTAGE_EXPENSES21$ + $PERCENTAGE_EXPENSES31$ + $PERCENTAGE_EXPENSES41$ + $PERCENTAGE_EXPENSES51$ + $PERCENTAGE_EXPENSES61$ + $PERCENTAGE_EXPENSES71$",
+        "Scope": "j6qg8rc6",
+        "Label": "SUM_EXPENSES label",
+        "id": "jbcggtca",
+        "type": "CalculatedVariableType",
+        "Name": "SUM_EXPENSES",
+        "Datatype": {
+          "Maximum": "700",
+          "Minimum": 0,
+          "typeName": "NUMERIC",
+          "Unit": "http://id.insee.fr/unit/percent",
+          "type": "NumericDatatypeType",
+          "Decimals": 1
+        }
+      },
+      {
+        "Formula": "'2020'",
+        "Scope": "j6qg8rc6",
+        "Label": "YEAR label",
+        "id": "k5c7bg4m",
+        "type": "CalculatedVariableType",
+        "Name": "YEAR",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": "4"
+        }
+      },
+      {
+        "Label": "LAST_BROADCAST label",
+        "id": "jbcggtex",
+        "type": "ExternalVariableType",
+        "Name": "LAST_BROADCAST",
+        "Datatype": {
+          "Format": "YYYY-MM-DD",
+          "typeName": "DATE",
+          "type": "DateDatatypeType"
+        }
+      },
+      {
+        "Label": "COMMENT label",
+        "id": "k5o13pjw",
+        "type": "CollectedVariableType",
+        "Name": "COMMENT",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 500
+        }
+      },
+      {
+        "Label": "READY label",
+        "id": "jbcgm0ip",
+        "type": "CollectedVariableType",
+        "Name": "READY",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "PRODUCER label",
+        "id": "jbcgf11f",
+        "type": "CollectedVariableType",
+        "Name": "PRODUCER",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 30
+        }
+      },
+      {
+        "Label": "SEASON_NUMBER label",
+        "id": "k5nvrul1",
+        "type": "CollectedVariableType",
+        "Name": "SEASON_NUMBER",
+        "Datatype": {
+          "Maximum": 99,
+          "Minimum": "0",
+          "typeName": "NUMERIC",
+          "Unit": "\n              ",
+          "type": "NumericDatatypeType",
+          "Decimals": 0
+        }
+      },
+      {
+        "Label": "DATEFIRST label",
+        "id": "kiq724hw",
+        "type": "CollectedVariableType",
+        "Name": "DATEFIRST",
+        "Datatype": {
+          "Format": "YYYY-MM-DD",
+          "typeName": "DATE",
+          "type": "DateDatatypeType"
+        }
+      },
+      {
+        "Label": "DATEYYYYMM label",
+        "id": "k5nwv90l",
+        "type": "CollectedVariableType",
+        "Name": "DATEYYYYMM",
+        "Datatype": {
+          "Minimum": "1980-05",
+          "Format": "YYYY-MM",
+          "typeName": "DATE",
+          "type": "DateDatatypeType"
+        }
+      },
+      {
+        "Label": "DATEYYYY label",
+        "id": "k5nvzf93",
+        "type": "CollectedVariableType",
+        "Name": "DATEYYYY",
+        "Datatype": {
+          "Format": "YYYY",
+          "typeName": "DATE",
+          "type": "DateDatatypeType"
+        }
+      },
+      {
+        "Label": "DURATIONH label",
+        "id": "k5nvyfi4",
+        "type": "CollectedVariableType",
+        "Name": "DURATIONH",
+        "Datatype": {
+          "Maximum": "70",
+          "Minimum": "0",
+          "typeName": "NUMERIC",
+          "Unit": "http://id.insee.fr/unit/heure",
+          "type": "NumericDatatypeType",
+          "Decimals": "2"
+        }
+      },
+      {
+        "Label": "DURATIOND label",
+        "id": "k5nw7iv0",
+        "type": "CollectedVariableType",
+        "Name": "DURATIOND",
+        "Datatype": {
+          "Maximum": "366",
+          "Minimum": "0",
+          "typeName": "NUMERIC",
+          "Unit": "http://id.insee.fr/unit/jour",
+          "type": "NumericDatatypeType",
+          "Decimals": "1"
+        }
+      },
+      {
+        "Label": "DURATIONM label",
+        "id": "k5nvwiza",
+        "type": "CollectedVariableType",
+        "Name": "DURATIONM",
+        "Datatype": {
+          "Maximum": "12",
+          "Minimum": "0",
+          "typeName": "NUMERIC",
+          "Unit": "http://id.insee.fr/unit/mois",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Label": "DURATIONY label",
+        "id": "k5nwa2sr",
+        "type": "CollectedVariableType",
+        "Name": "DURATIONY",
+        "Datatype": {
+          "Maximum": "100",
+          "Minimum": "0",
+          "typeName": "NUMERIC",
+          "Unit": "http://id.insee.fr/unit/annee",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Label": "DURATIONYM label",
+        "id": "kiq7klwi",
+        "type": "CollectedVariableType",
+        "Name": "DURATIONYM",
+        "Datatype": {
+          "Maximum": "P120Y0M",
+          "Format": "PnYnM",
+          "typeName": "DURATION",
+          "type": "DurationDatatypeType"
+        }
+      },
+      {
+        "Label": "DURATIONHM label",
+        "id": "k5nvxi9g",
+        "type": "CollectedVariableType",
+        "Name": "DURATIONHM",
+        "Datatype": {
+          "Format": "PTnHnM",
+          "typeName": "DURATION",
+          "type": "DurationDatatypeType"
+        }
+      },
+      {
+        "Label": "DURATIONHH label",
+        "id": "kiq75oiv",
+        "type": "CollectedVariableType",
+        "Name": "DURATIONHH",
+        "Datatype": {
+          "Format": "PTnHnM",
+          "typeName": "DURATION",
+          "type": "DurationDatatypeType"
+        }
+      },
+      {
+        "Label": "AUDIENCE_SHARE label",
+        "id": "jbcgieyw",
+        "type": "CollectedVariableType",
+        "Name": "AUDIENCE_SHARE",
+        "Datatype": {
+          "Maximum": 99,
+          "Minimum": 0,
+          "typeName": "NUMERIC",
+          "type": "NumericDatatypeType",
+          "Decimals": 1
+        }
+      },
+      {
+        "Label": "CITY label",
+        "id": "kbkkbamb",
+        "type": "CollectedVariableType",
+        "CodeListReference": "j334iumu",
+        "Name": "CITY",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "MAYOR label",
+        "id": "khokr3d5",
+        "type": "CollectedVariableType",
+        "CodeListReference": "j6qdqoen",
+        "Name": "MAYOR",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "MAYOROTCL label",
+        "id": "khokrxjr",
+        "type": "CollectedVariableType",
+        "Name": "MAYOROTCL",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": "249"
+        }
+      },
+      {
+        "Label": "STATE label",
+        "id": "k5nywfh2",
+        "type": "CollectedVariableType",
+        "CodeListReference": "j4nwo00f",
+        "Name": "STATE",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "1 - Santa's Little Helper",
+        "id": "khokodq3",
+        "type": "CollectedVariableType",
+        "Name": "PET1",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "2 - Snowball I",
+        "id": "khokvtc3",
+        "type": "CollectedVariableType",
+        "Name": "PET2",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "3 - Coltrane",
+        "id": "khokn596",
+        "type": "CollectedVariableType",
+        "Name": "PET3",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "O - Other name",
+        "id": "khokqyqi",
+        "type": "CollectedVariableType",
+        "Name": "PET4",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "PETOCL label",
+        "id": "khol7yu4",
+        "type": "CollectedVariableType",
+        "Name": "PETOCL",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": "249"
+        }
+      },
+      {
+        "Label": "1 - Vanilla",
+        "id": "kiq5m50u",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jbdxh138",
+        "Name": "ICE_FLAVOUR1",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "2 - Strawberry",
+        "id": "kiq5ozuv",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jbdxh138",
+        "Name": "ICE_FLAVOUR2",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "3 - Apple",
+        "id": "kiq5tapt",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jbdxh138",
+        "Name": "ICE_FLAVOUR3",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "OT - Other flavour",
+        "id": "kiq5sxcq",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jbdxh138",
+        "Name": "ICE_FLAVOUR4",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "ICE_FLAVOUROTCL label",
+        "id": "kiq5n8gf",
+        "type": "CollectedVariableType",
+        "Name": "ICE_FLAVOUROTCL",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": "249"
+        }
+      },
+      {
+        "Label": "1 - Charles Montgomery Burns",
+        "id": "jbdy4nhp",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jbdxh138",
+        "Name": "NUCLEAR_CHARACTER1",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "2 - Carl Carlson",
+        "id": "jbdxtanu",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jbdxh138",
+        "Name": "NUCLEAR_CHARACTER2",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "3 - Otto Mann",
+        "id": "jbdy25if",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jbdxh138",
+        "Name": "NUCLEAR_CHARACTER3",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "4 - Carl Carlson",
+        "id": "jbdxvta8",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jbdxh138",
+        "Name": "NUCLEAR_CHARACTER4",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "1 - Selma Bouvier",
+        "id": "jbdy3nh7",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jbdxricm",
+        "Name": "BIRTH_CHARACTER1",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "2 - Kent Brockman",
+        "id": "jbdy6lk3",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jbdxricm",
+        "Name": "BIRTH_CHARACTER2",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "3 - Milhouse Van Houten",
+        "id": "jbdxsby0",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jbdxricm",
+        "Name": "BIRTH_CHARACTER3",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "4 - Nelson Muntz",
+        "id": "jbdy7sra",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jbdxricm",
+        "Name": "BIRTH_CHARACTER4",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "5 - Crazy Cat Lady",
+        "id": "jbdy2wyl",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jbdxricm",
+        "Name": "BIRTH_CHARACTER5",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "Ice creams-Percentage",
+        "id": "kbrnt6wl",
+        "type": "CollectedVariableType",
+        "Name": "PERCENTAGE_EXPENSES11",
+        "Datatype": {
+          "Maximum": 100,
+          "Minimum": 0,
+          "typeName": "NUMERIC",
+          "Unit": "http://id.insee.fr/unit/percent",
+          "type": "NumericDatatypeType",
+          "Decimals": 1
+        }
+      },
+      {
+        "Label": "Jasper Beardly-Percentage",
+        "id": "kbrnnrzt",
+        "type": "CollectedVariableType",
+        "Name": "PERCENTAGE_EXPENSES21",
+        "Datatype": {
+          "Maximum": 100,
+          "Minimum": 0,
+          "typeName": "NUMERIC",
+          "Unit": "http://id.insee.fr/unit/percent",
+          "type": "NumericDatatypeType",
+          "Decimals": 1
+        }
+      },
+      {
+        "Label": "Bacon-Percentage",
+        "id": "kbrnizqp",
+        "type": "CollectedVariableType",
+        "Name": "PERCENTAGE_EXPENSES31",
+        "Datatype": {
+          "Maximum": 100,
+          "Minimum": 0,
+          "typeName": "NUMERIC",
+          "Unit": "http://id.insee.fr/unit/percent",
+          "type": "NumericDatatypeType",
+          "Decimals": 1
+        }
+      },
+      {
+        "Label": "Pork chop-Percentage",
+        "id": "kbrnq58i",
+        "type": "CollectedVariableType",
+        "Name": "PERCENTAGE_EXPENSES41",
+        "Datatype": {
+          "Maximum": 100,
+          "Minimum": 0,
+          "typeName": "NUMERIC",
+          "Unit": "http://id.insee.fr/unit/percent",
+          "type": "NumericDatatypeType",
+          "Decimals": 1
+        }
+      },
+      {
+        "Label": "Chicken-Percentage",
+        "id": "kbrnol5q",
+        "type": "CollectedVariableType",
+        "Name": "PERCENTAGE_EXPENSES51",
+        "Datatype": {
+          "Maximum": 100,
+          "Minimum": 0,
+          "typeName": "NUMERIC",
+          "Unit": "http://id.insee.fr/unit/percent",
+          "type": "NumericDatatypeType",
+          "Decimals": 1
+        }
+      },
+      {
+        "Label": "Powersauce-Percentage",
+        "id": "kbrnrvw8",
+        "type": "CollectedVariableType",
+        "Name": "PERCENTAGE_EXPENSES61",
+        "Datatype": {
+          "Maximum": 100,
+          "Minimum": 0,
+          "typeName": "NUMERIC",
+          "Unit": "http://id.insee.fr/unit/percent",
+          "type": "NumericDatatypeType",
+          "Decimals": 1
+        }
+      },
+      {
+        "Label": "Other-Percentage",
+        "id": "kbrnxlbs",
+        "type": "CollectedVariableType",
+        "Name": "PERCENTAGE_EXPENSES71",
+        "Datatype": {
+          "Maximum": 100,
+          "Minimum": 0,
+          "typeName": "NUMERIC",
+          "Unit": "http://id.insee.fr/unit/percent",
+          "type": "NumericDatatypeType",
+          "Decimals": 1
+        }
+      },
+      {
+        "Label": "Total-Percentage",
+        "id": "kbrnsdsz",
+        "type": "CollectedVariableType",
+        "Name": "PERCENTAGE_EXPENSES81",
+        "Datatype": {
+          "Maximum": 100,
+          "Minimum": 0,
+          "typeName": "NUMERIC",
+          "Unit": "http://id.insee.fr/unit/percent",
+          "type": "NumericDatatypeType",
+          "Decimals": 1
+        }
+      },
+      {
+        "Label": "Ice creams-In his last food shopping",
+        "id": "kiq70n2n",
+        "type": "CollectedVariableType",
+        "CodeListReference": "kiq6nvuw",
+        "Name": "LAST_FOOD_SHOPPING11",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "Jasper Beardly-In his last food shopping",
+        "id": "kiq711j5",
+        "type": "CollectedVariableType",
+        "CodeListReference": "kiq6nvuw",
+        "Name": "LAST_FOOD_SHOPPING21",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "Bacon-In his last food shopping",
+        "id": "kiq6t03g",
+        "type": "CollectedVariableType",
+        "CodeListReference": "kiq6nvuw",
+        "Name": "LAST_FOOD_SHOPPING31",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "Pork chop-In his last food shopping",
+        "id": "kiq6kl68",
+        "type": "CollectedVariableType",
+        "CodeListReference": "kiq6nvuw",
+        "Name": "LAST_FOOD_SHOPPING41",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "Chicken-In his last food shopping",
+        "id": "kiq6num0",
+        "type": "CollectedVariableType",
+        "CodeListReference": "kiq6nvuw",
+        "Name": "LAST_FOOD_SHOPPING51",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "Powersauce-In his last food shopping",
+        "id": "kiq6vzhq",
+        "type": "CollectedVariableType",
+        "CodeListReference": "kiq6nvuw",
+        "Name": "LAST_FOOD_SHOPPING61",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "Other-In his last food shopping",
+        "id": "kiq6j9y2",
+        "type": "CollectedVariableType",
+        "CodeListReference": "kiq6nvuw",
+        "Name": "LAST_FOOD_SHOPPING71",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "Total-In his last food shopping",
+        "id": "kiq6iysv",
+        "type": "CollectedVariableType",
+        "CodeListReference": "kiq6nvuw",
+        "Name": "LAST_FOOD_SHOPPING81",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "LAST_FOOD_SHOPPING113CL label",
+        "id": "kiq6s6h4",
+        "type": "CollectedVariableType",
+        "Name": "LAST_FOOD_SHOPPING113CL",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": "249"
+        }
+      },
+      {
+        "Label": "LAST_FOOD_SHOPPING213CL label",
+        "id": "kiq6nxdm",
+        "type": "CollectedVariableType",
+        "Name": "LAST_FOOD_SHOPPING213CL",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": "249"
+        }
+      },
+      {
+        "Label": "LAST_FOOD_SHOPPING313CL label",
+        "id": "kiq71jcl",
+        "type": "CollectedVariableType",
+        "Name": "LAST_FOOD_SHOPPING313CL",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": "249"
+        }
+      },
+      {
+        "Label": "LAST_FOOD_SHOPPING413CL label",
+        "id": "kiq6xeyd",
+        "type": "CollectedVariableType",
+        "Name": "LAST_FOOD_SHOPPING413CL",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": "249"
+        }
+      },
+      {
+        "Label": "LAST_FOOD_SHOPPING513CL label",
+        "id": "kiq6o5db",
+        "type": "CollectedVariableType",
+        "Name": "LAST_FOOD_SHOPPING513CL",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": "249"
+        }
+      },
+      {
+        "Label": "LAST_FOOD_SHOPPING613CL label",
+        "id": "kiq6mbhy",
+        "type": "CollectedVariableType",
+        "Name": "LAST_FOOD_SHOPPING613CL",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": "249"
+        }
+      },
+      {
+        "Label": "LAST_FOOD_SHOPPING713CL label",
+        "id": "kiq6n5we",
+        "type": "CollectedVariableType",
+        "Name": "LAST_FOOD_SHOPPING713CL",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": "249"
+        }
+      },
+      {
+        "Label": "LAST_FOOD_SHOPPING813CL label",
+        "id": "kiq6snxi",
+        "type": "CollectedVariableType",
+        "Name": "LAST_FOOD_SHOPPING813CL",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": "249"
+        }
+      },
+      {
+        "Label": "Break the windows of the whole city-Clowning",
+        "id": "kiq71cxr",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jbdyh6b5",
+        "Name": "CLOWNING11",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "Loose the violin of his daughter playing poker-Clowning",
+        "id": "kiq6y9w5",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jbdyh6b5",
+        "Name": "CLOWNING21",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "Kill Mr Burns-Clowning",
+        "id": "kiq6lmpy",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jbdyh6b5",
+        "Name": "CLOWNING31",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "Leaving a mechanical object to control the nuclear power plant-Clowning",
+        "id": "kiq74jqk",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jbdyh6b5",
+        "Name": "CLOWNING41",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "Break the windows of the whole city-Remember?",
+        "id": "kiq6vmcb",
+        "type": "CollectedVariableType",
+        "Name": "CLOWNING12",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 255
+        }
+      },
+      {
+        "Label": "Loose the violin of his daughter playing poker-Remember?",
+        "id": "kiq6k440",
+        "type": "CollectedVariableType",
+        "Name": "CLOWNING22",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 255
+        }
+      },
+      {
+        "Label": "Kill Mr Burns-Remember?",
+        "id": "kiq73uz2",
+        "type": "CollectedVariableType",
+        "Name": "CLOWNING32",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 255
+        }
+      },
+      {
+        "Label": "Leaving a mechanical object to control the nuclear power plant-Remember?",
+        "id": "kiq6kyr3",
+        "type": "CollectedVariableType",
+        "Name": "CLOWNING42",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 255
+        }
+      },
+      {
+        "Label": "Car-Brazil-Means",
+        "id": "jbgd1zxu",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL11",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Bike-Brazil-Means",
+        "id": "jbgd8lfs",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL21",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Skateboard-Brazil-Means",
+        "id": "jbgd56qo",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL31",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Plane-Brazil-Means",
+        "id": "jbgd4wu8",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL41",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Car-Canada-Means",
+        "id": "jbgdak6h",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL12",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Bike-Canada-Means",
+        "id": "jbgdmsy4",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL22",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Skateboard-Canada-Means",
+        "id": "jbgd2zlu",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL32",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Plane-Canada-Means",
+        "id": "jbgd6v73",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL42",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Car-Japan-Means",
+        "id": "jbgdf5fg",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL13",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Bike-Japan-Means",
+        "id": "jbgd2xg0",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL23",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Skateboard-Japan-Means",
+        "id": "jbgdc06l",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL33",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Plane-Japan-Means",
+        "id": "jbgdb8i9",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL43",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Car-France-Means",
+        "id": "jbgdhzve",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL14",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Bike-France-Means",
+        "id": "jbgd93ks",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL24",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Skateboard-France-Means",
+        "id": "jbgdfw7h",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL34",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Plane-France-Means",
+        "id": "jbgdfavn",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL44",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Car-Other country-Means",
+        "id": "jbgdc199",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL15",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Bike-Other country-Means",
+        "id": "jbgdfqph",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL25",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Skateboard-Other country-Means",
+        "id": "jbgd8r0n",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL35",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Plane-Other country-Means",
+        "id": "jbgd3aqk",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL45",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Car-Other Planet-Means",
+        "id": "jbgdltql",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL16",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Bike-Other Planet-Means",
+        "id": "jbgd9um3",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL26",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Skateboard-Other Planet-Means",
+        "id": "jbgddj7v",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL36",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "Plane-Other Planet-Means",
+        "id": "jbgdb4ym",
+        "type": "CollectedVariableType",
+        "Name": "TRAVEL46",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Scope": "j6qg8rc6",
+        "Label": "Name",
+        "id": "kiq7llp5",
+        "type": "CollectedVariableType",
+        "Name": "FAVOURITE_CHAR1",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 255
+        }
+      },
+      {
+        "Scope": "j6qg8rc6",
+        "Label": "Age",
+        "id": "kiq7m8zd",
+        "type": "CollectedVariableType",
+        "Name": "FAVOURITE_CHAR2",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 255
+        }
+      },
+      {
+        "Scope": "j6qg8rc6",
+        "Label": "Member of the Simpsons family",
+        "id": "kiq7srd4",
+        "type": "CollectedVariableType",
+        "CodeListReference": "kiq7ditg",
+        "Name": "FAVOURITE_CHAR3",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Scope": "j6qg8rc6",
+        "Label": "FAVOURITE_CHAR33CL label",
+        "id": "kiq7vkqw",
+        "type": "CollectedVariableType",
+        "Name": "FAVOURITE_CHAR33CL",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": "249"
+        }
+      },
+      {
+        "Label": "1 - Jay",
+        "id": "kiq6zx0p",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jvxv1ko0",
+        "Name": "FEELCHAREV1",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "2 - Bart",
+        "id": "kiq71fzn",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jvxv1ko0",
+        "Name": "FEELCHAREV2",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "3 - Krusty the clown",
+        "id": "kiq6zy29",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jvxv1ko0",
+        "Name": "FEELCHAREV3",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "O - Other",
+        "id": "kiq72rl0",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jvxv1ko0",
+        "Name": "FEELCHAREV4",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "Leave with pay-Days",
+        "id": "jvxwurs0",
+        "type": "CollectedVariableType",
+        "Name": "LEAVDURATION11",
+        "Datatype": {
+          "Maximum": 365,
+          "Minimum": 0,
+          "typeName": "NUMERIC",
+          "type": "NumericDatatypeType"
+        }
+      },
+      {
+        "Label": "Public holiday-Days",
+        "id": "jvxx7a3e",
+        "type": "CollectedVariableType",
+        "Name": "LEAVDURATION21",
+        "Datatype": {
+          "Maximum": 365,
+          "Minimum": 0,
+          "typeName": "NUMERIC",
+          "type": "NumericDatatypeType"
+        }
+      },
+      {
+        "Label": "Sick leave-Days",
+        "id": "jvxx3szl",
+        "type": "CollectedVariableType",
+        "Name": "LEAVDURATION31",
+        "Datatype": {
+          "Maximum": 365,
+          "Minimum": 0,
+          "typeName": "NUMERIC",
+          "type": "NumericDatatypeType"
+        }
+      },
+      {
+        "Label": "Maternity/paternity leave-Days",
+        "id": "jvxx1c0k",
+        "type": "CollectedVariableType",
+        "Name": "LEAVDURATION41",
+        "Datatype": {
+          "Maximum": 365,
+          "Minimum": 0,
+          "typeName": "NUMERIC",
+          "type": "NumericDatatypeType"
+        }
+      },
+      {
+        "Label": "Other type-Days",
+        "id": "jvxx4nhp",
+        "type": "CollectedVariableType",
+        "Name": "LEAVDURATION51",
+        "Datatype": {
+          "Maximum": 365,
+          "Minimum": 0,
+          "typeName": "NUMERIC",
+          "type": "NumericDatatypeType"
+        }
+      },
+      {
+        "Label": "Leave with pay-Unit",
+        "id": "jvxx5hol",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jvxulmed",
+        "Name": "LEAVDURATION12",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "Public holiday-Unit",
+        "id": "jvxwzczf",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jvxulmed",
+        "Name": "LEAVDURATION22",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "Sick leave-Unit",
+        "id": "jvxwz82f",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jvxulmed",
+        "Name": "LEAVDURATION32",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "Maternity/paternity leave-Unit",
+        "id": "jvxwvnc2",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jvxulmed",
+        "Name": "LEAVDURATION42",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "Other type-Unit",
+        "id": "jvxwzx4m",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jvxulmed",
+        "Name": "LEAVDURATION52",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "NB_CHAR label",
+        "id": "kiq60ilu",
+        "type": "CollectedVariableType",
+        "Name": "NB_CHAR",
+        "Datatype": {
+          "Maximum": "20",
+          "Minimum": "0",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Scope": "kiq7bjam",
+        "Label": "NAME_CHAR label",
+        "id": "kiq6396s",
+        "type": "CollectedVariableType",
+        "Name": "NAME_CHAR",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": "30"
+        }
+      },
+      {
+        "Scope": "kiq7bjam",
+        "Label": "AGE_CHAR label",
+        "id": "kiq65x82",
+        "type": "CollectedVariableType",
+        "Name": "AGE_CHAR",
+        "Datatype": {
+          "Maximum": "120",
+          "Minimum": "0",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Scope": "kiq7bjam",
+        "Label": "FAVCHAR label",
+        "id": "kiq79qbx",
+        "type": "CollectedVariableType",
+        "CodeListReference": "jbdxh138",
+        "Name": "FAVCHAR",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Scope": "kiq7bjam",
+        "Label": "MEMORY_CHAR label",
+        "id": "kiq693fv",
+        "type": "CollectedVariableType",
+        "Name": "MEMORY_CHAR",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 255
+        }
+      },
+      {
+        "Label": "SURVEY_COMMENT label",
+        "id": "jbcggt4x",
+        "type": "CollectedVariableType",
+        "Name": "SURVEY_COMMENT",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 255
+        }
+      }
+    ]
+  },
+  "lastUpdatedDate": "Thu Apr 08 2021 08:43:26 GMT+0200 (heure d’été d’Europe centrale)",
+  "DataCollection": [
+    {
+      "id": "esa-dc-2018",
+      "uri": "http://ddi:fr.insee:DataCollection.esa-dc-2018",
+      "Name": "Enquête sectorielle annuelle 2018"
+    }
+  ],
+  "final": false,
+  "flowLogic": "REDIRECTION",
+  "id": "simpsonsxpath",
+  "TargetMode": [
+    "CAWI",
+    "PAPI",
+    "CATI",
+    "CAPI"
+  ],
+  "CodeLists": {
+    "CodeList": [
+      {
+        "Label": "TOWN",
+        "id": "j334iumu",
+        "Code": [
+          {
+            "Parent": "",
+            "Label": "Springfield",
+            "Value": "00001"
+          },
+          {
+            "Parent": "",
+            "Label": "Shelbyville",
+            "Value": "00002"
+          },
+          {
+            "Parent": "",
+            "Label": "Seinfeld",
+            "Value": "03"
+          }
+        ],
+        "Name": ""
+      },
+      {
+        "Label": "MAYOR",
+        "id": "j6qdqoen",
+        "Code": [
+          {
+            "Parent": "",
+            "Label": "Constance Harm",
+            "Value": "1"
+          },
+          {
+            "Parent": "",
+            "Label": "Timothy Lovejoy",
+            "Value": "2"
+          },
+          {
+            "Parent": "",
+            "Label": "Joe Quimby",
+            "Value": "3"
+          },
+          {
+            "Parent": "",
+            "Label": "Other name",
+            "Value": "OT"
+          }
+        ],
+        "Name": ""
+      },
+      {
+        "Label": "State",
+        "id": "j4nwo00f",
+        "Code": [
+          {
+            "Parent": "",
+            "Label": "Washington",
+            "Value": "1"
+          },
+          {
+            "Parent": "",
+            "Label": "Kentucky",
+            "Value": "2"
+          },
+          {
+            "Parent": "",
+            "Label": "Ohio",
+            "Value": "3"
+          },
+          {
+            "Parent": "",
+            "Label": "Maine",
+            "Value": "4"
+          },
+          {
+            "Parent": "",
+            "Label": "North Dakota",
+            "Value": "5"
+          },
+          {
+            "Parent": "",
+            "Label": "Florida",
+            "Value": "6"
+          },
+          {
+            "Parent": "",
+            "Label": "North Takoma",
+            "Value": "7"
+          },
+          {
+            "Parent": "",
+            "Label": "California",
+            "Value": "8"
+          },
+          {
+            "Parent": "",
+            "Label": "Texas",
+            "Value": "9"
+          },
+          {
+            "Parent": "",
+            "Label": "Massachusetts",
+            "Value": "10"
+          },
+          {
+            "Parent": "",
+            "Label": "Nevada",
+            "Value": "11"
+          },
+          {
+            "Parent": "",
+            "Label": "Illinois",
+            "Value": "12"
+          },
+          {
+            "Parent": "",
+            "Label": "Not in any state, you fool!",
+            "Value": "13"
+          }
+        ],
+        "Name": ""
+      },
+      {
+        "Label": "ANIMALS",
+        "id": "j335cu3c",
+        "Code": [
+          {
+            "Parent": "",
+            "Label": "Santa's Little Helper",
+            "Value": "1"
+          },
+          {
+            "Parent": "",
+            "Label": "Snowball I",
+            "Value": "2"
+          },
+          {
+            "Parent": "",
+            "Label": "Coltrane",
+            "Value": "3"
+          },
+          {
+            "Parent": "",
+            "Label": "Other name",
+            "Value": "O"
+          }
+        ],
+        "Name": ""
+      },
+      {
+        "Label": "Flavours",
+        "id": "j6p2mvca",
+        "Code": [
+          {
+            "Parent": "",
+            "Label": "Vanilla",
+            "Value": "1"
+          },
+          {
+            "Parent": "",
+            "Label": "Strawberry",
+            "Value": "2"
+          },
+          {
+            "Parent": "",
+            "Label": "Apple",
+            "Value": "3"
+          },
+          {
+            "Parent": "",
+            "Label": "Other flavour",
+            "Value": "OT"
+          }
+        ],
+        "Name": ""
+      },
+      {
+        "Label": "YESNO",
+        "id": "jbdxh138",
+        "Code": [
+          {
+            "Parent": "",
+            "Label": "Yes",
+            "Value": "1"
+          },
+          {
+            "Parent": "",
+            "Label": "No",
+            "Value": "0"
+          }
+        ],
+        "Name": ""
+      },
+      {
+        "Label": "NUCLEAR_CHARACTERS",
+        "id": "j6qeytgc",
+        "Code": [
+          {
+            "Parent": "",
+            "Label": "Charles Montgomery Burns",
+            "Value": "1"
+          },
+          {
+            "Parent": "",
+            "Label": "Carl Carlson",
+            "Value": "2"
+          },
+          {
+            "Parent": "",
+            "Label": "Otto Mann",
+            "Value": "3"
+          },
+          {
+            "Parent": "",
+            "Label": "Lenny Leonard",
+            "Value": "4"
+          }
+        ],
+        "Name": ""
+      },
+      {
+        "Label": "BIRTH_CHARACTER",
+        "id": "j6z087mq",
+        "Code": [
+          {
+            "Parent": "",
+            "Label": "Selma Bouvier",
+            "Value": "1"
+          },
+          {
+            "Parent": "",
+            "Label": "Kent Brockman",
+            "Value": "2"
+          },
+          {
+            "Parent": "",
+            "Label": "Milhouse Van Houten",
+            "Value": "3"
+          },
+          {
+            "Parent": "",
+            "Label": "Nelson Muntz",
+            "Value": "4"
+          },
+          {
+            "Parent": "",
+            "Label": "Crazy Cat Lady",
+            "Value": "5"
+          }
+        ],
+        "Name": ""
+      },
+      {
+        "Label": "CITY_BIRTH",
+        "id": "jbdxricm",
+        "Code": [
+          {
+            "Parent": "",
+            "Label": "Albuquerque",
+            "Value": "1"
+          },
+          {
+            "Parent": "",
+            "Label": "Springfield",
+            "Value": "2"
+          },
+          {
+            "Parent": "",
+            "Label": "Portland",
+            "Value": "3"
+          },
+          {
+            "Parent": "",
+            "Label": "Shelbyville",
+            "Value": "4"
+          },
+          {
+            "Parent": "",
+            "Label": "Dagstuhl",
+            "Value": "5"
+          }
+        ],
+        "Name": ""
+      },
+      {
+        "Label": "Products",
+        "id": "j4nwh16i",
+        "Code": [
+          {
+            "Parent": "",
+            "Label": "Frozen products",
+            "Value": "A"
+          },
+          {
+            "Parent": "A",
+            "Label": "Ice creams",
+            "Value": "A1"
+          },
+          {
+            "Parent": "A",
+            "Label": "Jasper Beardly",
+            "Value": "A2"
+          },
+          {
+            "Parent": "",
+            "Label": "Meat",
+            "Value": "B"
+          },
+          {
+            "Parent": "B",
+            "Label": "Bacon",
+            "Value": "B1"
+          },
+          {
+            "Parent": "B",
+            "Label": "Pork chop",
+            "Value": "B2"
+          },
+          {
+            "Parent": "B",
+            "Label": "Chicken",
+            "Value": "B3"
+          },
+          {
+            "Parent": "",
+            "Label": "Compote",
+            "Value": "C"
+          },
+          {
+            "Parent": "C",
+            "Label": "Powersauce",
+            "Value": "C1"
+          },
+          {
+            "Parent": "",
+            "Label": "Other",
+            "Value": "D"
+          },
+          {
+            "Parent": "",
+            "Label": "Total",
+            "Value": "E"
+          }
+        ],
+        "Name": ""
+      },
+      {
+        "Label": "YESNO_Other",
+        "id": "kiq6nvuw",
+        "Code": [
+          {
+            "Parent": "",
+            "Label": "Yes",
+            "Value": "1"
+          },
+          {
+            "Parent": "",
+            "Label": "No",
+            "Value": "2"
+          },
+          {
+            "Parent": "",
+            "Label": "Other",
+            "Value": "3"
+          }
+        ],
+        "Name": ""
+      },
+      {
+        "Label": "Clownings  ",
+        "id": "j77dav9b",
+        "Code": [
+          {
+            "Parent": "",
+            "Label": "***Break the windows of the whole city***",
+            "Value": "1"
+          },
+          {
+            "Parent": "",
+            "Label": "***Loose the violin of his daughter playing poker***",
+            "Value": "2"
+          },
+          {
+            "Parent": "",
+            "Label": "***Kill Mr Burns***",
+            "Value": "3"
+          },
+          {
+            "Parent": "",
+            "Label": "***Leaving a mechanical object to control the nuclear power plant***",
+            "Value": "4"
+          }
+        ],
+        "Name": ""
+      },
+      {
+        "Label": "Clowning_Characters",
+        "id": "jbdyh6b5",
+        "Code": [
+          {
+            "Parent": "",
+            "Label": "Jay",
+            "Value": "1"
+          },
+          {
+            "Parent": "",
+            "Label": "Bart",
+            "Value": "2"
+          },
+          {
+            "Parent": "",
+            "Label": "Krusty the clown",
+            "Value": "3"
+          },
+          {
+            "Parent": "",
+            "Label": "Other",
+            "Value": "O"
+          }
+        ],
+        "Name": ""
+      },
+      {
+        "Label": "Means of transport",
+        "id": "j6p2kivg",
+        "Code": [
+          {
+            "Parent": "",
+            "Label": "Car",
+            "Value": "1"
+          },
+          {
+            "Parent": "",
+            "Label": "Bike",
+            "Value": "2"
+          },
+          {
+            "Parent": "",
+            "Label": "Skateboard",
+            "Value": "3"
+          },
+          {
+            "Parent": "",
+            "Label": "Plane",
+            "Value": "4"
+          }
+        ],
+        "Name": ""
+      },
+      {
+        "Label": "Country",
+        "id": "jbdye1wa",
+        "Code": [
+          {
+            "Parent": "",
+            "Label": "Brazil",
+            "Value": "1"
+          },
+          {
+            "Parent": "",
+            "Label": "Canada",
+            "Value": "2"
+          },
+          {
+            "Parent": "",
+            "Label": "Japan",
+            "Value": "3"
+          },
+          {
+            "Parent": "",
+            "Label": "France",
+            "Value": "4"
+          },
+          {
+            "Parent": "",
+            "Label": "[Other country](. \"Included principalities\")",
+            "Value": "5"
+          },
+          {
+            "Parent": "",
+            "Label": "Other planet",
+            "Value": "6"
+          }
+        ],
+        "Name": ""
+      },
+      {
+        "Label": "Yes-No-Other-Family",
+        "id": "kiq7ditg",
+        "Code": [
+          {
+            "Parent": "",
+            "Label": "Yes",
+            "Value": "1"
+          },
+          {
+            "Parent": "",
+            "Label": "No",
+            "Value": "2"
+          },
+          {
+            "Parent": "",
+            "Label": "Other",
+            "Value": "3"
+          }
+        ],
+        "Name": ""
+      },
+      {
+        "Label": "Evolution",
+        "id": "jvxv1ko0",
+        "Code": [
+          {
+            "Parent": "",
+            "Label": "Up",
+            "Value": "1"
+          },
+          {
+            "Parent": "",
+            "Label": "Down",
+            "Value": "2"
+          },
+          {
+            "Parent": "",
+            "Label": "Steady",
+            "Value": "3"
+          }
+        ],
+        "Name": ""
+      },
+      {
+        "Label": "TypeOfLeave",
+        "id": "jvxx60bh",
+        "Code": [
+          {
+            "Parent": "",
+            "Label": "Leave with pay",
+            "Value": "1"
+          },
+          {
+            "Parent": "",
+            "Label": "Public holiday",
+            "Value": "2"
+          },
+          {
+            "Parent": "",
+            "Label": "Sick leave",
+            "Value": "3"
+          },
+          {
+            "Parent": "",
+            "Label": "Maternity/paternity leave",
+            "Value": "4"
+          },
+          {
+            "Parent": "",
+            "Label": "Other type",
+            "Value": "5"
+          }
+        ],
+        "Name": ""
+      },
+      {
+        "Label": "Unit",
+        "id": "jvxulmed",
+        "Code": [
+          {
+            "Parent": "",
+            "Label": "Working Days",
+            "Value": "1"
+          },
+          {
+            "Parent": "",
+            "Label": "Calendar days",
+            "Value": "2"
+          }
+        ],
+        "Name": ""
+      }
+    ]
+  },
+  "Iterations": {
+    "Iteration": [
+      {
+        "Maximum": "$NB_CHAR$ ",
+        "Minimum": "1",
+        "MemberReference": [
+          "kiq5u8d5"
+        ],
+        "Label": "Add a character",
+        "id": "kiq7bjam",
+        "Step": "1",
+        "type": "DynamicIterationType",
+        "Name": "Loop1"
+      },
+      {
+        "MemberReference": [
+          "kiq5xw5p"
+        ],
+        "id": "kiq7cbgo",
+        "type": "DynamicIterationType",
+        "Name": "Loop2",
+        "IterableReference": "kiq7bjam"
+      }
+    ]
+  },
+  "formulasLanguage": "XPATH",
+  "Child": [
+    {
+      "Control": [],
+      "depth": 1,
+      "FlowControl": [],
+      "genericName": "MODULE",
+      "Label": [
+        "Introduction"
+      ],
+      "id": "j6p0ti5h",
+      "TargetMode": [
+        "CAWI",
+        "PAPI",
+        "CATI",
+        "CAPI"
+      ],
+      "Declaration": [
+        {
+          "declarationType": "HELP",
+          "Text": "We're going to test your knowledge about the simpsons series.&#xd;**Welcome in the simpsons world!**",
+          "id": "d1",
+          "position": "AFTER_QUESTION_TEXT",
+          "DeclarationMode": [
+            "CAWI",
+            "PAPI",
+            "CAPI",
+            "CATI"
+          ]
+        }
+      ],
+      "type": "SequenceType",
+      "Child": [
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "k5o13pjw",
+              "id": "jbgdhaht",
+              "mandatory": true,
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "type": "TextDatatypeType",
+                "MaxLength": 500
+              }
+            }
+          ],
+          "Control": [],
+          "depth": 2,
+          "FlowControl": [],
+          "Label": [
+            "Before starting, do you have any comments about the Simpsons family?"
+          ],
+          "id": "j6p3dkx6",
+          "TargetMode": [
+            "CAWI",
+            "PAPI",
+            "CAPI",
+            "CATI"
+          ],
+          "Declaration": [],
+          "type": "QuestionType",
+          "questionType": "SIMPLE",
+          "Name": "COMMENT"
+        },
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "jbcgm0ip",
+              "id": "jbgd3set",
+              "mandatory": false,
+              "Datatype": {
+                "typeName": "BOOLEAN",
+                "type": "BooleanDatatypeType"
+              }
+            }
+          ],
+          "Control": [],
+          "depth": 2,
+          "FlowControl": [
+            {
+              "Description": "If you are not ready, please go to the end of\n          the questionnaire",
+              "Expression": "$READY$ != '1'",
+              "id": "j6p6my1d",
+              "IfTrue": "j6z12s2d"
+            }
+          ],
+          "Label": [
+            "If you agree to answer this questionnaire, please check the box"
+          ],
+          "id": "j6p0np9q",
+          "TargetMode": [
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [
+            {
+              "declarationType": "HELP",
+              "Text": "If not, this is unfortunately the end of this questionnaire.",
+              "id": "kir6xl1e",
+              "position": "AFTER_QUESTION_TEXT",
+              "DeclarationMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ]
+            }
+          ],
+          "type": "QuestionType",
+          "questionType": "SIMPLE",
+          "Name": "READY"
+        },
+        {
+          "Control": [],
+          "depth": 2,
+          "FlowControl": [],
+          "genericName": "SUBMODULE",
+          "Label": [
+            "General knowledge of the series"
+          ],
+          "id": "j6p0s7o5",
+          "TargetMode": [
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [
+            {
+              "declarationType": "INSTRUCTION",
+              "Text": "We're going to test your general knowledge about the simpsons series.",
+              "id": "kn8j1kv7",
+              "position": "AFTER_QUESTION_TEXT",
+              "DeclarationMode": [
+                "CAPI",
+                "CATI"
+              ]
+            }
+          ],
+          "type": "SequenceType",
+          "Child": [
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "jbcgf11f",
+                  "id": "jbgd90cy",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "type": "TextDatatypeType",
+                    "MaxLength": 30
+                  }
+                }
+              ],
+              "Control": [],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "Who is the producer?"
+              ],
+              "id": "j3343qhx",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "Declaration": [],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "PRODUCER"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "k5nvrul1",
+                  "id": "jbgdjy8h",
+                  "mandatory": true,
+                  "Datatype": {
+                    "Maximum": 99,
+                    "Minimum": "0",
+                    "typeName": "NUMERIC",
+                    "Unit": "\n              ",
+                    "type": "NumericDatatypeType",
+                    "Decimals": 0
+                  }
+                }
+              ],
+              "Control": [
+                {
+                  "post_collect": false,
+                  "Description": "Control that a numeric variable is not null",
+                  "Expression": "$SEASON_NUMBER$ = ''",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "Please enter a season number",
+                  "id": "jqrxtppp"
+                }
+              ],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "What is the current season number?"
+              ],
+              "id": "j6q9h8tj",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "Declaration": [],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "SEASON_NUMBER"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "kiq724hw",
+                  "id": "kiq6q7jd",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Format": "YYYY-MM-DD",
+                    "typeName": "DATE",
+                    "type": "DateDatatypeType"
+                  }
+                }
+              ],
+              "Control": [],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "When was the first episode of Simpsons? (format YYYY-MM-DD)"
+              ],
+              "id": "kiq71eoi",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "HELP",
+                  "Text": "Please answer with YYYY-MM-DD format",
+                  "id": "kiq7dsy2",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAWI",
+                    "PAPI",
+                    "CAPI",
+                    "CATI"
+                  ]
+                }
+              ],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "DATEFIRST"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "k5nwv90l",
+                  "id": "k5nvji1c",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Minimum": "1980-05",
+                    "Format": "YYYY-MM",
+                    "typeName": "DATE",
+                    "type": "DateDatatypeType"
+                  }
+                }
+              ],
+              "Control": [],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "When was the first episode of the Simpsons? (format YYYY-MM)"
+              ],
+              "id": "k5nvty2o",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "HELP",
+                  "Text": "Please answer with YYYY-MM format",
+                  "id": "k5nvxld8",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAWI",
+                    "PAPI",
+                    "CAPI",
+                    "CATI"
+                  ]
+                }
+              ],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "DATEYYYYMM"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "k5nvzf93",
+                  "id": "k5nvkh4k",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Format": "YYYY",
+                    "typeName": "DATE",
+                    "type": "DateDatatypeType"
+                  }
+                }
+              ],
+              "Control": [],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "When was the first episode of the Simpsons? (format YYYY)"
+              ],
+              "id": "k5nw1fir",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "HELP",
+                  "Text": "Please answer with YYYY format",
+                  "id": "k5nvmx3n",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAWI",
+                    "PAPI",
+                    "CAPI",
+                    "CATI"
+                  ]
+                }
+              ],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "DATEYYYY"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "k5nvyfi4",
+                  "id": "k5nw7t0t",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "70",
+                    "Minimum": "0",
+                    "typeName": "NUMERIC",
+                    "Unit": "http://id.insee.fr/unit/heure",
+                    "type": "NumericDatatypeType",
+                    "Decimals": "2"
+                  }
+                }
+              ],
+              "Control": [],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "How long does an episode last?"
+              ],
+              "id": "k5nw0w05",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "Declaration": [],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "DURATIONH"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "k5nw7iv0",
+                  "id": "k5nw21sl",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "366",
+                    "Minimum": "0",
+                    "typeName": "NUMERIC",
+                    "Unit": "http://id.insee.fr/unit/jour",
+                    "type": "NumericDatatypeType",
+                    "Decimals": "1"
+                  }
+                }
+              ],
+              "Control": [],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "How long does it take to write a new episode?"
+              ],
+              "id": "k5nvu98z",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "Declaration": [],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "DURATIOND"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "k5nvwiza",
+                  "id": "k5nw31kj",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "12",
+                    "Minimum": "0",
+                    "typeName": "NUMERIC",
+                    "Unit": "http://id.insee.fr/unit/mois",
+                    "type": "NumericDatatypeType",
+                    "Decimals": ""
+                  }
+                }
+              ],
+              "Control": [],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "How long will it take you to watch all the existing episodes?"
+              ],
+              "id": "k5nw8ei1",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "Declaration": [],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "DURATIONM"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "k5nwa2sr",
+                  "id": "k5nwd4md",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "100",
+                    "Minimum": "0",
+                    "typeName": "NUMERIC",
+                    "Unit": "http://id.insee.fr/unit/annee",
+                    "type": "NumericDatatypeType",
+                    "Decimals": ""
+                  }
+                }
+              ],
+              "Control": [],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "For how long have you known the Simpsons family?"
+              ],
+              "id": "k5nw9dk4",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "Declaration": [],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "DURATIONY"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "kiq7klwi",
+                  "id": "k5nw3ngb",
+                  "mandatory": true,
+                  "Datatype": {
+                    "Maximum": "P120Y0M",
+                    "Format": "PnYnM",
+                    "typeName": "DURATION",
+                    "type": "DurationDatatypeType"
+                  }
+                }
+              ],
+              "Control": [],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "For how long have you known the Simpsons family? (format years-months)"
+              ],
+              "id": "k5nw6hr0",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "INSTRUCTION",
+                  "Text": "Please answer in years months",
+                  "id": "k5nw7fdc",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI"
+                  ]
+                }
+              ],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "DURATIONYM"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "k5nvxi9g",
+                  "id": "k5nwa3rj",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "PT0H0M",
+                    "Format": "PTnHnM",
+                    "typeName": "DURATION",
+                    "type": "DurationDatatypeType"
+                  }
+                }
+              ],
+              "Control": [],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "How long did it take you to complete this questionnaire? (format hours-minutes)"
+              ],
+              "id": "k5nweurr",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "INSTRUCTION",
+                  "Text": "Please answer in hours-minutes",
+                  "id": "kiq7a38h",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI"
+                  ]
+                }
+              ],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "DURATIONHM"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "kiq75oiv",
+                  "id": "kiq5gkid",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "PT0H0M",
+                    "Format": "PTnHnM",
+                    "typeName": "DURATION",
+                    "type": "DurationDatatypeType"
+                  }
+                }
+              ],
+              "Control": [],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "How long did it take you to complete this questionnaire? (format hours hundredths)"
+              ],
+              "id": "kiq51oqq",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "INSTRUCTION",
+                  "Text": "Please answer in hours hundredths",
+                  "id": "kiq77zbi",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI"
+                  ]
+                }
+              ],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "DURATIONHH"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "jbcgieyw",
+                  "id": "jbgddnrd",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": 99,
+                    "Minimum": 0,
+                    "typeName": "NUMERIC",
+                    "Unit": "http://id.insee.fr/unit/percent",
+                    "type": "NumericDatatypeType",
+                    "Decimals": 1
+                  }
+                }
+              ],
+              "Control": [],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "In your opinion, how much is the part of audience share in US for the 2016 season?"
+              ],
+              "id": "j6z06z1e",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "Declaration": [],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "AUDIENCE_SHARE"
+            }
+          ],
+          "Name": "MODULE11"
+        }
+      ],
+      "Name": "MODULE1"
+    },
+    {
+      "Control": [],
+      "depth": 1,
+      "FlowControl": [],
+      "genericName": "MODULE",
+      "Label": [
+        "Simpsons' city"
+      ],
+      "id": "j3341528",
+      "TargetMode": [
+        "CAWI",
+        "PAPI"
+      ],
+      "Declaration": [
+        {
+          "declarationType": "HELP",
+          "Text": "This module asks about your general knowledge of the Simpsons city",
+          "id": "d2",
+          "DeclarationMode": [
+            "CAWI",
+            "PAPI",
+            "CAPI",
+            "CATI"
+          ]
+        }
+      ],
+      "type": "SequenceType",
+      "Child": [
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "kbkkbamb",
+              "id": "jbgdjdkn",
+              "mandatory": true,
+              "CodeListReference": "j334iumu",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "RADIO",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            }
+          ],
+          "Control": [],
+          "depth": 2,
+          "FlowControl": [],
+          "Label": [
+            "In which city do the Simpsons reside?"
+          ],
+          "ClarificationQuestion": [],
+          "id": "j3343clt",
+          "TargetMode": [
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [
+            {
+              "declarationType": "HELP",
+              "Text": "One possible answer",
+              "id": "d3",
+              "position": "AFTER_QUESTION_TEXT",
+              "DeclarationMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ]
+            }
+          ],
+          "type": "QuestionType",
+          "questionType": "SINGLE_CHOICE",
+          "Name": "CITY"
+        },
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "khokr3d5",
+              "id": "jbgd8ghp",
+              "mandatory": false,
+              "CodeListReference": "j6qdqoen",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "CHECKBOX",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            }
+          ],
+          "Control": [],
+          "depth": 2,
+          "FlowControl": [
+            {
+              "Description": "$MAYOR$ = 'OT' : MAYOROTCL",
+              "Expression": "$MAYOR$ = 'OT'",
+              "flowControlType": "CLARIFICATION",
+              "id": "kn8ixjq8",
+              "IfTrue": "kn8iwb97"
+            }
+          ],
+          "Label": [
+            "Who is the Simpsons city mayor?"
+          ],
+          "ClarificationQuestion": [
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "khokrxjr",
+                  "id": "kn8isfc4",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "type": "TextDatatypeType",
+                    "MaxLength": "249"
+                  }
+                }
+              ],
+              "Label": "Please specify:",
+              "id": "kn8iwb97",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "questionType": "SIMPLE",
+              "Name": "MAYOROTCL"
+            }
+          ],
+          "id": "j6qdfhvw",
+          "TargetMode": [
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [
+            {
+              "declarationType": "HELP",
+              "Text": "Only one possible answer",
+              "id": "d4",
+              "position": "AFTER_QUESTION_TEXT",
+              "DeclarationMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ]
+            }
+          ],
+          "type": "QuestionType",
+          "questionType": "SINGLE_CHOICE",
+          "Name": "MAYOR"
+        },
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "k5nywfh2",
+              "id": "jbgdkd7v",
+              "mandatory": false,
+              "CodeListReference": "j4nwo00f",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "DROPDOWN",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            }
+          ],
+          "Control": [],
+          "depth": 2,
+          "FlowControl": [],
+          "Label": [
+            "In which state do The Simpsons reside?"
+          ],
+          "ClarificationQuestion": [],
+          "id": "j4nw5cqz",
+          "TargetMode": [
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [],
+          "type": "QuestionType",
+          "questionType": "SINGLE_CHOICE",
+          "Name": "STATE"
+        }
+      ],
+      "Name": "MODULE2"
+    },
+    {
+      "Control": [],
+      "depth": 1,
+      "FlowControl": [],
+      "genericName": "MODULE",
+      "Label": [
+        "Characters"
+      ],
+      "id": "j6qe0h9q",
+      "TargetMode": [
+        "CAWI",
+        "PAPI"
+      ],
+      "Declaration": [],
+      "type": "SequenceType",
+      "Child": [
+        {
+          "FlowControl": [
+            {
+              "Description": "$PET4$ = '1' : PETOCL",
+              "Expression": "$PET4$ = '1'",
+              "flowControlType": "CLARIFICATION",
+              "id": "kn8ir0e4",
+              "IfTrue": "kn8is5ba"
+            }
+          ],
+          "Label": [
+            "What are the pet names that the Simpsons family had?"
+          ],
+          "ResponseStructure": {
+            "Attribute": [],
+            "Mapping": [
+              {
+                "MappingSource": "khokqjtw",
+                "MappingTarget": "1"
+              },
+              {
+                "MappingSource": "khokur7a",
+                "MappingTarget": "2"
+              },
+              {
+                "MappingSource": "khol82ux",
+                "MappingTarget": "3"
+              },
+              {
+                "MappingSource": "khokqee5",
+                "MappingTarget": "4"
+              }
+            ],
+            "Dimension": [
+              {
+                "dimensionType": "PRIMARY",
+                "dynamic": "0",
+                "CodeListReference": "j335cu3c"
+              },
+              {
+                "dimensionType": "MEASURE",
+                "dynamic": "0"
+              }
+            ]
+          },
+          "type": "QuestionType",
+          "Name": "PET",
+          "Response": [
+            {
+              "CollectedVariableReference": "khokodq3",
+              "id": "khokqjtw",
+              "Datatype": {
+                "typeName": "BOOLEAN",
+                "type": "BooleanDatatypeType"
+              }
+            },
+            {
+              "CollectedVariableReference": "khokvtc3",
+              "id": "khokur7a",
+              "Datatype": {
+                "typeName": "BOOLEAN",
+                "type": "BooleanDatatypeType"
+              }
+            },
+            {
+              "CollectedVariableReference": "khokn596",
+              "id": "khol82ux",
+              "Datatype": {
+                "typeName": "BOOLEAN",
+                "type": "BooleanDatatypeType"
+              }
+            },
+            {
+              "CollectedVariableReference": "khokqyqi",
+              "id": "khokqee5",
+              "Datatype": {
+                "typeName": "BOOLEAN",
+                "type": "BooleanDatatypeType"
+              }
+            }
+          ],
+          "Control": [],
+          "depth": 2,
+          "ClarificationQuestion": [
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "khol7yu4",
+                  "id": "kn8imaom",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "type": "TextDatatypeType",
+                    "MaxLength": "249"
+                  }
+                }
+              ],
+              "Label": "Please specify:",
+              "id": "kn8is5ba",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "questionType": "SIMPLE",
+              "Name": "PETOCL"
+            }
+          ],
+          "id": "j334akov",
+          "TargetMode": [
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [
+            {
+              "declarationType": "HELP",
+              "Text": "*Several possible answers*",
+              "id": "d5",
+              "position": "AFTER_QUESTION_TEXT",
+              "DeclarationMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ]
+            }
+          ],
+          "questionType": "MULTIPLE_CHOICE"
+        },
+        {
+          "FlowControl": [
+            {
+              "Description": "$ICE_FLAVOUR4$ = '1' : ICE_FLAVOUROTCL",
+              "Expression": "$ICE_FLAVOUR4$ = '1'",
+              "flowControlType": "CLARIFICATION",
+              "id": "kn8izs47",
+              "IfTrue": "kn8iw4q0"
+            }
+          ],
+          "Label": [
+            "Does Jay like the following ice cream flavours?"
+          ],
+          "ResponseStructure": {
+            "Attribute": [],
+            "Mapping": [
+              {
+                "MappingSource": "kiq5w99y",
+                "MappingTarget": "1"
+              },
+              {
+                "MappingSource": "kiq5ummf",
+                "MappingTarget": "2"
+              },
+              {
+                "MappingSource": "kiq5mry5",
+                "MappingTarget": "3"
+              },
+              {
+                "MappingSource": "kiq5lkr8",
+                "MappingTarget": "4"
+              }
+            ],
+            "Dimension": [
+              {
+                "dimensionType": "PRIMARY",
+                "dynamic": "0",
+                "CodeListReference": "j6p2mvca"
+              },
+              {
+                "dimensionType": "MEASURE",
+                "dynamic": "0"
+              }
+            ]
+          },
+          "type": "QuestionType",
+          "Name": "ICE_FLAVOUR",
+          "Response": [
+            {
+              "CollectedVariableReference": "kiq5m50u",
+              "id": "kiq5w99y",
+              "CodeListReference": "jbdxh138",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "RADIO",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            },
+            {
+              "CollectedVariableReference": "kiq5ozuv",
+              "id": "kiq5ummf",
+              "CodeListReference": "jbdxh138",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "RADIO",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            },
+            {
+              "CollectedVariableReference": "kiq5tapt",
+              "id": "kiq5mry5",
+              "CodeListReference": "jbdxh138",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "RADIO",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            },
+            {
+              "CollectedVariableReference": "kiq5sxcq",
+              "id": "kiq5lkr8",
+              "CodeListReference": "jbdxh138",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "RADIO",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            }
+          ],
+          "Control": [],
+          "depth": 2,
+          "ClarificationQuestion": [
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "kiq5n8gf",
+                  "id": "kn8iv1mv",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "type": "TextDatatypeType",
+                    "MaxLength": "249"
+                  }
+                }
+              ],
+              "Label": "Please specify:",
+              "id": "kn8iw4q0",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "questionType": "SIMPLE",
+              "Name": "ICE_FLAVOUROTCL"
+            }
+          ],
+          "id": "j6p29i81",
+          "TargetMode": [
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [
+            {
+              "declarationType": "HELP",
+              "Text": "**Now we are going to know if you think that Jay is a gluton.**",
+              "id": "d12",
+              "position": "BEFORE_QUESTION_TEXT",
+              "DeclarationMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ]
+            }
+          ],
+          "questionType": "MULTIPLE_CHOICE"
+        },
+        {
+          "FlowControl": [],
+          "Label": [
+            "Which character works in the nuclear power plant?"
+          ],
+          "ResponseStructure": {
+            "Attribute": [],
+            "Mapping": [
+              {
+                "MappingSource": "kewva8xg",
+                "MappingTarget": "1"
+              },
+              {
+                "MappingSource": "kewvj0ad",
+                "MappingTarget": "2"
+              },
+              {
+                "MappingSource": "kewveltm",
+                "MappingTarget": "3"
+              },
+              {
+                "MappingSource": "kewvgax4",
+                "MappingTarget": "4"
+              }
+            ],
+            "Dimension": [
+              {
+                "dimensionType": "PRIMARY",
+                "dynamic": "0",
+                "CodeListReference": "j6qeytgc"
+              },
+              {
+                "dimensionType": "MEASURE",
+                "dynamic": "0"
+              }
+            ]
+          },
+          "type": "QuestionType",
+          "Name": "NUCLEAR_CHARACTER",
+          "Response": [
+            {
+              "CollectedVariableReference": "jbdy4nhp",
+              "id": "kewva8xg",
+              "CodeListReference": "jbdxh138",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "DROPDOWN",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            },
+            {
+              "CollectedVariableReference": "jbdxtanu",
+              "id": "kewvj0ad",
+              "CodeListReference": "jbdxh138",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "DROPDOWN",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            },
+            {
+              "CollectedVariableReference": "jbdy25if",
+              "id": "kewveltm",
+              "CodeListReference": "jbdxh138",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "DROPDOWN",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            },
+            {
+              "CollectedVariableReference": "jbdxvta8",
+              "id": "kewvgax4",
+              "CodeListReference": "jbdxh138",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "DROPDOWN",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            }
+          ],
+          "Control": [],
+          "depth": 2,
+          "ClarificationQuestion": [],
+          "id": "j6qefnga",
+          "TargetMode": [
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [],
+          "questionType": "MULTIPLE_CHOICE"
+        },
+        {
+          "FlowControl": [],
+          "Label": [
+            "In which city each character was born?"
+          ],
+          "ResponseStructure": {
+            "Attribute": [],
+            "Mapping": [
+              {
+                "MappingSource": "kewvjvcs",
+                "MappingTarget": "1"
+              },
+              {
+                "MappingSource": "kewvhoda",
+                "MappingTarget": "2"
+              },
+              {
+                "MappingSource": "kewv64s5",
+                "MappingTarget": "3"
+              },
+              {
+                "MappingSource": "kewvj21j",
+                "MappingTarget": "4"
+              },
+              {
+                "MappingSource": "kewva5uf",
+                "MappingTarget": "5"
+              }
+            ],
+            "Dimension": [
+              {
+                "dimensionType": "PRIMARY",
+                "dynamic": "0",
+                "CodeListReference": "j6z087mq"
+              },
+              {
+                "dimensionType": "MEASURE",
+                "dynamic": "0"
+              }
+            ]
+          },
+          "type": "QuestionType",
+          "Name": "BIRTH_CHARACTER",
+          "Response": [
+            {
+              "CollectedVariableReference": "jbdy3nh7",
+              "id": "kewvjvcs",
+              "CodeListReference": "jbdxricm",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "CHECKBOX",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            },
+            {
+              "CollectedVariableReference": "jbdy6lk3",
+              "id": "kewvhoda",
+              "CodeListReference": "jbdxricm",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "CHECKBOX",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            },
+            {
+              "CollectedVariableReference": "jbdxsby0",
+              "id": "kewv64s5",
+              "CodeListReference": "jbdxricm",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "CHECKBOX",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            },
+            {
+              "CollectedVariableReference": "jbdy7sra",
+              "id": "kewvj21j",
+              "CodeListReference": "jbdxricm",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "CHECKBOX",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            },
+            {
+              "CollectedVariableReference": "jbdy2wyl",
+              "id": "kewva5uf",
+              "CodeListReference": "jbdxricm",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "CHECKBOX",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            }
+          ],
+          "Control": [],
+          "depth": 2,
+          "ClarificationQuestion": [],
+          "id": "j6yzoc6g",
+          "TargetMode": [
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [],
+          "questionType": "MULTIPLE_CHOICE"
+        }
+      ],
+      "Name": "MODULE3"
+    },
+    {
+      "Control": [],
+      "depth": 1,
+      "FlowControl": [],
+      "genericName": "MODULE",
+      "Label": [
+        "General questions"
+      ],
+      "id": "j4nw88h2",
+      "TargetMode": [
+        "CAWI",
+        "PAPI"
+      ],
+      "Declaration": [],
+      "type": "SequenceType",
+      "Child": [
+        {
+          "Control": [],
+          "depth": 2,
+          "FlowControl": [],
+          "genericName": "SUBMODULE",
+          "Label": [
+            "Kwik-E-Mart"
+          ],
+          "id": "j6qe237q",
+          "TargetMode": [
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [],
+          "type": "SequenceType",
+          "Child": [
+            {
+              "FlowControl": [],
+              "Label": [
+                "Please, specify the percentage of Jay's expenses in the Kwik-E-Mart for each product?"
+              ],
+              "ResponseStructure": {
+                "Attribute": [
+                  {
+                    "AttributeValue": "NoDataByDefinition",
+                    "AttributeTarget": "8 1"
+                  }
+                ],
+                "Mapping": [
+                  {
+                    "MappingSource": "kewv2h3o",
+                    "MappingTarget": "1 1"
+                  },
+                  {
+                    "MappingSource": "kewvka2j",
+                    "MappingTarget": "2 1"
+                  },
+                  {
+                    "MappingSource": "kewv1f2a",
+                    "MappingTarget": "3 1"
+                  },
+                  {
+                    "MappingSource": "kewvb2ql",
+                    "MappingTarget": "4 1"
+                  },
+                  {
+                    "MappingSource": "kewvbxla",
+                    "MappingTarget": "5 1"
+                  },
+                  {
+                    "MappingSource": "kewvkjp0",
+                    "MappingTarget": "6 1"
+                  },
+                  {
+                    "MappingSource": "kewv2cyx",
+                    "MappingTarget": "7 1"
+                  },
+                  {
+                    "MappingSource": "kewv6f0y",
+                    "MappingTarget": "8 1"
+                  }
+                ],
+                "Dimension": [
+                  {
+                    "dimensionType": "PRIMARY",
+                    "dynamic": "0",
+                    "CodeListReference": "j4nwh16i"
+                  },
+                  {
+                    "dimensionType": "MEASURE",
+                    "Label": "Percentage",
+                    "dynamic": "0"
+                  }
+                ]
+              },
+              "type": "QuestionType",
+              "Name": "PERCENTAGE_EXPENSES",
+              "Response": [
+                {
+                  "CollectedVariableReference": "kbrnt6wl",
+                  "id": "kewv2h3o",
+                  "Datatype": {
+                    "Maximum": 100,
+                    "Minimum": 0,
+                    "typeName": "NUMERIC",
+                    "Unit": "http://id.insee.fr/unit/percent",
+                    "type": "NumericDatatypeType",
+                    "Decimals": 1
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kbrnnrzt",
+                  "id": "kewvka2j",
+                  "Datatype": {
+                    "Maximum": 100,
+                    "Minimum": 0,
+                    "typeName": "NUMERIC",
+                    "Unit": "http://id.insee.fr/unit/percent",
+                    "type": "NumericDatatypeType",
+                    "Decimals": 1
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kbrnizqp",
+                  "id": "kewv1f2a",
+                  "Datatype": {
+                    "Maximum": 100,
+                    "Minimum": 0,
+                    "typeName": "NUMERIC",
+                    "Unit": "http://id.insee.fr/unit/percent",
+                    "type": "NumericDatatypeType",
+                    "Decimals": 1
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kbrnq58i",
+                  "id": "kewvb2ql",
+                  "Datatype": {
+                    "Maximum": 100,
+                    "Minimum": 0,
+                    "typeName": "NUMERIC",
+                    "Unit": "http://id.insee.fr/unit/percent",
+                    "type": "NumericDatatypeType",
+                    "Decimals": 1
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kbrnol5q",
+                  "id": "kewvbxla",
+                  "Datatype": {
+                    "Maximum": 100,
+                    "Minimum": 0,
+                    "typeName": "NUMERIC",
+                    "Unit": "http://id.insee.fr/unit/percent",
+                    "type": "NumericDatatypeType",
+                    "Decimals": 1
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kbrnrvw8",
+                  "id": "kewvkjp0",
+                  "Datatype": {
+                    "Maximum": 100,
+                    "Minimum": 0,
+                    "typeName": "NUMERIC",
+                    "Unit": "http://id.insee.fr/unit/percent",
+                    "type": "NumericDatatypeType",
+                    "Decimals": 1
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kbrnxlbs",
+                  "id": "kewv2cyx",
+                  "Datatype": {
+                    "Maximum": 100,
+                    "Minimum": 0,
+                    "typeName": "NUMERIC",
+                    "Unit": "http://id.insee.fr/unit/percent",
+                    "type": "NumericDatatypeType",
+                    "Decimals": 1
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kbrnsdsz",
+                  "id": "kewv6f0y",
+                  "Datatype": {
+                    "Maximum": 100,
+                    "Minimum": 0,
+                    "typeName": "NUMERIC",
+                    "Unit": "http://id.insee.fr/unit/percent",
+                    "type": "NumericDatatypeType",
+                    "Decimals": 1
+                  }
+                }
+              ],
+              "Control": [
+                {
+                  "post_collect": false,
+                  "Description": "Total of percentages",
+                  "Expression": "$PERCENTAGE_EXPENSES11$ + $PERCENTAGE_EXPENSES21$ + $PERCENTAGE_EXPENSES31$ + $PERCENTAGE_EXPENSES41$ + $PERCENTAGE_EXPENSES51$ + $PERCENTAGE_EXPENSES61$ + $PERCENTAGE_EXPENSES71$ != 100",
+                  "during_collect": false,
+                  "criticity": "ERROR",
+                  "FailMessage": "The sum of percentages is: $SUM_EXPENSES$ %. The total of percentages must be equal to 100%.",
+                  "id": "j6z2680o"
+                }
+              ],
+              "depth": 3,
+              "ClarificationQuestion": [],
+              "id": "j4nwc63q",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "Declaration": [],
+              "questionType": "TABLE"
+            },
+            {
+              "FlowControl": [
+                {
+                  "Description": "$LAST_FOOD_SHOPPING11$ = '3' : LAST_FOOD_SHOPPING113CL",
+                  "Expression": "$LAST_FOOD_SHOPPING11$ = '3'",
+                  "flowControlType": "CLARIFICATION",
+                  "id": "kn8it8q2",
+                  "IfTrue": "kn8iuohr"
+                },
+                {
+                  "Description": "$LAST_FOOD_SHOPPING21$ = '3' : LAST_FOOD_SHOPPING213CL",
+                  "Expression": "$LAST_FOOD_SHOPPING21$ = '3'",
+                  "flowControlType": "CLARIFICATION",
+                  "id": "kn8itgna",
+                  "IfTrue": "kn8j5f8m"
+                },
+                {
+                  "Description": "$LAST_FOOD_SHOPPING31$ = '3' : LAST_FOOD_SHOPPING313CL",
+                  "Expression": "$LAST_FOOD_SHOPPING31$ = '3'",
+                  "flowControlType": "CLARIFICATION",
+                  "id": "kn8j1sko",
+                  "IfTrue": "kn8ivic6"
+                },
+                {
+                  "Description": "$LAST_FOOD_SHOPPING41$ = '3' : LAST_FOOD_SHOPPING413CL",
+                  "Expression": "$LAST_FOOD_SHOPPING41$ = '3'",
+                  "flowControlType": "CLARIFICATION",
+                  "id": "kn8ipulc",
+                  "IfTrue": "kn8j1qir"
+                },
+                {
+                  "Description": "$LAST_FOOD_SHOPPING51$ = '3' : LAST_FOOD_SHOPPING513CL",
+                  "Expression": "$LAST_FOOD_SHOPPING51$ = '3'",
+                  "flowControlType": "CLARIFICATION",
+                  "id": "kn8iqmew",
+                  "IfTrue": "kn8iupkb"
+                },
+                {
+                  "Description": "$LAST_FOOD_SHOPPING61$ = '3' : LAST_FOOD_SHOPPING613CL",
+                  "Expression": "$LAST_FOOD_SHOPPING61$ = '3'",
+                  "flowControlType": "CLARIFICATION",
+                  "id": "kn8ip943",
+                  "IfTrue": "kn8iptlw"
+                },
+                {
+                  "Description": "$LAST_FOOD_SHOPPING71$ = '3' : LAST_FOOD_SHOPPING713CL",
+                  "Expression": "$LAST_FOOD_SHOPPING71$ = '3'",
+                  "flowControlType": "CLARIFICATION",
+                  "id": "kn8ilslt",
+                  "IfTrue": "kn8ivkuz"
+                },
+                {
+                  "Description": "$LAST_FOOD_SHOPPING81$ = '3' : LAST_FOOD_SHOPPING813CL",
+                  "Expression": "$LAST_FOOD_SHOPPING81$ = '3'",
+                  "flowControlType": "CLARIFICATION",
+                  "id": "kn8imto2",
+                  "IfTrue": "kn8j21ue"
+                }
+              ],
+              "Label": [
+                "Please specify if Jay has bought each product in his last food shopping"
+              ],
+              "ResponseStructure": {
+                "Attribute": [],
+                "Mapping": [
+                  {
+                    "MappingSource": "kiq6pljq",
+                    "MappingTarget": "1 1"
+                  },
+                  {
+                    "MappingSource": "kiq6mgpv",
+                    "MappingTarget": "2 1"
+                  },
+                  {
+                    "MappingSource": "kiq6pmtz",
+                    "MappingTarget": "3 1"
+                  },
+                  {
+                    "MappingSource": "kiq6k4lf",
+                    "MappingTarget": "4 1"
+                  },
+                  {
+                    "MappingSource": "kiq6p70n",
+                    "MappingTarget": "5 1"
+                  },
+                  {
+                    "MappingSource": "kiq6lh5v",
+                    "MappingTarget": "6 1"
+                  },
+                  {
+                    "MappingSource": "kiq703te",
+                    "MappingTarget": "7 1"
+                  },
+                  {
+                    "MappingSource": "kiq6zpd3",
+                    "MappingTarget": "8 1"
+                  }
+                ],
+                "Dimension": [
+                  {
+                    "dimensionType": "PRIMARY",
+                    "dynamic": "0",
+                    "CodeListReference": "j4nwh16i"
+                  },
+                  {
+                    "dimensionType": "MEASURE",
+                    "Label": "In his last food shopping",
+                    "dynamic": "0"
+                  }
+                ]
+              },
+              "type": "QuestionType",
+              "Name": "LAST_FOOD_SHOPPING",
+              "Response": [
+                {
+                  "CollectedVariableReference": "kiq70n2n",
+                  "id": "kiq6pljq",
+                  "CodeListReference": "kiq6nvuw",
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "visualizationHint": "CHECKBOX",
+                    "type": "TextDatatypeType",
+                    "MaxLength": 1
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kiq711j5",
+                  "id": "kiq6mgpv",
+                  "CodeListReference": "kiq6nvuw",
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "visualizationHint": "CHECKBOX",
+                    "type": "TextDatatypeType",
+                    "MaxLength": 1
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kiq6t03g",
+                  "id": "kiq6pmtz",
+                  "CodeListReference": "kiq6nvuw",
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "visualizationHint": "CHECKBOX",
+                    "type": "TextDatatypeType",
+                    "MaxLength": 1
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kiq6kl68",
+                  "id": "kiq6k4lf",
+                  "CodeListReference": "kiq6nvuw",
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "visualizationHint": "CHECKBOX",
+                    "type": "TextDatatypeType",
+                    "MaxLength": 1
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kiq6num0",
+                  "id": "kiq6p70n",
+                  "CodeListReference": "kiq6nvuw",
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "visualizationHint": "CHECKBOX",
+                    "type": "TextDatatypeType",
+                    "MaxLength": 1
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kiq6vzhq",
+                  "id": "kiq6lh5v",
+                  "CodeListReference": "kiq6nvuw",
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "visualizationHint": "CHECKBOX",
+                    "type": "TextDatatypeType",
+                    "MaxLength": 1
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kiq6j9y2",
+                  "id": "kiq703te",
+                  "CodeListReference": "kiq6nvuw",
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "visualizationHint": "CHECKBOX",
+                    "type": "TextDatatypeType",
+                    "MaxLength": 1
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kiq6iysv",
+                  "id": "kiq6zpd3",
+                  "CodeListReference": "kiq6nvuw",
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "visualizationHint": "CHECKBOX",
+                    "type": "TextDatatypeType",
+                    "MaxLength": 1
+                  }
+                }
+              ],
+              "Control": [],
+              "depth": 3,
+              "ClarificationQuestion": [
+                {
+                  "Response": [
+                    {
+                      "CollectedVariableReference": "kiq6s6h4",
+                      "id": "kn8iz33u",
+                      "mandatory": false,
+                      "Datatype": {
+                        "Pattern": "",
+                        "typeName": "TEXT",
+                        "type": "TextDatatypeType",
+                        "MaxLength": "249"
+                      }
+                    }
+                  ],
+                  "Label": "Please specify:",
+                  "id": "kn8iuohr",
+                  "TargetMode": [
+                    "CAWI",
+                    "PAPI"
+                  ],
+                  "questionType": "SIMPLE",
+                  "Name": "LAST_FOOD_SHOPPING113CL"
+                },
+                {
+                  "Response": [
+                    {
+                      "CollectedVariableReference": "kiq6nxdm",
+                      "id": "kn8iqa3o",
+                      "mandatory": false,
+                      "Datatype": {
+                        "Pattern": "",
+                        "typeName": "TEXT",
+                        "type": "TextDatatypeType",
+                        "MaxLength": "249"
+                      }
+                    }
+                  ],
+                  "Label": "Please specify:",
+                  "id": "kn8j5f8m",
+                  "TargetMode": [
+                    "CAWI",
+                    "PAPI"
+                  ],
+                  "questionType": "SIMPLE",
+                  "Name": "LAST_FOOD_SHOPPING213CL"
+                },
+                {
+                  "Response": [
+                    {
+                      "CollectedVariableReference": "kiq71jcl",
+                      "id": "kn8irapl",
+                      "mandatory": false,
+                      "Datatype": {
+                        "Pattern": "",
+                        "typeName": "TEXT",
+                        "type": "TextDatatypeType",
+                        "MaxLength": "249"
+                      }
+                    }
+                  ],
+                  "Label": "Please specify:",
+                  "id": "kn8ivic6",
+                  "TargetMode": [
+                    "CAWI",
+                    "PAPI"
+                  ],
+                  "questionType": "SIMPLE",
+                  "Name": "LAST_FOOD_SHOPPING313CL"
+                },
+                {
+                  "Response": [
+                    {
+                      "CollectedVariableReference": "kiq6xeyd",
+                      "id": "kn8j5v35",
+                      "mandatory": false,
+                      "Datatype": {
+                        "Pattern": "",
+                        "typeName": "TEXT",
+                        "type": "TextDatatypeType",
+                        "MaxLength": "249"
+                      }
+                    }
+                  ],
+                  "Label": "Please specify:",
+                  "id": "kn8j1qir",
+                  "TargetMode": [
+                    "CAWI",
+                    "PAPI"
+                  ],
+                  "questionType": "SIMPLE",
+                  "Name": "LAST_FOOD_SHOPPING413CL"
+                },
+                {
+                  "Response": [
+                    {
+                      "CollectedVariableReference": "kiq6o5db",
+                      "id": "kn8im95w",
+                      "mandatory": false,
+                      "Datatype": {
+                        "Pattern": "",
+                        "typeName": "TEXT",
+                        "type": "TextDatatypeType",
+                        "MaxLength": "249"
+                      }
+                    }
+                  ],
+                  "Label": "Please specify:",
+                  "id": "kn8iupkb",
+                  "TargetMode": [
+                    "CAWI",
+                    "PAPI"
+                  ],
+                  "questionType": "SIMPLE",
+                  "Name": "LAST_FOOD_SHOPPING513CL"
+                },
+                {
+                  "Response": [
+                    {
+                      "CollectedVariableReference": "kiq6mbhy",
+                      "id": "kn8in3rk",
+                      "mandatory": false,
+                      "Datatype": {
+                        "Pattern": "",
+                        "typeName": "TEXT",
+                        "type": "TextDatatypeType",
+                        "MaxLength": "249"
+                      }
+                    }
+                  ],
+                  "Label": "Please specify:",
+                  "id": "kn8iptlw",
+                  "TargetMode": [
+                    "CAWI",
+                    "PAPI"
+                  ],
+                  "questionType": "SIMPLE",
+                  "Name": "LAST_FOOD_SHOPPING613CL"
+                },
+                {
+                  "Response": [
+                    {
+                      "CollectedVariableReference": "kiq6n5we",
+                      "id": "kn8j4ola",
+                      "mandatory": false,
+                      "Datatype": {
+                        "Pattern": "",
+                        "typeName": "TEXT",
+                        "type": "TextDatatypeType",
+                        "MaxLength": "249"
+                      }
+                    }
+                  ],
+                  "Label": "Please specify:",
+                  "id": "kn8ivkuz",
+                  "TargetMode": [
+                    "CAWI",
+                    "PAPI"
+                  ],
+                  "questionType": "SIMPLE",
+                  "Name": "LAST_FOOD_SHOPPING713CL"
+                },
+                {
+                  "Response": [
+                    {
+                      "CollectedVariableReference": "kiq6snxi",
+                      "id": "kn8izclz",
+                      "mandatory": false,
+                      "Datatype": {
+                        "Pattern": "",
+                        "typeName": "TEXT",
+                        "type": "TextDatatypeType",
+                        "MaxLength": "249"
+                      }
+                    }
+                  ],
+                  "Label": "Please specify:",
+                  "id": "kn8j21ue",
+                  "TargetMode": [
+                    "CAWI",
+                    "PAPI"
+                  ],
+                  "questionType": "SIMPLE",
+                  "Name": "LAST_FOOD_SHOPPING813CL"
+                }
+              ],
+              "id": "k9cg2q5t",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "Declaration": [],
+              "questionType": "TABLE"
+            }
+          ],
+          "Name": "MODULE41"
+        },
+        {
+          "Control": [],
+          "depth": 2,
+          "FlowControl": [],
+          "genericName": "SUBMODULE",
+          "Label": [
+            "Clowning"
+          ],
+          "id": "j6qejudb",
+          "TargetMode": [
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [],
+          "type": "SequenceType",
+          "Child": [
+            {
+              "FlowControl": [],
+              "Label": [
+                "Who did these clownings and tell us what you remember?"
+              ],
+              "ResponseStructure": {
+                "Attribute": [],
+                "Mapping": [
+                  {
+                    "MappingSource": "kiq6m5n0",
+                    "MappingTarget": "1 1"
+                  },
+                  {
+                    "MappingSource": "kiq6l29o",
+                    "MappingTarget": "2 1"
+                  },
+                  {
+                    "MappingSource": "kiq72biw",
+                    "MappingTarget": "3 1"
+                  },
+                  {
+                    "MappingSource": "kiq6mlan",
+                    "MappingTarget": "4 1"
+                  },
+                  {
+                    "MappingSource": "kiq6qatu",
+                    "MappingTarget": "1 2"
+                  },
+                  {
+                    "MappingSource": "kiq6v4oe",
+                    "MappingTarget": "2 2"
+                  },
+                  {
+                    "MappingSource": "kiq6q4zm",
+                    "MappingTarget": "3 2"
+                  },
+                  {
+                    "MappingSource": "kiq6vtud",
+                    "MappingTarget": "4 2"
+                  }
+                ],
+                "Dimension": [
+                  {
+                    "dimensionType": "PRIMARY",
+                    "dynamic": "0",
+                    "CodeListReference": "j77dav9b"
+                  },
+                  {
+                    "dimensionType": "MEASURE",
+                    "Label": "Clowning",
+                    "dynamic": "0"
+                  },
+                  {
+                    "dimensionType": "MEASURE",
+                    "Label": "Remember?",
+                    "dynamic": "0"
+                  }
+                ]
+              },
+              "type": "QuestionType",
+              "Name": "CLOWNING",
+              "Response": [
+                {
+                  "CollectedVariableReference": "kiq71cxr",
+                  "id": "kiq6m5n0",
+                  "CodeListReference": "jbdyh6b5",
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "visualizationHint": "DROPDOWN",
+                    "type": "TextDatatypeType",
+                    "MaxLength": 1
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kiq6y9w5",
+                  "id": "kiq6l29o",
+                  "CodeListReference": "jbdyh6b5",
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "visualizationHint": "DROPDOWN",
+                    "type": "TextDatatypeType",
+                    "MaxLength": 1
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kiq6lmpy",
+                  "id": "kiq72biw",
+                  "CodeListReference": "jbdyh6b5",
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "visualizationHint": "DROPDOWN",
+                    "type": "TextDatatypeType",
+                    "MaxLength": 1
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kiq74jqk",
+                  "id": "kiq6mlan",
+                  "CodeListReference": "jbdyh6b5",
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "visualizationHint": "DROPDOWN",
+                    "type": "TextDatatypeType",
+                    "MaxLength": 1
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kiq6vmcb",
+                  "id": "kiq6qatu",
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "type": "TextDatatypeType",
+                    "MaxLength": 255
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kiq6k440",
+                  "id": "kiq6v4oe",
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "type": "TextDatatypeType",
+                    "MaxLength": 255
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kiq73uz2",
+                  "id": "kiq6q4zm",
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "type": "TextDatatypeType",
+                    "MaxLength": 255
+                  }
+                },
+                {
+                  "CollectedVariableReference": "kiq6kyr3",
+                  "id": "kiq6vtud",
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "type": "TextDatatypeType",
+                    "MaxLength": 255
+                  }
+                }
+              ],
+              "Control": [],
+              "depth": 3,
+              "ClarificationQuestion": [],
+              "id": "kbkjvgel",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "Declaration": [],
+              "questionType": "TABLE"
+            }
+          ],
+          "Name": "MODULE42"
+        },
+        {
+          "Control": [],
+          "depth": 2,
+          "FlowControl": [],
+          "genericName": "SUBMODULE",
+          "Label": [
+            "Transport"
+          ],
+          "id": "j6qeh91y",
+          "TargetMode": [
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [],
+          "type": "SequenceType",
+          "Child": [
+            {
+              "FlowControl": [],
+              "Label": [
+                "Which of the following means of transport were used by the hero and in which country?"
+              ],
+              "ResponseStructure": {
+                "Attribute": [],
+                "Mapping": [
+                  {
+                    "MappingSource": "kewvm4qg",
+                    "MappingTarget": "1 1"
+                  },
+                  {
+                    "MappingSource": "kewvebem",
+                    "MappingTarget": "2 1"
+                  },
+                  {
+                    "MappingSource": "kewv62xx",
+                    "MappingTarget": "3 1"
+                  },
+                  {
+                    "MappingSource": "kewvjcck",
+                    "MappingTarget": "4 1"
+                  },
+                  {
+                    "MappingSource": "kewv8wxl",
+                    "MappingTarget": "1 2"
+                  },
+                  {
+                    "MappingSource": "kewv5u0v",
+                    "MappingTarget": "2 2"
+                  },
+                  {
+                    "MappingSource": "kewvbiyv",
+                    "MappingTarget": "3 2"
+                  },
+                  {
+                    "MappingSource": "kewv91bq",
+                    "MappingTarget": "4 2"
+                  },
+                  {
+                    "MappingSource": "kewvcjrn",
+                    "MappingTarget": "1 3"
+                  },
+                  {
+                    "MappingSource": "kewvdarq",
+                    "MappingTarget": "2 3"
+                  },
+                  {
+                    "MappingSource": "kewvcmjn",
+                    "MappingTarget": "3 3"
+                  },
+                  {
+                    "MappingSource": "kewvf47u",
+                    "MappingTarget": "4 3"
+                  },
+                  {
+                    "MappingSource": "kewvdrv7",
+                    "MappingTarget": "1 4"
+                  },
+                  {
+                    "MappingSource": "kewvc8ft",
+                    "MappingTarget": "2 4"
+                  },
+                  {
+                    "MappingSource": "kewvkci5",
+                    "MappingTarget": "3 4"
+                  },
+                  {
+                    "MappingSource": "kewv5hsr",
+                    "MappingTarget": "4 4"
+                  },
+                  {
+                    "MappingSource": "kewv226h",
+                    "MappingTarget": "1 5"
+                  },
+                  {
+                    "MappingSource": "kewvc2li",
+                    "MappingTarget": "2 5"
+                  },
+                  {
+                    "MappingSource": "kewveam7",
+                    "MappingTarget": "3 5"
+                  },
+                  {
+                    "MappingSource": "kewva3p8",
+                    "MappingTarget": "4 5"
+                  },
+                  {
+                    "MappingSource": "kewvlchm",
+                    "MappingTarget": "1 6"
+                  },
+                  {
+                    "MappingSource": "kewvh5fm",
+                    "MappingTarget": "2 6"
+                  },
+                  {
+                    "MappingSource": "kewva2r8",
+                    "MappingTarget": "3 6"
+                  },
+                  {
+                    "MappingSource": "kewve0rb",
+                    "MappingTarget": "4 6"
+                  }
+                ],
+                "Dimension": [
+                  {
+                    "dimensionType": "PRIMARY",
+                    "dynamic": "0",
+                    "CodeListReference": "j6p2kivg"
+                  },
+                  {
+                    "dimensionType": "SECONDARY",
+                    "dynamic": "0",
+                    "CodeListReference": "jbdye1wa"
+                  },
+                  {
+                    "dimensionType": "MEASURE",
+                    "Label": "Means",
+                    "dynamic": "0"
+                  }
+                ]
+              },
+              "type": "QuestionType",
+              "Name": "TRAVEL",
+              "Response": [
+                {
+                  "CollectedVariableReference": "jbgd1zxu",
+                  "id": "kewvm4qg",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgd8lfs",
+                  "id": "kewvebem",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgd56qo",
+                  "id": "kewv62xx",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgd4wu8",
+                  "id": "kewvjcck",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgdak6h",
+                  "id": "kewv8wxl",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgdmsy4",
+                  "id": "kewv5u0v",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgd2zlu",
+                  "id": "kewvbiyv",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgd6v73",
+                  "id": "kewv91bq",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgdf5fg",
+                  "id": "kewvcjrn",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgd2xg0",
+                  "id": "kewvdarq",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgdc06l",
+                  "id": "kewvcmjn",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgdb8i9",
+                  "id": "kewvf47u",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgdhzve",
+                  "id": "kewvdrv7",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgd93ks",
+                  "id": "kewvc8ft",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgdfw7h",
+                  "id": "kewvkci5",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgdfavn",
+                  "id": "kewv5hsr",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgdc199",
+                  "id": "kewv226h",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgdfqph",
+                  "id": "kewvc2li",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgd8r0n",
+                  "id": "kewveam7",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgd3aqk",
+                  "id": "kewva3p8",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgdltql",
+                  "id": "kewvlchm",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgd9um3",
+                  "id": "kewvh5fm",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgddj7v",
+                  "id": "kewva2r8",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                },
+                {
+                  "CollectedVariableReference": "jbgdb4ym",
+                  "id": "kewve0rb",
+                  "Datatype": {
+                    "typeName": "BOOLEAN",
+                    "type": "BooleanDatatypeType"
+                  }
+                }
+              ],
+              "Control": [],
+              "depth": 3,
+              "ClarificationQuestion": [],
+              "id": "j6p2lwuj",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "HELP",
+                  "Text": "Several answers possible: check off all the relevant boxes",
+                  "id": "d10",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAWI",
+                    "PAPI",
+                    "CAPI",
+                    "CATI"
+                  ]
+                }
+              ],
+              "questionType": "TABLE"
+            }
+          ],
+          "Name": "MODULE43"
+        }
+      ],
+      "Name": "MODULE4"
+    },
+    {
+      "Control": [],
+      "depth": 1,
+      "FlowControl": [],
+      "genericName": "MODULE",
+      "Label": [
+        "Favourite characters (dynamic table)"
+      ],
+      "id": "j6qfx9qe",
+      "TargetMode": [
+        "CAWI",
+        "PAPI"
+      ],
+      "Declaration": [],
+      "type": "SequenceType",
+      "Child": [
+        {
+          "FlowControl": [
+            {
+              "Description": "$FAVOURITE_CHAR3$ = '3' : FAVOURITE_CHAR33CL",
+              "Expression": "$FAVOURITE_CHAR3$ = '3'",
+              "flowControlType": "CLARIFICATION",
+              "id": "kn8iwz2k",
+              "IfTrue": "kn8iqvh3"
+            }
+          ],
+          "Label": [
+            "Please, complete the following grid with your favourite characters"
+          ],
+          "ResponseStructure": {
+            "Attribute": [],
+            "Mapping": [
+              {
+                "MappingSource": "kiq7p16z",
+                "MappingTarget": "1 1"
+              },
+              {
+                "MappingSource": "kiq7kny3",
+                "MappingTarget": "1 2"
+              },
+              {
+                "MappingSource": "kiq7lffy",
+                "MappingTarget": "1 3"
+              }
+            ],
+            "Dimension": [
+              {
+                "dimensionType": "PRIMARY",
+                "dynamic": "1-10"
+              },
+              {
+                "dimensionType": "MEASURE",
+                "Label": "Name",
+                "dynamic": "0"
+              },
+              {
+                "dimensionType": "MEASURE",
+                "Label": "Age",
+                "dynamic": "0"
+              },
+              {
+                "dimensionType": "MEASURE",
+                "Label": "Member of the Simpsons family",
+                "dynamic": "0"
+              }
+            ]
+          },
+          "type": "QuestionType",
+          "Name": "FAVOURITE_CHAR",
+          "Response": [
+            {
+              "CollectedVariableReference": "kiq7llp5",
+              "id": "kiq7p16z",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "type": "TextDatatypeType",
+                "MaxLength": 255
+              }
+            },
+            {
+              "CollectedVariableReference": "kiq7m8zd",
+              "id": "kiq7kny3",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "type": "TextDatatypeType",
+                "MaxLength": 255
+              }
+            },
+            {
+              "CollectedVariableReference": "kiq7srd4",
+              "id": "kiq7lffy",
+              "CodeListReference": "kiq7ditg",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "CHECKBOX",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            }
+          ],
+          "Control": [],
+          "depth": 2,
+          "ClarificationQuestion": [
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "kiq7vkqw",
+                  "id": "kn8in2kc",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "type": "TextDatatypeType",
+                    "MaxLength": "249"
+                  }
+                }
+              ],
+              "Label": "Please clarify:",
+              "id": "kn8iqvh3",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "questionType": "SIMPLE",
+              "Name": "FAVOURITE_CHAR33CL"
+            }
+          ],
+          "id": "j6qg8rc6",
+          "TargetMode": [
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [],
+          "questionType": "TABLE"
+        },
+        {
+          "FlowControl": [],
+          "Label": [
+            "How has your feeling about the following characters evolved over time?"
+          ],
+          "ResponseStructure": {
+            "Attribute": [],
+            "Mapping": [
+              {
+                "MappingSource": "kiq76emy",
+                "MappingTarget": "1"
+              },
+              {
+                "MappingSource": "kiq6zv60",
+                "MappingTarget": "2"
+              },
+              {
+                "MappingSource": "kiq7bgk3",
+                "MappingTarget": "3"
+              },
+              {
+                "MappingSource": "kiq6ync3",
+                "MappingTarget": "4"
+              }
+            ],
+            "Dimension": [
+              {
+                "dimensionType": "PRIMARY",
+                "dynamic": "0",
+                "CodeListReference": "jbdyh6b5"
+              },
+              {
+                "dimensionType": "MEASURE",
+                "dynamic": "0"
+              }
+            ]
+          },
+          "type": "QuestionType",
+          "Name": "FEELCHAREV",
+          "Response": [
+            {
+              "CollectedVariableReference": "kiq6zx0p",
+              "id": "kiq76emy",
+              "CodeListReference": "jvxv1ko0",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "CHECKBOX",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            },
+            {
+              "CollectedVariableReference": "kiq71fzn",
+              "id": "kiq6zv60",
+              "CodeListReference": "jvxv1ko0",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "CHECKBOX",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            },
+            {
+              "CollectedVariableReference": "kiq6zy29",
+              "id": "kiq7bgk3",
+              "CodeListReference": "jvxv1ko0",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "CHECKBOX",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            },
+            {
+              "CollectedVariableReference": "kiq72rl0",
+              "id": "kiq6ync3",
+              "CodeListReference": "jvxv1ko0",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "CHECKBOX",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            }
+          ],
+          "Control": [],
+          "depth": 2,
+          "ClarificationQuestion": [],
+          "id": "jvxux0mi",
+          "TargetMode": [
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [],
+          "questionType": "MULTIPLE_CHOICE"
+        },
+        {
+          "FlowControl": [],
+          "Label": [
+            "Can you tell how long Bart Simpson has been on leave for each type and whether there has been another type?"
+          ],
+          "ResponseStructure": {
+            "Attribute": [],
+            "Mapping": [
+              {
+                "MappingSource": "kewv511d",
+                "MappingTarget": "1 1"
+              },
+              {
+                "MappingSource": "kewv67nj",
+                "MappingTarget": "2 1"
+              },
+              {
+                "MappingSource": "kewv23wm",
+                "MappingTarget": "3 1"
+              },
+              {
+                "MappingSource": "kewv2jks",
+                "MappingTarget": "4 1"
+              },
+              {
+                "MappingSource": "kewvl896",
+                "MappingTarget": "5 1"
+              },
+              {
+                "MappingSource": "kewv20qg",
+                "MappingTarget": "1 2"
+              },
+              {
+                "MappingSource": "kewvizdm",
+                "MappingTarget": "2 2"
+              },
+              {
+                "MappingSource": "kewv9jcl",
+                "MappingTarget": "3 2"
+              },
+              {
+                "MappingSource": "kewvf0gf",
+                "MappingTarget": "4 2"
+              },
+              {
+                "MappingSource": "kewvalmd",
+                "MappingTarget": "5 2"
+              }
+            ],
+            "Dimension": [
+              {
+                "dimensionType": "PRIMARY",
+                "dynamic": "0",
+                "CodeListReference": "jvxx60bh"
+              },
+              {
+                "dimensionType": "MEASURE",
+                "Label": "Days",
+                "dynamic": "0"
+              },
+              {
+                "dimensionType": "MEASURE",
+                "Label": "Unit",
+                "dynamic": "0"
+              }
+            ]
+          },
+          "type": "QuestionType",
+          "Name": "LEAVDURATION",
+          "Response": [
+            {
+              "CollectedVariableReference": "jvxwurs0",
+              "id": "kewv511d",
+              "Datatype": {
+                "Maximum": 365,
+                "Minimum": 0,
+                "typeName": "NUMERIC",
+                "type": "NumericDatatypeType"
+              }
+            },
+            {
+              "CollectedVariableReference": "jvxx7a3e",
+              "id": "kewv67nj",
+              "Datatype": {
+                "Maximum": 365,
+                "Minimum": 0,
+                "typeName": "NUMERIC",
+                "type": "NumericDatatypeType"
+              }
+            },
+            {
+              "CollectedVariableReference": "jvxx3szl",
+              "id": "kewv23wm",
+              "Datatype": {
+                "Maximum": 365,
+                "Minimum": 0,
+                "typeName": "NUMERIC",
+                "type": "NumericDatatypeType"
+              }
+            },
+            {
+              "CollectedVariableReference": "jvxx1c0k",
+              "id": "kewv2jks",
+              "Datatype": {
+                "Maximum": 365,
+                "Minimum": 0,
+                "typeName": "NUMERIC",
+                "type": "NumericDatatypeType"
+              }
+            },
+            {
+              "CollectedVariableReference": "jvxx4nhp",
+              "id": "kewvl896",
+              "Datatype": {
+                "Maximum": 365,
+                "Minimum": 0,
+                "typeName": "NUMERIC",
+                "type": "NumericDatatypeType"
+              }
+            },
+            {
+              "CollectedVariableReference": "jvxx5hol",
+              "id": "kewv20qg",
+              "CodeListReference": "jvxulmed",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "DROPDOWN",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            },
+            {
+              "CollectedVariableReference": "jvxwzczf",
+              "id": "kewvizdm",
+              "CodeListReference": "jvxulmed",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "DROPDOWN",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            },
+            {
+              "CollectedVariableReference": "jvxwz82f",
+              "id": "kewv9jcl",
+              "CodeListReference": "jvxulmed",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "DROPDOWN",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            },
+            {
+              "CollectedVariableReference": "jvxwvnc2",
+              "id": "kewvf0gf",
+              "CodeListReference": "jvxulmed",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "DROPDOWN",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            },
+            {
+              "CollectedVariableReference": "jvxwzx4m",
+              "id": "kewvalmd",
+              "CodeListReference": "jvxulmed",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "DROPDOWN",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            }
+          ],
+          "Control": [],
+          "depth": 2,
+          "ClarificationQuestion": [],
+          "id": "jvxwy68n",
+          "TargetMode": [
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [],
+          "questionType": "TABLE"
+        }
+      ],
+      "Name": "MODULE5"
+    },
+    {
+      "Control": [],
+      "depth": 1,
+      "FlowControl": [],
+      "genericName": "MODULE",
+      "Label": [
+        "Favourite characters (Loop)"
+      ],
+      "id": "kiq5mr0b",
+      "TargetMode": [
+        "CAWI",
+        "PAPI"
+      ],
+      "Declaration": [],
+      "type": "SequenceType",
+      "Child": [
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "kiq60ilu",
+              "id": "kiq5ygcb",
+              "mandatory": false,
+              "Datatype": {
+                "Maximum": "20",
+                "Minimum": "0",
+                "typeName": "NUMERIC",
+                "Unit": "",
+                "type": "NumericDatatypeType",
+                "Decimals": ""
+              }
+            }
+          ],
+          "Control": [],
+          "depth": 2,
+          "FlowControl": [],
+          "Label": [
+            "How many characters from the Simpsons family could you precisely describe?"
+          ],
+          "id": "kiq612ky",
+          "TargetMode": [
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [],
+          "type": "QuestionType",
+          "questionType": "SIMPLE",
+          "Name": "NB_CHAR"
+        },
+        {
+          "Control": [],
+          "depth": 2,
+          "FlowControl": [],
+          "genericName": "SUBMODULE",
+          "Label": [
+            "Description of each character"
+          ],
+          "id": "kiq5u8d5",
+          "TargetMode": [
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [],
+          "type": "SequenceType",
+          "Child": [
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "kiq6396s",
+                  "id": "kiq62m5b",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Pattern": "",
+                    "typeName": "TEXT",
+                    "type": "TextDatatypeType",
+                    "MaxLength": "30"
+                  }
+                }
+              ],
+              "Control": [],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "What is the first name of this character?"
+              ],
+              "id": "kiq66gtw",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "Declaration": [],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "NAME_CHAR"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "kiq65x82",
+                  "id": "kiq5sria",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "120",
+                    "Minimum": "0",
+                    "typeName": "NUMERIC",
+                    "Unit": "",
+                    "type": "NumericDatatypeType",
+                    "Decimals": ""
+                  }
+                }
+              ],
+              "Control": [],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "How old is this character in the first episode of the Simpsons family?"
+              ],
+              "id": "kiq5r8wu",
+              "TargetMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ],
+              "Declaration": [],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "AGE_CHAR"
+            }
+          ],
+          "Name": "DESCRIPTIO"
+        }
+      ],
+      "Name": "MODULE6"
+    },
+    {
+      "Control": [],
+      "depth": 1,
+      "FlowControl": [],
+      "genericName": "MODULE",
+      "Label": [
+        "Other details about character named $NAME_CHAR$ "
+      ],
+      "id": "kiq5xw5p",
+      "TargetMode": [
+        "CAWI",
+        "PAPI"
+      ],
+      "Declaration": [],
+      "type": "SequenceType",
+      "Child": [
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "kiq79qbx",
+              "id": "kiq65eze",
+              "mandatory": false,
+              "CodeListReference": "jbdxh138",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "CHECKBOX",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            }
+          ],
+          "Control": [],
+          "depth": 2,
+          "FlowControl": [],
+          "Label": [
+            "Is character named $NAME_CHAR$ your favourite one ?"
+          ],
+          "ClarificationQuestion": [],
+          "id": "kiq65x3c",
+          "TargetMode": [
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [],
+          "type": "QuestionType",
+          "questionType": "SINGLE_CHOICE",
+          "Name": "FAVCHAR"
+        },
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "kiq693fv",
+              "id": "kiq648v4",
+              "mandatory": false,
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "type": "TextDatatypeType",
+                "MaxLength": 255
+              }
+            }
+          ],
+          "Control": [],
+          "depth": 2,
+          "FlowControl": [],
+          "Label": [
+            "What is your best memory about character named $NAME_CHAR$ ?"
+          ],
+          "id": "kiq651zv",
+          "TargetMode": [
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [],
+          "type": "QuestionType",
+          "questionType": "SIMPLE",
+          "Name": "MEMORY_CHAR"
+        }
+      ],
+      "Name": "MODULE7"
+    },
+    {
+      "Control": [],
+      "depth": 1,
+      "FlowControl": [],
+      "genericName": "MODULE",
+      "Label": [
+        "Comment"
+      ],
+      "id": "j6z12s2d",
+      "TargetMode": [
+        "CAWI",
+        "PAPI"
+      ],
+      "Declaration": [],
+      "type": "SequenceType",
+      "Child": [
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "jbcggt4x",
+              "id": "jbgd6m6e",
+              "mandatory": false,
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "type": "TextDatatypeType",
+                "MaxLength": 255
+              }
+            }
+          ],
+          "Control": [],
+          "depth": 2,
+          "FlowControl": [],
+          "Label": [
+            "Do you have any comment about the survey?"
+          ],
+          "id": "j6z0z3us",
+          "TargetMode": [
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [],
+          "type": "QuestionType",
+          "questionType": "SIMPLE",
+          "Name": "SURVEY_COMMENT"
+        }
+      ],
+      "Name": "MODULE8"
+    },
+    {
+      "Control": [],
+      "depth": 1,
+      "FlowControl": [],
+      "genericName": "MODULE",
+      "Label": [
+        "QUESTIONNAIRE_END"
+      ],
+      "id": "idendquest",
+      "TargetMode": [
+        "CAWI",
+        "PAPI",
+        "PAPI"
+      ],
+      "Declaration": [],
+      "type": "SequenceType",
+      "Child": [],
+      "Name": "QUESTIONNAIRE_END"
+    }
+  ]
+}
