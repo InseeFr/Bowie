@@ -24,7 +24,7 @@ The official docker images required to deploy an instance of Survey Design produ
 - [Stromae-db](https://hub.docker.com/r/inseefr/stromae-db/tags)
 - [Queen](https://hub.docker.com/r/inseefr/queen)
 
-:warning: Warning : don't use the lastest tag (not always updated).
+:warning: Warning : don't use the "lastest" tag (not always updated).
 
 To know the content of a tag, please refer to the corresponding release note in the github repository.
 
@@ -51,9 +51,9 @@ Before launching the commands, go to the folder containing the values or the kub
 There is currently no helm-chart associated with the deployment of Eno. You must use kubernetes contracts.
 You can find an example of contracts [here](./deploiement/Eno-WS/).
 
-The following command allows you to install Eno-WS  : `kubectl apply -f .``
+The following command allows you to install Eno-WS  : `kubectl apply -f .`
 
-In this example, you can now log into Eno's swagger at https://eno-example.com/swagger-ui/index.html?url=/v3/api-docs&validatorUrl=
+In this example, you can now log into Eno's swagger at https://eno-ws.example.com/swagger-ui/index.html?url=/v3/api-docs&validatorUrl=
 
 ### Queen
 
@@ -111,7 +111,7 @@ In this example, you can now log into DDI-Access-Services's swagger at https://d
 You can use the [Helm Chart to deploy Pogues UI, Pogues Back Office and initialize Postgre database](https://github.com/InseeFr/Helm-Charts/tree/main/charts/pogues).
 
 You can find the database initialization script [here](./deploiement/Pogues/pogues-bdd-backup.sql)
-Ce script initialise la base de données avec des métadonnées de questionnaires (série%2C opération%2C etc) et un premier questionnaire test %3A le questionnaire Simpsons.
+This script initializes the database with metadata (mocked metadata repository data) and a first test questionnaire : the Simpsons questionnaire.
 
 You can find an example of values [here](./deploiement/Pogues/pogues-values.yaml).
 
@@ -120,4 +120,4 @@ The following command allows you to install Pogues : `helm install pogues inseef
 In this example, you can now log into Pogues-Back-Office's swagger at https://pogues-back-office.example.com/swagger-ui/dist/ and Pogues at https://pogues.example.com
 
 
-**You have finished installing an instance of Survey Design Product in your kubernetes cluster: enjoy !**
+**You have finished installing an instance of Survey Design Product in your kubernetes cluster: enjoy on https://pogues.example.com !**
