@@ -1,0 +1,48 @@
+api:
+  image:
+    repository: inseefr/queen-back-office
+    tag: X.Y.Z
+  ingress:
+    enabled: true
+    hosts:
+      - host: stromae-v2-example.com
+        paths:
+          - path: /
+
+  autoscaling:
+    enabled: true
+
+  env:
+    JAVA_OPTS: "-Dlogging.config=${CATALINA_BASE}/webapps/log4j2.xml -Dspring.profiles.active=dev -Dspring.config.location=classpath:/,${CATALINA_BASE}/webapps/queenbo.properties"
+    FR_INSEE_QUEEN_APPLICATION_PERSISTENCETYPE: "JPA"
+    FR_INSEE_QUEEN_PERSISTENCE_DATABASE_HOST: "stromae-v2-db"
+    FR_INSEE_QUEEN_PERSISTENCE_DATABASE_PORT: "5432"
+    FR_INSEE_QUEEN_PERSISTENCE_DATABASE_SCHEMA: "stromae-v2-db"
+    FR_INSEE_QUEEN_PERSISTENCE_DATABASE_USER: "stromae-v2-user"
+    FR_INSEE_QUEEN_PERSISTENCE_DATABASE_PASSWORD: "password"
+    FR_INSEE_QUEEN_LOGGING_LEVEL: "ERROR"
+
+ui:
+  image:
+    repository: inseefr/stromae
+    tag: 2.Y.Z
+
+  env:
+    PUBLICENEMY_API_URL: https://stromae-v2-back-office.example.com
+
+  ingress:
+    enabled: true
+    hosts:
+      - host: stromae-v2.example.com
+        paths:
+          - path: /
+
+  autoscaling:
+    enabled: true
+
+postgresql-bitnami:
+  enabled: true
+  fullnameOverride: stromae-v2-db
+  postgresqlUsername: stroame-v2-user
+  postgresqlPassword: password
+  postgresqlDatabase: stromae-v2-db

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eno-ws
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eno-ws
+  template:
+    metadata:
+      labels:
+        app: eno-ws
+    spec:
+      containers:
+        - name: eno-ws
+          image: inseefr/eno-ws:X.Y.Z
+          volumeMounts:
+            - name: config
+              mountPath: /usr/local/tomcat/webapps/eno-ws.properties
+              subPath: eno-ws.properties
+      volumes:
+        - name: config
+          configMap:
+            name: eno-ws-config

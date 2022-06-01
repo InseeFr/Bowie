@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stromae
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stromae
+  template:
+    metadata:
+      labels:
+        app: stromae
+    spec:
+      containers:
+        - name: stromae
+          image: inseefr/stromae:1.Y.Z
+          imagePullPolicy: Always
+          env:
+          - name: STROMAE_DB_USERNAME
+            value: "admin"
+          - name: STROMAE_DB_PASSWORD
+            value: "password"
+          - name: STROMAE_DB_URL
+            value: "https://admin:@stromae-db.example.com"
+          - name: ORBEON_EXIST
+            value: "exist"
+          - name: ORBEON_EXIST_COLLECTION
+            value: "exist/rest/db/orbeon/fr"
+          - name: STROMAE_HOST
+            value: "https://stromae.example.com/rmesstromae"
+          - name: URL_LOGOUT
+            value: "https://pogues.example.com"
