@@ -6,7 +6,7 @@ data:
   eno-ws.properties: |-
     #############  Swagger host #############
     fr.insee.enows.api.scheme=https
-    fr.insee.enows.api.host=eno-example.com
+    fr.insee.enows.api.host=eno-ws.example.com
 
     ############# Logging #############
     logging.config=${catalina.base}/webapps/log4j2.xml

@@ -43,6 +43,6 @@ ui:
 postgresql-bitnami:
   enabled: true
   fullnameOverride: stromae-v2-db
-  postgresqlUsername: stroame-v2-user
+  postgresqlUsername: stromae-v2-user
   postgresqlPassword: password
   postgresqlDatabase: stromae-v2-db

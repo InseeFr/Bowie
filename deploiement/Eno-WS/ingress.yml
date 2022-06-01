@@ -8,9 +8,9 @@ metadata:
 spec:
   tls:
     - hosts:
-        - eno-ws.dev.insee.io
+        - eno-ws.example.com
   rules:
-    - host: eno-ws.dev.insee.io
+    - host: eno-ws.example.com
       http:
         paths:
           - path: /
