@@ -1,4 +1,4 @@
-# Get Started : Install Survey Design product
+# Get Started : Install Survey Design product on a kubernetes cluster
 
 ## Before you begin
 
