@@ -40,23 +40,22 @@ If you have already added the repository, you can update it like this : `helm re
 
 ### Steps for deploying a new instance on a kubernetes cluster
 
-You will need to install all the required applications for Survey Design product. Some uses a helm chart, others have classic kubernetes contracts.
+You will need to install all the required applications for Survey Design Product. Some uses a helm chart, others have classic Kubernetes objects specs (deployment.yml, ingress.yml, ...).
 
 Do not forget in example files :
 - change the properties of the databases (in particular the passwords set by default to "password")
 - change the host in the URLs
 - change docker image tags (replace X.Y.Z).
 
-Before launching the commands, go to the folder containing the values or the kubernetes contracts.
+Before launching the commands, go to the folder containing the values or the Kubernetes objects specs.
 
 #### Eno-WS
 
-There is currently no helm-chart associated with the deployment of Eno. You must use kubernetes contracts.
-You can find an example of contracts [here](./deploiement/Eno-WS/).
+There is currently no helm-chart associated with the deployment of Eno. You must use Kubernetes objects specs of which you can find an example [here](./deploiement/Eno-WS/).
 
 The following command allows you to install Eno-WS  : `kubectl apply -f .`
 
-In this example, you can now log into Eno's swagger at https://eno-ws.example.com/swagger-ui/index.html?url=/v3/api-docs&validatorUrl=
+In this example, you can now request Eno's swagger at https://eno-ws.example.com/swagger-ui/index.html?url=/v3/api-docs&validatorUrl=
 
 #### Queen
 
@@ -66,7 +65,7 @@ You can find an example of values [here](./deploiement/Queen/).
 
 The following command allows you to install Queen  : `helm install queen-demo inseefr/app -f queen-values.yaml`
 
-In this example, you can now log into Queen at https://queen.example.com/queen/visualize
+In this example, you can now request Queen at https://queen.example.com/queen/visualize
 
 #### Stromae-V2
 
@@ -76,39 +75,38 @@ You can find an example of values [here](./deploiement/Stromae-V2/).
 
 The following command allows you to install Stromae-V2 : `helm install stromae-v2-demo inseefr/app -f stromae-v2-values.yaml`
 
-In this example, you can now log into Queen at https://stromae-v2.example.com/visualize
+In this example, you can now request Queen at https://stromae-v2.example.com/visualize
 
 #### Stromae-V1
 
-There is currently no helm-chart associated with the deployment of Stromae-V1. You must use kubernetes contracts of Stromae-V1 and Stromae-bd.
+There is currently no helm-chart associated with the deployment of Stromae-V1. You must use kubernetes objects specs of Stromae-V1 and Stromae-bd.
 
 ##### Stromae-db
 
-You can find an example of contracts [here](./deploiement/Stromae-db/).
+You can find an example of Kubernetes objects specs [here](./deploiement/Stromae-db/).
 
 The following command allows you to install Stromae : `kubectl apply -f .` 
 
-In this example, you can now log into Stromae eXist dashboard  at https://stromae-db.example.com/exist/apps/dashboard/index.html
+In this example, you can now find Stromae eXist dashboard at https://stromae-db.example.com/exist/apps/dashboard/index.html
 
 ##### Stromae
 
-You can find an example of contracts [here](./deploiement/Stromae-V1/).
+You can find an example of Kubernetes objects specs [here](./deploiement/Stromae-V1/).
 
 The following command allows you to install Stromae-db  :  `kubectl apply -f .` 
 
-In this example, you can now log into Simpsons test questionnaire at https://stromae.example.com/rmesstromae/fr/esa-dc-2018/m1/new?unite-enquete=123456789
+In this example, you can now find the Simpsons test questionnaire at https://stromae.example.com/rmesstromae/fr/esa-dc-2018/m1/new?unite-enquete=123456789
 
 
 #### DDI-Access-Services
 
-There is currently no helm-chart associated with the deployment of Eno. You must use kubernetes contracts.
-You can find an example of contracts [here](./deploiement/DDI-Access-Services/).
+There is currently no helm-chart associated with the deployment of Eno. You must use Kubernetes objects specs of which yu can find an example [here](./deploiement/DDI-Access-Services/).
 
 Note : DDI-Access-Services connects to the Pogues database: it is necessary to take the same database configuration (user, password, etc.) in the properties.
 
 The following command allows you to install DDI-Access-Services  : `kubectl apply -f .` 
 
-In this example, you can now log into DDI-Access-Services's swagger at https://ddi-access-services.example.com/swagger-ui/dist/
+In this example, you can now find DDI-Access-Services's swagger at https://ddi-access-services.example.com/swagger-ui/dist/
 
 #### Pogues
 
@@ -121,7 +119,7 @@ You can find an example of values [here](./deploiement/Pogues/pogues-values.yaml
 
 The following command allows you to install Pogues : `helm install pogues inseefr/pogues -f pogues-values.yaml`
 
-In this example, you can now log into Pogues-Back-Office's swagger at https://pogues-back-office.example.com/swagger-ui/dist/ and Pogues at https://pogues.example.com
+In this example, you can now find Pogues-Back-Office's swagger at https://pogues-back-office.example.com/swagger-ui/dist/ and Pogues at https://pogues.example.com
 
 
 **You have finished installing an instance of Survey Design Product in your kubernetes cluster: enjoy on https://pogues.example.com !**
