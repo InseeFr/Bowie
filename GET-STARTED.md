@@ -12,7 +12,7 @@
 
 #### Architecture scheme
 
-The architecture of the Survey Design is modular to make a multifunctional service (design, persist, generate, visualize,...). 
+The architecture of the Survey Designer is modular to make a multifunctional service (design, persist, generate, visualize,...). 
 The installation of a minimum base is essential to enter a questionnaire: Pogues (FO, BO and DB) and DDI-Access-Services.
 Finally, to access the visualization in the different survey tools, you must add Eno-WS (the DDI and PDF visualization will then be possible) and the orchestrators that interest you: (Queen, Stromae V1 or / and Stromae V2).
 You can refer to the [Readme](./README.md) for more information.
