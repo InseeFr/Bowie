@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stromae-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stromae-db
+  template:
+    metadata:
+      labels:
+        app: stromae-db
+    spec:
+      containers:
+        - name: stromae-db
+          image: inseefr/stromae-db:X.Y.Z

@@ -1,0 +1,48 @@
+api:
+  image:
+    repository: inseefr/queen-back-office
+    tag: X.Y.Z
+  ingress:
+    enabled: true
+    hosts:
+      - host: queen-back-office.example.com
+        paths:
+          - path: /
+
+  autoscaling:
+    enabled: true
+
+  env:
+    JAVA_OPTS: "-Dlogging.config=${CATALINA_BASE}/webapps/log4j2.xml -Dspring.profiles.active=dev -Dspring.config.location=classpath:/,${CATALINA_BASE}/webapps/queenbo.properties"
+    FR_INSEE_QUEEN_APPLICATION_PERSISTENCETYPE: "JPA"
+    FR_INSEE_QUEEN_PERSISTENCE_DATABASE_HOST: "queen-db"
+    FR_INSEE_QUEEN_PERSISTENCE_DATABASE_PORT: "5432"
+    FR_INSEE_QUEEN_PERSISTENCE_DATABASE_SCHEMA: "queen-db"
+    FR_INSEE_QUEEN_PERSISTENCE_DATABASE_USER: "queen-user"
+    FR_INSEE_QUEEN_PERSISTENCE_DATABASE_PASSWORD: "password"
+    FR_INSEE_QUEEN_LOGGING_LEVEL: "ERROR"
+
+ui:
+  image:
+    repository: inseefr/queen
+    tag: X.Y.Z
+
+  env:
+    PUBLICENEMY_API_URL: https://queen-back-office.example.com
+
+  ingress:
+    enabled: true
+    hosts:
+      - host: queen.example.com
+        paths:
+          - path: /
+
+  autoscaling:
+    enabled: true
+
+postgresql-bitnami:
+  enabled: true
+  fullnameOverride: queen-db
+  postgresqlUsername: queen-user
+  postgresqlPassword: password
+  postgresqlDatabase: queen-db

@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ddi-access-services-config
+data:
+  ddi-access-services.properties: |-
+    # SSL
+    fr.insee.rmes.force.ssl=false
+    # Log4J configuration File
+    fr.insee.rmespogbo.log.configuration=log4j2.xml
+    # Swagger host
+    fr.insee.rmes.api.host = ddi-access-services.example.com
+    fr.insee.rmes.api.name= /api
+    fr.insee.rmes.api.scheme= https
+    # Metadata service
+    fr.insee.rmes.api.remote.metadata.MetadataService.impl = MetadataServiceImpl
+    fr.insee.rmes.api.remote.metadata.url = 
+    fr.insee.rmes.api.remote.metadata.agency = fr.insee
+    fr.insee.rmes.api.remote.metadata.key = ADMINKEY
+
+    fr.insee.rmes.search.root.sub-group.ids = 5696739a-751c-4603-a0bc-e4c05bd41c83
+    fr.insee.rmes.search.root.resource-package.ids = 
+    fr.insee.rmes.search.DDIItemRepository.impl = DDIItemRepositoryDBImpl
+    fr.insee.rmes.search.db.host = pogues-postgresql
+    fr.insee.rmes.search.db.port = 5432
+    fr.insee.rmes.search.db.schema = Pogues
+    fr.insee.rmes.search.db.user = Pogues
+    fr.insee.rmes.search.db.password = password
+    fr.insee.rmes.search.db.driver = org.postgresql.Driver
+    fr.insee.rmes.search.db.table = ddi_item
