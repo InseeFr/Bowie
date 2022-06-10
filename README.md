@@ -22,6 +22,9 @@ These are:
 
 Documentation will also be provided through this initiative and synchronisation with the overall steering tool of the data collection system.
 
+Link to the documentation for the installation of the survey design product : [get-started](./GET-STARTED.md)
+
+
 🇫🇷
 
 Ce dépôt sert à suivre les progrès du produit Conception d'Enquêtes développé à l'Insee et pour communiquer sur les résultats (ou leur absence).
@@ -41,6 +44,8 @@ Il s'agit de :
 - [Stromae V1](https://github.com/InseeFr/Stromae)
 
 De la documentation sera également fournie à travers ce dépôt ainsi qu'une synchronisation avec l'outil de pilotage global de la filière de collecte.
+
+Lien vers la documentation pour l'installation du produit Conception d'enquêtes : [get-started](./GET-STARTED.md)
 
 # Progress 🔮
 
