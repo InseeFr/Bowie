@@ -1,0 +1,1757 @@
+{
+  "owner": "DG75-L120",
+  "ComponentGroup": [
+    {
+      "MemberReference": [
+        "kd09v80w",
+        "kd0cbson",
+        "k0dzbfek",
+        "kd0a6rn3",
+        "kd0a8h62",
+        "kd0a4t4f",
+        "kd0ac92p",
+        "k1cahy88",
+        "kd0ch7pf",
+        "kd0aamy0",
+        "kd0cdj48",
+        "kd0aa5ah",
+        "l5qvuk9e",
+        "l5qvtc2l",
+        "kd0c3h3b",
+        "kd0a5rkr",
+        "kd0achk0",
+        "kd0bl558",
+        "l5qt3xu9",
+        "kd0bu8xz",
+        "k0gj7g4v",
+        "kd0bx24r",
+        "kd0c2j4a",
+        "idendquest"
+      ],
+      "Label": [
+        "Components for page 1"
+      ],
+      "id": "kf3ta7k8",
+      "Name": "PAGE_1"
+    }
+  ],
+  "agency": "fr.insee",
+  "genericName": "QUESTIONNAIRE",
+  "Label": [
+    "QNONREG Controles Numériques VTL"
+  ],
+  "Name": "QTESTCONTR",
+  "Variables": {
+    "Variable": [
+      {
+        "Formula": "cast(nvl($QREL$,\"0\"),number) + cast(nvl($QREL2$,\"0\"),number) ",
+        "Label": "Somme de QREL et QREL2",
+        "id": "kd0bebwa",
+        "type": "CalculatedVariableType",
+        "Name": "CALC_SOMME",
+        "Datatype": {
+          "Maximum": "200",
+          "Minimum": "-200",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Formula": "cast(nvl($QREL$,\"0\"),number) * cast(nvl($QREL2$,\"0\"),number) ",
+        "Label": "Produit de deux entiers relatifs",
+        "id": "kd0bkkrg",
+        "type": "CalculatedVariableType",
+        "Name": "CALC_PRODUIT",
+        "Datatype": {
+          "Maximum": "40000",
+          "Minimum": "-400000",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Formula": "cast(nvl($QREL$,\"0\"),number) - cast(nvl($QREL2$,\"0\"),number) ",
+        "Label": "Différence de deux entiers relatifs",
+        "id": "kd0c774l",
+        "type": "CalculatedVariableType",
+        "Name": "CALC_DIFFERENCE",
+        "Datatype": {
+          "Maximum": "400",
+          "Minimum": "-400",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Formula": "cast(nvl($QREL$,\"0\"),number) / cast(nvl($QREL2$,\"0\"),number) ",
+        "Label": "Ratio de deux entiers relatifs",
+        "id": "kd0c11bu",
+        "type": "CalculatedVariableType",
+        "Name": "CALC_RATIO",
+        "Datatype": {
+          "Maximum": "400",
+          "Minimum": "-400",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Label": "QNUM label",
+        "id": "kd09ts0g",
+        "type": "CollectedVariableType",
+        "Name": "QNUM",
+        "Datatype": {
+          "Maximum": "100",
+          "Minimum": "0",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Label": "QNUM2 label",
+        "id": "kd0a6zq4",
+        "type": "CollectedVariableType",
+        "Name": "QNUM2",
+        "Datatype": {
+          "Maximum": "100",
+          "Minimum": "0",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Label": "QNUM3 label",
+        "id": "kd09xcox",
+        "type": "CollectedVariableType",
+        "Name": "QNUM3",
+        "Datatype": {
+          "Maximum": "100",
+          "Minimum": "0",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Label": "QNUM4 label",
+        "id": "kd0a3ldc",
+        "type": "CollectedVariableType",
+        "Name": "QNUM4",
+        "Datatype": {
+          "Maximum": "100",
+          "Minimum": "0",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Label": "QNUM5 label",
+        "id": "kd0a5iyh",
+        "type": "CollectedVariableType",
+        "Name": "QNUM5",
+        "Datatype": {
+          "Maximum": "100",
+          "Minimum": "0",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Label": "QNUM6 label",
+        "id": "kd0ad5l7",
+        "type": "CollectedVariableType",
+        "Name": "QNUM6",
+        "Datatype": {
+          "Maximum": "9",
+          "Minimum": "0",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Label": "QNUM7 label",
+        "id": "kd0c91ft",
+        "type": "CollectedVariableType",
+        "Name": "QNUM7",
+        "Datatype": {
+          "Maximum": "9",
+          "Minimum": "0",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Label": "REL label",
+        "id": "kzs9m6w6",
+        "type": "CollectedVariableType",
+        "Name": "REL",
+        "Datatype": {
+          "Maximum": "100",
+          "Minimum": "-100",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": "2"
+        }
+      },
+      {
+        "Label": "REEL label",
+        "id": "keu43xvz",
+        "type": "CollectedVariableType",
+        "Name": "REEL",
+        "Datatype": {
+          "Maximum": "100",
+          "Minimum": "-100",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": "2"
+        }
+      },
+      {
+        "Label": "REEL2 label",
+        "id": "l5qvsjyr",
+        "type": "CollectedVariableType",
+        "Name": "REEL2",
+        "Datatype": {
+          "Maximum": "100",
+          "Minimum": "-100",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": "2"
+        }
+      },
+      {
+        "Label": "REEL3 label",
+        "id": "l5qvrftu",
+        "type": "CollectedVariableType",
+        "Name": "REEL3",
+        "Datatype": {
+          "Maximum": "100",
+          "Minimum": "-100",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": "2"
+        }
+      },
+      {
+        "Label": "GRAND label",
+        "id": "keu57eyz",
+        "type": "CollectedVariableType",
+        "Name": "GRAND",
+        "Datatype": {
+          "Maximum": "1000000000",
+          "Minimum": "0",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": "2"
+        }
+      },
+      {
+        "Label": "QREL label",
+        "id": "kd0akaw4",
+        "type": "CollectedVariableType",
+        "Name": "QREL",
+        "Datatype": {
+          "Maximum": "100",
+          "Minimum": "-100",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Label": "QREL2 label",
+        "id": "kzgp2pvn",
+        "type": "CollectedVariableType",
+        "Name": "QREL2",
+        "Datatype": {
+          "Maximum": "100",
+          "Minimum": "-100",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": "2"
+        }
+      },
+      {
+        "Label": "QNUMBIS label",
+        "id": "l5qt3p3w",
+        "type": "CollectedVariableType",
+        "Name": "QNUMBIS",
+        "Datatype": {
+          "Maximum": "100",
+          "Minimum": "0",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Label": "QRATIO label",
+        "id": "kd0bnq5h",
+        "type": "CollectedVariableType",
+        "Name": "QRATIO",
+        "Datatype": {
+          "Maximum": "400",
+          "Minimum": "-400",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Label": "QSOMME label",
+        "id": "kzs9voci",
+        "type": "CollectedVariableType",
+        "Name": "QSOMME",
+        "Datatype": {
+          "Maximum": "200",
+          "Minimum": "-200",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": "1"
+        }
+      },
+      {
+        "Label": "QPRODUIT label",
+        "id": "l5qt9xav",
+        "type": "CollectedVariableType",
+        "Name": "QPRODUIT",
+        "Datatype": {
+          "Maximum": "400",
+          "Minimum": "-400",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": "2"
+        }
+      },
+      {
+        "Label": "QDIFFERENCE label",
+        "id": "l5qtgiv3",
+        "type": "CollectedVariableType",
+        "Name": "QDIFFERENCE",
+        "Datatype": {
+          "Maximum": "400",
+          "Minimum": "-400",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": "2"
+        }
+      }
+    ]
+  },
+  "lastUpdatedDate": "Tue Jul 19 2022 10:08:50 GMT+0200 (heure d’été d’Europe centrale)",
+  "DataCollection": [
+    {
+      "id": "esa-dc-2018",
+      "uri": "http://ddi:fr.insee:DataCollection.esa-dc-2018",
+      "Name": "Enquête sectorielle annuelle 2018"
+    }
+  ],
+  "final": false,
+  "flowLogic": "REDIRECTION",
+  "id": "kzfezgxb",
+  "TargetMode": [
+    "CAPI",
+    "CATI",
+    "CAWI",
+    "PAPI"
+  ],
+  "CodeLists": {
+    "CodeList": []
+  },
+  "formulasLanguage": "VTL",
+  "Child": [
+    {
+      "Control": [],
+      "depth": 1,
+      "FlowControl": [],
+      "genericName": "MODULE",
+      "Label": [
+        "Tests sur variables numériques"
+      ],
+      "id": "kd09v80w",
+      "TargetMode": [
+        ""
+      ],
+      "Declaration": [],
+      "type": "SequenceType",
+      "Child": [
+        {
+          "Control": [],
+          "depth": 2,
+          "FlowControl": [],
+          "genericName": "SUBMODULE",
+          "Label": [
+            "Tests simples sur des entiers"
+          ],
+          "id": "kd0cbson",
+          "TargetMode": [
+            ""
+          ],
+          "Declaration": [],
+          "type": "SequenceType",
+          "Child": [
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "kd09ts0g",
+                  "id": "k0dz2eb9",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "100",
+                    "Minimum": "0",
+                    "typeName": "NUMERIC",
+                    "Unit": "",
+                    "type": "NumericDatatypeType",
+                    "Decimals": ""
+                  }
+                }
+              ],
+              "Control": [
+                {
+                  "post_collect": false,
+                  "Description": "controle num sup  5",
+                  "Expression": "cast(nvl($QNUM$,\"0\"),integer) > 5",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "sup à 5",
+                  "id": "k0dz3h28"
+                },
+                {
+                  "post_collect": false,
+                  "Description": "superieur à 6.5",
+                  "Expression": "cast(nvl($QNUM$,\"0\"),integer) > 6.5",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "superieur à 6.5",
+                  "id": "l5qvs8lw"
+                }
+              ],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "Test de supériorité stricte - Saisie d'un nombre compris entre 0 et 100 - Si valeur supérieure à 5 message d'info. si superieur à 6,5 autre message\n"
+              ],
+              "id": "k0dzbfek",
+              "TargetMode": [
+                ""
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "HELP",
+                  "Text": "Tester 2 et 20 (pour vérifier ordre numérique et lexico)",
+                  "id": "kzgzg0bk",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                }
+              ],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "QNUM"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "kd0a6zq4",
+                  "id": "kd0a6x8t",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "100",
+                    "Minimum": "0",
+                    "typeName": "NUMERIC",
+                    "Unit": "",
+                    "type": "NumericDatatypeType",
+                    "Decimals": ""
+                  }
+                }
+              ],
+              "Control": [
+                {
+                  "post_collect": false,
+                  "Description": "test numérique vide",
+                  "Expression": "isnull($QNUM2$)",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "vous n'avez pas répondu à la question",
+                  "id": "kd0abji1"
+                }
+              ],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "Test sur valeur numérique vide"
+              ],
+              "id": "kd0a6rn3",
+              "TargetMode": [
+                ""
+              ],
+              "Declaration": [],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "QNUM2"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "kd09xcox",
+                  "id": "kd0a45rw",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "100",
+                    "Minimum": "0",
+                    "typeName": "NUMERIC",
+                    "Unit": "",
+                    "type": "NumericDatatypeType",
+                    "Decimals": ""
+                  }
+                }
+              ],
+              "Control": [
+                {
+                  "post_collect": false,
+                  "Description": "test d'infériorité numérique",
+                  "Expression": "cast(nvl($QNUM3$,\"\"),integer) < 8",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "le nombre saisi est inférieur à 8",
+                  "id": "kd0a0bgm"
+                }
+              ],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "Test d'infériorité stricte - Saisie d'un nombre compris entre 0 et 100 - Message si valeur inférieure à 8\n    "
+              ],
+              "id": "kd0a8h62",
+              "TargetMode": [
+                ""
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "HELP",
+                  "Text": "Tester 2 et 20 (pour vérifier ordre numérique et lexico)",
+                  "id": "kzgzr5b4",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                }
+              ],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "QNUM3"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "kd0a3ldc",
+                  "id": "kd0acohy",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "100",
+                    "Minimum": "0",
+                    "typeName": "NUMERIC",
+                    "Unit": "",
+                    "type": "NumericDatatypeType",
+                    "Decimals": ""
+                  }
+                }
+              ],
+              "Control": [
+                {
+                  "post_collect": false,
+                  "Description": "supérieur ou égal",
+                  "Expression": "cast(nvl($QNUM4$,\"0\"),integer) >=5",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "la valeur saisie est supérieure ou égale à 5",
+                  "id": "kd09xebu"
+                }
+              ],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "Test de supériorité non stricte - Saisie d'un nombre compris entre 0 et 100 - Test si valeur supérieure à 5 "
+              ],
+              "id": "kd0a4t4f",
+              "TargetMode": [
+                ""
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "HELP",
+                  "Text": "Tester 2 et 20 (pour vérifier ordre numérique et lexico)\r\nTester pour le cas d'égalité",
+                  "id": "kzgzrq25",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                }
+              ],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "QNUM4"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "kd0a5iyh",
+                  "id": "kd09wp6y",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "100",
+                    "Minimum": "0",
+                    "typeName": "NUMERIC",
+                    "Unit": "",
+                    "type": "NumericDatatypeType",
+                    "Decimals": ""
+                  }
+                }
+              ],
+              "Control": [
+                {
+                  "post_collect": false,
+                  "Description": "inférieur ou égal",
+                  "Expression": "cast(nvl($QNUM5$,\"\"),integer) <= 8",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "La valeur saisie est inférieure ou égale à 8",
+                  "id": "kd0a5y0l"
+                }
+              ],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "Test d'infériorité non stricte - Saisie d'un nombre compris entre 0 et 100 - Test si valeur inférieure à 8\n"
+              ],
+              "id": "kd0ac92p",
+              "TargetMode": [
+                ""
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "HELP",
+                  "Text": "Tester 2 et 20 (pour vérifier ordre numérique et lexico)\r\nTester 8 pour le cas égalité",
+                  "id": "kzgzp1k0",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                }
+              ],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "QNUM5"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "kd0ad5l7",
+                  "id": "k1ca96e1",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "9",
+                    "Minimum": "0",
+                    "typeName": "NUMERIC",
+                    "Unit": "",
+                    "type": "NumericDatatypeType",
+                    "Decimals": ""
+                  }
+                }
+              ],
+              "Control": [
+                {
+                  "post_collect": false,
+                  "Description": "valeur égale à 4",
+                  "Expression": "cast(nvl($QNUM6$,\"0\"),integer)  = 4",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "la valeur est égale à 4",
+                  "id": "k3ihm0wk"
+                }
+              ],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "Test d'égalité - Message si = 4"
+              ],
+              "id": "k1cahy88",
+              "TargetMode": [
+                ""
+              ],
+              "Declaration": [],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "QNUM6"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "kd0c91ft",
+                  "id": "kd0c7f65",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "9",
+                    "Minimum": "0",
+                    "typeName": "NUMERIC",
+                    "Unit": "",
+                    "type": "NumericDatatypeType",
+                    "Decimals": ""
+                  }
+                }
+              ],
+              "Control": [
+                {
+                  "post_collect": false,
+                  "Description": "zero",
+                  "Expression": "cast($QNUM7$,integer) = 0",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "La valeur est zéro",
+                  "id": "kd0cp5m5"
+                },
+                {
+                  "post_collect": false,
+                  "Description": "qnum7 vide",
+                  "Expression": "isnull($QNUM7$)",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "valeur vide",
+                  "id": "l5qsxfto"
+                }
+              ],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "Test d'égalité à 0 - Message si  = 0\n"
+              ],
+              "id": "kd0ch7pf",
+              "TargetMode": [
+                ""
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "HELP",
+                  "Text": "Tester 0\r\nTester aussi en vidant la valeur",
+                  "id": "kzgzyu8d",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                }
+              ],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "QNUM7"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "kzs9m6w6",
+                  "id": "kd0aawm2",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "100",
+                    "Minimum": "-100",
+                    "typeName": "NUMERIC",
+                    "Unit": "",
+                    "type": "NumericDatatypeType",
+                    "Decimals": "2"
+                  }
+                }
+              ],
+              "Control": [
+                {
+                  "post_collect": false,
+                  "Description": "supérieur strict",
+                  "Expression": "cast(nvl($REL$,\"0\"),number) > -4",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "c'est supérieur strict",
+                  "id": "kd0adyac"
+                },
+                {
+                  "post_collect": false,
+                  "Description": "supérieur ou égal",
+                  "Expression": "cast(nvl($REL$,\"0\"),number)  >= -4",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "c'est supérieur ou égal",
+                  "id": "kd0abpa0"
+                },
+                {
+                  "post_collect": false,
+                  "Description": "inférieur strict",
+                  "Expression": "cast(nvl($REL$,\"0\"),number)  < -4",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "c'est  inférieur strict",
+                  "id": "kd0abveq"
+                },
+                {
+                  "post_collect": false,
+                  "Description": "inférieur ou égal",
+                  "Expression": "cast(nvl($REL$,\"0\"),number)  <= -4",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "c'est inférieur ou égal",
+                  "id": "kd0a7xf7"
+                },
+                {
+                  "post_collect": false,
+                  "Description": "égal",
+                  "Expression": "cast(nvl($REL$,\"0\"),number)  = -4",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "c'est égal",
+                  "id": "kd0a8hny"
+                },
+                {
+                  "post_collect": false,
+                  "Description": "différent",
+                  "Expression": "cast(nvl($REL$,\"0\"),number)  <> -4",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "c'est différent",
+                  "id": "kd0aj8dk"
+                }
+              ],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "TestS d'un relatif par rapport à une constante neg"
+              ],
+              "id": "kd0aamy0",
+              "TargetMode": [
+                ""
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "HELP",
+                  "Text": "test des positionnements par rapport à -4",
+                  "id": "kzgzjdlf",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                },
+                {
+                  "declarationType": "HELP",
+                  "Text": "En LunaticV1 impossible saisir un négatif",
+                  "id": "l5qs4feh",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI"
+                  ]
+                }
+              ],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "REL"
+            }
+          ],
+          "Name": "ENTIER"
+        },
+        {
+          "Control": [],
+          "depth": 2,
+          "FlowControl": [],
+          "genericName": "SUBMODULE",
+          "Label": [
+            "Tests sur des relatifs et des réels"
+          ],
+          "id": "kd0cdj48",
+          "TargetMode": [
+            ""
+          ],
+          "Declaration": [],
+          "type": "SequenceType",
+          "Child": [
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "keu43xvz",
+                  "id": "kd0a7yqi",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "100",
+                    "Minimum": "-100",
+                    "typeName": "NUMERIC",
+                    "Unit": "",
+                    "type": "NumericDatatypeType",
+                    "Decimals": "2"
+                  }
+                }
+              ],
+              "Control": [
+                {
+                  "post_collect": false,
+                  "Description": "supérieur",
+                  "Expression": "cast(nvl($REEL$,\"\"),number)  > -4.51",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "la valeur est supérieure à -4.51",
+                  "id": "kd0ahzg5"
+                },
+                {
+                  "post_collect": false,
+                  "Description": "egal",
+                  "Expression": "cast(nvl($REEL$,\"0\"),number)  = -4.51",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "la valeur est égale à -4.51",
+                  "id": "keu47ffh"
+                },
+                {
+                  "post_collect": false,
+                  "Description": "inférieur",
+                  "Expression": "cast(nvl($REEL$,\"0\"),number)  < -4.51",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "la valeur est inférieure à -4.51",
+                  "id": "keu3yl3i"
+                }
+              ],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "Test d'un réel par rapport à une constante  - test des positionnements par rapport à -4.51 (sup, inf, égal)"
+              ],
+              "id": "kd0aa5ah",
+              "TargetMode": [
+                ""
+              ],
+              "Declaration": [],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "REEL"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "l5qvsjyr",
+                  "id": "l5qvoy1d",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "100",
+                    "Minimum": "-100",
+                    "typeName": "NUMERIC",
+                    "Unit": "",
+                    "type": "NumericDatatypeType",
+                    "Decimals": "2"
+                  }
+                }
+              ],
+              "Control": [
+                {
+                  "post_collect": false,
+                  "Description": "superieur à 4.51",
+                  "Expression": "cast(nvl($REEL2$,\"\"),number)  > 4.51",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "superieur à 4.51",
+                  "id": "l5qvu3iu"
+                },
+                {
+                  "post_collect": false,
+                  "Description": "inferieur à 4.51",
+                  "Expression": "cast(nvl($REEL2$,\"\"),number)  < 4.51",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "inferieur à 4.51",
+                  "id": "l5qvqeew"
+                }
+              ],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "Test d'un réel par rapport à une constante  - test des positionnements par rapport à 4.51 (sup, inf, égal)"
+              ],
+              "id": "l5qvuk9e",
+              "TargetMode": [
+                ""
+              ],
+              "Declaration": [],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "REEL2"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "l5qvrftu",
+                  "id": "l5qw0lvt",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "100",
+                    "Minimum": "-100",
+                    "typeName": "NUMERIC",
+                    "Unit": "",
+                    "type": "NumericDatatypeType",
+                    "Decimals": "2"
+                  }
+                }
+              ],
+              "Control": [
+                {
+                  "post_collect": false,
+                  "Description": "superieur à 4",
+                  "Expression": "cast(nvl($REEL3$,\"\"),number)  > 4 ",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "superieur à 4",
+                  "id": "l5qvpdiy"
+                },
+                {
+                  "post_collect": false,
+                  "Description": "inferieur à 4",
+                  "Expression": "cast(nvl($REEL3$,\"\"),number)  < 4 ",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "inferieur à 4",
+                  "id": "l5qvsf47"
+                }
+              ],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "Test d'un réel par rapport à une constante  - test des positionnements par rapport à 4  (sup,  égal)"
+              ],
+              "id": "l5qvtc2l",
+              "TargetMode": [
+                ""
+              ],
+              "Declaration": [],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "REEL3"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "keu57eyz",
+                  "id": "kd0cgts6",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "1000000000",
+                    "Minimum": "0",
+                    "typeName": "NUMERIC",
+                    "Unit": "",
+                    "type": "NumericDatatypeType",
+                    "Decimals": "2"
+                  }
+                }
+              ],
+              "Control": [
+                {
+                  "post_collect": false,
+                  "Description": "supérieur à 1000",
+                  "Expression": "cast(nvl($GRAND$,\"0\"),number)  > 1000",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "la valeur saisie $GRAND$ est supérieure à 1000",
+                  "id": "kd0cn1wv"
+                }
+              ],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "\"Test d'un grand réel par rapport à une constante (max = 1000000000) - test des positionnements par rapport à 1000 - Personnalisation du message d'erreur avec la valeur (précision = 2, max = 1000000000)\""
+              ],
+              "id": "kd0c3h3b",
+              "TargetMode": [
+                ""
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "HELP",
+                  "Text": "Rappel : posait souci dans Orbeon",
+                  "id": "l5qsemyu",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                }
+              ],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "GRAND"
+            }
+          ],
+          "Name": "RELATIF"
+        },
+        {
+          "Control": [],
+          "depth": 2,
+          "FlowControl": [],
+          "genericName": "SUBMODULE",
+          "Label": [
+            "Tests sur variables collectées, ordre relatif et variables calculées"
+          ],
+          "id": "kd0a5rkr",
+          "TargetMode": [
+            ""
+          ],
+          "Declaration": [
+            {
+              "declarationType": "HELP",
+              "Text": "Les nombres sont $QREL$ et $QREL2$\r\nLeur somme vaut $CALC_SOMME$ - \r\nLeur produit vaut $CALC_PRODUIT$ -\r\nLeur différence vaut $CALC_DIFFERENCE$ - \r\nLeur division vaut $CALC_RATIO$",
+              "id": "kzh01fub",
+              "position": "AFTER_QUESTION_TEXT",
+              "DeclarationMode": [
+                "CAPI",
+                "CATI",
+                "CAWI",
+                "PAPI"
+              ]
+            }
+          ],
+          "type": "SequenceType",
+          "Child": [
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "kd0akaw4",
+                  "id": "kd0a8f1t",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "100",
+                    "Minimum": "-100",
+                    "typeName": "NUMERIC",
+                    "Unit": "",
+                    "type": "NumericDatatypeType",
+                    "Decimals": ""
+                  }
+                }
+              ],
+              "Control": [],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "Test sur ordre de deux variables - partie 1 - les contrôles portent sur la question suivante&#xd;"
+              ],
+              "id": "kd0achk0",
+              "TargetMode": [
+                ""
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "HELP",
+                  "Text": "Saisir un nombre entier relatif entre -100 et 100\r\n",
+                  "id": "l5qs57q7",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                }
+              ],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "QREL"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "kzgp2pvn",
+                  "id": "kd0b944z",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "100",
+                    "Minimum": "-100",
+                    "typeName": "NUMERIC",
+                    "Unit": "",
+                    "type": "NumericDatatypeType",
+                    "Decimals": "2"
+                  }
+                }
+              ],
+              "Control": [
+                {
+                  "post_collect": false,
+                  "Description": "supérieur",
+                  "Expression": "cast($QREL$,number) > cast($QREL2$,number)",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "le premier nombre est supérieur",
+                  "id": "kd0bgn8g"
+                },
+                {
+                  "post_collect": false,
+                  "Description": "inférieur",
+                  "Expression": "cast($QREL$,number) < cast($QREL2$,number)",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "le premier nombre est inférieur",
+                  "id": "kd0b3vtx"
+                },
+                {
+                  "post_collect": false,
+                  "Description": "égalité",
+                  "Expression": "cast($QREL$,number) = cast($QREL2$,number)",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "les deux nombres sont égaux",
+                  "id": "kd0bhwua"
+                }
+              ],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "Test sur ordre de deux variables  - partie 2 \n"
+              ],
+              "id": "kd0bl558",
+              "TargetMode": [
+                ""
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "HELP",
+                  "Text": "MEttre 2 chiffres après virgule",
+                  "id": "kzgp1ckr",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                },
+                {
+                  "declarationType": "HELP",
+                  "Text": "Saisir un deuxième nombre relatif entre -100 et 100",
+                  "id": "kzgzuob9",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CATI",
+                    "CAWI",
+                    "PAPI",
+                    "CAPI"
+                  ]
+                },
+                {
+                  "declarationType": "HELP",
+                  "Text": "Tester supérieur, inférieur, identique",
+                  "id": "kzgzzsbo",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                },
+                {
+                  "declarationType": "HELP",
+                  "Text": "Ne pas oublier de tester ordre numérique et ordre lexicographique",
+                  "id": "kzgzn873",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                }
+              ],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "QREL2"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "l5qt3p3w",
+                  "id": "l5qsvjhs",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "100",
+                    "Minimum": "0",
+                    "typeName": "NUMERIC",
+                    "Unit": "",
+                    "type": "NumericDatatypeType",
+                    "Decimals": ""
+                  }
+                }
+              ],
+              "Control": [
+                {
+                  "post_collect": false,
+                  "Description": "saisie > QREL2",
+                  "Expression": "cast(nvl($QNUMBIS$,\"0\"),number) > cast(nvl($QREL2$,\"0\"),number)",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "saisie > QREL2",
+                  "id": "l5qst6kc"
+                }
+              ],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "Test entre un entier et un réel - saisir entre 0 et 100 - controle sur saisie > QREL2"
+              ],
+              "id": "l5qt3xu9",
+              "TargetMode": [
+                ""
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "HELP",
+                  "Text": "\"rappel QREL2 : \" || cast($QREL2$,string)",
+                  "id": "l5qt5usw",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                }
+              ],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "QNUMBIS"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "kd0bnq5h",
+                  "id": "kd0btccs",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "400",
+                    "Minimum": "-400",
+                    "typeName": "NUMERIC",
+                    "Unit": "",
+                    "type": "NumericDatatypeType",
+                    "Decimals": ""
+                  }
+                }
+              ],
+              "Control": [
+                {
+                  "post_collect": false,
+                  "Description": "Ratio différent",
+                  "Expression": "cast($CALC_RATIO$,number)<>cast(nvl($QRATIO$,\"\"),number)",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "RAtio différent",
+                  "id": "kzs9ta6z"
+                },
+                {
+                  "post_collect": false,
+                  "Description": "RAtio identique",
+                  "Expression": "cast($CALC_RATIO$,number)=cast(nvl($QRATIO$,\"\"),number)",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "RAtio identique",
+                  "id": "kzs9tm04"
+                }
+              ],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "test avec une variable calculée : le ratio - Saisissez une valeur pour la comparer au produit des deux nombres précédents"
+              ],
+              "id": "kd0bu8xz",
+              "TargetMode": [
+                ""
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "HELP",
+                  "Text": "\"QREL \" || cast($QREL$,string)",
+                  "id": "l5qsfsto",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                },
+                {
+                  "declarationType": "HELP",
+                  "Text": "\"QREL2 \" || cast($QREL2$,string)",
+                  "id": "l5qsl50s",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CATI",
+                    "CAWI",
+                    "CAPI",
+                    "PAPI"
+                  ]
+                },
+                {
+                  "declarationType": "HELP",
+                  "Text": "\"ratio calculé : \" || cast($CALC_RATIO$,string)",
+                  "id": "l5qtjjss",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                }
+              ],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "QRATIO"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "kzs9voci",
+                  "id": "kd0b9vif",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "200",
+                    "Minimum": "-200",
+                    "typeName": "NUMERIC",
+                    "Unit": "",
+                    "type": "NumericDatatypeType",
+                    "Decimals": "1"
+                  }
+                }
+              ],
+              "Control": [
+                {
+                  "post_collect": false,
+                  "Description": "égalité",
+                  "Expression": "cast(nvl($QSOMME$,\"\"),number) = cast($CALC_SOMME$,number)",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "Bravo vous savez faire une addition",
+                  "id": "kd0bdf4p"
+                },
+                {
+                  "post_collect": false,
+                  "Description": "inférieure",
+                  "Expression": "cast(nvl($QSOMME$,\"\"),number) < cast($CALC_SOMME$,number)",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "la valeur saisie est inférieure à la somme",
+                  "id": "kd0bnulk"
+                },
+                {
+                  "post_collect": false,
+                  "Description": "supérieur",
+                  "Expression": "cast(nvl($QSOMME$,\"\"),number) > cast($CALC_SOMME$,number)",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "La valeur saisie est supérieure à la somme",
+                  "id": "kd0b8zau"
+                }
+              ],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "test avec une variable calculée : la somme - Saisissez une valeur pour la comparer à la somme des deux nombres précédents\n"
+              ],
+              "id": "k0gj7g4v",
+              "TargetMode": [
+                ""
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "HELP",
+                  "Text": "\"somme calculée : \" ||cast($CALC_SOMME$,string)",
+                  "id": "kzs9lmqk",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                },
+                {
+                  "declarationType": "HELP",
+                  "Text": "\"QREL \" || cast($QREL$,string)",
+                  "id": "l5qsqev9",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                },
+                {
+                  "declarationType": "HELP",
+                  "Text": "\"QREL2 \" || cast($QREL2$,string)",
+                  "id": "l5qsn0zd",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                }
+              ],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "QSOMME"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "l5qt9xav",
+                  "id": "kd0bszwh",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "400",
+                    "Minimum": "-400",
+                    "typeName": "NUMERIC",
+                    "Unit": "",
+                    "type": "NumericDatatypeType",
+                    "Decimals": "2"
+                  }
+                }
+              ],
+              "Control": [
+                {
+                  "post_collect": false,
+                  "Description": "test de supériorité",
+                  "Expression": "cast(nvl($QPRODUIT$,\"\"),number) >= cast($CALC_PRODUIT$,number)",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "la valeur saisie est supérieure ou égale au produit",
+                  "id": "kd0bv0ov"
+                },
+                {
+                  "post_collect": false,
+                  "Description": "infériorité",
+                  "Expression": "cast(nvl($QPRODUIT$,\"\"),number)<= cast($CALC_PRODUIT$,number)",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "la valeur saisie est inférieure ou égale au produit",
+                  "id": "kd0bu7ef"
+                }
+              ],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "test avec une variable calculée : le produit - Saisissez une valeur pour la comparer au produit des deux nombres précédents"
+              ],
+              "id": "kd0bx24r",
+              "TargetMode": [
+                ""
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "HELP",
+                  "Text": "\"QREL \" || cast($QREL$,string)",
+                  "id": "l5qsnxn1",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                },
+                {
+                  "declarationType": "HELP",
+                  "Text": "\"QREL2 \" || cast($QREL2$,string)",
+                  "id": "l5qs6s2e",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CATI",
+                    "CAPI",
+                    "CAWI"
+                  ]
+                },
+                {
+                  "declarationType": "HELP",
+                  "Text": "\"produit calculé : \" ||cast($CALC_PRODUIT$,string)",
+                  "id": "l5qsojx6",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                }
+              ],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "QPRODUIT"
+            },
+            {
+              "Response": [
+                {
+                  "CollectedVariableReference": "l5qtgiv3",
+                  "id": "kd0buuc7",
+                  "mandatory": false,
+                  "Datatype": {
+                    "Maximum": "400",
+                    "Minimum": "-400",
+                    "typeName": "NUMERIC",
+                    "Unit": "",
+                    "type": "NumericDatatypeType",
+                    "Decimals": "2"
+                  }
+                }
+              ],
+              "Control": [
+                {
+                  "post_collect": false,
+                  "Description": "Différence : idem",
+                  "Expression": "cast(nvl($QDIFFERENCE$,\"\"),number) = cast($CALC_DIFFERENCE$,number)",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "Différence : idem",
+                  "id": "kzs9u0ub"
+                },
+                {
+                  "post_collect": false,
+                  "Description": "Différence",
+                  "Expression": "cast(nvl($QDIFFERENCE$,\"\"),number) <> cast($CALC_DIFFERENCE$,number)",
+                  "during_collect": false,
+                  "criticity": "INFO",
+                  "FailMessage": "Différence différente",
+                  "id": "kzsa1ing"
+                }
+              ],
+              "depth": 3,
+              "FlowControl": [],
+              "Label": [
+                "test avec une variable calculée : la différence - Saisissez une valeur pour la comparer au produit des deux nombres précédents"
+              ],
+              "id": "kd0c2j4a",
+              "TargetMode": [
+                ""
+              ],
+              "Declaration": [
+                {
+                  "declarationType": "HELP",
+                  "Text": "\"QREL \" || cast($QREL$,string)",
+                  "id": "l5qsky9a",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                },
+                {
+                  "declarationType": "HELP",
+                  "Text": "\"QREL2 \" || cast($QREL2$,string)",
+                  "id": "l5qspruc",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CATI",
+                    "CAWI",
+                    "CAPI",
+                    "PAPI"
+                  ]
+                },
+                {
+                  "declarationType": "HELP",
+                  "Text": "\"diff calculée : \" || cast($CALC_DIFFERENCE$,string)",
+                  "id": "l5qt39hp",
+                  "position": "AFTER_QUESTION_TEXT",
+                  "DeclarationMode": [
+                    "CAPI",
+                    "CATI",
+                    "CAWI",
+                    "PAPI"
+                  ]
+                }
+              ],
+              "type": "QuestionType",
+              "questionType": "SIMPLE",
+              "Name": "QDIFFERENCE"
+            }
+          ],
+          "Name": "COLLECTEES"
+        }
+      ],
+      "Name": "NUMERIQUE"
+    },
+    {
+      "Control": [],
+      "depth": 1,
+      "FlowControl": [],
+      "genericName": "MODULE",
+      "Label": [
+        "QUESTIONNAIRE_END"
+      ],
+      "id": "idendquest",
+      "TargetMode": [
+        "CAPI",
+        "CATI",
+        "CAWI",
+        "PAPI"
+      ],
+      "Declaration": [],
+      "type": "SequenceType",
+      "Child": [],
+      "Name": "QUESTIONNAIRE_END"
+    }
+  ]
+}
