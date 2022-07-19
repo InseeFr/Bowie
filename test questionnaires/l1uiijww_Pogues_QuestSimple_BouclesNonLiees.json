@@ -1,0 +1,4592 @@
+{
+  "variables": [
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAUDYN1_1_1",
+      "componentRef": "kk47qwrd"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAUDYN2_1_2",
+      "componentRef": "kk47qwrd"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAUDYN1_2_1",
+      "componentRef": "kk47qwrd"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAUDYN2_2_2",
+      "componentRef": "kk47qwrd"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAUDYN1_3_1",
+      "componentRef": "kk47qwrd"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAUDYN2_3_2",
+      "componentRef": "kk47qwrd"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAUDYN1_4_1",
+      "componentRef": "kk47qwrd"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAUDYN2_4_2",
+      "componentRef": "kk47qwrd"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAUDYN1_5_1",
+      "componentRef": "kk47qwrd"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAUDYN2_5_2",
+      "componentRef": "kk47qwrd"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "COMMENT_QE",
+      "componentRef": "COMMENT-QUESTION"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "COCHECASE",
+      "componentRef": "jfazk91m"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TEXTE10",
+      "componentRef": "jfazww20"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TEXTELONG249",
+      "componentRef": "jfazwjyv"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TEXTELONG250",
+      "componentRef": "kzwqst6c"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "SIREN",
+      "componentRef": "kk2fu72i"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "INTEGER",
+      "componentRef": "jfjh1ndk"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "FLOAT",
+      "componentRef": "jfjhb2pz"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "FLOATNEG",
+      "componentRef": "l1ujlrg4"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "UNIT",
+      "componentRef": "jfjtbqh1"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "UNITD",
+      "componentRef": "kyiseu7q"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "DATE",
+      "componentRef": "jfjfckyw"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "DAAAA",
+      "componentRef": "kvl6bpxb"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "BOOLEN",
+      "componentRef": "jfjeud07"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "CHECKBOXONERADIO",
+      "componentRef": "jfjepz6i"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "CHECKBOXONECOCHER",
+      "componentRef": "jfjero7b"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "DROPDOWN",
+      "componentRef": "jfjfae9f"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "QCM_BOOLEEN1",
+      "componentRef": "jfkxh2lf"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "QCM_BOOLEEN2",
+      "componentRef": "jfkxh2lf"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "QCM_BOOLEEN3",
+      "componentRef": "jfkxh2lf"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "QCM_BOOLEEN4",
+      "componentRef": "jfkxh2lf"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "QCM_BOOLEEN5",
+      "componentRef": "jfkxh2lf"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "QCM_BOOLEEN6",
+      "componentRef": "jfkxh2lf"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "QCM_LISTEON1",
+      "componentRef": "jfkxybfe"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "QCM_LISTEON2",
+      "componentRef": "jfkxybfe"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "QCM_LISTEON3",
+      "componentRef": "jfkxybfe"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "QCM_LISTEON4",
+      "componentRef": "jfkxybfe"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "QCM_LISTEON5",
+      "componentRef": "jfkxybfe"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "QCM_LISTEON6",
+      "componentRef": "jfkxybfe"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "QCM_LISTEONRADIO1",
+      "componentRef": "jfkyw9o1"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "QCM_LISTEONRADIO2",
+      "componentRef": "jfkyw9o1"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "QCM_LISTEONRADIO3",
+      "componentRef": "jfkyw9o1"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "QCM_LISTEONRADIO4",
+      "componentRef": "jfkyw9o1"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "QCM_LISTEONRADIO5",
+      "componentRef": "jfkyw9o1"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "QCM_LISTEONRADIO6",
+      "componentRef": "jfkyw9o1"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A1M11",
+      "componentRef": "jfkzltkm"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A1M21",
+      "componentRef": "jfkzltkm"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A1M31",
+      "componentRef": "jfkzltkm"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A1M41",
+      "componentRef": "jfkzltkm"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A1M51",
+      "componentRef": "jfkzltkm"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A1M61",
+      "componentRef": "jfkzltkm"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A3M11",
+      "componentRef": "jfkzpexn"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A3M12",
+      "componentRef": "jfkzpexn"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A3M13",
+      "componentRef": "jfkzpexn"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A3M21",
+      "componentRef": "jfkzpexn"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A3M22",
+      "componentRef": "jfkzpexn"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A3M23",
+      "componentRef": "jfkzpexn"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A3M31",
+      "componentRef": "jfkzpexn"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A3M32",
+      "componentRef": "jfkzpexn"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A3M33",
+      "componentRef": "jfkzpexn"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A3M41",
+      "componentRef": "jfkzpexn"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A3M42",
+      "componentRef": "jfkzpexn"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A3M43",
+      "componentRef": "jfkzpexn"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A3M51",
+      "componentRef": "jfkzpexn"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A3M52",
+      "componentRef": "jfkzpexn"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A3M53",
+      "componentRef": "jfkzpexn"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A3M61",
+      "componentRef": "jfkzpexn"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A3M62",
+      "componentRef": "jfkzpexn"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1A3M63",
+      "componentRef": "jfkzpexn"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A11",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A12",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A13",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A14",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A15",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A21",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A22",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A23",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A24",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A25",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A31",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A32",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A33",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A34",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A35",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A41",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A42",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A43",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A44",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A45",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A51",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A52",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A53",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A54",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A55",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A61",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A62",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A63",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A64",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU2A65",
+      "componentRef": "jfkzttm3"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1AH1M11",
+      "componentRef": "jfkzrwce"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAU1AH1M21",
+      "componentRef": "jfkzrwce"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAUDYN1",
+      "componentRef": "kk47qwrd"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "TABLEAUDYN2",
+      "componentRef": "kk47qwrd"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": null,
+        "EDITED": null,
+        "INPUTED": null,
+        "FORCED": null,
+        "PREVIOUS": null
+      },
+      "name": "NHAB",
+      "componentRef": "kmg10a27"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": [
+          null
+        ],
+        "EDITED": [
+          null
+        ],
+        "INPUTED": [
+          null
+        ],
+        "FORCED": [
+          null
+        ],
+        "PREVIOUS": [
+          null
+        ]
+      },
+      "name": "PRENOM1",
+      "componentRef": "kmg0zwhd"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": [
+          null
+        ],
+        "EDITED": [
+          null
+        ],
+        "INPUTED": [
+          null
+        ],
+        "FORCED": [
+          null
+        ],
+        "PREVIOUS": [
+          null
+        ]
+      },
+      "name": "AGE1",
+      "componentRef": "kmg0zwhd"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": [
+          null
+        ],
+        "EDITED": [
+          null
+        ],
+        "INPUTED": [
+          null
+        ],
+        "FORCED": [
+          null
+        ],
+        "PREVIOUS": [
+          null
+        ]
+      },
+      "name": "PRENOM2",
+      "componentRef": "l203qtw0"
+    },
+    {
+      "variableType": "COLLECTED",
+      "values": {
+        "COLLECTED": [
+          null
+        ],
+        "EDITED": [
+          null
+        ],
+        "INPUTED": [
+          null
+        ],
+        "FORCED": [
+          null
+        ],
+        "PREVIOUS": [
+          null
+        ]
+      },
+      "name": "AGE2",
+      "componentRef": "l203qtw0"
+    },
+    {
+      "variableType": "CALCULATED",
+      "expression": "true",
+      "name": "FILTER_RESULT_COCHECASE",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_TEXTE10",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_TEXTELONG249",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_TEXTELONG250",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_SIREN",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_INTEGER",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_FLOAT",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_FLOATNEG",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_UNIT",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_UNITD",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_DATE",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_DAAAA",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_BOOLEN",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_CHECKBOXONERADIO",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_CHECKBOXONECOCHER",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_DROPDOWN",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_QCM_BOOLEEN",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_QCM_LISTEON",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_QCM_LISTEONRADIO",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_TABLEAU1A1M",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_TABLEAU1A3M",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_TABLEAU2A",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_TABLEAU1AH1M",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "expression": "(COCHECASE = true)",
+      "name": "FILTER_RESULT_TABLEAUDYN",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "expression": "true",
+      "name": "FILTER_RESULT_NHAB",
+      "inFilter": "false"
+    },
+    {
+      "variableType": "CALCULATED",
+      "expression": "true",
+      "name": "FILTER_RESULT_PRENOM1",
+      "inFilter": "false",
+      "shapeFrom": "PRENOM1"
+    },
+    {
+      "variableType": "CALCULATED",
+      "expression": "true",
+      "name": "FILTER_RESULT_AGE1",
+      "inFilter": "false",
+      "shapeFrom": "PRENOM1"
+    },
+    {
+      "variableType": "CALCULATED",
+      "expression": "true",
+      "name": "FILTER_RESULT_PRENOM2",
+      "inFilter": "false",
+      "shapeFrom": "PRENOM2"
+    },
+    {
+      "variableType": "CALCULATED",
+      "expression": "true",
+      "name": "FILTER_RESULT_AGE2",
+      "inFilter": "false",
+      "shapeFrom": "PRENOM2"
+    },
+    {
+      "variableType": "CALCULATED",
+      "bindingDependencies": [
+        "NHAB"
+      ],
+      "expression": "if (isnull(NHAB)) then 1 else cast(NHAB,integer)",
+      "name": "NHABCALC",
+      "inFilter": "true"
+    }
+  ],
+  "components": [
+    {
+      "componentType": "Sequence",
+      "hierarchy": {
+        "sequence": {
+          "id": "jfaz9kv9",
+          "page": "1",
+          "label": "\"I - \" || \"Sequence 1 - Questions ouvertes\""
+        }
+      },
+      "conditionFilter": {
+        "value": "true"
+      },
+      "id": "jfaz9kv9",
+      "page": "1",
+      "label": "\"I - \" || \"Sequence 1 - Questions ouvertes\"",
+      "declarations": [
+        {
+          "declarationType": "INSTRUCTION",
+          "id": "jfaz9kv9-jfazqgv2",
+          "label": "Cette séquence comprend les questions ouvertes (ceci est une déclaration de type consigne, associée au titre de séquence).",
+          "position": "AFTER_QUESTION_TEXT"
+        },
+        {
+          "declarationType": "HELP",
+          "id": "jfaz9kv9-l1uiu9hq",
+          "label": "Cette séquence comprend les questions ouvertes (ceci est une déclaration de type aide, associée au titre de séquence).",
+          "position": "AFTER_QUESTION_TEXT"
+        }
+      ]
+    },
+    {
+      "componentType": "Subsequence",
+      "goToPage": "2",
+      "hierarchy": {
+        "sequence": {
+          "id": "jfaz9kv9",
+          "page": "1",
+          "label": "\"I - \" || \"Sequence 1 - Questions ouvertes\""
+        },
+        "subSequence": {
+          "id": "jfazmcp8",
+          "page": "2",
+          "label": "Titre de la première sous-séquence"
+        }
+      },
+      "conditionFilter": {
+        "value": "true"
+      },
+      "id": "jfazmcp8",
+      "page": "2",
+      "label": "Titre de la première sous-séquence",
+      "declarations": [
+        {
+          "declarationType": "INSTRUCTION",
+          "id": "jfazmcp8-kk47fewm",
+          "label": "Ceci est une déclaration de type consigne, associée au titre de sous-séquence.",
+          "position": "AFTER_QUESTION_TEXT"
+        },
+        {
+          "declarationType": "HELP",
+          "id": "jfazmcp8-l1uiw60f",
+          "label": "Ceci est une déclaration de type aide, associée au titre de sous-séquence.",
+          "position": "AFTER_QUESTION_TEXT"
+        }
+      ]
+    },
+    {
+      "componentType": "CheckboxBoolean",
+      "bindingDependencies": [
+        "COCHECASE"
+      ],
+      "response": {
+        "name": "COCHECASE"
+      },
+      "hierarchy": {
+        "sequence": {
+          "id": "jfaz9kv9",
+          "page": "1",
+          "label": "\"I - \" || \"Sequence 1 - Questions ouvertes\""
+        },
+        "subSequence": {
+          "id": "jfazmcp8",
+          "page": "2",
+          "label": "Titre de la première sous-séquence"
+        }
+      },
+      "conditionFilter": {
+        "value": "true"
+      },
+      "id": "jfazk91m",
+      "page": "3",
+      "label": "\"➡ 1. \" || \"Je suis un booleen qui filtre le reste\"",
+      "mandatory": false,
+      "declarations": [
+        {
+          "declarationType": "HELP",
+          "id": "jfazk91m-l1vvxe3l",
+          "label": "\"Je suis un test de mise en forme : combien de lignes pour cette déclaration ? 4 ?\" \"* un tiret\" \"* deux tirets\" \"Tout va bien\"",
+          "position": "AFTER_QUESTION_TEXT"
+        }
+      ]
+    },
+    {
+      "componentType": "Subsequence",
+      "goToPage": "4",
+      "hierarchy": {
+        "sequence": {
+          "id": "jfaz9kv9",
+          "page": "1",
+          "label": "\"I - \" || \"Sequence 1 - Questions ouvertes\""
+        },
+        "subSequence": {
+          "id": "jfazsitt",
+          "page": "4",
+          "label": "Sous-séquence - questions de type Texte"
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfazsitt",
+      "label": "Sous-séquence - questions de type Texte"
+    },
+    {
+      "componentType": "Input",
+      "bindingDependencies": [
+        "TEXTE10"
+      ],
+      "response": {
+        "name": "TEXTE10"
+      },
+      "hierarchy": {
+        "sequence": {
+          "id": "jfaz9kv9",
+          "page": "1",
+          "label": "\"I - \" || \"Sequence 1 - Questions ouvertes\""
+        },
+        "subSequence": {
+          "id": "jfazsitt",
+          "page": "4",
+          "label": "Sous-séquence - questions de type Texte"
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfazww20",
+      "page": "4",
+      "label": "\"➡ 2. \" || \"Je suis le libellé de la question de type texte de longueur inférieure à 250 caractères (10 ici)\"",
+      "mandatory": false,
+      "maxLength": 10
+    },
+    {
+      "componentType": "Input",
+      "bindingDependencies": [
+        "TEXTELONG249"
+      ],
+      "response": {
+        "name": "TEXTELONG249"
+      },
+      "hierarchy": {
+        "sequence": {
+          "id": "jfaz9kv9",
+          "page": "1",
+          "label": "\"I - \" || \"Sequence 1 - Questions ouvertes\""
+        },
+        "subSequence": {
+          "id": "jfazsitt",
+          "page": "4",
+          "label": "Sous-séquence - questions de type Texte"
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfazwjyv",
+      "page": "5",
+      "label": "\"➡ 3. \" || \"Je suis le libellé de la question de type texte de longueur 249\"",
+      "mandatory": false,
+      "maxLength": 249
+    },
+    {
+      "componentType": "Textarea",
+      "bindingDependencies": [
+        "TEXTELONG250"
+      ],
+      "response": {
+        "name": "TEXTELONG250"
+      },
+      "hierarchy": {
+        "sequence": {
+          "id": "jfaz9kv9",
+          "page": "1",
+          "label": "\"I - \" || \"Sequence 1 - Questions ouvertes\""
+        },
+        "subSequence": {
+          "id": "jfazsitt",
+          "page": "4",
+          "label": "Sous-séquence - questions de type Texte"
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "kzwqst6c",
+      "page": "6",
+      "label": "\"➡ 4. \" || \"Je suis le libellé de la question de type texte de longueur supérieure à 250 caractères ici 250\"",
+      "mandatory": false,
+      "maxLength": 250
+    },
+    {
+      "componentType": "Input",
+      "bindingDependencies": [
+        "SIREN"
+      ],
+      "controls": [
+        {
+          "bindingDependencies": [
+            "SIREN"
+          ],
+          "criticality": "WARN",
+          "errorMessage": "Cette réponse n’est pas un SIREN ",
+          "control": "not(SIREN = '000000000')",
+          "id": "kk2fu72i-CI-0"
+        }
+      ],
+      "response": {
+        "name": "SIREN"
+      },
+      "hierarchy": {
+        "sequence": {
+          "id": "jfaz9kv9",
+          "page": "1",
+          "label": "\"I - \" || \"Sequence 1 - Questions ouvertes\""
+        },
+        "subSequence": {
+          "id": "jfazsitt",
+          "page": "4",
+          "label": "Sous-séquence - questions de type Texte"
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "kk2fu72i",
+      "page": "7",
+      "label": "\"➡ 5. \" || \"Quel est votre SIREN (sur 9 caractères) ? (cible : ajouter une regexp / non fait pour l’instant)\"",
+      "mandatory": false,
+      "maxLength": 9,
+      "declarations": [
+        {
+          "declarationType": "INSTRUCTION",
+          "id": "kk2fu72i-kk47ngyp",
+          "label": "Ceci est une déclaration de type consigne, associée au titre de question.",
+          "position": "AFTER_QUESTION_TEXT"
+        }
+      ]
+    },
+    {
+      "componentType": "Subsequence",
+      "goToPage": "8",
+      "hierarchy": {
+        "sequence": {
+          "id": "jfaz9kv9",
+          "page": "1",
+          "label": "\"I - \" || \"Sequence 1 - Questions ouvertes\""
+        },
+        "subSequence": {
+          "id": "jfjhggkx",
+          "page": "8",
+          "label": "Numériques"
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfjhggkx",
+      "label": "Numériques"
+    },
+    {
+      "componentType": "InputNumber",
+      "controls": [
+        {
+          "bindingDependencies": [
+            "INTEGER"
+          ],
+          "criticality": "WARN",
+          "errorMessage": "Bizarre que > 50",
+          "control": "not(cast(nvl(INTEGER,\"0\"),integer) > 50)",
+          "id": "jfjh1ndk-CI-0"
+        }
+      ],
+      "max": 100,
+      "hierarchy": {
+        "sequence": {
+          "id": "jfaz9kv9",
+          "page": "1",
+          "label": "\"I - \" || \"Sequence 1 - Questions ouvertes\""
+        },
+        "subSequence": {
+          "id": "jfjhggkx",
+          "page": "8",
+          "label": "Numériques"
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "label": "\"➡ 6. \" || \"Nombre entier sans unité, entre 10 et 100.\"",
+      "mandatory": false,
+      "declarations": [
+        {
+          "declarationType": "HELP",
+          "id": "jfjh1ndk-kyisnj3g",
+          "label": "Aide : controle si saisie > 50",
+          "position": "AFTER_QUESTION_TEXT"
+        }
+      ],
+      "bindingDependencies": [
+        "INTEGER"
+      ],
+      "min": 10,
+      "response": {
+        "name": "INTEGER"
+      },
+      "decimals": 0,
+      "id": "jfjh1ndk",
+      "page": "8"
+    },
+    {
+      "componentType": "InputNumber",
+      "bindingDependencies": [
+        "FLOAT"
+      ],
+      "min": 10,
+      "max": 100,
+      "response": {
+        "name": "FLOAT"
+      },
+      "decimals": 2,
+      "hierarchy": {
+        "sequence": {
+          "id": "jfaz9kv9",
+          "page": "1",
+          "label": "\"I - \" || \"Sequence 1 - Questions ouvertes\""
+        },
+        "subSequence": {
+          "id": "jfjhggkx",
+          "page": "8",
+          "label": "Numériques"
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfjhb2pz",
+      "page": "9",
+      "label": "\"➡ 7. \" || \"Numérique décimal (2) sans unité, entre 10 et 100\"",
+      "mandatory": false
+    },
+    {
+      "componentType": "InputNumber",
+      "bindingDependencies": [
+        "FLOATNEG"
+      ],
+      "min": -1000,
+      "max": 1000,
+      "response": {
+        "name": "FLOATNEG"
+      },
+      "decimals": 0,
+      "hierarchy": {
+        "sequence": {
+          "id": "jfaz9kv9",
+          "page": "1",
+          "label": "\"I - \" || \"Sequence 1 - Questions ouvertes\""
+        },
+        "subSequence": {
+          "id": "jfjhggkx",
+          "page": "8",
+          "label": "Numériques"
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "l1ujlrg4",
+      "page": "10",
+      "label": "\"➡ 8. \" || \"Numérique négatif, entre -1000 et -1000\"",
+      "mandatory": false
+    },
+    {
+      "componentType": "InputNumber",
+      "max": 10,
+      "hierarchy": {
+        "sequence": {
+          "id": "jfaz9kv9",
+          "page": "1",
+          "label": "\"I - \" || \"Sequence 1 - Questions ouvertes\""
+        },
+        "subSequence": {
+          "id": "jfjhggkx",
+          "page": "8",
+          "label": "Numériques"
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "label": "\"➡ 9. \" || \"Nombre sans decimal, avec unité, entre 0 et 10\"",
+      "mandatory": false,
+      "unit": "k€",
+      "bindingDependencies": [
+        "UNIT"
+      ],
+      "min": 0,
+      "response": {
+        "name": "UNIT"
+      },
+      "decimals": 0,
+      "id": "jfjtbqh1",
+      "page": "11"
+    },
+    {
+      "componentType": "InputNumber",
+      "controls": [
+        {
+          "bindingDependencies": [
+            "UNIT",
+            "UNITD"
+          ],
+          "criticality": "WARN",
+          "errorMessage": "UNIT > UNITD ",
+          "control": "not(cast(nvl(UNIT,\"0\"),number) > cast(nvl(UNITD,\"0\"),number))",
+          "id": "kyiseu7q-CI-0"
+        }
+      ],
+      "max": 10,
+      "hierarchy": {
+        "sequence": {
+          "id": "jfaz9kv9",
+          "page": "1",
+          "label": "\"I - \" || \"Sequence 1 - Questions ouvertes\""
+        },
+        "subSequence": {
+          "id": "jfjhggkx",
+          "page": "8",
+          "label": "Numériques"
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "label": "\"➡ 10. \" || \"Nombre avec unité, avec décimal, entre 0 et 10.\"",
+      "mandatory": false,
+      "declarations": [
+        {
+          "declarationType": "HELP",
+          "id": "kyiseu7q-l1uu2ui0",
+          "label": "Controle avec variable précédente (si UNIT > UNITD)",
+          "position": "AFTER_QUESTION_TEXT"
+        }
+      ],
+      "unit": "k€",
+      "bindingDependencies": [
+        "UNITD"
+      ],
+      "min": 0,
+      "response": {
+        "name": "UNITD"
+      },
+      "decimals": 2,
+      "id": "kyiseu7q",
+      "page": "12"
+    },
+    {
+      "componentType": "Subsequence",
+      "goToPage": "13",
+      "hierarchy": {
+        "sequence": {
+          "id": "jfaz9kv9",
+          "page": "1",
+          "label": "\"I - \" || \"Sequence 1 - Questions ouvertes\""
+        },
+        "subSequence": {
+          "id": "jfjeuskc",
+          "page": "13",
+          "label": "Autres formats de réponse"
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfjeuskc",
+      "label": "Autres formats de réponse"
+    },
+    {
+      "componentType": "Datepicker",
+      "bindingDependencies": [
+        "DATE"
+      ],
+      "min": "1980-01-01",
+      "max": "2022-01-01",
+      "dateFormat": "YYYY-MM-DD",
+      "response": {
+        "name": "DATE"
+      },
+      "hierarchy": {
+        "sequence": {
+          "id": "jfaz9kv9",
+          "page": "1",
+          "label": "\"I - \" || \"Sequence 1 - Questions ouvertes\""
+        },
+        "subSequence": {
+          "id": "jfjeuskc",
+          "page": "13",
+          "label": "Autres formats de réponse"
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfjfckyw",
+      "page": "13",
+      "label": "\"➡ 11. \" || \"Date AAAAMMJJ entre 1980 01 01 et 2022 01 01\"",
+      "mandatory": false
+    },
+    {
+      "componentType": "Datepicker",
+      "bindingDependencies": [
+        "DAAAA"
+      ],
+      "min": "1900",
+      "max": "2022",
+      "dateFormat": "YYYY",
+      "response": {
+        "name": "DAAAA"
+      },
+      "hierarchy": {
+        "sequence": {
+          "id": "jfaz9kv9",
+          "page": "1",
+          "label": "\"I - \" || \"Sequence 1 - Questions ouvertes\""
+        },
+        "subSequence": {
+          "id": "jfjeuskc",
+          "page": "13",
+          "label": "Autres formats de réponse"
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "kvl6bpxb",
+      "page": "14",
+      "label": "\"➡ 12. \" || \"Date AAAA entre 1900 et 2022\"",
+      "mandatory": false
+    },
+    {
+      "componentType": "CheckboxBoolean",
+      "bindingDependencies": [
+        "BOOLEN"
+      ],
+      "response": {
+        "name": "BOOLEN"
+      },
+      "hierarchy": {
+        "sequence": {
+          "id": "jfaz9kv9",
+          "page": "1",
+          "label": "\"I - \" || \"Sequence 1 - Questions ouvertes\""
+        },
+        "subSequence": {
+          "id": "jfjeuskc",
+          "page": "13",
+          "label": "Autres formats de réponse"
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfjeud07",
+      "page": "15",
+      "label": "\"➡ 13. \" || \"Booléen\"",
+      "mandatory": false
+    },
+    {
+      "componentType": "Sequence",
+      "hierarchy": {
+        "sequence": {
+          "id": "jfjew4oy",
+          "page": "16",
+          "label": "\"II - \" || \"Sequence 2 - Questions à choix unique et questions à choix multiple\""
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfjew4oy",
+      "page": "16",
+      "label": "\"II - \" || \"Sequence 2 - Questions à choix unique et questions à choix multiple\""
+    },
+    {
+      "componentType": "Subsequence",
+      "goToPage": "17",
+      "hierarchy": {
+        "sequence": {
+          "id": "jfjew4oy",
+          "page": "16",
+          "label": "\"II - \" || \"Sequence 2 - Questions à choix unique et questions à choix multiple\""
+        },
+        "subSequence": {
+          "id": "jfkxouu8",
+          "page": "17",
+          "label": "Questions à choix unique"
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfkxouu8",
+      "page": "17",
+      "label": "Questions à choix unique",
+      "declarations": [
+        {
+          "declarationType": "HELP",
+          "id": "jfkxouu8-l1ujjzks",
+          "label": "Description des QCU",
+          "position": "AFTER_QUESTION_TEXT"
+        }
+      ]
+    },
+    {
+      "componentType": "Radio",
+      "bindingDependencies": [
+        "CHECKBOXONERADIO"
+      ],
+      "response": {
+        "name": "CHECKBOXONERADIO"
+      },
+      "hierarchy": {
+        "sequence": {
+          "id": "jfjew4oy",
+          "page": "16",
+          "label": "\"II - \" || \"Sequence 2 - Questions à choix unique et questions à choix multiple\""
+        },
+        "subSequence": {
+          "id": "jfkxouu8",
+          "page": "17",
+          "label": "Questions à choix unique"
+        }
+      },
+      "options": [
+        {
+          "label": "code1",
+          "value": "1"
+        },
+        {
+          "label": "code2",
+          "value": "2"
+        },
+        {
+          "label": "code3",
+          "value": "3"
+        },
+        {
+          "label": "code4",
+          "value": "4"
+        },
+        {
+          "label": "autre et libellé un peu long pour valider",
+          "value": "5"
+        }
+      ],
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfjepz6i",
+      "page": "18",
+      "label": "\"➡ 14. \" || \"Question à choix unique - présentation bouton radio\"",
+      "mandatory": false
+    },
+    {
+      "componentType": "CheckboxOne",
+      "bindingDependencies": [
+        "CHECKBOXONECOCHER"
+      ],
+      "response": {
+        "name": "CHECKBOXONECOCHER"
+      },
+      "hierarchy": {
+        "sequence": {
+          "id": "jfjew4oy",
+          "page": "16",
+          "label": "\"II - \" || \"Sequence 2 - Questions à choix unique et questions à choix multiple\""
+        },
+        "subSequence": {
+          "id": "jfkxouu8",
+          "page": "17",
+          "label": "Questions à choix unique"
+        }
+      },
+      "options": [
+        {
+          "label": "code1",
+          "value": "1"
+        },
+        {
+          "label": "code2",
+          "value": "2"
+        },
+        {
+          "label": "code3",
+          "value": "3"
+        },
+        {
+          "label": "code4",
+          "value": "4"
+        },
+        {
+          "label": "autre et libellé un peu long pour valider",
+          "value": "5"
+        }
+      ],
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfjero7b",
+      "page": "19",
+      "label": "\"➡ 15. \" || \"Question à choix unique - présentation case à cocher\"",
+      "mandatory": false
+    },
+    {
+      "componentType": "Dropdown",
+      "bindingDependencies": [
+        "DROPDOWN"
+      ],
+      "response": {
+        "name": "DROPDOWN"
+      },
+      "hierarchy": {
+        "sequence": {
+          "id": "jfjew4oy",
+          "page": "16",
+          "label": "\"II - \" || \"Sequence 2 - Questions à choix unique et questions à choix multiple\""
+        },
+        "subSequence": {
+          "id": "jfkxouu8",
+          "page": "17",
+          "label": "Questions à choix unique"
+        }
+      },
+      "options": [
+        {
+          "label": "code1",
+          "value": "1"
+        },
+        {
+          "label": "code2",
+          "value": "2"
+        },
+        {
+          "label": "code3",
+          "value": "3"
+        },
+        {
+          "label": "code4",
+          "value": "4"
+        },
+        {
+          "label": "autre et libellé un peu long pour valider",
+          "value": "5"
+        }
+      ],
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfjfae9f",
+      "page": "20",
+      "label": "\"➡ 16. \" || \"Question à choix unique - présentation liste déroulante\"",
+      "mandatory": false
+    },
+    {
+      "componentType": "Subsequence",
+      "goToPage": "21",
+      "hierarchy": {
+        "sequence": {
+          "id": "jfjew4oy",
+          "page": "16",
+          "label": "\"II - \" || \"Sequence 2 - Questions à choix unique et questions à choix multiple\""
+        },
+        "subSequence": {
+          "id": "jfkxuinz",
+          "page": "21",
+          "label": "Questions à choix multiple"
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfkxuinz",
+      "page": "21",
+      "label": "Questions à choix multiple",
+      "declarations": [
+        {
+          "declarationType": "HELP",
+          "id": "jfkxuinz-l1ujnhsh",
+          "label": "Liste des QCM",
+          "position": "AFTER_QUESTION_TEXT"
+        }
+      ]
+    },
+    {
+      "componentType": "CheckboxGroup",
+      "bindingDependencies": [
+        "QCM_BOOLEEN1",
+        "QCM_BOOLEEN2",
+        "QCM_BOOLEEN3",
+        "QCM_BOOLEEN4",
+        "QCM_BOOLEEN5",
+        "QCM_BOOLEEN6"
+      ],
+      "hierarchy": {
+        "sequence": {
+          "id": "jfjew4oy",
+          "page": "16",
+          "label": "\"II - \" || \"Sequence 2 - Questions à choix unique et questions à choix multiple\""
+        },
+        "subSequence": {
+          "id": "jfkxuinz",
+          "page": "21",
+          "label": "Questions à choix multiple"
+        }
+      },
+      "responses": [
+        {
+          "response": {
+            "name": "QCM_BOOLEEN1"
+          },
+          "id": "jfkxh2lf-QOP-l1ujvup1",
+          "label": "choix 1"
+        },
+        {
+          "response": {
+            "name": "QCM_BOOLEEN2"
+          },
+          "id": "jfkxh2lf-QOP-l1ujn7ub",
+          "label": "choix 2"
+        },
+        {
+          "response": {
+            "name": "QCM_BOOLEEN3"
+          },
+          "id": "jfkxh2lf-QOP-l1ujqshv",
+          "label": "choix 3"
+        },
+        {
+          "response": {
+            "name": "QCM_BOOLEEN4"
+          },
+          "id": "jfkxh2lf-QOP-l1ujm40x",
+          "label": "choix 4"
+        },
+        {
+          "response": {
+            "name": "QCM_BOOLEEN5"
+          },
+          "id": "jfkxh2lf-QOP-l1ujqfdi",
+          "label": "choix 5"
+        },
+        {
+          "response": {
+            "name": "QCM_BOOLEEN6"
+          },
+          "id": "jfkxh2lf-QOP-l1ujiycn",
+          "label": "et un choix 6 dont la modalité est plus longue"
+        }
+      ],
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfkxh2lf",
+      "page": "22",
+      "label": "\"➡ 17. \" || \"Question à choix multiple - réponse booléen\""
+    },
+    {
+      "componentType": "Table",
+      "bindingDependencies": [
+        "QCM_LISTEON1",
+        "QCM_LISTEON2",
+        "QCM_LISTEON3",
+        "QCM_LISTEON4",
+        "QCM_LISTEON5",
+        "QCM_LISTEON6"
+      ],
+      "cells": [
+        [
+          {
+            "label": "choix 1",
+            "value": "1"
+          },
+          {
+            "componentType": "CheckboxOne",
+            "bindingDependencies": [
+              "QCM_LISTEON1"
+            ],
+            "response": {
+              "name": "QCM_LISTEON1"
+            },
+            "options": [
+              {
+                "label": "Oui",
+                "value": "1"
+              },
+              {
+                "label": "Non",
+                "value": "2"
+              }
+            ],
+            "id": "jfkxybfe-QOP-l1ujy9o3"
+          }
+        ],
+        [
+          {
+            "label": "choix 2",
+            "value": "2"
+          },
+          {
+            "componentType": "CheckboxOne",
+            "bindingDependencies": [
+              "QCM_LISTEON2"
+            ],
+            "response": {
+              "name": "QCM_LISTEON2"
+            },
+            "options": [
+              {
+                "label": "Oui",
+                "value": "1"
+              },
+              {
+                "label": "Non",
+                "value": "2"
+              }
+            ],
+            "id": "jfkxybfe-QOP-l1uju9zu"
+          }
+        ],
+        [
+          {
+            "label": "choix 3",
+            "value": "3"
+          },
+          {
+            "componentType": "CheckboxOne",
+            "bindingDependencies": [
+              "QCM_LISTEON3"
+            ],
+            "response": {
+              "name": "QCM_LISTEON3"
+            },
+            "options": [
+              {
+                "label": "Oui",
+                "value": "1"
+              },
+              {
+                "label": "Non",
+                "value": "2"
+              }
+            ],
+            "id": "jfkxybfe-QOP-l1ujv3qw"
+          }
+        ],
+        [
+          {
+            "label": "choix 4",
+            "value": "4"
+          },
+          {
+            "componentType": "CheckboxOne",
+            "bindingDependencies": [
+              "QCM_LISTEON4"
+            ],
+            "response": {
+              "name": "QCM_LISTEON4"
+            },
+            "options": [
+              {
+                "label": "Oui",
+                "value": "1"
+              },
+              {
+                "label": "Non",
+                "value": "2"
+              }
+            ],
+            "id": "jfkxybfe-QOP-l1uk0q0x"
+          }
+        ],
+        [
+          {
+            "label": "choix 5",
+            "value": "5"
+          },
+          {
+            "componentType": "CheckboxOne",
+            "bindingDependencies": [
+              "QCM_LISTEON5"
+            ],
+            "response": {
+              "name": "QCM_LISTEON5"
+            },
+            "options": [
+              {
+                "label": "Oui",
+                "value": "1"
+              },
+              {
+                "label": "Non",
+                "value": "2"
+              }
+            ],
+            "id": "jfkxybfe-QOP-l1ujsmmt"
+          }
+        ],
+        [
+          {
+            "label": "et un choix 6 dont la modalité est plus longue",
+            "value": "6"
+          },
+          {
+            "componentType": "CheckboxOne",
+            "bindingDependencies": [
+              "QCM_LISTEON6"
+            ],
+            "response": {
+              "name": "QCM_LISTEON6"
+            },
+            "options": [
+              {
+                "label": "Oui",
+                "value": "1"
+              },
+              {
+                "label": "Non",
+                "value": "2"
+              }
+            ],
+            "id": "jfkxybfe-QOP-l1ujw41k"
+          }
+        ]
+      ],
+      "positioning": "HORIZONTAL",
+      "hierarchy": {
+        "sequence": {
+          "id": "jfjew4oy",
+          "page": "16",
+          "label": "\"II - \" || \"Sequence 2 - Questions à choix unique et questions à choix multiple\""
+        },
+        "subSequence": {
+          "id": "jfkxuinz",
+          "page": "21",
+          "label": "Questions à choix multiple"
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfkxybfe",
+      "page": "23",
+      "label": "\"➡ 18. \" || \"Question à choix multiple - réponse oui/non case à cocher\"",
+      "mandatory": false
+    },
+    {
+      "componentType": "Table",
+      "bindingDependencies": [
+        "QCM_LISTEONRADIO1",
+        "QCM_LISTEONRADIO2",
+        "QCM_LISTEONRADIO3",
+        "QCM_LISTEONRADIO4",
+        "QCM_LISTEONRADIO5",
+        "QCM_LISTEONRADIO6"
+      ],
+      "cells": [
+        [
+          {
+            "label": "choix 1",
+            "value": "1"
+          },
+          {
+            "componentType": "Radio",
+            "bindingDependencies": [
+              "QCM_LISTEONRADIO1"
+            ],
+            "response": {
+              "name": "QCM_LISTEONRADIO1"
+            },
+            "options": [
+              {
+                "label": "Oui",
+                "value": "1"
+              },
+              {
+                "label": "Non",
+                "value": "2"
+              }
+            ],
+            "id": "jfkyw9o1-QOP-l1uk0wyz"
+          }
+        ],
+        [
+          {
+            "label": "choix 2",
+            "value": "2"
+          },
+          {
+            "componentType": "Radio",
+            "bindingDependencies": [
+              "QCM_LISTEONRADIO2"
+            ],
+            "response": {
+              "name": "QCM_LISTEONRADIO2"
+            },
+            "options": [
+              {
+                "label": "Oui",
+                "value": "1"
+              },
+              {
+                "label": "Non",
+                "value": "2"
+              }
+            ],
+            "id": "jfkyw9o1-QOP-l1uji4r3"
+          }
+        ],
+        [
+          {
+            "label": "choix 3",
+            "value": "3"
+          },
+          {
+            "componentType": "Radio",
+            "bindingDependencies": [
+              "QCM_LISTEONRADIO3"
+            ],
+            "response": {
+              "name": "QCM_LISTEONRADIO3"
+            },
+            "options": [
+              {
+                "label": "Oui",
+                "value": "1"
+              },
+              {
+                "label": "Non",
+                "value": "2"
+              }
+            ],
+            "id": "jfkyw9o1-QOP-l1ujyy91"
+          }
+        ],
+        [
+          {
+            "label": "choix 4",
+            "value": "4"
+          },
+          {
+            "componentType": "Radio",
+            "bindingDependencies": [
+              "QCM_LISTEONRADIO4"
+            ],
+            "response": {
+              "name": "QCM_LISTEONRADIO4"
+            },
+            "options": [
+              {
+                "label": "Oui",
+                "value": "1"
+              },
+              {
+                "label": "Non",
+                "value": "2"
+              }
+            ],
+            "id": "jfkyw9o1-QOP-l1uk283o"
+          }
+        ],
+        [
+          {
+            "label": "choix 5",
+            "value": "5"
+          },
+          {
+            "componentType": "Radio",
+            "bindingDependencies": [
+              "QCM_LISTEONRADIO5"
+            ],
+            "response": {
+              "name": "QCM_LISTEONRADIO5"
+            },
+            "options": [
+              {
+                "label": "Oui",
+                "value": "1"
+              },
+              {
+                "label": "Non",
+                "value": "2"
+              }
+            ],
+            "id": "jfkyw9o1-QOP-l1ujy83p"
+          }
+        ],
+        [
+          {
+            "label": "et un choix 6 dont la modalité est plus longue",
+            "value": "6"
+          },
+          {
+            "componentType": "Radio",
+            "bindingDependencies": [
+              "QCM_LISTEONRADIO6"
+            ],
+            "response": {
+              "name": "QCM_LISTEONRADIO6"
+            },
+            "options": [
+              {
+                "label": "Oui",
+                "value": "1"
+              },
+              {
+                "label": "Non",
+                "value": "2"
+              }
+            ],
+            "id": "jfkyw9o1-QOP-l1ujstez"
+          }
+        ]
+      ],
+      "positioning": "HORIZONTAL",
+      "hierarchy": {
+        "sequence": {
+          "id": "jfjew4oy",
+          "page": "16",
+          "label": "\"II - \" || \"Sequence 2 - Questions à choix unique et questions à choix multiple\""
+        },
+        "subSequence": {
+          "id": "jfkxuinz",
+          "page": "21",
+          "label": "Questions à choix multiple"
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfkyw9o1",
+      "page": "24",
+      "label": "\"➡ 19. \" || \"Question à choix multiple - réponse oui/non radio\"",
+      "mandatory": false
+    },
+    {
+      "componentType": "Sequence",
+      "hierarchy": {
+        "sequence": {
+          "id": "jfkyvabw",
+          "page": "25",
+          "label": "\"III - \" || \"Sequence 3 - tableaux simples et tableau dynamique. Hors boucles, non liés\""
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfkyvabw",
+      "page": "25",
+      "label": "\"III - \" || \"Sequence 3 - tableaux simples et tableau dynamique. Hors boucles, non liés\""
+    },
+    {
+      "componentType": "Table",
+      "bindingDependencies": [
+        "TABLEAU1A1M11",
+        "TABLEAU1A1M21",
+        "TABLEAU1A1M31",
+        "TABLEAU1A1M41",
+        "TABLEAU1A1M51",
+        "TABLEAU1A1M61"
+      ],
+      "cells": [
+        [
+          {
+            "headerCell": true,
+            "label": ""
+          },
+          {
+            "headerCell": true,
+            "label": "Quantité de bidules"
+          }
+        ],
+        [
+          {
+            "label": "choix 1",
+            "value": "1"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU1A1M11"
+            ],
+            "min": 0,
+            "max": 999,
+            "response": {
+              "name": "TABLEAU1A1M11"
+            },
+            "decimals": 0,
+            "id": "jfkzltkm-QOP-l1uk0wsy"
+          }
+        ],
+        [
+          {
+            "label": "choix 2",
+            "value": "2"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU1A1M21"
+            ],
+            "min": 0,
+            "max": 999,
+            "response": {
+              "name": "TABLEAU1A1M21"
+            },
+            "decimals": 0,
+            "id": "jfkzltkm-QOP-l1uk035v"
+          }
+        ],
+        [
+          {
+            "label": "choix 3",
+            "value": "3"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU1A1M31"
+            ],
+            "min": 0,
+            "max": 999,
+            "response": {
+              "name": "TABLEAU1A1M31"
+            },
+            "decimals": 0,
+            "id": "jfkzltkm-QOP-l1uji2i3"
+          }
+        ],
+        [
+          {
+            "label": "choix 4",
+            "value": "4"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU1A1M41"
+            ],
+            "min": 0,
+            "max": 999,
+            "response": {
+              "name": "TABLEAU1A1M41"
+            },
+            "decimals": 0,
+            "id": "jfkzltkm-QOP-l1ujl8ac"
+          }
+        ],
+        [
+          {
+            "label": "choix 5",
+            "value": "5"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU1A1M51"
+            ],
+            "min": 0,
+            "max": 999,
+            "response": {
+              "name": "TABLEAU1A1M51"
+            },
+            "decimals": 0,
+            "id": "jfkzltkm-QOP-l1ujpn8e"
+          }
+        ],
+        [
+          {
+            "label": "et un choix 6 dont la modalité est plus longue",
+            "value": "6"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU1A1M61"
+            ],
+            "min": 0,
+            "max": 999,
+            "response": {
+              "name": "TABLEAU1A1M61"
+            },
+            "decimals": 0,
+            "id": "jfkzltkm-QOP-l1ujm5dq"
+          }
+        ]
+      ],
+      "positioning": "HORIZONTAL",
+      "hierarchy": {
+        "sequence": {
+          "id": "jfkyvabw",
+          "page": "25",
+          "label": "\"III - \" || \"Sequence 3 - tableaux simples et tableau dynamique. Hors boucles, non liés\""
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfkzltkm",
+      "page": "26",
+      "label": "\"➡ 20. \" || \"Tableau un axe simple, une mesure\"",
+      "mandatory": false
+    },
+    {
+      "componentType": "Table",
+      "bindingDependencies": [
+        "TABLEAU1A3M11",
+        "TABLEAU1A3M12",
+        "TABLEAU1A3M13",
+        "TABLEAU1A3M21",
+        "TABLEAU1A3M22",
+        "TABLEAU1A3M23",
+        "TABLEAU1A3M31",
+        "TABLEAU1A3M32",
+        "TABLEAU1A3M33",
+        "TABLEAU1A3M41",
+        "TABLEAU1A3M42",
+        "TABLEAU1A3M43",
+        "TABLEAU1A3M51",
+        "TABLEAU1A3M52",
+        "TABLEAU1A3M53",
+        "TABLEAU1A3M61",
+        "TABLEAU1A3M62",
+        "TABLEAU1A3M63"
+      ],
+      "cells": [
+        [
+          {
+            "headerCell": true,
+            "label": ""
+          },
+          {
+            "headerCell": true,
+            "label": "Quantité de bidules"
+          },
+          {
+            "headerCell": true,
+            "label": "aimez vous les bidules"
+          },
+          {
+            "headerCell": true,
+            "label": "nom"
+          }
+        ],
+        [
+          {
+            "label": "choix 1",
+            "value": "1"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU1A3M11"
+            ],
+            "min": 0,
+            "max": 999,
+            "response": {
+              "name": "TABLEAU1A3M11"
+            },
+            "decimals": 0,
+            "id": "jfkzpexn-QOP-l1ujy3o3"
+          },
+          {
+            "componentType": "CheckboxOne",
+            "bindingDependencies": [
+              "TABLEAU1A3M12"
+            ],
+            "response": {
+              "name": "TABLEAU1A3M12"
+            },
+            "options": [
+              {
+                "label": "Oui",
+                "value": "1"
+              },
+              {
+                "label": "Non",
+                "value": "2"
+              }
+            ],
+            "id": "jfkzpexn-QOP-l1ujjvof"
+          },
+          {
+            "componentType": "Input",
+            "bindingDependencies": [
+              "TABLEAU1A3M13"
+            ],
+            "response": {
+              "name": "TABLEAU1A3M13"
+            },
+            "id": "jfkzpexn-QOP-l1uk1a4u",
+            "maxLength": 25
+          }
+        ],
+        [
+          {
+            "label": "choix 2",
+            "value": "2"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU1A3M21"
+            ],
+            "min": 0,
+            "max": 999,
+            "response": {
+              "name": "TABLEAU1A3M21"
+            },
+            "decimals": 0,
+            "id": "jfkzpexn-QOP-l1ujr9h6"
+          },
+          {
+            "componentType": "CheckboxOne",
+            "bindingDependencies": [
+              "TABLEAU1A3M22"
+            ],
+            "response": {
+              "name": "TABLEAU1A3M22"
+            },
+            "options": [
+              {
+                "label": "Oui",
+                "value": "1"
+              },
+              {
+                "label": "Non",
+                "value": "2"
+              }
+            ],
+            "id": "jfkzpexn-QOP-l1ujivv8"
+          },
+          {
+            "componentType": "Input",
+            "bindingDependencies": [
+              "TABLEAU1A3M23"
+            ],
+            "response": {
+              "name": "TABLEAU1A3M23"
+            },
+            "id": "jfkzpexn-QOP-l1ujpbuo",
+            "maxLength": 25
+          }
+        ],
+        [
+          {
+            "label": "choix 3",
+            "value": "3"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU1A3M31"
+            ],
+            "min": 0,
+            "max": 999,
+            "response": {
+              "name": "TABLEAU1A3M31"
+            },
+            "decimals": 0,
+            "id": "jfkzpexn-QOP-l1ujnpx6"
+          },
+          {
+            "componentType": "CheckboxOne",
+            "bindingDependencies": [
+              "TABLEAU1A3M32"
+            ],
+            "response": {
+              "name": "TABLEAU1A3M32"
+            },
+            "options": [
+              {
+                "label": "Oui",
+                "value": "1"
+              },
+              {
+                "label": "Non",
+                "value": "2"
+              }
+            ],
+            "id": "jfkzpexn-QOP-l1ujua93"
+          },
+          {
+            "componentType": "Input",
+            "bindingDependencies": [
+              "TABLEAU1A3M33"
+            ],
+            "response": {
+              "name": "TABLEAU1A3M33"
+            },
+            "id": "jfkzpexn-QOP-l1ujyf9c",
+            "maxLength": 25
+          }
+        ],
+        [
+          {
+            "label": "choix 4",
+            "value": "4"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU1A3M41"
+            ],
+            "min": 0,
+            "max": 999,
+            "response": {
+              "name": "TABLEAU1A3M41"
+            },
+            "decimals": 0,
+            "id": "jfkzpexn-QOP-l1ujoena"
+          },
+          {
+            "componentType": "CheckboxOne",
+            "bindingDependencies": [
+              "TABLEAU1A3M42"
+            ],
+            "response": {
+              "name": "TABLEAU1A3M42"
+            },
+            "options": [
+              {
+                "label": "Oui",
+                "value": "1"
+              },
+              {
+                "label": "Non",
+                "value": "2"
+              }
+            ],
+            "id": "jfkzpexn-QOP-l1ujm6cz"
+          },
+          {
+            "componentType": "Input",
+            "bindingDependencies": [
+              "TABLEAU1A3M43"
+            ],
+            "response": {
+              "name": "TABLEAU1A3M43"
+            },
+            "id": "jfkzpexn-QOP-l1ujwn72",
+            "maxLength": 25
+          }
+        ],
+        [
+          {
+            "label": "choix 5",
+            "value": "5"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU1A3M51"
+            ],
+            "min": 0,
+            "max": 999,
+            "response": {
+              "name": "TABLEAU1A3M51"
+            },
+            "decimals": 0,
+            "id": "jfkzpexn-QOP-l1uk1xo1"
+          },
+          {
+            "componentType": "CheckboxOne",
+            "bindingDependencies": [
+              "TABLEAU1A3M52"
+            ],
+            "response": {
+              "name": "TABLEAU1A3M52"
+            },
+            "options": [
+              {
+                "label": "Oui",
+                "value": "1"
+              },
+              {
+                "label": "Non",
+                "value": "2"
+              }
+            ],
+            "id": "jfkzpexn-QOP-l1ujxoe9"
+          },
+          {
+            "componentType": "Input",
+            "bindingDependencies": [
+              "TABLEAU1A3M53"
+            ],
+            "response": {
+              "name": "TABLEAU1A3M53"
+            },
+            "id": "jfkzpexn-QOP-l1ujo33k",
+            "maxLength": 25
+          }
+        ],
+        [
+          {
+            "label": "et un choix 6 dont la modalité est plus longue",
+            "value": "6"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU1A3M61"
+            ],
+            "min": 0,
+            "max": 999,
+            "response": {
+              "name": "TABLEAU1A3M61"
+            },
+            "decimals": 0,
+            "id": "jfkzpexn-QOP-l1ujr7pv"
+          },
+          {
+            "componentType": "CheckboxOne",
+            "bindingDependencies": [
+              "TABLEAU1A3M62"
+            ],
+            "response": {
+              "name": "TABLEAU1A3M62"
+            },
+            "options": [
+              {
+                "label": "Oui",
+                "value": "1"
+              },
+              {
+                "label": "Non",
+                "value": "2"
+              }
+            ],
+            "id": "jfkzpexn-QOP-l1ujunro"
+          },
+          {
+            "componentType": "Input",
+            "bindingDependencies": [
+              "TABLEAU1A3M63"
+            ],
+            "response": {
+              "name": "TABLEAU1A3M63"
+            },
+            "id": "jfkzpexn-QOP-l1ujn34z",
+            "maxLength": 25
+          }
+        ]
+      ],
+      "positioning": "HORIZONTAL",
+      "hierarchy": {
+        "sequence": {
+          "id": "jfkyvabw",
+          "page": "25",
+          "label": "\"III - \" || \"Sequence 3 - tableaux simples et tableau dynamique. Hors boucles, non liés\""
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfkzpexn",
+      "page": "27",
+      "label": "\"➡ 21. \" || \"Tableau un axe simple, plusieurs mesures\"",
+      "mandatory": false
+    },
+    {
+      "componentType": "Table",
+      "bindingDependencies": [
+        "TABLEAU2A11",
+        "TABLEAU2A12",
+        "TABLEAU2A13",
+        "TABLEAU2A14",
+        "TABLEAU2A15",
+        "TABLEAU2A21",
+        "TABLEAU2A22",
+        "TABLEAU2A23",
+        "TABLEAU2A24",
+        "TABLEAU2A25",
+        "TABLEAU2A31",
+        "TABLEAU2A32",
+        "TABLEAU2A33",
+        "TABLEAU2A34",
+        "TABLEAU2A35",
+        "TABLEAU2A41",
+        "TABLEAU2A42",
+        "TABLEAU2A43",
+        "TABLEAU2A44",
+        "TABLEAU2A45",
+        "TABLEAU2A51",
+        "TABLEAU2A52",
+        "TABLEAU2A53",
+        "TABLEAU2A54",
+        "TABLEAU2A55",
+        "TABLEAU2A61",
+        "TABLEAU2A62",
+        "TABLEAU2A63",
+        "TABLEAU2A64",
+        "TABLEAU2A65"
+      ],
+      "cells": [
+        [
+          {
+            "headerCell": true,
+            "label": ""
+          },
+          {
+            "headerCell": true,
+            "label": "code1"
+          },
+          {
+            "headerCell": true,
+            "label": "code2"
+          },
+          {
+            "headerCell": true,
+            "label": "code3"
+          },
+          {
+            "headerCell": true,
+            "label": "code4"
+          },
+          {
+            "headerCell": true,
+            "label": "autre et libellé un peu long pour valider"
+          }
+        ],
+        [
+          {
+            "label": "choix 1",
+            "value": "1"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A11"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A11"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujk7i2"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A12"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A12"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujokny"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A13"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A13"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujko9e"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A14"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A14"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujujrh"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A15"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A15"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujygrf"
+          }
+        ],
+        [
+          {
+            "label": "choix 2",
+            "value": "2"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A21"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A21"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujyvbd"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A22"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A22"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujm86z"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A23"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A23"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujqrec"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A24"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A24"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujxyjn"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A25"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A25"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujytea"
+          }
+        ],
+        [
+          {
+            "label": "choix 3",
+            "value": "3"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A31"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A31"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1uk0h81"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A32"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A32"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujzfyx"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A33"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A33"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujxbgs"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A34"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A34"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujrxoa"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A35"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A35"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujsarc"
+          }
+        ],
+        [
+          {
+            "label": "choix 4",
+            "value": "4"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A41"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A41"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1uk06w9"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A42"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A42"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujtvwj"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A43"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A43"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujjorw"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A44"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A44"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1uk25o1"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A45"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A45"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujvpbj"
+          }
+        ],
+        [
+          {
+            "label": "choix 5",
+            "value": "5"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A51"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A51"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujwln7"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A52"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A52"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujpw6f"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A53"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A53"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujljwz"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A54"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A54"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1uk11gp"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A55"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A55"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujmqp9"
+          }
+        ],
+        [
+          {
+            "label": "et un choix 6 dont la modalité est plus longue",
+            "value": "6"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A61"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A61"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujwhwu"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A62"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A62"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujzsjw"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A63"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A63"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujzxsr"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A64"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A64"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujksll"
+          },
+          {
+            "componentType": "InputNumber",
+            "bindingDependencies": [
+              "TABLEAU2A65"
+            ],
+            "min": 0,
+            "max": 100,
+            "response": {
+              "name": "TABLEAU2A65"
+            },
+            "decimals": 0,
+            "id": "jfkzttm3-QOP-l1ujh2nw"
+          }
+        ]
+      ],
+      "positioning": "HORIZONTAL",
+      "hierarchy": {
+        "sequence": {
+          "id": "jfkyvabw",
+          "page": "25",
+          "label": "\"III - \" || \"Sequence 3 - tableaux simples et tableau dynamique. Hors boucles, non liés\""
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfkzttm3",
+      "page": "28",
+      "label": "\"➡ 22. \" || \"Tableau 2 axes\"",
+      "mandatory": false
+    },
+    {
+      "componentType": "Table",
+      "bindingDependencies": [
+        "TABLEAU1AH1M11",
+        "TABLEAU1AH1M21"
+      ],
+      "cells": [
+        [
+          {
+            "headerCell": true,
+            "label": ""
+          },
+          {
+            "headerCell": true,
+            "label": "montant"
+          }
+        ],
+        [
+          {
+            "label": "code2",
+            "value": "20"
+          },
+          {
+            "componentType": "InputNumber",
+            "unit": "k€",
+            "bindingDependencies": [
+              "TABLEAU1AH1M11"
+            ],
+            "min": 0,
+            "max": 999,
+            "response": {
+              "name": "TABLEAU1AH1M11"
+            },
+            "decimals": 0,
+            "id": "jfkzrwce-QOP-l1ujyhz5"
+          }
+        ],
+        [
+          {
+            "label": "code 3",
+            "value": "30"
+          },
+          {
+            "componentType": "InputNumber",
+            "unit": "k€",
+            "bindingDependencies": [
+              "TABLEAU1AH1M21"
+            ],
+            "min": 0,
+            "max": 999,
+            "response": {
+              "name": "TABLEAU1AH1M21"
+            },
+            "decimals": 0,
+            "id": "jfkzrwce-QOP-l1ujiqfp"
+          }
+        ]
+      ],
+      "positioning": "HORIZONTAL",
+      "hierarchy": {
+        "sequence": {
+          "id": "jfkyvabw",
+          "page": "25",
+          "label": "\"III - \" || \"Sequence 3 - tableaux simples et tableau dynamique. Hors boucles, non liés\""
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "jfkzrwce",
+      "page": "29",
+      "label": "\"➡ 23. \" || \"Tableau 1 axe avec hiérarchie , 1 mesure\"",
+      "mandatory": false
+    },
+    {
+      "componentType": "Table",
+      "bindingDependencies": [
+        "TABLEAUDYN1",
+        "TABLEAUDYN2",
+        "TABLEAUDYN1_1_1",
+        "TABLEAUDYN2_1_2",
+        "TABLEAUDYN1_2_1",
+        "TABLEAUDYN2_2_2",
+        "TABLEAUDYN1_3_1",
+        "TABLEAUDYN2_3_2",
+        "TABLEAUDYN1_4_1",
+        "TABLEAUDYN2_4_2",
+        "TABLEAUDYN1_5_1",
+        "TABLEAUDYN2_5_2"
+      ],
+      "cells": [
+        [
+          {
+            "headerCell": true,
+            "label": "montant colonne 1"
+          },
+          {
+            "headerCell": true,
+            "label": "texte colonne 2"
+          }
+        ],
+        [
+          {
+            "componentType": "InputNumber",
+            "unit": "k€",
+            "bindingDependencies": [
+              "TABLEAUDYN1_1_1"
+            ],
+            "min": 0,
+            "max": 999,
+            "response": {
+              "name": "TABLEAUDYN1_1_1"
+            },
+            "decimals": 0,
+            "id": "kk47qwrd-QOP-l1ujls2l_1_1"
+          },
+          {
+            "componentType": "Input",
+            "bindingDependencies": [
+              "TABLEAUDYN2_1_2"
+            ],
+            "response": {
+              "name": "TABLEAUDYN2_1_2"
+            },
+            "id": "kk47qwrd-QOP-l1ujplks_1_2",
+            "maxLength": 20
+          }
+        ],
+        [
+          {
+            "componentType": "InputNumber",
+            "unit": "k€",
+            "bindingDependencies": [
+              "TABLEAUDYN1_2_1"
+            ],
+            "min": 0,
+            "max": 999,
+            "response": {
+              "name": "TABLEAUDYN1_2_1"
+            },
+            "decimals": 0,
+            "id": "kk47qwrd-QOP-l1ujls2l_2_1"
+          },
+          {
+            "componentType": "Input",
+            "bindingDependencies": [
+              "TABLEAUDYN2_2_2"
+            ],
+            "response": {
+              "name": "TABLEAUDYN2_2_2"
+            },
+            "id": "kk47qwrd-QOP-l1ujplks_2_2",
+            "maxLength": 20
+          }
+        ],
+        [
+          {
+            "componentType": "InputNumber",
+            "unit": "k€",
+            "bindingDependencies": [
+              "TABLEAUDYN1_3_1"
+            ],
+            "min": 0,
+            "max": 999,
+            "response": {
+              "name": "TABLEAUDYN1_3_1"
+            },
+            "decimals": 0,
+            "id": "kk47qwrd-QOP-l1ujls2l_3_1"
+          },
+          {
+            "componentType": "Input",
+            "bindingDependencies": [
+              "TABLEAUDYN2_3_2"
+            ],
+            "response": {
+              "name": "TABLEAUDYN2_3_2"
+            },
+            "id": "kk47qwrd-QOP-l1ujplks_3_2",
+            "maxLength": 20
+          }
+        ],
+        [
+          {
+            "componentType": "InputNumber",
+            "unit": "k€",
+            "bindingDependencies": [
+              "TABLEAUDYN1_4_1"
+            ],
+            "min": 0,
+            "max": 999,
+            "response": {
+              "name": "TABLEAUDYN1_4_1"
+            },
+            "decimals": 0,
+            "id": "kk47qwrd-QOP-l1ujls2l_4_1"
+          },
+          {
+            "componentType": "Input",
+            "bindingDependencies": [
+              "TABLEAUDYN2_4_2"
+            ],
+            "response": {
+              "name": "TABLEAUDYN2_4_2"
+            },
+            "id": "kk47qwrd-QOP-l1ujplks_4_2",
+            "maxLength": 20
+          }
+        ],
+        [
+          {
+            "componentType": "InputNumber",
+            "unit": "k€",
+            "bindingDependencies": [
+              "TABLEAUDYN1_5_1"
+            ],
+            "min": 0,
+            "max": 999,
+            "response": {
+              "name": "TABLEAUDYN1_5_1"
+            },
+            "decimals": 0,
+            "id": "kk47qwrd-QOP-l1ujls2l_5_1"
+          },
+          {
+            "componentType": "Input",
+            "bindingDependencies": [
+              "TABLEAUDYN2_5_2"
+            ],
+            "response": {
+              "name": "TABLEAUDYN2_5_2"
+            },
+            "id": "kk47qwrd-QOP-l1ujplks_5_2",
+            "maxLength": 20
+          }
+        ]
+      ],
+      "positioning": "HORIZONTAL",
+      "hierarchy": {
+        "sequence": {
+          "id": "jfkyvabw",
+          "page": "25",
+          "label": "\"III - \" || \"Sequence 3 - tableaux simples et tableau dynamique. Hors boucles, non liés\""
+        }
+      },
+      "conditionFilter": {
+        "bindingDependencies": [
+          "COCHECASE"
+        ],
+        "value": "(COCHECASE = true)"
+      },
+      "id": "kk47qwrd",
+      "page": "30",
+      "label": "\"➡ 24. \" || \"Tableau dynamique\"",
+      "lines": {
+        "min": 1,
+        "max": 5
+      },
+      "mandatory": false
+    },
+    {
+      "componentType": "Sequence",
+      "hierarchy": {
+        "sequence": {
+          "id": "k3opdj10",
+          "page": "31",
+          "label": "\"IV - \" || \"Séquence 4 : 2 boucles basées sur calculé\""
+        }
+      },
+      "conditionFilter": {
+        "value": "true"
+      },
+      "id": "k3opdj10",
+      "page": "31",
+      "label": "\"IV - \" || \"Séquence 4 : 2 boucles basées sur calculé\""
+    },
+    {
+      "componentType": "InputNumber",
+      "max": 20,
+      "hierarchy": {
+        "sequence": {
+          "id": "k3opdj10",
+          "page": "31",
+          "label": "\"IV - \" || \"Séquence 4 : 2 boucles basées sur calculé\""
+        }
+      },
+      "conditionFilter": {
+        "value": "true"
+      },
+      "label": "\"➡ 25. \" || \"Combien d’individus (moins de 10) ?\"",
+      "mandatory": false,
+      "declarations": [
+        {
+          "declarationType": "HELP",
+          "id": "kmg10a27-l203zi7m",
+          "label": "cast(NHABCALC,string)",
+          "position": "AFTER_QUESTION_TEXT"
+        }
+      ],
+      "bindingDependencies": [
+        "NHABCALC",
+        "NHAB"
+      ],
+      "min": 1,
+      "response": {
+        "name": "NHAB"
+      },
+      "decimals": 0,
+      "id": "kmg10a27",
+      "page": "32"
+    },
+    {
+      "paginatedLoop": false,
+      "componentType": "Loop",
+      "loopDependencies": [
+        "NHABCALC"
+      ],
+      "components": [
+        {
+          "componentType": "Subsequence",
+          "bindingDependencies": [
+            "NHABCALC"
+          ],
+          "goToPage": "33",
+          "hierarchy": {
+            "sequence": {
+              "id": "k3opdj10",
+              "page": "31",
+              "label": "\"IV - \" || \"Séquence 4 : 2 boucles basées sur calculé\""
+            },
+            "subSequence": {
+              "id": "kmg0rom2",
+              "page": "33",
+              "label": "\"Description des \" || cast(NHABCALC,string) || \" individu(s) avec une boucle de NHABCALC à NHABCALC\""
+            }
+          },
+          "conditionFilter": {
+            "value": "true"
+          },
+          "id": "kmg0rom2",
+          "page": "33",
+          "label": "\"Description des \" || cast(NHABCALC,string) || \" individu(s) avec une boucle de NHABCALC à NHABCALC\"",
+          "declarations": [
+            {
+              "declarationType": "HELP",
+              "id": "kmg0rom2-l5s0c7g0",
+              "label": "boucle de NHABCALC à NHABCALC",
+              "position": "AFTER_QUESTION_TEXT"
+            }
+          ]
+        },
+        {
+          "componentType": "Input",
+          "bindingDependencies": [
+            "PRENOM1",
+            "NHABCALC"
+          ],
+          "response": {
+            "name": "PRENOM1"
+          },
+          "hierarchy": {
+            "sequence": {
+              "id": "k3opdj10",
+              "page": "31",
+              "label": "\"IV - \" || \"Séquence 4 : 2 boucles basées sur calculé\""
+            },
+            "subSequence": {
+              "id": "kmg0rom2",
+              "page": "33",
+              "label": "\"Description des \" || cast(NHABCALC,string) || \" individu(s) avec une boucle de NHABCALC à NHABCALC\""
+            }
+          },
+          "conditionFilter": {
+            "value": "true"
+          },
+          "id": "kmg0zlec",
+          "page": "33",
+          "label": "\"➡ 26. \" || \"Quel est le prenom de l’individu ?\"",
+          "mandatory": false,
+          "maxLength": 30
+        },
+        {
+          "componentType": "InputNumber",
+          "bindingDependencies": [
+            "PRENOM1",
+            "AGE1",
+            "NHABCALC"
+          ],
+          "min": 0,
+          "max": 120,
+          "response": {
+            "name": "AGE1"
+          },
+          "decimals": 0,
+          "hierarchy": {
+            "sequence": {
+              "id": "k3opdj10",
+              "page": "31",
+              "label": "\"IV - \" || \"Séquence 4 : 2 boucles basées sur calculé\""
+            },
+            "subSequence": {
+              "id": "kmg0rom2",
+              "page": "33",
+              "label": "\"Description des \" || cast(NHABCALC,string) || \" individu(s) avec une boucle de NHABCALC à NHABCALC\""
+            }
+          },
+          "conditionFilter": {
+            "value": "true"
+          },
+          "id": "k3opea2m",
+          "page": "33",
+          "label": "\"➡ 27. \" || \"Quel âge a \" || PRENOM1 || \" ?\"",
+          "mandatory": false
+        }
+      ],
+      "bindingDependencies": [
+        "NHABCALC",
+        "PRENOM1",
+        "AGE1"
+      ],
+      "depth": 1,
+      "hierarchy": {
+        "sequence": {
+          "id": "k3opdj10",
+          "page": "31",
+          "label": "\"IV - \" || \"Séquence 4 : 2 boucles basées sur calculé\""
+        }
+      },
+      "conditionFilter": {
+        "value": "true"
+      },
+      "id": "kmg0zwhd",
+      "page": "33",
+      "lines": {
+        "min": "cast(NHABCALC,integer)",
+        "max": "cast(NHABCALC,integer)"
+      }
+    },
+    {
+      "paginatedLoop": false,
+      "componentType": "Loop",
+      "loopDependencies": [
+        "NHABCALC"
+      ],
+      "components": [
+        {
+          "componentType": "Subsequence",
+          "bindingDependencies": [
+            "NHABCALC"
+          ],
+          "goToPage": "34",
+          "hierarchy": {
+            "sequence": {
+              "id": "k3opdj10",
+              "page": "31",
+              "label": "\"IV - \" || \"Séquence 4 : 2 boucles basées sur calculé\""
+            },
+            "subSequence": {
+              "id": "l203lif1",
+              "page": "34",
+              "label": "\"Description des \" || cast(NHABCALC,string) || \" individu(s) avec une boucle de 1 a NHABCALC \""
+            }
+          },
+          "conditionFilter": {
+            "value": "true"
+          },
+          "id": "l203lif1",
+          "page": "34",
+          "label": "\"Description des \" || cast(NHABCALC,string) || \" individu(s) avec une boucle de 1 a NHABCALC \"",
+          "declarations": [
+            {
+              "declarationType": "HELP",
+              "id": "l203lif1-l203w9y3",
+              "label": "\"Description des \" || cast(NHABCALC,string) || \" individu(s) avec une boucle de 1 A NHABCALC fixe\"",
+              "position": "AFTER_QUESTION_TEXT"
+            }
+          ]
+        },
+        {
+          "componentType": "Input",
+          "bindingDependencies": [
+            "PRENOM2",
+            "NHABCALC"
+          ],
+          "response": {
+            "name": "PRENOM2"
+          },
+          "hierarchy": {
+            "sequence": {
+              "id": "k3opdj10",
+              "page": "31",
+              "label": "\"IV - \" || \"Séquence 4 : 2 boucles basées sur calculé\""
+            },
+            "subSequence": {
+              "id": "l203lif1",
+              "page": "34",
+              "label": "\"Description des \" || cast(NHABCALC,string) || \" individu(s) avec une boucle de 1 a NHABCALC \""
+            }
+          },
+          "conditionFilter": {
+            "value": "true"
+          },
+          "id": "l204183l",
+          "page": "34",
+          "label": "\"➡ 28. \" || \"Quel est le prenom de l’individu ?\"",
+          "mandatory": false,
+          "maxLength": 30
+        },
+        {
+          "componentType": "InputNumber",
+          "bindingDependencies": [
+            "PRENOM2",
+            "AGE2",
+            "NHABCALC"
+          ],
+          "min": 0,
+          "max": 120,
+          "response": {
+            "name": "AGE2"
+          },
+          "decimals": 0,
+          "hierarchy": {
+            "sequence": {
+              "id": "k3opdj10",
+              "page": "31",
+              "label": "\"IV - \" || \"Séquence 4 : 2 boucles basées sur calculé\""
+            },
+            "subSequence": {
+              "id": "l203lif1",
+              "page": "34",
+              "label": "\"Description des \" || cast(NHABCALC,string) || \" individu(s) avec une boucle de 1 a NHABCALC \""
+            }
+          },
+          "conditionFilter": {
+            "value": "true"
+          },
+          "id": "l20407qf",
+          "page": "34",
+          "label": "\"➡ 29. \" || \"Quel âge a \" || PRENOM2 || \" ?\"",
+          "mandatory": false
+        }
+      ],
+      "bindingDependencies": [
+        "NHABCALC",
+        "PRENOM2",
+        "AGE2"
+      ],
+      "depth": 1,
+      "hierarchy": {
+        "sequence": {
+          "id": "k3opdj10",
+          "page": "31",
+          "label": "\"IV - \" || \"Séquence 4 : 2 boucles basées sur calculé\""
+        }
+      },
+      "conditionFilter": {
+        "value": "true"
+      },
+      "id": "l203qtw0",
+      "page": "34",
+      "lines": {
+        "min": "1",
+        "max": "cast(NHABCALC,integer)"
+      }
+    },
+    {
+      "componentType": "Sequence",
+      "hierarchy": {
+        "sequence": {
+          "id": "COMMENT-SEQ",
+          "page": "35",
+          "label": "\"Commentaire\""
+        }
+      },
+      "conditionFilter": {
+        "value": "true"
+      },
+      "id": "COMMENT-SEQ",
+      "page": "35",
+      "label": "\"Commentaire\""
+    },
+    {
+      "componentType": "Textarea",
+      "bindingDependencies": [
+        "COMMENT_QE"
+      ],
+      "response": {
+        "name": "COMMENT_QE"
+      },
+      "hierarchy": {
+        "sequence": {
+          "id": "COMMENT-SEQ",
+          "page": "35",
+          "label": "\"Commentaire\""
+        }
+      },
+      "conditionFilter": {
+        "value": "true"
+      },
+      "id": "COMMENT-QUESTION",
+      "page": "36",
+      "label": "\"Avez-vous des remarques concernant l'enquête ou des commentaires ?\"",
+      "mandatory": false,
+      "maxLength": 2000
+    }
+  ],
+  "pagination": "question",
+  "lunaticModelVersion": "2.2.10",
+  "modele": "REFLUNATIC",
+  "enoCoreVersion": "2.3.8",
+  "generatingDate": "19-07-2022 09:52:48",
+  "missing": false,
+  "id": "l1uiijww",
+  "label": "Lunatic - questionnaire de référence simple - VTL",
+  "maxPage": "36"
+}

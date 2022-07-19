@@ -1,0 +1,464 @@
+{
+  "owner": "DG75-L120",
+  "FlowControl": [],
+  "ComponentGroup": [
+    {
+      "MemberReference": [
+        "kfxmfvwj",
+        "l14vfucm",
+        "l5gh9umu",
+        "l5gh84ov",
+        "l5ghlajk",
+        "l5ggvqgj",
+        "l5ggzuuo",
+        "l5ghsjv2",
+        "l5gh8epv",
+        "idendquest"
+      ],
+      "Label": [
+        "Components for page 1"
+      ],
+      "id": "kg2az5c9",
+      "Name": "PAGE_1"
+    }
+  ],
+  "agency": "fr.insee",
+  "genericName": "QUESTIONNAIRE",
+  "Label": [
+    "Lunatic V2 - controles dans boucles liees (bug V1)"
+  ],
+  "Name": "TESTCONTBOUCL",
+  "Variables": {
+    "Variable": [
+      {
+        "Label": "Q1 label",
+        "id": "l5ghoz2s",
+        "type": "CollectedVariableType",
+        "Name": "Q1",
+        "Datatype": {
+          "Maximum": "5",
+          "Minimum": "1",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Scope": "l5gh45ic",
+        "Label": "Q2 label",
+        "id": "l5ghj25v",
+        "type": "CollectedVariableType",
+        "Name": "Q2",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 249
+        }
+      },
+      {
+        "Scope": "l5gh45ic",
+        "Label": "Q3 label",
+        "id": "l5qomqhn",
+        "type": "CollectedVariableType",
+        "Name": "Q3",
+        "Datatype": {
+          "Maximum": "20",
+          "Minimum": "0",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Scope": "l5gh45ic",
+        "Label": "Q4 label",
+        "id": "l5qors3p",
+        "type": "CollectedVariableType",
+        "Name": "Q4",
+        "Datatype": {
+          "Maximum": "20",
+          "Minimum": "0",
+          "typeName": "NUMERIC",
+          "Unit": "",
+          "type": "NumericDatatypeType",
+          "Decimals": ""
+        }
+      },
+      {
+        "Scope": "l5gh45ic",
+        "Label": "Q5 label",
+        "id": "l5ghpm2w",
+        "type": "CollectedVariableType",
+        "Name": "Q5",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 249
+        }
+      }
+    ]
+  },
+  "lastUpdatedDate": "Mon Jul 18 2022 14:00:02 GMT+0200 (heure d’été d’Europe centrale)",
+  "DataCollection": [
+    {
+      "id": "esa-dc-2018",
+      "uri": "http://ddi:fr.insee:DataCollection.esa-dc-2018",
+      "Name": "Enquête sectorielle annuelle 2018"
+    }
+  ],
+  "final": false,
+  "flowLogic": "FILTER",
+  "id": "l5gghitu",
+  "TargetMode": [
+    "CAPI",
+    "CATI",
+    "CAWI",
+    "PAPI"
+  ],
+  "CodeLists": {
+    "CodeList": []
+  },
+  "Iterations": {
+    "Iteration": [
+      {
+        "Maximum": "cast(nvl($Q1$,\"0\"),integer)",
+        "Minimum": "cast(nvl($Q1$,\"0\"),integer)",
+        "MemberReference": [
+          "l5gh9umu"
+        ],
+        "id": "l5gh45ic",
+        "Step": "1",
+        "type": "DynamicIterationType",
+        "Name": "BOUCLE1"
+      },
+      {
+        "MemberReference": [
+          "l5ghlajk"
+        ],
+        "id": "l5gh8yro",
+        "type": "DynamicIterationType",
+        "Name": "BOUCLE2",
+        "IterableReference": "l5gh45ic"
+      }
+    ]
+  },
+  "formulasLanguage": "VTL",
+  "Child": [
+    {
+      "Control": [],
+      "depth": 1,
+      "FlowControl": [],
+      "genericName": "MODULE",
+      "Label": [
+        "S1"
+      ],
+      "id": "kfxmfvwj",
+      "TargetMode": [
+        "CATI",
+        "PAPI",
+        "CAWI",
+        "CAPI"
+      ],
+      "Declaration": [],
+      "type": "SequenceType",
+      "Child": [
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "l5ghoz2s",
+              "id": "l5ggm5c0",
+              "mandatory": false,
+              "Datatype": {
+                "Maximum": "5",
+                "Minimum": "1",
+                "typeName": "NUMERIC",
+                "Unit": "",
+                "type": "NumericDatatypeType",
+                "Decimals": ""
+              }
+            }
+          ],
+          "Control": [
+            {
+              "post_collect": false,
+              "Description": "Supérieur à 3",
+              "Expression": "cast(nvl($Q1$,\"0\"),integer)) > 3",
+              "during_collect": false,
+              "criticity": "INFO",
+              "FailMessage": "Supérieur à 3",
+              "id": "l5qp5t7i"
+            }
+          ],
+          "depth": 2,
+          "FlowControl": [],
+          "Label": [
+            "nbhab de 1 a 5 ? ne pas laisser vide"
+          ],
+          "id": "l14vfucm",
+          "TargetMode": [
+            "CAPI",
+            "CATI",
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [
+            {
+              "declarationType": "HELP",
+              "Text": "Controle si > 3",
+              "id": "l5qoq4pp",
+              "position": "AFTER_QUESTION_TEXT",
+              "DeclarationMode": [
+                "CAPI",
+                "CATI",
+                "CAWI",
+                "PAPI"
+              ]
+            }
+          ],
+          "type": "QuestionType",
+          "questionType": "SIMPLE",
+          "Name": "Q1"
+        }
+      ],
+      "Name": "S1"
+    },
+    {
+      "Control": [],
+      "depth": 1,
+      "FlowControl": [],
+      "genericName": "MODULE",
+      "Label": [
+        "S2"
+      ],
+      "id": "l5gh9umu",
+      "TargetMode": [
+        "CAPI",
+        "CATI",
+        "CAWI",
+        "PAPI"
+      ],
+      "Declaration": [],
+      "type": "SequenceType",
+      "Child": [
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "l5ghj25v",
+              "id": "l5ghl5xp",
+              "mandatory": false,
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "type": "TextDatatypeType",
+                "MaxLength": 249
+              }
+            }
+          ],
+          "Control": [],
+          "depth": 2,
+          "FlowControl": [],
+          "Label": [
+            "prenom"
+          ],
+          "id": "l5gh84ov",
+          "TargetMode": [
+            "CAPI",
+            "CATI",
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [],
+          "type": "QuestionType",
+          "questionType": "SIMPLE",
+          "Name": "Q2"
+        }
+      ],
+      "Name": "S2"
+    },
+    {
+      "Control": [],
+      "depth": 1,
+      "FlowControl": [],
+      "genericName": "MODULE",
+      "Label": [
+        "S3"
+      ],
+      "id": "l5ghlajk",
+      "TargetMode": [
+        "CAPI",
+        "CATI",
+        "CAWI",
+        "PAPI"
+      ],
+      "Declaration": [],
+      "type": "SequenceType",
+      "Child": [
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "l5qomqhn",
+              "id": "l5ggsjtm",
+              "mandatory": false,
+              "Datatype": {
+                "Maximum": "20",
+                "Minimum": "0",
+                "typeName": "NUMERIC",
+                "Unit": "",
+                "type": "NumericDatatypeType",
+                "Decimals": ""
+              }
+            }
+          ],
+          "Control": [],
+          "depth": 2,
+          "FlowControl": [],
+          "Label": [
+            "Q3 entre  0 et 20"
+          ],
+          "id": "l5ggvqgj",
+          "TargetMode": [
+            "CAPI",
+            "CATI",
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [],
+          "type": "QuestionType",
+          "questionType": "SIMPLE",
+          "Name": "Q3"
+        },
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "l5qors3p",
+              "id": "l5ggqzt8",
+              "mandatory": false,
+              "Datatype": {
+                "Maximum": "20",
+                "Minimum": "0",
+                "typeName": "NUMERIC",
+                "Unit": "",
+                "type": "NumericDatatypeType",
+                "Decimals": ""
+              }
+            }
+          ],
+          "Control": [
+            {
+              "post_collect": false,
+              "Description": "Q3 > Q4",
+              "Expression": "cast(nvl($Q3$,\"0\"),integer) > cast(nvl($Q4$,\"0\"),integer)",
+              "during_collect": false,
+              "criticity": "INFO",
+              "FailMessage": "\"Q3 > Q4\"",
+              "id": "l5ggvixm"
+            }
+          ],
+          "depth": 2,
+          "FlowControl": [],
+          "Label": [
+            "Q4 entre  0 et 20 et controle si Q3 > Q4"
+          ],
+          "id": "l5ggzuuo",
+          "TargetMode": [
+            "CAPI",
+            "CATI",
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [],
+          "type": "QuestionType",
+          "questionType": "SIMPLE",
+          "Name": "Q4"
+        },
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "l5ghpm2w",
+              "id": "l5ghhrv8",
+              "mandatory": false,
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "type": "TextDatatypeType",
+                "MaxLength": 249
+              }
+            }
+          ],
+          "Control": [
+            {
+              "post_collect": false,
+              "Description": "Q5 est vide",
+              "Expression": "isnull($Q5$)",
+              "during_collect": false,
+              "criticity": "INFO",
+              "FailMessage": "Q5 est vide",
+              "id": "l5ghejsi"
+            }
+          ],
+          "depth": 2,
+          "FlowControl": [],
+          "Label": [
+            "Q5 controle sur vide"
+          ],
+          "id": "l5ghsjv2",
+          "TargetMode": [
+            "CAPI",
+            "CATI",
+            "CAWI",
+            "PAPI"
+          ],
+          "Declaration": [],
+          "type": "QuestionType",
+          "questionType": "SIMPLE",
+          "Name": "Q5"
+        }
+      ],
+      "Name": "S3"
+    },
+    {
+      "Control": [],
+      "depth": 1,
+      "FlowControl": [],
+      "genericName": "MODULE",
+      "Label": [
+        "S4"
+      ],
+      "id": "l5gh8epv",
+      "TargetMode": [
+        "CAPI",
+        "CATI",
+        "CAWI",
+        "PAPI"
+      ],
+      "Declaration": [],
+      "type": "SequenceType",
+      "Child": [],
+      "Name": "S4"
+    },
+    {
+      "Control": [],
+      "depth": 1,
+      "FlowControl": [],
+      "genericName": "MODULE",
+      "Label": [
+        "QUESTIONNAIRE_END"
+      ],
+      "id": "idendquest",
+      "TargetMode": [
+        "CAPI",
+        "CATI",
+        "CAWI",
+        "PAPI"
+      ],
+      "Declaration": [],
+      "type": "SequenceType",
+      "Child": [],
+      "Name": "QUESTIONNAIRE_END"
+    }
+  ]
+}
