@@ -68,7 +68,7 @@ In this example, you can now request Eno's swagger at https://eno-ws.example.com
 
 #### Queen
 
-You can use the [Helm chart to deploy Queen UI, Queen Back Office and Postgres database from the chart proposed by Bitamin](https://github.com/InseeFr/Helm-Charts/tree/main/charts/queen).
+You can use the [Helm chart to deploy Queen UI, Queen Back Office and Postgres database from the chart proposed by Bitnami](https://github.com/InseeFr/Helm-Charts/tree/main/charts/queen).
 
 You can find an example of values [here](./deploiement/Queen/).
 
@@ -78,7 +78,7 @@ In this example, you can now request Queen at https://queen.example.com/queen/vi
 
 #### Stromae-V2
 
-You can use the [Helm chart to deploy Stromae UI, Queen Back Office (Queen and Stromae as the same Back Office) and Postgres database from the chart proposed by Bitami](https://github.com/InseeFr/Helm-Charts/tree/main/charts/stromae-v2).
+You can use the [Helm chart to deploy Stromae UI, Queen Back Office (Queen and Stromae as the same Back Office) and Postgres database from the chart proposed by Bitnami](https://github.com/InseeFr/Helm-Charts/tree/main/charts/stromae-v2).
 
 You can find an example of values [here](./deploiement/Stromae-V2/).
 
