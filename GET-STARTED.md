@@ -68,21 +68,21 @@ In this example, you can now request Eno's swagger at https://eno-ws.example.com
 
 #### Queen
 
-You can use the [Helm Chart to deploy standard Insee application](https://github.com/InseeFr/Helm-Charts/tree/main/charts/ui-api-std).
+You can use the [Helm chart to deploy Queen UI, Queen Back Office and Postgres database from the chart proposed by Bitnami](https://github.com/InseeFr/Helm-Charts/tree/main/charts/queen).
 
 You can find an example of values [here](./deploiement/Queen/).
 
-The following command allows you to install Queen  : `helm install queen-demo inseefr/app -f queen-values.yaml`
+The following command allows you to install Queen  : `helm install queen-demo inseefr/queen -f queen-values.yaml`
 
 In this example, you can now request Queen at https://queen.example.com/queen/visualize
 
 #### Stromae-V2
 
-You can use the [Helm Chart to deploy standard Insee application](https://github.com/InseeFr/Helm-Charts/tree/main/charts/ui-api-std).
+You can use the [Helm chart to deploy Stromae UI, Queen Back Office (Queen and Stromae as the same Back Office) and Postgres database from the chart proposed by Bitnami](https://github.com/InseeFr/Helm-Charts/tree/main/charts/stromae-v2).
 
 You can find an example of values [here](./deploiement/Stromae-V2/).
 
-The following command allows you to install Stromae-V2 : `helm install stromae-v2-demo inseefr/app -f stromae-v2-values.yaml`
+The following command allows you to install Stromae-V2 : `helm install stromae-v2-demo inseefr/stromae-v2 -f stromae-v2-values.yaml`
 
 In this example, you can now request Queen at https://stromae-v2.example.com/visualize
 
