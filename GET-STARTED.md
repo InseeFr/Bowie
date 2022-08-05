@@ -78,7 +78,7 @@ In this example, you can now request Queen at https://queen.example.com/queen/vi
 
 #### Stromae-V2
 
-You can use the [Helm Chart to deploy standard Insee application](https://github.com/InseeFr/Helm-Charts/tree/main/charts/ui-api-std).
+You can use the [Helm chart to deploy Stromae UI, Queen Back Office (Queen and Stromae as the same Back Office) and Postgres database from the chart proposed by Bitami](https://github.com/InseeFr/Helm-Charts/tree/main/charts/stromae-v2).
 
 You can find an example of values [here](./deploiement/Stromae-V2/).
 
