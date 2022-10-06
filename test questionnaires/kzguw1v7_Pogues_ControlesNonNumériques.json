@@ -1,0 +1,666 @@
+{
+  "owner": "QTEST-LUNATIC-V2",
+  "ComponentGroup": [
+    {
+      "MemberReference": [
+        "kfxmfvwj",
+        "kfxmjupm",
+        "kfxn6f16",
+        "kfxn91jl",
+        "l7t05izu",
+        "kfxnfv4l",
+        "kfxnqc6m",
+        "kfxnk34d",
+        "idendquest"
+      ],
+      "Label": [
+        "Components for page 1"
+      ],
+      "id": "kg2az5c9",
+      "Name": "PAGE_1"
+    }
+  ],
+  "agency": "fr.insee",
+  "genericName": "QUESTIONNAIRE",
+  "Label": [
+    "QNONREG Controles Non Numériques VTL - ok"
+  ],
+  "Name": "QTESTCONTNONNUM",
+  "Variables": {
+    "Variable": [
+      {
+        "Formula": "xs:date('2020-06-01')",
+        "Label": "AAA",
+        "id": "kg2aumhe",
+        "type": "CalculatedVariableType",
+        "Name": "AAA",
+        "Datatype": {
+          "Maximum": "",
+          "Minimum": "",
+          "Format": "yyyy-mm-dd",
+          "typeName": "DATE",
+          "type": "DateDatatypeType"
+        }
+      },
+      {
+        "Label": "TESTSURBOO label",
+        "id": "kfxmrn19",
+        "type": "CollectedVariableType",
+        "Name": "TESTSURBOO",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "TESTTEXTE label",
+        "id": "kzqrbznp",
+        "type": "CollectedVariableType",
+        "Name": "TESTTEXTE",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": "15"
+        }
+      },
+      {
+        "Label": "TESTCODE label",
+        "id": "kfxn06gc",
+        "type": "CollectedVariableType",
+        "CodeListReference": "kfxn7vd7",
+        "Name": "TESTCODE",
+        "Datatype": {
+          "Pattern": "",
+          "typeName": "TEXT",
+          "type": "TextDatatypeType",
+          "MaxLength": 1
+        }
+      },
+      {
+        "Label": "1 - Code 1",
+        "id": "l7t075it",
+        "type": "CollectedVariableType",
+        "Name": "TESTQCM1",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "2 - Code 2",
+        "id": "l7t069q7",
+        "type": "CollectedVariableType",
+        "Name": "TESTQCM2",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "3 - Code 3",
+        "id": "l7szsr0d",
+        "type": "CollectedVariableType",
+        "Name": "TESTQCM3",
+        "Datatype": {
+          "typeName": "BOOLEAN",
+          "type": "BooleanDatatypeType"
+        }
+      },
+      {
+        "Label": "TESTDATEA label",
+        "id": "kzs8owbi",
+        "type": "CollectedVariableType",
+        "Name": "TESTDATEA",
+        "Datatype": {
+          "Maximum": "2040-12-31",
+          "Minimum": "1990-12-31",
+          "Format": "YYYY-MM-DD",
+          "typeName": "DATE",
+          "type": "DateDatatypeType"
+        }
+      },
+      {
+        "Label": "TESTDATEB label",
+        "id": "kiu2py9c",
+        "type": "CollectedVariableType",
+        "Name": "TESTDATEB",
+        "Datatype": {
+          "Maximum": "2030-12",
+          "Minimum": "2010-01",
+          "Format": "YYYY-MM",
+          "typeName": "DATE",
+          "type": "DateDatatypeType"
+        }
+      },
+      {
+        "Label": "TESTDATEC label",
+        "id": "kiu2jq3i",
+        "type": "CollectedVariableType",
+        "Name": "TESTDATEC",
+        "Datatype": {
+          "Maximum": "2030",
+          "Minimum": "2010",
+          "Format": "YYYY",
+          "typeName": "DATE",
+          "type": "DateDatatypeType"
+        }
+      }
+    ]
+  },
+  "lastUpdatedDate": "Tue Oct 04 2022 17:14:34 GMT+0200 (heure d’été d’Europe centrale)",
+  "DataCollection": [
+    {
+      "id": "esa-dc-2018",
+      "uri": "http://ddi:fr.insee:DataCollection.esa-dc-2018",
+      "Name": "Enquête sectorielle annuelle 2018"
+    }
+  ],
+  "final": false,
+  "flowLogic": "REDIRECTION",
+  "id": "kzguw1v7",
+  "TargetMode": [
+    ""
+  ],
+  "CodeLists": {
+    "CodeList": [
+      {
+        "Label": "L_CODES",
+        "id": "kfxn7vd7",
+        "Code": [
+          {
+            "Parent": "",
+            "Label": "Code 1",
+            "Value": "1"
+          },
+          {
+            "Parent": "",
+            "Label": "Code 2",
+            "Value": "2"
+          },
+          {
+            "Parent": "",
+            "Label": "Code 3",
+            "Value": "3"
+          }
+        ],
+        "Name": ""
+      }
+    ]
+  },
+  "formulasLanguage": "VTL",
+  "Child": [
+    {
+      "Control": [],
+      "depth": 1,
+      "FlowControl": [],
+      "genericName": "MODULE",
+      "Label": [
+        "TEST SUR BOOLEEN CODE DATE ET TEXTE"
+      ],
+      "id": "kfxmfvwj",
+      "TargetMode": [
+        ""
+      ],
+      "Declaration": [],
+      "type": "SequenceType",
+      "Child": [
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "kfxmrn19",
+              "id": "kfxmtbdb",
+              "mandatory": false,
+              "Datatype": {
+                "typeName": "BOOLEAN",
+                "type": "BooleanDatatypeType"
+              }
+            }
+          ],
+          "Control": [
+            {
+              "post_collect": false,
+              "Description": "Si pas coché, afficher booleen pas coché",
+              "Expression": "nvl($TESTSURBOO$,false) = false",
+              "during_collect": false,
+              "criticity": "INFO",
+              "FailMessage": "\"booleen pas coché et on affiche un message un peu long histoire de tester le truc \"",
+              "id": "kfxmvhon"
+            },
+            {
+              "post_collect": false,
+              "Description": "booleen coche",
+              "Expression": "nvl($TESTSURBOO$,false) = true",
+              "during_collect": false,
+              "criticity": "INFO",
+              "FailMessage": "\"On a coché le booleen et on met une phrase un peu longue car on veut tester ce qui s'affiche\"",
+              "id": "kzgwc86o"
+            }
+          ],
+          "depth": 2,
+          "FlowControl": [],
+          "Label": [
+            "\"Controle sur booleen\""
+          ],
+          "id": "kfxmjupm",
+          "TargetMode": [
+            ""
+          ],
+          "Declaration": [],
+          "type": "QuestionType",
+          "questionType": "SIMPLE",
+          "Name": "TESTSURBOO"
+        },
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "kzqrbznp",
+              "id": "kfxmv3tb",
+              "mandatory": false,
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "type": "TextDatatypeType",
+                "MaxLength": "15"
+              }
+            }
+          ],
+          "Control": [
+            {
+              "post_collect": false,
+              "Description": "Verification du contenu",
+              "Expression": "nvl($TESTTEXTE$,\"\") = \"BLABLA\"",
+              "during_collect": false,
+              "criticity": "INFO",
+              "FailMessage": "\"Vous ne pouvez pas saisir BLABLA\"",
+              "id": "kfxmvsyw"
+            },
+            {
+              "post_collect": false,
+              "Description": "pas vide",
+              "Expression": "nvl($TESTTEXTE$,\"\") = \"\"",
+              "during_collect": false,
+              "criticity": "INFO",
+              "FailMessage": "\"Cette phrase un peu longue s'affiche si on a du vide pour la variable sur le texte inférieur à 255 caractères et voilà\"",
+              "id": "kzqrd8s8"
+            }
+          ],
+          "depth": 2,
+          "FlowControl": [],
+          "Label": [
+            "\"Controle sur du texte < 255\""
+          ],
+          "id": "kfxn6f16",
+          "TargetMode": [
+            ""
+          ],
+          "Declaration": [
+            {
+              "declarationType": "INSTRUCTION",
+              "Text": "Tester la saisie de BLABLA",
+              "id": "kfxn36ru",
+              "position": "AFTER_QUESTION_TEXT",
+              "DeclarationMode": [
+                "CAWI",
+                "PAPI"
+              ]
+            }
+          ],
+          "type": "QuestionType",
+          "questionType": "SIMPLE",
+          "Name": "TESTTEXTE"
+        },
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "kfxn06gc",
+              "id": "kfxnhtm5",
+              "mandatory": false,
+              "CodeListReference": "kfxn7vd7",
+              "Datatype": {
+                "Pattern": "",
+                "typeName": "TEXT",
+                "visualizationHint": "CHECKBOX",
+                "type": "TextDatatypeType",
+                "MaxLength": 1
+              }
+            }
+          ],
+          "Control": [
+            {
+              "post_collect": false,
+              "Description": "Controle le contenu",
+              "Expression": "nvl($TESTCODE$,\"\") = \"1\"",
+              "during_collect": false,
+              "criticity": "INFO",
+              "FailMessage": "\"La variable vaut 1\"",
+              "id": "kfxn2p39"
+            },
+            {
+              "post_collect": false,
+              "Description": "La variable ne vaut pas 1 ",
+              "Expression": "nvl($TESTCODE$,\"\") <> \"1\" and not(isnull($TESTCODE$))",
+              "during_collect": false,
+              "criticity": "INFO",
+              "FailMessage": "\"La variable ne vaut pas 1  et n'est  pas vide\"",
+              "id": "kfxn86pd"
+            },
+            {
+              "post_collect": false,
+              "Description": "La variable est vide",
+              "Expression": "isnull($TESTCODE$)",
+              "during_collect": false,
+              "criticity": "INFO",
+              "FailMessage": "\"La variable est vide\"",
+              "id": "kfxng4mp"
+            }
+          ],
+          "depth": 2,
+          "FlowControl": [],
+          "Label": [
+            "\"Controle sur code\""
+          ],
+          "ClarificationQuestion": [],
+          "id": "kfxn91jl",
+          "TargetMode": [
+            ""
+          ],
+          "Declaration": [
+            {
+              "declarationType": "INSTRUCTION",
+              "Text": "Tester cocher 1, ne rien cocher, cocher 2",
+              "id": "kfxn7ugm",
+              "position": "AFTER_QUESTION_TEXT",
+              "DeclarationMode": [
+                "CAWI",
+                "PAPI"
+              ]
+            }
+          ],
+          "type": "QuestionType",
+          "questionType": "SINGLE_CHOICE",
+          "Name": "TESTQCU"
+        },
+        {
+          "FlowControl": [],
+          "Label": [
+            "\"Controle sur code\""
+          ],
+          "ResponseStructure": {
+            "Attribute": [],
+            "Mapping": [
+              {
+                "MappingSource": "l7t0bfpc",
+                "MappingTarget": "1"
+              },
+              {
+                "MappingSource": "l7t08o25",
+                "MappingTarget": "2"
+              },
+              {
+                "MappingSource": "l7szsev9",
+                "MappingTarget": "3"
+              }
+            ],
+            "Dimension": [
+              {
+                "dimensionType": "PRIMARY",
+                "dynamic": "0",
+                "CodeListReference": "kfxn7vd7"
+              },
+              {
+                "dimensionType": "MEASURE",
+                "dynamic": "0"
+              }
+            ]
+          },
+          "type": "QuestionType",
+          "Name": "TESTQCM",
+          "Response": [
+            {
+              "CollectedVariableReference": "l7t075it",
+              "id": "l7t0bfpc",
+              "Datatype": {
+                "typeName": "BOOLEAN",
+                "type": "BooleanDatatypeType"
+              }
+            },
+            {
+              "CollectedVariableReference": "l7t069q7",
+              "id": "l7t08o25",
+              "Datatype": {
+                "typeName": "BOOLEAN",
+                "type": "BooleanDatatypeType"
+              }
+            },
+            {
+              "CollectedVariableReference": "l7szsr0d",
+              "id": "l7szsev9",
+              "Datatype": {
+                "typeName": "BOOLEAN",
+                "type": "BooleanDatatypeType"
+              }
+            }
+          ],
+          "Control": [
+            {
+              "post_collect": false,
+              "Description": "\"1 et 3 pas compatibles, 1 et 2 pas compatibles\"",
+              "Expression": "(nvl($TESTQCM1$,false)=true and nvl($TESTQCM2$,false)=true) or(nvl($TESTQCM1$,false)=true and nvl($TESTQCM3$,false)=true) ",
+              "during_collect": false,
+              "criticity": "INFO",
+              "FailMessage": "\"1 et 3 pas compatibles, 1 et 2 pas compatibles\"",
+              "id": "l7t096z9"
+            }
+          ],
+          "depth": 2,
+          "ClarificationQuestion": [],
+          "id": "l7t05izu",
+          "TargetMode": [
+            ""
+          ],
+          "Declaration": [
+            {
+              "declarationType": "INSTRUCTION",
+              "Text": "Tester cocher 1 et 2, cocher 1 et 3",
+              "id": "l7szuucf",
+              "position": "AFTER_QUESTION_TEXT",
+              "DeclarationMode": [
+                "CAWI",
+                "PAPI",
+                "CAPI",
+                "CATI"
+              ]
+            }
+          ],
+          "questionType": "MULTIPLE_CHOICE"
+        },
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "kzs8owbi",
+              "id": "kfxniqpf",
+              "mandatory": false,
+              "Datatype": {
+                "Maximum": "2040-12-31",
+                "Minimum": "1990-12-31",
+                "Format": "YYYY-MM-DD",
+                "typeName": "DATE",
+                "type": "DateDatatypeType"
+              }
+            }
+          ],
+          "Control": [
+            {
+              "post_collect": false,
+              "Description": "Date supérieure à date du jour",
+              "Expression": "cast($TESTDATEA$,date,\"YYYY-MM-DD\") > cast(current_date(), date, \"YYYY-MM-DD\")\r\n",
+              "during_collect": false,
+              "criticity": "INFO",
+              "FailMessage": "\"Date supérieure à date du jour\"",
+              "id": "kfxnfmr1"
+            }
+          ],
+          "depth": 2,
+          "FlowControl": [],
+          "Label": [
+            "\"Controle sur date AAAA-MM-JJ (saisie entre 31/12/1990 et 31/12/2040)\""
+          ],
+          "id": "kfxnfv4l",
+          "TargetMode": [
+            ""
+          ],
+          "Declaration": [
+            {
+              "declarationType": "INSTRUCTION",
+              "Text": "saisir une date > date du jour",
+              "id": "kfxnywlg",
+              "position": "AFTER_QUESTION_TEXT",
+              "DeclarationMode": [
+                "CAWI",
+                "PAPI",
+                "CATI",
+                "CAPI"
+              ]
+            },
+            {
+              "declarationType": "HELP",
+              "Text": "cast($TESTDATEA$,string)",
+              "id": "kzgvf7oe",
+              "position": "AFTER_QUESTION_TEXT",
+              "DeclarationMode": [
+                "CAWI",
+                "CATI",
+                "CAPI",
+                "PAPI"
+              ]
+            }
+          ],
+          "type": "QuestionType",
+          "questionType": "SIMPLE",
+          "Name": "TESTDATEA"
+        },
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "kiu2py9c",
+              "id": "kfxndm98",
+              "mandatory": false,
+              "Datatype": {
+                "Maximum": "2030-12",
+                "Minimum": "2010-01",
+                "Format": "YYYY-MM",
+                "typeName": "DATE",
+                "type": "DateDatatypeType"
+              }
+            }
+          ],
+          "Control": [
+            {
+              "post_collect": false,
+              "Description": "La date est supérieure au 12 2010",
+              "Expression": "$TESTDATEB$ != '' and $TESTDATEB$ > '2010-12'",
+              "during_collect": false,
+              "criticity": "INFO",
+              "FailMessage": "\"La date est supérieure au 12 2010\"",
+              "id": "kfxnx2bl"
+            }
+          ],
+          "depth": 2,
+          "FlowControl": [],
+          "Label": [
+            "\"Controle sur date AAAA-MM (manque lunatic)\""
+          ],
+          "id": "kfxnqc6m",
+          "TargetMode": [
+            ""
+          ],
+          "Declaration": [
+            {
+              "declarationType": "INSTRUCTION",
+              "Text": "Date entre 01-2010 et 12-2030",
+              "id": "kfxni8ox",
+              "position": "AFTER_QUESTION_TEXT",
+              "DeclarationMode": [
+                "CAWI",
+                "PAPI"
+              ]
+            }
+          ],
+          "type": "QuestionType",
+          "questionType": "SIMPLE",
+          "Name": "TESTDATEB"
+        },
+        {
+          "Response": [
+            {
+              "CollectedVariableReference": "kiu2jq3i",
+              "id": "kfxnuz8r",
+              "mandatory": false,
+              "Datatype": {
+                "Maximum": "2030",
+                "Minimum": "2010",
+                "Format": "YYYY",
+                "typeName": "DATE",
+                "type": "DateDatatypeType"
+              }
+            }
+          ],
+          "Control": [
+            {
+              "post_collect": false,
+              "Description": "La date est supérieure a 2020",
+              "Expression": "$TESTDATEC$ > '2020' and $TESTDATEC$ != ''",
+              "during_collect": false,
+              "criticity": "INFO",
+              "FailMessage": "\"La date est supérieure a 2020\"",
+              "id": "kfxnoxc2"
+            }
+          ],
+          "depth": 2,
+          "FlowControl": [],
+          "Label": [
+            "\"Controle sur date AAAA (si supérieur à 2020) manque lunatic\""
+          ],
+          "id": "kfxnk34d",
+          "TargetMode": [
+            ""
+          ],
+          "Declaration": [
+            {
+              "declarationType": "INSTRUCTION",
+              "Text": "saisir une date > 2020",
+              "id": "kfxnk172",
+              "position": "AFTER_QUESTION_TEXT",
+              "DeclarationMode": [
+                "CAWI",
+                "PAPI"
+              ]
+            }
+          ],
+          "type": "QuestionType",
+          "questionType": "SIMPLE",
+          "Name": "TESTDATEC"
+        }
+      ],
+      "Name": "TESTNONNUM"
+    },
+    {
+      "Control": [],
+      "depth": 1,
+      "FlowControl": [],
+      "genericName": "MODULE",
+      "Label": [
+        "QUESTIONNAIRE_END"
+      ],
+      "id": "idendquest",
+      "TargetMode": [
+        ""
+      ],
+      "Declaration": [],
+      "type": "SequenceType",
+      "Child": [],
+      "Name": "QUESTIONNAIRE_END"
+    }
+  ]
+}
