@@ -10,6 +10,12 @@ assignees: ''
 # Business case
 _here describe the business case_
 
+## Expressed by
+_a list of projects / teams that expressed the business case_
+
+- project 1
+- team A
+
 # Stack
 _here describe the impact on the product softwares, linking to related issues_
 
