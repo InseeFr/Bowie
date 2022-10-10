@@ -10,7 +10,7 @@ assignees: ''
 # Business case
 _here describe the business case_
 
-## Expressed by
+## Stakeholders
 _a list of projects / teams that expressed the business case_
 
 - project 1
