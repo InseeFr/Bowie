@@ -1,6 +1,9 @@
-# Umbrella ☂️
+![image](https://user-images.githubusercontent.com/1663283/211278293-b4ca9df0-190e-4f40-9871-1344addacfe9.png)
 
-> [project short description]
+
+# What is Bowie ?
+
+> Bowie is Insee's Survey Design solution.
 
 🇬🇧
 
