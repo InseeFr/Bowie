@@ -61,7 +61,7 @@ Before launching the commands, go to the folder containing the values or the Kub
 
 #### Bowie
 
-You can use the Helm [Chart to deploy Bowie](https://github.com/InseeFr/Helm-Charts/tree/charts/bowie) : Pogues UI, Pogues Back Office, initialize Postgre database, DDI-Access-Services, Eno, Queen UI and Stromae V2 UI.
+You can use the Helm [Chart to deploy Bowie](https://github.com/InseeFr/Helm-Charts/tree/main/charts/bowie) : Pogues UI, Pogues Back Office, initialize Postgre database, DDI-Access-Services, Eno, Queen UI and Stromae V2 UI.
 
 You can find the database initialization script [here](./deploiement/Pogues/pogues-bdd-backup.sql). This script initializes the database with metadata (mocked metadata repository data) and a first test questionnaire : the Simpsons questionnaire.
 
