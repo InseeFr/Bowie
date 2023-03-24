@@ -1,0 +1,192 @@
+pogues:
+  ui:
+    image:
+      repository: inseefr/pogues
+      pullPolicy: IfNotPresent
+      tag: X.Y.Z
+
+    ingress:
+      hosts:
+        - host: pogues-ui.example.com
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
+
+    env:
+      API_URL: "pogues-api.example.com/api"
+
+  api:
+    image:
+      repository: inseefr/pogues-back-office
+      pullPolicy: IfNotPresent
+      tag: X.Y.Z
+
+    ingress:
+      hosts:
+        - host: pogues-api.example.com
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
+
+    environment:
+      ssl: false
+      log:
+        configuration: classpath:log4j2.xml
+      api:
+        host: pogues-api.example.com
+        name: ""
+        scheme: https
+      persistence:
+        database:
+          host: pogues-db-example
+          port: 5432
+          driver: org.postgresql.Driver
+          table: pogues
+      authentification: NONE
+      role:
+        admin: Administrateur_Pogues
+        user: Utilisateurs_Pogues
+      remote:
+        metadata:
+          url: https://ddi-access-services.example.com/api
+        stromae:
+          host: "https://stromae-db.example.com"
+          vis:
+            path: "exist/apps/orbeon/visualize"
+          orbeon:
+            host: "https://stromae.example.com"
+        queen:
+          host: https://queen-ui.example.com
+          vis:
+            path: queen/visualize?questionnaire=
+        stromaev2:
+          vis:
+            url: https://stromae-v2-ui.example.com/visualize?questionnaire=
+        eno:
+          host: eno-ws.example.com
+          scheme: https
+
+  postgresql:
+    enabled: true
+    fullnameOverride: pogues-db-example
+    auth:
+      username: Pogues
+      password: Pogues
+      postgresPassword: postgresPassword
+      database: Pogues
+    primary:
+      initContainers:
+        - name: import-dump
+          image: busybox
+          command:
+            [
+              "wget",
+              "https://raw.githubusercontent.com/InseeFr/Bowie/main/deploiement/Pogues/pogues-bdd-backup.sql",
+              "--output-document=/import/backup.sql",
+            ]
+          volumeMounts:
+            - mountPath: /import
+              name: import-volume
+
+      extraVolumes:
+        - name: import-volume
+          emptyDir: {}
+
+      extraVolumeMounts:
+        - name: import-volume
+          mountPath: "/docker-entrypoint-initdb.d"
+
+eno-ws:
+  enoxml:
+    image:
+      repository: inseefr/eno-ws
+      pullPolicy: IfNotPresent
+      tag: X.Y.Z
+    ingress:
+      hosts:
+        - host: eno-ws.example.com
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
+  enojava:
+    enabled: false
+
+ddi-access-services:
+  image:
+    repository: inseefr/ddi-access-services
+    pullPolicy: IfNotPresent
+    tag: X.Y.Z
+
+  ingress:
+    hosts:
+      - host: ddi-access-services.example.com
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+
+  properties: |-
+    # SSL
+    fr.insee.rmes.force.ssl=false
+    # Log4J configuration File
+    fr.insee.rmespogbo.log.configuration=log4j2.xml
+    # Swagger host
+    fr.insee.rmes.api.host = ddi-access-services.example.com
+    fr.insee.rmes.api.name= /api
+    fr.insee.rmes.api.scheme= https
+    # Metadata service
+
+    fr.insee.rmes.search.DDIItemRepository.impl = DDIItemRepositoryDBImpl
+    fr.insee.rmes.search.db.host = pogues-db-example
+    fr.insee.rmes.search.db.port = 5432
+    fr.insee.rmes.search.db.schema = Pogues
+    fr.insee.rmes.search.db.user = Pogues
+    fr.insee.rmes.search.db.password = Pogues
+    fr.insee.rmes.search.db.driver = org.postgresql.Driver
+    fr.insee.rmes.search.db.table = ddi_item
+
+queen:
+  ui:
+      enabled: true
+      nameOverride: queen-ui
+      replicaCount: 1
+      image:
+        repository: inseefr/queen
+        tag: "X.Y.Z"
+      ingress:
+        enabled: true
+        annotations:
+          kubernetes.io/ingress.class: nginx
+        hosts:
+          - host: queen-ui.example.com
+            paths:
+              - path: /
+                pathType: ImplementationSpecific
+        tls:
+          - hosts:
+              - queen-ui.example.com
+      env:
+        QUEEN_URL: https://queen-ui.example.com
+        authenticationType: NONE
+
+stromae-v2:
+  ui:
+      enabled: true
+      nameOverride: stromae-ui
+      replicaCount: 1
+      image:
+        repository: inseefr/stromae
+        tag: "X.Y.Z"
+      ingress:
+        enabled: true
+        annotations:
+          kubernetes.io/ingress.class: nginx
+        hosts:
+          - host: stromae-v2-ui.example.com
+            paths:
+              - path: /
+                pathType: ImplementationSpecific
+        tls:
+          - hosts:
+              - stromae-v2-ui.example.com
+      env:
+        AUTHENTICATION_TYPE: NONE

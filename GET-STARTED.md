@@ -1,4 +1,4 @@
-# Get Started : Install Survey Design product
+# Get Started : Install Bowie (Survey Design product)
 
 ## On a kubernetes cluster
 
@@ -21,11 +21,11 @@ Finally, to access the visualization in the different survey tools, you must add
 You can refer to the [Readme](./README.md) for more information.
 
 
-![Survey design product architecture scheme](./deploiement/pogues-archi-github.jpg)
+![Bowie architecture scheme](./deploiement/bowie-archi-github.jpg)
 
 #### Docker Images
 
-The official docker images required to deploy an instance of Survey Design product are available on the [inseefr docker repositories](https://hub.docker.com/u/inseefr) : 
+The official docker images required to deploy an instance of Bowie are available on the [inseefr docker repositories](https://hub.docker.com/u/inseefr) : 
 
 - [Pogues](https://hub.docker.com/r/inseefr/pogues/tags)
 - [Pogues-Back-Office](https://hub.docker.com/r/inseefr/pogues-back-office)
@@ -37,7 +37,7 @@ The official docker images required to deploy an instance of Survey Design produ
 
 :warning: Warning : don't use the "lastest" tag (not always updated).
 
-To know the content of a tag, please refer to the corresponding release note in the github repository.
+To know the content of a tag, please refer to the corresponding release note in the github repository and [bowie releases](https://github.com/InseeFr/Bowie/releases)
 
 #### Add repo Helm
 
@@ -49,7 +49,8 @@ If you have already added the repository, you can update it like this : `helm re
 
 ### Steps for deploying a new instance on a kubernetes cluster
 
-You will need to install all the required applications for Survey Design Product. Some uses a helm chart, others have classic Kubernetes objects specs (deployment.yml, ingress.yml, ...).
+You will need to install all the required applications for Bowie. The majority of installations uses a unique helm chart Bowie.  
+Only the optional V1 web visualization have classic Kubernetes objects specs (deployment.yml, ingress.yml, ...).
 
 Do not forget in example files :
 - change the properties of the databases (in particular the passwords set by default to "password")
@@ -58,33 +59,29 @@ Do not forget in example files :
 
 Before launching the commands, go to the folder containing the values or the Kubernetes objects specs.
 
-#### Eno-WS
+#### Bowie
 
-There is currently no helm-chart associated with the deployment of Eno. You must use Kubernetes objects specs of which you can find an example [here](./deploiement/Eno-WS/).
+You can use the Helm [Chart to deploy Bowie](https://github.com/InseeFr/Helm-Charts/tree/dev-survey-design/charts/bowie) : Pogues UI, Pogues Back Office, initialize Postgre database, DDI-Access-Services, Eno, Queen UI and Stromae V2 UI.
 
-The following command allows you to install Eno-WS  : `kubectl apply -f .`
+You can find the database initialization script [here](./deploiement/Pogues/pogues-bdd-backup.sql). This script initializes the database with metadata (mocked metadata repository data) and a first test questionnaire : the Simpsons questionnaire.
 
-In this example, you can now request Eno's swagger at https://eno-ws.example.com/swagger-ui/index.html?url=/v3/api-docs&validatorUrl=
+You can find an example of values [here](./deploiement/values-bowie.yaml).
 
-#### Queen
+The following command allows you to install Bowie : `helm install bowie inseefr/bowie -f bowie-values.yaml`
 
-You can use the [Helm chart to deploy Queen UI, Queen Back Office and Postgres database from the chart proposed by Bitnami](https://github.com/InseeFr/Helm-Charts/tree/main/charts/queen).
+:warning: : When the pods are running, you need to delete the pod from the Pogues API (pogues-back-office) with the command `helm delete pod {pod_name}`. 
+Indeeed, Pogues-API is a Spring boot application. The configuration is such that the API tests the connection to the database once and if it does not get a response, does not retry. However, the database takes longer to be ready for use than the API. So if the pod is not deleted, there is no retry and the application does not work.
+An application solution is being developed.
 
-You can find an example of values [here](./deploiement/Queen/).
+In this example, you can now find :
+- Bowie UI (and Pogues UI) at https://pogues-ui.example.com
+- Pogues-Back-Office's swagger at https://pogues-api.example.com/swagger-ui/dist/ 
+- Queen at https://stromae-v2-ui.example.com/visualize
+- Stromae V2  at https://stromae-v2-ui.example.com/visualize
+- Eno at https://eno-ws.example.com/swagger-ui/index.html?url=/v3/api-docs&validatorUrl=
+- DDI-Access-Service at https://ddi-access-services.example.com/swagger-ui/dist/
 
-The following command allows you to install Queen  : `helm install queen-demo inseefr/queen -f queen-values.yaml`
-
-In this example, you can now request Queen at https://queen.example.com/queen/visualize
-
-#### Stromae-V2
-
-You can use the [Helm chart to deploy Stromae UI, Queen Back Office (Queen and Stromae as the same Back Office) and Postgres database from the chart proposed by Bitnami](https://github.com/InseeFr/Helm-Charts/tree/main/charts/stromae-v2).
-
-You can find an example of values [here](./deploiement/Stromae-V2/).
-
-The following command allows you to install Stromae-V2 : `helm install stromae-v2-demo inseefr/stromae-v2 -f stromae-v2-values.yaml`
-
-In this example, you can now request Queen at https://stromae-v2.example.com/visualize
+If you wish to have the "Web V1" view (soon to be deprecated), you can follow these instructions to install a Stromae-V1 and its associated database. Don't forget to add the associated properties to Bowie's values in the Pogues API.
 
 #### Stromae-V1
 
@@ -94,6 +91,7 @@ There is currently no helm-chart associated with the deployment of Stromae-V1. Y
 
 You can find an example of Kubernetes objects specs [here](./deploiement/Stromae-db/).
 
+Before launching the commands, go to the folder containing the values or the Kubernetes objects specs.
 The following command allows you to install Stromae : `kubectl apply -f .` 
 
 In this example, you can now find Stromae eXist dashboard at https://stromae-db.example.com/exist/apps/dashboard/index.html
@@ -102,36 +100,13 @@ In this example, you can now find Stromae eXist dashboard at https://stromae-db.
 
 You can find an example of Kubernetes objects specs [here](./deploiement/Stromae-V1/).
 
+Before launching the commands, go to the folder containing the values or the Kubernetes objects specs.
 The following command allows you to install Stromae-db  :  `kubectl apply -f .` 
 
 In this example, you can now find the Simpsons test questionnaire at https://stromae.example.com/rmesstromae/fr/esa-dc-2018/m1/new?unite-enquete=123456789
 
 
-#### DDI-Access-Services
-
-There is currently no helm-chart associated with the deployment of Eno. You must use Kubernetes objects specs of which yu can find an example [here](./deploiement/DDI-Access-Services/).
-
-Note : DDI-Access-Services connects to the Pogues database: it is necessary to take the same database configuration (user, password, etc.) in the properties.
-
-The following command allows you to install DDI-Access-Services  : `kubectl apply -f .` 
-
-In this example, you can now find DDI-Access-Services's swagger at https://ddi-access-services.example.com/swagger-ui/dist/
-
-#### Pogues
-
-You can use the [Helm Chart to deploy Pogues UI, Pogues Back Office and initialize Postgre database](https://github.com/InseeFr/Helm-Charts/tree/main/charts/pogues).
-
-You can find the database initialization script [here](./deploiement/Pogues/pogues-bdd-backup.sql)
-This script initializes the database with metadata (mocked metadata repository data) and a first test questionnaire : the Simpsons questionnaire.
-
-You can find an example of values [here](./deploiement/Pogues/pogues-values.yaml).
-
-The following command allows you to install Pogues : `helm install pogues inseefr/pogues -f pogues-values.yaml`
-
-In this example, you can now find Pogues-Back-Office's swagger at https://pogues-back-office.example.com/swagger-ui/dist/ and Pogues at https://pogues.example.com
-
-
-**You have finished installing an instance of Survey Design Product in your kubernetes cluster: enjoy on https://pogues.example.com !**
+**You have finished installing an instance of Bowie in your kubernetes cluster: enjoy on https://pogues.example.com !**
 
 ## Other installations
 
