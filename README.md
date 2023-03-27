@@ -1,11 +1,12 @@
-![image](https://user-images.githubusercontent.com/1663283/211278293-b4ca9df0-190e-4f40-9871-1344addacfe9.png)
-
+<p align="center">
+    <img width="500" src="https://user-images.githubusercontent.com/1663283/211278293-b4ca9df0-190e-4f40-9871-1344addacfe9.png">  
+</p>
 
 # What is Bowie ?
 
 > Bowie is Insee's Survey Design solution.
 
-🇬🇧
+:gb:
 
 This repo is for keeping track of progress of the Survey Design product built at Insee and communicating results (or lack thereof).
 
@@ -17,9 +18,10 @@ It is a much needed synthesis of developments happening in the software building
 - [Stromae V2](https://github.com/InseeFr/Stromae/tree/v2-develop)
 - [Queen](https://github.com/InseeFr/Queen)
 
-Warning: some software building blocks are essential and dependent on the operation of the Survey Design product but are not part of the product itself. 
+Warning: some software building blocks are essential and dependent on the operation of the Survey Design product but are not part of the product itself.
 
 These are:
+
 - [DDI-Access-Services](https://github.com/InseeFr/DDI-Acess-Services)
 - [Stromae V1](https://github.com/InseeFr/Stromae)
 
@@ -27,8 +29,7 @@ Documentation will also be provided through this initiative and synchronisation 
 
 Link to the documentation for the installation of the survey design product : [get-started](./GET-STARTED.md)
 
-
-🇫🇷
+:fr:
 
 Ce dépôt sert à suivre les progrès du produit Conception d'Enquêtes développé à l'Insee et pour communiquer sur les résultats (ou leur absence).
 
@@ -40,9 +41,10 @@ C'est une synthèse nécessaire des développements produits dans les différent
 - [Stromae V2](https://github.com/InseeFr/Stromae/tree/v2-develop)
 - [Queen](https://github.com/InseeFr/Queen)
 
-Attention : certaines briques logicielles sont indispensables et dépendantes au fonctionnement du produit Conceptions d'Enquêtes mais ne font pas partie du produit à proprement parler. 
+Attention : certaines briques logicielles sont indispensables et dépendantes au fonctionnement du produit Conceptions d'Enquêtes mais ne font pas partie du produit à proprement parler.
 
-Il s'agit de : 
+Il s'agit de :
+
 - [DDI-Access-Services](https://github.com/InseeFr/DDI-Acess-Services)
 - [Stromae V1](https://github.com/InseeFr/Stromae)
 
