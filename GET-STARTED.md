@@ -12,7 +12,7 @@
 
 #### Architecture scheme
 
-The architecture of the Survey Designer is modular to make a multifunctional service (design, persist, generate, visualize,...). 
+The architecture of the Survey Designer is modular to make a multifunctional service (design, persist, generate, visualize,...).
 
 The installation of a minimum base is essential to enter a questionnaire: Pogues (FO, BO and DB) and DDI-Access-Services.
 
@@ -20,12 +20,11 @@ Finally, to access the visualization in the different survey tools, you must add
 
 You can refer to the [Readme](./README.md) for more information.
 
-
 ![Bowie architecture scheme](./deploiement/bowie-archi-github.jpg)
 
 #### Docker Images
 
-The official docker images required to deploy an instance of Bowie are available on the [inseefr docker repositories](https://hub.docker.com/u/inseefr) : 
+The official docker images required to deploy an instance of Bowie are available on the [inseefr docker repositories](https://hub.docker.com/u/inseefr) :
 
 - [Pogues](https://hub.docker.com/r/inseefr/pogues/tags)
 - [Pogues-Back-Office](https://hub.docker.com/r/inseefr/pogues-back-office)
@@ -39,13 +38,24 @@ The official docker images required to deploy an instance of Bowie are available
 
 To know the content of a tag, please refer to the corresponding release note in the github repository and [bowie releases](https://github.com/InseeFr/Bowie/releases)
 
-#### Add repo Helm
+#### Add Helm repo
 
-This [repo InseeFr](https://github.com/inseefr/Helm-charts) contains the helm-charts of the product.
+[InseeFr repo](https://github.com/inseefr/Helm-charts) contains the helm-charts of the product.
 
-The following command allows you to download and install all the helm charts of this repository on Helm  : `helm repo add inseefr https://inseefr.github.io/Helm-Charts`
+The following command allows you to download and install all the helm charts of this repository on Helm :
 
-If you have already added the repository, you can update it like this : `helm repo update inseefr`
+```bash
+helm repo add inseefr https://inseefr.github.io/Helm-Charts
+```
+
+If you have already added the repository, you can update it like this :
+
+```bash
+# Helm >= 3.7.0
+helm repo update inseefr
+# Helm < 3.7.0
+helm repo update
+```
 
 ### Steps for deploying a new instance on a kubernetes cluster
 
@@ -53,6 +63,7 @@ You will need to install all the required applications for Bowie. The majority o
 Only the optional V1 web visualization have classic Kubernetes objects specs (deployment.yml, ingress.yml, ...).
 
 Do not forget in example files :
+
 - change the properties of the databases (in particular the passwords set by default to "password")
 - change the host in the URLs
 - change docker image tags (replace X.Y.Z).
@@ -67,17 +78,27 @@ You can find the database initialization script [here](./deploiement/Pogues/pogu
 
 You can find an example of values [here](./deploiement/values-bowie.yaml).
 
-The following command allows you to install Bowie : `helm install bowie inseefr/bowie -f bowie-values.yaml`
+The following command allows you to install Bowie :
 
-:warning: : When the pods are running, you need to delete the pod from the Pogues API (pogues-back-office) with the command `helm delete pod {pod_name}`. 
+```bash
+helm install bowie inseefr/bowie -f bowie-values.yaml
+```
+
+:warning: : When the pods are running, you need to delete the pod from the Pogues API (pogues-back-office) with the command:
+
+```bash
+helm delete pod {pod_name}
+```
+
 Indeeed, Pogues-API is a Spring boot application. The configuration is such that the API tests the connection to the database once and if it does not get a response, does not retry. However, the database takes longer to be ready for use than the API. So if the pod is not deleted, there is no retry and the application does not work.
 An application solution is being developed.
 
 In this example, you can now find :
+
 - Bowie UI (and Pogues UI) at https://pogues-ui.example.com
-- Pogues-Back-Office's swagger at https://pogues-api.example.com/swagger-ui/dist/ 
+- Pogues-Back-Office's swagger at https://pogues-api.example.com/swagger-ui/dist/
 - Queen at https://stromae-v2-ui.example.com/visualize
-- Stromae V2  at https://stromae-v2-ui.example.com/visualize
+- Stromae V2 at https://stromae-v2-ui.example.com/visualize
 - Eno at https://eno-ws.example.com/swagger-ui/index.html?url=/v3/api-docs&validatorUrl=
 - DDI-Access-Service at https://ddi-access-services.example.com/swagger-ui/dist/
 
@@ -92,7 +113,11 @@ There is currently no helm-chart associated with the deployment of Stromae-V1. Y
 You can find an example of Kubernetes objects specs [here](./deploiement/Stromae-db/).
 
 Before launching the commands, go to the folder containing the values or the Kubernetes objects specs.
-The following command allows you to install Stromae : `kubectl apply -f .` 
+The following command allows you to install Stromae :
+
+```bash
+kubectl apply -f .
+```
 
 In this example, you can now find Stromae eXist dashboard at https://stromae-db.example.com/exist/apps/dashboard/index.html
 
@@ -101,10 +126,13 @@ In this example, you can now find Stromae eXist dashboard at https://stromae-db.
 You can find an example of Kubernetes objects specs [here](./deploiement/Stromae-V1/).
 
 Before launching the commands, go to the folder containing the values or the Kubernetes objects specs.
-The following command allows you to install Stromae-db  :  `kubectl apply -f .` 
+The following command allows you to install Stromae-db :
+
+```bash
+kubectl apply -f .
+```
 
 In this example, you can now find the Simpsons test questionnaire at https://stromae.example.com/rmesstromae/fr/esa-dc-2018/m1/new?unite-enquete=123456789
-
 
 **You have finished installing an instance of Bowie in your kubernetes cluster: enjoy on https://pogues.example.com !**
 
