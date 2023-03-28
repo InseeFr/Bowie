@@ -10,15 +10,21 @@
 - **Helm** : to install Helm, refer to the [Helm install guide](https://github.com/helm/helm#install)
 - **kubectl** : to install kubectl, refer to the [kubernetes kubectl install guide](https://kubernetes.io/docs/tasks/tools/)
 
-#### Architecture scheme
+#### Architecture
 
-The architecture of the Survey Designer is modular to make a multifunctional service (design, persist, generate, visualize,...).
+The architecture of the Survey Designer is modular with several services for several capabilities (design, persist, generate, visualize,...).
 
-The installation of a minimum base is essential to enter a questionnaire: Pogues (FO, BO and DB) and DDI-Access-Services.
+At least two services must be running in order to design a questionnaire: 
+- Pogues (FO, BO and DB) 
+- DDI-Access-Services.
 
-Finally, to access the visualization in the different survey tools, you must add Eno-WS (the DDI and PDF visualization will then be possible) and the orchestrators that interest you: (Queen, Stromae V1 or / and Stromae V2).
+Finally, to access the visualization in the different survey tools, you must add:
+- Eno-WS (the DDI and PDF visualization will then be possible) 
+- and the orchestrators of interest: 
+  - for the interviewer questionnaires, Queen
+  - for web questionnaires, Stromae V1 or / and Stromae V2.
 
-You can refer to the [Readme](./README.md) for more information.
+You can refer to the [Readme](./README.md) for more information about these different components.
 
 ![Bowie architecture scheme](./deploiement/bowie-archi-github.jpg)
 
@@ -34,21 +40,21 @@ The official docker images required to deploy an instance of Bowie are available
 - [Stromae-db](https://hub.docker.com/r/inseefr/stromae-db/tags)
 - [Queen](https://hub.docker.com/r/inseefr/queen)
 
-:warning: Warning : don't use the "lastest" tag (not always updated).
+:warning: Warning: don't use the "lastest" tag (not always updated).
 
-To know the content of a tag, please refer to the corresponding release note in the github repository and [bowie releases](https://github.com/InseeFr/Bowie/releases)
+To check the content of a tag, please refer to the corresponding release note in the github repository and [bowie releases](https://github.com/InseeFr/Bowie/releases)
 
 #### Add Helm repo
 
 [InseeFr repo](https://github.com/inseefr/Helm-charts) contains the helm-charts of the product.
 
-The following command allows you to download and install all the helm charts of this repository on Helm :
+The following command allows you to download and install all the helm charts of this repository on Helm:
 
 ```bash
 helm repo add inseefr https://inseefr.github.io/Helm-Charts
 ```
 
-If you have already added the repository, you can update it like this :
+If you have already added the repository, you can update it like this:
 
 ```bash
 # Helm >= 3.7.0
@@ -59,10 +65,10 @@ helm repo update
 
 ### Steps for deploying a new instance on a kubernetes cluster
 
-You will need to install all the required applications for Bowie. The majority of installations uses a unique helm chart Bowie.  
+You will need to install all the required applications for Bowie. Most softwares are installed through a unique helm chart Bowie.  
 Only the optional V1 web visualization have classic Kubernetes objects specs (deployment.yml, ingress.yml, ...).
 
-Do not forget in example files :
+Do not forget to update the example files:
 
 - change the properties of the databases (in particular the passwords set by default to "password")
 - change the host in the URLs
@@ -72,9 +78,9 @@ Before launching the commands, go to the folder containing the values or the Kub
 
 #### Bowie
 
-You can use the Helm [Chart to deploy Bowie](https://github.com/InseeFr/Helm-Charts/tree/main/charts/bowie) : Pogues UI, Pogues Back Office, initialize Postgre database, DDI-Access-Services, Eno, Queen UI and Stromae V2 UI.
+You can use the Helm [Chart to deploy Bowie](https://github.com/InseeFr/Helm-Charts/tree/main/charts/bowie): Pogues UI, Pogues Back Office, initialize Postgre database, DDI-Access-Services, Eno, Queen UI and Stromae V2 UI.
 
-You can find the database initialization script [here](./deploiement/Pogues/pogues-bdd-backup.sql). This script initializes the database with metadata (mocked metadata repository data) and a first test questionnaire : the Simpsons questionnaire.
+You can find the database initialization script [here](./deploiement/Pogues/pogues-bdd-backup.sql). This script initializes the database with metadata (mocked metadata repository data) and a first test questionnaire: the Simpsons questionnaire.
 
 You can find an example of values [here](./deploiement/values-bowie.yaml).
 
@@ -91,9 +97,10 @@ helm delete pod {pod_name}
 ```
 
 Indeeed, Pogues-API is a Spring boot application. The configuration is such that the API tests the connection to the database once and if it does not get a response, does not retry. However, the database takes longer to be ready for use than the API. So if the pod is not deleted, there is no retry and the application does not work.
+
 An application solution is being developed.
 
-In this example, you can now find :
+In this example, you can now find:
 
 - Bowie UI (and Pogues UI) at https://pogues-ui.example.com
 - Pogues-Back-Office's swagger at https://pogues-api.example.com/swagger-ui/dist/
