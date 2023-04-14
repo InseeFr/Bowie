@@ -42,7 +42,7 @@ To know the content of a tag, please refer to the corresponding release note in 
 
 This [repo InseeFr](https://github.com/inseefr/Helm-charts) contains the helm-charts of the product.
 
-The following command allows you to download and install all the helm charts of this repository on Helm :
+The following command allows you to download and install all the helm charts of this repository on Helm:
 
 ```bash
 helm repo add inseefr https://inseefr.github.io/Helm-Charts
@@ -126,7 +126,7 @@ In this example, you can now find Stromae eXist dashboard at https://stromae-db.
 You can find an example of Kubernetes objects specs [here](./deploiement/Stromae-V1/).
 
 Before launching the commands, go to the folder containing the values or the Kubernetes objects specs.
-The following command allows you to install Stromae-db :
+The following command allows you to install Stromae-db:
 
 ```bash
 kubectl apply -f .
