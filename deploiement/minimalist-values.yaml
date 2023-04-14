@@ -1,0 +1,121 @@
+pogues:
+  ui:
+    ingress:
+      hosts:
+        - host: pogues.domain.com
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
+      tls:
+        - hosts:
+            - pogues.domain.com
+    env:
+      API_URL: "https://pogues-api.domain.com/api"
+
+  api:
+    ingress:
+      hosts:
+        - host: pogues-api.domain.com
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
+      tls:
+        - hosts:
+            - pogues-api.domain.com
+
+    environment:
+      api:
+        host: pogues-api.domain.com
+        name: ""
+        scheme: https
+      remote:
+        metadata:
+          url: https://ddi-access-services.domain.com/api
+        stromae:
+          host: "https://stromae-db.domain.com"
+          vis:
+            path: "exist/apps/orbeon/visualize"
+          orbeon:
+            host: "https://stromae.domain.com"
+        queen:
+          host: https://queen-ui.domain.com
+          vis:
+            path: queen/visualize?questionnaire=
+        stromaev2:
+          vis:
+            url: https://stromae-v2-ui.domain.com/visualize?questionnaire=
+        eno:
+          host: eno-ws.domain.com
+          scheme: https
+
+eno-ws:
+  enoxml:
+    ingress:
+      hosts:
+        - host: eno-ws.domain.com
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
+      tls:
+        - hosts:
+            - eno-ws.domain.com
+  enojava:
+    enabled: false
+
+ddi-access-services:
+  ingress:
+    hosts:
+      - host: ddi-access-services.domain.com
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+    tls:
+      - hosts:
+          - ddi-access-services.domain.com
+
+  properties: |-
+    # SSL
+    fr.insee.rmes.force.ssl=false
+    # Log4J configuration File
+    fr.insee.rmespogbo.log.configuration=log4j2.xml
+    # Swagger host
+    fr.insee.rmes.api.host = ddi-access-services.domain.com
+    fr.insee.rmes.api.name= /api
+    fr.insee.rmes.api.scheme= https
+    # Metadata service
+
+    fr.insee.rmes.search.DDIItemRepository.impl = DDIItemRepositoryDBImpl
+    fr.insee.rmes.search.db.host = pogues-db-example
+    fr.insee.rmes.search.db.port = 5432
+    fr.insee.rmes.search.db.schema = Pogues
+    fr.insee.rmes.search.db.user = Pogues
+    fr.insee.rmes.search.db.password = Pogues
+    fr.insee.rmes.search.db.driver = org.postgresql.Driver
+    fr.insee.rmes.search.db.table = ddi_item
+
+queen:
+  ui:
+    ingress:
+      hosts:
+        - host: queen-ui.domain.com
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
+      tls:
+        - hosts:
+            - queen-ui.domain.com
+    env:
+      QUEEN_URL: https://queen-ui.domain.com
+      authenticationType: NONE
+
+stromae-v2:
+  ui:
+    ingress:
+      hosts:
+        - host: stromae-v2-ui.domain.com
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
+      tls:
+        - hosts:
+            - stromae-v2-ui.domain.com
