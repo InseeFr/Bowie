@@ -43,6 +43,8 @@ pogues:
           driver: org.postgresql.Driver
           table: pogues
       authentification: NONE
+      stamp:
+        restricted: NONE
       role:
         admin: Administrateur_Pogues
         user: Utilisateurs_Pogues
