@@ -54,4 +54,4 @@ Lien vers la documentation pour l'installation du produit Conception d'enquêtes
 
 # Progress 🔮
 
-Currently, progress is being tracked through [the roadmap kanban](https://github.com/orgs/InseeFr/projects/4/views/3).
+Currently, progress is being tracked through [the roadmap kanban](https://github.com/orgs/InseeFr/projects/4/views/10)
