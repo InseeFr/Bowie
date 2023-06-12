@@ -1,0 +1,32 @@
+site_name: Bowie
+theme:
+  name: material
+  language: fr
+  icon:
+    logo: material/lightning-bolt-circle
+  palette:
+    scheme: default
+    primary: blue grey
+    accent: deep orange
+  features:
+    - navigation.footer
+    - navigation.indexes
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/InseeFr/Bowie/
+markdown_extensions:
+  - admonition
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+plugins:
+  - glightbox

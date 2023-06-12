@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "bowie-docs-mkdocs"
+version = "0.1.0"
+description = ""
+authors = ["romaintailhurat <romain.tailhurat@gmail.com>"]
+readme = "README.md"
+packages = [{include = "bowiedocs"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+mkdocs-material = "^9.1.3"
+mkdocs-glightbox = "^0.3.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
