@@ -1,4 +1,4 @@
-# Get Started : Install Bowie (Survey Design product)
+# Get Started: Install Bowie (Survey Design product)
 
 ## On a kubernetes cluster
 
@@ -6,31 +6,25 @@
 
 #### Prerequisites
 
-- **Kubernetes** : see getting started [here](https://kubernetes.io/docs/setup/)
-- **Helm** : to install Helm, refer to the [Helm install guide](https://github.com/helm/helm#install)
-- **kubectl** : to install kubectl, refer to the [kubernetes kubectl install guide](https://kubernetes.io/docs/tasks/tools/)
+- **Kubernetes**: see getting started [here](https://kubernetes.io/docs/setup/)
+- **Helm**: to install Helm, refer to the [Helm install guide](https://github.com/helm/helm#install)
+- **kubectl**: to install kubectl, refer to the [kubernetes kubectl install guide](https://kubernetes.io/docs/tasks/tools/)
 
-#### Architecture
+#### Architecture scheme
 
-The architecture of the Survey Designer is modular with several services for several capabilities (design, persist, generate, visualize,...).
+The architecture of the Survey Designer is modular to make a multifunctional service (design, persist, generate, visualize,...).
 
-At least two services must be running in order to design a questionnaire: 
-- Pogues (FO, BO and DB) 
-- DDI-Access-Services.
+The installation of a minimum base is essential to enter a questionnaire: Pogues (FO, BO and DB) and DDI-Access-Services.
 
-Finally, to access the visualization in the different survey tools, you must add:
-- Eno-WS (the DDI and PDF visualization will then be possible) 
-- and the orchestrators of interest: 
-  - for the interviewer questionnaires, Queen
-  - for web questionnaires, Stromae V1 or / and Stromae V2.
+Finally, to access the visualization in the different survey tools, you must add Eno-WS (the DDI and PDF visualization will then be possible) and the orchestrators that interest you: (Queen, Stromae V1 or / and Stromae V2).
 
-You can refer to the [Readme](./README.md) for more information about these different components.
+You can refer to the [Readme](./README.md) for more information.
 
 ![Bowie architecture scheme](./deploiement/bowie-archi-github.jpg)
 
 #### Docker Images
 
-The official docker images required to deploy an instance of Bowie are available on the [inseefr docker repositories](https://hub.docker.com/u/inseefr) :
+The official docker images required to deploy an instance of Bowie are available on the [inseefr docker repositories](https://hub.docker.com/u/inseefr):
 
 - [Pogues](https://hub.docker.com/r/inseefr/pogues/tags)
 - [Pogues-Back-Office](https://hub.docker.com/r/inseefr/pogues-back-office)
@@ -42,11 +36,11 @@ The official docker images required to deploy an instance of Bowie are available
 
 :warning: Warning: don't use the "lastest" tag (not always updated).
 
-To check the content of a tag, please refer to the corresponding release note in the github repository and [bowie releases](https://github.com/InseeFr/Bowie/releases)
+To know the content of a tag, please refer to the corresponding release note in the github repository and [bowie releases](https://github.com/InseeFr/Bowie/releases)
 
-#### Add Helm repo
+#### Add repo Helm
 
-[InseeFr repo](https://github.com/inseefr/Helm-charts) contains the helm-charts of the product.
+This [repo InseeFr](https://github.com/inseefr/Helm-charts) contains the helm-charts of the product.
 
 The following command allows you to download and install all the helm charts of this repository on Helm:
 
@@ -57,18 +51,15 @@ helm repo add inseefr https://inseefr.github.io/Helm-Charts
 If you have already added the repository, you can update it like this:
 
 ```bash
-# Helm >= 3.7.0
 helm repo update inseefr
-# Helm < 3.7.0
-helm repo update
 ```
 
 ### Steps for deploying a new instance on a kubernetes cluster
 
-You will need to install all the required applications for Bowie. Most softwares are installed through a unique helm chart Bowie.  
+You will need to install all the required applications for Bowie. The majority of installations uses a unique helm chart Bowie.  
 Only the optional V1 web visualization have classic Kubernetes objects specs (deployment.yml, ingress.yml, ...).
 
-Do not forget to update the example files:
+Do not forget in example files:
 
 - change the properties of the databases (in particular the passwords set by default to "password")
 - change the host in the URLs
@@ -82,22 +73,24 @@ You can use the Helm [Chart to deploy Bowie](https://github.com/InseeFr/Helm-Cha
 
 You can find the database initialization script [here](./deploiement/Pogues/pogues-bdd-backup.sql). This script initializes the database with metadata (mocked metadata repository data) and a first test questionnaire: the Simpsons questionnaire.
 
-You can find an example of values [here](./deploiement/values-bowie.yaml).
+You can find two examples of values:
 
-The following command allows you to install Bowie :
+- [values](./deploiement/values-bowie.yaml)
+- [minimalist functional values](./deploiement/minimalist-values.yaml)
+
+The following command allows you to install Bowie:
 
 ```bash
 helm install bowie inseefr/bowie -f bowie-values.yaml
 ```
 
-:warning: : When the pods are running, you need to delete the pod from the Pogues API (pogues-back-office) with the command:
+:warning:: When the pods are running, you need to delete the pod from the Pogues API (pogues-back-office) with the command:
 
 ```bash
 helm delete pod {pod_name}
 ```
 
 Indeeed, Pogues-API is a Spring boot application. The configuration is such that the API tests the connection to the database once and if it does not get a response, does not retry. However, the database takes longer to be ready for use than the API. So if the pod is not deleted, there is no retry and the application does not work.
-
 An application solution is being developed.
 
 In this example, you can now find:
@@ -120,7 +113,7 @@ There is currently no helm-chart associated with the deployment of Stromae-V1. Y
 You can find an example of Kubernetes objects specs [here](./deploiement/Stromae-db/).
 
 Before launching the commands, go to the folder containing the values or the Kubernetes objects specs.
-The following command allows you to install Stromae :
+The following command allows you to install Stromae:
 
 ```bash
 kubectl apply -f .
@@ -133,7 +126,7 @@ In this example, you can now find Stromae eXist dashboard at https://stromae-db.
 You can find an example of Kubernetes objects specs [here](./deploiement/Stromae-V1/).
 
 Before launching the commands, go to the folder containing the values or the Kubernetes objects specs.
-The following command allows you to install Stromae-db :
+The following command allows you to install Stromae-db:
 
 ```bash
 kubectl apply -f .
