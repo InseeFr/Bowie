@@ -84,7 +84,7 @@ On pourra mobiliser dans un libellé personnalisé des variables collectées, ca
 Pour créer un lien hypertexte, on s'appuie sur la syntaxe Markdown :
 
 ```vtl
-"Voici un [lien](http://monlien.fr).
+"Voici un [lien](http://monlien.fr)."
 ```
 
 ### Infobulles
