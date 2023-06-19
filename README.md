@@ -27,7 +27,7 @@ A minima sont nécessaires :
 - l'installation des dépendances à MkDocs
   - pour ce dernier point, on utilise ici Poetry
 
-Une fois poetry installé, il suffit de lancer la commande `poetry init` à la racine du projet.
+Une fois poetry installé, il suffit de lancer la commande `poetry install` à la racine du projet.
 
 #### Sur le datalab
 

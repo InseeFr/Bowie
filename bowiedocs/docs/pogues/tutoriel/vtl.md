@@ -79,11 +79,19 @@ Plus d’infos sur l’usage de `nvl` plus bas.
 
 On pourra mobiliser dans un libellé personnalisé des variables collectées, calculées ou externes.
 
+### Création d'un lien
+
+Pour créer un lien hypertexte, on s'appuie sur la syntaxe Markdown :
+
+```vtl
+"Voici un [lien](http://monlien.fr).
+```
+
 ### Infobulles
 
 La syntaxe pour la création d’un infobulle est la suivante :
 
-```
+```vtl
 Mon libellé de question avec [une infobulle](. "dont voici le contenu").
 ```
 
