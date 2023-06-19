@@ -31,9 +31,7 @@ Une fois poetry installé, il suffit de lancer la commande `poetry init` à la r
 
 #### Sur le datalab
 
-Lancer un environnement pré-configuré sur le datalab:
-
-<https://datalab.sspcloud.fr/launcher/ide/vscode-python?autoLaunch=false&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2Fromaintailhurat%2FBowie%2Fpages%2Finit.sh%C2%BB>
+Lancer un environnement pré-configuré sur le datalab [en cliquant sur ce lien](https://datalab.sspcloud.fr/launcher/ide/vscode-python?autoLaunch=false&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2Fromaintailhurat%2FBowie%2Fpages%2Finit.sh%C2%BB).
 
 Une fois dans VSCode:
 
