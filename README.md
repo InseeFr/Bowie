@@ -1,20 +1,6 @@
-# Documentation de Bowie, atelier de conception
+# Documentation de Bowie
 
-TODO :
-
-- [ ] Méthodo
-    Eléments d'Anne Z:\Méthodologie\standard_Eno_concepteurs_màj2021.md
-    → premier doc "conception/guide-conception"
-    → encore de réécriture par Anne
-- [ ] Non réponse
-    https://intranet.insee.fr/jcms/17424176_SocialQuestion/infos-sur-la-non-reponse
-
-
-Autres docs :
-
-https://intranet.insee.fr/jcms/16002409_DBWikiPage/eno-utilisation-du-generateur-filiere-unique-hors-coltrane-et-parametres
-
-https://intranet.insee.fr/jcms/5569037_DBWikiPage/documentation-des-outils-/-guides-utilisateurs-/-circuits
+Cette branche contient la documentation de Bowie, l'atelier de conception d'enquêtes.
 
 ## Contribuer
 
@@ -22,17 +8,32 @@ Le site utilise [Material for MkDocs](https://squidfunk.github.io/mkdocs-materia
 
 Les pages sont de simples documents Markdown, la navigation est générée à partir de l'arborescence des dossiers et fichiers sous `/bowiedocs`.
 
+L'édition du site passe donc par deux étapes :
+
+- la modification des pages voire de la structure arborescente,
+- la génération du site à partir de ces fichiers.
+
+Les modifications commitées sont automatiquement publiées.
+
 ### Mise en place des outils
+
+Il est nécessaire de mettre en place certains outils pour visualiser le site avant la génération, et pour la génération elle-même.
 
 #### Sur son poste
 
-<TODO>
+A minima sont nécessaires :
+
+- une version récente de Python (par exemple 3.10)
+- l'installation des dépendances à MkDocs
+  - pour ce dernier point, on utilise ici Poetry
+
+Une fois poetry installé, il suffit de lancer la commande `poetry init` à la racine du projet.
 
 #### Sur le datalab
 
 Lancer un environnement pré-configuré sur le datalab:
 
-https://datalab.sspcloud.fr/launcher/ide/vscode-python?autoLaunch=false&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2Fromaintailhurat%2FBowie%2Fpages%2Finit.sh%C2%BB
+<https://datalab.sspcloud.fr/launcher/ide/vscode-python?autoLaunch=false&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2Fromaintailhurat%2FBowie%2Fpages%2Finit.sh%C2%BB>
 
 Une fois dans VSCode:
 
