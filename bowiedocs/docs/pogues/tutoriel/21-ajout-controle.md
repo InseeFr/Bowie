@@ -28,9 +28,9 @@ On veut déclencher le contrôle en cas de non-réponse, on va tester dans notre
 
 L'expression VTL sera donc :
 
-```vtl
-$PRENOM$ = "" or isnull($PRENOM$)
-```
+    ```vtl
+    $PRENOM$ = "" or isnull($PRENOM$)
+    ```
 
 !!!note
 

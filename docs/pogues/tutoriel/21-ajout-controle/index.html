@@ -399,6 +399,11 @@
         Insertion d'une infobulle
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../23-utilisation-variable-calculee/">
+        Utilisation d'une variable calculée
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -487,8 +492,10 @@
 <li>si l'on est entré dans le champ mais qu'on n'a rien saisi (la variable est égale à une chaîne de caractères vide, ou <code>""</code>).</li>
 </ul>
 <p>L'expression VTL sera donc :</p>
-<div class="highlight"><pre><span></span><code>$PRENOM$ = "" or isnull($PRENOM$)
-</code></pre></div>
+<pre><code>```vtl
+$PRENOM$ = "" or isnull($PRENOM$)
+```
+</code></pre>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>On notera l'utilisation de la fonction <code>isnull</code> qui permet de détecter si une variable n'a pas été valorisée (cf. guide VTL).</p>

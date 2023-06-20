@@ -1,4 +1,4 @@
-#  Création d'un tableau
+# Création d'un tableau
 
 La prochaine question se présente sous la forme d'un tableau dans lequel nous allons capter la ventilation des activités de la personne que l'on interroge.
 

@@ -19,9 +19,9 @@ Le cas d'usage dans le cadre de ce tutoriel est l'affichage des modules (ou séq
 
 Notre condition d'affichage est donc :
 
-```vtl
-$OKREP$ = "1"
-```
+    ```vtl
+    $OKREP$ = "1"
+    ```
 
 !!!tip
 
