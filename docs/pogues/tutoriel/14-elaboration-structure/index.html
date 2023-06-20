@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../6-creation-tableau/" rel="prev"/>
-<link href="../8-finalisation-structure/" rel="next"/>
+<link href="../13-creation-liste-qcu/" rel="prev"/>
+<link href="../15-creation-tableau/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>Création d'une question à choix multiples - Bowie</title>
+<title>Élaboration de la structure du questionnaire - Bowie</title>
 <link href="../../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -33,7 +33,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#creation-dune-question-a-choix-multiples">
+<a class="md-skip" href="#elaboration-de-la-structure-du-questionnaire">
           Aller au contenu
         </a>
 </div>
@@ -57,7 +57,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Création d'une question à choix multiples
+              Élaboration de la structure du questionnaire
             
           </span>
 </div>
@@ -344,49 +344,54 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../1-creation-questionnaire/">
+<a class="md-nav__link" href="../10-creation-questionnaire/">
         Création d'un questionnaire
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../2-creation-premiere-sequence/">
+<a class="md-nav__link" href="../11-creation-premiere-sequence/">
         Création d'une première séquence
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../3-visualisation-questionnaire/">
+<a class="md-nav__link" href="../12-visualisation-questionnaire/">
         Visualisation du questionnaire
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../4-creation-liste-qcu/">
+<a class="md-nav__link" href="../13-creation-liste-qcu/">
         Création d'une réponse basée sur une liste
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../5-elaboration-structure/">
-        Élaboration de la structure du questionnaire
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../6-creation-tableau/">
-        Création d'un tableau
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <a class="md-nav__link md-nav__link--active" href="./">
+        Élaboration de la structure du questionnaire
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../15-creation-tableau/">
+        Création d'un tableau
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../16-creation-qcm/">
         Création d'une question à choix multiples
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../8-finalisation-structure/">
+<a class="md-nav__link" href="../17-finalisation-structure/">
         Finalisation de la structure du questionnaire
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../9-mise-en-place-filtre/">
+<a class="md-nav__link" href="../20-mise-en-place-filtre/">
         Mise en place d'un filtre
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../21-ajout-controle/">
+        Ajout d'un contrôle
       </a>
 </li>
 </ul>
@@ -454,25 +459,27 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="creation-dune-question-a-choix-multiples">Création d'une question à choix multiples</h1>
-<p>La prochaine question sera à choix multiples. Pour cela :</p>
+<h1 id="elaboration-de-la-structure-du-questionnaire">Élaboration de la structure du questionnaire</h1>
+<p>Nous poursuivons la construction du questionnaire avec une nouvelle séquence <a href="../2-creation-premiere-sequence/#creation-de-la-sequence">comme précédemment</a> dont :</p>
 <ul>
-<li>on crée une question avec le libellé "Avez-vous déjà exercé les activités suivantes au sein de votre carrière ?" et l'identifiant "CARRIERE"</li>
-<li>le <em>Type de question</em> est "Réponse à choix multiple"</li>
-<li>dont la réponse est basée sur une liste de code <a href="../../../data/metiers.csv">"metiers.csv"</a></li>
-<li>pour la <em>Représentation des réponse</em> on garde le choix par défaut "Booléen".</li>
+<li>le libellé est "En savoir plus sur vous",</li>
+<li>l'identifiant est "MODULE2".</li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>La génération des variables ici va générer autant de variables <em>booléennes</em> (vrai / faux) que d'éléments de la liste de codes.</p>
-</div>
+<p>Nous créons ensuite une première question dans cette séquence :</p>
+<ul>
+<li>avec le libellé "Quel est votre prénom ?"</li>
+<li>et l'identifiant "PRENOM"</li>
+<li>et un type de réponse simple textuelle comme ci-dessous <img alt="👇" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f447.svg" title=":point_down:"/>.</li>
+</ul>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../../img/pogues/question-simple-texte.png"><img alt="Question simple textuelle" src="../../../img/pogues/question-simple-texte.png"/></a></p>
+<p>Pour la question suivante, nous allons créer un tableau.</p>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
 <nav aria-label="Pied de page" class="md-footer__inner md-grid">
-<a aria-label="Précédent: Création d'un tableau" class="md-footer__link md-footer__link--prev" href="../6-creation-tableau/" rel="prev">
+<a aria-label="Précédent: Création d'une réponse basée sur une liste" class="md-footer__link md-footer__link--prev" href="../13-creation-liste-qcu/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -481,17 +488,17 @@
 <span class="md-footer__direction">
                   Précédent
                 </span>
-                Création d'un tableau
+                Création d'une réponse basée sur une liste
               </div>
 </div>
 </a>
-<a aria-label="Suivant: Finalisation de la structure du questionnaire" class="md-footer__link md-footer__link--next" href="../8-finalisation-structure/" rel="next">
+<a aria-label="Suivant: Création d'un tableau" class="md-footer__link md-footer__link--next" href="../15-creation-tableau/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   Suivant
                 </span>
-                Finalisation de la structure du questionnaire
+                Création d'un tableau
               </div>
 </div>
 <div class="md-footer__button md-icon">
