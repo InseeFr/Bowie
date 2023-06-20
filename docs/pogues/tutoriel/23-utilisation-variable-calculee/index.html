@@ -6,7 +6,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../22-ajout-infobulle/" rel="prev"/>
-<link href="../../../public-enemy/" rel="next"/>
+<link href="../24-personnalisation-libelle/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
 <title>Utilisation d'une variable calculée - Bowie</title>
@@ -326,6 +326,26 @@
         Guide VTL Pogues
       </a>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8_2_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8_2_5" id="__nav_8_2_5_label" tabindex="0">
+          Variables
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_2_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_8_2_5">
+<span class="md-nav__icon md-icon"></span>
+          Variables
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../guide/variables/variables-externes/">
+        Les variables externes
+      </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -425,6 +445,16 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../24-personnalisation-libelle/">
+        Personnalisation d'un libellé
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../25-mise-en-place-boucle/">
+        25 mise en place boucle
+      </a>
 </li>
 </ul>
 </nav>
@@ -544,7 +574,7 @@ nvl($ACTIVITES51$, 0)
 <h2 id="utilisation-de-la-variable">Utilisation de la variable</h2>
 <p>On peut maintenant ajouter un contrôle sur la question <code>ACTIVITES</code> pour s'assurer que la ventilation est égale à 100%. Vous pouvez pour cela vous appuyer sur ce que l'on a vu <a href="../21-ajout-controle/">précédemment</a> et sur le <a href="../../guide/vtl/">guide VTL</a>... Pour les plus pressés d'entre vous, vous pouvez regarder la solution ci-dessous. <img alt="😃" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f603.svg" title=":smiley:"/></p>
 <details class="example">
-<summary>Example</summary>
+<summary>Solution</summary>
 <p>La formule pour le contrôle pourra être <code>$SOMME$ &lt;&gt; 100</code>, l'opérateur <code>&lt;&gt;</code> signifiant "différent de".</p>
 <p>Par ailleurs, le message du contrôle pourra inclure la somme des ventilations déjà fournies :</p>
 <div class="highlight"><pre><span></span><code>"Votre total doit être égal à 100% (" || 
@@ -571,13 +601,13 @@ cast($SOMME$, string) ||
               </div>
 </div>
 </a>
-<a aria-label="Suivant: Public Enemy" class="md-footer__link md-footer__link--next" href="../../../public-enemy/" rel="next">
+<a aria-label="Suivant: Personnalisation d'un libellé" class="md-footer__link md-footer__link--next" href="../24-personnalisation-libelle/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   Suivant
                 </span>
-                Public Enemy
+                Personnalisation d'un libellé
               </div>
 </div>
 <div class="md-footer__button md-icon">

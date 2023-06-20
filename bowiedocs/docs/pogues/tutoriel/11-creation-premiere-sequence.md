@@ -69,6 +69,6 @@ On peut enfin valider la question en cliquant sur le plus gros bouton "Valider" 
 
 ## Sauvegarde du questionnaire
 
-Nous disposons maintenant d'un questionnaire simple, contenant une séquence et une question, il est temps de :material-content-save: __sauvegarder__ ! 
+Nous disposons maintenant d'un questionnaire simple, contenant une séquence et une question, il est temps de :material-content-save: __sauvegarder__ !
 
 Un simple clic sur le bouton "Sauvegarder" de la barre d'action fait l'affaire.

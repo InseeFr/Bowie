@@ -43,7 +43,7 @@ Notre variable aura comme identifiant `SOMME`, et aura comme valeur l'addition d
 
 On peut maintenant ajouter un contrôle sur la question `ACTIVITES` pour s'assurer que la ventilation est égale à 100%. Vous pouvez pour cela vous appuyer sur ce que l'on a vu [précédemment](21-ajout-controle.md) et sur le [guide VTL](../guide/vtl.md)... Pour les plus pressés d'entre vous, vous pouvez regarder la solution ci-dessous. :smiley:
 
-??? example
+??? example "Solution"
 
     La formule pour le contrôle pourra être `$SOMME$ <> 100`, l'opérateur `<>` signifiant "différent de".
 
