@@ -1,0 +1,3 @@
+# Les variables externes
+
+> WIP
