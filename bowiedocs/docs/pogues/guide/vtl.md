@@ -199,6 +199,22 @@ C’est l’état d’avancement de cette dernière qui permet de connaître les
 | ------------ | ------- | ---------------------------------- |
 | Remplacement | replace | `replace("bag", "g", "c") # → bac` |
 
+### Appartenance
+
+Les opérateurs `in` et `not_in` permettent de tester l'appartenance d'une valeur à un ensemble. Par exemple :
+
+```python
+"a" in {"a", "b", "c"} # → true
+```
+
+Il permet aussi de faire ce test en utilisant des variables :
+
+```python
+$PRENOM$ not_in $PRENOMS_FAMILLE$
+# ou
+$PRENOM$ not_in {"Alice", "Bob", "Charlie"}
+```
+
 ## Cookbook
 
 ### Dates
