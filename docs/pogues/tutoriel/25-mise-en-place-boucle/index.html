@@ -430,9 +430,26 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Mise en place d'une boucle
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         Mise en place d'une boucle
       </a>
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creation-de-la-boucle">
+    Création de la boucle
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -493,6 +510,17 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creation-de-la-boucle">
+    Création de la boucle
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -500,9 +528,37 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="mise-en-place-dune-boucle">Mise en place d'une boucle</h1>
-<blockquote>
-<p>WIP</p>
-</blockquote>
+<p>Une boucle permet de répéter une partie du questionnaire (au niveau séquence ou sous-séquence), à partir de valeurs prédéterminées ou de variables du questionnaire.</p>
+<p>Dans notre cas d'usage, on souhaite répéter la sous-séquence "Parlez-nous de votre collègue autant de fois que le nombre de collègue qui a été donné à la questions précédente "Combien de personnes partagent votre bureau ?".</p>
+<p>On va donc mobiliser la variable <code>COMBIEN_PARTAGE</code> dans une boucle.</p>
+<p>Pour créer la boucle, on clique sur le bouton "+ Boucle" dans la barre d'actions.</p>
+<p>La fenêtre qui s'ouvre propose plusieurs champs que l'on va mobiliser de deux manières différentes :</p>
+<ol>
+<li>pour une boucle utilisant des valeurs fixes ou des variables du questionnaire</li>
+<li>pour une boucle s'appuyant sur une structure répétée comme une autre boucle ou un tableau dynamique.</li>
+</ol>
+<p>Dans ce tutoriel, on va mettre en place le premier cas uniquement.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Pour le deuxième type d'utilisation, la section du guide est en cours de création <img alt="😓" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f613.svg" title=":sweat:"/></p>
+</div>
+<h2 id="creation-de-la-boucle">Création de la boucle</h2>
+<p>Nous allons remplir les champs suivants :</p>
+<ul>
+<li><em>Identifiant</em> avec comme toujours un identifiant de la forme <code>MON_IDENTIFIANT</code></li>
+<li><em>Minimum</em> le nombre minimum d'itérations, qui peut être une valeur fixe (par exemple <code>2</code>, ou une variable)</li>
+<li><em>Maximum</em> le nombre maximum d'itération, là aussi une valeur fixe ou une variable</li>
+<li><em>Début</em> la séquence ou la sous-séquence à partir de laquelle commence la répétition</li>
+<li><em>Fin</em> la séquence ou la sous-séquence sur laquelle termine la boucle ; comme pour les filtres, cet élément de fin est inclus dans la boucle.</li>
+</ul>
+<p>Dans notre cas, on spécifiera ces valeurs :</p>
+<ul>
+<li><em>Identifiant</em> <code>BOUCLE</code> (oui, on fait simple <img alt="😄" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f604.svg" title=":smile:"/>)</li>
+<li><em>Minimum</em> le chiffre <code>1</code></li>
+<li><em>Maximum</em> l'expression VTL <code>nvl($COMBIEN_PARTAGE$, 1)</code>, ce qui permet d'avoir <code>1</code> si la question précédente n'a pas été répondue ou la valeur de la réponse si on l'a obtenue</li>
+<li><em>Début</em> la sous-séquence <code>COLLEGUE</code></li>
+<li><em>Fin</em> la sous-séquence <code>COLLEGUE</code></li>
+</ul>
 </article>
 </div>
 </div>
