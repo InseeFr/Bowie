@@ -5,18 +5,18 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../14-elaboration-structure/" rel="prev"/>
-<link href="../16-creation-qcm/" rel="next"/>
-<link href="../../../assets/images/favicon.png" rel="icon"/>
+<link href="../../vtl/" rel="prev"/>
+<link href="../variables-externes/" rel="next"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>Création d'un tableau - Bowie</title>
-<link href="../../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<title>Nommage des variables - Bowie</title>
+<link href="../../../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -27,13 +27,13 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="deep-orange" data-md-color-primary="blue-grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#creation-dun-tableau">
+<a class="md-skip" href="#nommage-des-variables">
           Aller au contenu
         </a>
 </div>
@@ -41,7 +41,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="En-tête" class="md-header__inner md-grid">
-<a aria-label="Bowie" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Bowie">
+<a aria-label="Bowie" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Bowie">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.5 20 4.86-9.73H13V4l-5 9.73h3.5V20M12 2c2.75 0 5.1 1 7.05 2.95C21 6.9 22 9.25 22 12s-1 5.1-2.95 7.05C17.1 21 14.75 22 12 22s-5.1-1-7.05-2.95C3 17.1 2 14.75 2 12s1-5.1 2.95-7.05C6.9 3 9.25 2 12 2Z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -57,7 +57,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Création d'un tableau
+              Nommage des variables
             
           </span>
 </div>
@@ -73,21 +73,21 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Bowie" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Bowie">
+<a aria-label="Bowie" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Bowie">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.5 20 4.86-9.73H13V4l-5 9.73h3.5V20M12 2c2.75 0 5.1 1 7.05 2.95C21 6.9 22 9.25 22 12s-1 5.1-2.95 7.05C17.1 21 14.75 22 12 22s-5.1-1-7.05-2.95C3 17.1 2 14.75 2 12s1-5.1 2.95-7.05C6.9 3 9.25 2 12 2Z"></path></svg>
 </a>
     Bowie
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../../../..">
         Un atelier de conception d'enquêtes
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../architecture/">Architecture</a>
+<a href="../../../../architecture/">Architecture</a>
 </div>
 <nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
@@ -101,7 +101,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../conception/">Conception</a>
+<a href="../../../../conception/">Conception</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -113,22 +113,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../conception/1-conception/">
+<a class="md-nav__link" href="../../../../conception/1-conception/">
         Les types de questions et formats de réponses
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../conception/2-conception/">
+<a class="md-nav__link" href="../../../../conception/2-conception/">
         Les boucles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../conception/3-conception/">
+<a class="md-nav__link" href="../../../../conception/3-conception/">
         Les déclarations
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../conception/4-conception/">
+<a class="md-nav__link" href="../../../../conception/4-conception/">
         Les éléments dynamiques : contrôles, filtres et personnalisation
       </a>
 </li>
@@ -138,7 +138,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../eno/">Eno</a>
+<a href="../../../../eno/">Eno</a>
 </div>
 <nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
@@ -152,7 +152,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../lunatic/">Lunatic</a>
+<a href="../../../../lunatic/">Lunatic</a>
 </div>
 <nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
@@ -166,7 +166,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../metadata/">Metadata</a>
+<a href="../../../../metadata/">Metadata</a>
 </div>
 <nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_6">
@@ -180,7 +180,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../orchestrateurs/">Orchestrateurs</a>
+<a href="../../../../orchestrateurs/">Orchestrateurs</a>
 <label for="__nav_7">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -194,7 +194,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_7_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../orchestrateurs/enqueteur/">Enqueteur</a>
+<a href="../../../../orchestrateurs/enqueteur/">Enqueteur</a>
 <label for="__nav_7_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -206,22 +206,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/enqueteur/1-queen/">
+<a class="md-nav__link" href="../../../../orchestrateurs/enqueteur/1-queen/">
         Typographie
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/enqueteur/2-queen/">
+<a class="md-nav__link" href="../../../../orchestrateurs/enqueteur/2-queen/">
         Zoning des questionnaires
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/enqueteur/3-Queen/">
+<a class="md-nav__link" href="../../../../orchestrateurs/enqueteur/3-Queen/">
         Navigation
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/enqueteur/4-Queen/">
+<a class="md-nav__link" href="../../../../orchestrateurs/enqueteur/4-Queen/">
         Raccourcis clavier
       </a>
 </li>
@@ -231,7 +231,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_7_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../orchestrateurs/web/">Web</a>
+<a href="../../../../orchestrateurs/web/">Web</a>
 <label for="__nav_7_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -243,37 +243,37 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/web/0-stromae/">
+<a class="md-nav__link" href="../../../../orchestrateurs/web/0-stromae/">
         "Stromae" : à quoi ressemble un questionnaire web généré par la filière ?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/web/1-stromae/">
+<a class="md-nav__link" href="../../../../orchestrateurs/web/1-stromae/">
         Découpage du questionnaire et navigation
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/web/2-stromae/">
+<a class="md-nav__link" href="../../../../orchestrateurs/web/2-stromae/">
         Page de début et page de fin
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/web/3-stromae/">
+<a class="md-nav__link" href="../../../../orchestrateurs/web/3-stromae/">
         La barre d'avancement
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/web/4-stromae/">
+<a class="md-nav__link" href="../../../../orchestrateurs/web/4-stromae/">
         La mise en forme des questions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/web/5-stromae/">
+<a class="md-nav__link" href="../../../../orchestrateurs/web/5-stromae/">
         La numérotation
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/web/6-stromae/">
+<a class="md-nav__link" href="../../../../orchestrateurs/web/6-stromae/">
         La disposition des éléments du questionnaire
       </a>
 </li>
@@ -286,7 +286,7 @@
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../">Pogues</a>
+<a href="../../../">Pogues</a>
 <label for="__nav_8">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -297,54 +297,55 @@
           Pogues
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_8_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_8_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../guide/">Guide</a>
+<a href="../../">Guide</a>
 <label for="__nav_8_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_8_2_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_8_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_8_2">
 <span class="md-nav__icon md-icon"></span>
           Guide
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/composition/">
+<a class="md-nav__link" href="../../composition/">
         Composition
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/liste-de-code/">
+<a class="md-nav__link" href="../../liste-de-code/">
         Liste de code
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/vtl/">
+<a class="md-nav__link" href="../../vtl/">
         Guide VTL Pogues
       </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_8_2_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_8_2_5" type="checkbox"/>
 <label class="md-nav__link" for="__nav_8_2_5" id="__nav_8_2_5_label" tabindex="0">
           Variables
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_8_2_5_label" class="md-nav" data-md-level="3">
+<nav aria-expanded="true" aria-labelledby="__nav_8_2_5_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_8_2_5">
 <span class="md-nav__icon md-icon"></span>
           Variables
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/variables/nommage/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
         Nommage des variables
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/variables/variables-externes/">
+<a class="md-nav__link" href="../variables-externes/">
         Les variables externes
       </a>
 </li>
@@ -354,110 +355,87 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_8_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">Tutoriel</a>
+<a href="../../../tutoriel/">Tutoriel</a>
 <label for="__nav_8_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_8_3_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_8_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_8_3">
 <span class="md-nav__icon md-icon"></span>
           Tutoriel
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../10-creation-questionnaire/">
+<a class="md-nav__link" href="../../../tutoriel/10-creation-questionnaire/">
         Création d'un questionnaire
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../11-creation-premiere-sequence/">
+<a class="md-nav__link" href="../../../tutoriel/11-creation-premiere-sequence/">
         Création d'une première séquence
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../12-visualisation-questionnaire/">
+<a class="md-nav__link" href="../../../tutoriel/12-visualisation-questionnaire/">
         Visualisation du questionnaire
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../13-creation-liste-qcu/">
+<a class="md-nav__link" href="../../../tutoriel/13-creation-liste-qcu/">
         Création d'une réponse basée sur une liste
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../14-elaboration-structure/">
+<a class="md-nav__link" href="../../../tutoriel/14-elaboration-structure/">
         Élaboration de la structure du questionnaire
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Création d'un tableau
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tutoriel/15-creation-tableau/">
         Création d'un tableau
       </a>
-<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#definition-des-lignes">
-    Définition des lignes
-  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#definition-des-colonnes">
-    Définition des colonnes
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../16-creation-qcm/">
+<a class="md-nav__link" href="../../../tutoriel/16-creation-qcm/">
         Création d'une question à choix multiples
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../17-finalisation-structure/">
+<a class="md-nav__link" href="../../../tutoriel/17-finalisation-structure/">
         Finalisation de la structure du questionnaire
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../20-mise-en-place-filtre/">
+<a class="md-nav__link" href="../../../tutoriel/20-mise-en-place-filtre/">
         Mise en place d'un filtre
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../21-ajout-controle/">
+<a class="md-nav__link" href="../../../tutoriel/21-ajout-controle/">
         Ajout d'un contrôle
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../22-ajout-infobulle/">
+<a class="md-nav__link" href="../../../tutoriel/22-ajout-infobulle/">
         Insertion d'une infobulle
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../23-utilisation-variable-calculee/">
+<a class="md-nav__link" href="../../../tutoriel/23-utilisation-variable-calculee/">
         Utilisation d'une variable calculée
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../24-personnalisation-libelle/">
+<a class="md-nav__link" href="../../../tutoriel/24-personnalisation-libelle/">
         Personnalisation d'un libellé
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../25-mise-en-place-boucle/">
+<a class="md-nav__link" href="../../../tutoriel/25-mise-en-place-boucle/">
         Mise en place d'une boucle
       </a>
 </li>
@@ -470,7 +448,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../public-enemy/">Public enemy</a>
+<a href="../../../../public-enemy/">Public enemy</a>
 <label for="__nav_9">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -484,7 +462,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_9_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../public-enemy/guide/">Guide</a>
+<a href="../../../../public-enemy/guide/">Guide</a>
 <label for="__nav_9_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -496,12 +474,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../public-enemy/guide/1-guide-pe-echantillon/">
+<a class="md-nav__link" href="../../../../public-enemy/guide/1-guide-pe-echantillon/">
         Création des unités enquêtées
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../public-enemy/guide/2-visualisation-questionnaires/">
+<a class="md-nav__link" href="../../../../public-enemy/guide/2-visualisation-questionnaires/">
         Visualisation des questionnaires
       </a>
 </li>
@@ -520,63 +498,34 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table des matières" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#definition-des-lignes">
-    Définition des lignes
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#definition-des-colonnes">
-    Définition des colonnes
-  </a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="creation-dun-tableau">Création d'un tableau</h1>
-<p>La prochaine question se présente sous la forme d'un tableau dans lequel nous allons capter la ventilation des activités de la personne que l'on interroge.</p>
-<p>Créons la question avec :</p>
+<h1 id="nommage-des-variables">Nommage des variables</h1>
+<p>Une convention simple doit être appliquée pour le nommage des variables dans Pogues :</p>
 <ul>
-<li>le libellé "Quel pourcentage de votre temps de travail consacrez-vous en moyenne à ces différentes activités ?",</li>
-<li>et l'identifiant "ACTIVITES".</li>
+<li>on utilise des lettres simples en majuscule et des chiffres,</li>
+<li>on sépare les sections du nom par des tirets bas <code>_</code>,</li>
+<li>on n'utilise aucun espace.</li>
 </ul>
-<p>Nous choisissons ensuite le type de question "Tableau".</p>
-<h2 id="definition-des-lignes">Définition des lignes</h2>
-<p>Le choix suivant du format de l'axe principal va permettre de déterminer le type de tableau que l'on va construire :</p>
-<ul>
-<li><em>Liste</em> → pour la création d'un tableau dynamique, c'est à dire d'un tableau dont le nombre de lignes min et max est déterminé par des entiers numériques,</li>
-<li><em>Liste de codes</em> → pour la création d'un tableau disposant d'entêtes de lignes créés à partir d'une liste de code.</li>
-</ul>
-<p>Ici, on choisit le format "Liste de codes".</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../../img/pogues/tableau-axe-principal.png"><img alt="Tableau axe principal" src="../../../img/pogues/tableau-axe-principal.png"/></a></p>
-<p>On <a href="../guide/liste-de-code/#chargement-a-partir-dun-fichier-csv">charge la liste de code</a> à partir du fichier <a href="../../../data/entreprises-activites.csv">"entreprises-activites.csv"</a>.</p>
-<h2 id="definition-des-colonnes">Définition des colonnes</h2>
-<p>Pour créer les colonnes du tableau, rendez-vous un peu plus bas dans la section "Information mesurée". Ici, nous souhaitons créer une colonne pour collecter le pourcentage de temps de travail alloué à chacune des activités de la liste.</p>
-<p>On remplit donc le <em>Libellé de l'information mesurée</em> avec "Pourcentage de votre temps de travail moyen" (ce sera le titre de la colonne), puis l'on choisit  :</p>
-<ul>
-<li><em>Type de mesure</em> "Réponse simple"</li>
-<li><em>Type de réponse</em> "Nombre" avec un min à 0 et un max à 100</li>
-<li><em>Unité de mesure</em> "%"</li>
-</ul>
-<p>Puis on valide.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../../img/pogues/tableau-colonne.png"><img alt="Tableau colonne" src="../../../img/pogues/tableau-colonne.png"/></a></p>
-<p>Il ne reste qu'à générer les variables puis à valider la question.</p>
+<p>Des exemples de bon usage :</p>
+<div class="highlight"><pre><span></span><code>AGE
+
+PROFESSION_CONJOINT
+
+ACTIVITES_1
+</code></pre></div>
+<p>Par ailleurs, lorsqu'elles sont utilisées dans du code VTL, les noms des variables sont encadrés par des <code>$</code>. Par exemple, une variable nommé dans Pogues <code>AGE</code>, sera mobilisée en VTL par <code>$AGE$</code>.</p>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
 <nav aria-label="Pied de page" class="md-footer__inner md-grid">
-<a aria-label="Précédent: Élaboration de la structure du questionnaire" class="md-footer__link md-footer__link--prev" href="../14-elaboration-structure/" rel="prev">
+<a aria-label="Précédent: Guide VTL Pogues" class="md-footer__link md-footer__link--prev" href="../../vtl/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -585,17 +534,17 @@
 <span class="md-footer__direction">
                   Précédent
                 </span>
-                Élaboration de la structure du questionnaire
+                Guide VTL Pogues
               </div>
 </div>
 </a>
-<a aria-label="Suivant: Création d'une question à choix multiples" class="md-footer__link md-footer__link--next" href="../16-creation-qcm/" rel="next">
+<a aria-label="Suivant: Les variables externes" class="md-footer__link md-footer__link--next" href="../variables-externes/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   Suivant
                 </span>
-                Création d'une question à choix multiples
+                Les variables externes
               </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -625,7 +574,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
-<script src="../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+<script src="../../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
