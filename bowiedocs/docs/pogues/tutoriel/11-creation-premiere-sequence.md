@@ -6,7 +6,7 @@ Celui-ci est vide, donnons-lui du contenu ! :smile:
 
 !!! tip
 
-    Un questionnaire est composé de séquences, sous-séquences et question. Les possibilités d'articulation sont les suivantes :
+    Un questionnaire est composé de séquences, sous-séquences et questions. Les possibilités d'articulation sont les suivantes :
 
     ```
     |-séquence
@@ -15,7 +15,7 @@ Celui-ci est vide, donnons-lui du contenu ! :smile:
     |--- question
     ```
     
-    Un questionnaire contient au moins une séquence, qui contient au moins une question.
+    Un questionnaire doit contenir au moins une séquence et une question.
 
     Une séquence contient des questions ou / et des sous-séquences. Une sous-séquence peut contenir des questions.
 
