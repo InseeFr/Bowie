@@ -510,9 +510,11 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="les-variables-externes">Les variables externes</h1>
-<blockquote>
-<p>WIP</p>
-</blockquote>
+<p>Pogues permet de référencer dans le questionnaire des variables externes, c'est à dire des variables qui sont fournies au chargement du questionnaire lors de la collecte, en provenance d'un fichier de données produit à partir de données connues et attachées à l'unité enquêtée.</p>
+<p>Si le <em>typage</em> disponible dans Pogues pour ces variables est celui disponible par ailleurs pour les variables collectées et calculées, on n'a en fait pas le choix : l'ensemble des variables externes injectées dans le questionnaire sont du <strong>texte</strong>.</p>
+<p>L'impact : si ces variables doivent être utilisées comme numériques, il faut alors <a href="../../vtl/#transtypage">les transformer</a>. Par exemple :</p>
+<div class="highlight"><pre><span></span><code>cast($VAR_EXT$, integer)
+</code></pre></div>
 </article>
 </div>
 </div>
