@@ -1,0 +1,1168 @@
+{
+	"owner": "FORMATION",
+	"FlowControl": [
+		{
+			"Description": "Filtre poursuite du questionnaire",
+			"Expression": "$OKREP$ = \"1\"",
+			"id": "lahw3g7g",
+			"IfTrue": "lahvaw3b-lahw35ei"
+		},
+		{
+			"Description": "FILTRE_ZERO_COLLEGUE",
+			"Expression": "$COMBIEN_PARTAGE$ > 0",
+			"id": "lahy4ae0",
+			"IfTrue": "lahvsuwe-lahvsuwe"
+		}
+	],
+	"ComponentGroup": [
+		{
+			"MemberReference": [
+				"lahvjxy7",
+				"lahvjqdm",
+				"lahvaw3b",
+				"lahvkp0z",
+				"lahvfbv0",
+				"lahvtgnc",
+				"lahvj6jn",
+				"lahvk123",
+				"lahvsuwe",
+				"lahvmmbt",
+				"lahvmxkb",
+				"lahw3gnc",
+				"lahw4odm",
+				"lahw35ei",
+				"lahwdi7e",
+				"idendquest"
+			],
+			"Label": [
+				"Components for page 1"
+			],
+			"id": "lahvf9hz",
+			"Name": "PAGE_1"
+		}
+	],
+	"agency": "fr.insee",
+	"genericName": "QUESTIONNAIRE",
+	"Label": [
+		"Formation Ménages"
+	],
+	"childQuestionnaireRef": [],
+	"Name": "FORMATION_MENAGES",
+	"Variables": {
+		"Variable": [
+			{
+				"Formula": "nvl($ACTIVITES11$, 0) +\r\nnvl($ACTIVITES21$, 0) +\r\nnvl($ACTIVITES31$, 0) +\r\nnvl($ACTIVITES41$, 0) +\r\nnvl($ACTIVITES51$, 0)",
+				"Label": "SOMME",
+				"id": "lahwktmj",
+				"type": "CalculatedVariableType",
+				"Name": "SOMME",
+				"Datatype": {
+					"Pattern": "",
+					"typeName": "TEXT",
+					"type": "TextDatatypeType",
+					"MaxLength": 249
+				}
+			},
+			{
+				"Formula": "if nvl($PRENOM$, \"\") = \"\" then \"Cher répondant,\" else $PRENOM$ || \" ,\"",
+				"Label": "PERSOLIB",
+				"id": "lai42p7k",
+				"type": "CalculatedVariableType",
+				"Name": "PERSOLIB",
+				"Datatype": {
+					"Pattern": "",
+					"typeName": "TEXT",
+					"type": "TextDatatypeType",
+					"MaxLength": 249
+				}
+			},
+			{
+				"Label": "OKREP label",
+				"id": "lahvhazx",
+				"type": "CollectedVariableType",
+				"CodeListReference": "lahv8xbm",
+				"Name": "OKREP",
+				"Datatype": {
+					"Pattern": "",
+					"typeName": "TEXT",
+					"type": "TextDatatypeType",
+					"MaxLength": 1
+				}
+			},
+			{
+				"Label": "PRENOM label",
+				"id": "lahvddms",
+				"type": "CollectedVariableType",
+				"Name": "PRENOM",
+				"Datatype": {
+					"Pattern": "",
+					"typeName": "TEXT",
+					"type": "TextDatatypeType",
+					"MaxLength": "30"
+				}
+			},
+			{
+				"Label": "Production statistique-\"Pourcentage de votre temps de travail moyen\"",
+				"id": "lahwz1kn",
+				"type": "CollectedVariableType",
+				"Name": "ACTIVITES11",
+				"Datatype": {
+					"Maximum": "100",
+					"Minimum": "0",
+					"typeName": "NUMERIC",
+					"Unit": "http://id.insee.fr/unit/percent",
+					"type": "NumericDatatypeType",
+					"Decimals": ""
+				}
+			},
+			{
+				"Label": "Etudes-\"Pourcentage de votre temps de travail moyen\"",
+				"id": "lahwwn51",
+				"type": "CollectedVariableType",
+				"Name": "ACTIVITES21",
+				"Datatype": {
+					"Maximum": "100",
+					"Minimum": "0",
+					"typeName": "NUMERIC",
+					"Unit": "http://id.insee.fr/unit/percent",
+					"type": "NumericDatatypeType",
+					"Decimals": ""
+				}
+			},
+			{
+				"Label": "Gestion des ressources humaines-\"Pourcentage de votre temps de travail moyen\"",
+				"id": "lahx4hhk",
+				"type": "CollectedVariableType",
+				"Name": "ACTIVITES31",
+				"Datatype": {
+					"Maximum": "100",
+					"Minimum": "0",
+					"typeName": "NUMERIC",
+					"Unit": "http://id.insee.fr/unit/percent",
+					"type": "NumericDatatypeType",
+					"Decimals": ""
+				}
+			},
+			{
+				"Label": "Informatique-\"Pourcentage de votre temps de travail moyen\"",
+				"id": "lahwsgcp",
+				"type": "CollectedVariableType",
+				"Name": "ACTIVITES41",
+				"Datatype": {
+					"Maximum": "100",
+					"Minimum": "0",
+					"typeName": "NUMERIC",
+					"Unit": "http://id.insee.fr/unit/percent",
+					"type": "NumericDatatypeType",
+					"Decimals": ""
+				}
+			},
+			{
+				"Label": "Autre-\"Pourcentage de votre temps de travail moyen\"",
+				"id": "lahwnkvr",
+				"type": "CollectedVariableType",
+				"Name": "ACTIVITES51",
+				"Datatype": {
+					"Maximum": "100",
+					"Minimum": "0",
+					"typeName": "NUMERIC",
+					"Unit": "http://id.insee.fr/unit/percent",
+					"type": "NumericDatatypeType",
+					"Decimals": ""
+				}
+			},
+			{
+				"Label": "\"Total\"-\"Pourcentage de votre temps de travail moyen\"",
+				"id": "lahwrd9d",
+				"type": "CollectedVariableType",
+				"Name": "ACTIVITES61",
+				"Datatype": {
+					"Maximum": "100",
+					"Minimum": "0",
+					"typeName": "NUMERIC",
+					"Unit": "http://id.insee.fr/unit/percent",
+					"type": "NumericDatatypeType",
+					"Decimals": ""
+				}
+			},
+			{
+				"Label": "1 - \"Statistique\"",
+				"id": "lahvz6v8",
+				"type": "CollectedVariableType",
+				"Name": "CARRIERE1",
+				"Datatype": {
+					"typeName": "BOOLEAN",
+					"type": "BooleanDatatypeType"
+				}
+			},
+			{
+				"Label": "2 - \"Informatique\"",
+				"id": "lahvut1h",
+				"type": "CollectedVariableType",
+				"Name": "CARRIERE2",
+				"Datatype": {
+					"typeName": "BOOLEAN",
+					"type": "BooleanDatatypeType"
+				}
+			},
+			{
+				"Label": "3 - \"Enseignement\"",
+				"id": "lahvji9k",
+				"type": "CollectedVariableType",
+				"Name": "CARRIERE3",
+				"Datatype": {
+					"typeName": "BOOLEAN",
+					"type": "BooleanDatatypeType"
+				}
+			},
+			{
+				"Label": "4 - \"Management\"",
+				"id": "lahvfojr",
+				"type": "CollectedVariableType",
+				"Name": "CARRIERE4",
+				"Datatype": {
+					"typeName": "BOOLEAN",
+					"type": "BooleanDatatypeType"
+				}
+			},
+			{
+				"Label": "5 - \"Autre\"",
+				"id": "lahvj54m",
+				"type": "CollectedVariableType",
+				"Name": "CARRIERE5",
+				"Datatype": {
+					"typeName": "BOOLEAN",
+					"type": "BooleanDatatypeType"
+				}
+			},
+			{
+				"Label": "COMBIEN_QUESTIONS label",
+				"id": "lfs2xghj",
+				"type": "CollectedVariableType",
+				"Name": "COMBIEN_QUESTIONS",
+				"Datatype": {
+					"Maximum": "200",
+					"Minimum": "0",
+					"typeName": "NUMERIC",
+					"Unit": "",
+					"type": "NumericDatatypeType",
+					"Decimals": ""
+				}
+			},
+			{
+				"Label": "COMBIEN_PARTAGE label",
+				"id": "lahwyj74",
+				"type": "CollectedVariableType",
+				"Name": "COMBIEN_PARTAGE",
+				"Datatype": {
+					"Maximum": "10",
+					"Minimum": "0",
+					"typeName": "NUMERIC",
+					"Unit": "",
+					"type": "NumericDatatypeType",
+					"Decimals": ""
+				}
+			},
+			{
+				"Scope": "lahwxcvq",
+				"Label": "TEMPS_PARTIEL label",
+				"id": "lahvzucv",
+				"type": "CollectedVariableType",
+				"CodeListReference": "lahv8xbm",
+				"Name": "TEMPS_PARTIEL",
+				"Datatype": {
+					"Pattern": "",
+					"typeName": "TEXT",
+					"type": "TextDatatypeType",
+					"MaxLength": 1
+				}
+			},
+			{
+				"Scope": "lahwxcvq",
+				"Label": "COLLABORATION label",
+				"id": "lahw31dg",
+				"type": "CollectedVariableType",
+				"CodeListReference": "lahv8xbm",
+				"Name": "COLLABORATION",
+				"Datatype": {
+					"Pattern": "",
+					"typeName": "TEXT",
+					"type": "TextDatatypeType",
+					"MaxLength": 1
+				}
+			},
+			{
+				"Label": "DEBUT_TRAVAIL label",
+				"id": "lahw5hzp",
+				"type": "CollectedVariableType",
+				"Name": "DEBUT_TRAVAIL",
+				"Datatype": {
+					"Maximum": "2022-01-01",
+					"Minimum": "1980-01-01",
+					"Format": "YYYY-MM-DD",
+					"typeName": "DATE",
+					"type": "DateDatatypeType"
+				}
+			},
+			{
+				"Label": "APPRECIATION label",
+				"id": "lahw22n5",
+				"type": "CollectedVariableType",
+				"CodeListReference": "lahv8xbm",
+				"Name": "APPRECIATION",
+				"Datatype": {
+					"Pattern": "",
+					"typeName": "TEXT",
+					"type": "TextDatatypeType",
+					"MaxLength": 1
+				}
+			}
+		]
+	},
+	"lastUpdatedDate": "Tue Jun 20 2023 11:04:19 GMT+0200 (heure d’été d’Europe centrale)",
+	"DataCollection": [
+		{
+			"id": "d5225468-f2c0-4a1b-a662-7b892d9bd734",
+			"uri": "http://ddi:fr.insee:DataCollection.d5225468-f2c0-4a1b-a662-7b892d9bd734"
+		}
+	],
+	"final": false,
+	"flowLogic": "FILTER",
+	"id": "lahvjd5l",
+	"TargetMode": [
+		"CAPI",
+		"CATI",
+		"CAWI",
+		"PAPI"
+	],
+	"CodeLists": {
+		"CodeList": [
+			{
+				"Label": "LISTE_OUI_NON",
+				"id": "lahv8xbm",
+				"Code": [
+					{
+						"Parent": "",
+						"Label": "\"Oui\"",
+						"Value": "1"
+					},
+					{
+						"Parent": "",
+						"Label": "\"Non\"",
+						"Value": "2"
+					}
+				],
+				"Name": ""
+			},
+			{
+				"Label": "LISTE_ACTIVITES",
+				"id": "lahvsf6e",
+				"Code": [
+					{
+						"Parent": "",
+						"Label": "Production statistique",
+						"Value": 1
+					},
+					{
+						"Parent": "",
+						"Label": "Etudes",
+						"Value": 2
+					},
+					{
+						"Parent": "",
+						"Label": "Gestion des ressources humaines",
+						"Value": 3
+					},
+					{
+						"Parent": "",
+						"Label": "Informatique",
+						"Value": 4
+					},
+					{
+						"Parent": "",
+						"Label": "Autre",
+						"Value": 5
+					},
+					{
+						"Parent": "",
+						"Label": "\"Total\"",
+						"Value": "99"
+					}
+				],
+				"Name": ""
+			},
+			{
+				"Label": "LISTE_METIERS",
+				"id": "lahvdnou",
+				"Code": [
+					{
+						"Parent": "",
+						"Label": "\"Statistique\"",
+						"Value": "1"
+					},
+					{
+						"Parent": "",
+						"Label": "\"Informatique\"",
+						"Value": "2"
+					},
+					{
+						"Parent": "",
+						"Label": "\"Enseignement\"",
+						"Value": "3"
+					},
+					{
+						"Parent": "",
+						"Label": "\"Management\"",
+						"Value": "4"
+					},
+					{
+						"Parent": "",
+						"Label": "\"Autre\"",
+						"Value": "5"
+					}
+				],
+				"Name": ""
+			}
+		]
+	},
+	"Iterations": {
+		"Iteration": [
+			{
+				"Maximum": "nvl($COMBIEN_PARTAGE$, 1)",
+				"Minimum": "1",
+				"MemberReference": [
+					"lahvsuwe",
+					"lahvsuwe"
+				],
+				"id": "lahwxcvq",
+				"Step": "1",
+				"type": "DynamicIterationType",
+				"Name": "BOUCLE"
+			}
+		]
+	},
+	"formulasLanguage": "VTL",
+	"Child": [
+		{
+			"Control": [],
+			"depth": 1,
+			"FlowControl": [],
+			"genericName": "MODULE",
+			"Label": [
+				"Participation au questionnaire"
+			],
+			"id": "lahvjxy7",
+			"TargetMode": [
+				"CAPI",
+				"CATI",
+				"CAWI",
+				"PAPI"
+			],
+			"Declaration": [
+				{
+					"declarationType": "HELP",
+					"Text": "\"Un questionnement sur votre participation.\"",
+					"id": "lahvejvh",
+					"position": "AFTER_QUESTION_TEXT",
+					"DeclarationMode": [
+						"CAPI",
+						"CATI",
+						"CAWI",
+						"PAPI"
+					]
+				}
+			],
+			"type": "SequenceType",
+			"Child": [
+				{
+					"Response": [
+						{
+							"CollectedVariableReference": "lahvhazx",
+							"id": "lahvr2jp",
+							"mandatory": false,
+							"CodeListReference": "lahv8xbm",
+							"Datatype": {
+								"Pattern": "",
+								"typeName": "TEXT",
+								"visualizationHint": "CHECKBOX",
+								"type": "TextDatatypeType",
+								"MaxLength": 1
+							}
+						}
+					],
+					"Control": [],
+					"depth": 2,
+					"FlowControl": [],
+					"Label": [
+						"\"Souhaitez-vous répondre à ce questionnaire ?\""
+					],
+					"ClarificationQuestion": [],
+					"id": "lahvjqdm",
+					"TargetMode": [
+						"CAPI",
+						"CATI",
+						"CAWI",
+						"PAPI"
+					],
+					"Declaration": [],
+					"type": "QuestionType",
+					"questionType": "SINGLE_CHOICE",
+					"Name": "OKREP"
+				}
+			],
+			"Name": "MODULE1"
+		},
+		{
+			"Control": [],
+			"depth": 1,
+			"FlowControl": [],
+			"genericName": "MODULE",
+			"Label": [
+				"Vous"
+			],
+			"id": "lahvaw3b",
+			"TargetMode": [
+				"CAPI",
+				"CATI",
+				"CAWI",
+				"PAPI"
+			],
+			"Declaration": [
+				{
+					"declarationType": "HELP",
+					"Text": "\"En savoir plus sur vous.\"",
+					"id": "lahvsumk",
+					"position": "AFTER_QUESTION_TEXT",
+					"DeclarationMode": [
+						"CAPI",
+						"CATI",
+						"CAWI",
+						"PAPI"
+					]
+				}
+			],
+			"type": "SequenceType",
+			"Child": [
+				{
+					"Response": [
+						{
+							"CollectedVariableReference": "lahvddms",
+							"id": "lahvjhxl",
+							"mandatory": false,
+							"Datatype": {
+								"Pattern": "",
+								"typeName": "TEXT",
+								"type": "TextDatatypeType",
+								"MaxLength": "30"
+							}
+						}
+					],
+					"Control": [
+						{
+							"post_collect": false,
+							"Description": "Le prénom ne peut être vide.",
+							"Expression": "$PRENOM$ = \"\" or isnull($PRENOM$)",
+							"during_collect": false,
+							"criticity": "INFO",
+							"FailMessage": "\"Merci de bien vouloir renseigner votre prénom.\"",
+							"id": "lahw4obf"
+						}
+					],
+					"depth": 2,
+					"FlowControl": [],
+					"Label": [
+						"\"Quel est votre prénom ? \" || nvl($PRENOM$, \"<NVL>\")"
+					],
+					"id": "lahvkp0z",
+					"TargetMode": [
+						"CAPI",
+						"CATI",
+						"CAWI",
+						"PAPI"
+					],
+					"Declaration": [
+						{
+							"declarationType": "HELP",
+							"Text": "\"Votre prénom est : \" || nvl($PRENOM$, \"?\")",
+							"id": "lahz84v1",
+							"position": "AFTER_QUESTION_TEXT",
+							"DeclarationMode": [
+								"CAPI",
+								"CATI",
+								"CAWI",
+								"PAPI"
+							]
+						}
+					],
+					"type": "QuestionType",
+					"questionType": "SIMPLE",
+					"Name": "PRENOM"
+				},
+				{
+					"FlowControl": [],
+					"Label": [
+						"\"Quel pourcentage de votre temps de travail consacrez-vous en moyenne à ces différentes activités ?\""
+					],
+					"ResponseStructure": {
+						"Attribute": [
+							{
+								"AttributeValue": "NoDataByDefinition",
+								"AttributeTarget": "6 1"
+							}
+						],
+						"Mapping": [
+							{
+								"MappingSource": "lahwv8mw",
+								"MappingTarget": "1 1"
+							},
+							{
+								"MappingSource": "lahx3lgf",
+								"MappingTarget": "2 1"
+							},
+							{
+								"MappingSource": "lahwqm3s",
+								"MappingTarget": "3 1"
+							},
+							{
+								"MappingSource": "lahwsj3z",
+								"MappingTarget": "4 1"
+							},
+							{
+								"MappingSource": "lahx89at",
+								"MappingTarget": "5 1"
+							},
+							{
+								"MappingSource": "lahwt3ce",
+								"MappingTarget": "6 1"
+							}
+						],
+						"Dimension": [
+							{
+								"dimensionType": "PRIMARY",
+								"dynamic": "0",
+								"CodeListReference": "lahvsf6e"
+							},
+							{
+								"dimensionType": "MEASURE",
+								"Label": "\"Pourcentage de votre temps de travail moyen\"",
+								"dynamic": "0"
+							}
+						]
+					},
+					"type": "QuestionType",
+					"Name": "ACTIVITES",
+					"Response": [
+						{
+							"CollectedVariableReference": "lahwz1kn",
+							"id": "lahwv8mw",
+							"Datatype": {
+								"Maximum": "100",
+								"Minimum": "0",
+								"typeName": "NUMERIC",
+								"Unit": "http://id.insee.fr/unit/percent",
+								"type": "NumericDatatypeType",
+								"Decimals": ""
+							}
+						},
+						{
+							"CollectedVariableReference": "lahwwn51",
+							"id": "lahx3lgf",
+							"Datatype": {
+								"Maximum": "100",
+								"Minimum": "0",
+								"typeName": "NUMERIC",
+								"Unit": "http://id.insee.fr/unit/percent",
+								"type": "NumericDatatypeType",
+								"Decimals": ""
+							}
+						},
+						{
+							"CollectedVariableReference": "lahx4hhk",
+							"id": "lahwqm3s",
+							"Datatype": {
+								"Maximum": "100",
+								"Minimum": "0",
+								"typeName": "NUMERIC",
+								"Unit": "http://id.insee.fr/unit/percent",
+								"type": "NumericDatatypeType",
+								"Decimals": ""
+							}
+						},
+						{
+							"CollectedVariableReference": "lahwsgcp",
+							"id": "lahwsj3z",
+							"Datatype": {
+								"Maximum": "100",
+								"Minimum": "0",
+								"typeName": "NUMERIC",
+								"Unit": "http://id.insee.fr/unit/percent",
+								"type": "NumericDatatypeType",
+								"Decimals": ""
+							}
+						},
+						{
+							"CollectedVariableReference": "lahwnkvr",
+							"id": "lahx89at",
+							"Datatype": {
+								"Maximum": "100",
+								"Minimum": "0",
+								"typeName": "NUMERIC",
+								"Unit": "http://id.insee.fr/unit/percent",
+								"type": "NumericDatatypeType",
+								"Decimals": ""
+							}
+						},
+						{
+							"CollectedVariableReference": "lahwrd9d",
+							"id": "lahwt3ce",
+							"Datatype": {
+								"Maximum": "100",
+								"Minimum": "0",
+								"typeName": "NUMERIC",
+								"Unit": "http://id.insee.fr/unit/percent",
+								"type": "NumericDatatypeType",
+								"Decimals": ""
+							}
+						}
+					],
+					"Control": [
+						{
+							"post_collect": false,
+							"Description": "Le pourcentage total doit être égal à 100.",
+							"Expression": "$SOMME$ <> 100",
+							"during_collect": false,
+							"criticity": "INFO",
+							"FailMessage": "\"Votre total doit être égal à 100% (\" || \r\ncast($SOMME$, string) || \r\n\")\"",
+							"id": "lahwkb82"
+						}
+					],
+					"depth": 2,
+					"ClarificationQuestion": [],
+					"id": "lahvfbv0",
+					"TargetMode": [
+						"CAPI",
+						"CATI",
+						"CAWI",
+						"PAPI"
+					],
+					"Declaration": [
+						{
+							"declarationType": "HELP",
+							"Text": "\"Total : \" || cast($SOMME$, string)",
+							"id": "lahw927t",
+							"position": "AFTER_QUESTION_TEXT",
+							"DeclarationMode": [
+								"CAPI",
+								"CATI",
+								"CAWI",
+								"PAPI"
+							]
+						}
+					],
+					"questionType": "TABLE"
+				},
+				{
+					"FlowControl": [],
+					"Label": [
+						"\"Avez-vous déjà exercé les activités suivantes au sein de votre carrière ?\""
+					],
+					"ResponseStructure": {
+						"Attribute": [],
+						"Mapping": [
+							{
+								"MappingSource": "lahvsckp",
+								"MappingTarget": "1"
+							},
+							{
+								"MappingSource": "lahvrzhn",
+								"MappingTarget": "2"
+							},
+							{
+								"MappingSource": "lahvncpu",
+								"MappingTarget": "3"
+							},
+							{
+								"MappingSource": "lahvkvc7",
+								"MappingTarget": "4"
+							},
+							{
+								"MappingSource": "lahvhtnd",
+								"MappingTarget": "5"
+							}
+						],
+						"Dimension": [
+							{
+								"dimensionType": "PRIMARY",
+								"dynamic": "0",
+								"CodeListReference": "lahvdnou"
+							},
+							{
+								"dimensionType": "MEASURE",
+								"dynamic": "0"
+							}
+						]
+					},
+					"type": "QuestionType",
+					"Name": "CARRIERE",
+					"Response": [
+						{
+							"CollectedVariableReference": "lahvz6v8",
+							"id": "lahvsckp",
+							"Datatype": {
+								"typeName": "BOOLEAN",
+								"type": "BooleanDatatypeType"
+							}
+						},
+						{
+							"CollectedVariableReference": "lahvut1h",
+							"id": "lahvrzhn",
+							"Datatype": {
+								"typeName": "BOOLEAN",
+								"type": "BooleanDatatypeType"
+							}
+						},
+						{
+							"CollectedVariableReference": "lahvji9k",
+							"id": "lahvncpu",
+							"Datatype": {
+								"typeName": "BOOLEAN",
+								"type": "BooleanDatatypeType"
+							}
+						},
+						{
+							"CollectedVariableReference": "lahvfojr",
+							"id": "lahvkvc7",
+							"Datatype": {
+								"typeName": "BOOLEAN",
+								"type": "BooleanDatatypeType"
+							}
+						},
+						{
+							"CollectedVariableReference": "lahvj54m",
+							"id": "lahvhtnd",
+							"Datatype": {
+								"typeName": "BOOLEAN",
+								"type": "BooleanDatatypeType"
+							}
+						}
+					],
+					"Control": [],
+					"depth": 2,
+					"ClarificationQuestion": [],
+					"id": "lahvtgnc",
+					"TargetMode": [
+						"CAPI",
+						"CATI",
+						"CAWI",
+						"PAPI"
+					],
+					"Declaration": [],
+					"questionType": "MULTIPLE_CHOICE"
+				},
+				{
+					"Response": [
+						{
+							"CollectedVariableReference": "lfs2xghj",
+							"id": "lahvjaqq",
+							"mandatory": false,
+							"Datatype": {
+								"Maximum": "200",
+								"Minimum": "0",
+								"typeName": "NUMERIC",
+								"Unit": "",
+								"type": "NumericDatatypeType",
+								"Decimals": ""
+							}
+						}
+					],
+					"Control": [],
+					"depth": 2,
+					"FlowControl": [],
+					"Label": [
+						"\"Combien de questions souhaitez-vous spécifier dans Pogues ?\""
+					],
+					"id": "lahvj6jn",
+					"TargetMode": [
+						"CAPI",
+						"CATI",
+						"CAWI",
+						"PAPI"
+					],
+					"Declaration": [],
+					"type": "QuestionType",
+					"questionType": "SIMPLE",
+					"Name": "COMBIEN_QUESTIONS"
+				},
+				{
+					"Response": [
+						{
+							"CollectedVariableReference": "lahwyj74",
+							"id": "lahvxg7f",
+							"mandatory": false,
+							"Datatype": {
+								"Maximum": "10",
+								"Minimum": "0",
+								"typeName": "NUMERIC",
+								"Unit": "",
+								"type": "NumericDatatypeType",
+								"Decimals": ""
+							}
+						}
+					],
+					"Control": [],
+					"depth": 2,
+					"FlowControl": [],
+					"Label": [
+						"\"Combien de personnes partagent votre bureau ?\""
+					],
+					"id": "lahvk123",
+					"TargetMode": [
+						"CAPI",
+						"CATI",
+						"CAWI",
+						"PAPI"
+					],
+					"Declaration": [],
+					"type": "QuestionType",
+					"questionType": "SIMPLE",
+					"Name": "COMBIEN_PARTAGE"
+				},
+				{
+					"Control": [],
+					"depth": 2,
+					"FlowControl": [],
+					"genericName": "SUBMODULE",
+					"Label": [
+						"Parlez-nous de votre collègue"
+					],
+					"id": "lahvsuwe",
+					"TargetMode": [
+						"CAPI",
+						"CATI",
+						"CAWI",
+						"PAPI"
+					],
+					"Declaration": [
+						{
+							"declarationType": "HELP",
+							"Text": "\"Essayons d'en savoir plus sur vos collègues\"",
+							"id": "lahw2ly9",
+							"position": "AFTER_QUESTION_TEXT",
+							"DeclarationMode": [
+								"CAPI",
+								"CATI",
+								"CAWI",
+								"PAPI"
+							]
+						}
+					],
+					"type": "SequenceType",
+					"Child": [
+						{
+							"Response": [
+								{
+									"CollectedVariableReference": "lahvzucv",
+									"id": "lahvk3qd",
+									"mandatory": false,
+									"CodeListReference": "lahv8xbm",
+									"Datatype": {
+										"Pattern": "",
+										"typeName": "TEXT",
+										"visualizationHint": "CHECKBOX",
+										"type": "TextDatatypeType",
+										"MaxLength": 1
+									}
+								}
+							],
+							"Control": [],
+							"depth": 3,
+							"FlowControl": [],
+							"Label": [
+								"\"Votre collègue est-il à temps partiel ?\""
+							],
+							"ClarificationQuestion": [],
+							"id": "lahvmmbt",
+							"TargetMode": [
+								"CAPI",
+								"CATI",
+								"CAWI",
+								"PAPI"
+							],
+							"Declaration": [],
+							"type": "QuestionType",
+							"questionType": "SINGLE_CHOICE",
+							"Name": "TEMPS_PARTIEL"
+						},
+						{
+							"Response": [
+								{
+									"CollectedVariableReference": "lahw31dg",
+									"id": "lahvz9c2",
+									"mandatory": false,
+									"CodeListReference": "lahv8xbm",
+									"Datatype": {
+										"Pattern": "",
+										"typeName": "TEXT",
+										"visualizationHint": "CHECKBOX",
+										"type": "TextDatatypeType",
+										"MaxLength": 1
+									}
+								}
+							],
+							"Control": [],
+							"depth": 3,
+							"FlowControl": [],
+							"Label": [
+								"\"Votre collègue travaille-t-il régulièrement avec vous ?\""
+							],
+							"ClarificationQuestion": [],
+							"id": "lahvmxkb",
+							"TargetMode": [
+								"CAPI",
+								"CATI",
+								"CAWI",
+								"PAPI"
+							],
+							"Declaration": [],
+							"type": "QuestionType",
+							"questionType": "SINGLE_CHOICE",
+							"Name": "COLLABORATION"
+						}
+					],
+					"Name": "COLLEGUE"
+				}
+			],
+			"Name": "MODULE2"
+		},
+		{
+			"Control": [],
+			"depth": 1,
+			"FlowControl": [],
+			"genericName": "MODULE",
+			"Label": [
+				"Votre questionnaire"
+			],
+			"id": "lahw3gnc",
+			"TargetMode": [
+				"CAPI",
+				"CATI",
+				"CAWI",
+				"PAPI"
+			],
+			"Declaration": [],
+			"type": "SequenceType",
+			"Child": [
+				{
+					"Response": [
+						{
+							"CollectedVariableReference": "lahw5hzp",
+							"id": "lahw7v91",
+							"mandatory": false,
+							"Datatype": {
+								"Maximum": "2022-01-01",
+								"Minimum": "1980-01-01",
+								"Format": "YYYY-MM-DD",
+								"typeName": "DATE",
+								"type": "DateDatatypeType"
+							}
+						}
+					],
+					"Control": [],
+					"depth": 2,
+					"FlowControl": [],
+					"Label": [
+						"'A quelle date avez-vous commencé à [travailler](. \\\"Hors scolarité\\\") ?'"
+					],
+					"id": "lahw4odm",
+					"TargetMode": [
+						"CAPI",
+						"CATI",
+						"CAWI",
+						"PAPI"
+					],
+					"Declaration": [],
+					"type": "QuestionType",
+					"questionType": "SIMPLE",
+					"Name": "DEBUT_TRAVAIL"
+				}
+			],
+			"Name": "MODULE3"
+		},
+		{
+			"Control": [],
+			"depth": 1,
+			"FlowControl": [],
+			"genericName": "MODULE",
+			"Label": [
+				"Avis sur l'exercice"
+			],
+			"id": "lahw35ei",
+			"TargetMode": [
+				"CAPI",
+				"CATI",
+				"CAWI",
+				"PAPI"
+			],
+			"Declaration": [],
+			"type": "SequenceType",
+			"Child": [
+				{
+					"Response": [
+						{
+							"CollectedVariableReference": "lahw22n5",
+							"id": "lahwcoi9",
+							"mandatory": false,
+							"CodeListReference": "lahv8xbm",
+							"Datatype": {
+								"Pattern": "",
+								"typeName": "TEXT",
+								"visualizationHint": "CHECKBOX",
+								"type": "TextDatatypeType",
+								"MaxLength": 1
+							}
+						}
+					],
+					"Control": [],
+					"depth": 2,
+					"FlowControl": [],
+					"Label": [
+						"\"\" || $PERSOLIB$ || \" avez-vous apprécié l'exercice ?\""
+					],
+					"ClarificationQuestion": [],
+					"id": "lahwdi7e",
+					"TargetMode": [
+						"CAPI",
+						"CATI",
+						"CAWI",
+						"PAPI"
+					],
+					"Declaration": [],
+					"type": "QuestionType",
+					"questionType": "SINGLE_CHOICE",
+					"Name": "APPRECIATION"
+				}
+			],
+			"Name": "MODULE4"
+		},
+		{
+			"Control": [],
+			"depth": 1,
+			"FlowControl": [],
+			"genericName": "MODULE",
+			"Label": [
+				"QUESTIONNAIRE_END"
+			],
+			"id": "idendquest",
+			"TargetMode": [
+				"CAPI",
+				"CATI",
+				"CAWI",
+				"PAPI"
+			],
+			"Declaration": [],
+			"type": "SequenceType",
+			"Child": [],
+			"Name": "QUESTIONNAIRE_END"
+		}
+	]
+}
