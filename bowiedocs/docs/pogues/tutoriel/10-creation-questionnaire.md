@@ -16,7 +16,7 @@ Les champs "Série", "Opération statistique" et "Campagne" sont remplis en fonc
 
 !!! tip
 
-    Si vous êtes en train de vous autoformer, vous pouvez choisir n'importe quelle valeur, cela n'a pas d'impact sur le reste du questionnaire
+    Si vous êtes en train de vous autoformer, vous pouvez choisir n'importe quelles valeurs, cela n'a pas d'impact sur le reste du questionnaire
 
 ## Identification
 
