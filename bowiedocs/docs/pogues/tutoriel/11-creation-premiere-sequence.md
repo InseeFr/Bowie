@@ -67,6 +67,14 @@ Pour cela, on se dirige vers l'onglet "Variables collectées" puis on clique sur
 
 On peut enfin valider la question en cliquant sur le plus gros bouton "Valider" en bas de la fenêtre.
 
+!!! Note
+
+    Lorsque vous validez une question, une fenêtre peut apparaître avec le texte "Modifications non validées. Merci de valider toutes les actions sur l'élément.".
+
+    Cela signifie tout simplement que certains champs à l'intérieur de la question n'ont pas été explicitement validés (à l'aide d'un bouton de validation dédié).
+
+    Si vous êtes sûr du contenu de ces éléments, vous pouvez tout simplement cliquer sur _Valider en l'état_, l'ensemble de ce que vous avez saisi sera sauvegardé.
+
 ## Sauvegarde du questionnaire
 
 Nous disposons maintenant d'un questionnaire simple, contenant une séquence et une question, il est temps de :material-content-save: __sauvegarder__ !
