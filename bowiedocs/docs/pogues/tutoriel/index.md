@@ -2,7 +2,7 @@
 
 !!! note
 
-    21/03/2023 - Le guide de référence reste [celui-ci](https://inseefr.github.io/Pogues/fr/guide-utilisateur/guide-utilisateur.html) le temps de la refonte de la documentation.
+    27/07/2023 - Le guide de référence pour les enquêtes entreprises de la filière historique Coltrane reste [celui-ci](https://inseefr.github.io/Pogues/fr/guide-utilisateur/guide-utilisateur.html).
 
 !!! tip
 
@@ -14,4 +14,4 @@ Pogues est l'interface graphique permettant de créer des questionnaires utilisa
 - permettre des itérations rapides,
 - produire le modèle du questionnaire à travers des standards de métadonnées.
 
-Débutons par créer un questionnaire.
+Débutons par la création d'un questionnaire.
