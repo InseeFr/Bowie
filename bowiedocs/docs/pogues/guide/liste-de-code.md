@@ -1,4 +1,4 @@
-# Liste de code
+# Les listes de code
 
 > WIP
 
@@ -17,4 +17,3 @@ Par exemple :point_down:
 ![Exemple de structure CSV](../../img/pogues/pogues-guide-liste-csv.png)
 
 Pour le chargement lui-même, il faut utiliser le bouton "Import d'une liste de codes" au moment de la création de la liste dans Pogues, puis sélectionner le fichier CSV.
-

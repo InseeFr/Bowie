@@ -1,4 +1,4 @@
-# Problèmes connus
+# Les problèmes connus
 
 Cette page recense les problèmes connus que l'on peut rencontrer en construisant un questionnaire dans Pogues.
 

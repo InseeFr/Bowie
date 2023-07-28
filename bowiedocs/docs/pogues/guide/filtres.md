@@ -18,10 +18,10 @@ La seconde contrainte est de ne pas construire des filtres qui se chevauchent - 
 !!! note
     Ces erreurs ne sont malheureusement pas captées lors de la conception dans Pogues, mais le seront lors de la génération et la visualisation.
 
-__Filtres corrects__
+### Filtres corrects
 
 ![Filtres OK](../../img/pogues/guide-filtres-ok.png)
 
-__Filtres incorrects__
+### Filtres incorrects
 
 ![Filtres KO](../../img/pogues/guide-filtres-ko.png)

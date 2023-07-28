@@ -1,4 +1,4 @@
-# Composition
+# La composition
 
 !!! tip
 
