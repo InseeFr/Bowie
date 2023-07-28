@@ -58,4 +58,9 @@ Pour ça, il suffit de se placer à la racine du dossier `Bowie` puis de lancer 
 
 Le script va produire un nouveau dossier `docs` à la racine qui contient le nouveau site généré.
 
-On peut ensuite commiter et pousser les changements (`git commit` puis `git push`).
+On peut ensuite commiter et pousser les changements
+
+- `git add *` pour ajouter les fichiers modifiés, ce qui inclut les fichiers HTML générés,
+- les classiques `git commit -m "Votre message de commit"` puis `git push`.
+
+La publication des nouveautés sur le site se fait ensuite automatiquement via GitHub Pages (configuré sur le repo de Bowie).
