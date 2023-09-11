@@ -24,10 +24,15 @@ On peut remplir les données à partir de ce fichier schéma :
 
 !!!warning
 
-    Un fichier de donnée ne pourra contenir qu'un maximum de 10 unités enquêtées.
+    Un fichier de données ne pourra contenir qu'un maximum de 10 unités enquêtées.
+
+!!!warning
+
+    Les valeurs d'en-tête et de lignes doivent être encadrées de `"`. Le fichier schéma téléchargé depuis Public Enemy contient bien ces double quotes pour les en-têtes.
+    Pour bien s'assurer que cette contrainte est respectée, on peut ouvrir le fichier de données que l'on constitue avec un éditeur de texte comme Notepad++.
 
 Puis charger avec le bouton "Charger les unités enquêtées", puis valider la création avec le bouton "Créer le questionnaire dans les orchestrateurs".
 
 !!!note
-    
+
     Selon la taille du questionnaire cette création peut durer plusieurs minutes.
