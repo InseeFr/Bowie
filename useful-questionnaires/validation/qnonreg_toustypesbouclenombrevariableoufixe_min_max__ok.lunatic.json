@@ -1,1 +1,1620 @@
-{"cleaning": {"Q1": {"Q2": "(Q1= \"A\")"}}, "variables": [{"variableType": "COLLECTED", "values": {"COLLECTED": null, "EDITED": null, "INPUTED": null, "FORCED": null, "PREVIOUS": null}, "name": "COMMENT_QE"}, {"variableType": "COLLECTED", "values": {"COLLECTED": [null], "EDITED": [null], "INPUTED": [null], "FORCED": [null], "PREVIOUS": [null]}, "name": "PRENOM"}, {"variableType": "COLLECTED", "values": {"COLLECTED": [null], "EDITED": [null], "INPUTED": [null], "FORCED": [null], "PREVIOUS": [null]}, "name": "Q1"}, {"variableType": "COLLECTED", "values": {"COLLECTED": [null], "EDITED": [null], "INPUTED": [null], "FORCED": [null], "PREVIOUS": [null]}, "name": "Q2"}, {"variableType": "COLLECTED", "values": {"COLLECTED": null, "EDITED": null, "INPUTED": null, "FORCED": null, "PREVIOUS": null}, "name": "NBP"}, {"variableType": "COLLECTED", "values": {"COLLECTED": [null], "EDITED": [null], "INPUTED": [null], "FORCED": [null], "PREVIOUS": [null]}, "name": "P1"}, {"variableType": "COLLECTED", "values": {"COLLECTED": [null], "EDITED": [null], "INPUTED": [null], "FORCED": [null], "PREVIOUS": [null]}, "name": "P2"}, {"variableType": "COLLECTED", "values": {"COLLECTED": [null], "EDITED": [null], "INPUTED": [null], "FORCED": [null], "PREVIOUS": [null]}, "name": "P1B"}, {"variableType": "COLLECTED", "values": {"COLLECTED": [null], "EDITED": [null], "INPUTED": [null], "FORCED": [null], "PREVIOUS": [null]}, "name": "P2B"}, {"variableType": "COLLECTED", "values": {"COLLECTED": null, "EDITED": null, "INPUTED": null, "FORCED": null, "PREVIOUS": null}, "name": "NB"}, {"variableType": "COLLECTED", "values": {"COLLECTED": [null], "EDITED": [null], "INPUTED": [null], "FORCED": [null], "PREVIOUS": [null]}, "name": "PRENOM2"}, {"variableType": "COLLECTED", "values": {"COLLECTED": [null], "EDITED": [null], "INPUTED": [null], "FORCED": [null], "PREVIOUS": [null]}, "name": "AGE"}, {"variableType": "CALCULATED", "expression": {"type": "VTL", "value": "true"}, "name": "FILTER_RESULT_PRENOM", "inFilter": "false", "shapeFrom": "PRENOM"}, {"variableType": "CALCULATED", "expression": {"type": "VTL", "value": "true"}, "name": "FILTER_RESULT_Q1", "inFilter": "false", "shapeFrom": "Q1"}, {"variableType": "CALCULATED", "bindingDependencies": ["Q1"], "expression": {"type": "VTL", "value": "(Q1= \"A\")"}, "name": "FILTER_RESULT_Q2", "inFilter": "false", "shapeFrom": "Q1"}, {"variableType": "CALCULATED", "expression": {"type": "VTL", "value": "true"}, "name": "FILTER_RESULT_NBP", "inFilter": "false"}, {"variableType": "CALCULATED", "expression": {"type": "VTL", "value": "true"}, "name": "FILTER_RESULT_P1", "inFilter": "false", "shapeFrom": "P1"}, {"variableType": "CALCULATED", "expression": {"type": "VTL", "value": "true"}, "name": "FILTER_RESULT_P2", "inFilter": "false", "shapeFrom": "P1"}, {"variableType": "CALCULATED", "expression": {"type": "VTL", "value": "true"}, "name": "FILTER_RESULT_P1B", "inFilter": "false", "shapeFrom": "P1B"}, {"variableType": "CALCULATED", "expression": {"type": "VTL", "value": "true"}, "name": "FILTER_RESULT_P2B", "inFilter": "false", "shapeFrom": "P1B"}, {"variableType": "CALCULATED", "expression": {"type": "VTL", "value": "true"}, "name": "FILTER_RESULT_NB", "inFilter": "false"}, {"variableType": "CALCULATED", "expression": {"type": "VTL", "value": "true"}, "name": "FILTER_RESULT_PRENOM2", "inFilter": "false", "shapeFrom": "PRENOM2"}, {"variableType": "CALCULATED", "expression": {"type": "VTL", "value": "true"}, "name": "FILTER_RESULT_AGE", "inFilter": "false", "shapeFrom": "AGE"}], "components": [{"componentType": "Sequence", "hierarchy": {"sequence": {"id": "kwupyhsh", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"S1 - boucle li\u00e9e de 1 \u00e0 max 4 avec un nb inconnu au d\u00e9but\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "kwupyhsh", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"S1 - boucle li\u00e9e de 1 \u00e0 max 4 avec un nb inconnu au d\u00e9but\""}}, {"paginatedLoop": false, "componentType": "Loop", "components": [{"componentType": "Subsequence", "goToPage": "2", "hierarchy": {"sequence": {"id": "kwupyhsh", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"S1 - boucle li\u00e9e de 1 \u00e0 max 4 avec un nb inconnu au d\u00e9but\""}}, "subSequence": {"id": "l7g7ou85", "page": "2", "label": {"type": "VTL|MD", "value": "SS11"}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "l7g7ou85", "page": "2", "label": {"type": "VTL|MD", "value": "SS11"}}, {"componentType": "Input", "bindingDependencies": ["PRENOM"], "controls": [{"bindingDependencies": ["PRENOM"], "criticality": "WARN", "errorMessage": {"type": "VTL|MD", "value": "\"Pr\u00e9nom est vide\""}, "typeOfControl": "CONSISTENCY", "control": {"type": "VTL", "value": "not(nvl(PRENOM,\"\")=\"\")"}, "id": "l7g7tek6-CI-0"}], "response": {"name": "PRENOM"}, "hierarchy": {"sequence": {"id": "kwupyhsh", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"S1 - boucle li\u00e9e de 1 \u00e0 max 4 avec un nb inconnu au d\u00e9but\""}}, "subSequence": {"id": "l7g7ou85", "page": "2", "label": {"type": "VTL|MD", "value": "SS11"}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "l7g7tek6", "page": "2", "label": {"type": "VTL|MD", "value": "\"\u27a1 1. \" || \"PRENOM\""}, "mandatory": false, "maxLength": 249, "declarations": [{"declarationType": "HELP", "id": "l7g7tek6-lfgkfl45", "label": {"type": "VTL|MD", "value": "\"Ajout d\u2019un contr\u00f4le sur pr\u00e9nom vide\""}, "position": "AFTER_QUESTION_TEXT"}]}], "bindingDependencies": ["PRENOM"], "depth": 1, "hierarchy": {"sequence": {"id": "kwupyhsh", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"S1 - boucle li\u00e9e de 1 \u00e0 max 4 avec un nb inconnu au d\u00e9but\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "l7pusaki", "page": "2", "label": {"type": "VTL|MD", "value": "Ajoute un pr\u00e9nom"}, "lines": {"min": {"type": "VTL", "value": "1"}, "max": {"type": "VTL", "value": "4"}}}, {"paginatedLoop": true, "componentType": "Loop", "loopDependencies": ["PRENOM"], "components": [{"componentType": "Subsequence", "bindingDependencies": ["PRENOM"], "goToPage": "3.1", "hierarchy": {"sequence": {"id": "kwupyhsh", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"S1 - boucle li\u00e9e de 1 \u00e0 max 4 avec un nb inconnu au d\u00e9but\""}}, "subSequence": {"id": "l7g7lnew", "page": "3.1", "label": {"type": "VTL|MD", "value": "SS12"}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "l7g7lnew", "label": {"type": "VTL|MD", "value": "SS12"}}, {"componentType": "Input", "bindingDependencies": ["PRENOM", "Q1"], "controls": [{"bindingDependencies": ["Q1"], "criticality": "WARN", "errorMessage": {"type": "VTL|MD", "value": "\"Q1 est vide\""}, "typeOfControl": "CONSISTENCY", "control": {"type": "VTL", "value": "not(nvl(Q1,\"\")=\"\")"}, "id": "kx05sq4y-CI-0"}], "response": {"name": "Q1"}, "hierarchy": {"sequence": {"id": "kwupyhsh", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"S1 - boucle li\u00e9e de 1 \u00e0 max 4 avec un nb inconnu au d\u00e9but\""}}, "subSequence": {"id": "l7g7lnew", "page": "3.1", "label": {"type": "VTL|MD", "value": "SS12"}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "kx05sq4y", "page": "3.1", "label": {"type": "VTL|MD", "value": "\"\u27a1 2. \" || \"Q1 de \" || PRENOM"}, "mandatory": false, "maxLength": 249, "declarations": [{"declarationType": "HELP", "id": "kx05sq4y-lciynl4d", "label": {"type": "VTL|MD", "value": "\"Filtre pour affichage de Q2 : Q2 affich\u00e9e si Q1 = A, donc \u00e0 tester\""}, "position": "AFTER_QUESTION_TEXT"}, {"declarationType": "HELP", "id": "kx05sq4y-lfgkbdvi", "label": {"type": "VTL|MD", "value": "\"Contr\u00f4le sur Q1 vide\""}, "position": "AFTER_QUESTION_TEXT"}]}, {"componentType": "Input", "bindingDependencies": ["PRENOM", "Q2"], "response": {"name": "Q2"}, "hierarchy": {"sequence": {"id": "kwupyhsh", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"S1 - boucle li\u00e9e de 1 \u00e0 max 4 avec un nb inconnu au d\u00e9but\""}}, "subSequence": {"id": "l7g7lnew", "page": "3.1", "label": {"type": "VTL|MD", "value": "SS12"}}}, "conditionFilter": {"bindingDependencies": ["Q1"], "type": "VTL", "value": "(Q1= \"A\")"}, "id": "kx06v7yq", "page": "3.2", "label": {"type": "VTL|MD", "value": "\"\u27a1 3. \" || \"Affichage de Q2 si Q1 = A - rappel du pr\u00e9nom : \" || PRENOM"}, "mandatory": false, "maxLength": 249}], "bindingDependencies": ["PRENOM", "Q1", "Q2"], "depth": 1, "hierarchy": {"sequence": {"id": "kwupyhsh", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"S1 - boucle li\u00e9e de 1 \u00e0 max 4 avec un nb inconnu au d\u00e9but\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "l7puyos3", "page": "3", "maxPage": "2", "iterations": {"type": "VTL", "value": "count(PRENOM)"}}, {"componentType": "Sequence", "hierarchy": {"sequence": {"id": "l7puc9t3", "page": "4", "label": {"type": "VTL|MD", "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 \u00e0 4, ne sera pas li\u00e9e\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "l7puc9t3", "page": "4", "label": {"type": "VTL|MD", "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 \u00e0 4, ne sera pas li\u00e9e\""}}, {"componentType": "InputNumber", "controls": [{"criticality": "ERROR", "errorMessage": {"type": "VTL|MD", "value": "\" La valeur doit \u00eatre comprise entre 0 et 100.\""}, "typeOfControl": "FORMAT", "control": {"type": "VTL", "value": "not(not(isnull(NBP)) and (0>NBP or 100<NBP))"}, "id": "kwupqy19-format-borne-inf-sup"}, {"criticality": "ERROR", "errorMessage": {"type": "VTL|MD", "value": "\"Le nombre doit comporter au maximum 0 chiffre(s) apr\u00e8s la virgule.\""}, "typeOfControl": "FORMAT", "control": {"type": "VTL", "value": "not(not(isnull(NBP))  and round(NBP,0)<>NBP)"}, "id": "kwupqy19-format-decimal"}], "max": 100, "hierarchy": {"sequence": {"id": "l7puc9t3", "page": "4", "label": {"type": "VTL|MD", "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 \u00e0 4, ne sera pas li\u00e9e\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "label": {"type": "VTL|MD", "value": "\"\u27a1 4. \" || \"NBP\""}, "mandatory": false, "declarations": [{"declarationType": "HELP", "id": "kwupqy19-kx09g78a", "label": {"type": "VTL|MD", "value": "\"on v\u00e9rifie que la formule cast-string-NB est ok :\" || cast(NBP,string)"}, "position": "AFTER_QUESTION_TEXT"}], "bindingDependencies": ["NBP"], "min": 0, "response": {"name": "NBP"}, "decimals": 0, "id": "kwupqy19", "page": "5"}, {"paginatedLoop": false, "componentType": "Loop", "components": [{"componentType": "Subsequence", "goToPage": "6", "hierarchy": {"sequence": {"id": "l7puc9t3", "page": "4", "label": {"type": "VTL|MD", "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 \u00e0 4, ne sera pas li\u00e9e\""}}, "subSequence": {"id": "l7puoovt", "page": "6", "label": {"type": "VTL|MD", "value": "Decrire le produit avec max fixe"}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "l7puoovt", "page": "6", "label": {"type": "VTL|MD", "value": "Decrire le produit avec max fixe"}, "declarations": [{"declarationType": "HELP", "id": "l7puoovt-l7pv1nnm", "label": {"type": "VTL|MD", "value": "\"on d\u00e9crit un produit, boucle de 1 \u00e0 4\""}, "position": "AFTER_QUESTION_TEXT"}]}, {"componentType": "Input", "bindingDependencies": ["P1"], "controls": [{"bindingDependencies": ["P1"], "criticality": "WARN", "errorMessage": {"type": "VTL|MD", "value": "\"P1 est vide\""}, "typeOfControl": "CONSISTENCY", "control": {"type": "VTL", "value": "not(nvl(P1,\"\")=\"\")"}, "id": "l7pu8g5e-CI-0"}], "response": {"name": "P1"}, "hierarchy": {"sequence": {"id": "l7puc9t3", "page": "4", "label": {"type": "VTL|MD", "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 \u00e0 4, ne sera pas li\u00e9e\""}}, "subSequence": {"id": "l7puoovt", "page": "6", "label": {"type": "VTL|MD", "value": "Decrire le produit avec max fixe"}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "l7pu8g5e", "page": "6", "label": {"type": "VTL|MD", "value": "\"\u27a1 5. \" || \"D\u00e9crire un produit\""}, "mandatory": false, "maxLength": 249, "declarations": [{"declarationType": "HELP", "id": "l7pu8g5e-lfgmlc9s", "label": {"type": "VTL|MD", "value": "\"Contr\u00f4le sur P1 vide\""}, "position": "AFTER_QUESTION_TEXT"}]}, {"componentType": "Input", "bindingDependencies": ["P2"], "response": {"name": "P2"}, "hierarchy": {"sequence": {"id": "l7puc9t3", "page": "4", "label": {"type": "VTL|MD", "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 \u00e0 4, ne sera pas li\u00e9e\""}}, "subSequence": {"id": "l7puoovt", "page": "6", "label": {"type": "VTL|MD", "value": "Decrire le produit avec max fixe"}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "l7pu5agy", "page": "6", "label": {"type": "VTL|MD", "value": "\"\u27a1 6. \" || \"Avis sur produit\""}, "mandatory": false, "maxLength": 249}], "bindingDependencies": ["P1", "P2"], "depth": 1, "hierarchy": {"sequence": {"id": "l7puc9t3", "page": "4", "label": {"type": "VTL|MD", "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 \u00e0 4, ne sera pas li\u00e9e\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "l7puibqj", "page": "6", "label": {"type": "VTL|MD", "value": "Ajouter un produit"}, "lines": {"min": {"type": "VTL", "value": "1"}, "max": {"type": "VTL", "value": "4"}}}, {"paginatedLoop": false, "componentType": "Loop", "loopDependencies": ["NBP"], "components": [{"componentType": "Subsequence", "bindingDependencies": ["NBP"], "goToPage": "7", "hierarchy": {"sequence": {"id": "l7puc9t3", "page": "4", "label": {"type": "VTL|MD", "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 \u00e0 4, ne sera pas li\u00e9e\""}}, "subSequence": {"id": "lhywdenk", "page": "7", "label": {"type": "VTL|MD", "value": "Decrire le produit avec max collect\u00e9 NBP"}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "lhywdenk", "page": "7", "label": {"type": "VTL|MD", "value": "Decrire le produit avec max collect\u00e9 NBP"}}, {"componentType": "Input", "bindingDependencies": ["P1B", "NBP"], "response": {"name": "P1B"}, "hierarchy": {"sequence": {"id": "l7puc9t3", "page": "4", "label": {"type": "VTL|MD", "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 \u00e0 4, ne sera pas li\u00e9e\""}}, "subSequence": {"id": "lhywdenk", "page": "7", "label": {"type": "VTL|MD", "value": "Decrire le produit avec max collect\u00e9 NBP"}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "lhywkzhc", "page": "7", "label": {"type": "VTL|MD", "value": "\"\u27a1 7. \" || \"D\u00e9crire un produit\""}, "mandatory": false, "maxLength": 249, "declarations": [{"declarationType": "HELP", "id": "lhywkzhc-lhywl5zk", "label": {"type": "VTL|MD", "value": "\"Contr\u00f4le sur P1 vide\""}, "position": "AFTER_QUESTION_TEXT"}]}, {"componentType": "Input", "bindingDependencies": ["P2B", "NBP"], "response": {"name": "P2B"}, "hierarchy": {"sequence": {"id": "l7puc9t3", "page": "4", "label": {"type": "VTL|MD", "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 \u00e0 4, ne sera pas li\u00e9e\""}}, "subSequence": {"id": "lhywdenk", "page": "7", "label": {"type": "VTL|MD", "value": "Decrire le produit avec max collect\u00e9 NBP"}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "lhywjv88", "page": "7", "label": {"type": "VTL|MD", "value": "\"\u27a1 8. \" || \"Avis sur produit\""}, "mandatory": false, "maxLength": 249}], "bindingDependencies": ["NBP", "P1B", "P2B"], "depth": 1, "hierarchy": {"sequence": {"id": "l7puc9t3", "page": "4", "label": {"type": "VTL|MD", "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 \u00e0 4, ne sera pas li\u00e9e\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "lhywawti", "page": "7", "label": {"type": "VTL|MD", "value": "Ajouter"}, "lines": {"min": {"type": "VTL", "value": "1"}, "max": {"type": "VTL", "value": "nvl(NBP,1)"}}}, {"componentType": "Sequence", "hierarchy": {"sequence": {"id": "kx06a9lq", "page": "8", "label": {"type": "VTL|MD", "value": "\"III - \" || \"S3 - boucle N occurrences, N collect\u00e9 en premier, type logement\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "kx06a9lq", "page": "8", "label": {"type": "VTL|MD", "value": "\"III - \" || \"S3 - boucle N occurrences, N collect\u00e9 en premier, type logement\""}}, {"componentType": "InputNumber", "controls": [{"criticality": "ERROR", "errorMessage": {"type": "VTL|MD", "value": "\" La valeur doit \u00eatre comprise entre 0 et 100.\""}, "typeOfControl": "FORMAT", "control": {"type": "VTL", "value": "not(not(isnull(NB)) and (0>NB or 100<NB))"}, "id": "lhyvw4w4-format-borne-inf-sup"}, {"criticality": "ERROR", "errorMessage": {"type": "VTL|MD", "value": "\"Le nombre doit comporter au maximum 0 chiffre(s) apr\u00e8s la virgule.\""}, "typeOfControl": "FORMAT", "control": {"type": "VTL", "value": "not(not(isnull(NB))  and round(NB,0)<>NB)"}, "id": "lhyvw4w4-format-decimal"}], "max": 100, "hierarchy": {"sequence": {"id": "kx06a9lq", "page": "8", "label": {"type": "VTL|MD", "value": "\"III - \" || \"S3 - boucle N occurrences, N collect\u00e9 en premier, type logement\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "label": {"type": "VTL|MD", "value": "\"\u27a1 9. \" || \"NB\""}, "mandatory": false, "declarations": [{"declarationType": "HELP", "id": "lhyvw4w4-lhyw7k0f", "label": {"type": "VTL|MD", "value": "\"on v\u00e9rifie que la formule cast-string-NB est ok :\" || cast(NB,string)"}, "position": "AFTER_QUESTION_TEXT"}], "bindingDependencies": ["NB"], "min": 0, "response": {"name": "NB"}, "decimals": 0, "id": "lhyvw4w4", "page": "9"}, {"paginatedLoop": false, "componentType": "Loop", "loopDependencies": ["NB"], "components": [{"componentType": "Subsequence", "bindingDependencies": ["NB"], "goToPage": "10", "hierarchy": {"sequence": {"id": "kx06a9lq", "page": "8", "label": {"type": "VTL|MD", "value": "\"III - \" || \"S3 - boucle N occurrences, N collect\u00e9 en premier, type logement\""}}, "subSequence": {"id": "kx061cac", "page": "10", "label": {"type": "VTL|MD", "value": "SS31"}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "kx061cac", "page": "10", "label": {"type": "VTL|MD", "value": "SS31"}}, {"componentType": "Input", "bindingDependencies": ["PRENOM2", "NB"], "response": {"name": "PRENOM2"}, "hierarchy": {"sequence": {"id": "kx06a9lq", "page": "8", "label": {"type": "VTL|MD", "value": "\"III - \" || \"S3 - boucle N occurrences, N collect\u00e9 en premier, type logement\""}}, "subSequence": {"id": "kx061cac", "page": "10", "label": {"type": "VTL|MD", "value": "SS31"}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "kwupruv2", "page": "10", "label": {"type": "VTL|MD", "value": "\"\u27a1 10. \" || \"PRENOM\""}, "mandatory": false, "maxLength": 249}], "bindingDependencies": ["NB", "PRENOM2"], "depth": 1, "hierarchy": {"sequence": {"id": "kx06a9lq", "page": "8", "label": {"type": "VTL|MD", "value": "\"III - \" || \"S3 - boucle N occurrences, N collect\u00e9 en premier, type logement\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "l7pv0z7b", "page": "10", "lines": {"min": {"type": "VTL", "value": "nvl(NB,1)"}, "max": {"type": "VTL", "value": "nvl(NB,1)"}}}, {"paginatedLoop": true, "componentType": "Loop", "loopDependencies": ["PRENOM2"], "components": [{"componentType": "Subsequence", "bindingDependencies": ["PRENOM2"], "goToPage": "11.1", "hierarchy": {"sequence": {"id": "kx06a9lq", "page": "8", "label": {"type": "VTL|MD", "value": "\"III - \" || \"S3 - boucle N occurrences, N collect\u00e9 en premier, type logement\""}}, "subSequence": {"id": "kx09u145", "page": "11.1", "label": {"type": "VTL|MD", "value": "SS32"}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "kx09u145", "label": {"type": "VTL|MD", "value": "SS32"}}, {"componentType": "InputNumber", "controls": [{"criticality": "ERROR", "errorMessage": {"type": "VTL|MD", "value": "\" La valeur doit \u00eatre comprise entre 0 et 99.\""}, "typeOfControl": "FORMAT", "control": {"type": "VTL", "value": "not(not(isnull(AGE)) and (0>AGE or 99<AGE))"}, "id": "kx05rmm0-format-borne-inf-sup"}, {"criticality": "ERROR", "errorMessage": {"type": "VTL|MD", "value": "\"Le nombre doit comporter au maximum 0 chiffre(s) apr\u00e8s la virgule.\""}, "typeOfControl": "FORMAT", "control": {"type": "VTL", "value": "not(not(isnull(AGE))  and round(AGE,0)<>AGE)"}, "id": "kx05rmm0-format-decimal"}, {"bindingDependencies": ["AGE"], "criticality": "WARN", "errorMessage": {"type": "VTL|MD", "value": "\"AGE est vide\""}, "typeOfControl": "CONSISTENCY", "control": {"type": "VTL", "value": "not(nvl(AGE,\"\")=\"\")"}, "id": "kx05rmm0-CI-0"}], "max": 99, "hierarchy": {"sequence": {"id": "kx06a9lq", "page": "8", "label": {"type": "VTL|MD", "value": "\"III - \" || \"S3 - boucle N occurrences, N collect\u00e9 en premier, type logement\""}}, "subSequence": {"id": "kx09u145", "page": "11.1", "label": {"type": "VTL|MD", "value": "SS32"}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "label": {"type": "VTL|MD", "value": "\"\u27a1 11. \" || \"AGE de \" || PRENOM2"}, "mandatory": false, "declarations": [{"declarationType": "HELP", "id": "kx05rmm0-lfgmwbpy", "label": {"type": "VTL|MD", "value": "\"Contr\u00f4le sur AGE vide\""}, "position": "AFTER_QUESTION_TEXT"}], "bindingDependencies": ["PRENOM2", "AGE"], "min": 0, "response": {"name": "AGE"}, "decimals": 0, "id": "kx05rmm0", "page": "11.1"}], "bindingDependencies": ["PRENOM2", "AGE"], "depth": 1, "hierarchy": {"sequence": {"id": "kx06a9lq", "page": "8", "label": {"type": "VTL|MD", "value": "\"III - \" || \"S3 - boucle N occurrences, N collect\u00e9 en premier, type logement\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "l7puvvpz", "page": "11", "maxPage": "1", "iterations": {"type": "VTL", "value": "count(PRENOM2)"}}, {"componentType": "Sequence", "hierarchy": {"sequence": {"id": "COMMENT-SEQ", "page": "12", "label": {"type": "VTL|MD", "value": "\"Commentaire\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "COMMENT-SEQ", "page": "12", "label": {"type": "VTL|MD", "value": "\"Commentaire\""}}, {"componentType": "Textarea", "bindingDependencies": ["COMMENT_QE"], "response": {"name": "COMMENT_QE"}, "hierarchy": {"sequence": {"id": "COMMENT-SEQ", "page": "12", "label": {"type": "VTL|MD", "value": "\"Commentaire\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "COMMENT-QUESTION", "page": "13", "label": {"type": "VTL|MD", "value": "\"Avez-vous des remarques concernant l'enqu\u00eate ou des commentaires ?\""}, "mandatory": false, "maxLength": 2000}], "pagination": "question", "resizing": {"NB": {"variables": ["PRENOM2", "AGE"], "size": "nvl(NB,1)"}, "NBP": {"variables": ["P1B", "P2B"], "size": "nvl(NBP,1)"}, "PRENOM": {"variables": ["Q1", "Q2"], "size": "count(PRENOM)"}}, "label": {"type": "VTL|MD", "value": "QNONREG - tous types boucle nombre variable ou fixe (min=max) - ok"}, "lunaticModelVersion": "2.3.2-rc7", "modele": "TESTANNE", "enoCoreVersion": "2.4.1-pairwise", "generatingDate": "29-06-2023 08:47:02", "missing": false, "id": "kx0a2hn8", "maxPage": "13"}
+{
+    "cleaning": {
+        "Q1": {
+            "Q2": "(Q1= \"A\")"
+        }
+    },
+    "variables": [
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": null,
+                "EDITED": null,
+                "INPUTED": null,
+                "FORCED": null,
+                "PREVIOUS": null
+            },
+            "name": "COMMENT_QE"
+        },
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": [
+                    null
+                ],
+                "EDITED": [
+                    null
+                ],
+                "INPUTED": [
+                    null
+                ],
+                "FORCED": [
+                    null
+                ],
+                "PREVIOUS": [
+                    null
+                ]
+            },
+            "name": "PRENOM"
+        },
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": [
+                    null
+                ],
+                "EDITED": [
+                    null
+                ],
+                "INPUTED": [
+                    null
+                ],
+                "FORCED": [
+                    null
+                ],
+                "PREVIOUS": [
+                    null
+                ]
+            },
+            "name": "Q1"
+        },
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": [
+                    null
+                ],
+                "EDITED": [
+                    null
+                ],
+                "INPUTED": [
+                    null
+                ],
+                "FORCED": [
+                    null
+                ],
+                "PREVIOUS": [
+                    null
+                ]
+            },
+            "name": "Q2"
+        },
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": null,
+                "EDITED": null,
+                "INPUTED": null,
+                "FORCED": null,
+                "PREVIOUS": null
+            },
+            "name": "NBP"
+        },
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": [
+                    null
+                ],
+                "EDITED": [
+                    null
+                ],
+                "INPUTED": [
+                    null
+                ],
+                "FORCED": [
+                    null
+                ],
+                "PREVIOUS": [
+                    null
+                ]
+            },
+            "name": "P1"
+        },
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": [
+                    null
+                ],
+                "EDITED": [
+                    null
+                ],
+                "INPUTED": [
+                    null
+                ],
+                "FORCED": [
+                    null
+                ],
+                "PREVIOUS": [
+                    null
+                ]
+            },
+            "name": "P2"
+        },
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": [
+                    null
+                ],
+                "EDITED": [
+                    null
+                ],
+                "INPUTED": [
+                    null
+                ],
+                "FORCED": [
+                    null
+                ],
+                "PREVIOUS": [
+                    null
+                ]
+            },
+            "name": "P1B"
+        },
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": [
+                    null
+                ],
+                "EDITED": [
+                    null
+                ],
+                "INPUTED": [
+                    null
+                ],
+                "FORCED": [
+                    null
+                ],
+                "PREVIOUS": [
+                    null
+                ]
+            },
+            "name": "P2B"
+        },
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": null,
+                "EDITED": null,
+                "INPUTED": null,
+                "FORCED": null,
+                "PREVIOUS": null
+            },
+            "name": "NB"
+        },
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": [
+                    null
+                ],
+                "EDITED": [
+                    null
+                ],
+                "INPUTED": [
+                    null
+                ],
+                "FORCED": [
+                    null
+                ],
+                "PREVIOUS": [
+                    null
+                ]
+            },
+            "name": "PRENOM2"
+        },
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": [
+                    null
+                ],
+                "EDITED": [
+                    null
+                ],
+                "INPUTED": [
+                    null
+                ],
+                "FORCED": [
+                    null
+                ],
+                "PREVIOUS": [
+                    null
+                ]
+            },
+            "name": "AGE"
+        },
+        {
+            "variableType": "CALCULATED",
+            "expression": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "name": "FILTER_RESULT_PRENOM",
+            "inFilter": "false",
+            "shapeFrom": "PRENOM"
+        },
+        {
+            "variableType": "CALCULATED",
+            "expression": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "name": "FILTER_RESULT_Q1",
+            "inFilter": "false",
+            "shapeFrom": "Q1"
+        },
+        {
+            "variableType": "CALCULATED",
+            "bindingDependencies": [
+                "Q1"
+            ],
+            "expression": {
+                "type": "VTL",
+                "value": "(Q1= \"A\")"
+            },
+            "name": "FILTER_RESULT_Q2",
+            "inFilter": "false",
+            "shapeFrom": "Q1"
+        },
+        {
+            "variableType": "CALCULATED",
+            "expression": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "name": "FILTER_RESULT_NBP",
+            "inFilter": "false"
+        },
+        {
+            "variableType": "CALCULATED",
+            "expression": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "name": "FILTER_RESULT_P1",
+            "inFilter": "false",
+            "shapeFrom": "P1"
+        },
+        {
+            "variableType": "CALCULATED",
+            "expression": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "name": "FILTER_RESULT_P2",
+            "inFilter": "false",
+            "shapeFrom": "P1"
+        },
+        {
+            "variableType": "CALCULATED",
+            "expression": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "name": "FILTER_RESULT_P1B",
+            "inFilter": "false",
+            "shapeFrom": "P1B"
+        },
+        {
+            "variableType": "CALCULATED",
+            "expression": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "name": "FILTER_RESULT_P2B",
+            "inFilter": "false",
+            "shapeFrom": "P1B"
+        },
+        {
+            "variableType": "CALCULATED",
+            "expression": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "name": "FILTER_RESULT_NB",
+            "inFilter": "false"
+        },
+        {
+            "variableType": "CALCULATED",
+            "expression": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "name": "FILTER_RESULT_PRENOM2",
+            "inFilter": "false",
+            "shapeFrom": "PRENOM2"
+        },
+        {
+            "variableType": "CALCULATED",
+            "expression": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "name": "FILTER_RESULT_AGE",
+            "inFilter": "false",
+            "shapeFrom": "AGE"
+        }
+    ],
+    "components": [
+        {
+            "componentType": "Sequence",
+            "hierarchy": {
+                "sequence": {
+                    "id": "kwupyhsh",
+                    "page": "1",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"I - \" || \"S1 - boucle liée de 1 à max 4 avec un nb inconnu au début\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "kwupyhsh",
+            "page": "1",
+            "label": {
+                "type": "VTL|MD",
+                "value": "\"I - \" || \"S1 - boucle liée de 1 à max 4 avec un nb inconnu au début\""
+            }
+        },
+        {
+            "paginatedLoop": false,
+            "componentType": "Loop",
+            "components": [
+                {
+                    "componentType": "Subsequence",
+                    "goToPage": "2",
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "kwupyhsh",
+                            "page": "1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"I - \" || \"S1 - boucle liée de 1 à max 4 avec un nb inconnu au début\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "l7g7ou85",
+                            "page": "2",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "SS11"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "type": "VTL",
+                        "value": "true"
+                    },
+                    "id": "l7g7ou85",
+                    "page": "2",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "SS11"
+                    }
+                },
+                {
+                    "componentType": "Input",
+                    "bindingDependencies": [
+                        "PRENOM"
+                    ],
+                    "controls": [
+                        {
+                            "bindingDependencies": [
+                                "PRENOM"
+                            ],
+                            "criticality": "WARN",
+                            "errorMessage": {
+                                "type": "VTL|MD",
+                                "value": "\"Prénom est vide\""
+                            },
+                            "typeOfControl": "CONSISTENCY",
+                            "control": {
+                                "type": "VTL",
+                                "value": "not(nvl(PRENOM,\"\")=\"\")"
+                            },
+                            "id": "l7g7tek6-CI-0"
+                        }
+                    ],
+                    "response": {
+                        "name": "PRENOM"
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "kwupyhsh",
+                            "page": "1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"I - \" || \"S1 - boucle liée de 1 à max 4 avec un nb inconnu au début\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "l7g7ou85",
+                            "page": "2",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "SS11"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "type": "VTL",
+                        "value": "true"
+                    },
+                    "id": "l7g7tek6",
+                    "page": "2",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"➡ 1. \" || \"PRENOM\""
+                    },
+                    "mandatory": false,
+                    "maxLength": 249,
+                    "declarations": [
+                        {
+                            "declarationType": "HELP",
+                            "id": "l7g7tek6-lfgkfl45",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"Ajout d’un contrôle sur prénom vide\""
+                            },
+                            "position": "AFTER_QUESTION_TEXT"
+                        }
+                    ]
+                }
+            ],
+            "bindingDependencies": [
+                "PRENOM"
+            ],
+            "depth": 1,
+            "hierarchy": {
+                "sequence": {
+                    "id": "kwupyhsh",
+                    "page": "1",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"I - \" || \"S1 - boucle liée de 1 à max 4 avec un nb inconnu au début\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "l7pusaki",
+            "page": "2",
+            "label": {
+                "type": "VTL|MD",
+                "value": "Ajoute un prénom"
+            },
+            "lines": {
+                "min": {
+                    "type": "VTL",
+                    "value": "1"
+                },
+                "max": {
+                    "type": "VTL",
+                    "value": "4"
+                }
+            }
+        },
+        {
+            "paginatedLoop": true,
+            "componentType": "Loop",
+            "loopDependencies": [
+                "PRENOM"
+            ],
+            "components": [
+                {
+                    "componentType": "Subsequence",
+                    "bindingDependencies": [
+                        "PRENOM"
+                    ],
+                    "goToPage": "3.1",
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "kwupyhsh",
+                            "page": "1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"I - \" || \"S1 - boucle liée de 1 à max 4 avec un nb inconnu au début\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "l7g7lnew",
+                            "page": "3.1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "SS12"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "type": "VTL",
+                        "value": "true"
+                    },
+                    "id": "l7g7lnew",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "SS12"
+                    }
+                },
+                {
+                    "componentType": "Input",
+                    "bindingDependencies": [
+                        "PRENOM",
+                        "Q1"
+                    ],
+                    "controls": [
+                        {
+                            "bindingDependencies": [
+                                "Q1"
+                            ],
+                            "criticality": "WARN",
+                            "errorMessage": {
+                                "type": "VTL|MD",
+                                "value": "\"Q1 est vide\""
+                            },
+                            "typeOfControl": "CONSISTENCY",
+                            "control": {
+                                "type": "VTL",
+                                "value": "not(nvl(Q1,\"\")=\"\")"
+                            },
+                            "id": "kx05sq4y-CI-0"
+                        }
+                    ],
+                    "response": {
+                        "name": "Q1"
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "kwupyhsh",
+                            "page": "1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"I - \" || \"S1 - boucle liée de 1 à max 4 avec un nb inconnu au début\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "l7g7lnew",
+                            "page": "3.1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "SS12"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "type": "VTL",
+                        "value": "true"
+                    },
+                    "id": "kx05sq4y",
+                    "page": "3.1",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"➡ 2. \" || \"Q1 de \" || PRENOM"
+                    },
+                    "mandatory": false,
+                    "maxLength": 249,
+                    "declarations": [
+                        {
+                            "declarationType": "HELP",
+                            "id": "kx05sq4y-lciynl4d",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"Filtre pour affichage de Q2 : Q2 affichée si Q1 = A, donc à tester\""
+                            },
+                            "position": "AFTER_QUESTION_TEXT"
+                        },
+                        {
+                            "declarationType": "HELP",
+                            "id": "kx05sq4y-lfgkbdvi",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"Contrôle sur Q1 vide\""
+                            },
+                            "position": "AFTER_QUESTION_TEXT"
+                        }
+                    ]
+                },
+                {
+                    "componentType": "Input",
+                    "bindingDependencies": [
+                        "PRENOM",
+                        "Q2"
+                    ],
+                    "response": {
+                        "name": "Q2"
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "kwupyhsh",
+                            "page": "1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"I - \" || \"S1 - boucle liée de 1 à max 4 avec un nb inconnu au début\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "l7g7lnew",
+                            "page": "3.1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "SS12"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "bindingDependencies": [
+                            "Q1"
+                        ],
+                        "type": "VTL",
+                        "value": "(Q1= \"A\")"
+                    },
+                    "id": "kx06v7yq",
+                    "page": "3.2",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"➡ 3. \" || \"Affichage de Q2 si Q1 = A - rappel du prénom : \" || PRENOM"
+                    },
+                    "mandatory": false,
+                    "maxLength": 249
+                }
+            ],
+            "bindingDependencies": [
+                "PRENOM",
+                "Q1",
+                "Q2"
+            ],
+            "depth": 1,
+            "hierarchy": {
+                "sequence": {
+                    "id": "kwupyhsh",
+                    "page": "1",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"I - \" || \"S1 - boucle liée de 1 à max 4 avec un nb inconnu au début\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "l7puyos3",
+            "page": "3",
+            "maxPage": "2",
+            "iterations": {
+                "type": "VTL",
+                "value": "count(PRENOM)"
+            }
+        },
+        {
+            "componentType": "Sequence",
+            "hierarchy": {
+                "sequence": {
+                    "id": "l7puc9t3",
+                    "page": "4",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 à 4, ne sera pas liée\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "l7puc9t3",
+            "page": "4",
+            "label": {
+                "type": "VTL|MD",
+                "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 à 4, ne sera pas liée\""
+            }
+        },
+        {
+            "componentType": "InputNumber",
+            "controls": [
+                {
+                    "criticality": "ERROR",
+                    "errorMessage": {
+                        "type": "VTL|MD",
+                        "value": "\" La valeur doit être comprise entre 0 et 100.\""
+                    },
+                    "typeOfControl": "FORMAT",
+                    "control": {
+                        "type": "VTL",
+                        "value": "not(not(isnull(NBP)) and (0>NBP or 100<NBP))"
+                    },
+                    "id": "kwupqy19-format-borne-inf-sup"
+                },
+                {
+                    "criticality": "ERROR",
+                    "errorMessage": {
+                        "type": "VTL|MD",
+                        "value": "\"Le nombre doit comporter au maximum 0 chiffre(s) après la virgule.\""
+                    },
+                    "typeOfControl": "FORMAT",
+                    "control": {
+                        "type": "VTL",
+                        "value": "not(not(isnull(NBP))  and round(NBP,0)<>NBP)"
+                    },
+                    "id": "kwupqy19-format-decimal"
+                }
+            ],
+            "max": 100,
+            "hierarchy": {
+                "sequence": {
+                    "id": "l7puc9t3",
+                    "page": "4",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 à 4, ne sera pas liée\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "label": {
+                "type": "VTL|MD",
+                "value": "\"➡ 4. \" || \"NBP\""
+            },
+            "mandatory": false,
+            "declarations": [
+                {
+                    "declarationType": "HELP",
+                    "id": "kwupqy19-kx09g78a",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"on vérifie que la formule cast-string-NB est ok :\" || cast(NBP,string)"
+                    },
+                    "position": "AFTER_QUESTION_TEXT"
+                }
+            ],
+            "bindingDependencies": [
+                "NBP"
+            ],
+            "min": 0,
+            "response": {
+                "name": "NBP"
+            },
+            "decimals": 0,
+            "id": "kwupqy19",
+            "page": "5"
+        },
+        {
+            "paginatedLoop": false,
+            "componentType": "Loop",
+            "components": [
+                {
+                    "componentType": "Subsequence",
+                    "goToPage": "6",
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "l7puc9t3",
+                            "page": "4",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 à 4, ne sera pas liée\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "l7puoovt",
+                            "page": "6",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Decrire le produit avec max fixe"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "type": "VTL",
+                        "value": "true"
+                    },
+                    "id": "l7puoovt",
+                    "page": "6",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "Decrire le produit avec max fixe"
+                    },
+                    "declarations": [
+                        {
+                            "declarationType": "HELP",
+                            "id": "l7puoovt-l7pv1nnm",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"on décrit un produit, boucle de 1 à 4\""
+                            },
+                            "position": "AFTER_QUESTION_TEXT"
+                        }
+                    ]
+                },
+                {
+                    "componentType": "Input",
+                    "bindingDependencies": [
+                        "P1"
+                    ],
+                    "controls": [
+                        {
+                            "bindingDependencies": [
+                                "P1"
+                            ],
+                            "criticality": "WARN",
+                            "errorMessage": {
+                                "type": "VTL|MD",
+                                "value": "\"P1 est vide\""
+                            },
+                            "typeOfControl": "CONSISTENCY",
+                            "control": {
+                                "type": "VTL",
+                                "value": "not(nvl(P1,\"\")=\"\")"
+                            },
+                            "id": "l7pu8g5e-CI-0"
+                        }
+                    ],
+                    "response": {
+                        "name": "P1"
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "l7puc9t3",
+                            "page": "4",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 à 4, ne sera pas liée\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "l7puoovt",
+                            "page": "6",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Decrire le produit avec max fixe"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "type": "VTL",
+                        "value": "true"
+                    },
+                    "id": "l7pu8g5e",
+                    "page": "6",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"➡ 5. \" || \"Décrire un produit\""
+                    },
+                    "mandatory": false,
+                    "maxLength": 249,
+                    "declarations": [
+                        {
+                            "declarationType": "HELP",
+                            "id": "l7pu8g5e-lfgmlc9s",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"Contrôle sur P1 vide\""
+                            },
+                            "position": "AFTER_QUESTION_TEXT"
+                        }
+                    ]
+                },
+                {
+                    "componentType": "Input",
+                    "bindingDependencies": [
+                        "P2"
+                    ],
+                    "response": {
+                        "name": "P2"
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "l7puc9t3",
+                            "page": "4",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 à 4, ne sera pas liée\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "l7puoovt",
+                            "page": "6",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Decrire le produit avec max fixe"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "type": "VTL",
+                        "value": "true"
+                    },
+                    "id": "l7pu5agy",
+                    "page": "6",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"➡ 6. \" || \"Avis sur produit\""
+                    },
+                    "mandatory": false,
+                    "maxLength": 249
+                }
+            ],
+            "bindingDependencies": [
+                "P1",
+                "P2"
+            ],
+            "depth": 1,
+            "hierarchy": {
+                "sequence": {
+                    "id": "l7puc9t3",
+                    "page": "4",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 à 4, ne sera pas liée\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "l7puibqj",
+            "page": "6",
+            "label": {
+                "type": "VTL|MD",
+                "value": "Ajouter un produit"
+            },
+            "lines": {
+                "min": {
+                    "type": "VTL",
+                    "value": "1"
+                },
+                "max": {
+                    "type": "VTL",
+                    "value": "4"
+                }
+            }
+        },
+        {
+            "paginatedLoop": false,
+            "componentType": "Loop",
+            "loopDependencies": [
+                "NBP"
+            ],
+            "components": [
+                {
+                    "componentType": "Subsequence",
+                    "bindingDependencies": [
+                        "NBP"
+                    ],
+                    "goToPage": "7",
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "l7puc9t3",
+                            "page": "4",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 à 4, ne sera pas liée\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "lhywdenk",
+                            "page": "7",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Decrire le produit avec max collecté NBP"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "type": "VTL",
+                        "value": "true"
+                    },
+                    "id": "lhywdenk",
+                    "page": "7",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "Decrire le produit avec max collecté NBP"
+                    }
+                },
+                {
+                    "componentType": "Input",
+                    "bindingDependencies": [
+                        "P1B",
+                        "NBP"
+                    ],
+                    "response": {
+                        "name": "P1B"
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "l7puc9t3",
+                            "page": "4",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 à 4, ne sera pas liée\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "lhywdenk",
+                            "page": "7",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Decrire le produit avec max collecté NBP"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "type": "VTL",
+                        "value": "true"
+                    },
+                    "id": "lhywkzhc",
+                    "page": "7",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"➡ 7. \" || \"Décrire un produit\""
+                    },
+                    "mandatory": false,
+                    "maxLength": 249,
+                    "declarations": [
+                        {
+                            "declarationType": "HELP",
+                            "id": "lhywkzhc-lhywl5zk",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"Contrôle sur P1 vide\""
+                            },
+                            "position": "AFTER_QUESTION_TEXT"
+                        }
+                    ]
+                },
+                {
+                    "componentType": "Input",
+                    "bindingDependencies": [
+                        "P2B",
+                        "NBP"
+                    ],
+                    "response": {
+                        "name": "P2B"
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "l7puc9t3",
+                            "page": "4",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 à 4, ne sera pas liée\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "lhywdenk",
+                            "page": "7",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Decrire le produit avec max collecté NBP"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "type": "VTL",
+                        "value": "true"
+                    },
+                    "id": "lhywjv88",
+                    "page": "7",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"➡ 8. \" || \"Avis sur produit\""
+                    },
+                    "mandatory": false,
+                    "maxLength": 249
+                }
+            ],
+            "bindingDependencies": [
+                "NBP",
+                "P1B",
+                "P2B"
+            ],
+            "depth": 1,
+            "hierarchy": {
+                "sequence": {
+                    "id": "l7puc9t3",
+                    "page": "4",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"II - \" || \"S2 - boucle type conjoncture, de 1 à 4, ne sera pas liée\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "lhywawti",
+            "page": "7",
+            "label": {
+                "type": "VTL|MD",
+                "value": "Ajouter"
+            },
+            "lines": {
+                "min": {
+                    "type": "VTL",
+                    "value": "1"
+                },
+                "max": {
+                    "type": "VTL",
+                    "value": "nvl(NBP,1)"
+                }
+            }
+        },
+        {
+            "componentType": "Sequence",
+            "hierarchy": {
+                "sequence": {
+                    "id": "kx06a9lq",
+                    "page": "8",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"III - \" || \"S3 - boucle N occurrences, N collecté en premier, type logement\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "kx06a9lq",
+            "page": "8",
+            "label": {
+                "type": "VTL|MD",
+                "value": "\"III - \" || \"S3 - boucle N occurrences, N collecté en premier, type logement\""
+            }
+        },
+        {
+            "componentType": "InputNumber",
+            "controls": [
+                {
+                    "criticality": "ERROR",
+                    "errorMessage": {
+                        "type": "VTL|MD",
+                        "value": "\" La valeur doit être comprise entre 0 et 100.\""
+                    },
+                    "typeOfControl": "FORMAT",
+                    "control": {
+                        "type": "VTL",
+                        "value": "not(not(isnull(NB)) and (0>NB or 100<NB))"
+                    },
+                    "id": "lhyvw4w4-format-borne-inf-sup"
+                },
+                {
+                    "criticality": "ERROR",
+                    "errorMessage": {
+                        "type": "VTL|MD",
+                        "value": "\"Le nombre doit comporter au maximum 0 chiffre(s) après la virgule.\""
+                    },
+                    "typeOfControl": "FORMAT",
+                    "control": {
+                        "type": "VTL",
+                        "value": "not(not(isnull(NB))  and round(NB,0)<>NB)"
+                    },
+                    "id": "lhyvw4w4-format-decimal"
+                }
+            ],
+            "max": 100,
+            "hierarchy": {
+                "sequence": {
+                    "id": "kx06a9lq",
+                    "page": "8",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"III - \" || \"S3 - boucle N occurrences, N collecté en premier, type logement\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "label": {
+                "type": "VTL|MD",
+                "value": "\"➡ 9. \" || \"NB\""
+            },
+            "mandatory": false,
+            "declarations": [
+                {
+                    "declarationType": "HELP",
+                    "id": "lhyvw4w4-lhyw7k0f",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"on vérifie que la formule cast-string-NB est ok :\" || cast(NB,string)"
+                    },
+                    "position": "AFTER_QUESTION_TEXT"
+                }
+            ],
+            "bindingDependencies": [
+                "NB"
+            ],
+            "min": 0,
+            "response": {
+                "name": "NB"
+            },
+            "decimals": 0,
+            "id": "lhyvw4w4",
+            "page": "9"
+        },
+        {
+            "paginatedLoop": false,
+            "componentType": "Loop",
+            "loopDependencies": [
+                "NB"
+            ],
+            "components": [
+                {
+                    "componentType": "Subsequence",
+                    "bindingDependencies": [
+                        "NB"
+                    ],
+                    "goToPage": "10",
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "kx06a9lq",
+                            "page": "8",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"III - \" || \"S3 - boucle N occurrences, N collecté en premier, type logement\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "kx061cac",
+                            "page": "10",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "SS31"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "type": "VTL",
+                        "value": "true"
+                    },
+                    "id": "kx061cac",
+                    "page": "10",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "SS31"
+                    }
+                },
+                {
+                    "componentType": "Input",
+                    "bindingDependencies": [
+                        "PRENOM2",
+                        "NB"
+                    ],
+                    "response": {
+                        "name": "PRENOM2"
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "kx06a9lq",
+                            "page": "8",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"III - \" || \"S3 - boucle N occurrences, N collecté en premier, type logement\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "kx061cac",
+                            "page": "10",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "SS31"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "type": "VTL",
+                        "value": "true"
+                    },
+                    "id": "kwupruv2",
+                    "page": "10",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"➡ 10. \" || \"PRENOM\""
+                    },
+                    "mandatory": false,
+                    "maxLength": 249
+                }
+            ],
+            "bindingDependencies": [
+                "NB",
+                "PRENOM2"
+            ],
+            "depth": 1,
+            "hierarchy": {
+                "sequence": {
+                    "id": "kx06a9lq",
+                    "page": "8",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"III - \" || \"S3 - boucle N occurrences, N collecté en premier, type logement\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "l7pv0z7b",
+            "page": "10",
+            "lines": {
+                "min": {
+                    "type": "VTL",
+                    "value": "nvl(NB,1)"
+                },
+                "max": {
+                    "type": "VTL",
+                    "value": "nvl(NB,1)"
+                }
+            }
+        },
+        {
+            "paginatedLoop": true,
+            "componentType": "Loop",
+            "loopDependencies": [
+                "PRENOM2"
+            ],
+            "components": [
+                {
+                    "componentType": "Subsequence",
+                    "bindingDependencies": [
+                        "PRENOM2"
+                    ],
+                    "goToPage": "11.1",
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "kx06a9lq",
+                            "page": "8",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"III - \" || \"S3 - boucle N occurrences, N collecté en premier, type logement\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "kx09u145",
+                            "page": "11.1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "SS32"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "type": "VTL",
+                        "value": "true"
+                    },
+                    "id": "kx09u145",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "SS32"
+                    }
+                },
+                {
+                    "componentType": "InputNumber",
+                    "controls": [
+                        {
+                            "criticality": "ERROR",
+                            "errorMessage": {
+                                "type": "VTL|MD",
+                                "value": "\" La valeur doit être comprise entre 0 et 99.\""
+                            },
+                            "typeOfControl": "FORMAT",
+                            "control": {
+                                "type": "VTL",
+                                "value": "not(not(isnull(AGE)) and (0>AGE or 99<AGE))"
+                            },
+                            "id": "kx05rmm0-format-borne-inf-sup"
+                        },
+                        {
+                            "criticality": "ERROR",
+                            "errorMessage": {
+                                "type": "VTL|MD",
+                                "value": "\"Le nombre doit comporter au maximum 0 chiffre(s) après la virgule.\""
+                            },
+                            "typeOfControl": "FORMAT",
+                            "control": {
+                                "type": "VTL",
+                                "value": "not(not(isnull(AGE))  and round(AGE,0)<>AGE)"
+                            },
+                            "id": "kx05rmm0-format-decimal"
+                        },
+                        {
+                            "bindingDependencies": [
+                                "AGE"
+                            ],
+                            "criticality": "WARN",
+                            "errorMessage": {
+                                "type": "VTL|MD",
+                                "value": "\"AGE est vide\""
+                            },
+                            "typeOfControl": "CONSISTENCY",
+                            "control": {
+                                "type": "VTL",
+                                "value": "not(nvl(AGE,\"\")=\"\")"
+                            },
+                            "id": "kx05rmm0-CI-0"
+                        }
+                    ],
+                    "max": 99,
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "kx06a9lq",
+                            "page": "8",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"III - \" || \"S3 - boucle N occurrences, N collecté en premier, type logement\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "kx09u145",
+                            "page": "11.1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "SS32"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "type": "VTL",
+                        "value": "true"
+                    },
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"➡ 11. \" || \"AGE de \" || PRENOM2"
+                    },
+                    "mandatory": false,
+                    "declarations": [
+                        {
+                            "declarationType": "HELP",
+                            "id": "kx05rmm0-lfgmwbpy",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"Contrôle sur AGE vide\""
+                            },
+                            "position": "AFTER_QUESTION_TEXT"
+                        }
+                    ],
+                    "bindingDependencies": [
+                        "PRENOM2",
+                        "AGE"
+                    ],
+                    "min": 0,
+                    "response": {
+                        "name": "AGE"
+                    },
+                    "decimals": 0,
+                    "id": "kx05rmm0",
+                    "page": "11.1"
+                }
+            ],
+            "bindingDependencies": [
+                "PRENOM2",
+                "AGE"
+            ],
+            "depth": 1,
+            "hierarchy": {
+                "sequence": {
+                    "id": "kx06a9lq",
+                    "page": "8",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"III - \" || \"S3 - boucle N occurrences, N collecté en premier, type logement\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "l7puvvpz",
+            "page": "11",
+            "maxPage": "1",
+            "iterations": {
+                "type": "VTL",
+                "value": "count(PRENOM2)"
+            }
+        },
+        {
+            "componentType": "Sequence",
+            "hierarchy": {
+                "sequence": {
+                    "id": "COMMENT-SEQ",
+                    "page": "12",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"Commentaire\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "COMMENT-SEQ",
+            "page": "12",
+            "label": {
+                "type": "VTL|MD",
+                "value": "\"Commentaire\""
+            }
+        },
+        {
+            "componentType": "Textarea",
+            "bindingDependencies": [
+                "COMMENT_QE"
+            ],
+            "response": {
+                "name": "COMMENT_QE"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "COMMENT-SEQ",
+                    "page": "12",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"Commentaire\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "COMMENT-QUESTION",
+            "page": "13",
+            "label": {
+                "type": "VTL|MD",
+                "value": "\"Avez-vous des remarques concernant l'enquête ou des commentaires ?\""
+            },
+            "mandatory": false,
+            "maxLength": 2000
+        }
+    ],
+    "pagination": "question",
+    "resizing": {
+        "NB": {
+            "variables": [
+                "PRENOM2",
+                "AGE"
+            ],
+            "size": "nvl(NB,1)"
+        },
+        "NBP": {
+            "variables": [
+                "P1B",
+                "P2B"
+            ],
+            "size": "nvl(NBP,1)"
+        },
+        "PRENOM": {
+            "variables": [
+                "Q1",
+                "Q2"
+            ],
+            "size": "count(PRENOM)"
+        }
+    },
+    "label": {
+        "type": "VTL|MD",
+        "value": "QNONREG - tous types boucle nombre variable ou fixe (min=max) - ok"
+    },
+    "lunaticModelVersion": "2.3.2-rc7",
+    "modele": "TESTANNE",
+    "enoCoreVersion": "2.4.1-pairwise",
+    "generatingDate": "29-06-2023 08:47:02",
+    "missing": false,
+    "id": "kx0a2hn8",
+    "maxPage": "13"
+}

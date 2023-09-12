@@ -1,1 +1,1498 @@
-{"cleaning": {"Q1": {"Q2": "(not(AGE < 17)) and (Q1 = \"A\")"}, "PRENOMREF": {"AGE": "(not(PRENOM <> PRENOMREF))"}, "LIENS": {"ENFANT_SEUL": "(not(AGE > 17 or \"3\" in LIENS))"}, "PRENOM": {"AGE": "(not(PRENOM <> PRENOMREF))"}, "AGE": {"Q1": "(not(AGE < 17))", "Q2": "(not(AGE < 17)) and (Q1 = \"A\")", "Q3": "(not(AGE < 17))", "ENFANT_SEUL": "(not(AGE > 17 or \"3\" in LIENS))"}}, "variables": [{"variableType": "COLLECTED", "values": {"COLLECTED": null, "EDITED": null, "INPUTED": null, "FORCED": null, "PREVIOUS": null}, "name": "COMMENT_QE"}, {"variableType": "COLLECTED", "values": {"COLLECTED": null, "EDITED": null, "INPUTED": null, "FORCED": null, "PREVIOUS": null}, "name": "NBHAB"}, {"variableType": "COLLECTED", "values": {"COLLECTED": [null], "EDITED": [null], "INPUTED": [null], "FORCED": [null], "PREVIOUS": [null]}, "name": "PRENOM"}, {"variableType": "COLLECTED", "values": {"COLLECTED": [null], "EDITED": [null], "INPUTED": [null], "FORCED": [null], "PREVIOUS": [null]}, "name": "AGE"}, {"variableType": "COLLECTED", "values": {"COLLECTED": [[null]], "EDITED": [[null]], "INPUTED": [[null]], "FORCED": [[null]], "PREVIOUS": [[null]]}, "name": "LIENS"}, {"variableType": "COLLECTED", "values": {"COLLECTED": [null], "EDITED": [null], "INPUTED": [null], "FORCED": [null], "PREVIOUS": [null]}, "name": "ENFANT_SEUL"}, {"variableType": "COLLECTED", "values": {"COLLECTED": [null], "EDITED": [null], "INPUTED": [null], "FORCED": [null], "PREVIOUS": [null]}, "name": "Q1"}, {"variableType": "COLLECTED", "values": {"COLLECTED": [null], "EDITED": [null], "INPUTED": [null], "FORCED": [null], "PREVIOUS": [null]}, "name": "Q2"}, {"variableType": "COLLECTED", "values": {"COLLECTED": [null], "EDITED": [null], "INPUTED": [null], "FORCED": [null], "PREVIOUS": [null]}, "name": "Q3"}, {"variableType": "COLLECTED", "values": {"COLLECTED": null, "EDITED": null, "INPUTED": null, "FORCED": null, "PREVIOUS": null}, "name": "DERNIREQUE"}, {"variableType": "CALCULATED", "expression": {"type": "VTL", "value": "true"}, "name": "FILTER_RESULT_NBHAB", "inFilter": "false"}, {"variableType": "CALCULATED", "expression": {"type": "VTL", "value": "true"}, "name": "FILTER_RESULT_PRENOM", "inFilter": "false", "shapeFrom": "PRENOM"}, {"variableType": "CALCULATED", "bindingDependencies": ["PRENOM", "PRENOMREF"], "expression": {"type": "VTL", "value": "(not(PRENOM <> PRENOMREF))"}, "name": "FILTER_RESULT_AGE", "inFilter": "false", "shapeFrom": "AGE"}, {"variableType": "CALCULATED", "expression": {"type": "VTL", "value": "xAxis <> yAxis"}, "name": "FILTER_RESULT_LIENS", "inFilter": "false"}, {"variableType": "CALCULATED", "bindingDependencies": ["PRENOM"], "expression": {"type": "VTL", "value": "PRENOM"}, "name": "xAxis", "inFilter": "true", "shapeFrom": "PRENOM"}, {"variableType": "CALCULATED", "bindingDependencies": ["PRENOM"], "expression": {"type": "VTL", "value": "PRENOM"}, "name": "yAxis", "inFilter": "true", "shapeFrom": "PRENOM"}, {"variableType": "CALCULATED", "bindingDependencies": ["AGE", "LIENS"], "expression": {"type": "VTL", "value": "(not(AGE > 17 or \"3\" in LIENS))"}, "name": "FILTER_RESULT_ENFANT_SEUL", "inFilter": "false", "shapeFrom": "ENFANT_SEUL"}, {"variableType": "CALCULATED", "bindingDependencies": ["AGE"], "expression": {"type": "VTL", "value": "(not(AGE < 17))"}, "name": "FILTER_RESULT_Q1", "inFilter": "false", "shapeFrom": "Q1"}, {"variableType": "CALCULATED", "bindingDependencies": ["AGE", "Q1"], "expression": {"type": "VTL", "value": "(not(AGE < 17)) and (Q1 = \"A\")"}, "name": "FILTER_RESULT_Q2", "inFilter": "false", "shapeFrom": "Q1"}, {"variableType": "CALCULATED", "bindingDependencies": ["AGE"], "expression": {"type": "VTL", "value": "(not(AGE < 17))"}, "name": "FILTER_RESULT_Q3", "inFilter": "false", "shapeFrom": "Q1"}, {"variableType": "CALCULATED", "expression": {"type": "VTL", "value": "true"}, "name": "FILTER_RESULT_DERNIREQUE", "inFilter": "false"}, {"variableType": "CALCULATED", "bindingDependencies": ["PRENOM"], "expression": {"type": "VTL", "value": "first_value(PRENOM over())"}, "name": "PRENOMREF", "inFilter": "true"}], "components": [{"componentType": "Sequence", "hierarchy": {"sequence": {"id": "ldodmvpw", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"THL\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "ldodmvpw", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"THL\""}, "declarations": [{"declarationType": "HELP", "id": "ldodmvpw-lity4hfz", "label": {"type": "VTL|MD", "value": "Aide"}, "position": "AFTER_QUESTION_TEXT"}, {"declarationType": "INSTRUCTION", "id": "ldodmvpw-litxs78w", "label": {"type": "VTL|MD", "value": "Consigne"}, "position": "AFTER_QUESTION_TEXT"}]}, {"componentType": "InputNumber", "controls": [{"criticality": "ERROR", "errorMessage": {"type": "VTL|MD", "value": "\" La valeur doit \u00eatre comprise entre 1 et 10.\""}, "typeOfControl": "FORMAT", "control": {"type": "VTL", "value": "not(not(isnull(NBHAB)) and (1>NBHAB or 10<NBHAB))"}, "id": "ldodmfpq-format-borne-inf-sup"}, {"criticality": "ERROR", "errorMessage": {"type": "VTL|MD", "value": "\"Le nombre doit comporter au maximum 0 chiffre(s) apr\u00e8s la virgule.\""}, "typeOfControl": "FORMAT", "control": {"type": "VTL", "value": "not(not(isnull(NBHAB))  and round(NBHAB,0)<>NBHAB)"}, "id": "ldodmfpq-format-decimal"}], "max": 10, "hierarchy": {"sequence": {"id": "ldodmvpw", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"THL\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "label": {"type": "VTL|MD", "value": "\"\u27a1 1. \" || \"Combien de personnes habitent ce logement ?\""}, "mandatory": false, "bindingDependencies": ["NBHAB"], "min": 1, "response": {"name": "NBHAB"}, "decimals": 0, "id": "ldodmfpq", "page": "2"}, {"paginatedLoop": false, "componentType": "Loop", "loopDependencies": ["NBHAB"], "components": [{"componentType": "Subsequence", "bindingDependencies": ["NBHAB"], "goToPage": "3", "hierarchy": {"sequence": {"id": "ldodmvpw", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"THL\""}}, "subSequence": {"id": "ldodn448", "page": "3", "label": {"type": "VTL|MD", "value": "Description des habitants"}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "ldodn448", "page": "3", "label": {"type": "VTL|MD", "value": "Description des habitants"}, "declarations": [{"declarationType": "HELP", "id": "ldodn448-litxui6g", "label": {"type": "VTL|MD", "value": "Aide"}, "position": "AFTER_QUESTION_TEXT"}, {"declarationType": "INSTRUCTION", "id": "ldodn448-litxz7cp", "label": {"type": "VTL|MD", "value": "Consigne"}, "position": "AFTER_QUESTION_TEXT"}]}, {"componentType": "Input", "bindingDependencies": ["PRENOM", "NBHAB"], "response": {"name": "PRENOM"}, "hierarchy": {"sequence": {"id": "ldodmvpw", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"THL\""}}, "subSequence": {"id": "ldodn448", "page": "3", "label": {"type": "VTL|MD", "value": "Description des habitants"}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "ldoe54ur", "page": "3", "label": {"type": "VTL|MD", "value": "\"\u27a1 2. \" || \"Quel est le pr\u00e9nom de cette personne ?\""}, "mandatory": false, "maxLength": 249}], "bindingDependencies": ["NBHAB", "PRENOM"], "depth": 1, "hierarchy": {"sequence": {"id": "ldodmvpw", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"THL\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "ldoe0rct", "page": "3", "lines": {"min": {"type": "VTL", "value": "nvl(NBHAB,1)"}, "max": {"type": "VTL", "value": "nvl(NBHAB,1)"}}}, {"paginatedLoop": true, "componentType": "Loop", "loopDependencies": ["PRENOM"], "components": [{"componentType": "Subsequence", "bindingDependencies": ["PRENOM"], "goToPage": "4.1", "hierarchy": {"sequence": {"id": "ldodmvpw", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"THL\""}}, "subSequence": {"id": "ljwrssdi", "page": "4.1", "label": {"type": "VTL|MD", "value": "DESC_HAB"}}}, "conditionFilter": {"bindingDependencies": ["PRENOM", "PRENOMREF"], "type": "VTL", "value": "(not(PRENOM <> PRENOMREF))"}, "id": "ljwrssdi", "label": {"type": "VTL|MD", "value": "DESC_HAB"}}, {"componentType": "InputNumber", "controls": [{"criticality": "ERROR", "errorMessage": {"type": "VTL|MD", "value": "\" La valeur doit \u00eatre comprise entre 0 et 120.\""}, "typeOfControl": "FORMAT", "control": {"type": "VTL", "value": "not(not(isnull(AGE)) and (0>AGE or 120<AGE))"}, "id": "ldodqku4-format-borne-inf-sup"}, {"criticality": "ERROR", "errorMessage": {"type": "VTL|MD", "value": "\"Le nombre doit comporter au maximum 0 chiffre(s) apr\u00e8s la virgule.\""}, "typeOfControl": "FORMAT", "control": {"type": "VTL", "value": "not(not(isnull(AGE))  and round(AGE,0)<>AGE)"}, "id": "ldodqku4-format-decimal"}], "max": 120, "hierarchy": {"sequence": {"id": "ldodmvpw", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"THL\""}}, "subSequence": {"id": "ljwrssdi", "page": "4.1", "label": {"type": "VTL|MD", "value": "DESC_HAB"}}}, "conditionFilter": {"bindingDependencies": ["PRENOM", "PRENOMREF"], "type": "VTL", "value": "(not(PRENOM <> PRENOMREF))"}, "label": {"type": "VTL|MD", "value": "\"\u27a1 3. \" || \"Quel est l\u2019\u00e2ge de \" || nvl(PRENOM,\"\") || \" ?\""}, "mandatory": false, "declarations": [{"declarationType": "HELP", "id": "ldodqku4-ljws9vo2", "label": {"type": "VTL|MD", "value": "cast($TRAGE$,string)"}, "position": "AFTER_QUESTION_TEXT"}], "unit": "ann\u00e9es", "bindingDependencies": ["PRENOM", "AGE"], "min": 0, "response": {"name": "AGE"}, "decimals": 0, "id": "ldodqku4", "page": "4.1"}], "bindingDependencies": ["PRENOM", "AGE"], "depth": 1, "hierarchy": {"sequence": {"id": "ldodmvpw", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"THL\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "ljws3hwd", "page": "4", "maxPage": "1", "iterations": {"type": "VTL", "value": "count(PRENOM)"}}, {"componentType": "Subsequence", "goToPage": "5", "hierarchy": {"sequence": {"id": "ldodmvpw", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"THL\""}}, "subSequence": {"id": "ldoe64h3", "page": "5", "label": {"type": "VTL|MD", "value": "Liens entre les habitants - afficher si au moins un majeur"}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "ldoe64h3", "page": "5", "label": {"type": "VTL|MD", "value": "Liens entre les habitants - afficher si au moins un majeur"}, "declarations": [{"declarationType": "HELP", "id": "ldoe64h3-ljwrwoby", "label": {"type": "VTL|MD", "value": "cast($SUMTRAGE$,string)"}, "position": "AFTER_QUESTION_TEXT"}]}, {"componentType": "PairwiseLinks", "components": [{"componentType": "Dropdown", "bindingDependencies": ["LIENS"], "response": {"name": "LIENS"}, "options": [{"label": {"type": "VTL|MD", "value": "Son conjoint, sa conjointe"}, "value": "1"}, {"label": {"type": "VTL|MD", "value": "Sa m\u00e8re, son p\u00e8re"}, "value": "2"}, {"label": {"type": "VTL|MD", "value": "Sa fille, son fils"}, "value": "3"}, {"label": {"type": "VTL|MD", "value": "Sa soeur, son fr\u00e8re (y compris demi et quasi)"}, "value": "4"}, {"label": {"type": "VTL|MD", "value": "Sa belle-m\u00e8re, son beau-p\u00e8re (conjoint.e d\u2019un des parents)"}, "value": "5"}, {"label": {"type": "VTL|MD", "value": "L\u2019enfant du conjoint (belle-fille, beau-fils)"}, "value": "6"}, {"label": {"type": "VTL|MD", "value": "Sa belle-m\u00e8re, son beau-p\u00e8re (parent du conjoint)"}, "value": "7"}, {"label": {"type": "VTL|MD", "value": "Sa belle-fille, son beau-fils (conjoint.e d\u2019un enfant)"}, "value": "8"}, {"label": {"type": "VTL|MD", "value": "Sa grand-m\u00e8re, son grand-p\u00e8re"}, "value": "9"}, {"label": {"type": "VTL|MD", "value": "Sa petite-fille, petit-fils"}, "value": "10"}, {"label": {"type": "VTL|MD", "value": "Sa tante, son oncle"}, "value": "11"}, {"label": {"type": "VTL|MD", "value": "Sa cousine, son cousin"}, "value": "12"}, {"label": {"type": "VTL|MD", "value": "Sa ni\u00e8ce, son neveu"}, "value": "13"}, {"label": {"type": "VTL|MD", "value": "Un enfant plac\u00e9 en famille d\u2019accueil"}, "value": "14"}, {"label": {"type": "VTL|MD", "value": "Sa belle-soeur, son beau-fr\u00e8re"}, "value": "15"}, {"label": {"type": "VTL|MD", "value": "Un autre lien familial"}, "value": "16"}, {"label": {"type": "VTL|MD", "value": "Autre lien (employ\u00e9 de maison, salari\u00e9 log\u00e9, jeune au pair \u2026)"}, "value": "17"}], "conditionFilter": {"type": "VTL", "value": "xAxis <> yAxis"}, "id": "ldoeba22-pairwise-dropdown", "page": "6", "label": {"type": "VTL|MD", "value": "\"\u27a1 4. \" || \"Qui est \" || yAxis || \" pour \" || xAxis || \" ?\""}, "mandatory": false}], "bindingDependencies": ["LIENS"], "yAxisIterations": {"value": "count(PRENOM)"}, "hierarchy": {"sequence": {"id": "ldodmvpw", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"THL\""}}, "subSequence": {"id": "ldoe64h3", "page": "5", "label": {"type": "VTL|MD", "value": "Liens entre les habitants - afficher si au moins un majeur"}}}, "xAxisIterations": {"value": "count(PRENOM)"}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "ldoeba22", "page": "6", "symLinks": {"LIENS": {"11": "13", "12": "12", "13": "11", "14": null, "15": null, "16": "16", "17": "17", "18": "18", "1": "1", "2": "3", "3": "2", "4": "4", "5": "6", "6": "5", "7": "8", "8": "7", "9": "10", "10": "9"}}, "mandatory": false}, {"paginatedLoop": true, "componentType": "Loop", "loopDependencies": ["PRENOM"], "components": [{"componentType": "Subsequence", "bindingDependencies": ["PRENOM"], "goToPage": "7.1", "hierarchy": {"sequence": {"id": "ldodmvpw", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"THL\""}}, "subSequence": {"id": "ldoez5qc", "page": "7.1", "label": {"type": "VTL|MD", "value": "Questions sur les liens des habitants"}}}, "conditionFilter": {"bindingDependencies": ["AGE", "LIENS"], "type": "VTL", "value": "(not(AGE > 17 or \"3\" in LIENS))"}, "id": "ldoez5qc", "label": {"type": "VTL|MD", "value": "Questions sur les liens des habitants"}}, {"componentType": "Input", "bindingDependencies": ["LIENS", "PRENOM", "ENFANT_SEUL"], "response": {"name": "ENFANT_SEUL"}, "hierarchy": {"sequence": {"id": "ldodmvpw", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"THL\""}}, "subSequence": {"id": "ldoez5qc", "page": "7.1", "label": {"type": "VTL|MD", "value": "Questions sur les liens des habitants"}}}, "conditionFilter": {"bindingDependencies": ["AGE", "LIENS"], "type": "VTL", "value": "(not(AGE > 17 or \"3\" in LIENS))"}, "id": "ldoexsbc", "page": "7.1", "label": {"type": "VTL|MD", "value": "\"\u27a1 5. \" || \"Pourquoi \" || PRENOM || \" ne vit pas avec ses parents ?\""}, "mandatory": false, "maxLength": 249, "declarations": [{"declarationType": "HELP", "id": "ldoexsbc-ldvd1lsi", "label": {"type": "VTL|MD", "value": "if \"3\" not_in LIENS then \"pas 3\" else \"3\""}, "position": "AFTER_QUESTION_TEXT"}, {"declarationType": "HELP", "id": "ldoexsbc-lislr92s", "label": {"type": "VTL|MD", "value": "\"d\u00e9claration\""}, "position": "AFTER_QUESTION_TEXT"}]}], "bindingDependencies": ["LIENS", "PRENOM", "ENFANT_SEUL"], "depth": 1, "hierarchy": {"sequence": {"id": "ldodmvpw", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"THL\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "ldoem3k0", "page": "7", "maxPage": "1", "iterations": {"type": "VTL", "value": "count(PRENOM)"}}, {"paginatedLoop": true, "componentType": "Loop", "loopDependencies": ["PRENOM"], "components": [{"componentType": "Subsequence", "bindingDependencies": ["PRENOM"], "goToPage": "8.1", "hierarchy": {"sequence": {"id": "ldodmvpw", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"THL\""}}, "subSequence": {"id": "ldof1gdm", "page": "8.1", "label": {"type": "VTL|MD", "value": "QUESTIONS_PLUS_17ANS"}}}, "conditionFilter": {"bindingDependencies": ["AGE"], "type": "VTL", "value": "(not(AGE < 17))"}, "id": "ldof1gdm", "label": {"type": "VTL|MD", "value": "QUESTIONS_PLUS_17ANS"}}, {"componentType": "Input", "bindingDependencies": ["PRENOM", "Q1"], "response": {"name": "Q1"}, "hierarchy": {"sequence": {"id": "ldodmvpw", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"THL\""}}, "subSequence": {"id": "ldof1gdm", "page": "8.1", "label": {"type": "VTL|MD", "value": "QUESTIONS_PLUS_17ANS"}}}, "conditionFilter": {"bindingDependencies": ["AGE"], "type": "VTL", "value": "(not(AGE < 17))"}, "id": "ldoffn3o", "page": "8.1", "label": {"type": "VTL|MD", "value": "\"\u27a1 6. \" || \"Question qui va filtrer Q2 pour \" || PRENOM"}, "mandatory": false, "maxLength": 249, "declarations": [{"declarationType": "HELP", "id": "ldoffn3o-liudchiz", "label": {"type": "VTL|MD", "value": "\"Si Q1 = A alors afficher Q2\""}, "position": "AFTER_QUESTION_TEXT"}]}, {"componentType": "Input", "bindingDependencies": ["PRENOM", "Q2"], "response": {"name": "Q2"}, "hierarchy": {"sequence": {"id": "ldodmvpw", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"THL\""}}, "subSequence": {"id": "ldof1gdm", "page": "8.1", "label": {"type": "VTL|MD", "value": "QUESTIONS_PLUS_17ANS"}}}, "conditionFilter": {"bindingDependencies": ["AGE", "Q1"], "type": "VTL", "value": "(not(AGE < 17)) and (Q1 = \"A\")"}, "id": "liude0tk", "page": "8.2", "label": {"type": "VTL|MD", "value": "\"\u27a1 7. \" || \"Question Q2 affich\u00e9e si Q1 = A pour \" || PRENOM"}, "mandatory": false, "maxLength": 249}, {"componentType": "Input", "bindingDependencies": ["PRENOM", "Q3"], "response": {"name": "Q3"}, "hierarchy": {"sequence": {"id": "ldodmvpw", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"THL\""}}, "subSequence": {"id": "ldof1gdm", "page": "8.1", "label": {"type": "VTL|MD", "value": "QUESTIONS_PLUS_17ANS"}}}, "conditionFilter": {"bindingDependencies": ["AGE"], "type": "VTL", "value": "(not(AGE < 17))"}, "id": "liud6mss", "page": "8.3", "label": {"type": "VTL|MD", "value": "\"\u27a1 8. \" || \"Question troisi\u00e8me \" || PRENOM"}, "mandatory": false, "maxLength": 249}], "bindingDependencies": ["PRENOM", "Q1", "Q2", "Q3"], "depth": 1, "hierarchy": {"sequence": {"id": "ldodmvpw", "page": "1", "label": {"type": "VTL|MD", "value": "\"I - \" || \"THL\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "ldof5dww", "page": "8", "maxPage": "3", "iterations": {"type": "VTL", "value": "count(PRENOM)"}}, {"componentType": "Sequence", "hierarchy": {"sequence": {"id": "liudoeqe", "page": "9", "label": {"type": "VTL|MD", "value": "\"II - \" || \"S2\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "liudoeqe", "page": "9", "label": {"type": "VTL|MD", "value": "\"II - \" || \"S2\""}}, {"componentType": "Input", "bindingDependencies": ["DERNIREQUE"], "response": {"name": "DERNIREQUE"}, "hierarchy": {"sequence": {"id": "liudoeqe", "page": "9", "label": {"type": "VTL|MD", "value": "\"II - \" || \"S2\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "liudjf9l", "page": "10", "label": {"type": "VTL|MD", "value": "\"\u27a1 9. \" || \"Derni\u00e8re question\""}, "mandatory": false, "maxLength": 249}, {"componentType": "Sequence", "hierarchy": {"sequence": {"id": "COMMENT-SEQ", "page": "11", "label": {"type": "VTL|MD", "value": "\"Commentaire\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "COMMENT-SEQ", "page": "11", "label": {"type": "VTL|MD", "value": "\"Commentaire\""}}, {"componentType": "Textarea", "bindingDependencies": ["COMMENT_QE"], "response": {"name": "COMMENT_QE"}, "hierarchy": {"sequence": {"id": "COMMENT-SEQ", "page": "11", "label": {"type": "VTL|MD", "value": "\"Commentaire\""}}}, "conditionFilter": {"type": "VTL", "value": "true"}, "id": "COMMENT-QUESTION", "page": "12", "label": {"type": "VTL|MD", "value": "\"Avez-vous des remarques concernant l'enqu\u00eate ou des commentaires ?\""}, "mandatory": false, "maxLength": 2000}], "pagination": "question", "resizing": {"PRENOM": {"linksVariables": ["LIENS"], "sizeForLinksVariables": ["count(PRENOM)", "count(PRENOM)"]}, "NBHAB": {"variables": ["PRENOM", "AGE", "ENFANT_SEUL", "Q1", "Q2", "Q3"], "size": "nvl(NBHAB,1)"}}, "label": {"type": "VTL|MD", "value": "QNONREG Liens deux \u00e0 deux Proto TCM"}, "lunaticModelVersion": "2.3.2-rc7", "modele": "PROTO_TCM", "enoCoreVersion": "2.4.1-pairwise", "generatingDate": "11-07-2023 06:25:51", "missing": false, "id": "ldodefpq", "maxPage": "12"}
+{
+    "cleaning": {
+        "Q1": {
+            "Q2": "(not(AGE < 17)) and (Q1 = \"A\")"
+        },
+        "PRENOMREF": {
+            "AGE": "(not(PRENOM <> PRENOMREF))"
+        },
+        "LIENS": {
+            "ENFANT_SEUL": "(not(AGE > 17 or \"3\" in LIENS))"
+        },
+        "PRENOM": {
+            "AGE": "(not(PRENOM <> PRENOMREF))"
+        },
+        "AGE": {
+            "Q1": "(not(AGE < 17))",
+            "Q2": "(not(AGE < 17)) and (Q1 = \"A\")",
+            "Q3": "(not(AGE < 17))",
+            "ENFANT_SEUL": "(not(AGE > 17 or \"3\" in LIENS))"
+        }
+    },
+    "variables": [
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": null,
+                "EDITED": null,
+                "INPUTED": null,
+                "FORCED": null,
+                "PREVIOUS": null
+            },
+            "name": "COMMENT_QE"
+        },
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": null,
+                "EDITED": null,
+                "INPUTED": null,
+                "FORCED": null,
+                "PREVIOUS": null
+            },
+            "name": "NBHAB"
+        },
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": [
+                    null
+                ],
+                "EDITED": [
+                    null
+                ],
+                "INPUTED": [
+                    null
+                ],
+                "FORCED": [
+                    null
+                ],
+                "PREVIOUS": [
+                    null
+                ]
+            },
+            "name": "PRENOM"
+        },
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": [
+                    null
+                ],
+                "EDITED": [
+                    null
+                ],
+                "INPUTED": [
+                    null
+                ],
+                "FORCED": [
+                    null
+                ],
+                "PREVIOUS": [
+                    null
+                ]
+            },
+            "name": "AGE"
+        },
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": [
+                    [
+                        null
+                    ]
+                ],
+                "EDITED": [
+                    [
+                        null
+                    ]
+                ],
+                "INPUTED": [
+                    [
+                        null
+                    ]
+                ],
+                "FORCED": [
+                    [
+                        null
+                    ]
+                ],
+                "PREVIOUS": [
+                    [
+                        null
+                    ]
+                ]
+            },
+            "name": "LIENS"
+        },
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": [
+                    null
+                ],
+                "EDITED": [
+                    null
+                ],
+                "INPUTED": [
+                    null
+                ],
+                "FORCED": [
+                    null
+                ],
+                "PREVIOUS": [
+                    null
+                ]
+            },
+            "name": "ENFANT_SEUL"
+        },
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": [
+                    null
+                ],
+                "EDITED": [
+                    null
+                ],
+                "INPUTED": [
+                    null
+                ],
+                "FORCED": [
+                    null
+                ],
+                "PREVIOUS": [
+                    null
+                ]
+            },
+            "name": "Q1"
+        },
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": [
+                    null
+                ],
+                "EDITED": [
+                    null
+                ],
+                "INPUTED": [
+                    null
+                ],
+                "FORCED": [
+                    null
+                ],
+                "PREVIOUS": [
+                    null
+                ]
+            },
+            "name": "Q2"
+        },
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": [
+                    null
+                ],
+                "EDITED": [
+                    null
+                ],
+                "INPUTED": [
+                    null
+                ],
+                "FORCED": [
+                    null
+                ],
+                "PREVIOUS": [
+                    null
+                ]
+            },
+            "name": "Q3"
+        },
+        {
+            "variableType": "COLLECTED",
+            "values": {
+                "COLLECTED": null,
+                "EDITED": null,
+                "INPUTED": null,
+                "FORCED": null,
+                "PREVIOUS": null
+            },
+            "name": "DERNIREQUE"
+        },
+        {
+            "variableType": "CALCULATED",
+            "expression": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "name": "FILTER_RESULT_NBHAB",
+            "inFilter": "false"
+        },
+        {
+            "variableType": "CALCULATED",
+            "expression": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "name": "FILTER_RESULT_PRENOM",
+            "inFilter": "false",
+            "shapeFrom": "PRENOM"
+        },
+        {
+            "variableType": "CALCULATED",
+            "bindingDependencies": [
+                "PRENOM",
+                "PRENOMREF"
+            ],
+            "expression": {
+                "type": "VTL",
+                "value": "(not(PRENOM <> PRENOMREF))"
+            },
+            "name": "FILTER_RESULT_AGE",
+            "inFilter": "false",
+            "shapeFrom": "AGE"
+        },
+        {
+            "variableType": "CALCULATED",
+            "expression": {
+                "type": "VTL",
+                "value": "xAxis <> yAxis"
+            },
+            "name": "FILTER_RESULT_LIENS",
+            "inFilter": "false"
+        },
+        {
+            "variableType": "CALCULATED",
+            "bindingDependencies": [
+                "PRENOM"
+            ],
+            "expression": {
+                "type": "VTL",
+                "value": "PRENOM"
+            },
+            "name": "xAxis",
+            "inFilter": "true",
+            "shapeFrom": "PRENOM"
+        },
+        {
+            "variableType": "CALCULATED",
+            "bindingDependencies": [
+                "PRENOM"
+            ],
+            "expression": {
+                "type": "VTL",
+                "value": "PRENOM"
+            },
+            "name": "yAxis",
+            "inFilter": "true",
+            "shapeFrom": "PRENOM"
+        },
+        {
+            "variableType": "CALCULATED",
+            "bindingDependencies": [
+                "AGE",
+                "LIENS"
+            ],
+            "expression": {
+                "type": "VTL",
+                "value": "(not(AGE > 17 or \"3\" in LIENS))"
+            },
+            "name": "FILTER_RESULT_ENFANT_SEUL",
+            "inFilter": "false",
+            "shapeFrom": "ENFANT_SEUL"
+        },
+        {
+            "variableType": "CALCULATED",
+            "bindingDependencies": [
+                "AGE"
+            ],
+            "expression": {
+                "type": "VTL",
+                "value": "(not(AGE < 17))"
+            },
+            "name": "FILTER_RESULT_Q1",
+            "inFilter": "false",
+            "shapeFrom": "Q1"
+        },
+        {
+            "variableType": "CALCULATED",
+            "bindingDependencies": [
+                "AGE",
+                "Q1"
+            ],
+            "expression": {
+                "type": "VTL",
+                "value": "(not(AGE < 17)) and (Q1 = \"A\")"
+            },
+            "name": "FILTER_RESULT_Q2",
+            "inFilter": "false",
+            "shapeFrom": "Q1"
+        },
+        {
+            "variableType": "CALCULATED",
+            "bindingDependencies": [
+                "AGE"
+            ],
+            "expression": {
+                "type": "VTL",
+                "value": "(not(AGE < 17))"
+            },
+            "name": "FILTER_RESULT_Q3",
+            "inFilter": "false",
+            "shapeFrom": "Q1"
+        },
+        {
+            "variableType": "CALCULATED",
+            "expression": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "name": "FILTER_RESULT_DERNIREQUE",
+            "inFilter": "false"
+        },
+        {
+            "variableType": "CALCULATED",
+            "bindingDependencies": [
+                "PRENOM"
+            ],
+            "expression": {
+                "type": "VTL",
+                "value": "first_value(PRENOM over())"
+            },
+            "name": "PRENOMREF",
+            "inFilter": "true"
+        }
+    ],
+    "components": [
+        {
+            "componentType": "Sequence",
+            "hierarchy": {
+                "sequence": {
+                    "id": "ldodmvpw",
+                    "page": "1",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"I - \" || \"THL\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "ldodmvpw",
+            "page": "1",
+            "label": {
+                "type": "VTL|MD",
+                "value": "\"I - \" || \"THL\""
+            },
+            "declarations": [
+                {
+                    "declarationType": "HELP",
+                    "id": "ldodmvpw-lity4hfz",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "Aide"
+                    },
+                    "position": "AFTER_QUESTION_TEXT"
+                },
+                {
+                    "declarationType": "INSTRUCTION",
+                    "id": "ldodmvpw-litxs78w",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "Consigne"
+                    },
+                    "position": "AFTER_QUESTION_TEXT"
+                }
+            ]
+        },
+        {
+            "componentType": "InputNumber",
+            "controls": [
+                {
+                    "criticality": "ERROR",
+                    "errorMessage": {
+                        "type": "VTL|MD",
+                        "value": "\" La valeur doit être comprise entre 1 et 10.\""
+                    },
+                    "typeOfControl": "FORMAT",
+                    "control": {
+                        "type": "VTL",
+                        "value": "not(not(isnull(NBHAB)) and (1>NBHAB or 10<NBHAB))"
+                    },
+                    "id": "ldodmfpq-format-borne-inf-sup"
+                },
+                {
+                    "criticality": "ERROR",
+                    "errorMessage": {
+                        "type": "VTL|MD",
+                        "value": "\"Le nombre doit comporter au maximum 0 chiffre(s) après la virgule.\""
+                    },
+                    "typeOfControl": "FORMAT",
+                    "control": {
+                        "type": "VTL",
+                        "value": "not(not(isnull(NBHAB))  and round(NBHAB,0)<>NBHAB)"
+                    },
+                    "id": "ldodmfpq-format-decimal"
+                }
+            ],
+            "max": 10,
+            "hierarchy": {
+                "sequence": {
+                    "id": "ldodmvpw",
+                    "page": "1",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"I - \" || \"THL\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "label": {
+                "type": "VTL|MD",
+                "value": "\"➡ 1. \" || \"Combien de personnes habitent ce logement ?\""
+            },
+            "mandatory": false,
+            "bindingDependencies": [
+                "NBHAB"
+            ],
+            "min": 1,
+            "response": {
+                "name": "NBHAB"
+            },
+            "decimals": 0,
+            "id": "ldodmfpq",
+            "page": "2"
+        },
+        {
+            "paginatedLoop": false,
+            "componentType": "Loop",
+            "loopDependencies": [
+                "NBHAB"
+            ],
+            "components": [
+                {
+                    "componentType": "Subsequence",
+                    "bindingDependencies": [
+                        "NBHAB"
+                    ],
+                    "goToPage": "3",
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "ldodmvpw",
+                            "page": "1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"I - \" || \"THL\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "ldodn448",
+                            "page": "3",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Description des habitants"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "type": "VTL",
+                        "value": "true"
+                    },
+                    "id": "ldodn448",
+                    "page": "3",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "Description des habitants"
+                    },
+                    "declarations": [
+                        {
+                            "declarationType": "HELP",
+                            "id": "ldodn448-litxui6g",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Aide"
+                            },
+                            "position": "AFTER_QUESTION_TEXT"
+                        },
+                        {
+                            "declarationType": "INSTRUCTION",
+                            "id": "ldodn448-litxz7cp",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Consigne"
+                            },
+                            "position": "AFTER_QUESTION_TEXT"
+                        }
+                    ]
+                },
+                {
+                    "componentType": "Input",
+                    "bindingDependencies": [
+                        "PRENOM",
+                        "NBHAB"
+                    ],
+                    "response": {
+                        "name": "PRENOM"
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "ldodmvpw",
+                            "page": "1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"I - \" || \"THL\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "ldodn448",
+                            "page": "3",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Description des habitants"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "type": "VTL",
+                        "value": "true"
+                    },
+                    "id": "ldoe54ur",
+                    "page": "3",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"➡ 2. \" || \"Quel est le prénom de cette personne ?\""
+                    },
+                    "mandatory": false,
+                    "maxLength": 249
+                }
+            ],
+            "bindingDependencies": [
+                "NBHAB",
+                "PRENOM"
+            ],
+            "depth": 1,
+            "hierarchy": {
+                "sequence": {
+                    "id": "ldodmvpw",
+                    "page": "1",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"I - \" || \"THL\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "ldoe0rct",
+            "page": "3",
+            "lines": {
+                "min": {
+                    "type": "VTL",
+                    "value": "nvl(NBHAB,1)"
+                },
+                "max": {
+                    "type": "VTL",
+                    "value": "nvl(NBHAB,1)"
+                }
+            }
+        },
+        {
+            "paginatedLoop": true,
+            "componentType": "Loop",
+            "loopDependencies": [
+                "PRENOM"
+            ],
+            "components": [
+                {
+                    "componentType": "Subsequence",
+                    "bindingDependencies": [
+                        "PRENOM"
+                    ],
+                    "goToPage": "4.1",
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "ldodmvpw",
+                            "page": "1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"I - \" || \"THL\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "ljwrssdi",
+                            "page": "4.1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "DESC_HAB"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "bindingDependencies": [
+                            "PRENOM",
+                            "PRENOMREF"
+                        ],
+                        "type": "VTL",
+                        "value": "(not(PRENOM <> PRENOMREF))"
+                    },
+                    "id": "ljwrssdi",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "DESC_HAB"
+                    }
+                },
+                {
+                    "componentType": "InputNumber",
+                    "controls": [
+                        {
+                            "criticality": "ERROR",
+                            "errorMessage": {
+                                "type": "VTL|MD",
+                                "value": "\" La valeur doit être comprise entre 0 et 120.\""
+                            },
+                            "typeOfControl": "FORMAT",
+                            "control": {
+                                "type": "VTL",
+                                "value": "not(not(isnull(AGE)) and (0>AGE or 120<AGE))"
+                            },
+                            "id": "ldodqku4-format-borne-inf-sup"
+                        },
+                        {
+                            "criticality": "ERROR",
+                            "errorMessage": {
+                                "type": "VTL|MD",
+                                "value": "\"Le nombre doit comporter au maximum 0 chiffre(s) après la virgule.\""
+                            },
+                            "typeOfControl": "FORMAT",
+                            "control": {
+                                "type": "VTL",
+                                "value": "not(not(isnull(AGE))  and round(AGE,0)<>AGE)"
+                            },
+                            "id": "ldodqku4-format-decimal"
+                        }
+                    ],
+                    "max": 120,
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "ldodmvpw",
+                            "page": "1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"I - \" || \"THL\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "ljwrssdi",
+                            "page": "4.1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "DESC_HAB"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "bindingDependencies": [
+                            "PRENOM",
+                            "PRENOMREF"
+                        ],
+                        "type": "VTL",
+                        "value": "(not(PRENOM <> PRENOMREF))"
+                    },
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"➡ 3. \" || \"Quel est l’âge de \" || nvl(PRENOM,\"\") || \" ?\""
+                    },
+                    "mandatory": false,
+                    "declarations": [
+                        {
+                            "declarationType": "HELP",
+                            "id": "ldodqku4-ljws9vo2",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "cast($TRAGE$,string)"
+                            },
+                            "position": "AFTER_QUESTION_TEXT"
+                        }
+                    ],
+                    "unit": "années",
+                    "bindingDependencies": [
+                        "PRENOM",
+                        "AGE"
+                    ],
+                    "min": 0,
+                    "response": {
+                        "name": "AGE"
+                    },
+                    "decimals": 0,
+                    "id": "ldodqku4",
+                    "page": "4.1"
+                }
+            ],
+            "bindingDependencies": [
+                "PRENOM",
+                "AGE"
+            ],
+            "depth": 1,
+            "hierarchy": {
+                "sequence": {
+                    "id": "ldodmvpw",
+                    "page": "1",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"I - \" || \"THL\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "ljws3hwd",
+            "page": "4",
+            "maxPage": "1",
+            "iterations": {
+                "type": "VTL",
+                "value": "count(PRENOM)"
+            }
+        },
+        {
+            "componentType": "Subsequence",
+            "goToPage": "5",
+            "hierarchy": {
+                "sequence": {
+                    "id": "ldodmvpw",
+                    "page": "1",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"I - \" || \"THL\""
+                    }
+                },
+                "subSequence": {
+                    "id": "ldoe64h3",
+                    "page": "5",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "Liens entre les habitants - afficher si au moins un majeur"
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "ldoe64h3",
+            "page": "5",
+            "label": {
+                "type": "VTL|MD",
+                "value": "Liens entre les habitants - afficher si au moins un majeur"
+            },
+            "declarations": [
+                {
+                    "declarationType": "HELP",
+                    "id": "ldoe64h3-ljwrwoby",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "cast($SUMTRAGE$,string)"
+                    },
+                    "position": "AFTER_QUESTION_TEXT"
+                }
+            ]
+        },
+        {
+            "componentType": "PairwiseLinks",
+            "components": [
+                {
+                    "componentType": "Dropdown",
+                    "bindingDependencies": [
+                        "LIENS"
+                    ],
+                    "response": {
+                        "name": "LIENS"
+                    },
+                    "options": [
+                        {
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Son conjoint, sa conjointe"
+                            },
+                            "value": "1"
+                        },
+                        {
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Sa mère, son père"
+                            },
+                            "value": "2"
+                        },
+                        {
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Sa fille, son fils"
+                            },
+                            "value": "3"
+                        },
+                        {
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Sa soeur, son frère (y compris demi et quasi)"
+                            },
+                            "value": "4"
+                        },
+                        {
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Sa belle-mère, son beau-père (conjoint.e d’un des parents)"
+                            },
+                            "value": "5"
+                        },
+                        {
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "L’enfant du conjoint (belle-fille, beau-fils)"
+                            },
+                            "value": "6"
+                        },
+                        {
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Sa belle-mère, son beau-père (parent du conjoint)"
+                            },
+                            "value": "7"
+                        },
+                        {
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Sa belle-fille, son beau-fils (conjoint.e d’un enfant)"
+                            },
+                            "value": "8"
+                        },
+                        {
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Sa grand-mère, son grand-père"
+                            },
+                            "value": "9"
+                        },
+                        {
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Sa petite-fille, petit-fils"
+                            },
+                            "value": "10"
+                        },
+                        {
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Sa tante, son oncle"
+                            },
+                            "value": "11"
+                        },
+                        {
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Sa cousine, son cousin"
+                            },
+                            "value": "12"
+                        },
+                        {
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Sa nièce, son neveu"
+                            },
+                            "value": "13"
+                        },
+                        {
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Un enfant placé en famille d’accueil"
+                            },
+                            "value": "14"
+                        },
+                        {
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Sa belle-soeur, son beau-frère"
+                            },
+                            "value": "15"
+                        },
+                        {
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Un autre lien familial"
+                            },
+                            "value": "16"
+                        },
+                        {
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Autre lien (employé de maison, salarié logé, jeune au pair …)"
+                            },
+                            "value": "17"
+                        }
+                    ],
+                    "conditionFilter": {
+                        "type": "VTL",
+                        "value": "xAxis <> yAxis"
+                    },
+                    "id": "ldoeba22-pairwise-dropdown",
+                    "page": "6",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"➡ 4. \" || \"Qui est \" || yAxis || \" pour \" || xAxis || \" ?\""
+                    },
+                    "mandatory": false
+                }
+            ],
+            "bindingDependencies": [
+                "LIENS"
+            ],
+            "yAxisIterations": {
+                "value": "count(PRENOM)"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "ldodmvpw",
+                    "page": "1",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"I - \" || \"THL\""
+                    }
+                },
+                "subSequence": {
+                    "id": "ldoe64h3",
+                    "page": "5",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "Liens entre les habitants - afficher si au moins un majeur"
+                    }
+                }
+            },
+            "xAxisIterations": {
+                "value": "count(PRENOM)"
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "ldoeba22",
+            "page": "6",
+            "symLinks": {
+                "LIENS": {
+                    "11": "13",
+                    "12": "12",
+                    "13": "11",
+                    "14": null,
+                    "15": null,
+                    "16": "16",
+                    "17": "17",
+                    "18": "18",
+                    "1": "1",
+                    "2": "3",
+                    "3": "2",
+                    "4": "4",
+                    "5": "6",
+                    "6": "5",
+                    "7": "8",
+                    "8": "7",
+                    "9": "10",
+                    "10": "9"
+                }
+            },
+            "mandatory": false
+        },
+        {
+            "paginatedLoop": true,
+            "componentType": "Loop",
+            "loopDependencies": [
+                "PRENOM"
+            ],
+            "components": [
+                {
+                    "componentType": "Subsequence",
+                    "bindingDependencies": [
+                        "PRENOM"
+                    ],
+                    "goToPage": "7.1",
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "ldodmvpw",
+                            "page": "1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"I - \" || \"THL\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "ldoez5qc",
+                            "page": "7.1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Questions sur les liens des habitants"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "bindingDependencies": [
+                            "AGE",
+                            "LIENS"
+                        ],
+                        "type": "VTL",
+                        "value": "(not(AGE > 17 or \"3\" in LIENS))"
+                    },
+                    "id": "ldoez5qc",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "Questions sur les liens des habitants"
+                    }
+                },
+                {
+                    "componentType": "Input",
+                    "bindingDependencies": [
+                        "LIENS",
+                        "PRENOM",
+                        "ENFANT_SEUL"
+                    ],
+                    "response": {
+                        "name": "ENFANT_SEUL"
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "ldodmvpw",
+                            "page": "1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"I - \" || \"THL\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "ldoez5qc",
+                            "page": "7.1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "Questions sur les liens des habitants"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "bindingDependencies": [
+                            "AGE",
+                            "LIENS"
+                        ],
+                        "type": "VTL",
+                        "value": "(not(AGE > 17 or \"3\" in LIENS))"
+                    },
+                    "id": "ldoexsbc",
+                    "page": "7.1",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"➡ 5. \" || \"Pourquoi \" || PRENOM || \" ne vit pas avec ses parents ?\""
+                    },
+                    "mandatory": false,
+                    "maxLength": 249,
+                    "declarations": [
+                        {
+                            "declarationType": "HELP",
+                            "id": "ldoexsbc-ldvd1lsi",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "if \"3\" not_in LIENS then \"pas 3\" else \"3\""
+                            },
+                            "position": "AFTER_QUESTION_TEXT"
+                        },
+                        {
+                            "declarationType": "HELP",
+                            "id": "ldoexsbc-lislr92s",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"déclaration\""
+                            },
+                            "position": "AFTER_QUESTION_TEXT"
+                        }
+                    ]
+                }
+            ],
+            "bindingDependencies": [
+                "LIENS",
+                "PRENOM",
+                "ENFANT_SEUL"
+            ],
+            "depth": 1,
+            "hierarchy": {
+                "sequence": {
+                    "id": "ldodmvpw",
+                    "page": "1",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"I - \" || \"THL\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "ldoem3k0",
+            "page": "7",
+            "maxPage": "1",
+            "iterations": {
+                "type": "VTL",
+                "value": "count(PRENOM)"
+            }
+        },
+        {
+            "paginatedLoop": true,
+            "componentType": "Loop",
+            "loopDependencies": [
+                "PRENOM"
+            ],
+            "components": [
+                {
+                    "componentType": "Subsequence",
+                    "bindingDependencies": [
+                        "PRENOM"
+                    ],
+                    "goToPage": "8.1",
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "ldodmvpw",
+                            "page": "1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"I - \" || \"THL\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "ldof1gdm",
+                            "page": "8.1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "QUESTIONS_PLUS_17ANS"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "bindingDependencies": [
+                            "AGE"
+                        ],
+                        "type": "VTL",
+                        "value": "(not(AGE < 17))"
+                    },
+                    "id": "ldof1gdm",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "QUESTIONS_PLUS_17ANS"
+                    }
+                },
+                {
+                    "componentType": "Input",
+                    "bindingDependencies": [
+                        "PRENOM",
+                        "Q1"
+                    ],
+                    "response": {
+                        "name": "Q1"
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "ldodmvpw",
+                            "page": "1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"I - \" || \"THL\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "ldof1gdm",
+                            "page": "8.1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "QUESTIONS_PLUS_17ANS"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "bindingDependencies": [
+                            "AGE"
+                        ],
+                        "type": "VTL",
+                        "value": "(not(AGE < 17))"
+                    },
+                    "id": "ldoffn3o",
+                    "page": "8.1",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"➡ 6. \" || \"Question qui va filtrer Q2 pour \" || PRENOM"
+                    },
+                    "mandatory": false,
+                    "maxLength": 249,
+                    "declarations": [
+                        {
+                            "declarationType": "HELP",
+                            "id": "ldoffn3o-liudchiz",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"Si Q1 = A alors afficher Q2\""
+                            },
+                            "position": "AFTER_QUESTION_TEXT"
+                        }
+                    ]
+                },
+                {
+                    "componentType": "Input",
+                    "bindingDependencies": [
+                        "PRENOM",
+                        "Q2"
+                    ],
+                    "response": {
+                        "name": "Q2"
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "ldodmvpw",
+                            "page": "1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"I - \" || \"THL\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "ldof1gdm",
+                            "page": "8.1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "QUESTIONS_PLUS_17ANS"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "bindingDependencies": [
+                            "AGE",
+                            "Q1"
+                        ],
+                        "type": "VTL",
+                        "value": "(not(AGE < 17)) and (Q1 = \"A\")"
+                    },
+                    "id": "liude0tk",
+                    "page": "8.2",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"➡ 7. \" || \"Question Q2 affichée si Q1 = A pour \" || PRENOM"
+                    },
+                    "mandatory": false,
+                    "maxLength": 249
+                },
+                {
+                    "componentType": "Input",
+                    "bindingDependencies": [
+                        "PRENOM",
+                        "Q3"
+                    ],
+                    "response": {
+                        "name": "Q3"
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "ldodmvpw",
+                            "page": "1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "\"I - \" || \"THL\""
+                            }
+                        },
+                        "subSequence": {
+                            "id": "ldof1gdm",
+                            "page": "8.1",
+                            "label": {
+                                "type": "VTL|MD",
+                                "value": "QUESTIONS_PLUS_17ANS"
+                            }
+                        }
+                    },
+                    "conditionFilter": {
+                        "bindingDependencies": [
+                            "AGE"
+                        ],
+                        "type": "VTL",
+                        "value": "(not(AGE < 17))"
+                    },
+                    "id": "liud6mss",
+                    "page": "8.3",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"➡ 8. \" || \"Question troisième \" || PRENOM"
+                    },
+                    "mandatory": false,
+                    "maxLength": 249
+                }
+            ],
+            "bindingDependencies": [
+                "PRENOM",
+                "Q1",
+                "Q2",
+                "Q3"
+            ],
+            "depth": 1,
+            "hierarchy": {
+                "sequence": {
+                    "id": "ldodmvpw",
+                    "page": "1",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"I - \" || \"THL\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "ldof5dww",
+            "page": "8",
+            "maxPage": "3",
+            "iterations": {
+                "type": "VTL",
+                "value": "count(PRENOM)"
+            }
+        },
+        {
+            "componentType": "Sequence",
+            "hierarchy": {
+                "sequence": {
+                    "id": "liudoeqe",
+                    "page": "9",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"II - \" || \"S2\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "liudoeqe",
+            "page": "9",
+            "label": {
+                "type": "VTL|MD",
+                "value": "\"II - \" || \"S2\""
+            }
+        },
+        {
+            "componentType": "Input",
+            "bindingDependencies": [
+                "DERNIREQUE"
+            ],
+            "response": {
+                "name": "DERNIREQUE"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "liudoeqe",
+                    "page": "9",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"II - \" || \"S2\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "liudjf9l",
+            "page": "10",
+            "label": {
+                "type": "VTL|MD",
+                "value": "\"➡ 9. \" || \"Dernière question\""
+            },
+            "mandatory": false,
+            "maxLength": 249
+        },
+        {
+            "componentType": "Sequence",
+            "hierarchy": {
+                "sequence": {
+                    "id": "COMMENT-SEQ",
+                    "page": "11",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"Commentaire\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "COMMENT-SEQ",
+            "page": "11",
+            "label": {
+                "type": "VTL|MD",
+                "value": "\"Commentaire\""
+            }
+        },
+        {
+            "componentType": "Textarea",
+            "bindingDependencies": [
+                "COMMENT_QE"
+            ],
+            "response": {
+                "name": "COMMENT_QE"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "COMMENT-SEQ",
+                    "page": "11",
+                    "label": {
+                        "type": "VTL|MD",
+                        "value": "\"Commentaire\""
+                    }
+                }
+            },
+            "conditionFilter": {
+                "type": "VTL",
+                "value": "true"
+            },
+            "id": "COMMENT-QUESTION",
+            "page": "12",
+            "label": {
+                "type": "VTL|MD",
+                "value": "\"Avez-vous des remarques concernant l'enquête ou des commentaires ?\""
+            },
+            "mandatory": false,
+            "maxLength": 2000
+        }
+    ],
+    "pagination": "question",
+    "resizing": {
+        "PRENOM": {
+            "linksVariables": [
+                "LIENS"
+            ],
+            "sizeForLinksVariables": [
+                "count(PRENOM)",
+                "count(PRENOM)"
+            ]
+        },
+        "NBHAB": {
+            "variables": [
+                "PRENOM",
+                "AGE",
+                "ENFANT_SEUL",
+                "Q1",
+                "Q2",
+                "Q3"
+            ],
+            "size": "nvl(NBHAB,1)"
+        }
+    },
+    "label": {
+        "type": "VTL|MD",
+        "value": "QNONREG Liens deux à deux Proto TCM"
+    },
+    "lunaticModelVersion": "2.3.2-rc7",
+    "modele": "PROTO_TCM",
+    "enoCoreVersion": "2.4.1-pairwise",
+    "generatingDate": "11-07-2023 06:25:51",
+    "missing": false,
+    "id": "ldodefpq",
+    "maxPage": "12"
+}
