@@ -1,0 +1,1515 @@
+{
+    "id": "ldodefpq",
+    "modele": "PROTO_TCM",
+    "enoCoreVersion": "2.4.9",
+    "lunaticModelVersion": "2.3.4",
+    "generatingDate": "13-09-2023 16:39:22",
+    "missing": true,
+    "pagination": "question",
+    "maxPage": "10",
+    "label": {
+        "value": "QNONREG Liens deux à deux Proto TCM",
+        "type": "VTL|MD"
+    },
+    "components": [
+        {
+            "id": "ldodmvpw",
+            "componentType": "Sequence",
+            "page": "1",
+            "label": {
+                "value": "\"I - \" || \"THL\"",
+                "type": "VTL|MD"
+            },
+            "declarations": [
+                {
+                    "id": "ldodmvpw-lity4hfz",
+                    "declarationType": "HELP",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "Aide",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "ldodmvpw-litxs78w",
+                    "declarationType": "INSTRUCTION",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "Consigne",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "ldodmvpw",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"THL\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            }
+        },
+        {
+            "id": "ldodmfpq",
+            "componentType": "InputNumber",
+            "mandatory": false,
+            "page": "2",
+            "min": 1,
+            "max": 10,
+            "decimals": 0,
+            "label": {
+                "value": "\"Combien de personnes habitent ce logement ?\"",
+                "type": "VTL|MD"
+            },
+            "declarations": [
+                {
+                    "id": "ldodmfpq-lisltf38",
+                    "declarationType": "HELP",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "\"délaration\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "ldodmfpq-lisluajr",
+                    "declarationType": "INSTRUCTION",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "\"consigne\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "controls": [
+                {
+                    "id": "ldodmfpq-format-borne-inf-sup",
+                    "typeOfControl": "FORMAT",
+                    "criticality": "ERROR",
+                    "control": {
+                        "value": "not(not(isnull(NBHAB)) and (1>NBHAB or 10<NBHAB))",
+                        "type": "VTL"
+                    },
+                    "errorMessage": {
+                        "value": "\" La valeur doit être comprise entre 1 et 10.\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "ldodmfpq-format-decimal",
+                    "typeOfControl": "FORMAT",
+                    "criticality": "ERROR",
+                    "control": {
+                        "value": "not(not(isnull(NBHAB))  and round(NBHAB,0)<>NBHAB)",
+                        "type": "VTL"
+                    },
+                    "errorMessage": {
+                        "value": "\"Le nombre doit comporter au maximum 0 chiffre(s) après la virgule.\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "hierarchy": {
+                "sequence": {
+                    "id": "ldodmvpw",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"THL\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "NBHAB_MISSING"},
+            "bindingDependencies": [
+                "NBHAB_MISSING",
+                "NBHAB"
+            ],
+            "response": {"name": "NBHAB"}
+        },
+        {
+            "id": "ldoe0rct",
+            "componentType": "Loop",
+            "page": "3",
+            "depth": 1,
+            "paginatedLoop": false,
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "ldodmvpw",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"THL\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "PRENOM_MISSING"},
+            "bindingDependencies": [
+                "NBHAB",
+                "PRENOM_MISSING",
+                "PRENOM",
+                "AGE",
+                "ANAIS"
+            ],
+            "loopDependencies": ["NBHAB"],
+            "lines": {
+                "min": {
+                    "value": "nvl(NBHAB,1)",
+                    "type": "VTL"
+                },
+                "max": {
+                    "value": "nvl(NBHAB,1)",
+                    "type": "VTL"
+                }
+            },
+            "components": [
+                {
+                    "id": "ldodn448",
+                    "componentType": "Subsequence",
+                    "page": "3",
+                    "goToPage": "3",
+                    "label": {
+                        "value": "Description des habitants",
+                        "type": "VTL|MD"
+                    },
+                    "declarations": [
+                        {
+                            "id": "ldodn448-litxui6g",
+                            "declarationType": "HELP",
+                            "position": "AFTER_QUESTION_TEXT",
+                            "label": {
+                                "value": "Aide",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "id": "ldodn448-litxz7cp",
+                            "declarationType": "INSTRUCTION",
+                            "position": "AFTER_QUESTION_TEXT",
+                            "label": {
+                                "value": "Consigne",
+                                "type": "VTL|MD"
+                            }
+                        }
+                    ],
+                    "conditionFilter": {
+                        "value": "true",
+                        "type": "VTL"
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "ldodmvpw",
+                            "page": "1",
+                            "label": {
+                                "value": "\"I - \" || \"THL\"",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        "subSequence": {
+                            "id": "ldodn448",
+                            "page": "3",
+                            "label": {
+                                "value": "Description des habitants",
+                                "type": "VTL|MD"
+                            }
+                        }
+                    },
+                    "bindingDependencies": ["NBHAB"]
+                },
+                {
+                    "id": "ldoe54ur",
+                    "componentType": "Input",
+                    "mandatory": false,
+                    "page": "3",
+                    "maxLength": 249,
+                    "label": {
+                        "value": "\"Quel est le prénom de cette personne ?\"",
+                        "type": "VTL|MD"
+                    },
+                    "conditionFilter": {
+                        "value": "true",
+                        "type": "VTL"
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "ldodmvpw",
+                            "page": "1",
+                            "label": {
+                                "value": "\"I - \" || \"THL\"",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        "subSequence": {
+                            "id": "ldodn448",
+                            "page": "3",
+                            "label": {
+                                "value": "Description des habitants",
+                                "type": "VTL|MD"
+                            }
+                        }
+                    },
+                    "bindingDependencies": [
+                        "PRENOM",
+                        "NBHAB"
+                    ],
+                    "response": {"name": "PRENOM"}
+                },
+                {
+                    "id": "ldodqku4",
+                    "componentType": "InputNumber",
+                    "mandatory": false,
+                    "page": "3",
+                    "min": 0,
+                    "max": 120,
+                    "decimals": 0,
+                    "label": {
+                        "value": "\"Quel est l’âge de cet habitant ?\"",
+                        "type": "VTL|MD"
+                    },
+                    "conditionFilter": {
+                        "value": "true",
+                        "type": "VTL"
+                    },
+                    "controls": [
+                        {
+                            "id": "ldodqku4-format-borne-inf-sup",
+                            "typeOfControl": "FORMAT",
+                            "criticality": "ERROR",
+                            "control": {
+                                "value": "not(not(isnull(AGE)) and (0>AGE or 120<AGE))",
+                                "type": "VTL"
+                            },
+                            "errorMessage": {
+                                "value": "\" La valeur doit être comprise entre 0 et 120.\"",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "id": "ldodqku4-format-decimal",
+                            "typeOfControl": "FORMAT",
+                            "criticality": "ERROR",
+                            "control": {
+                                "value": "not(not(isnull(AGE))  and round(AGE,0)<>AGE)",
+                                "type": "VTL"
+                            },
+                            "errorMessage": {
+                                "value": "\"Le nombre doit comporter au maximum 0 chiffre(s) après la virgule.\"",
+                                "type": "VTL|MD"
+                            }
+                        }
+                    ],
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "ldodmvpw",
+                            "page": "1",
+                            "label": {
+                                "value": "\"I - \" || \"THL\"",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        "subSequence": {
+                            "id": "ldodn448",
+                            "page": "3",
+                            "label": {
+                                "value": "Description des habitants",
+                                "type": "VTL|MD"
+                            }
+                        }
+                    },
+                    "bindingDependencies": [
+                        "AGE",
+                        "NBHAB"
+                    ],
+                    "unit": "années",
+                    "response": {"name": "AGE"}
+                },
+                {
+                    "id": "ljintclc",
+                    "componentType": "Datepicker",
+                    "mandatory": false,
+                    "page": "3",
+                    "min": "1900-01-01",
+                    "max": "format-date(current-date(),'[Y0001]-[M01]-[D01]')",
+                    "label": {
+                        "value": "\"Quel est la date de naissance de cet habitant ?\"",
+                        "type": "VTL|MD"
+                    },
+                    "conditionFilter": {
+                        "value": "true",
+                        "type": "VTL"
+                    },
+                    "controls": [
+                        {
+                            "id": "ljintclc-format-borne-inf-sup",
+                            "typeOfControl": "FORMAT",
+                            "criticality": "ERROR",
+                            "control": {
+                                "value": "not(not(isnull(ANAIS)) and (cast(ANAIS, date, \"YYYY-MM-DD\")>cast(\"format-date(current-date(),'[Y0001]-[M01]-[D01]')\", date, \"YYYY-MM-DD\") or cast(ANAIS, date, \"YYYY-MM-DD\")<cast(\"1900-01-01\", date, \"YYYY-MM-DD\")))",
+                                "type": "VTL"
+                            },
+                            "errorMessage": {
+                                "value": "\"La date saisie doit être comprise entre 1900-01-01 et format-date(current-date(),'[Y0001]-[M01]-[D01]').\"",
+                                "type": "VTL|MD"
+                            }
+                        }
+                    ],
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "ldodmvpw",
+                            "page": "1",
+                            "label": {
+                                "value": "\"I - \" || \"THL\"",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        "subSequence": {
+                            "id": "ldodn448",
+                            "page": "3",
+                            "label": {
+                                "value": "Description des habitants",
+                                "type": "VTL|MD"
+                            }
+                        }
+                    },
+                    "bindingDependencies": [
+                        "ANAIS",
+                        "NBHAB"
+                    ],
+                    "dateFormat": "YYYY-MM-DD",
+                    "response": {"name": "ANAIS"}
+                }
+            ]
+        },
+        {
+            "id": "ldoe64h3",
+            "componentType": "Subsequence",
+            "page": "4",
+            "goToPage": "4",
+            "label": {
+                "value": "Liens entre les habitants",
+                "type": "VTL|MD"
+            },
+            "declarations": [
+                {
+                    "id": "ldoe64h3-litxu92f",
+                    "declarationType": "HELP",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "Aide",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "ldoe64h3-lity100d",
+                    "declarationType": "INSTRUCTION",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "Consigne",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "ldodmvpw",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"THL\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "ldoe64h3",
+                    "page": "4",
+                    "label": {
+                        "value": "Liens entre les habitants",
+                        "type": "VTL|MD"
+                    }
+                }
+            }
+        },
+        {
+            "id": "ldoeba22",
+            "componentType": "PairwiseLinks",
+            "mandatory": false,
+            "page": "5",
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "ldodmvpw",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"THL\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "ldoe64h3",
+                    "page": "4",
+                    "label": {
+                        "value": "Liens entre les habitants",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "bindingDependencies": ["LIENS"],
+            "xAxisIterations": {"value": "count(PRENOM)"},
+            "yAxisIterations": {"value": "count(PRENOM)"},
+            "components": [
+                {
+                    "id": "ldoeba22-pairwise-dropdown",
+                    "componentType": "Dropdown",
+                    "mandatory": false,
+                    "page": "5",
+                    "label": {
+                        "value": "\"Qui est \" || yAxis || \" pour \" || xAxis || \" ?\"",
+                        "type": "VTL|MD"
+                    },
+                    "conditionFilter": {
+                        "value": "xAxis <> yAxis",
+                        "type": "VTL"
+                    },
+                    "missingResponse": {"name": "LIENS_MISSING"},
+                    "bindingDependencies": ["LIENS"],
+                    "options": [
+                        {
+                            "value": "1",
+                            "label": {
+                                "value": "Son conjoint, sa conjointe",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "value": "2",
+                            "label": {
+                                "value": "Sa mère, son père",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "value": "3",
+                            "label": {
+                                "value": "Sa fille, son fils",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "value": "4",
+                            "label": {
+                                "value": "Sa soeur, son frère (y compris demi et quasi)",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "value": "5",
+                            "label": {
+                                "value": "Sa belle-mère, son beau-père (conjoint.e d’un des parents)",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "value": "6",
+                            "label": {
+                                "value": "L’enfant du conjoint (belle-fille, beau-fils)",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "value": "7",
+                            "label": {
+                                "value": "Sa belle-mère, son beau-père (parent du conjoint)",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "value": "8",
+                            "label": {
+                                "value": "Sa belle-fille, son beau-fils (conjoint.e d’un enfant)",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "value": "9",
+                            "label": {
+                                "value": "Sa grand-mère, son grand-père",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "value": "10",
+                            "label": {
+                                "value": "Sa petite-fille, petit-fils",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "value": "11",
+                            "label": {
+                                "value": "Sa tante, son oncle",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "value": "12",
+                            "label": {
+                                "value": "Sa cousine, son cousin",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "value": "13",
+                            "label": {
+                                "value": "Sa nièce, son neveu",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "value": "14",
+                            "label": {
+                                "value": "Un enfant placé en famille d’accueil",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "value": "15",
+                            "label": {
+                                "value": "Sa belle-soeur, son beau-frère",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "value": "16",
+                            "label": {
+                                "value": "Un autre lien familial",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "value": "17",
+                            "label": {
+                                "value": "Autre lien (employé de maison, salarié logé, jeune au pair …)",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "value": "18",
+                            "label": {
+                                "value": "test",
+                                "type": "VTL|MD"
+                            }
+                        }
+                    ],
+                    "response": {"name": "LIENS"}
+                }
+            ],
+            "symLinks": {
+                "LIENS": {
+                    "1": "1",
+                    "2": "3",
+                    "3": "2",
+                    "4": "4",
+                    "5": "6",
+                    "6": "5",
+                    "7": "8",
+                    "8": "7",
+                    "9": "10",
+                    "10": "9",
+                    "11": "13",
+                    "12": "12",
+                    "13": "11",
+                    "14": null,
+                    "15": null,
+                    "16": "16",
+                    "17": "17",
+                    "18": "18"
+                }
+            }
+        },
+        {
+            "id": "ldof5dww",
+            "componentType": "Loop",
+            "page": "6",
+            "maxPage": "5",
+            "depth": 1,
+            "paginatedLoop": true,
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "ldodmvpw",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"THL\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "bindingDependencies": [
+                "PARL",
+                "dsf_MISSING",
+                "dsf1_MISSING",
+                "PRENOM",
+                "Q1_MISSING",
+                "Q2_MISSING",
+                "Q3_MISSING",
+                "dsf",
+                "dsf1",
+                "Q1",
+                "Q21",
+                "Q22",
+                "Q23",
+                "Q3"
+            ],
+            "loopDependencies": [
+                "PRENOM",
+                "AGE",
+                "ANAIS"
+            ],
+            "components": [
+                {
+                    "id": "ldof1gdm",
+                    "componentType": "Subsequence",
+                    "goToPage": "6.1",
+                    "label": {
+                        "value": "QUESTIONS_PLUS_17ANS",
+                        "type": "VTL|MD"
+                    },
+                    "conditionFilter": {
+                        "value": "true",
+                        "type": "VTL"
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "ldodmvpw",
+                            "page": "1",
+                            "label": {
+                                "value": "\"I - \" || \"THL\"",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        "subSequence": {
+                            "id": "ldof1gdm",
+                            "page": "6.1",
+                            "label": {
+                                "value": "QUESTIONS_PLUS_17ANS",
+                                "type": "VTL|MD"
+                            }
+                        }
+                    },
+                    "bindingDependencies": [
+                        "PRENOM",
+                        "AGE",
+                        "ANAIS"
+                    ]
+                },
+                {
+                    "id": "llnicu8u",
+                    "componentType": "Input",
+                    "mandatory": false,
+                    "page": "6.1",
+                    "maxLength": 249,
+                    "label": {
+                        "value": "\" :\" || cast(PARL,string) || \".\"",
+                        "type": "VTL|MD"
+                    },
+                    "conditionFilter": {
+                        "value": "true",
+                        "type": "VTL"
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "ldodmvpw",
+                            "page": "1",
+                            "label": {
+                                "value": "\"I - \" || \"THL\"",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        "subSequence": {
+                            "id": "ldof1gdm",
+                            "page": "6.1",
+                            "label": {
+                                "value": "QUESTIONS_PLUS_17ANS",
+                                "type": "VTL|MD"
+                            }
+                        }
+                    },
+                    "missingResponse": {"name": "dsf_MISSING"},
+                    "bindingDependencies": [
+                        "PARL",
+                        "dsf_MISSING",
+                        "dsf",
+                        "PRENOM",
+                        "AGE",
+                        "ANAIS"
+                    ],
+                    "response": {"name": "dsf"}
+                },
+                {
+                    "id": "llnil3w0",
+                    "componentType": "Input",
+                    "mandatory": false,
+                    "page": "6.2",
+                    "maxLength": 249,
+                    "label": {
+                        "value": "\" :\" || cast($CALCS$,string) || \".\"",
+                        "type": "VTL|MD"
+                    },
+                    "conditionFilter": {
+                        "value": "true",
+                        "type": "VTL"
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "ldodmvpw",
+                            "page": "1",
+                            "label": {
+                                "value": "\"I - \" || \"THL\"",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        "subSequence": {
+                            "id": "ldof1gdm",
+                            "page": "6.1",
+                            "label": {
+                                "value": "QUESTIONS_PLUS_17ANS",
+                                "type": "VTL|MD"
+                            }
+                        }
+                    },
+                    "missingResponse": {"name": "dsf1_MISSING"},
+                    "bindingDependencies": [
+                        "dsf1_MISSING",
+                        "dsf1",
+                        "PRENOM",
+                        "AGE",
+                        "ANAIS"
+                    ],
+                    "response": {"name": "dsf1"}
+                },
+                {
+                    "id": "ldoffn3o",
+                    "componentType": "Input",
+                    "mandatory": false,
+                    "page": "6.3",
+                    "maxLength": 249,
+                    "label": {
+                        "value": "\"Question qui va filtrer Q2 pour \" || PRENOM",
+                        "type": "VTL|MD"
+                    },
+                    "declarations": [
+                        {
+                            "id": "ldoffn3o-liudchiz",
+                            "declarationType": "HELP",
+                            "position": "AFTER_QUESTION_TEXT",
+                            "label": {
+                                "value": "\"Si Q1 = A alors afficher Q2\"",
+                                "type": "VTL|MD"
+                            }
+                        }
+                    ],
+                    "conditionFilter": {
+                        "value": "true",
+                        "type": "VTL"
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "ldodmvpw",
+                            "page": "1",
+                            "label": {
+                                "value": "\"I - \" || \"THL\"",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        "subSequence": {
+                            "id": "ldof1gdm",
+                            "page": "6.1",
+                            "label": {
+                                "value": "QUESTIONS_PLUS_17ANS",
+                                "type": "VTL|MD"
+                            }
+                        }
+                    },
+                    "missingResponse": {"name": "Q1_MISSING"},
+                    "bindingDependencies": [
+                        "PRENOM",
+                        "Q1_MISSING",
+                        "Q1",
+                        "AGE",
+                        "ANAIS"
+                    ],
+                    "response": {"name": "Q1"}
+                },
+                {
+                    "id": "liude0tk",
+                    "componentType": "CheckboxGroup",
+                    "page": "6.4",
+                    "label": {
+                        "value": "\"QCM Q2 affichée si Q1 = A pour \" || PRENOM",
+                        "type": "VTL|MD"
+                    },
+                    "conditionFilter": {
+                        "value": "(Q1 = \"A\")",
+                        "type": "VTL",
+                        "bindingDependencies": ["Q1"]
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "ldodmvpw",
+                            "page": "1",
+                            "label": {
+                                "value": "\"I - \" || \"THL\"",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        "subSequence": {
+                            "id": "ldof1gdm",
+                            "page": "6.1",
+                            "label": {
+                                "value": "QUESTIONS_PLUS_17ANS",
+                                "type": "VTL|MD"
+                            }
+                        }
+                    },
+                    "missingResponse": {"name": "Q2_MISSING"},
+                    "bindingDependencies": [
+                        "PRENOM",
+                        "Q2_MISSING",
+                        "Q21",
+                        "Q22",
+                        "Q23",
+                        "AGE",
+                        "ANAIS"
+                    ],
+                    "responses": [
+                        {
+                            "id": "liude0tk-QOP-lix8xm18",
+                            "label": {
+                                "value": "A",
+                                "type": "VTL|MD"
+                            },
+                            "response": {"name": "Q21"}
+                        },
+                        {
+                            "id": "liude0tk-QOP-lix9cvmr",
+                            "label": {
+                                "value": "b",
+                                "type": "VTL|MD"
+                            },
+                            "response": {"name": "Q22"}
+                        },
+                        {
+                            "id": "liude0tk-QOP-lix900ki",
+                            "label": {
+                                "value": "c",
+                                "type": "VTL|MD"
+                            },
+                            "response": {"name": "Q23"}
+                        }
+                    ]
+                },
+                {
+                    "id": "liud6mss",
+                    "componentType": "Radio",
+                    "mandatory": false,
+                    "page": "6.5",
+                    "label": {
+                        "value": "\"qCU troisième \" || PRENOM",
+                        "type": "VTL|MD"
+                    },
+                    "conditionFilter": {
+                        "value": "true",
+                        "type": "VTL"
+                    },
+                    "hierarchy": {
+                        "sequence": {
+                            "id": "ldodmvpw",
+                            "page": "1",
+                            "label": {
+                                "value": "\"I - \" || \"THL\"",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        "subSequence": {
+                            "id": "ldof1gdm",
+                            "page": "6.1",
+                            "label": {
+                                "value": "QUESTIONS_PLUS_17ANS",
+                                "type": "VTL|MD"
+                            }
+                        }
+                    },
+                    "missingResponse": {"name": "Q3_MISSING"},
+                    "bindingDependencies": [
+                        "PRENOM",
+                        "Q3_MISSING",
+                        "Q3",
+                        "AGE",
+                        "ANAIS"
+                    ],
+                    "options": [
+                        {
+                            "value": "1",
+                            "label": {
+                                "value": "A",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "value": "2",
+                            "label": {
+                                "value": "b",
+                                "type": "VTL|MD"
+                            }
+                        },
+                        {
+                            "value": "3",
+                            "label": {
+                                "value": "c",
+                                "type": "VTL|MD"
+                            }
+                        }
+                    ],
+                    "response": {"name": "Q3"}
+                }
+            ],
+            "iterations": {
+                "value": "count(PRENOM)",
+                "type": "VTL"
+            }
+        },
+        {
+            "id": "liudoeqe",
+            "componentType": "Sequence",
+            "page": "7",
+            "label": {
+                "value": "\"II - \" || \"S2\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "liudoeqe",
+                    "page": "7",
+                    "label": {
+                        "value": "\"II - \" || \"S2\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            }
+        },
+        {
+            "id": "liudjf9l",
+            "componentType": "Datepicker",
+            "mandatory": false,
+            "page": "8",
+            "min": "1900-01-01",
+            "max": "format-date(current-date(),'[Y0001]-[M01]-[D01]')",
+            "label": {
+                "value": "\"Dernière question\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "controls": [
+                {
+                    "id": "liudjf9l-format-borne-inf-sup",
+                    "typeOfControl": "FORMAT",
+                    "criticality": "ERROR",
+                    "control": {
+                        "value": "not(not(isnull(DERNIREQUE)) and (cast(DERNIREQUE, date, \"YYYY-MM-DD\")>cast(\"format-date(current-date(),'[Y0001]-[M01]-[D01]')\", date, \"YYYY-MM-DD\") or cast(DERNIREQUE, date, \"YYYY-MM-DD\")<cast(\"1900-01-01\", date, \"YYYY-MM-DD\")))",
+                        "type": "VTL"
+                    },
+                    "errorMessage": {
+                        "value": "\"La date saisie doit être comprise entre 1900-01-01 et format-date(current-date(),'[Y0001]-[M01]-[D01]').\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "hierarchy": {
+                "sequence": {
+                    "id": "liudoeqe",
+                    "page": "7",
+                    "label": {
+                        "value": "\"II - \" || \"S2\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "DERNIREQUE_MISSING"},
+            "bindingDependencies": [
+                "DERNIREQUE_MISSING",
+                "DERNIREQUE"
+            ],
+            "dateFormat": "YYYY-MM-DD",
+            "response": {"name": "DERNIREQUE"}
+        },
+        {
+            "id": "COMMENT-SEQ",
+            "componentType": "Sequence",
+            "page": "9",
+            "label": {
+                "value": "\"Commentaire\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "COMMENT-SEQ",
+                    "page": "9",
+                    "label": {
+                        "value": "\"Commentaire\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            }
+        },
+        {
+            "id": "COMMENT-QUESTION",
+            "componentType": "Textarea",
+            "mandatory": false,
+            "page": "10",
+            "maxLength": 2000,
+            "label": {
+                "value": "\"Avez-vous des remarques concernant l'enquête ou des commentaires ?\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "COMMENT-SEQ",
+                    "page": "9",
+                    "label": {
+                        "value": "\"Commentaire\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "bindingDependencies": ["COMMENT_QE"],
+            "response": {"name": "COMMENT_QE"}
+        }
+    ],
+    "variables": [
+        {
+            "variableType": "COLLECTED",
+            "name": "COMMENT_QE",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "NBHAB",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "NBHAB_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "PRENOM_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "PRENOM",
+            "values": {
+                "PREVIOUS": [null],
+                "COLLECTED": [null],
+                "FORCED": [null],
+                "EDITED": [null],
+                "INPUTED": [null]
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "AGE",
+            "values": {
+                "PREVIOUS": [null],
+                "COLLECTED": [null],
+                "FORCED": [null],
+                "EDITED": [null],
+                "INPUTED": [null]
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "ANAIS",
+            "values": {
+                "PREVIOUS": [null],
+                "COLLECTED": [null],
+                "FORCED": [null],
+                "EDITED": [null],
+                "INPUTED": [null]
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "LIENS",
+            "values": {
+                "PREVIOUS": [
+                    [null]
+                ],
+                "COLLECTED": [
+                    [null]
+                ],
+                "FORCED": [
+                    [null]
+                ],
+                "EDITED": [
+                    [null]
+                ],
+                "INPUTED": [
+                    [null]
+                ]
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "LIENS_MISSING",
+            "values": {
+                "PREVIOUS": [
+                    [null]
+                ],
+                "COLLECTED": [
+                    [null]
+                ],
+                "FORCED": [
+                    [null]
+                ],
+                "EDITED": [
+                    [null]
+                ],
+                "INPUTED": [
+                    [null]
+                ]
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "dsf",
+            "values": {
+                "PREVIOUS": [null],
+                "COLLECTED": [null],
+                "FORCED": [null],
+                "EDITED": [null],
+                "INPUTED": [null]
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "dsf_MISSING",
+            "values": {
+                "PREVIOUS": [null],
+                "COLLECTED": [null],
+                "FORCED": [null],
+                "EDITED": [null],
+                "INPUTED": [null]
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "dsf1",
+            "values": {
+                "PREVIOUS": [null],
+                "COLLECTED": [null],
+                "FORCED": [null],
+                "EDITED": [null],
+                "INPUTED": [null]
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "dsf1_MISSING",
+            "values": {
+                "PREVIOUS": [null],
+                "COLLECTED": [null],
+                "FORCED": [null],
+                "EDITED": [null],
+                "INPUTED": [null]
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q1",
+            "values": {
+                "PREVIOUS": [null],
+                "COLLECTED": [null],
+                "FORCED": [null],
+                "EDITED": [null],
+                "INPUTED": [null]
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q1_MISSING",
+            "values": {
+                "PREVIOUS": [null],
+                "COLLECTED": [null],
+                "FORCED": [null],
+                "EDITED": [null],
+                "INPUTED": [null]
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q21",
+            "values": {
+                "PREVIOUS": [null],
+                "COLLECTED": [null],
+                "FORCED": [null],
+                "EDITED": [null],
+                "INPUTED": [null]
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q22",
+            "values": {
+                "PREVIOUS": [null],
+                "COLLECTED": [null],
+                "FORCED": [null],
+                "EDITED": [null],
+                "INPUTED": [null]
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q23",
+            "values": {
+                "PREVIOUS": [null],
+                "COLLECTED": [null],
+                "FORCED": [null],
+                "EDITED": [null],
+                "INPUTED": [null]
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q2_MISSING",
+            "values": {
+                "PREVIOUS": [null],
+                "COLLECTED": [null],
+                "FORCED": [null],
+                "EDITED": [null],
+                "INPUTED": [null]
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q3",
+            "values": {
+                "PREVIOUS": [null],
+                "COLLECTED": [null],
+                "FORCED": [null],
+                "EDITED": [null],
+                "INPUTED": [null]
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q3_MISSING",
+            "values": {
+                "PREVIOUS": [null],
+                "COLLECTED": [null],
+                "FORCED": [null],
+                "EDITED": [null],
+                "INPUTED": [null]
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "DERNIREQUE",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "DERNIREQUE_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "CALCULATED",
+            "name": "CALC",
+            "expression": {
+                "value": "if LIENS = \"3\" then 1 else 0",
+                "type": "VTL"
+            },
+            "bindingDependencies": ["LIENS"],
+            "shapeFrom": "PRENOM",
+            "inFilter": "false"
+        },
+        {
+            "variableType": "CALCULATED",
+            "name": "SCALC",
+            "expression": {
+                "value": "sum(CALC)",
+                "type": "VTL"
+            },
+            "bindingDependencies": [
+                "CALC",
+                "LIENS"
+            ],
+            "shapeFrom": "PRENOM",
+            "inFilter": "false"
+        },
+        {
+            "variableType": "CALCULATED",
+            "name": "PARL",
+            "expression": {
+                "value": "if \"2\" in LIENS then 1 else 0",
+                "type": "VTL"
+            },
+            "bindingDependencies": ["LIENS"],
+            "shapeFrom": "PRENOM",
+            "inFilter": "false"
+        },
+        {
+            "variableType": "CALCULATED",
+            "name": "xAxis",
+            "expression": {
+                "value": "PRENOM",
+                "type": "VTL"
+            },
+            "bindingDependencies": ["PRENOM"],
+            "shapeFrom": "PRENOM",
+            "inFilter": "true"
+        },
+        {
+            "variableType": "CALCULATED",
+            "name": "yAxis",
+            "expression": {
+                "value": "PRENOM",
+                "type": "VTL"
+            },
+            "bindingDependencies": ["PRENOM"],
+            "shapeFrom": "PRENOM",
+            "inFilter": "true"
+        }
+    ],
+    "cleaning": {},
+    "missingBlock": {
+        "NBHAB_MISSING": ["NBHAB"],
+        "NBHAB": ["NBHAB_MISSING"],
+        "PRENOM_MISSING": [
+            "PRENOM",
+            "AGE",
+            "ANAIS"
+        ],
+        "PRENOM": ["PRENOM_MISSING"],
+        "AGE": ["PRENOM_MISSING"],
+        "ANAIS": ["PRENOM_MISSING"],
+        "LIENS_MISSING": ["LIENS"],
+        "LIENS": ["LIENS_MISSING"],
+        "dsf_MISSING": ["dsf"],
+        "dsf": ["dsf_MISSING"],
+        "dsf1_MISSING": ["dsf1"],
+        "dsf1": ["dsf1_MISSING"],
+        "Q1_MISSING": ["Q1"],
+        "Q1": ["Q1_MISSING"],
+        "Q2_MISSING": [
+            "Q21",
+            "Q22",
+            "Q23"
+        ],
+        "Q21": ["Q2_MISSING"],
+        "Q22": ["Q2_MISSING"],
+        "Q23": ["Q2_MISSING"],
+        "Q3_MISSING": ["Q3"],
+        "Q3": ["Q3_MISSING"],
+        "DERNIREQUE_MISSING": ["DERNIREQUE"],
+        "DERNIREQUE": ["DERNIREQUE_MISSING"]
+    },
+    "resizing": {
+        "NBHAB": {
+            "size": "nvl(NBHAB,1)",
+            "variables": [
+                "PRENOM",
+                "AGE",
+                "ANAIS",
+                "dsf",
+                "dsf1",
+                "Q1",
+                "Q21",
+                "Q22",
+                "Q23",
+                "Q3"
+            ]
+        },
+        "PRENOM": {
+            "sizeForLinksVariables": [
+                "count(PRENOM)",
+                "count(PRENOM)"
+            ],
+            "linksVariables": ["LIENS"]
+        }
+    }
+}
