@@ -1,0 +1,1277 @@
+{
+    "id": "kanye31s1",
+    "modele": "QTEST_DECL",
+    "enoCoreVersion": "2.4.9",
+    "lunaticModelVersion": "2.3.4",
+    "generatingDate": "13-09-2023 08:09:00",
+    "missing": true,
+    "pagination": "question",
+    "maxPage": "19",
+    "label": {
+        "value": "QNONREG Declarations xpath ou vtl - ok",
+        "type": "VTL|MD"
+    },
+    "components": [
+        {
+            "id": "kanya0cm",
+            "componentType": "Sequence",
+            "page": "1",
+            "label": {
+                "value": "\"I - \" || \"Séquence - questions comportant des déclarations de différents types\"",
+                "type": "VTL|MD"
+            },
+            "declarations": [
+                {
+                    "id": "kanya0cm-kanz3pu6",
+                    "declarationType": "INSTRUCTION",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "\"consigne de séquence capi cati ​ligne 3\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "kanya0cm-kzfe49sn",
+                    "declarationType": "HELP",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "\"aide de séquence capi cati\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "kanya0cm-kzfdmzk3",
+                    "declarationType": "CODECARD",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "Montrer la carte code \"carte code capi cati\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "kanya0cm-kzfe5f4v",
+                    "declarationType": "CODECARD",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "Montrer la carte code \"caret code capi\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kanya0cm",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Séquence - questions comportant des déclarations de différents types\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            }
+        },
+        {
+            "id": "kzfdxu5g",
+            "componentType": "Subsequence",
+            "page": "2",
+            "goToPage": "2",
+            "label": {
+                "value": "Sous-séquence : les déclarations",
+                "type": "VTL|MD"
+            },
+            "declarations": [
+                {
+                    "id": "kzfdxu5g-kzfe0osv",
+                    "declarationType": "HELP",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "\"Aide sous séquence CAPI\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "kzfdxu5g-kzfdwydm",
+                    "declarationType": "INSTRUCTION",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "\"Consigne sous séquence CAPI\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "kzfdxu5g-kzfdr7b1",
+                    "declarationType": "CODECARD",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "Montrer la carte code \"Carte code sous séquence CAPI\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kanya0cm",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Séquence - questions comportant des déclarations de différents types\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "kzfdxu5g",
+                    "page": "2",
+                    "label": {
+                        "value": "Sous-séquence : les déclarations",
+                        "type": "VTL|MD"
+                    }
+                }
+            }
+        },
+        {
+            "id": "kanyduey",
+            "componentType": "Textarea",
+            "mandatory": false,
+            "page": "3",
+            "maxLength": 255,
+            "label": {
+                "value": "\"Q1 avec déclar consigne CAWI PAPI\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kanya0cm",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Séquence - questions comportant des déclarations de différents types\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "Q1_MISSING"},
+            "bindingDependencies": [
+                "Q1_MISSING",
+                "Q1"
+            ],
+            "response": {"name": "Q1"}
+        },
+        {
+            "id": "kzfdehqy",
+            "componentType": "Textarea",
+            "mandatory": false,
+            "page": "4",
+            "maxLength": 255,
+            "label": {
+                "value": "\"Q2 avec déclar consigne CATI\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kanya0cm",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Séquence - questions comportant des déclarations de différents types\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "Q2_MISSING"},
+            "bindingDependencies": [
+                "Q2_MISSING",
+                "Q2"
+            ],
+            "response": {"name": "Q2"}
+        },
+        {
+            "id": "kzfdsuhw",
+            "componentType": "Textarea",
+            "mandatory": false,
+            "page": "5",
+            "maxLength": 255,
+            "label": {
+                "value": "\"Q3 avec déclar consigne CAPI\"",
+                "type": "VTL|MD"
+            },
+            "declarations": [
+                {
+                    "id": "kzfdsuhw-kzfdod1k",
+                    "declarationType": "INSTRUCTION",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "\"je suis la consigne CAPI\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kanya0cm",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Séquence - questions comportant des déclarations de différents types\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "Q3_MISSING"},
+            "bindingDependencies": [
+                "Q3_MISSING",
+                "Q3"
+            ],
+            "response": {"name": "Q3"}
+        },
+        {
+            "id": "kanye45b",
+            "componentType": "Textarea",
+            "mandatory": false,
+            "page": "6",
+            "maxLength": 255,
+            "label": {
+                "value": "\"Q4 avec déclar aide CAWI\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kanya0cm",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Séquence - questions comportant des déclarations de différents types\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "Q4_MISSING"},
+            "bindingDependencies": [
+                "Q4_MISSING",
+                "Q4"
+            ],
+            "response": {"name": "Q4"}
+        },
+        {
+            "id": "kzfds450",
+            "componentType": "Textarea",
+            "mandatory": false,
+            "page": "7",
+            "maxLength": 255,
+            "label": {
+                "value": "\"Q5 avec déclar aide CATI\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kanya0cm",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Séquence - questions comportant des déclarations de différents types\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "Q5_MISSING"},
+            "bindingDependencies": [
+                "Q5_MISSING",
+                "Q5"
+            ],
+            "response": {"name": "Q5"}
+        },
+        {
+            "id": "kzfdnpeb",
+            "componentType": "Textarea",
+            "mandatory": false,
+            "page": "8",
+            "maxLength": 255,
+            "label": {
+                "value": "\"Q6 avec déclar aide CAPI\"",
+                "type": "VTL|MD"
+            },
+            "declarations": [
+                {
+                    "id": "kzfdnpeb-kzfdorre",
+                    "declarationType": "HELP",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "\"Je suis l’aide après CAPI\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kanya0cm",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Séquence - questions comportant des déclarations de différents types\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "Q6_MISSING"},
+            "bindingDependencies": [
+                "Q6_MISSING",
+                "Q6"
+            ],
+            "response": {"name": "Q6"}
+        },
+        {
+            "id": "kzwo41pm",
+            "componentType": "Textarea",
+            "mandatory": false,
+            "page": "9",
+            "maxLength": 255,
+            "label": {
+                "value": "\"Q7 avec déclar carte code CAPI\"",
+                "type": "VTL|MD"
+            },
+            "declarations": [
+                {
+                    "id": "kzwo41pm-kzwntpa0",
+                    "declarationType": "CODECARD",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "Montrer la carte code \"5\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kanya0cm",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Séquence - questions comportant des déclarations de différents types\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "Q7_MISSING"},
+            "bindingDependencies": [
+                "Q7_MISSING",
+                "Q7"
+            ],
+            "response": {"name": "Q7"}
+        },
+        {
+            "id": "kanywetv",
+            "componentType": "Textarea",
+            "mandatory": false,
+            "page": "10",
+            "maxLength": 255,
+            "label": {
+                "value": "\"Q8 avec toutes les déclarations apres\"",
+                "type": "VTL|MD"
+            },
+            "declarations": [
+                {
+                    "id": "kanywetv-kzfdimfl",
+                    "declarationType": "CODECARD",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "Montrer la carte code \"123\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "kanywetv-kzfdxm2l",
+                    "declarationType": "HELP",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "\"je suis l’aide CAPI\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "kanywetv-kzfedf77",
+                    "declarationType": "HELP",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "\"je suis la consigne CAPI\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kanya0cm",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Séquence - questions comportant des déclarations de différents types\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "Q8_MISSING"},
+            "bindingDependencies": [
+                "Q8_MISSING",
+                "Q8"
+            ],
+            "response": {"name": "Q8"}
+        },
+        {
+            "id": "kanz9wv6",
+            "componentType": "Subsequence",
+            "goToPage": "11",
+            "label": {
+                "value": "\"Statement Item\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kanya0cm",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Séquence - questions comportant des déclarations de différents types\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "kanz9wv6",
+                    "page": "11",
+                    "label": {
+                        "value": "\"Statement Item\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            }
+        },
+        {
+            "id": "kanyscwo",
+            "componentType": "Textarea",
+            "mandatory": false,
+            "page": "11",
+            "maxLength": 255,
+            "label": {
+                "value": "\"Q9 avec declarations avant \"",
+                "type": "VTL|MD"
+            },
+            "declarations": [
+                {
+                    "id": "kzfe6jv7-SI",
+                    "declarationType": "STATEMENT",
+                    "position": "BEFORE_QUESTION_TEXT",
+                    "label": {
+                        "value": "\"je suis statementItem aide avant CAPI\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "kzfdxxqp-SI",
+                    "declarationType": "STATEMENT",
+                    "position": "BEFORE_QUESTION_TEXT",
+                    "label": {
+                        "value": "\"je suis statementItem consigne avant CAPI\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "kzfe9i5c-SI",
+                    "declarationType": "STATEMENT",
+                    "position": "BEFORE_QUESTION_TEXT",
+                    "label": {
+                        "value": "Montrer la carte code \"je suis la carte code avant avant CAPI CATI\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kanya0cm",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Séquence - questions comportant des déclarations de différents types\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "kanz9wv6",
+                    "page": "11",
+                    "label": {
+                        "value": "\"Statement Item\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "Q9_MISSING"},
+            "bindingDependencies": [
+                "Q9_MISSING",
+                "Q9"
+            ],
+            "response": {"name": "Q9"}
+        },
+        {
+            "id": "kanz8hgh",
+            "componentType": "Textarea",
+            "mandatory": false,
+            "page": "12",
+            "maxLength": 255,
+            "label": {
+                "value": "\"Q10 avec consigne avant et consigne après, tous modes\"",
+                "type": "VTL|MD"
+            },
+            "declarations": [
+                {
+                    "id": "kanz99uf-SI",
+                    "declarationType": "STATEMENT",
+                    "position": "BEFORE_QUESTION_TEXT",
+                    "label": {
+                        "value": "\"consigne avant tous modes\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "lhqeswvj-SI",
+                    "declarationType": "STATEMENT",
+                    "position": "BEFORE_QUESTION_TEXT",
+                    "label": {
+                        "value": "\"Aide avant\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "kanz8hgh-kanzgjgz",
+                    "declarationType": "INSTRUCTION",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "\"consigne après tous modes\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "kanz8hgh-lhqeyf8r",
+                    "declarationType": "HELP",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "\"Aide après\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "kanz8hgh-lhqesfiu",
+                    "declarationType": "CODECARD",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "Montrer la carte code \"Carte code numéro 12\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kanya0cm",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Séquence - questions comportant des déclarations de différents types\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "kanz9wv6",
+                    "page": "11",
+                    "label": {
+                        "value": "\"Statement Item\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "Q10_MISSING"},
+            "bindingDependencies": [
+                "Q10_MISSING",
+                "Q10"
+            ],
+            "response": {"name": "Q10"}
+        },
+        {
+            "id": "kanyrdwp",
+            "componentType": "Subsequence",
+            "page": "13",
+            "goToPage": "13",
+            "label": {
+                "value": "\"Autres tests sur les sauts de lignes\"",
+                "type": "VTL|MD"
+            },
+            "declarations": [
+                {
+                    "id": "kanyrdwp-kzwkhqf7",
+                    "declarationType": "HELP",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "\"Déclarations avec sauts de ligne\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kanya0cm",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Séquence - questions comportant des déclarations de différents types\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "kanyrdwp",
+                    "page": "13",
+                    "label": {
+                        "value": "\"Autres tests sur les sauts de lignes\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            }
+        },
+        {
+            "id": "kao1aya7",
+            "componentType": "Textarea",
+            "mandatory": false,
+            "page": "14",
+            "maxLength": 255,
+            "label": {
+                "value": "\"Consigne et des sauts de ligne avec des tirets, puis un commentaire\"",
+                "type": "VTL|MD"
+            },
+            "declarations": [
+                {
+                    "id": "kao1aya7-kao0znec",
+                    "declarationType": "INSTRUCTION",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "\"- je suis la consigne ligne 1. - Je suis la consigne ligne 2 en gras ​ - Je suis la consigne ligne 4 (la ligne 3 est blanche)\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "kao1aya7-kao1b4v0",
+                    "declarationType": "INSTRUCTION",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "\"je suis le commentaire sans saut de ligne\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kanya0cm",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Séquence - questions comportant des déclarations de différents types\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "kanyrdwp",
+                    "page": "13",
+                    "label": {
+                        "value": "\"Autres tests sur les sauts de lignes\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "MIX1_MISSING"},
+            "bindingDependencies": [
+                "MIX1_MISSING",
+                "MIX1"
+            ],
+            "response": {"name": "MIX1"}
+        },
+        {
+            "id": "kanyicbv",
+            "componentType": "Textarea",
+            "mandatory": false,
+            "page": "15",
+            "maxLength": 255,
+            "label": {
+                "value": "\"Q10 question avec sauts de lignes : a t on tout le libellé ?ligne 2ligne 3​ligne 5​​ligne 8\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kanya0cm",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Séquence - questions comportant des déclarations de différents types\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "kanyrdwp",
+                    "page": "13",
+                    "label": {
+                        "value": "\"Autres tests sur les sauts de lignes\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "MIX2_MISSING"},
+            "bindingDependencies": [
+                "MIX2_MISSING",
+                "MIX2"
+            ],
+            "response": {"name": "MIX2"}
+        },
+        {
+            "id": "kanyu00b",
+            "componentType": "Textarea",
+            "mandatory": false,
+            "page": "16",
+            "maxLength": 255,
+            "label": {
+                "value": "\"Q9 avec 1 consigne et des sauts de ligne, puis un commentaire et des styles\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kanya0cm",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Séquence - questions comportant des déclarations de différents types\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "kanyrdwp",
+                    "page": "13",
+                    "label": {
+                        "value": "\"Autres tests sur les sauts de lignes\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "MIX3_MISSING"},
+            "bindingDependencies": [
+                "MIX3_MISSING",
+                "MIX3"
+            ],
+            "response": {"name": "MIX3"}
+        },
+        {
+            "id": "kanz18h6",
+            "componentType": "CheckboxOne",
+            "mandatory": false,
+            "page": "17",
+            "label": {
+                "value": "\"Q11 saut de lignes dans les modalités de réponses (ne marche pas je crois)\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kanya0cm",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Séquence - questions comportant des déclarations de différents types\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "kanyrdwp",
+                    "page": "13",
+                    "label": {
+                        "value": "\"Autres tests sur les sauts de lignes\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "MIX4_MISSING"},
+            "bindingDependencies": [
+                "MIX4_MISSING",
+                "MIX4"
+            ],
+            "options": [
+                {
+                    "value": "1",
+                    "label": {
+                        "value": "modalité 1 sans saut de ligne",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "value": "2",
+                    "label": {
+                        "value": "modalité 2 avec sauts de ligne ligne2 ​ ligne 4",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "value": "3",
+                    "label": {
+                        "value": "modalité avec style et saut de ligne ligne 2 en italique ligne 3",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "response": {"name": "MIX4"}
+        },
+        {
+            "id": "COMMENT-SEQ",
+            "componentType": "Sequence",
+            "page": "18",
+            "label": {
+                "value": "\"Commentaire\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "COMMENT-SEQ",
+                    "page": "18",
+                    "label": {
+                        "value": "\"Commentaire\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            }
+        },
+        {
+            "id": "COMMENT-QUESTION",
+            "componentType": "Textarea",
+            "mandatory": false,
+            "page": "19",
+            "maxLength": 2000,
+            "label": {
+                "value": "\"Avez-vous des remarques concernant l'enquête ou des commentaires ?\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "COMMENT-SEQ",
+                    "page": "18",
+                    "label": {
+                        "value": "\"Commentaire\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "bindingDependencies": ["COMMENT_QE"],
+            "response": {"name": "COMMENT_QE"}
+        }
+    ],
+    "variables": [
+        {
+            "variableType": "COLLECTED",
+            "name": "COMMENT_QE",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q1",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q1_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q2",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q2_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q3",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q3_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q4",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q4_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q5",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q5_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q6",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q6_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q7",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q7_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q8",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q8_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q9",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q9_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q10",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "Q10_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "MIX1",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "MIX1_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "MIX2",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "MIX2_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "MIX3",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "MIX3_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "MIX4",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "MIX4_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        }
+    ],
+    "cleaning": {},
+    "missingBlock": {
+        "Q1_MISSING": ["Q1"],
+        "Q1": ["Q1_MISSING"],
+        "Q2_MISSING": ["Q2"],
+        "Q2": ["Q2_MISSING"],
+        "Q3_MISSING": ["Q3"],
+        "Q3": ["Q3_MISSING"],
+        "Q4_MISSING": ["Q4"],
+        "Q4": ["Q4_MISSING"],
+        "Q5_MISSING": ["Q5"],
+        "Q5": ["Q5_MISSING"],
+        "Q6_MISSING": ["Q6"],
+        "Q6": ["Q6_MISSING"],
+        "Q7_MISSING": ["Q7"],
+        "Q7": ["Q7_MISSING"],
+        "Q8_MISSING": ["Q8"],
+        "Q8": ["Q8_MISSING"],
+        "Q9_MISSING": ["Q9"],
+        "Q9": ["Q9_MISSING"],
+        "Q10_MISSING": ["Q10"],
+        "Q10": ["Q10_MISSING"],
+        "MIX1_MISSING": ["MIX1"],
+        "MIX1": ["MIX1_MISSING"],
+        "MIX2_MISSING": ["MIX2"],
+        "MIX2": ["MIX2_MISSING"],
+        "MIX3_MISSING": ["MIX3"],
+        "MIX3": ["MIX3_MISSING"],
+        "MIX4_MISSING": ["MIX4"],
+        "MIX4": ["MIX4_MISSING"]
+    },
+    "resizing": {}
+}
