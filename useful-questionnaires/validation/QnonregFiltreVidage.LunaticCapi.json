@@ -1,0 +1,1108 @@
+{
+    "id": "lfsey94u",
+    "modele": "QTESTCONTR",
+    "enoCoreVersion": "2.4.9",
+    "lunaticModelVersion": "2.3.4",
+    "generatingDate": "13-09-2023 08:08:29",
+    "missing": true,
+    "pagination": "question",
+    "maxPage": "13",
+    "label": {
+        "value": "QNONREG - Filtre et vidages",
+        "type": "VTL|MD"
+    },
+    "components": [
+        {
+            "id": "kd09v80w",
+            "componentType": "Sequence",
+            "page": "1",
+            "label": {
+                "value": "\"I - \" || \"Vidage des variables numériques\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kd09v80w",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Vidage des variables numériques\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            }
+        },
+        {
+            "id": "kd0cbson",
+            "componentType": "Subsequence",
+            "goToPage": "2",
+            "label": {
+                "value": "Test : vider des nombres",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kd09v80w",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Vidage des variables numériques\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "kd0cbson",
+                    "page": "2",
+                    "label": {
+                        "value": "Test : vider des nombres",
+                        "type": "VTL|MD"
+                    }
+                }
+            }
+        },
+        {
+            "id": "lgks9tjk",
+            "componentType": "CheckboxOne",
+            "mandatory": false,
+            "page": "2",
+            "label": {
+                "value": "\"Filtrer les questions\"",
+                "type": "VTL|MD"
+            },
+            "declarations": [
+                {
+                    "id": "lgks9tjk-lhq6xm6y",
+                    "declarationType": "CODECARD",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "Montrer la carte code \"5\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kd09v80w",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Vidage des variables numériques\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "kd0cbson",
+                    "page": "2",
+                    "label": {
+                        "value": "Test : vider des nombres",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "FILTRE1_MISSING"},
+            "bindingDependencies": [
+                "FILTRE1_MISSING",
+                "FILTRE1"
+            ],
+            "options": [
+                {
+                    "value": "1",
+                    "label": {
+                        "value": "\"je filtre\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "value": "2",
+                    "label": {
+                        "value": "\"je ne filtre pas\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "response": {"name": "FILTRE1"}
+        },
+        {
+            "id": "k0dzbfek",
+            "componentType": "InputNumber",
+            "mandatory": false,
+            "page": "3",
+            "min": 0,
+            "max": 100,
+            "decimals": 0,
+            "label": {
+                "value": "\"Input1\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "(FILTRE1 = \"2\")",
+                "type": "VTL",
+                "bindingDependencies": ["FILTRE1"]
+            },
+            "controls": [
+                {
+                    "id": "k0dzbfek-format-borne-inf-sup",
+                    "typeOfControl": "FORMAT",
+                    "criticality": "ERROR",
+                    "control": {
+                        "value": "not(not(isnull(QNUM1)) and (0>QNUM1 or 100<QNUM1))",
+                        "type": "VTL"
+                    },
+                    "errorMessage": {
+                        "value": "\" La valeur doit être comprise entre 0 et 100.\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "k0dzbfek-format-decimal",
+                    "typeOfControl": "FORMAT",
+                    "criticality": "ERROR",
+                    "control": {
+                        "value": "not(not(isnull(QNUM1))  and round(QNUM1,0)<>QNUM1)",
+                        "type": "VTL"
+                    },
+                    "errorMessage": {
+                        "value": "\"Le nombre doit comporter au maximum 0 chiffre(s) après la virgule.\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "hierarchy": {
+                "sequence": {
+                    "id": "kd09v80w",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Vidage des variables numériques\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "kd0cbson",
+                    "page": "2",
+                    "label": {
+                        "value": "Test : vider des nombres",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "QNUM1_MISSING"},
+            "bindingDependencies": [
+                "QNUM1_MISSING",
+                "QNUM1"
+            ],
+            "unit": "mètres carrés",
+            "response": {"name": "QNUM1"}
+        },
+        {
+            "id": "kd0a6rn3",
+            "componentType": "InputNumber",
+            "mandatory": false,
+            "page": "4",
+            "min": 0,
+            "max": 10000,
+            "decimals": 0,
+            "label": {
+                "value": "\"Input2\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "(FILTRE1 = \"2\")",
+                "type": "VTL",
+                "bindingDependencies": ["FILTRE1"]
+            },
+            "controls": [
+                {
+                    "id": "kd0a6rn3-format-borne-inf-sup",
+                    "typeOfControl": "FORMAT",
+                    "criticality": "ERROR",
+                    "control": {
+                        "value": "not(not(isnull(QNUM2)) and (0>QNUM2 or 10000<QNUM2))",
+                        "type": "VTL"
+                    },
+                    "errorMessage": {
+                        "value": "\" La valeur doit être comprise entre 0 et 10000.\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "kd0a6rn3-format-decimal",
+                    "typeOfControl": "FORMAT",
+                    "criticality": "ERROR",
+                    "control": {
+                        "value": "not(not(isnull(QNUM2))  and round(QNUM2,0)<>QNUM2)",
+                        "type": "VTL"
+                    },
+                    "errorMessage": {
+                        "value": "\"Le nombre doit comporter au maximum 0 chiffre(s) après la virgule.\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "hierarchy": {
+                "sequence": {
+                    "id": "kd09v80w",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Vidage des variables numériques\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "kd0cbson",
+                    "page": "2",
+                    "label": {
+                        "value": "Test : vider des nombres",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "QNUM2_MISSING"},
+            "bindingDependencies": [
+                "QNUM2_MISSING",
+                "QNUM2"
+            ],
+            "response": {"name": "QNUM2"}
+        },
+        {
+            "id": "kd0a8h62",
+            "componentType": "InputNumber",
+            "mandatory": false,
+            "page": "5",
+            "min": 0,
+            "max": 100,
+            "decimals": 0,
+            "label": {
+                "value": "\"Input3\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "(FILTRE1 = \"2\")",
+                "type": "VTL",
+                "bindingDependencies": ["FILTRE1"]
+            },
+            "controls": [
+                {
+                    "id": "kd0a8h62-format-borne-inf-sup",
+                    "typeOfControl": "FORMAT",
+                    "criticality": "ERROR",
+                    "control": {
+                        "value": "not(not(isnull(QNUM3)) and (0>QNUM3 or 100<QNUM3))",
+                        "type": "VTL"
+                    },
+                    "errorMessage": {
+                        "value": "\" La valeur doit être comprise entre 0 et 100.\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "id": "kd0a8h62-format-decimal",
+                    "typeOfControl": "FORMAT",
+                    "criticality": "ERROR",
+                    "control": {
+                        "value": "not(not(isnull(QNUM3))  and round(QNUM3,0)<>QNUM3)",
+                        "type": "VTL"
+                    },
+                    "errorMessage": {
+                        "value": "\"Le nombre doit comporter au maximum 0 chiffre(s) après la virgule.\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "hierarchy": {
+                "sequence": {
+                    "id": "kd09v80w",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Vidage des variables numériques\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "kd0cbson",
+                    "page": "2",
+                    "label": {
+                        "value": "Test : vider des nombres",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "QNUM3_MISSING"},
+            "bindingDependencies": [
+                "QNUM3_MISSING",
+                "QNUM3"
+            ],
+            "unit": "k€",
+            "response": {"name": "QNUM3"}
+        },
+        {
+            "id": "lgks7ntq",
+            "componentType": "Subsequence",
+            "goToPage": "6",
+            "label": {
+                "value": "Filtrer des QCU",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kd09v80w",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Vidage des variables numériques\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "lgks7ntq",
+                    "page": "6",
+                    "label": {
+                        "value": "Filtrer des QCU",
+                        "type": "VTL|MD"
+                    }
+                }
+            }
+        },
+        {
+            "id": "lgks7wff",
+            "componentType": "CheckboxOne",
+            "mandatory": false,
+            "page": "6",
+            "label": {
+                "value": "\"Filtrer les questions\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kd09v80w",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Vidage des variables numériques\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "lgks7ntq",
+                    "page": "6",
+                    "label": {
+                        "value": "Filtrer des QCU",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "FILTRE2_MISSING"},
+            "bindingDependencies": [
+                "FILTRE2_MISSING",
+                "FILTRE2"
+            ],
+            "options": [
+                {
+                    "value": "1",
+                    "label": {
+                        "value": "\"je filtre\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "value": "2",
+                    "label": {
+                        "value": "\"je ne filtre pas\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "response": {"name": "FILTRE2"}
+        },
+        {
+            "id": "kd0a4t4f",
+            "componentType": "CheckboxOne",
+            "mandatory": false,
+            "page": "7",
+            "label": {
+                "value": "\"QCU1\"",
+                "type": "VTL|MD"
+            },
+            "declarations": [
+                {
+                    "id": "kd0a4t4f-kzgzrq25",
+                    "declarationType": "HELP",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "Tester 2 et 20 (pour vérifier ordre numérique et lexico) Tester pour le cas d’égalité",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "conditionFilter": {
+                "value": "(FILTRE2 = \"2\")",
+                "type": "VTL",
+                "bindingDependencies": ["FILTRE2"]
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kd09v80w",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Vidage des variables numériques\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "lgks7ntq",
+                    "page": "6",
+                    "label": {
+                        "value": "Filtrer des QCU",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "QCU1_MISSING"},
+            "bindingDependencies": [
+                "QCU1_MISSING",
+                "QCU1"
+            ],
+            "options": [
+                {
+                    "value": "1",
+                    "label": {
+                        "value": "\"AAAA\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "value": "2",
+                    "label": {
+                        "value": "\"BBBB\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "response": {"name": "QCU1"}
+        },
+        {
+            "id": "lgkt8yz1",
+            "componentType": "CheckboxOne",
+            "mandatory": false,
+            "page": "8",
+            "label": {
+                "value": "\"QCU2\"",
+                "type": "VTL|MD"
+            },
+            "declarations": [
+                {
+                    "id": "lgkt8yz1-lgktj0z7",
+                    "declarationType": "HELP",
+                    "position": "AFTER_QUESTION_TEXT",
+                    "label": {
+                        "value": "Tester 2 et 20 (pour vérifier ordre numérique et lexico) Tester pour le cas d’égalité",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "conditionFilter": {
+                "value": "(FILTRE2 = \"2\")",
+                "type": "VTL",
+                "bindingDependencies": ["FILTRE2"]
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kd09v80w",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Vidage des variables numériques\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "lgks7ntq",
+                    "page": "6",
+                    "label": {
+                        "value": "Filtrer des QCU",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "QCU2_MISSING"},
+            "bindingDependencies": [
+                "QCU2_MISSING",
+                "QCU2"
+            ],
+            "options": [
+                {
+                    "value": "1",
+                    "label": {
+                        "value": "\"AAAA\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "value": "2",
+                    "label": {
+                        "value": "\"BBBB\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "response": {"name": "QCU2"}
+        },
+        {
+            "id": "kd0cdj48",
+            "componentType": "Subsequence",
+            "goToPage": "9",
+            "label": {
+                "value": "Filter des QCM",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kd09v80w",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Vidage des variables numériques\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "kd0cdj48",
+                    "page": "9",
+                    "label": {
+                        "value": "Filter des QCM",
+                        "type": "VTL|MD"
+                    }
+                }
+            }
+        },
+        {
+            "id": "lgksb6su",
+            "componentType": "CheckboxOne",
+            "mandatory": false,
+            "page": "9",
+            "label": {
+                "value": "\"Filtrer les questions\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kd09v80w",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Vidage des variables numériques\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "kd0cdj48",
+                    "page": "9",
+                    "label": {
+                        "value": "Filter des QCM",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "FILTRE3_MISSING"},
+            "bindingDependencies": [
+                "FILTRE3_MISSING",
+                "FILTRE3"
+            ],
+            "options": [
+                {
+                    "value": "1",
+                    "label": {
+                        "value": "\"je filtre\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                {
+                    "value": "2",
+                    "label": {
+                        "value": "\"je ne filtre pas\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            ],
+            "response": {"name": "FILTRE3"}
+        },
+        {
+            "id": "kd0aa5ah",
+            "componentType": "CheckboxGroup",
+            "page": "10",
+            "label": {
+                "value": "\"QCM1\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "(FILTRE3 = \"2\")",
+                "type": "VTL",
+                "bindingDependencies": ["FILTRE3"]
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kd09v80w",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Vidage des variables numériques\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "kd0cdj48",
+                    "page": "9",
+                    "label": {
+                        "value": "Filter des QCM",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "QCM1_MISSING"},
+            "bindingDependencies": [
+                "QCM1_MISSING",
+                "QCM11",
+                "QCM12"
+            ],
+            "responses": [
+                {
+                    "id": "kd0aa5ah-QOP-lgkxj64r",
+                    "label": {
+                        "value": "\"AAAA\"",
+                        "type": "VTL|MD"
+                    },
+                    "response": {"name": "QCM11"}
+                },
+                {
+                    "id": "kd0aa5ah-QOP-lgkxeq2n",
+                    "label": {
+                        "value": "\"BBBB\"",
+                        "type": "VTL|MD"
+                    },
+                    "response": {"name": "QCM12"}
+                }
+            ]
+        },
+        {
+            "id": "kd0c2j4a",
+            "componentType": "CheckboxGroup",
+            "page": "11",
+            "label": {
+                "value": "\"QCM2\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "(FILTRE3 = \"2\")",
+                "type": "VTL",
+                "bindingDependencies": ["FILTRE3"]
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "kd09v80w",
+                    "page": "1",
+                    "label": {
+                        "value": "\"I - \" || \"Vidage des variables numériques\"",
+                        "type": "VTL|MD"
+                    }
+                },
+                "subSequence": {
+                    "id": "kd0cdj48",
+                    "page": "9",
+                    "label": {
+                        "value": "Filter des QCM",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "missingResponse": {"name": "QCM2_MISSING"},
+            "bindingDependencies": [
+                "QCM2_MISSING",
+                "QCM21",
+                "QCM22"
+            ],
+            "responses": [
+                {
+                    "id": "kd0c2j4a-QOP-lgkxpgen",
+                    "label": {
+                        "value": "\"AAAA\"",
+                        "type": "VTL|MD"
+                    },
+                    "response": {"name": "QCM21"}
+                },
+                {
+                    "id": "kd0c2j4a-QOP-lgkxkizx",
+                    "label": {
+                        "value": "\"BBBB\"",
+                        "type": "VTL|MD"
+                    },
+                    "response": {"name": "QCM22"}
+                }
+            ]
+        },
+        {
+            "id": "COMMENT-SEQ",
+            "componentType": "Sequence",
+            "page": "12",
+            "label": {
+                "value": "\"Commentaire\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "COMMENT-SEQ",
+                    "page": "12",
+                    "label": {
+                        "value": "\"Commentaire\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            }
+        },
+        {
+            "id": "COMMENT-QUESTION",
+            "componentType": "Textarea",
+            "mandatory": false,
+            "page": "13",
+            "maxLength": 2000,
+            "label": {
+                "value": "\"Avez-vous des remarques concernant l'enquête ou des commentaires ?\"",
+                "type": "VTL|MD"
+            },
+            "conditionFilter": {
+                "value": "true",
+                "type": "VTL"
+            },
+            "hierarchy": {
+                "sequence": {
+                    "id": "COMMENT-SEQ",
+                    "page": "12",
+                    "label": {
+                        "value": "\"Commentaire\"",
+                        "type": "VTL|MD"
+                    }
+                }
+            },
+            "bindingDependencies": ["COMMENT_QE"],
+            "response": {"name": "COMMENT_QE"}
+        }
+    ],
+    "variables": [
+        {
+            "variableType": "COLLECTED",
+            "name": "COMMENT_QE",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "FILTRE1",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "FILTRE1_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "QNUM1",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "QNUM1_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "QNUM2",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "QNUM2_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "QNUM3",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "QNUM3_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "FILTRE2",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "FILTRE2_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "QCU1",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "QCU1_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "QCU2",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "QCU2_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "FILTRE3",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "FILTRE3_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "QCM11",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "QCM12",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "QCM1_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "QCM21",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "QCM22",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        },
+        {
+            "variableType": "COLLECTED",
+            "name": "QCM2_MISSING",
+            "values": {
+                "PREVIOUS": null,
+                "COLLECTED": null,
+                "FORCED": null,
+                "EDITED": null,
+                "INPUTED": null
+            }
+        }
+    ],
+    "cleaning": {
+        "FILTRE1": {
+            "QNUM1": "(FILTRE1 = \"2\")",
+            "QNUM2": "(FILTRE1 = \"2\")",
+            "QNUM3": "(FILTRE1 = \"2\")"
+        },
+        "FILTRE2": {
+            "QCU1": "(FILTRE2 = \"2\")",
+            "QCU2": "(FILTRE2 = \"2\")"
+        }
+    },
+    "missingBlock": {
+        "FILTRE1_MISSING": ["FILTRE1"],
+        "FILTRE1": ["FILTRE1_MISSING"],
+        "QNUM1_MISSING": ["QNUM1"],
+        "QNUM1": ["QNUM1_MISSING"],
+        "QNUM2_MISSING": ["QNUM2"],
+        "QNUM2": ["QNUM2_MISSING"],
+        "QNUM3_MISSING": ["QNUM3"],
+        "QNUM3": ["QNUM3_MISSING"],
+        "FILTRE2_MISSING": ["FILTRE2"],
+        "FILTRE2": ["FILTRE2_MISSING"],
+        "QCU1_MISSING": ["QCU1"],
+        "QCU1": ["QCU1_MISSING"],
+        "QCU2_MISSING": ["QCU2"],
+        "QCU2": ["QCU2_MISSING"],
+        "FILTRE3_MISSING": ["FILTRE3"],
+        "FILTRE3": ["FILTRE3_MISSING"],
+        "QCM1_MISSING": [
+            "QCM11",
+            "QCM12"
+        ],
+        "QCM11": ["QCM1_MISSING"],
+        "QCM12": ["QCM1_MISSING"],
+        "QCM2_MISSING": [
+            "QCM21",
+            "QCM22"
+        ],
+        "QCM21": ["QCM2_MISSING"],
+        "QCM22": ["QCM2_MISSING"]
+    },
+    "resizing": {}
+}
