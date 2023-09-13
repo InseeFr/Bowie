@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../12-visualisation-questionnaire/" rel="prev"/>
-<link href="../14-elaboration-structure/" rel="next"/>
+<link href="../filtres/" rel="prev"/>
+<link href="../liste-de-code/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>Création d'une réponse basée sur une liste - Bowie</title>
+<title>Sélection du Kish - Bowie</title>
 <link href="../../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -33,7 +33,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#creation-dune-reponse-basee-sur-une-liste">
+<a class="md-skip" href="#selection-du-kish">
           Aller au contenu
         </a>
 </div>
@@ -57,7 +57,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Création d'une réponse basée sur une liste
+              Sélection du Kish
             
           </span>
 </div>
@@ -297,52 +297,104 @@
           Pogues
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_8_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_8_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../guide/">Guide</a>
+<a href="../">Guide</a>
 <label for="__nav_8_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_8_2_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_8_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_8_2">
 <span class="md-nav__icon md-icon"></span>
           Guide
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/boucles/">
+<a class="md-nav__link" href="../boucles/">
         Les boucles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/composition/">
+<a class="md-nav__link" href="../composition/">
         La composition
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/filtres/">
+<a class="md-nav__link" href="../filtres/">
         Les filtres
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/kish/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Sélection du Kish
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Sélection du Kish
       </a>
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#principe">
+    Principe
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/liste-de-code/">
+<a class="md-nav__link" href="#structure-du-questionnaire">
+    Structure du questionnaire
+  </a>
+<nav aria-label="Structure du questionnaire" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sequence-didentification">
+    Séquence d'identification
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sequence-de-questions">
+    Séquence de questions
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calcul-du-kish">
+    Calcul du Kish
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#filtre">
+    Filtre
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#questionnaire-exemple">
+    Questionnaire exemple
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../liste-de-code/">
         Les listes de code
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/problemes-connus/">
+<a class="md-nav__link" href="../problemes-connus/">
         Les problèmes connus
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/vtl/">
+<a class="md-nav__link" href="../vtl/">
         Guide VTL Pogues
       </a>
 </li>
@@ -359,12 +411,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/variables/nommage/">
+<a class="md-nav__link" href="../variables/nommage/">
         Nommage des variables
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/variables/variables-externes/">
+<a class="md-nav__link" href="../variables/variables-externes/">
         Les variables externes
       </a>
 </li>
@@ -374,115 +426,87 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_8_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">Tutoriel</a>
+<a href="../../tutoriel/">Tutoriel</a>
 <label for="__nav_8_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_8_3_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_8_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_8_3">
 <span class="md-nav__icon md-icon"></span>
           Tutoriel
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../10-creation-questionnaire/">
+<a class="md-nav__link" href="../../tutoriel/10-creation-questionnaire/">
         Création d'un questionnaire
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../11-creation-premiere-sequence/">
+<a class="md-nav__link" href="../../tutoriel/11-creation-premiere-sequence/">
         Création d'une première séquence
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../12-visualisation-questionnaire/">
+<a class="md-nav__link" href="../../tutoriel/12-visualisation-questionnaire/">
         Visualisation du questionnaire
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Création d'une réponse basée sur une liste
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutoriel/13-creation-liste-qcu/">
         Création d'une réponse basée sur une liste
       </a>
-<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#creation-dune-liste">
-    Création d'une liste
-  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ajout-de-modalites">
-    Ajout de modalités
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#finalisation">
-    Finalisation
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../14-elaboration-structure/">
+<a class="md-nav__link" href="../../tutoriel/14-elaboration-structure/">
         Élaboration de la structure du questionnaire
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../15-creation-tableau/">
+<a class="md-nav__link" href="../../tutoriel/15-creation-tableau/">
         Création d'un tableau
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../16-creation-qcm/">
+<a class="md-nav__link" href="../../tutoriel/16-creation-qcm/">
         Création d'une question à choix multiples
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../17-finalisation-structure/">
+<a class="md-nav__link" href="../../tutoriel/17-finalisation-structure/">
         Finalisation de la structure du questionnaire
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../20-mise-en-place-filtre/">
+<a class="md-nav__link" href="../../tutoriel/20-mise-en-place-filtre/">
         Mise en place d'un filtre
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../21-ajout-controle/">
+<a class="md-nav__link" href="../../tutoriel/21-ajout-controle/">
         Ajout d'un contrôle
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../22-ajout-infobulle/">
+<a class="md-nav__link" href="../../tutoriel/22-ajout-infobulle/">
         Insertion d'une infobulle
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../23-utilisation-variable-calculee/">
+<a class="md-nav__link" href="../../tutoriel/23-utilisation-variable-calculee/">
         Utilisation d'une variable calculée
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../24-personnalisation-libelle/">
+<a class="md-nav__link" href="../../tutoriel/24-personnalisation-libelle/">
         Personnalisation d'un libellé
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../25-mise-en-place-boucle/">
+<a class="md-nav__link" href="../../tutoriel/25-mise-en-place-boucle/">
         Mise en place d'une boucle
       </a>
 </li>
@@ -551,18 +575,42 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#creation-dune-liste">
-    Création d'une liste
+<a class="md-nav__link" href="#principe">
+    Principe
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ajout-de-modalites">
-    Ajout de modalités
+<a class="md-nav__link" href="#structure-du-questionnaire">
+    Structure du questionnaire
+  </a>
+<nav aria-label="Structure du questionnaire" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sequence-didentification">
+    Séquence d'identification
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#finalisation">
-    Finalisation
+<a class="md-nav__link" href="#sequence-de-questions">
+    Séquence de questions
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calcul-du-kish">
+    Calcul du Kish
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#filtre">
+    Filtre
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#questionnaire-exemple">
+    Questionnaire exemple
   </a>
 </li>
 </ul>
@@ -572,31 +620,104 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="creation-dune-reponse-basee-sur-une-liste">Création d'une réponse basée sur une liste</h1>
-<p>Dans notre première version de la question "OKREP", nous avons choisi comme format de réponse un champ textuel. Après coup, il semble préférable de fournir une liste fermée de réponse - "Oui" ou "Non".</p>
-<p>Pour modifier la question, il faut sélectionner l'élément qui matérialise cette dernière puis cliquer sur le bouton "Voir le détail" :</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../../img/pogues/modification-question-okrep.png"><img alt="Modifier une question" src="../../../img/pogues/modification-question-okrep.png"/></a></p>
-<h2 id="creation-dune-liste">Création d'une liste</h2>
-<p>Modifions dans l'onglet "Format des réponses" le <em>Type de question</em> pour choisir "Réponse à choix unique".</p>
-<p>On garde l'option "Créer une liste", puis on donne un nom à la liste que l'on va créer, par exemple "LISTE_OUI_NON" (champ <em>Nouvelle liste de code</em>).</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../../img/pogues/qcu-creation-liste.png"><img alt="Création liste" src="../../../img/pogues/qcu-creation-liste.png"/></a></p>
-<h2 id="ajout-de-modalites">Ajout de modalités</h2>
-<p>Sous le champ <em>Nouvelle liste de code</em> on trouve les modalités de la liste. Pour l'instant, cette liste est vide, créons une nouvelle modalité :</p>
+<h1 id="selection-du-kish">Sélection du Kish</h1>
+<p>Ce document décrit une méthode pour sélectionner le Kish dans Pogues.</p>
+<h2 id="principe">Principe</h2>
+<p>On considère que l'on procède à l'identification du Kish à travers les étapes suivantes :</p>
 <ul>
-<li>en cliquant sur "+ Ajouter un code"</li>
-<li>dans le champ qui apparaît, en renseignant "1" pour le code de la modalité et "Oui" pour le libellé.</li>
-<li>même chose avec le code "2" et le libellé "Non".</li>
+<li>on demande le nombre d'habitants du ménage</li>
+<li>on boucle sur ce nombre pour collecter les prénoms et les dates de naissance de chacun des membres du ménage</li>
+<li>une dernière boucle va permettre de filtrer le questionnement sur le seul Kish</li>
 </ul>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../../img/pogues/qcu-creation-modalite.png"><img alt="Création modalité" src="../../../img/pogues/qcu-creation-modalite.png"/></a></p>
-<h2 id="finalisation">Finalisation</h2>
-<p>Nous avons modifié le format de la réponse, il est donc nécessaire <a href="../2-creation-premiere-sequence/#creation-de-la-variable">de générer une nouvelle fois la variable sous-jacente</a> qui a changé de nature.</p>
+<h2 id="structure-du-questionnaire">Structure du questionnaire</h2>
+<h3 id="sequence-didentification">Séquence d'identification</h3>
+<blockquote>
+<p>On construit une séquence contenant les questions permettant d'identifier le Kish contenant la question du nombre d'habitants et la sous-séquence d'identification.</p>
+</blockquote>
+<p>On crée une séquence contenant une première question pour collecter le nombre d'habitants (variable numérique collectée <code>NBHAB</code>).</p>
+<p>On crée ensuite dans cette même séquence une sous-séquence <code>IDENTIFICATION</code> contenant :</p>
+<ul>
+<li>une question pour collecter le prénom de chaque habitant (variable texte collectée <code>PRENOM</code>).</li>
+<li>une question pour collecter la date de naissance (variable date <code>DATE_DE_NAISANCE</code>)</li>
+</ul>
+<p>Il faut ensuite créer une boucle <code>BOUCLE_PRENOMS</code> sur cette sous-séquence avec la formule <code>cast($NBHAB$, integer)</code> pour le minimum et le maximum.</p>
+<h3 id="sequence-de-questions">Séquence de questions</h3>
+<blockquote>
+<p>On crée la séquence de questionnement</p>
+</blockquote>
+<p>Une séquence contenant une question <code>QUESTION_POUR_LE_KISH</code>, dont le libellé est personnalisé avec le prénom (via la formule VTL <code>"Question pour " || cast($PRENOM$, string)</code>).</p>
+<p>On crée la boucle <code>BOUCLE_QUESTION_KISH</code> basée sur <code>BOUCLE_PRENOMS</code> qui englobe la séquence de questions pour le Kish.</p>
+<h2 id="calcul-du-kish">Calcul du Kish</h2>
+<blockquote>
+<p>Les éléments permettant de procéder au calcul lui-même</p>
+</blockquote>
+<p>Le coeur de la sélection est la formule permettant de former un score de sélection :</p>
+<p><code>cast(if $MOIS_NAISSANCE_INT$ &lt; 6 then $MOIS_NAISSANCE_INT$ + 12 else $MOIS_NAISSANCE_INT$, string) || "." || $JOUR_NAISSANCE_STR$</code></p>
+<p>Elle donnera par exemple :</p>
+<ul>
+<li>pour la date de naissance <code>01/06/2000</code> le score <code>6.01</code></li>
+<li>pour <code>10/05/1990</code> le score <code>17.10</code></li>
+</ul>
+<p>On sélectionne ensuite l'individu dont le score est le plus bas.</p>
+<p>Les variables calculées nécessaires sont :</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Portée</th>
+<th>VTL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MOIS_NAISSANCE_INT</td>
+<td>BOUCLE_PRENOMS</td>
+<td><code>cast(cast(cast($DATE_DE_NAISSANCE$, date, "YYYY-MM-DD"), string, "MM"), integer)</code></td>
+</tr>
+<tr>
+<td>JOUR_NAISSANCE_STR</td>
+<td>BOUCLE_PRENOMS</td>
+<td><code>cast(cast($DATE_DE_NAISSANCE$, date, "YYYY-MM-DD"),string, "DD")</code></td>
+</tr>
+<tr>
+<td>SCORE_KISH</td>
+<td>BOUCLE_PRENOMS</td>
+<td><code>cast(if $MOIS_NAISSANCE_INT$ &lt; 6 then $MOIS_NAISSANCE_INT$ + 12 else $MOIS_NAISSANCE_INT$, string) || "." || $JOUR_NAISSANCE_STR$</code></td>
+</tr>
+<tr>
+<td>KISH_MIN</td>
+<td>Questionnaire</td>
+<td><code>min($SCORE_KISH_INT$)</code></td>
+</tr>
+<tr>
+<td>KISH_INDICATOR</td>
+<td>BOUCLE_PRENOMS</td>
+<td><code>if $KISH_MIN$ = $SCORE_KISH_INT$ then 1 else 0</code></td>
+</tr>
+<tr>
+<td>SCORE_KISH_INT</td>
+<td>BOUCLE_PRENOMS</td>
+<td><code>cast($SCORE_KISH$, number)</code></td>
+</tr>
+<tr>
+<td>NB_POTENTIAL_KISH</td>
+<td>Questionnaire</td>
+<td><code>sum($KISH_INDICATOR$)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="filtre">Filtre</h2>
+<p>Pour ne présenter qu'un seul jeu de questions à l'individu sélectionné, il est nécessaire d'ajouter un filtre sur ces questions à partir du score calculé en amont.</p>
+<p>Le filtre a pour formule <code>$KISH_INDICATOR$ = 1</code>.</p>
+<h2 id="questionnaire-exemple">Questionnaire exemple</h2>
+<p>Pour référence, <a href="https://pogues.demo.insee.io/questionnaire/l8lfytfu">un questionnaire implémentant cette solution</a>.</p>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
 <nav aria-label="Pied de page" class="md-footer__inner md-grid">
-<a aria-label="Précédent: Visualisation du questionnaire" class="md-footer__link md-footer__link--prev" href="../12-visualisation-questionnaire/" rel="prev">
+<a aria-label="Précédent: Les filtres" class="md-footer__link md-footer__link--prev" href="../filtres/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -605,17 +726,17 @@
 <span class="md-footer__direction">
                   Précédent
                 </span>
-                Visualisation du questionnaire
+                Les filtres
               </div>
 </div>
 </a>
-<a aria-label="Suivant: Élaboration de la structure du questionnaire" class="md-footer__link md-footer__link--next" href="../14-elaboration-structure/" rel="next">
+<a aria-label="Suivant: Les listes de code" class="md-footer__link md-footer__link--next" href="../liste-de-code/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   Suivant
                 </span>
-                Élaboration de la structure du questionnaire
+                Les listes de code
               </div>
 </div>
 <div class="md-footer__button md-icon">
