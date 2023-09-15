@@ -1,9 +1,9 @@
 {
     "id": "ldodefpq",
     "modele": "PROTO_TCM",
-    "enoCoreVersion": "2.4.9",
-    "lunaticModelVersion": "2.3.4",
-    "generatingDate": "13-09-2023 16:39:22",
+    "enoCoreVersion": "2.4.3",
+    "lunaticModelVersion": "2.3.2",
+    "generatingDate": "15-09-2023 09:57:15",
     "missing": true,
     "pagination": "question",
     "maxPage": "10",
@@ -649,7 +649,7 @@
             "id": "ldof5dww",
             "componentType": "Loop",
             "page": "6",
-            "maxPage": "5",
+            "maxPage": "3",
             "depth": 1,
             "paginatedLoop": true,
             "conditionFilter": {
@@ -667,15 +667,10 @@
                 }
             },
             "bindingDependencies": [
-                "PARL",
-                "dsf_MISSING",
-                "dsf1_MISSING",
                 "PRENOM",
                 "Q1_MISSING",
                 "Q2_MISSING",
                 "Q3_MISSING",
-                "dsf",
-                "dsf1",
                 "Q1",
                 "Q21",
                 "Q22",
@@ -725,95 +720,10 @@
                     ]
                 },
                 {
-                    "id": "llnicu8u",
-                    "componentType": "Input",
-                    "mandatory": false,
-                    "page": "6.1",
-                    "maxLength": 249,
-                    "label": {
-                        "value": "\" :\" || cast(PARL,string) || \".\"",
-                        "type": "VTL|MD"
-                    },
-                    "conditionFilter": {
-                        "value": "true",
-                        "type": "VTL"
-                    },
-                    "hierarchy": {
-                        "sequence": {
-                            "id": "ldodmvpw",
-                            "page": "1",
-                            "label": {
-                                "value": "\"I - \" || \"THL\"",
-                                "type": "VTL|MD"
-                            }
-                        },
-                        "subSequence": {
-                            "id": "ldof1gdm",
-                            "page": "6.1",
-                            "label": {
-                                "value": "QUESTIONS_PLUS_17ANS",
-                                "type": "VTL|MD"
-                            }
-                        }
-                    },
-                    "missingResponse": {"name": "dsf_MISSING"},
-                    "bindingDependencies": [
-                        "PARL",
-                        "dsf_MISSING",
-                        "dsf",
-                        "PRENOM",
-                        "AGE",
-                        "ANAIS"
-                    ],
-                    "response": {"name": "dsf"}
-                },
-                {
-                    "id": "llnil3w0",
-                    "componentType": "Input",
-                    "mandatory": false,
-                    "page": "6.2",
-                    "maxLength": 249,
-                    "label": {
-                        "value": "\" :\" || cast($CALCS$,string) || \".\"",
-                        "type": "VTL|MD"
-                    },
-                    "conditionFilter": {
-                        "value": "true",
-                        "type": "VTL"
-                    },
-                    "hierarchy": {
-                        "sequence": {
-                            "id": "ldodmvpw",
-                            "page": "1",
-                            "label": {
-                                "value": "\"I - \" || \"THL\"",
-                                "type": "VTL|MD"
-                            }
-                        },
-                        "subSequence": {
-                            "id": "ldof1gdm",
-                            "page": "6.1",
-                            "label": {
-                                "value": "QUESTIONS_PLUS_17ANS",
-                                "type": "VTL|MD"
-                            }
-                        }
-                    },
-                    "missingResponse": {"name": "dsf1_MISSING"},
-                    "bindingDependencies": [
-                        "dsf1_MISSING",
-                        "dsf1",
-                        "PRENOM",
-                        "AGE",
-                        "ANAIS"
-                    ],
-                    "response": {"name": "dsf1"}
-                },
-                {
                     "id": "ldoffn3o",
                     "componentType": "Input",
                     "mandatory": false,
-                    "page": "6.3",
+                    "page": "6.1",
                     "maxLength": 249,
                     "label": {
                         "value": "\"Question qui va filtrer Q2 pour \" || PRENOM",
@@ -865,7 +775,7 @@
                 {
                     "id": "liude0tk",
                     "componentType": "CheckboxGroup",
-                    "page": "6.4",
+                    "page": "6.2",
                     "label": {
                         "value": "\"QCM Q2 affichée si Q1 = A pour \" || PRENOM",
                         "type": "VTL|MD"
@@ -934,7 +844,7 @@
                     "id": "liud6mss",
                     "componentType": "Radio",
                     "mandatory": false,
-                    "page": "6.5",
+                    "page": "6.3",
                     "label": {
                         "value": "\"qCU troisième \" || PRENOM",
                         "type": "VTL|MD"
@@ -1244,50 +1154,6 @@
         },
         {
             "variableType": "COLLECTED",
-            "name": "dsf",
-            "values": {
-                "PREVIOUS": [null],
-                "COLLECTED": [null],
-                "FORCED": [null],
-                "EDITED": [null],
-                "INPUTED": [null]
-            }
-        },
-        {
-            "variableType": "COLLECTED",
-            "name": "dsf_MISSING",
-            "values": {
-                "PREVIOUS": [null],
-                "COLLECTED": [null],
-                "FORCED": [null],
-                "EDITED": [null],
-                "INPUTED": [null]
-            }
-        },
-        {
-            "variableType": "COLLECTED",
-            "name": "dsf1",
-            "values": {
-                "PREVIOUS": [null],
-                "COLLECTED": [null],
-                "FORCED": [null],
-                "EDITED": [null],
-                "INPUTED": [null]
-            }
-        },
-        {
-            "variableType": "COLLECTED",
-            "name": "dsf1_MISSING",
-            "values": {
-                "PREVIOUS": [null],
-                "COLLECTED": [null],
-                "FORCED": [null],
-                "EDITED": [null],
-                "INPUTED": [null]
-            }
-        },
-        {
-            "variableType": "COLLECTED",
             "name": "Q1",
             "values": {
                 "PREVIOUS": [null],
@@ -1398,42 +1264,6 @@
         },
         {
             "variableType": "CALCULATED",
-            "name": "CALC",
-            "expression": {
-                "value": "if LIENS = \"3\" then 1 else 0",
-                "type": "VTL"
-            },
-            "bindingDependencies": ["LIENS"],
-            "shapeFrom": "PRENOM",
-            "inFilter": "false"
-        },
-        {
-            "variableType": "CALCULATED",
-            "name": "SCALC",
-            "expression": {
-                "value": "sum(CALC)",
-                "type": "VTL"
-            },
-            "bindingDependencies": [
-                "CALC",
-                "LIENS"
-            ],
-            "shapeFrom": "PRENOM",
-            "inFilter": "false"
-        },
-        {
-            "variableType": "CALCULATED",
-            "name": "PARL",
-            "expression": {
-                "value": "if \"2\" in LIENS then 1 else 0",
-                "type": "VTL"
-            },
-            "bindingDependencies": ["LIENS"],
-            "shapeFrom": "PRENOM",
-            "inFilter": "false"
-        },
-        {
-            "variableType": "CALCULATED",
             "name": "xAxis",
             "expression": {
                 "value": "PRENOM",
@@ -1469,10 +1299,6 @@
         "ANAIS": ["PRENOM_MISSING"],
         "LIENS_MISSING": ["LIENS"],
         "LIENS": ["LIENS_MISSING"],
-        "dsf_MISSING": ["dsf"],
-        "dsf": ["dsf_MISSING"],
-        "dsf1_MISSING": ["dsf1"],
-        "dsf1": ["dsf1_MISSING"],
         "Q1_MISSING": ["Q1"],
         "Q1": ["Q1_MISSING"],
         "Q2_MISSING": [
@@ -1495,8 +1321,6 @@
                 "PRENOM",
                 "AGE",
                 "ANAIS",
-                "dsf",
-                "dsf1",
                 "Q1",
                 "Q21",
                 "Q22",
