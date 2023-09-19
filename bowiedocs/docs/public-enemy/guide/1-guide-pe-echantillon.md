@@ -36,3 +36,8 @@ Puis charger avec le bouton "Charger les unités enquêtées", puis valider la c
 !!!note
 
     Selon la taille du questionnaire cette création peut durer plusieurs minutes.
+
+!!!note "Variables de portée Boucle"
+
+    Pour les variables de portée "Boucle" il faudra créer autant de variable suffixée par un index. 
+    Par exemple, pour une variable externe `PRENOM`, on fournira un fichier contenant `PRENOM_1`, `PRENOM_2`, ..., `PRENOM_N`.
