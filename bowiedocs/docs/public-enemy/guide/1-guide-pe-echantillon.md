@@ -33,7 +33,7 @@ On peut remplir les données à partir de ce fichier schéma :
 
 !!!note "Variables de portée Boucle"
 
-    Pour les variables de portée "Boucle" il faudra créer autant de variable suffixée par un index. 
+    Pour les variables de portée "Boucle" il faudra créer autant de variables suffixées par un index. 
     Par exemple, pour une variable externe `PRENOM`, on fournira un fichier contenant `PRENOM_1`, `PRENOM_2`, ..., `PRENOM_N`.
 
 Puis charger avec le bouton "Charger les unités enquêtées", puis valider la création avec le bouton "Créer le questionnaire dans les orchestrateurs".
