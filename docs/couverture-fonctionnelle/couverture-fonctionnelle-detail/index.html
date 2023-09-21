@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../2-conception/" rel="prev"/>
-<link href="../4-conception/" rel="next"/>
+<link href="../" rel="prev"/>
+<link href="../../eno/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>Les déclarations - Bowie</title>
+<title>Couverture fonctionnelle détaillée - Bowie</title>
 <link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -33,7 +33,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#les-declarations">
+<a class="md-skip" href="#couverture-fonctionnelle-detaillee">
           Aller au contenu
         </a>
 </div>
@@ -57,7 +57,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Les déclarations
+              Couverture fonctionnelle détaillée
             
           </span>
 </div>
@@ -98,62 +98,84 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">Conception</a>
+<a href="../../conception/">Conception</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
           Conception
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../1-conception/">
+<a class="md-nav__link" href="../../conception/1-conception/">
         Les types de questions et formats de réponses
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../2-conception/">
+<a class="md-nav__link" href="../../conception/2-conception/">
         Les boucles
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../conception/3-conception/">
         Les déclarations
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../4-conception/">
+<a class="md-nav__link" href="../../conception/4-conception/">
         Les éléments dynamiques : contrôles, filtres et personnalisation
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../couverture-fonctionnelle/">Couverture fonctionnelle</a>
+<a href="../">Couverture fonctionnelle</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
           Couverture fonctionnelle
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../couverture-fonctionnelle/couverture-fonctionnelle-detail/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Couverture fonctionnelle détaillée
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Couverture fonctionnelle détaillée
       </a>
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#detail-des-fonctionnalites">
+    Détail des fonctionnalités
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#perspectives">
+    Perspectives
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -540,27 +562,369 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#detail-des-fonctionnalites">
+    Détail des fonctionnalités
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#perspectives">
+    Perspectives
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="les-declarations">Les déclarations</h1>
-<p>Les déclarations sont une ou des phrases figurant sous les questions, titre de séquence ou de sous-séquences.</p>
+<h1 id="couverture-fonctionnelle-detaillee">Couverture fonctionnelle détaillée</h1>
+<p>On liste dans le tableau ci-dessous - avec un détail assez fin - ce que l'on sait spécifier dans un questionnaire conçu à travers Bowie.</p>
+<p>La section qui suit le tableau donne des perspectives sur de futures fonctionnalités (retenues ou pas).</p>
+<div class="admonition note">
+<p class="admonition-title">Lecture du tableau</p>
 <ul>
-<li>l'aide est une instruction destinée à l'enquêté ;</li>
-<li>la consigne est une instruction que l'enquêteur doit appliquer dans le cadre de la collecte en face à face ou par téléphone ;</li>
-<li>la carte code est une instruction destinée à l'enquêteur afin de lui rappeler de présenter une carte-code à l'enquêté (liste des modalités de réponse).</li>
+<li>Lorsque la fonctionnalité est disponible, le nom du composant ou sa traduction est citée dans le tableau.</li>
+<li>Lorsque la fonctionnalité n'est pas disponible mais est prévue, la date d'échéance est indiquée.</li>
+<li>Les fonctionnalités qui ne seront pas faites sont également listées.</li>
 </ul>
-<p>Il est également possible d’ajouter des infobulles : elles sont considérées comme une aide supplémentaire, et ne sont pas visibles sur le web en première intention (seul le survol de l'infobulle affiche le contenu). Il est donc essentiel de réfléchir aux contenus de ces infos-bulles et à l'information qu’on souhaite voir figurer « en clair » sur les questionnaires.</p>
+</div>
+<h2 id="detail-des-fonctionnalites">Détail des fonctionnalités</h2>
+<table>
+<thead>
+<tr>
+<th><span style="color:#555ff8;font-weight:bold">Ce qui peut être décrit dans Pogues/Eno</span></th>
+<th><span style="color:#555ff8;font-weight:bold">Lunatic (Platine, Queen)</span></th>
+<th><span style="color:#555ff8;font-weight:bold">papier</span></th>
+<th><span style="color:#555ff8;font-weight:bold">xforms  (Coltrane)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Questions ouvertes ou réponses simples</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Texte : si longueur &lt; 250 ou non décrite</td>
+<td>ok - Input</td>
+<td>ligne encadrée</td>
+<td>zone fixe</td>
+</tr>
+<tr>
+<td>Texte : si longueur &gt;= 250</td>
+<td>ok -TextArea</td>
+<td>bloc hauteur 5 lignes, paramétrable</td>
+<td>zone de dimension variable</td>
+</tr>
+<tr>
+<td>Numérique (bornes maximum et minimum, nombre de décimales, unités)</td>
+<td>ok - InputNumber</td>
+<td>zone de saisie fixe avec ou sans précasage, unités</td>
+<td>zone fixe, unités</td>
+</tr>
+<tr>
+<td>-&gt; séparateurs de milliers</td>
+<td>ok - oui</td>
+<td>sans objet sans précasage ; OK avec</td>
+<td>oui</td>
+</tr>
+<tr>
+<td>Date (au format AAAA-MM-JJ)</td>
+<td>ok - Datepicker (zone de saisie avec calendrier)</td>
+<td>précasage</td>
+<td>zone de saisie avec calendrier</td>
+</tr>
+<tr>
+<td>Date (au format AAAA-MM ou AAAA)</td>
+<td><span style="color:#ff6251;font-weight:bold">prévu S1 2024</span></td>
+<td>précasage</td>
+<td>2 zones de saisie</td>
+</tr>
+<tr>
+<td>Duree (mois, jour, heures)</td>
+<td><span style="color:#ff6251;font-weight:bold">prévu S1 2024</span></td>
+<td>zone de saisie</td>
+<td>zone de saisie</td>
+</tr>
+<tr>
+<td>------------------------------</td>
+<td>----------</td>
+<td>----------</td>
+<td>----------</td>
+</tr>
+<tr>
+<td><strong>Questions à choix unique</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Case à cocher : bouton radio</td>
+<td>ok - Radio</td>
+<td>cases à cocher</td>
+<td>cases à cocher rondes</td>
+</tr>
+<tr>
+<td>Case à cocher : décochable  <span style="color:#ff6251;font-weight:bold">non standard web</span></td>
+<td>ok - ChekboxOne</td>
+<td>cases à cocher</td>
+<td>cases à cocher</td>
+</tr>
+<tr>
+<td>Autocomplétion (non spécifiable dans Pogues)</td>
+<td>ok - Suggester</td>
+<td>sans objet</td>
+<td>non proposé (cf. dropdown)</td>
+</tr>
+<tr>
+<td>Liste déroulante</td>
+<td>ok - Dropdown</td>
+<td>ligne encadrée</td>
+<td>liste déroulante</td>
+</tr>
+<tr>
+<td>Booléen</td>
+<td>ok - CheckboxBoolean</td>
+<td>case</td>
+<td>case à cocher</td>
+</tr>
+<tr>
+<td>------------------------------</td>
+<td>----------</td>
+<td>----------</td>
+<td>----------</td>
+</tr>
+<tr>
+<td><strong>Questions à choix multiple</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cases à cocher (décochables)</td>
+<td>ok - CheckboxGroup</td>
+<td>cases à cocher</td>
+<td>cases à cocher</td>
+</tr>
+<tr>
+<td>Batteries de question (QCM dont la réponse est une liste de modalités)</td>
+<td>ok -  Table</td>
+<td>cases à cocher</td>
+<td>cases à cocher</td>
+</tr>
+<tr>
+<td>Question "Autres -&gt; préciser"</td>
+<td><span style="color:#ff6251;font-weight:bold">prévu S1 2024</span></td>
+<td>encadré libre</td>
+<td>affichage dynamique d’une question</td>
+</tr>
+<tr>
+<td>------------------------------</td>
+<td>----------</td>
+<td>----------</td>
+<td>----------</td>
+</tr>
+<tr>
+<td><strong>Structure</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Déclarations (Aides, Consigne enquêteurs, carte code)</td>
+<td>ok - Declarations</td>
+<td>texte</td>
+<td>texte</td>
+</tr>
+<tr>
+<td>Infobulles</td>
+<td>ok - Tooltip, texte souligné, mise en forme à revoir</td>
+<td>représentée par une étoile</td>
+<td>point interrogation, survolable</td>
+</tr>
+<tr>
+<td>Séquence</td>
+<td>ok - Sequence</td>
+<td>Texte</td>
+<td>Texte</td>
+</tr>
+<tr>
+<td>Sous-séquence</td>
+<td>ok - Subsequence</td>
+<td>Texte</td>
+<td>Texte</td>
+</tr>
+<tr>
+<td>Fil d’Ariane</td>
+<td>ok - Breadcrumb (sur poste enquêteur)</td>
+<td>Sans objet</td>
+<td>Non proposé</td>
+</tr>
+<tr>
+<td>Fil d’Ariane</td>
+<td>ko -Breadcrumb (sur poste web) <span style="color:#ff6251;font-weight:bold">prévu S1 2024</span></td>
+<td>Sans objet</td>
+<td>Non proposé</td>
+</tr>
+<tr>
+<td>------------------------------</td>
+<td>----------</td>
+<td>----------</td>
+<td>----------</td>
+</tr>
+<tr>
+<td><strong>Tableaux</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tableaux simples</td>
+<td>Table</td>
+<td>tableaux, nb de lignes fixes</td>
+<td>tableaux, nb de lignes fixes</td>
+</tr>
+<tr>
+<td>Tableaux dynamiques</td>
+<td><span style="color:#53b5b6;font-weight:bold">en cours de développement</span></td>
+<td>tableaux, nb de lignes paramétrables</td>
+<td>tableaux, nb de lignes fixes ou dynamiques</td>
+</tr>
+<tr>
+<td>Tableaux dynamiques personnalisés</td>
+<td><span style="color:#53b5b6;font-weight:bold">à tester quand tableaux finalisés</span></td>
+<td>ok</td>
+<td>ok</td>
+</tr>
+<tr>
+<td>Totaux de tableaux dynamiques</td>
+<td><span style="color:#53b5b6;font-weight:bold">à rajouter dans Pogues S2 2024</span></td>
+<td>sans objet</td>
+<td>sans objet</td>
+</tr>
+<tr>
+<td>------------------------------</td>
+<td>----------</td>
+<td>----------</td>
+<td>----------</td>
+</tr>
+<tr>
+<td><strong>Boucles</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Boucles - ensemble de questions répétées (principale ou liée, min et max collectés ou fixes)</td>
+<td>ok - Loop</td>
+<td>Répétition d'un ensemble de questions, nb occurrences paramètrables</td>
+<td>Répétition d'un ensemble de questions</td>
+</tr>
+<tr>
+<td>Boucles préremplies</td>
+<td><span style="color:#ff6251;font-weight:bold">à tester </span></td>
+<td>ok</td>
+<td>ok</td>
+</tr>
+<tr>
+<td>Liens deux à deux (composition familiale)</td>
+<td>ok - Pairwise</td>
+<td>sans objet</td>
+<td>ne sera pas proposé</td>
+</tr>
+<tr>
+<td>------------------------------</td>
+<td>----------</td>
+<td>----------</td>
+<td>----------</td>
+</tr>
+<tr>
+<td><strong>Éléments dynamiques</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Contrôles de cohérence, personnalisés</td>
+<td>ok</td>
+<td>sans objet</td>
+<td>ok</td>
+</tr>
+<tr>
+<td>Contrôles de format</td>
+<td>ok</td>
+<td>sans objet</td>
+<td>ok</td>
+</tr>
+<tr>
+<td>Les filtres</td>
+<td>ok</td>
+<td>affichage d’un texte alternatif</td>
+<td>ok</td>
+</tr>
+<tr>
+<td>La personnalisation</td>
+<td>ok</td>
+<td>ok</td>
+<td>ok</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="perspectives">Perspectives</h2>
+<p>La notion de <em>MVP</em> ici représente les priorités données au niveau filière pour les 18 mois à venir (jusqu'à fin 2024, début 2025). Cela signifie qu'une fonctionnalité <em>MVP</em> sera déployée à 18 mois alors qu'une fonctionnalité hors <em>MVP</em> ne le sera pas forcément.</p>
+<p><span style="color:#555ff8;font-weight:bold"><strong>A améliorer</strong></span> :</p>
+<ul>
+<li>Affichage par séquence dans l'orchestrateur de collecte web choisi (Stromae V2 ? V3 ?)</li>
+</ul>
+<p><span style="color:#555ff8;font-weight:bold"><strong>A developper coté Pogues-Eno pour être proposé dans la filière</strong></span></p>
+<ul>
+<li>Rond-point  (composant Lunatic  roundabout) décrit dans Pogues et Eno : <strong>T2 2024</strong></li>
+<li>Rond-point "enrichi" (spécifier le libellé du bouton) : <strong>non MVP</strong></li>
+<li>Nouveaux composants RP / composant multipage : après 2024. <strong>Non MVP</strong></li>
+</ul>
+<p><span style="color:#555ff8;font-weight:bold"><strong>A developper coté Lunatic</strong></span></p>
+<ul>
+<li>Mode management <strong>MVP</strong></li>
+<li>Budgets séparés <strong>non MVP</strong></li>
+</ul>
+<p><span style="color:#555ff8;font-weight:bold"><strong>A developper coté orchestrateur</strong></span></p>
+<ul>
+<li>Paradonnées Queen <strong>non MVP</strong></li>
+<li>StromaeV3 <strong>à qualifier</strong></li>
+</ul>
+<p><span style="color:#555ff8;font-weight:bold"><strong>Ne sera pas fait</strong></span> </p>
+<ul>
+<li>Boucles de boucles</li>
+<li>Barre d'avancement (pas avant au mieux 2025)</li>
+<li>Tirage aléatoire parmi une boucle (pas avant au mieux 2025)</li>
+</ul>
+<p><span style="color:#555ff8;font-weight:bold"><strong>A prioriser</strong></span> </p>
+<ul>
+<li>Listes dynamiques</li>
+<li>Queen dans Public Enemy</li>
+<li>Questions obligatoires</li>
+</ul>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
 <nav aria-label="Pied de page" class="md-footer__inner md-grid">
-<a aria-label="Précédent: Les boucles" class="md-footer__link md-footer__link--prev" href="../2-conception/" rel="prev">
+<a aria-label="Précédent: Les fonctionnalités" class="md-footer__link md-footer__link--prev" href="../" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -569,17 +933,17 @@
 <span class="md-footer__direction">
                   Précédent
                 </span>
-                Les boucles
+                Les fonctionnalités
               </div>
 </div>
 </a>
-<a aria-label="Suivant: Les éléments dynamiques : contrôles, filtres et personnalisation" class="md-footer__link md-footer__link--next" href="../4-conception/" rel="next">
+<a aria-label="Suivant: Contexte et lexique" class="md-footer__link md-footer__link--next" href="../../eno/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   Suivant
                 </span>
-                Les éléments dynamiques : contrôles, filtres et personnalisation
+                Contexte et lexique
               </div>
 </div>
 <div class="md-footer__button md-icon">
