@@ -77,7 +77,7 @@ La notion de _MVP_ ici représente les priorités données au niveau filière po
   
  <span style='color:#555ff8;font-weight:bold'>**À développer coté Lunatic**</span>
 
-- Mode management **MVP**
+- [Mode management](https://github.com/InseeFr/Bowie/issues/46) **MVP**
 - Budgets séparés **non MVP**
 
  <span style='color:#555ff8;font-weight:bold'>**À développer coté orchestrateur**</span>
@@ -87,11 +87,11 @@ La notion de _MVP_ ici représente les priorités données au niveau filière po
 
 <span style='color:#555ff8;font-weight:bold'>**À planifier**</span>  
 
-- Listes dynamiques
+- [Listes dynamiques](https://github.com/InseeFr/Bowie/issues/52)
 - Queen dans Public Enemy
-- Questions obligatoires
+- [Questions obligatoires](https://github.com/InseeFr/Bowie/issues/84)
 
-<span style='color:#555ff8;font-weight:bold'>**Non planifié**</span>  
+<span style='color:#555ff8;font-weight:bold'>**Non planifiés**</span>  
 
 - Boucles de boucles
 - Barre d'avancement (pas avant au mieux 2025)
