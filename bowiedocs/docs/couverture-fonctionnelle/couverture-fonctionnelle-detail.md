@@ -65,34 +65,34 @@ La section qui suit le tableau donne des perspectives sur de futures fonctionnal
 
 La notion de _MVP_ ici représente les priorités données au niveau filière pour les 18 mois à venir (jusqu'à fin 2024, début 2025). Cela signifie qu'une fonctionnalité _MVP_ sera déployée à 18 mois alors qu'une fonctionnalité hors _MVP_ ne le sera pas forcément.
 
-<span style='color:#555ff8;font-weight:bold'>**A améliorer**</span> :
+<span style='color:#555ff8;font-weight:bold'>**À améliorer**</span> :
 
 - Affichage par séquence dans l'orchestrateur de collecte web choisi (Stromae V2 ? V3 ?)
 
-<span style='color:#555ff8;font-weight:bold'>**A developper coté Pogues-Eno pour être proposé dans la filière**</span>
+<span style='color:#555ff8;font-weight:bold'>**À développer coté Pogues-Eno pour être proposé dans la filière**</span>
 
 - Rond-point  (composant Lunatic  roundabout) décrit dans Pogues et Eno : **T2 2024**
 - Rond-point "enrichi" (spécifier le libellé du bouton) : **non MVP**
 - Nouveaux composants RP / composant multipage : après 2024. **Non MVP**
   
- <span style='color:#555ff8;font-weight:bold'>**A developper coté Lunatic**</span>
+ <span style='color:#555ff8;font-weight:bold'>**À développer coté Lunatic**</span>
 
 - Mode management **MVP**
 - Budgets séparés **non MVP**
 
- <span style='color:#555ff8;font-weight:bold'>**A developper coté orchestrateur**</span>
+ <span style='color:#555ff8;font-weight:bold'>**À développer coté orchestrateur**</span>
 
 - Paradonnées Queen **non MVP**
 - StromaeV3 **à qualifier**
 
-<span style='color:#555ff8;font-weight:bold'>**Ne sera pas fait**</span>  
-
-- Boucles de boucles
-- Barre d'avancement (pas avant au mieux 2025)
-- Tirage aléatoire parmi une boucle (pas avant au mieux 2025)
-
-<span style='color:#555ff8;font-weight:bold'>**A prioriser**</span>  
+<span style='color:#555ff8;font-weight:bold'>**À planifier**</span>  
 
 - Listes dynamiques
 - Queen dans Public Enemy
 - Questions obligatoires
+
+<span style='color:#555ff8;font-weight:bold'>**Non planifié**</span>  
+
+- Boucles de boucles
+- Barre d'avancement (pas avant au mieux 2025)
+- Tirage aléatoire parmi une boucle (pas avant au mieux 2025)
