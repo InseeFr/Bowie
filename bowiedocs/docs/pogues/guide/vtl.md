@@ -217,6 +217,20 @@ $PRENOM$ not_in {"Alice", "Bob", "Charlie"}
 
 ## Cookbook
 
+### Chaînes de caractères
+
+#### Gestion des majuscules
+
+Imaginons que l'on collecte un prénom à travers la bien nommée variable `PRENOM`. On souhaite que quelque soit la casse de la réponse, on affiche le prénom sous la forme `Prénom`.
+
+Voici une formule pour le cas d'un prénom simple:
+
+```
+upper(substr(PRENOM, 1, 1)) || lower(substr(PRENOM, 2, length(PRENOM)))
+```
+
+Attention, cela ne fonctionnera pas pour les prénoms composés pour lesquels il sera nécessaire de rendre compte d'un séparateur (un espace, un tiret).
+
 ### Dates
 
 #### Récupérer l'année
