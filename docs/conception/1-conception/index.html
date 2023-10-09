@@ -199,9 +199,6 @@
 <input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../../eno/">Eno</a>
-<label for="__nav_5">
-<span class="md-nav__icon md-icon"></span>
-</label>
 </div>
 <nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
@@ -209,11 +206,6 @@
           Eno
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../eno/1-conception/">
-        Les types de questions et formats de réponses
-      </a>
-</li>
 </ul>
 </nav>
 </li>
@@ -634,6 +626,7 @@
 <li>les questions à choix unique</li>
 <li>les questions à choix multiple</li>
 <li>les tableaux</li>
+<li>les liens deux à deux</li>
 </ul>
 <h2 id="les-questions-ouvertes-ou-reponses-dites-simples">Les questions ouvertes ou réponses dites simples</h2>
 <p>Il s’agit de répondre à une question ouverte, comprenant un seul champ, libre, c’est-à-dire ne reposant pas sur une liste de codes fermée. Les formats de réponses peuvent varier :</p>
@@ -645,26 +638,26 @@
 </ul>
 <h2 id="les-questions-a-choix-unique-de-reponse">Les questions à choix unique de réponse</h2>
 <p>Il s’agit de répondre à une question qualitative, s’appuyant sur une liste de codes, et présentée sous forme de boutons radios, de liste déroulante ou de listes d'autocomplétion : parmi ces listes, l’enquêté ne peut effectuer qu’un seul choix.</p>
-<p><strong>Boutons-radios</strong> : la mise en forme classique et accessible est un bouton radio et lorsque le répondant a sélectionné une réponse, elle ne peut plus être « désélectionnée » - il peut seulement sélectionner une autre modalité.</p>
+<p><strong>Boutons-radios</strong> : la mise en forme classique et accessible est un bouton radio. Lorsque le répondant a sélectionné une réponse, elle ne peut plus être « désélectionnée », le répondant ne peut que sélectionner une autre modalité.</p>
 <p>Pour plusieurs enquêtes, les réponses des questions à choix unique sont représentées par des cases à cocher décochables afin d’offrir au répondant la possibilité de revenir sur sa réponse (en particulier annuler sa réponse, ce que ne permet pas le bouton-radio usuel), Il faut avoir conscience que cela contrevient aux standards du web et aux critères d’accessibilité. Sur le web ces deux représentations sont différentes.</p>
 <p><strong>Liste en autocomplétion</strong> : ce type de variable permet à l'utilisateur de limiter la quantité d'informations qu'il saisit avec son clavier, en se voyant proposer un complément qui pourrait convenir à la chaîne de caractères qu'il a commencé à taper.</p>
-<p><strong>Liste déroulante</strong> : cette liste permet de proposer une liste fermée, généralemen pas trop longue de choix, mais il est recommandé de privilégier l'autocomplétion lorsque cela est possible ou que la liste est longue.</p>
+<p><strong>Liste déroulante</strong> : cette liste permet de proposer une liste fermée, généralement pas trop longue de choix, mais il est recommandé de privilégier l'autocomplétion lorsque cela est possible ou que la liste est longue.</p>
 <h2 id="les-questions-a-choix-multiple">Les questions à choix multiple</h2>
 <p>Il s’agit de répondre à une question qualitative s’appuyant sur une liste de codes. Parmi cette liste, l’enquêté peut effectuer plusieurs choix :</p>
 <ul>
 <li>soit en cochant plusieurs cases ;</li>
 <li>soit en sélectionnant oui/non pour chacune des modalités.</li>
 </ul>
-<p>Ici encore, si le concepteur choisit des cases à cocher, elles seront décochables, s’il choisit des boutons radio, le répondant ne pourra pas annuler sa réponse (mais uniquement choisir une autre modalité). Cette mise en forme peut également être retenue pour des batteries de questions </p>
+<p>Ici encore, si le concepteur a spécifié des boutons radio, le répondant ne pourra pas annuler sa réponse (mais uniquement choisir une autre modalité) ; si le concepteur a décrit des cases à cocher, elles seront décochables. Cette mise en forme peut également être retenue pour des batteries de questions. </p>
 <h2 id="les-tableaux">Les tableaux</h2>
 <p><strong>Usage</strong> : les tableaux permettent de présenter l’information à collecter, de manière compacte et visible en une seule fois. Il est communément reconnu dans la littérature que les tableaux doivent être évités lorsque c’est possible : d'une part ce format ne réponse ne se prête pas à l'accessibilité et d'autre part, si ce format est particulièrement familier aux statisticiens, ce n’est pas nécessairement le cas pour les répondants.
 Il est donc recommandé de poser plutôt les questions simplement de façon disjointe et, si ce n'est pas possible, de les simplifier.</p>
 <p>Les tableaux comprennent un ou deux axes d’informations (qualitatifs) et une ou plusieurs mesures (pouvant prendre les différents formats des réponses simples et uniques).
 Les titres de colonnes sont définis colonne par colonne.
 La hauteur et la largeur des lignes sont calculées de manière automatique à partir de leur contenu. </p>
-<p>Outre les tableaux à 2 dimensions fixées, il est possible de proposer des <strong>« tableaux dynamiques »</strong> donc des tableaux, en général préremplis, auxquels on peut ajouter des lignes (présence d’un bouton "Ajouter"):</p>
+<p>Outre les tableaux à 2 dimensions fixées, il est possible de proposer des <strong>« tableaux dynamiques »</strong> donc des tableaux, dont les premières lignes peuvent être préremplies, auxquels on peut ajouter des lignes (présence d’un bouton "Ajouter"):</p>
 <ul>
-<li>les lignes ajoutées auront toutes le même format, éventuellement différent du format des lignes qui les précèdent ;</li>
+<li>les lignes ajoutées auront toutes le même format, généralement celle du format des lignes qui les précèdent ;</li>
 <li>les tableaux dynamiques ne comportent pas d’entête de ligne.</li>
 </ul>
 <p><strong>Cas particulier</strong> : les listes hiérarchiques</p>

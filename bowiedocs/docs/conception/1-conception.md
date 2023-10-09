@@ -11,6 +11,7 @@ L'atelier de conception propose de nombreux types de questions, comportant des f
 - les questions à choix unique
 - les questions à choix multiple
 - les tableaux
+- les liens deux à deux
 
 ## Les questions ouvertes ou réponses dites simples
 
@@ -25,13 +26,13 @@ Il s’agit de répondre à une question ouverte, comprenant un seul champ, libr
 
 Il s’agit de répondre à une question qualitative, s’appuyant sur une liste de codes, et présentée sous forme de boutons radios, de liste déroulante ou de listes d'autocomplétion : parmi ces listes, l’enquêté ne peut effectuer qu’un seul choix.
 
-**Boutons-radios** : la mise en forme classique et accessible est un bouton radio et lorsque le répondant a sélectionné une réponse, elle ne peut plus être « désélectionnée » - il peut seulement sélectionner une autre modalité.
+**Boutons-radios** : la mise en forme classique et accessible est un bouton radio. Lorsque le répondant a sélectionné une réponse, elle ne peut plus être « désélectionnée », le répondant ne peut que sélectionner une autre modalité.
 
 Pour plusieurs enquêtes, les réponses des questions à choix unique sont représentées par des cases à cocher décochables afin d’offrir au répondant la possibilité de revenir sur sa réponse (en particulier annuler sa réponse, ce que ne permet pas le bouton-radio usuel), Il faut avoir conscience que cela contrevient aux standards du web et aux critères d’accessibilité. Sur le web ces deux représentations sont différentes.
 
 **Liste en autocomplétion** : ce type de variable permet à l'utilisateur de limiter la quantité d'informations qu'il saisit avec son clavier, en se voyant proposer un complément qui pourrait convenir à la chaîne de caractères qu'il a commencé à taper.
 
-**Liste déroulante** : cette liste permet de proposer une liste fermée, généralemen pas trop longue de choix, mais il est recommandé de privilégier l'autocomplétion lorsque cela est possible ou que la liste est longue.
+**Liste déroulante** : cette liste permet de proposer une liste fermée, généralement pas trop longue de choix, mais il est recommandé de privilégier l'autocomplétion lorsque cela est possible ou que la liste est longue.
 
 ## Les questions à choix multiple
 
@@ -40,7 +41,7 @@ Il s’agit de répondre à une question qualitative s’appuyant sur une liste 
 - soit en cochant plusieurs cases ;
 - soit en sélectionnant oui/non pour chacune des modalités.
 
-Ici encore, si le concepteur choisit des cases à cocher, elles seront décochables, s’il choisit des boutons radio, le répondant ne pourra pas annuler sa réponse (mais uniquement choisir une autre modalité). Cette mise en forme peut également être retenue pour des batteries de questions 
+Ici encore, si le concepteur a spécifié des boutons radio, le répondant ne pourra pas annuler sa réponse (mais uniquement choisir une autre modalité) ; si le concepteur a décrit des cases à cocher, elles seront décochables. Cette mise en forme peut également être retenue pour des batteries de questions. 
 
 ## Les tableaux
 
@@ -51,9 +52,9 @@ Les tableaux comprennent un ou deux axes d’informations (qualitatifs) et une o
 Les titres de colonnes sont définis colonne par colonne.
 La hauteur et la largeur des lignes sont calculées de manière automatique à partir de leur contenu. 
  
-Outre les tableaux à 2 dimensions fixées, il est possible de proposer des **« tableaux dynamiques »** donc des tableaux, en général préremplis, auxquels on peut ajouter des lignes (présence d’un bouton "Ajouter"):
+Outre les tableaux à 2 dimensions fixées, il est possible de proposer des **« tableaux dynamiques »** donc des tableaux, dont les premières lignes peuvent être préremplies, auxquels on peut ajouter des lignes (présence d’un bouton "Ajouter"):
 
-- les lignes ajoutées auront toutes le même format, éventuellement différent du format des lignes qui les précèdent ;
+- les lignes ajoutées auront toutes le même format, généralement celle du format des lignes qui les précèdent ;
 - les tableaux dynamiques ne comportent pas d’entête de ligne.
 
 
