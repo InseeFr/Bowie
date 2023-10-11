@@ -330,6 +330,17 @@ Et dans ce cas, on peut encore plus simplement tirer partie de la fonction `nvl`
 nvl($VAR_A$, "") = ""
 ```
 
+#### Contrôle de validité d'une adresse mail
+
+Certains questionnaires peuvent collecter des informations de contact. Dans le cas d'une adresse _mail_, on veut pouvoir s'assurer de la justesse syntaxique de celle-ci. S'il n'existe pas de formule assurant la compatibilité à 100% avec la spécification initiale relative aux adresses mail, ce que l'on utilise dans la formule suivante permet d'empêcher la plupart des erreurs :
+
+```
+match_characters(
+    $MAIL$,
+    "^[A-Za-z0-9._+\-\']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$"
+) = false
+```
+
 #### Contrôle de validité d'un SIRET
 
 On se place dans le cas où le Siret est collecté à travers la variable `SIRET`. Le contrôle est alors :
