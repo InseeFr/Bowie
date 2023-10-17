@@ -247,6 +247,20 @@ On transforme la variable de type date en chaîne de caractères, puis on extrai
 
 <span class="label label-rounded label-warning">Attention !</span> Si Pogues permet de choisir trois types de formats de date, seul le format JJMMAAAA (jour, mois, année) est aujourd’hui proposé à l’enquêté. Par ailleurs, si le format présenté lui-même est JJMMAAAA, la variable collectée est au format AAAAMMJJ, ce qui explique le code VTL précédent.
 
+#### Formater l'affichage de la date
+
+Comme vu plus haut, le format des variables Date n'est pas forcément idéal pour l'affichage, on veut pouvoir présenter l'information avec le motif `JJ/MM/AAAA` (jour, mois, année).
+
+Le code suivant permet cette transformation :
+
+```
+substr(cast($DATE$, string, "YYYY-MM-DD"),9,2) ||
+"/" ||
+substr(cast($DATE$, string, "YYYY-MM-DD"),6,2) ||
+"/" ||
+substr(cast($DATE$, string, "YYYY-MM-DD"),1,4)
+```
+
 #### Comparaison
 
 <span class="label label-rounded label-warning">Bientôt disponible !</span>

@@ -516,6 +516,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#formater-laffichage-de-la-date">
+    Formater l'affichage de la date
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#comparaison">
     Comparaison
   </a>
@@ -900,6 +905,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#formater-laffichage-de-la-date">
+    Formater l'affichage de la date
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#comparaison">
     Comparaison
   </a>
@@ -1149,6 +1159,15 @@ $MA_VARIABLE_BOOLEENNE$
 </code></pre></div>
 <p>On transforme la variable de type date en chaîne de caractères, puis on extrait les 4 premiers caractères. Le motif "YYYY-MM-DD" permet de la traduction</p>
 <p><span class="label label-rounded label-warning">Attention !</span> Si Pogues permet de choisir trois types de formats de date, seul le format JJMMAAAA (jour, mois, année) est aujourd’hui proposé à l’enquêté. Par ailleurs, si le format présenté lui-même est JJMMAAAA, la variable collectée est au format AAAAMMJJ, ce qui explique le code VTL précédent.</p>
+<h4 id="formater-laffichage-de-la-date">Formater l'affichage de la date</h4>
+<p>Comme vu plus haut, le format des variables Date n'est pas forcément idéal pour l'affichage, on veut pouvoir présenter l'information avec le motif <code>JJ/MM/AAAA</code> (jour, mois, année).</p>
+<p>Le code suivant permet cette transformation :</p>
+<div class="highlight"><pre><span></span><code>substr(cast($DATE$, string, "YYYY-MM-DD"),9,2) ||
+"/" ||
+substr(cast($DATE$, string, "YYYY-MM-DD"),6,2) ||
+"/" ||
+substr(cast($DATE$, string, "YYYY-MM-DD"),1,4)
+</code></pre></div>
 <h4 id="comparaison">Comparaison</h4>
 <p><span class="label label-rounded label-warning">Bientôt disponible !</span></p>
 <p>Pour comparer des dates :</p>
