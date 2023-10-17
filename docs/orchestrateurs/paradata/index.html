@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../enqueteur/4-Queen/" rel="prev"/>
-<link href="0-stromae/" rel="next"/>
+<link href="../" rel="prev"/>
+<link href="../enqueteur/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>Orchestrateur Stromae - Bowie</title>
+<title>Les paradonnées - Bowie</title>
 <link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -33,7 +33,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#orchestrateur-stromae">
+<a class="md-skip" href="#les-paradonnees">
           Aller au contenu
         </a>
 </div>
@@ -57,7 +57,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Orchestrateur Stromae
+              Les paradonnées
             
           </span>
 </div>
@@ -213,8 +213,9 @@
           Orchestrateurs
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../paradata/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
         Les paradonnées
       </a>
 </li>
@@ -255,52 +256,52 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_8_4" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index md-nav__link--active">
-<a href="./">Web</a>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../web/">Web</a>
 <label for="__nav_8_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_8_4_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_8_4_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_8_4">
 <span class="md-nav__icon md-icon"></span>
           Web
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="0-stromae/">
+<a class="md-nav__link" href="../web/0-stromae/">
         "Stromae" : à quoi ressemble un questionnaire web généré par la filière ?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="1-stromae/">
+<a class="md-nav__link" href="../web/1-stromae/">
         Découpage du questionnaire et navigation
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="2-stromae/">
+<a class="md-nav__link" href="../web/2-stromae/">
         Page de début et page de fin
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="3-stromae/">
+<a class="md-nav__link" href="../web/3-stromae/">
         La barre d'avancement
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="4-stromae/">
+<a class="md-nav__link" href="../web/4-stromae/">
         La mise en forme des questions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="5-stromae/">
+<a class="md-nav__link" href="../web/5-stromae/">
         La numérotation
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="6-stromae/">
+<a class="md-nav__link" href="../web/6-stromae/">
         La disposition des éléments du questionnaire
       </a>
 </li>
@@ -550,16 +551,33 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="orchestrateur-stromae">Orchestrateur Stromae</h1>
-<p>L'INSEE et certains SSM proposent aux ménages et aux entreprises enquêtés de répondre par internet, via des questionnaire autoadministrés.</p>
-<p>L'application web permettant cette réponse aux questionnaires utilise la bibiliothèque de composants Lunatic et son ergonomie repose sur une charte ergonomique qui garantit une homogénéité et une efficacité d’usage. </p>
+<h1 id="les-paradonnees">Les paradonnées</h1>
+<p>Les <a href="https://en.wikipedia.org/wiki/Paradata">paradonnées</a> forment un ensemble d'informations relatives à la manière dont le questionnaire a été rempli. Elles permettent d'améliorer la compréhension des usages des répondants et de la manière dont ils répondent au questions.</p>
+<p>Actuellement la collecte de paradonnées n'est effectuée que sur les questionnaires autoadministrés sur le web (dans <a href="../web/">Stromae</a> donc).</p>
+<p>L'offre de service actuelle, qui correspond aux paradonnées de type <em>orchestrateur</em>, permet de collecter :</p>
+<ul>
+<li>l'information sur les matériels et logiciels utilisés,</li>
+<li>la connexion au questionnaire,</li>
+<li>la déconnexion,</li>
+<li>les clics sur les boutons "Continuer" ou "Retour" (pour les changements de page).</li>
+</ul>
+<p>Cela représente une offre de service minimale, dont on souhaite l'extension à terme. À la cible, il sera possible de collecter des informations fines sur le parcours du questionnaires. Il s'agit là de paradonnées de niveau <em>questionnaire</em>, qui permettront entre autres :</p>
+<ul>
+<li>l'entrée ou la sortie d'un champ de saisie</li>
+<li>l'historique de saisie (lettre à lettre pour un champ texte, modalités de réponse sur une liste, etc.)</li>
+</ul>
+<p>La collecte de ce deuxième type de paradonnées implique nécessairement un plus grand volume de stockage et de circulation d'information, ce qui est à prendre en considération pour la collecte du questionnaire lui-même comme pour l'exploitation de ces données. On imagine donc pouvoir activer finement ces différents niveaux. On aurait donc :</p>
+<ul>
+<li>systématiquement des paradonnées de niveau <em>orchestrateur</em> pour l'ensemble des enquêtes</li>
+<li>des paradonnées de niveau <em>questionnaire</em> à configurer par enquête (par exemple en collectant toutes les informations les plus fines lors d'une opération pilote pour ne garder le niveau le plus fin lors de la collecte réelle que sur un sous-ensemble de questions).</li>
+</ul>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
 <nav aria-label="Pied de page" class="md-footer__inner md-grid">
-<a aria-label="Précédent: Raccourcis clavier" class="md-footer__link md-footer__link--prev" href="../enqueteur/4-Queen/" rel="prev">
+<a aria-label="Précédent: Index" class="md-footer__link md-footer__link--prev" href="../" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -568,17 +586,17 @@
 <span class="md-footer__direction">
                   Précédent
                 </span>
-                Raccourcis clavier
+                Index
               </div>
 </div>
 </a>
-<a aria-label='Suivant: "Stromae" : à quoi ressemble un questionnaire web généré par la filière ?' class="md-footer__link md-footer__link--next" href="0-stromae/" rel="next">
+<a aria-label="Suivant: Orchestrateur Queen" class="md-footer__link md-footer__link--next" href="../enqueteur/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   Suivant
                 </span>
-                "Stromae" : à quoi ressemble un questionnaire web généré par la filière ?
+                Orchestrateur Queen
               </div>
 </div>
 <div class="md-footer__button md-icon">
