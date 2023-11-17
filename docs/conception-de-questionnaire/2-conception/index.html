@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../3-conception/" rel="prev"/>
-<link href="../../couverture-fonctionnelle/" rel="next"/>
+<link href="../1-conception/" rel="prev"/>
+<link href="../3-conception/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>Les éléments dynamiques : contrôles, filtres et personnalisation - Bowie</title>
+<title>Les boucles - Bowie</title>
 <link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -33,7 +33,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#les-elements-dynamiques-controles-filtres-et-personnalisation">
+<a class="md-skip" href="#les-boucles">
           Aller au contenu
         </a>
 </div>
@@ -57,7 +57,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Les éléments dynamiques : contrôles, filtres et personnalisation
+              Les boucles
             
           </span>
 </div>
@@ -101,7 +101,7 @@
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">Conception</a>
+<a href="../">Conception de questionnaire</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -109,16 +109,22 @@
 <nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
-          Conception
+          Conception de questionnaire
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../0-conception/">
+        Une mise en forme standardisée, pourquoi et comment ?
+      </a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../1-conception/">
         Les types de questions et formats de réponses
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../2-conception/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
         Les boucles
       </a>
 </li>
@@ -127,71 +133,10 @@
         Les déclarations
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Les éléments dynamiques : contrôles, filtres et personnalisation
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../4-conception/">
         Les éléments dynamiques : contrôles, filtres et personnalisation
       </a>
-<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#les-controles">
-    Les contrôles
-  </a>
-<nav aria-label="Les contrôles" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#les-controles-dits-de-format">
-    Les contrôles dits "de format"
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#les-controles-dits-metier-ou-de-coherence">
-    Les contrôles dits "métier" ou "de cohérence"
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cas-particulier-les-questions-obligatoires">
-    Cas particulier : les questions obligatoires
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#les-filtres">
-    Les filtres
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#la-personnalisation">
-    La personnalisation
-  </a>
-<nav aria-label="La personnalisation" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#les-donnees-anterieures-ou-externes">
-    Les données antérieures ou externes
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#la-personnalisation-en-cours-de-collecte">
-    La personnalisation en cours de collecte
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -610,98 +555,27 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table des matières" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#les-controles">
-    Les contrôles
-  </a>
-<nav aria-label="Les contrôles" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#les-controles-dits-de-format">
-    Les contrôles dits "de format"
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#les-controles-dits-metier-ou-de-coherence">
-    Les contrôles dits "métier" ou "de cohérence"
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cas-particulier-les-questions-obligatoires">
-    Cas particulier : les questions obligatoires
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#les-filtres">
-    Les filtres
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#la-personnalisation">
-    La personnalisation
-  </a>
-<nav aria-label="La personnalisation" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#les-donnees-anterieures-ou-externes">
-    Les données antérieures ou externes
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#la-personnalisation-en-cours-de-collecte">
-    La personnalisation en cours de collecte
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="les-elements-dynamiques-controles-filtres-et-personnalisation">Les éléments dynamiques : contrôles, filtres et personnalisation</h1>
-<h2 id="les-controles">Les contrôles</h2>
-<p>Deux types de contrôles sont proposés par la filière.</p>
-<h3 id="les-controles-dits-de-format">Les contrôles dits "de format"</h3>
-<p>Ce sont des contrôles bloquants. Ils obligent le répondant à respecter le format et les bornes (max, min) pour les réponses numériques, date, et texte dont le motif est spécifié (pour les SIREN ou SIRET par exemple).
-Ces contrôles se déclenchent à la sortie du champ concerné, et sont matérialisés par un message affiché immédiatement sous le champ concerné. 
-Le texte des messages liés à un contrôle de format est standardisé. Le passage à la page suivante est impossible : une fenêtre (dont la forme et le contenu sont standardisés) invite le répondant à corriger la question et bloque sa navigation vers l'avant du questionnaire.</p>
-<h3 id="les-controles-dits-metier-ou-de-coherence">Les contrôles dits "métier" ou "de cohérence"</h3>
-<p>Décrits par le concepteur d'enquête, ils portent sur la cohérence du questionnaire, ne sont pas bloquants et sont matérialisés par un message apparaissant en dessous de la question. Ces messages demandent à l'enquêté de corriger ou valider une réponse : le format et l'emplacement du message est standardisé mais le texte du message affiché est au choix du concepteur.
-S'il ne reste que des contrôles non bloquant sur une page, alors lorsque le répondant demande à passer à la page suivante une pop-up l’invite à corriger sa réponse, mais elle ne bloque pas la navigation. </p>
-<h2 id="cas-particulier-les-questions-obligatoires">Cas particulier : les questions obligatoires</h2>
-<p>Sujet en cours d'instruction</p>
-<h2 id="les-filtres">Les filtres</h2>
-<p>On appelle filtre le fait de masquer ou afficher une ou des questions, en fonction des réponses précédentes de l'enquêté, par exemple lorsqu’une condition est vérifiée. 
-Le choix d'afficher ou masquer en première intention est laissé au concepteur : il peut par exemple être préférable d’afficher des questions si elles apportent une information susceptible d’améliorer la compréhension de l’enquêté mais il est préférable de masquer totalement les questions filtrées, dans le cadre de « branches » de questionnaire,</p>
-<p>En termes de « conservation des données saisies », lorsque les questions disparaissent de l’écran, les réponses qui auraient pu y être saisies si le filtre avait été activé puis désactivé sont supprimées.</p>
-<p>Les comportements de type filtre ne sont pas possibles au sein d’une même « question » (par exemple au sein d’un tableau) et ne concernent que des questions entières (libellé + déclarations + champs de réponse).</p>
-<h2 id="la-personnalisation">La personnalisation</h2>
-<p>Il est possible de personnaliser le questionnaire, de différentes manières.</p>
-<h3 id="les-donnees-anterieures-ou-externes">Les données antérieures ou externes</h3>
-<p>Le questionnaire créé par la filière est un « modèle de questionnaire ». Lorsque ce questionnaire est instancié pour un enquêté on peut pré-renseigner certaines informations pour le répondant (exemple : adresse, code APE, réponse de l’année passée) par exemple pour personnaliser des libellés.
-Ces informations sont fournies par la maîtrise d’ouvrage de l’enquête avant le début de la collecte : il peut s’agir de textes, nombres, valeurs booléennes, codes, dans des boucles ou pas, etc.
-Le questionnaire peut aussi utiliser ces valeurs dans des champs de collecte pré remplis : dans ce dernier cas, le répondant peut modifier ces informations pré-renseignées.</p>
-<h3 id="la-personnalisation-en-cours-de-collecte">La personnalisation en cours de collecte</h3>
-<p>La personnalisation des libellés est également possible à partir de variables collectées, ou calculées en cours de collecte (si la question est posée avant la personnalisation). Attention toutefois aux modes de collecte : la personnalisation en cours de collecte ou l'utlisation de filtres personnalisés n'est pas possible sur le papier.</p>
+<h1 id="les-boucles">Les boucles</h1>
+<p>On appelle boucle le questionnement répétitif d’un ensemble de questions. Une boucle ne peut concerner que des séquences (ou sous-séquences) entières.
+On appelle cet ensemble de questions une "occurrence" (de la boucle).
+L'atelier de conception propose deux types de boucles : </p>
+<ul>
+<li>une boucle dite simple pour laquelle on définit un nombre minimum et un nombre maximum d’occurrences affichables, en absolu (numérique) ou avec une variable collectée ou calculée ;</li>
+<li>une boucle dite liée qui se base sur les occurrences d'une boucle précédente.</li>
+</ul>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
 <nav aria-label="Pied de page" class="md-footer__inner md-grid">
-<a aria-label="Précédent: Les déclarations" class="md-footer__link md-footer__link--prev" href="../3-conception/" rel="prev">
+<a aria-label="Précédent: Les types de questions et formats de réponses" class="md-footer__link md-footer__link--prev" href="../1-conception/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -710,17 +584,17 @@ Le questionnaire peut aussi utiliser ces valeurs dans des champs de collecte pr�
 <span class="md-footer__direction">
                   Précédent
                 </span>
-                Les déclarations
+                Les types de questions et formats de réponses
               </div>
 </div>
 </a>
-<a aria-label="Suivant: Les fonctionnalités" class="md-footer__link md-footer__link--next" href="../../couverture-fonctionnelle/" rel="next">
+<a aria-label="Suivant: Les déclarations" class="md-footer__link md-footer__link--next" href="../3-conception/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   Suivant
                 </span>
-                Les fonctionnalités
+                Les déclarations
               </div>
 </div>
 <div class="md-footer__button md-icon">

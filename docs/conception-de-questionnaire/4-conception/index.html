@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../" rel="prev"/>
-<link href="../2-conception/" rel="next"/>
+<link href="../3-conception/" rel="prev"/>
+<link href="../../couverture-fonctionnelle/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>Les types de questions et formats de réponses - Bowie</title>
+<title>Les éléments dynamiques : contrôles, filtres et personnalisation - Bowie</title>
 <link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -33,7 +33,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#les-types-de-questions-et-formats-de-reponses">
+<a class="md-skip" href="#les-elements-dynamiques-controles-filtres-et-personnalisation">
           Aller au contenu
         </a>
 </div>
@@ -57,7 +57,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Les types de questions et formats de réponses
+              Les éléments dynamiques : contrôles, filtres et personnalisation
             
           </span>
 </div>
@@ -101,7 +101,7 @@
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">Conception</a>
+<a href="../">Conception de questionnaire</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -109,51 +109,18 @@
 <nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
-          Conception
+          Conception de questionnaire
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Les types de questions et formats de réponses
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../0-conception/">
+        Une mise en forme standardisée, pourquoi et comment ?
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../1-conception/">
         Les types de questions et formats de réponses
       </a>
-<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#les-questions-ouvertes-ou-reponses-dites-simples">
-    Les questions ouvertes ou réponses dites simples
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#les-questions-a-choix-unique-de-reponse">
-    Les questions à choix unique de réponse
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#les-questions-a-choix-multiple">
-    Les questions à choix multiple
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#les-tableaux">
-    Les tableaux
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#les-liens-deux-a-deux">
-    Les liens deux-à-deux
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../2-conception/">
@@ -165,10 +132,71 @@
         Les déclarations
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../4-conception/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Les éléments dynamiques : contrôles, filtres et personnalisation
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Les éléments dynamiques : contrôles, filtres et personnalisation
       </a>
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#les-controles">
+    Les contrôles
+  </a>
+<nav aria-label="Les contrôles" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#les-controles-dits-de-format">
+    Les contrôles dits "de format"
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#les-controles-dits-metier-ou-de-coherence">
+    Les contrôles dits "métier" ou "de cohérence"
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cas-particulier-les-questions-obligatoires">
+    Cas particulier : les questions obligatoires
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#les-filtres">
+    Les filtres
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#la-personnalisation">
+    La personnalisation
+  </a>
+<nav aria-label="La personnalisation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#les-donnees-anterieures-ou-externes">
+    Les données antérieures ou externes
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#la-personnalisation-en-cours-de-collecte">
+    La personnalisation en cours de collecte
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -593,29 +621,52 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#les-questions-ouvertes-ou-reponses-dites-simples">
-    Les questions ouvertes ou réponses dites simples
+<a class="md-nav__link" href="#les-controles">
+    Les contrôles
+  </a>
+<nav aria-label="Les contrôles" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#les-controles-dits-de-format">
+    Les contrôles dits "de format"
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#les-questions-a-choix-unique-de-reponse">
-    Les questions à choix unique de réponse
+<a class="md-nav__link" href="#les-controles-dits-metier-ou-de-coherence">
+    Les contrôles dits "métier" ou "de cohérence"
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cas-particulier-les-questions-obligatoires">
+    Cas particulier : les questions obligatoires
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#les-questions-a-choix-multiple">
-    Les questions à choix multiple
+<a class="md-nav__link" href="#les-filtres">
+    Les filtres
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#les-tableaux">
-    Les tableaux
+<a class="md-nav__link" href="#la-personnalisation">
+    La personnalisation
+  </a>
+<nav aria-label="La personnalisation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#les-donnees-anterieures-ou-externes">
+    Les données antérieures ou externes
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#les-liens-deux-a-deux">
-    Les liens deux-à-deux
+<a class="md-nav__link" href="#la-personnalisation-en-cours-de-collecte">
+    La personnalisation en cours de collecte
   </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -624,63 +675,38 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="les-types-de-questions-et-formats-de-reponses">Les types de questions et formats de réponses</h1>
-<p>Les choix de typologie de réponses, et en particulier de terminologie suscitent parfois des incompréhensions liées au décalage entre un vocabulaire « contrôlé » (calqué sur une description formelle), et un vocabulaire « courant ». Le plus souvent, on englobe dans le terme « question », le libellé de la question ET son champ de réponse. Par exemple la question « Quel est votre parfum de glace préféré ? » pourra prendre plusieurs formes :</p>
-<ul>
-<li>une question ouverte, dont la réponse est dite simple, avec un champ texte libre ;</li>
-<li>une question associée à une réponse à choix unique, en proposant une liste fermée de modalités de réponse. On parle parfois par abus de langage de question à choix unique, il s’agit en fait d’une question avec réponse à choix unique.</li>
-</ul>
-<p>L'atelier de conception propose de nombreux types de questions, comportant des formats de réponse plus ou moins complexes. Ces formats sont répartis en 5 groupes (du plus simple au plus complexe) : </p>
-<ul>
-<li>les questions ouvertes ou réponses simples</li>
-<li>les questions à choix unique</li>
-<li>les questions à choix multiple</li>
-<li>les tableaux</li>
-<li>les liens deux à deux</li>
-</ul>
-<h2 id="les-questions-ouvertes-ou-reponses-dites-simples">Les questions ouvertes ou réponses dites simples</h2>
-<p>Il s’agit de répondre à une question ouverte, comprenant un seul champ, libre, c’est-à-dire ne reposant pas sur une liste de codes fermée. Les formats de réponses peuvent varier :</p>
-<ul>
-<li>texte (dont le nombre maximum de caractères ou le « motif » – adresse mail par exemple – peuvent être précisés) ;</li>
-<li>numérique (les bornes maximum et minimum, ainsi que le nombre de décimales doivent être précisés ; l’affichage de l’unité constitue une aide pour le répondant – une liste d’unités est proposée dans Pogues).</li>
-<li>date (au format AAAA-MM-JJ, AAAA-MM ou AAAA) ;</li>
-<li>booléen : pour ce type de réponse, seule la case à cocher est proposée comme mise en forme, mais une évolution pour proposer un visuel de type "switch" est en cours.</li>
-</ul>
-<h2 id="les-questions-a-choix-unique-de-reponse">Les questions à choix unique de réponse</h2>
-<p>Il s’agit de répondre à une question qualitative, s’appuyant sur une liste de codes, et présentée sous forme de boutons radios, de liste déroulante ou de listes d'autocomplétion : parmi ces listes, l’enquêté ne peut effectuer qu’un seul choix.</p>
-<p><strong>Boutons-radios</strong> : la mise en forme classique et accessible est un bouton radio. Lorsque le répondant a sélectionné une réponse, elle ne peut plus être « désélectionnée », le répondant ne peut que sélectionner une autre modalité.</p>
-<p>Pour plusieurs enquêtes, les réponses des questions à choix unique sont représentées par des cases à cocher décochables afin d’offrir au répondant la possibilité de revenir sur sa réponse (en particulier annuler sa réponse, ce que ne permet pas le bouton-radio usuel), Il faut avoir conscience que cela contrevient aux standards du web et aux critères d’accessibilité. Sur le web ces deux représentations sont différentes.</p>
-<p><strong>Liste en autocomplétion</strong> : ce type de variable permet à l'utilisateur de limiter la quantité d'informations qu'il saisit avec son clavier, en se voyant proposer un complément qui pourrait convenir à la chaîne de caractères qu'il a commencé à taper.</p>
-<p><strong>Liste déroulante</strong> : cette liste permet de proposer une liste fermée, généralement pas trop longue de choix, mais il est recommandé de privilégier l'autocomplétion lorsque cela est possible ou que la liste est longue.</p>
-<h2 id="les-questions-a-choix-multiple">Les questions à choix multiple</h2>
-<p>Il s’agit de répondre à une question qualitative s’appuyant sur une liste de codes. Parmi cette liste, l’enquêté peut effectuer plusieurs choix :</p>
-<ul>
-<li>soit en cochant plusieurs cases ;</li>
-<li>soit en sélectionnant oui/non pour chacune des modalités.</li>
-</ul>
-<p>Ici encore, si le concepteur a spécifié des boutons radio, le répondant ne pourra pas annuler sa réponse (mais uniquement choisir une autre modalité) ; si le concepteur a décrit des cases à cocher, elles seront décochables. Cette mise en forme peut également être retenue pour des batteries de questions. </p>
-<h2 id="les-tableaux">Les tableaux</h2>
-<p><strong>Usage</strong> : les tableaux permettent de présenter l’information à collecter, de manière compacte et visible en une seule fois. Il est communément reconnu dans la littérature que les tableaux doivent être évités lorsque c’est possible : d'une part ce format ne réponse ne se prête pas à l'accessibilité et d'autre part, si ce format est particulièrement familier aux statisticiens, ce n’est pas nécessairement le cas pour les répondants.
-Il est donc recommandé de poser plutôt les questions simplement de façon disjointe et, si ce n'est pas possible, de les simplifier.</p>
-<p>Les tableaux comprennent un ou deux axes d’informations (qualitatifs) et une ou plusieurs mesures (pouvant prendre les différents formats des réponses simples et uniques).
-Les titres de colonnes sont définis colonne par colonne.
-La hauteur et la largeur des lignes sont calculées de manière automatique à partir de leur contenu. </p>
-<p>Outre les tableaux à 2 dimensions fixées, il est possible de proposer des <strong>« tableaux dynamiques »</strong> donc des tableaux, dont les premières lignes peuvent être préremplies, auxquels on peut ajouter des lignes (présence d’un bouton "Ajouter"):</p>
-<ul>
-<li>les lignes ajoutées auront toutes le même format, généralement celle du format des lignes qui les précèdent ;</li>
-<li>les tableaux dynamiques ne comportent pas d’entête de ligne.</li>
-</ul>
-<p><strong>Cas particulier</strong> : les listes hiérarchiques</p>
-<p>Il est possible d’utiliser dans les tableaux des listes de codes hiérarchiques. La présentation imbriquée est pour l’instant la présentation par défaut.</p>
-<h2 id="les-liens-deux-a-deux">Les liens deux-à-deux</h2>
-<p>Ce type de question permet de décrire, pour les enquêtes ménages, les liens familiaux entre habitants d'un logement.</p>
+<h1 id="les-elements-dynamiques-controles-filtres-et-personnalisation">Les éléments dynamiques : contrôles, filtres et personnalisation</h1>
+<h2 id="les-controles">Les contrôles</h2>
+<p>Deux types de contrôles sont proposés par la filière.</p>
+<h3 id="les-controles-dits-de-format">Les contrôles dits "de format"</h3>
+<p>Ce sont des contrôles bloquants. Ils obligent le répondant à respecter le format et les bornes (max, min) pour les réponses numériques, date, et texte dont le motif est spécifié (pour les SIREN ou SIRET par exemple).
+Ces contrôles se déclenchent à la sortie du champ concerné, et sont matérialisés par un message affiché immédiatement sous le champ concerné. 
+Le texte des messages liés à un contrôle de format est standardisé. Le passage à la page suivante est impossible : une fenêtre (dont la forme et le contenu sont standardisés) invite le répondant à corriger la question et bloque sa navigation vers l'avant du questionnaire.</p>
+<h3 id="les-controles-dits-metier-ou-de-coherence">Les contrôles dits "métier" ou "de cohérence"</h3>
+<p>Décrits par le concepteur d'enquête, ils portent sur la cohérence du questionnaire, ne sont pas bloquants et sont matérialisés par un message apparaissant en dessous de la question. Ces messages demandent à l'enquêté de corriger ou valider une réponse : le format et l'emplacement du message est standardisé mais le texte du message affiché est au choix du concepteur.
+S'il ne reste que des contrôles non bloquant sur une page, alors lorsque le répondant demande à passer à la page suivante une pop-up l’invite à corriger sa réponse, mais elle ne bloque pas la navigation. </p>
+<h2 id="cas-particulier-les-questions-obligatoires">Cas particulier : les questions obligatoires</h2>
+<p>Sujet en cours d'instruction</p>
+<h2 id="les-filtres">Les filtres</h2>
+<p>On appelle filtre le fait de masquer ou afficher une ou des questions, en fonction des réponses précédentes de l'enquêté, par exemple lorsqu’une condition est vérifiée. 
+Le choix d'afficher ou masquer en première intention est laissé au concepteur : il peut par exemple être préférable d’afficher des questions si elles apportent une information susceptible d’améliorer la compréhension de l’enquêté mais il est préférable de masquer totalement les questions filtrées, dans le cadre de « branches » de questionnaire,</p>
+<p>En termes de « conservation des données saisies », lorsque les questions disparaissent de l’écran, les réponses qui auraient pu y être saisies si le filtre avait été activé puis désactivé sont supprimées.</p>
+<p>Les comportements de type filtre ne sont pas possibles au sein d’une même « question » (par exemple au sein d’un tableau) et ne concernent que des questions entières (libellé + déclarations + champs de réponse).</p>
+<h2 id="la-personnalisation">La personnalisation</h2>
+<p>Il est possible de personnaliser le questionnaire, de différentes manières.</p>
+<h3 id="les-donnees-anterieures-ou-externes">Les données antérieures ou externes</h3>
+<p>Le questionnaire créé par la filière est un « modèle de questionnaire ». Lorsque ce questionnaire est instancié pour un enquêté on peut pré-renseigner certaines informations pour le répondant (exemple : adresse, code APE, réponse de l’année passée) par exemple pour personnaliser des libellés.
+Ces informations sont fournies par la maîtrise d’ouvrage de l’enquête avant le début de la collecte : il peut s’agir de textes, nombres, valeurs booléennes, codes, dans des boucles ou pas, etc.
+Le questionnaire peut aussi utiliser ces valeurs dans des champs de collecte pré remplis : dans ce dernier cas, le répondant peut modifier ces informations pré-renseignées.</p>
+<h3 id="la-personnalisation-en-cours-de-collecte">La personnalisation en cours de collecte</h3>
+<p>La personnalisation des libellés est également possible à partir de variables collectées, ou calculées en cours de collecte (si la question est posée avant la personnalisation). Attention toutefois aux modes de collecte : la personnalisation en cours de collecte ou l'utlisation de filtres personnalisés n'est pas possible sur le papier.</p>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
 <nav aria-label="Pied de page" class="md-footer__inner md-grid">
-<a aria-label="Précédent: Une mise en forme standardisée, pourquoi et comment ?" class="md-footer__link md-footer__link--prev" href="../" rel="prev">
+<a aria-label="Précédent: Les déclarations" class="md-footer__link md-footer__link--prev" href="../3-conception/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -689,17 +715,17 @@ La hauteur et la largeur des lignes sont calculées de manière automatique à p
 <span class="md-footer__direction">
                   Précédent
                 </span>
-                Une mise en forme standardisée, pourquoi et comment ?
+                Les déclarations
               </div>
 </div>
 </a>
-<a aria-label="Suivant: Les boucles" class="md-footer__link md-footer__link--next" href="../2-conception/" rel="next">
+<a aria-label="Suivant: Les fonctionnalités" class="md-footer__link md-footer__link--next" href="../../couverture-fonctionnelle/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   Suivant
                 </span>
-                Les boucles
+                Les fonctionnalités
               </div>
 </div>
 <div class="md-footer__button md-icon">

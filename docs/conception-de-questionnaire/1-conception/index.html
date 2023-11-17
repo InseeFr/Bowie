@@ -5,18 +5,18 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../20-mise-en-place-filtre/" rel="prev"/>
-<link href="../22-ajout-infobulle/" rel="next"/>
-<link href="../../../assets/images/favicon.png" rel="icon"/>
+<link href="../0-conception/" rel="prev"/>
+<link href="../2-conception/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>Ajout d'un contrôle - Bowie</title>
-<link href="../../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<title>Les types de questions et formats de réponses - Bowie</title>
+<link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -27,13 +27,13 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="deep-orange" data-md-color-primary="blue-grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#ajout-dun-controle">
+<a class="md-skip" href="#les-types-de-questions-et-formats-de-reponses">
           Aller au contenu
         </a>
 </div>
@@ -41,7 +41,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="En-tête" class="md-header__inner md-grid">
-<a aria-label="Bowie" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Bowie">
+<a aria-label="Bowie" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Bowie">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.5 20 4.86-9.73H13V4l-5 9.73h3.5V20M12 2c2.75 0 5.1 1 7.05 2.95C21 6.9 22 9.25 22 12s-1 5.1-2.95 7.05C17.1 21 14.75 22 12 22s-5.1-1-7.05-2.95C3 17.1 2 14.75 2 12s1-5.1 2.95-7.05C6.9 3 9.25 2 12 2Z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -57,7 +57,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Ajout d'un contrôle
+              Les types de questions et formats de réponses
             
           </span>
 </div>
@@ -73,21 +73,21 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Bowie" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Bowie">
+<a aria-label="Bowie" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Bowie">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.5 20 4.86-9.73H13V4l-5 9.73h3.5V20M12 2c2.75 0 5.1 1 7.05 2.95C21 6.9 22 9.25 22 12s-1 5.1-2.95 7.05C17.1 21 14.75 22 12 22s-5.1-1-7.05-2.95C3 17.1 2 14.75 2 12s1-5.1 2.95-7.05C6.9 3 9.25 2 12 2Z"></path></svg>
 </a>
     Bowie
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../..">
         Un atelier de conception d'enquêtes
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../architecture/">Architecture</a>
+<a href="../../architecture/">Architecture</a>
 </div>
 <nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
@@ -98,42 +98,80 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../conception-de-questionnaire/">Conception de questionnaire</a>
+<a href="../">Conception de questionnaire</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
           Conception de questionnaire
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../conception-de-questionnaire/0-conception/">
+<a class="md-nav__link" href="../0-conception/">
         Une mise en forme standardisée, pourquoi et comment ?
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../conception-de-questionnaire/1-conception/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Les types de questions et formats de réponses
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Les types de questions et formats de réponses
       </a>
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#les-questions-ouvertes-ou-reponses-dites-simples">
+    Les questions ouvertes ou réponses dites simples
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../conception-de-questionnaire/2-conception/">
+<a class="md-nav__link" href="#les-questions-a-choix-unique-de-reponse">
+    Les questions à choix unique de réponse
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#les-questions-a-choix-multiple">
+    Les questions à choix multiple
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#les-tableaux">
+    Les tableaux
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#les-liens-deux-a-deux">
+    Les liens deux-à-deux
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../2-conception/">
         Les boucles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../conception-de-questionnaire/3-conception/">
+<a class="md-nav__link" href="../3-conception/">
         Les déclarations
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../conception-de-questionnaire/4-conception/">
+<a class="md-nav__link" href="../4-conception/">
         Les éléments dynamiques : contrôles, filtres et personnalisation
       </a>
 </li>
@@ -143,7 +181,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../couverture-fonctionnelle/">Couverture fonctionnelle</a>
+<a href="../../couverture-fonctionnelle/">Couverture fonctionnelle</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -155,7 +193,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../couverture-fonctionnelle/couverture-fonctionnelle-detail/">
+<a class="md-nav__link" href="../../couverture-fonctionnelle/couverture-fonctionnelle-detail/">
         Couverture fonctionnelle détaillée
       </a>
 </li>
@@ -165,7 +203,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../eno/">Eno</a>
+<a href="../../eno/">Eno</a>
 </div>
 <nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
@@ -179,7 +217,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../lunatic/">Lunatic</a>
+<a href="../../lunatic/">Lunatic</a>
 </div>
 <nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_6">
@@ -193,7 +231,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../metadata/">Metadata</a>
+<a href="../../metadata/">Metadata</a>
 </div>
 <nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_7">
@@ -207,7 +245,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../orchestrateurs/">Orchestrateurs</a>
+<a href="../../orchestrateurs/">Orchestrateurs</a>
 <label for="__nav_8">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -219,14 +257,14 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/paradata/">
+<a class="md-nav__link" href="../../orchestrateurs/paradata/">
         Les paradonnées
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_8_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../orchestrateurs/enqueteur/">Enqueteur</a>
+<a href="../../orchestrateurs/enqueteur/">Enqueteur</a>
 <label for="__nav_8_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -238,22 +276,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/enqueteur/1-queen/">
+<a class="md-nav__link" href="../../orchestrateurs/enqueteur/1-queen/">
         Typographie
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/enqueteur/2-queen/">
+<a class="md-nav__link" href="../../orchestrateurs/enqueteur/2-queen/">
         Zoning des questionnaires
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/enqueteur/3-Queen/">
+<a class="md-nav__link" href="../../orchestrateurs/enqueteur/3-Queen/">
         Navigation
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/enqueteur/4-Queen/">
+<a class="md-nav__link" href="../../orchestrateurs/enqueteur/4-Queen/">
         Raccourcis clavier
       </a>
 </li>
@@ -263,7 +301,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_8_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../orchestrateurs/web/">Web</a>
+<a href="../../orchestrateurs/web/">Web</a>
 <label for="__nav_8_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -275,37 +313,37 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/web/0-stromae/">
+<a class="md-nav__link" href="../../orchestrateurs/web/0-stromae/">
         "Stromae" : à quoi ressemble un questionnaire web généré par la filière ?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/web/1-stromae/">
+<a class="md-nav__link" href="../../orchestrateurs/web/1-stromae/">
         Découpage du questionnaire et navigation
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/web/2-stromae/">
+<a class="md-nav__link" href="../../orchestrateurs/web/2-stromae/">
         Page de début et page de fin
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/web/3-stromae/">
+<a class="md-nav__link" href="../../orchestrateurs/web/3-stromae/">
         La barre d'avancement
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/web/4-stromae/">
+<a class="md-nav__link" href="../../orchestrateurs/web/4-stromae/">
         La mise en forme des questions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/web/5-stromae/">
+<a class="md-nav__link" href="../../orchestrateurs/web/5-stromae/">
         La numérotation
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../orchestrateurs/web/6-stromae/">
+<a class="md-nav__link" href="../../orchestrateurs/web/6-stromae/">
         La disposition des éléments du questionnaire
       </a>
 </li>
@@ -315,15 +353,15 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../">Pogues</a>
+<a href="../../pogues/">Pogues</a>
 <label for="__nav_9">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_9">
 <span class="md-nav__icon md-icon"></span>
           Pogues
@@ -332,7 +370,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_9_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../guide/">Guide</a>
+<a href="../../pogues/guide/">Guide</a>
 <label for="__nav_9_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -344,37 +382,37 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/boucles/">
+<a class="md-nav__link" href="../../pogues/guide/boucles/">
         Les boucles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/composition/">
+<a class="md-nav__link" href="../../pogues/guide/composition/">
         La composition
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/filtres/">
+<a class="md-nav__link" href="../../pogues/guide/filtres/">
         Les filtres
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/kish/">
+<a class="md-nav__link" href="../../pogues/guide/kish/">
         Sélection du Kish
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/liste-de-code/">
+<a class="md-nav__link" href="../../pogues/guide/liste-de-code/">
         Les listes de code
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/problemes-connus/">
+<a class="md-nav__link" href="../../pogues/guide/problemes-connus/">
         Les problèmes connus
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/vtl/">
+<a class="md-nav__link" href="../../pogues/guide/vtl/">
         Guide VTL Pogues
       </a>
 </li>
@@ -391,17 +429,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/variables/nommage/">
+<a class="md-nav__link" href="../../pogues/guide/variables/nommage/">
         Nommage des variables
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/variables/variables-externes/">
+<a class="md-nav__link" href="../../pogues/guide/variables/variables-externes/">
         Les variables externes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/variables/variables-globales/">
+<a class="md-nav__link" href="../../pogues/guide/variables/variables-globales/">
         Les variables globales
       </a>
 </li>
@@ -411,88 +449,87 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_9_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">Tutoriel</a>
+<a href="../../pogues/tutoriel/">Tutoriel</a>
 <label for="__nav_9_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_9_3_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_9_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_9_3">
 <span class="md-nav__icon md-icon"></span>
           Tutoriel
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../10-creation-questionnaire/">
+<a class="md-nav__link" href="../../pogues/tutoriel/10-creation-questionnaire/">
         Création d'un questionnaire
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../11-creation-premiere-sequence/">
+<a class="md-nav__link" href="../../pogues/tutoriel/11-creation-premiere-sequence/">
         Création d'une première séquence
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../12-visualisation-questionnaire/">
+<a class="md-nav__link" href="../../pogues/tutoriel/12-visualisation-questionnaire/">
         Visualisation du questionnaire
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../13-creation-liste-qcu/">
+<a class="md-nav__link" href="../../pogues/tutoriel/13-creation-liste-qcu/">
         Création d'une réponse basée sur une liste
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../14-elaboration-structure/">
+<a class="md-nav__link" href="../../pogues/tutoriel/14-elaboration-structure/">
         Élaboration de la structure du questionnaire
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../15-creation-tableau/">
+<a class="md-nav__link" href="../../pogues/tutoriel/15-creation-tableau/">
         Création d'un tableau
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../16-creation-qcm/">
+<a class="md-nav__link" href="../../pogues/tutoriel/16-creation-qcm/">
         Création d'une question à choix multiples
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../17-finalisation-structure/">
+<a class="md-nav__link" href="../../pogues/tutoriel/17-finalisation-structure/">
         Finalisation de la structure du questionnaire
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../20-mise-en-place-filtre/">
+<a class="md-nav__link" href="../../pogues/tutoriel/20-mise-en-place-filtre/">
         Mise en place d'un filtre
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pogues/tutoriel/21-ajout-controle/">
         Ajout d'un contrôle
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../22-ajout-infobulle/">
+<a class="md-nav__link" href="../../pogues/tutoriel/22-ajout-infobulle/">
         Insertion d'une infobulle
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../23-utilisation-variable-calculee/">
+<a class="md-nav__link" href="../../pogues/tutoriel/23-utilisation-variable-calculee/">
         Utilisation d'une variable calculée
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../24-personnalisation-libelle/">
+<a class="md-nav__link" href="../../pogues/tutoriel/24-personnalisation-libelle/">
         Personnalisation d'un libellé
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../25-mise-en-place-boucle/">
+<a class="md-nav__link" href="../../pogues/tutoriel/25-mise-en-place-boucle/">
         Mise en place d'une boucle
       </a>
 </li>
@@ -505,7 +542,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_10" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../public-enemy/">Public enemy</a>
+<a href="../../public-enemy/">Public enemy</a>
 <label for="__nav_10">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -519,7 +556,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_10_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../public-enemy/guide/">Guide</a>
+<a href="../../public-enemy/guide/">Guide</a>
 <label for="__nav_10_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -531,12 +568,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../public-enemy/guide/1-guide-pe-echantillon/">
+<a class="md-nav__link" href="../../public-enemy/guide/1-guide-pe-echantillon/">
         Création des unités enquêtées
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../public-enemy/guide/2-visualisation-questionnaires/">
+<a class="md-nav__link" href="../../public-enemy/guide/2-visualisation-questionnaires/">
         Visualisation des questionnaires
       </a>
 </li>
@@ -555,54 +592,100 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#les-questions-ouvertes-ou-reponses-dites-simples">
+    Les questions ouvertes ou réponses dites simples
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#les-questions-a-choix-unique-de-reponse">
+    Les questions à choix unique de réponse
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#les-questions-a-choix-multiple">
+    Les questions à choix multiple
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#les-tableaux">
+    Les tableaux
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#les-liens-deux-a-deux">
+    Les liens deux-à-deux
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="ajout-dun-controle">Ajout d'un contrôle</h1>
-<p>On souhaite pouvoir s'assurer d'une bonne qualité de réponse aux différentes questions que l'on propose. Pour cela, on peut utiliser le mécanisme de contrôle inhérent aux outils de l'atelier.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Actuellement, seuls les contrôles de format - par exemple une valeur minimum dans un champ numérique - sont bloquants. Les contrôles de cohérence comme celui que l'on s'apprête à créer ne bloque pas le déroulement du questionnaire.</p>
-</div>
-<p>Ici, on va créer un contrôle affichant un message d'incitation si l'on ne donne pas son prénom.</p>
-<p>Pour cela, on va modifier la question dont l'identifiant est PRENOM (en cliquant sur _Voir le détail).</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../../img/pogues/controle-modification-question.png"><img alt="Modification de la question PRENOM" src="../../../img/pogues/controle-modification-question.png"/></a></p>
-<p>On choisit ensuite l'onglet <em>Contrôles</em>.</p>
-<p>Pour créer un contrôle, il faut remplir quatre champs :</p>
+<h1 id="les-types-de-questions-et-formats-de-reponses">Les types de questions et formats de réponses</h1>
+<p>Les choix de typologie de réponses, et en particulier de terminologie suscitent parfois des incompréhensions liées au décalage entre un vocabulaire « contrôlé » (calqué sur une description formelle), et un vocabulaire « courant ». Le plus souvent, on englobe dans le terme « question », le libellé de la question ET son champ de réponse. Par exemple la question « Quel est votre parfum de glace préféré ? » pourra prendre plusieurs formes :</p>
 <ul>
-<li><em>Description du contrôle</em> Un texte permettant de décrire le contrôle,</li>
-<li><em>Condition d'affichage</em> Une expression VTL qui déclenche le contrôle,</li>
-<li><em>Message d'erreur</em> Le texte qui s'affiche lorsque l'erreur est levée,</li>
-<li><em>Criticité</em> Un champ informatif sur le degré d'importance de l'erreur (actuellement n'a aucune incidence sur l'affichage).</li>
+<li>une question ouverte, dont la réponse est dite simple, avec un champ texte libre ;</li>
+<li>une question associée à une réponse à choix unique, en proposant une liste fermée de modalités de réponse. On parle parfois par abus de langage de question à choix unique, il s’agit en fait d’une question avec réponse à choix unique.</li>
 </ul>
-<p>On veut déclencher le contrôle en cas de non-réponse, on va tester dans notre cas :</p>
+<p>L'atelier de conception propose de nombreux types de questions, comportant des formats de réponse plus ou moins complexes. Ces formats sont répartis en 5 groupes (du plus simple au plus complexe) : </p>
 <ul>
-<li>si l'on n'est jamais entré dans le champ de réponse (la variable est <code>null</code> au sens VTL),</li>
-<li>si l'on est entré dans le champ mais qu'on n'a rien saisi (la variable est égale à une chaîne de caractères vide, ou <code>""</code>).</li>
+<li>les questions ouvertes ou réponses simples</li>
+<li>les questions à choix unique</li>
+<li>les questions à choix multiple</li>
+<li>les tableaux</li>
+<li>les liens deux à deux</li>
 </ul>
-<p>L'expression VTL sera donc :</p>
-<pre><code>```vtl
-$PRENOM$ = "" or isnull($PRENOM$)
-```
-</code></pre>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>On notera l'utilisation de la fonction <code>isnull</code> qui permet de détecter si une variable n'a pas été valorisée (cf. guide VTL).</p>
-</div>
-<p>On aura une configuration sensiblement similaire à <img alt="👇" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f447.svg" title=":point_down:"/></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../../img/pogues/controle-configuration.png"><img alt="Configuration du contrôle" src="../../../img/pogues/controle-configuration.png"/></a></p>
-<p>Lors du parcours du questionnaire, si vous ne remplissez pas la réponse à la question sur le prénom vous devriez voir apparaître le message du contrôle :</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../../img/pogues/controle-affichage.png"><img alt="Affichage du contrôle" src="../../../img/pogues/controle-affichage.png"/></a></p>
+<h2 id="les-questions-ouvertes-ou-reponses-dites-simples">Les questions ouvertes ou réponses dites simples</h2>
+<p>Il s’agit de répondre à une question ouverte, comprenant un seul champ, libre, c’est-à-dire ne reposant pas sur une liste de codes fermée. Les formats de réponses peuvent varier :</p>
+<ul>
+<li>texte (dont le nombre maximum de caractères ou le « motif » – adresse mail par exemple – peuvent être précisés) ;</li>
+<li>numérique (les bornes maximum et minimum, ainsi que le nombre de décimales doivent être précisés ; l’affichage de l’unité constitue une aide pour le répondant – une liste d’unités est proposée dans Pogues).</li>
+<li>date (au format AAAA-MM-JJ, AAAA-MM ou AAAA) ;</li>
+<li>booléen : pour ce type de réponse, seule la case à cocher est proposée comme mise en forme, mais une évolution pour proposer un visuel de type "switch" est en cours.</li>
+</ul>
+<h2 id="les-questions-a-choix-unique-de-reponse">Les questions à choix unique de réponse</h2>
+<p>Il s’agit de répondre à une question qualitative, s’appuyant sur une liste de codes, et présentée sous forme de boutons radios, de liste déroulante ou de listes d'autocomplétion : parmi ces listes, l’enquêté ne peut effectuer qu’un seul choix.</p>
+<p><strong>Boutons-radios</strong> : la mise en forme classique et accessible est un bouton radio. Lorsque le répondant a sélectionné une réponse, elle ne peut plus être « désélectionnée », le répondant ne peut que sélectionner une autre modalité.</p>
+<p>Pour plusieurs enquêtes, les réponses des questions à choix unique sont représentées par des cases à cocher décochables afin d’offrir au répondant la possibilité de revenir sur sa réponse (en particulier annuler sa réponse, ce que ne permet pas le bouton-radio usuel), Il faut avoir conscience que cela contrevient aux standards du web et aux critères d’accessibilité. Sur le web ces deux représentations sont différentes.</p>
+<p><strong>Liste en autocomplétion</strong> : ce type de variable permet à l'utilisateur de limiter la quantité d'informations qu'il saisit avec son clavier, en se voyant proposer un complément qui pourrait convenir à la chaîne de caractères qu'il a commencé à taper.</p>
+<p><strong>Liste déroulante</strong> : cette liste permet de proposer une liste fermée, généralement pas trop longue de choix, mais il est recommandé de privilégier l'autocomplétion lorsque cela est possible ou que la liste est longue.</p>
+<h2 id="les-questions-a-choix-multiple">Les questions à choix multiple</h2>
+<p>Il s’agit de répondre à une question qualitative s’appuyant sur une liste de codes. Parmi cette liste, l’enquêté peut effectuer plusieurs choix :</p>
+<ul>
+<li>soit en cochant plusieurs cases ;</li>
+<li>soit en sélectionnant oui/non pour chacune des modalités.</li>
+</ul>
+<p>Ici encore, si le concepteur a spécifié des boutons radio, le répondant ne pourra pas annuler sa réponse (mais uniquement choisir une autre modalité) ; si le concepteur a décrit des cases à cocher, elles seront décochables. Cette mise en forme peut également être retenue pour des batteries de questions. </p>
+<h2 id="les-tableaux">Les tableaux</h2>
+<p><strong>Usage</strong> : les tableaux permettent de présenter l’information à collecter, de manière compacte et visible en une seule fois. Il est communément reconnu dans la littérature que les tableaux doivent être évités lorsque c’est possible : d'une part ce format ne réponse ne se prête pas à l'accessibilité et d'autre part, si ce format est particulièrement familier aux statisticiens, ce n’est pas nécessairement le cas pour les répondants.
+Il est donc recommandé de poser plutôt les questions simplement de façon disjointe et, si ce n'est pas possible, de les simplifier.</p>
+<p>Les tableaux comprennent un ou deux axes d’informations (qualitatifs) et une ou plusieurs mesures (pouvant prendre les différents formats des réponses simples et uniques).
+Les titres de colonnes sont définis colonne par colonne.
+La hauteur et la largeur des lignes sont calculées de manière automatique à partir de leur contenu. </p>
+<p>Outre les tableaux à 2 dimensions fixées, il est possible de proposer des <strong>« tableaux dynamiques »</strong> donc des tableaux, dont les premières lignes peuvent être préremplies, auxquels on peut ajouter des lignes (présence d’un bouton "Ajouter"):</p>
+<ul>
+<li>les lignes ajoutées auront toutes le même format, généralement celle du format des lignes qui les précèdent ;</li>
+<li>les tableaux dynamiques ne comportent pas d’entête de ligne.</li>
+</ul>
+<p><strong>Cas particulier</strong> : les listes hiérarchiques</p>
+<p>Il est possible d’utiliser dans les tableaux des listes de codes hiérarchiques. La présentation imbriquée est pour l’instant la présentation par défaut.</p>
+<h2 id="les-liens-deux-a-deux">Les liens deux-à-deux</h2>
+<p>Ce type de question permet de décrire, pour les enquêtes ménages, les liens familiaux entre habitants d'un logement.</p>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
 <nav aria-label="Pied de page" class="md-footer__inner md-grid">
-<a aria-label="Précédent: Mise en place d'un filtre" class="md-footer__link md-footer__link--prev" href="../20-mise-en-place-filtre/" rel="prev">
+<a aria-label="Précédent: Une mise en forme standardisée, pourquoi et comment ?" class="md-footer__link md-footer__link--prev" href="../0-conception/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -611,17 +694,17 @@ $PRENOM$ = "" or isnull($PRENOM$)
 <span class="md-footer__direction">
                   Précédent
                 </span>
-                Mise en place d'un filtre
+                Une mise en forme standardisée, pourquoi et comment ?
               </div>
 </div>
 </a>
-<a aria-label="Suivant: Insertion d'une infobulle" class="md-footer__link md-footer__link--next" href="../22-ajout-infobulle/" rel="next">
+<a aria-label="Suivant: Les boucles" class="md-footer__link md-footer__link--next" href="../2-conception/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   Suivant
                 </span>
-                Insertion d'une infobulle
+                Les boucles
               </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -651,7 +734,7 @@ $PRENOM$ = "" or isnull($PRENOM$)
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
-<script src="../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+<script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
