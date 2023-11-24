@@ -1177,25 +1177,26 @@ $MA_VARIABLE_BOOLEENNE$
 <h4 id="formater-laffichage-de-la-date">Formater l'affichage de la date</h4>
 <p>Comme vu plus haut, le format des variables Date n'est pas forcément idéal pour l'affichage, on veut pouvoir présenter l'information avec le motif <code>JJ/MM/AAAA</code> (jour, mois, année).</p>
 <p>Le code suivant permet cette transformation :</p>
-<div class="highlight"><pre><span></span><code>substr(cast($DATE$, string, "YYYY-MM-DD"),9,2) ||
+<div class="highlight"><pre><span></span><code>substr(cast($DATE$, string, "YYYY-MM-DD"), 9, 2) ||
 "/" ||
-substr(cast($DATE$, string, "YYYY-MM-DD"),6,2) ||
+substr(cast($DATE$, string, "YYYY-MM-DD"), 6, 2) ||
 "/" ||
-substr(cast($DATE$, string, "YYYY-MM-DD"),1,4)
+substr(cast($DATE$, string, "YYYY-MM-DD"), 1, 4)
 </code></pre></div>
 <h4 id="comparaison">Comparaison</h4>
-<p><span class="label label-rounded label-warning">Bientôt disponible !</span></p>
 <p>Pour comparer des dates :</p>
-<div class="highlight"><pre><span></span><code>$ARRIVEE$ &gt; $DEPART$
+<div class="highlight"><pre><span></span><code>cast($ARRIVEE$, date, "YYYY-MM-DD") &gt; cast($DEPART$, date, "YYYY-MM-DD")
 </code></pre></div>
 <p>Renvoie <code>true</code> si la date d'arrivée est postérieure à la date de départ.</p>
 <h4 id="calcul-de-duree">Calcul de durée</h4>
-<p><span class="label label-rounded label-warning">Bientôt disponible !</span></p>
 <p>Pour calculer une durée à partir de variables collectées de type Date :</p>
-<div class="highlight"><pre><span></span><code>$ARRIVEE$ - $DEPART$
+<div class="highlight"><pre><span></span><code>cast($ARRIVEE$, date, "YYYY-MM-DD") - cast($DEPART$, date, "YYYY-MM-DD")
 </code></pre></div>
-<p>Qui fournira le résultat en millisecondes. Pour avoir, par exemple en jour :</p>
-<div class="highlight"><pre><span></span><code>($ARRIVEE$ - $DEPART$) / 86400000
+<p>Qui fournira le résultat en millisecondes. Pour avoir l'équivalent en jour on pourra écrire :</p>
+<div class="highlight"><pre><span></span><code>(cast($ARRIVEE$, date, "YYYY-MM-DD") - cast($DEPART$, date, "YYYY-MM-DD")) / 86400000
+</code></pre></div>
+<p>Pour plus de clarté, le calcul de la durée brute pourra être déportée dans une variable calculée, nommée par exemple <code>DUREE</code>, l'obtention du nombre de jours se fera alors à travers la formule :</p>
+<div class="highlight"><pre><span></span><code>$DUREE$ / 86400000
 </code></pre></div>
 <h3 id="liste-a-choix-multiples">Liste à choix multiples</h3>
 <h4 id="compter-le-nombre-de-choix">Compter le nombre de choix</h4>

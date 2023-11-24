@@ -254,39 +254,41 @@ Comme vu plus haut, le format des variables Date n'est pas forcément idéal pou
 Le code suivant permet cette transformation :
 
 ```
-substr(cast($DATE$, string, "YYYY-MM-DD"),9,2) ||
+substr(cast($DATE$, string, "YYYY-MM-DD"), 9, 2) ||
 "/" ||
-substr(cast($DATE$, string, "YYYY-MM-DD"),6,2) ||
+substr(cast($DATE$, string, "YYYY-MM-DD"), 6, 2) ||
 "/" ||
-substr(cast($DATE$, string, "YYYY-MM-DD"),1,4)
+substr(cast($DATE$, string, "YYYY-MM-DD"), 1, 4)
 ```
 
 #### Comparaison
 
-<span class="label label-rounded label-warning">Bientôt disponible !</span>
-
 Pour comparer des dates :
 
 ```
-$ARRIVEE$ > $DEPART$
+cast($ARRIVEE$, date, "YYYY-MM-DD") > cast($DEPART$, date, "YYYY-MM-DD")
 ```
 
 Renvoie `true` si la date d'arrivée est postérieure à la date de départ.
 
 #### Calcul de durée
 
-<span class="label label-rounded label-warning">Bientôt disponible !</span>
-
 Pour calculer une durée à partir de variables collectées de type Date :
 
 ```
-$ARRIVEE$ - $DEPART$
+cast($ARRIVEE$, date, "YYYY-MM-DD") - cast($DEPART$, date, "YYYY-MM-DD")
 ```
 
-Qui fournira le résultat en millisecondes. Pour avoir, par exemple en jour :
+Qui fournira le résultat en millisecondes. Pour avoir l'équivalent en jour on pourra écrire :
 
 ```
-($ARRIVEE$ - $DEPART$) / 86400000
+(cast($ARRIVEE$, date, "YYYY-MM-DD") - cast($DEPART$, date, "YYYY-MM-DD")) / 86400000
+```
+
+Pour plus de clarté, le calcul de la durée brute pourra être déportée dans une variable calculée, nommée par exemple `DUREE`, l'obtention du nombre de jours se fera alors à travers la formule :
+
+```
+$DUREE$ / 86400000
 ```
 
 ### Liste à choix multiples
