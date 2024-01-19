@@ -2,6 +2,10 @@
 
 Ce document décrit une méthode pour sélectionner le Kish dans Pogues.
 
+!!! tip "Mise à jour du 19/01/2024"
+
+    Une nouvelle version de ce guide de sélection d'individu qui inclut un aléa basé sur le prénom du répondant afin de distinguer les personnes nées les mêmes jour et mois.
+
 ## Principe
 
 On considère que l'on procède à l'identification du Kish à travers les étapes suivantes :
@@ -46,6 +50,8 @@ Elle donnera par exemple :
 - pour la date de naissance `01/06/2000` le score `6.01`
 - pour `10/05/1990` le score `17.10`
 
+:octicons-report-16: On ajoute à ce premier score un aléa tiré à partir de la position de certaines lettres dans le prénom, voir les formules ci-dessous des variables `ALEA_PRENOM` et `SCORE_KISH_INT_ALEA_PRENOM`. Cela permet de traiter le cas de personnes nées les mêmes jour et mois.
+
 On sélectionne ensuite l'individu dont le score est le plus bas.
 
 Les variables calculées nécessaires sont :
@@ -55,6 +61,8 @@ Les variables calculées nécessaires sont :
 | MOIS_NAISSANCE_INT | BOUCLE_PRENOMS | `cast(cast(cast($DATE_DE_NAISSANCE$, date, "YYYY-MM-DD"), string, "MM"), integer)` |
 | JOUR_NAISSANCE_STR | BOUCLE_PRENOMS | `cast(cast($DATE_DE_NAISSANCE$, date, "YYYY-MM-DD"),string, "DD")`                 |
 | SCORE_KISH         | BOUCLE_PRENOMS | `cast(if $MOIS_NAISSANCE_INT$ < 6 then $MOIS_NAISSANCE_INT$ + 12 else $MOIS_NAISSANCE_INT$, string) || "." || $JOUR_NAISSANCE_STR$`   |
+| ALEA_PRENOM           | BOUCLE_PRENOMS  | `instr(lower(PRENOM), "e") + instr(lower(PRENOM), "a") + instr(lower(PRENOM), "i") + instr(lower(PRENOM), "s") + instr(lower(PRENOM), "n") + instr(lower(PRENOM), "r") + instr(lower(PRENOM), "t") + instr(lower(PRENOM), "o")`     |
+| SCORE_KISH_INT_ALEA_PRENOM           | BOUCLE_PRENOMS  | `$SCORE_KISH_INT$ + $ALEA_PRENOM$ / 100`                        |
 | KISH_MIN           | Questionnaire  | `min($SCORE_KISH_INT$)`                                                            |
 | KISH_INDICATOR     | BOUCLE_PRENOMS | `if $KISH_MIN$ = $SCORE_KISH_INT$ then 1 else 0`                                   |
 | SCORE_KISH_INT     | BOUCLE_PRENOMS | `cast($SCORE_KISH$, number)`                                                       |
