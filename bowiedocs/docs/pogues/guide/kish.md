@@ -61,11 +61,11 @@ Les variables calculées nécessaires sont :
 | MOIS_NAISSANCE_INT | BOUCLE_PRENOMS | `cast(cast(cast($DATE_DE_NAISSANCE$, date, "YYYY-MM-DD"), string, "MM"), integer)` |
 | JOUR_NAISSANCE_STR | BOUCLE_PRENOMS | `cast(cast($DATE_DE_NAISSANCE$, date, "YYYY-MM-DD"),string, "DD")`                 |
 | SCORE_KISH         | BOUCLE_PRENOMS | `cast(if $MOIS_NAISSANCE_INT$ < 6 then $MOIS_NAISSANCE_INT$ + 12 else $MOIS_NAISSANCE_INT$, string) || "." || $JOUR_NAISSANCE_STR$`   |
+| SCORE_KISH_INT     | BOUCLE_PRENOMS | `cast($SCORE_KISH$, number)`                                                       |
 | ALEA_PRENOM           | BOUCLE_PRENOMS  | `instr(lower(PRENOM), "e") + instr(lower(PRENOM), "a") + instr(lower(PRENOM), "i") + instr(lower(PRENOM), "s") + instr(lower(PRENOM), "n") + instr(lower(PRENOM), "r") + instr(lower(PRENOM), "t") + instr(lower(PRENOM), "o")`     |
 | SCORE_KISH_INT_ALEA_PRENOM           | BOUCLE_PRENOMS  | `$SCORE_KISH_INT$ + $ALEA_PRENOM$ / 100`                        |
-| KISH_MIN           | Questionnaire  | `min($SCORE_KISH_INT$)`                                                            |
-| KISH_INDICATOR     | BOUCLE_PRENOMS | `if $KISH_MIN$ = $SCORE_KISH_INT$ then 1 else 0`                                   |
-| SCORE_KISH_INT     | BOUCLE_PRENOMS | `cast($SCORE_KISH$, number)`                                                       |
+| KISH_MIN           | Questionnaire  | `min($SCORE_KISH_INT_ALEA_PRENOM$)`                                                            |
+| KISH_INDICATOR     | BOUCLE_PRENOMS | `if $KISH_MIN$ = $SCORE_KISH_INT_ALEA_PRENOM$ then 1 else 0`                                   |
 | NB_POTENTIAL_KISH  | Questionnaire  | `sum($KISH_INDICATOR$)`                                                            |
 
 ## Filtre

@@ -754,6 +754,11 @@
 <td><code>cast(if $MOIS_NAISSANCE_INT$ &lt; 6 then $MOIS_NAISSANCE_INT$ + 12 else $MOIS_NAISSANCE_INT$, string) || "." || $JOUR_NAISSANCE_STR$</code></td>
 </tr>
 <tr>
+<td>SCORE_KISH_INT</td>
+<td>BOUCLE_PRENOMS</td>
+<td><code>cast($SCORE_KISH$, number)</code></td>
+</tr>
+<tr>
 <td>ALEA_PRENOM</td>
 <td>BOUCLE_PRENOMS</td>
 <td><code>instr(lower(PRENOM), "e") + instr(lower(PRENOM), "a") + instr(lower(PRENOM), "i") + instr(lower(PRENOM), "s") + instr(lower(PRENOM), "n") + instr(lower(PRENOM), "r") + instr(lower(PRENOM), "t") + instr(lower(PRENOM), "o")</code></td>
@@ -766,17 +771,12 @@
 <tr>
 <td>KISH_MIN</td>
 <td>Questionnaire</td>
-<td><code>min($SCORE_KISH_INT$)</code></td>
+<td><code>min($SCORE_KISH_INT_ALEA_PRENOM$)</code></td>
 </tr>
 <tr>
 <td>KISH_INDICATOR</td>
 <td>BOUCLE_PRENOMS</td>
-<td><code>if $KISH_MIN$ = $SCORE_KISH_INT$ then 1 else 0</code></td>
-</tr>
-<tr>
-<td>SCORE_KISH_INT</td>
-<td>BOUCLE_PRENOMS</td>
-<td><code>cast($SCORE_KISH$, number)</code></td>
+<td><code>if $KISH_MIN$ = $SCORE_KISH_INT_ALEA_PRENOM$ then 1 else 0</code></td>
 </tr>
 <tr>
 <td>NB_POTENTIAL_KISH</td>
