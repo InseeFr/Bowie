@@ -6,7 +6,7 @@
 
 !!! tip
 
-    Pour bénéficier pleinement de ce tutoriel, nous vous encourageons à créer vos propres questionnaires sur cet [espace d'exploration](https://pogues.demo.insee.io/).
+    Pour bénéficier pleinement de ce tutoriel, nous vous encourageons à créer vos propres questionnaires sur cet [espace d'exploration](https://conception-questionnaires.demo.insee.io/).
 
 Pogues est l'interface graphique permettant de créer des questionnaires utilisables à travers l'ensemble de l'écosystème Bowie. Un triple principe est au coeur de cette interface :
 
