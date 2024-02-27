@@ -1,647 +1,845 @@
 {
-    "id": "kzguw1v7",
-    "modele": "QTESTCONTNONNUM",
-    "enoCoreVersion": "2.4.9",
-    "lunaticModelVersion": "2.3.4",
-    "generatingDate": "13-09-2023 08:39:50",
-    "missing": true,
-    "pagination": "question",
-    "maxPage": "10",
-    "label": {
-        "value": "QNONREG Controles Non Numériques VTL - ok",
-        "type": "VTL|MD"
-    },
-    "components": [
-        {
-            "id": "kfxmfvwj",
-            "componentType": "Sequence",
-            "page": "1",
-            "label": {
-                "value": "\"I - \" || \"TEST SUR BOOLEEN CODE DATE ET TEXTE\"",
-                "type": "VTL|MD"
-            },
-            "conditionFilter": {
-                "value": "true",
-                "type": "VTL"
-            },
-            "hierarchy": {
-                "sequence": {
-                    "id": "kfxmfvwj",
-                    "page": "1",
-                    "label": {
-                        "value": "\"I - \" || \"TEST SUR BOOLEEN CODE DATE ET TEXTE\"",
-                        "type": "VTL|MD"
-                    }
-                }
-            }
-        },
-        {
-            "id": "kfxmjupm",
-            "componentType": "CheckboxBoolean",
-            "mandatory": false,
-            "page": "2",
-            "label": {
-                "value": "\"Controle sur booleen\"",
-                "type": "VTL|MD"
-            },
-            "conditionFilter": {
-                "value": "true",
-                "type": "VTL"
-            },
-            "hierarchy": {
-                "sequence": {
-                    "id": "kfxmfvwj",
-                    "page": "1",
-                    "label": {
-                        "value": "\"I - \" || \"TEST SUR BOOLEEN CODE DATE ET TEXTE\"",
-                        "type": "VTL|MD"
-                    }
-                }
-            },
-            "missingResponse": {"name": "TESTSURBOO_MISSING"},
-            "bindingDependencies": [
-                "TESTSURBOO_MISSING",
-                "TESTSURBOO"
-            ],
-            "response": {"name": "TESTSURBOO"}
-        },
-        {
-            "id": "kfxn6f16",
-            "componentType": "Input",
-            "mandatory": true,
-            "page": "3",
-            "maxLength": 15,
-            "label": {
-                "value": "\"Controle sur du texte < 250\"",
-                "type": "VTL|MD"
-            },
-            "conditionFilter": {
-                "value": "true",
-                "type": "VTL"
-            },
-            "hierarchy": {
-                "sequence": {
-                    "id": "kfxmfvwj",
-                    "page": "1",
-                    "label": {
-                        "value": "\"I - \" || \"TEST SUR BOOLEEN CODE DATE ET TEXTE\"",
-                        "type": "VTL|MD"
-                    }
-                }
-            },
-            "missingResponse": {"name": "TESTTEXTE_MISSING"},
-            "bindingDependencies": [
-                "TESTTEXTE_MISSING",
-                "TESTTEXTE"
-            ],
-            "response": {"name": "TESTTEXTE"}
-        },
-        {
-            "id": "kfxn91jl",
-            "componentType": "CheckboxOne",
-            "mandatory": false,
-            "page": "4",
-            "label": {
-                "value": "\"Controle sur code\"",
-                "type": "VTL|MD"
-            },
-            "conditionFilter": {
-                "value": "true",
-                "type": "VTL"
-            },
-            "hierarchy": {
-                "sequence": {
-                    "id": "kfxmfvwj",
-                    "page": "1",
-                    "label": {
-                        "value": "\"I - \" || \"TEST SUR BOOLEEN CODE DATE ET TEXTE\"",
-                        "type": "VTL|MD"
-                    }
-                }
-            },
-            "missingResponse": {"name": "TESTQCU_MISSING"},
-            "bindingDependencies": [
-                "TESTQCU_MISSING",
-                "TESTCODE"
-            ],
-            "options": [
-                {
-                    "value": "1",
-                    "label": {
-                        "value": "Code 1",
-                        "type": "VTL|MD"
-                    }
-                },
-                {
-                    "value": "2",
-                    "label": {
-                        "value": "Code 2",
-                        "type": "VTL|MD"
-                    }
-                },
-                {
-                    "value": "3",
-                    "label": {
-                        "value": "Code 3",
-                        "type": "VTL|MD"
-                    }
-                }
-            ],
-            "response": {"name": "TESTCODE"}
-        },
-        {
-            "id": "l7t05izu",
-            "componentType": "CheckboxGroup",
-            "page": "5",
-            "label": {
-                "value": "\"Controle sur code\"",
-                "type": "VTL|MD"
-            },
-            "declarations": [
-                {
-                    "id": "l7t05izu-l7szuucf",
-                    "declarationType": "INSTRUCTION",
-                    "position": "AFTER_QUESTION_TEXT",
-                    "label": {
-                        "value": "Tester cocher 1 et 2, cocher 1 et 3",
-                        "type": "VTL|MD"
-                    }
-                }
-            ],
-            "conditionFilter": {
-                "value": "true",
-                "type": "VTL"
-            },
-            "hierarchy": {
-                "sequence": {
-                    "id": "kfxmfvwj",
-                    "page": "1",
-                    "label": {
-                        "value": "\"I - \" || \"TEST SUR BOOLEEN CODE DATE ET TEXTE\"",
-                        "type": "VTL|MD"
-                    }
-                }
-            },
-            "missingResponse": {"name": "TESTQCM_MISSING"},
-            "bindingDependencies": [
-                "TESTQCM_MISSING",
-                "TESTQCM1",
-                "TESTQCM2",
-                "TESTQCM3"
-            ],
-            "responses": [
-                {
-                    "id": "l7t05izu-QOP-l7t0bfpc",
-                    "label": {
-                        "value": "Code 1",
-                        "type": "VTL|MD"
-                    },
-                    "response": {"name": "TESTQCM1"}
-                },
-                {
-                    "id": "l7t05izu-QOP-l7t08o25",
-                    "label": {
-                        "value": "Code 2",
-                        "type": "VTL|MD"
-                    },
-                    "response": {"name": "TESTQCM2"}
-                },
-                {
-                    "id": "l7t05izu-QOP-l7szsev9",
-                    "label": {
-                        "value": "Code 3",
-                        "type": "VTL|MD"
-                    },
-                    "response": {"name": "TESTQCM3"}
-                }
-            ]
-        },
-        {
-            "id": "kfxnfv4l",
-            "componentType": "Datepicker",
-            "mandatory": false,
-            "page": "6",
-            "min": "1990-12-31",
-            "max": "2040-12-31",
-            "label": {
-                "value": "\"Controle sur date AAAA-MM-JJ (saisie entre 31/12/1990 et 31/12/2040)\"",
-                "type": "VTL|MD"
-            },
-            "declarations": [
-                {
-                    "id": "kfxnfv4l-kfxnywlg",
-                    "declarationType": "INSTRUCTION",
-                    "position": "AFTER_QUESTION_TEXT",
-                    "label": {
-                        "value": "saisir une date > date du jour",
-                        "type": "VTL|MD"
-                    }
-                },
-                {
-                    "id": "kfxnfv4l-kzgvf7oe",
-                    "declarationType": "HELP",
-                    "position": "AFTER_QUESTION_TEXT",
-                    "label": {
-                        "value": "cast(TESTDATEA,string)",
-                        "type": "VTL|MD"
-                    }
-                }
-            ],
-            "conditionFilter": {
-                "value": "true",
-                "type": "VTL"
-            },
-            "controls": [
-                {
-                    "id": "kfxnfv4l-format-borne-inf-sup",
-                    "typeOfControl": "FORMAT",
-                    "criticality": "ERROR",
-                    "control": {
-                        "value": "not(not(isnull(TESTDATEA)) and (cast(TESTDATEA, date, \"YYYY-MM-DD\")>cast(\"2040-12-31\", date, \"YYYY-MM-DD\") or cast(TESTDATEA, date, \"YYYY-MM-DD\")<cast(\"1990-12-31\", date, \"YYYY-MM-DD\")))",
-                        "type": "VTL"
-                    },
-                    "errorMessage": {
-                        "value": "\"La date saisie doit être comprise entre 1990-12-31 et 2040-12-31.\"",
-                        "type": "VTL|MD"
-                    }
-                }
-            ],
-            "hierarchy": {
-                "sequence": {
-                    "id": "kfxmfvwj",
-                    "page": "1",
-                    "label": {
-                        "value": "\"I - \" || \"TEST SUR BOOLEEN CODE DATE ET TEXTE\"",
-                        "type": "VTL|MD"
-                    }
-                }
-            },
-            "missingResponse": {"name": "TESTDATEA_MISSING"},
-            "bindingDependencies": [
-                "TESTDATEA",
-                "TESTDATEA_MISSING"
-            ],
-            "dateFormat": "YYYY-MM-DD",
-            "response": {"name": "TESTDATEA"}
-        },
-        {
-            "id": "kfxnqc6m",
-            "componentType": "Datepicker",
-            "mandatory": false,
-            "page": "7",
-            "min": "2010-01",
-            "max": "2030-12",
-            "label": {
-                "value": "\"Controle sur date AAAA-MM (manque lunatic)\"",
-                "type": "VTL|MD"
-            },
-            "conditionFilter": {
-                "value": "true",
-                "type": "VTL"
-            },
-            "controls": [
-                {
-                    "id": "kfxnqc6m-format-borne-inf-sup",
-                    "typeOfControl": "FORMAT",
-                    "criticality": "ERROR",
-                    "control": {
-                        "value": "not(not(isnull(TESTDATEB)) and (cast(TESTDATEB, date, \"YYYY-MM\")>cast(\"2030-12\", date, \"YYYY-MM\") or cast(TESTDATEB, date, \"YYYY-MM\")<cast(\"2010-01\", date, \"YYYY-MM\")))",
-                        "type": "VTL"
-                    },
-                    "errorMessage": {
-                        "value": "\"La date saisie doit être comprise entre 2010-01 et 2030-12.\"",
-                        "type": "VTL|MD"
-                    }
-                }
-            ],
-            "hierarchy": {
-                "sequence": {
-                    "id": "kfxmfvwj",
-                    "page": "1",
-                    "label": {
-                        "value": "\"I - \" || \"TEST SUR BOOLEEN CODE DATE ET TEXTE\"",
-                        "type": "VTL|MD"
-                    }
-                }
-            },
-            "missingResponse": {"name": "TESTDATEB_MISSING"},
-            "bindingDependencies": [
-                "TESTDATEB_MISSING",
-                "TESTDATEB"
-            ],
-            "dateFormat": "YYYY-MM",
-            "response": {"name": "TESTDATEB"}
-        },
-        {
-            "id": "kfxnk34d",
-            "componentType": "Datepicker",
-            "mandatory": false,
-            "page": "8",
-            "min": "2010",
-            "max": "2030",
-            "label": {
-                "value": "\"Controle sur date AAAA (si supérieur à 2020) manque lunatic\"",
-                "type": "VTL|MD"
-            },
-            "conditionFilter": {
-                "value": "true",
-                "type": "VTL"
-            },
-            "controls": [
-                {
-                    "id": "kfxnk34d-format-borne-inf-sup",
-                    "typeOfControl": "FORMAT",
-                    "criticality": "ERROR",
-                    "control": {
-                        "value": "not(not(isnull(TESTDATEC)) and (cast(TESTDATEC, date, \"YYYY\")>cast(\"2030\", date, \"YYYY\") or cast(TESTDATEC, date, \"YYYY\")<cast(\"2010\", date, \"YYYY\")))",
-                        "type": "VTL"
-                    },
-                    "errorMessage": {
-                        "value": "\"La date saisie doit être comprise entre 2010 et 2030.\"",
-                        "type": "VTL|MD"
-                    }
-                }
-            ],
-            "hierarchy": {
-                "sequence": {
-                    "id": "kfxmfvwj",
-                    "page": "1",
-                    "label": {
-                        "value": "\"I - \" || \"TEST SUR BOOLEEN CODE DATE ET TEXTE\"",
-                        "type": "VTL|MD"
-                    }
-                }
-            },
-            "missingResponse": {"name": "TESTDATEC_MISSING"},
-            "bindingDependencies": [
-                "TESTDATEC_MISSING",
-                "TESTDATEC"
-            ],
-            "dateFormat": "YYYY",
-            "response": {"name": "TESTDATEC"}
-        },
-        {
-            "id": "COMMENT-SEQ",
-            "componentType": "Sequence",
-            "page": "9",
-            "label": {
-                "value": "\"Commentaire\"",
-                "type": "VTL|MD"
-            },
-            "conditionFilter": {
-                "value": "true",
-                "type": "VTL"
-            },
-            "hierarchy": {
-                "sequence": {
-                    "id": "COMMENT-SEQ",
-                    "page": "9",
-                    "label": {
-                        "value": "\"Commentaire\"",
-                        "type": "VTL|MD"
-                    }
-                }
-            }
-        },
-        {
-            "id": "COMMENT-QUESTION",
-            "componentType": "Textarea",
-            "mandatory": false,
-            "page": "10",
-            "maxLength": 2000,
-            "label": {
-                "value": "\"Avez-vous des remarques concernant l'enquête ou des commentaires ?\"",
-                "type": "VTL|MD"
-            },
-            "conditionFilter": {
-                "value": "true",
-                "type": "VTL"
-            },
-            "hierarchy": {
-                "sequence": {
-                    "id": "COMMENT-SEQ",
-                    "page": "9",
-                    "label": {
-                        "value": "\"Commentaire\"",
-                        "type": "VTL|MD"
-                    }
-                }
-            },
-            "bindingDependencies": ["COMMENT_QE"],
-            "response": {"name": "COMMENT_QE"}
-        }
-    ],
-    "variables": [
-        {
-            "variableType": "COLLECTED",
-            "name": "COMMENT_QE",
-            "values": {
-                "PREVIOUS": null,
-                "COLLECTED": null,
-                "FORCED": null,
-                "EDITED": null,
-                "INPUTED": null
-            }
-        },
-        {
-            "variableType": "COLLECTED",
-            "name": "TESTSURBOO",
-            "values": {
-                "PREVIOUS": null,
-                "COLLECTED": null,
-                "FORCED": null,
-                "EDITED": null,
-                "INPUTED": null
-            }
-        },
-        {
-            "variableType": "COLLECTED",
-            "name": "TESTSURBOO_MISSING",
-            "values": {
-                "PREVIOUS": null,
-                "COLLECTED": null,
-                "FORCED": null,
-                "EDITED": null,
-                "INPUTED": null
-            }
-        },
-        {
-            "variableType": "COLLECTED",
-            "name": "TESTTEXTE",
-            "values": {
-                "PREVIOUS": null,
-                "COLLECTED": null,
-                "FORCED": null,
-                "EDITED": null,
-                "INPUTED": null
-            }
-        },
-        {
-            "variableType": "COLLECTED",
-            "name": "TESTTEXTE_MISSING",
-            "values": {
-                "PREVIOUS": null,
-                "COLLECTED": null,
-                "FORCED": null,
-                "EDITED": null,
-                "INPUTED": null
-            }
-        },
-        {
-            "variableType": "COLLECTED",
-            "name": "TESTCODE",
-            "values": {
-                "PREVIOUS": null,
-                "COLLECTED": null,
-                "FORCED": null,
-                "EDITED": null,
-                "INPUTED": null
-            }
-        },
-        {
-            "variableType": "COLLECTED",
-            "name": "TESTQCU_MISSING",
-            "values": {
-                "PREVIOUS": null,
-                "COLLECTED": null,
-                "FORCED": null,
-                "EDITED": null,
-                "INPUTED": null
-            }
-        },
-        {
-            "variableType": "COLLECTED",
-            "name": "TESTQCM1",
-            "values": {
-                "PREVIOUS": null,
-                "COLLECTED": null,
-                "FORCED": null,
-                "EDITED": null,
-                "INPUTED": null
-            }
-        },
-        {
-            "variableType": "COLLECTED",
-            "name": "TESTQCM2",
-            "values": {
-                "PREVIOUS": null,
-                "COLLECTED": null,
-                "FORCED": null,
-                "EDITED": null,
-                "INPUTED": null
-            }
-        },
-        {
-            "variableType": "COLLECTED",
-            "name": "TESTQCM3",
-            "values": {
-                "PREVIOUS": null,
-                "COLLECTED": null,
-                "FORCED": null,
-                "EDITED": null,
-                "INPUTED": null
-            }
-        },
-        {
-            "variableType": "COLLECTED",
-            "name": "TESTQCM_MISSING",
-            "values": {
-                "PREVIOUS": null,
-                "COLLECTED": null,
-                "FORCED": null,
-                "EDITED": null,
-                "INPUTED": null
-            }
-        },
-        {
-            "variableType": "COLLECTED",
-            "name": "TESTDATEA",
-            "values": {
-                "PREVIOUS": null,
-                "COLLECTED": null,
-                "FORCED": null,
-                "EDITED": null,
-                "INPUTED": null
-            }
-        },
-        {
-            "variableType": "COLLECTED",
-            "name": "TESTDATEA_MISSING",
-            "values": {
-                "PREVIOUS": null,
-                "COLLECTED": null,
-                "FORCED": null,
-                "EDITED": null,
-                "INPUTED": null
-            }
-        },
-        {
-            "variableType": "COLLECTED",
-            "name": "TESTDATEB",
-            "values": {
-                "PREVIOUS": null,
-                "COLLECTED": null,
-                "FORCED": null,
-                "EDITED": null,
-                "INPUTED": null
-            }
-        },
-        {
-            "variableType": "COLLECTED",
-            "name": "TESTDATEB_MISSING",
-            "values": {
-                "PREVIOUS": null,
-                "COLLECTED": null,
-                "FORCED": null,
-                "EDITED": null,
-                "INPUTED": null
-            }
-        },
-        {
-            "variableType": "COLLECTED",
-            "name": "TESTDATEC",
-            "values": {
-                "PREVIOUS": null,
-                "COLLECTED": null,
-                "FORCED": null,
-                "EDITED": null,
-                "INPUTED": null
-            }
-        },
-        {
-            "variableType": "COLLECTED",
-            "name": "TESTDATEC_MISSING",
-            "values": {
-                "PREVIOUS": null,
-                "COLLECTED": null,
-                "FORCED": null,
-                "EDITED": null,
-                "INPUTED": null
-            }
-        }
-    ],
-    "cleaning": {},
-    "missingBlock": {
-        "TESTSURBOO_MISSING": ["TESTSURBOO"],
-        "TESTSURBOO": ["TESTSURBOO_MISSING"],
-        "TESTTEXTE_MISSING": ["TESTTEXTE"],
-        "TESTTEXTE": ["TESTTEXTE_MISSING"],
-        "TESTQCU_MISSING": ["TESTCODE"],
-        "TESTCODE": ["TESTQCU_MISSING"],
-        "TESTQCM_MISSING": [
-            "TESTQCM1",
-            "TESTQCM2",
-            "TESTQCM3"
-        ],
-        "TESTQCM1": ["TESTQCM_MISSING"],
-        "TESTQCM2": ["TESTQCM_MISSING"],
-        "TESTQCM3": ["TESTQCM_MISSING"],
-        "TESTDATEA_MISSING": ["TESTDATEA"],
-        "TESTDATEA": ["TESTDATEA_MISSING"],
-        "TESTDATEB_MISSING": ["TESTDATEB"],
-        "TESTDATEB": ["TESTDATEB_MISSING"],
-        "TESTDATEC_MISSING": ["TESTDATEC"],
-        "TESTDATEC": ["TESTDATEC_MISSING"]
-    },
-    "resizing": {}
+	"id": "kzguw1v7",
+	"modele": "QTESTCONTNONNUM",
+	"enoCoreVersion": "3.17.3",
+	"lunaticModelVersion": "3.3.5",
+	"generatingDate": "27-02-2024 11:39:13",
+	"missing": true,
+	"pagination": "question",
+	"maxPage": "10",
+	"label": {
+		"value": "QNONREG Controles Non Numériques VTL - ok",
+		"type": "VTL|MD"
+	},
+	"components": [
+		{
+			"id": "kfxmfvwj",
+			"componentType": "Sequence",
+			"page": "1",
+			"label": {
+				"value": "\"I - \" || \"TEST SUR BOOLEEN CODE DATE ET TEXTE\"",
+				"type": "VTL|MD"
+			},
+			"conditionFilter": {
+				"value": "true",
+				"type": "VTL"
+			},
+			"hierarchy": {
+				"sequence": {
+					"id": "kfxmfvwj",
+					"page": "1",
+					"label": {
+						"value": "\"I - \" || \"TEST SUR BOOLEEN CODE DATE ET TEXTE\"",
+						"type": "VTL|MD"
+					}
+				}
+			}
+		},
+		{
+			"id": "kfxmjupm",
+			"componentType": "CheckboxBoolean",
+			"mandatory": false,
+			"page": "2",
+			"label": {
+				"value": "\"➡ \" || \"Controle sur booleen\"",
+				"type": "VTL|MD"
+			},
+			"conditionFilter": {
+				"value": "true",
+				"type": "VTL"
+			},
+			"controls": [
+				{
+					"id": "kfxmjupm-CI-0",
+					"typeOfControl": "CONSISTENCY",
+					"criticality": "INFO",
+					"control": {
+						"value": "not(nvl(TESTSURBOO,false) = false)",
+						"type": "VTL"
+					},
+					"errorMessage": {
+						"value": "\"booleen pas coché et on affiche un message un peu long histoire de tester le truc \"",
+						"type": "VTL|MD"
+					}
+				},
+				{
+					"id": "kfxmjupm-CI-1",
+					"typeOfControl": "CONSISTENCY",
+					"criticality": "INFO",
+					"control": {
+						"value": "not(nvl(TESTSURBOO,false) = true)",
+						"type": "VTL"
+					},
+					"errorMessage": {
+						"value": "\"On a coché le booleen et on met une phrase un peu longue car on veut tester ce qui s'affiche\"",
+						"type": "VTL|MD"
+					}
+				}
+			],
+			"hierarchy": {
+				"sequence": {
+					"id": "kfxmfvwj",
+					"page": "1",
+					"label": {
+						"value": "\"I - \" || \"TEST SUR BOOLEEN CODE DATE ET TEXTE\"",
+						"type": "VTL|MD"
+					}
+				}
+			},
+			"missingResponse": {
+				"name": "TESTSURBOO_MISSING"
+			},
+			"response": {
+				"name": "TESTSURBOO"
+			}
+		},
+		{
+			"id": "kfxn6f16",
+			"componentType": "Input",
+			"mandatory": true,
+			"page": "3",
+			"maxLength": 15,
+			"label": {
+				"value": "\"➡ \" || \"Controle sur du texte < 250\"",
+				"type": "VTL|MD"
+			},
+			"conditionFilter": {
+				"value": "true",
+				"type": "VTL"
+			},
+			"controls": [
+				{
+					"id": "kfxn6f16-CI-0",
+					"typeOfControl": "CONSISTENCY",
+					"criticality": "INFO",
+					"control": {
+						"value": "not(nvl(TESTTEXTE,\"\") = \"BLABLA\")",
+						"type": "VTL"
+					},
+					"errorMessage": {
+						"value": "\"Vous ne pouvez pas saisir BLABLA\"",
+						"type": "VTL|MD"
+					}
+				},
+				{
+					"id": "kfxn6f16-CI-1",
+					"typeOfControl": "CONSISTENCY",
+					"criticality": "INFO",
+					"control": {
+						"value": "not(nvl(TESTTEXTE,\"\") = \"\")",
+						"type": "VTL"
+					},
+					"errorMessage": {
+						"value": "\"Cette phrase un peu longue s'affiche si on a du vide pour la variable sur le texte inférieur à 255 caractères et voilà\"",
+						"type": "VTL|MD"
+					}
+				}
+			],
+			"hierarchy": {
+				"sequence": {
+					"id": "kfxmfvwj",
+					"page": "1",
+					"label": {
+						"value": "\"I - \" || \"TEST SUR BOOLEEN CODE DATE ET TEXTE\"",
+						"type": "VTL|MD"
+					}
+				}
+			},
+			"missingResponse": {
+				"name": "TESTTEXTE_MISSING"
+			},
+			"response": {
+				"name": "TESTTEXTE"
+			}
+		},
+		{
+			"id": "kfxn91jl",
+			"componentType": "CheckboxOne",
+			"mandatory": false,
+			"page": "4",
+			"label": {
+				"value": "\"➡ \" || \"Controle sur code\"",
+				"type": "VTL|MD"
+			},
+			"conditionFilter": {
+				"value": "true",
+				"type": "VTL"
+			},
+			"controls": [
+				{
+					"id": "kfxn91jl-CI-0",
+					"typeOfControl": "CONSISTENCY",
+					"criticality": "INFO",
+					"control": {
+						"value": "not(nvl(TESTCODE,\"\") = \"1\")",
+						"type": "VTL"
+					},
+					"errorMessage": {
+						"value": "\"La variable vaut 1\"",
+						"type": "VTL|MD"
+					}
+				},
+				{
+					"id": "kfxn91jl-CI-1",
+					"typeOfControl": "CONSISTENCY",
+					"criticality": "INFO",
+					"control": {
+						"value": "not(nvl(TESTCODE,\"\") <> \"1\" and not(isnull(TESTCODE)))",
+						"type": "VTL"
+					},
+					"errorMessage": {
+						"value": "\"La variable ne vaut pas 1  et n'est  pas vide\"",
+						"type": "VTL|MD"
+					}
+				},
+				{
+					"id": "kfxn91jl-CI-2",
+					"typeOfControl": "CONSISTENCY",
+					"criticality": "INFO",
+					"control": {
+						"value": "not(isnull(TESTCODE))",
+						"type": "VTL"
+					},
+					"errorMessage": {
+						"value": "\"La variable est vide\"",
+						"type": "VTL|MD"
+					}
+				}
+			],
+			"hierarchy": {
+				"sequence": {
+					"id": "kfxmfvwj",
+					"page": "1",
+					"label": {
+						"value": "\"I - \" || \"TEST SUR BOOLEEN CODE DATE ET TEXTE\"",
+						"type": "VTL|MD"
+					}
+				}
+			},
+			"missingResponse": {
+				"name": "TESTQCU_MISSING"
+			},
+			"options": [
+				{
+					"value": "1",
+					"label": {
+						"value": "\"Code 1\"",
+						"type": "VTL|MD"
+					}
+				},
+				{
+					"value": "2",
+					"label": {
+						"value": "\"Code 2\"",
+						"type": "VTL|MD"
+					}
+				},
+				{
+					"value": "3",
+					"label": {
+						"value": "\"Code 3\"",
+						"type": "VTL|MD"
+					}
+				}
+			],
+			"response": {
+				"name": "TESTCODE"
+			}
+		},
+		{
+			"id": "l7t05izu",
+			"componentType": "CheckboxGroup",
+			"page": "5",
+			"label": {
+				"value": "\"➡ \" || \"Controle sur code\"",
+				"type": "VTL|MD"
+			},
+			"declarations": [
+				{
+					"id": "l7szuucf",
+					"declarationType": "INSTRUCTION",
+					"position": "AFTER_QUESTION_TEXT",
+					"label": {
+						"value": "\"Tester cocher 1 et 2, cocher 1 et 3\"",
+						"type": "VTL|MD"
+					}
+				}
+			],
+			"conditionFilter": {
+				"value": "true",
+				"type": "VTL"
+			},
+			"controls": [
+				{
+					"id": "l7t05izu-CI-0",
+					"typeOfControl": "CONSISTENCY",
+					"criticality": "INFO",
+					"control": {
+						"value": "not((nvl(TESTQCM1,false)=true and nvl(TESTQCM2,false)=true) or(nvl(TESTQCM1,false)=true and nvl(TESTQCM3,false)=true))",
+						"type": "VTL"
+					},
+					"errorMessage": {
+						"value": "\"1 et 3 pas compatibles, 1 et 2 pas compatibles\"",
+						"type": "VTL|MD"
+					}
+				}
+			],
+			"hierarchy": {
+				"sequence": {
+					"id": "kfxmfvwj",
+					"page": "1",
+					"label": {
+						"value": "\"I - \" || \"TEST SUR BOOLEEN CODE DATE ET TEXTE\"",
+						"type": "VTL|MD"
+					}
+				}
+			},
+			"missingResponse": {
+				"name": "TESTQCM_MISSING"
+			},
+			"responses": [
+				{
+					"id": "l7t05izu-QOP-l7t0bfpc",
+					"label": {
+						"value": "\"Code 1\"",
+						"type": "VTL|MD"
+					},
+					"response": {
+						"name": "TESTQCM1"
+					}
+				},
+				{
+					"id": "l7t05izu-QOP-l7t08o25",
+					"label": {
+						"value": "\"Code 2\"",
+						"type": "VTL|MD"
+					},
+					"response": {
+						"name": "TESTQCM2"
+					}
+				},
+				{
+					"id": "l7t05izu-QOP-l7szsev9",
+					"label": {
+						"value": "\"Code 3\"",
+						"type": "VTL|MD"
+					},
+					"response": {
+						"name": "TESTQCM3"
+					}
+				}
+			]
+		},
+		{
+			"id": "kfxnfv4l",
+			"componentType": "Datepicker",
+			"mandatory": false,
+			"page": "6",
+			"min": "1990-12-31",
+			"max": "2040-12-31",
+			"label": {
+				"value": "\"➡ \" || \"Controle sur date AAAA-MM-JJ (saisie entre 31/12/1990 et 31/12/2040)\"",
+				"type": "VTL|MD"
+			},
+			"declarations": [
+				{
+					"id": "kfxnywlg",
+					"declarationType": "INSTRUCTION",
+					"position": "AFTER_QUESTION_TEXT",
+					"label": {
+						"value": "\"saisir une date > date du jour\"",
+						"type": "VTL|MD"
+					}
+				},
+				{
+					"id": "kzgvf7oe",
+					"declarationType": "HELP",
+					"position": "AFTER_QUESTION_TEXT",
+					"label": {
+						"value": "cast(TESTDATEA,string) ",
+						"type": "VTL|MD"
+					}
+				}
+			],
+			"conditionFilter": {
+				"value": "true",
+				"type": "VTL"
+			},
+			"controls": [
+				{
+					"id": "kfxnfv4l-CI-0",
+					"typeOfControl": "CONSISTENCY",
+					"criticality": "INFO",
+					"control": {
+						"value": "not(cast(TESTDATEA,date,\"YYYY-MM-DD\") > cast(current_date(), date, \"YYYY-MM-DD\"))",
+						"type": "VTL"
+					},
+					"errorMessage": {
+						"value": "\"Date supérieure à date du jour\"",
+						"type": "VTL|MD"
+					}
+				}
+			],
+			"hierarchy": {
+				"sequence": {
+					"id": "kfxmfvwj",
+					"page": "1",
+					"label": {
+						"value": "\"I - \" || \"TEST SUR BOOLEEN CODE DATE ET TEXTE\"",
+						"type": "VTL|MD"
+					}
+				}
+			},
+			"missingResponse": {
+				"name": "TESTDATEA_MISSING"
+			},
+			"dateFormat": "YYYY-MM-DD",
+			"response": {
+				"name": "TESTDATEA"
+			}
+		},
+		{
+			"id": "kfxnqc6m",
+			"componentType": "Datepicker",
+			"mandatory": false,
+			"page": "7",
+			"min": "2010-01",
+			"max": "2030-12",
+			"label": {
+				"value": "\"➡ \" || \"Controle sur date AAAA-MM (manque lunatic)\"",
+				"type": "VTL|MD"
+			},
+			"conditionFilter": {
+				"value": "true",
+				"type": "VTL"
+			},
+			"controls": [
+				{
+					"id": "kfxnqc6m-CI-0",
+					"typeOfControl": "CONSISTENCY",
+					"criticality": "INFO",
+					"control": {
+						"value": "not(TESTDATEB != '' and TESTDATEB > '2010-12')",
+						"type": "VTL"
+					},
+					"errorMessage": {
+						"value": "\"La date est supérieure au 12 2010\"",
+						"type": "VTL|MD"
+					}
+				}
+			],
+			"hierarchy": {
+				"sequence": {
+					"id": "kfxmfvwj",
+					"page": "1",
+					"label": {
+						"value": "\"I - \" || \"TEST SUR BOOLEEN CODE DATE ET TEXTE\"",
+						"type": "VTL|MD"
+					}
+				}
+			},
+			"missingResponse": {
+				"name": "TESTDATEB_MISSING"
+			},
+			"dateFormat": "YYYY-MM",
+			"response": {
+				"name": "TESTDATEB"
+			}
+		},
+		{
+			"id": "kfxnk34d",
+			"componentType": "Datepicker",
+			"mandatory": false,
+			"page": "8",
+			"min": "2010",
+			"max": "2030",
+			"label": {
+				"value": "\"➡ \" || \"Controle sur date AAAA (si supérieur à 2020) manque lunatic\"",
+				"type": "VTL|MD"
+			},
+			"conditionFilter": {
+				"value": "true",
+				"type": "VTL"
+			},
+			"controls": [
+				{
+					"id": "kfxnk34d-CI-0",
+					"typeOfControl": "CONSISTENCY",
+					"criticality": "INFO",
+					"control": {
+						"value": "not(TESTDATEC > '2020' and TESTDATEC != '')",
+						"type": "VTL"
+					},
+					"errorMessage": {
+						"value": "\"La date est supérieure a 2020\"",
+						"type": "VTL|MD"
+					}
+				}
+			],
+			"hierarchy": {
+				"sequence": {
+					"id": "kfxmfvwj",
+					"page": "1",
+					"label": {
+						"value": "\"I - \" || \"TEST SUR BOOLEEN CODE DATE ET TEXTE\"",
+						"type": "VTL|MD"
+					}
+				}
+			},
+			"missingResponse": {
+				"name": "TESTDATEC_MISSING"
+			},
+			"dateFormat": "YYYY",
+			"response": {
+				"name": "TESTDATEC"
+			}
+		},
+		{
+			"id": "COMMENT-SEQ",
+			"componentType": "Sequence",
+			"page": "9",
+			"label": {
+				"value": "\"Commentaire\"",
+				"type": "VTL|MD"
+			},
+			"conditionFilter": {
+				"value": "true",
+				"type": "VTL"
+			},
+			"hierarchy": {
+				"sequence": {
+					"id": "COMMENT-SEQ",
+					"page": "9",
+					"label": {
+						"value": "\"Commentaire\"",
+						"type": "VTL|MD"
+					}
+				}
+			}
+		},
+		{
+			"id": "COMMENT-QUESTION",
+			"componentType": "Textarea",
+			"mandatory": false,
+			"page": "10",
+			"maxLength": 2000,
+			"label": {
+				"value": "\"➡ \" || \"Avez-vous des remarques concernant l'enquête ou des commentaires ?\"",
+				"type": "VTL|MD"
+			},
+			"conditionFilter": {
+				"value": "true",
+				"type": "VTL"
+			},
+			"hierarchy": {
+				"sequence": {
+					"id": "COMMENT-SEQ",
+					"page": "9",
+					"label": {
+						"value": "\"Commentaire\"",
+						"type": "VTL|MD"
+					}
+				}
+			},
+			"missingResponse": {
+				"name": "COMMENT_QE_MISSING"
+			},
+			"response": {
+				"name": "COMMENT_QE"
+			}
+		}
+	],
+	"variables": [
+		{
+			"name": "AAA",
+			"variableType": "CALCULATED",
+			"variableDimension": 0,
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			},
+			"expression": {
+				"value": "xs:date('2020-06-01')",
+				"type": "VTL"
+			}
+		},
+		{
+			"name": "TESTSURBOO",
+			"variableType": "COLLECTED",
+			"variableDimension": 0,
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			}
+		},
+		{
+			"name": "TESTTEXTE",
+			"variableType": "COLLECTED",
+			"variableDimension": 0,
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			}
+		},
+		{
+			"name": "TESTCODE",
+			"variableType": "COLLECTED",
+			"variableDimension": 0,
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			}
+		},
+		{
+			"name": "TESTQCM1",
+			"variableType": "COLLECTED",
+			"variableDimension": 0,
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			}
+		},
+		{
+			"name": "TESTQCM2",
+			"variableType": "COLLECTED",
+			"variableDimension": 0,
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			}
+		},
+		{
+			"name": "TESTQCM3",
+			"variableType": "COLLECTED",
+			"variableDimension": 0,
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			}
+		},
+		{
+			"name": "TESTDATEA",
+			"variableType": "COLLECTED",
+			"variableDimension": 0,
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			}
+		},
+		{
+			"name": "TESTDATEB",
+			"variableType": "COLLECTED",
+			"variableDimension": 0,
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			}
+		},
+		{
+			"name": "TESTDATEC",
+			"variableType": "COLLECTED",
+			"variableDimension": 0,
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			}
+		},
+		{
+			"name": "COMMENT_QE",
+			"variableType": "COLLECTED",
+			"variableDimension": 0,
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			}
+		},
+		{
+			"name": "TESTSURBOO_MISSING",
+			"variableType": "COLLECTED",
+			"variableDimension": 0,
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			}
+		},
+		{
+			"name": "TESTTEXTE_MISSING",
+			"variableType": "COLLECTED",
+			"variableDimension": 0,
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			}
+		},
+		{
+			"name": "TESTQCU_MISSING",
+			"variableType": "COLLECTED",
+			"variableDimension": 0,
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			}
+		},
+		{
+			"name": "TESTQCM_MISSING",
+			"variableType": "COLLECTED",
+			"variableDimension": 0,
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			}
+		},
+		{
+			"name": "TESTDATEA_MISSING",
+			"variableType": "COLLECTED",
+			"variableDimension": 0,
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			}
+		},
+		{
+			"name": "TESTDATEB_MISSING",
+			"variableType": "COLLECTED",
+			"variableDimension": 0,
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			}
+		},
+		{
+			"name": "TESTDATEC_MISSING",
+			"variableType": "COLLECTED",
+			"variableDimension": 0,
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			}
+		},
+		{
+			"name": "COMMENT_QE_MISSING",
+			"variableType": "COLLECTED",
+			"variableDimension": 0,
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			}
+		}
+	],
+	"missingBlock": {
+		"TESTTEXTE": [
+			"TESTTEXTE_MISSING"
+		],
+		"COMMENT_QE_MISSING": [
+			"COMMENT_QE"
+		],
+		"TESTSURBOO": [
+			"TESTSURBOO_MISSING"
+		],
+		"TESTQCU_MISSING": [
+			"TESTCODE"
+		],
+		"TESTCODE": [
+			"TESTQCU_MISSING"
+		],
+		"TESTQCM1": [
+			"TESTQCM_MISSING"
+		],
+		"TESTQCM2": [
+			"TESTQCM_MISSING"
+		],
+		"TESTSURBOO_MISSING": [
+			"TESTSURBOO"
+		],
+		"TESTQCM3": [
+			"TESTQCM_MISSING"
+		],
+		"TESTDATEC_MISSING": [
+			"TESTDATEC"
+		],
+		"TESTTEXTE_MISSING": [
+			"TESTTEXTE"
+		],
+		"COMMENT_QE": [
+			"COMMENT_QE_MISSING"
+		],
+		"TESTDATEA_MISSING": [
+			"TESTDATEA"
+		],
+		"TESTDATEB": [
+			"TESTDATEB_MISSING"
+		],
+		"TESTDATEB_MISSING": [
+			"TESTDATEB"
+		],
+		"TESTDATEC": [
+			"TESTDATEC_MISSING"
+		],
+		"TESTQCM_MISSING": [
+			"TESTQCM1",
+			"TESTQCM2",
+			"TESTQCM3"
+		],
+		"TESTDATEA": [
+			"TESTDATEA_MISSING"
+		]
+	},
+	"resizing": {}
 }
