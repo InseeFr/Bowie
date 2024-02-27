@@ -52,6 +52,12 @@ Elle donnera par exemple :
 
 :octicons-report-16: On ajoute à ce premier score un aléa tiré à partir de la position de certaines lettres dans le prénom, voir les formules ci-dessous des variables `ALEA_PRENOM` et `SCORE_KISH_INT_ALEA_PRENOM`. Cela permet de traiter le cas de personnes nées les mêmes jour et mois.
 
+!!!note
+
+    La formule donnée plus bas pour la création de l'aléa peut être adaptée, amendée pour améliorer la production d'un aléa. Cependant, il faut veiller à rester parcimonieux pour ne pas créer un code difficile à maintenir.
+
+    Par ailleurs, on introduira dans le courant du S1 2024 une fonction VTL pour générer de l'aléa, elle pourra remplacer une formule complexe dans ce contexte.
+
 On sélectionne ensuite l'individu dont le score est le plus bas.
 
 Les variables calculées nécessaires sont :
