@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../17-finalisation-structure/" rel="prev"/>
-<link href="../21-ajout-controle/" rel="next"/>
+<link href="../liste-de-code/" rel="prev"/>
+<link href="../problemes-connus/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>Mise en place d'un filtre - Bowie</title>
+<title>XPath et VTL, les différences - Bowie</title>
 <link href="../../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -33,7 +33,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#mise-en-place-dun-filtre">
+<a class="md-skip" href="#xpath-et-vtl-les-differences">
           Aller au contenu
         </a>
 </div>
@@ -57,7 +57,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Mise en place d'un filtre
+              XPath et VTL, les différences
             
           </span>
 </div>
@@ -356,57 +356,152 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_9_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_9_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../guide/">Guide</a>
+<a href="../">Guide</a>
 <label for="__nav_9_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_9_3_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_9_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_9_3">
 <span class="md-nav__icon md-icon"></span>
           Guide
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/boucles/">
+<a class="md-nav__link" href="../boucles/">
         Les boucles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/composition/">
+<a class="md-nav__link" href="../composition/">
         La composition
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/filtres/">
+<a class="md-nav__link" href="../filtres/">
         Les filtres
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/kish/">
+<a class="md-nav__link" href="../kish/">
         Sélection du Kish
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/liste-de-code/">
+<a class="md-nav__link" href="../liste-de-code/">
         Les listes de code
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/migration-xpath-vers-vtl/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          XPath et VTL, les différences
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         XPath et VTL, les différences
       </a>
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changements-au-niveau-du-langage">
+    Changements au niveau du langage
+  </a>
+<nav aria-label="Changements au niveau du langage" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quelques-operateurs-identiques">
+    Quelques opérateurs identiques
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/problemes-connus/">
+<a class="md-nav__link" href="#quelques-operateurs-differents">
+    Quelques opérateurs différents
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#utilisation-de-texte">
+    Utilisation de texte
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changements-dus-au-format-des-variables-passage-xforms-lunatic">
+    Changements dûs au format des variables (passage XForms -&gt; Lunatic)
+  </a>
+<nav aria-label="Changements dûs au format des variables (passage XForms -&gt; Lunatic)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nature-des-modalites-de-reponse-aux-qcm">
+    Nature des modalités de réponse aux QCM
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comprendre-et-gerer-le-vide-et-la-nullite">
+    Comprendre et gérer le vide et la nullité
+  </a>
+<nav aria-label="Comprendre et gérer le vide et la nullité" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generalites">
+    Généralités
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sommer-des-variables">
+    Sommer des variables
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tester-la-nullitele-vide">
+    Tester la nullité/le vide
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#personnaliser-un-libelle">
+    Personnaliser un libellé
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#controles-et-variables-calculees">
+    Contrôles et variables calculées
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#controles-dans-les-qcm">
+    Contrôles dans les QCM
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#et-si-le-questionnaire-ne-peut-pas-etre-visualise-ou-se-visualise-mal">
+    Et si le questionnaire ne peut pas être visualisé ou se visualise mal ?
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../problemes-connus/">
         Les problèmes connus
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/vtl/">
+<a class="md-nav__link" href="../vtl/">
         Guide VTL Pogues
       </a>
 </li>
@@ -423,17 +518,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/variables/nommage/">
+<a class="md-nav__link" href="../variables/nommage/">
         Nommage des variables
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/variables/variables-externes/">
+<a class="md-nav__link" href="../variables/variables-externes/">
         Les variables externes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../guide/variables/variables-globales/">
+<a class="md-nav__link" href="../variables/variables-globales/">
         Les variables globales
       </a>
 </li>
@@ -443,88 +538,87 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_9_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">Tutoriel</a>
+<a href="../../tutoriel/">Tutoriel</a>
 <label for="__nav_9_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_9_4_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_9_4_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_9_4">
 <span class="md-nav__icon md-icon"></span>
           Tutoriel
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../10-creation-questionnaire/">
+<a class="md-nav__link" href="../../tutoriel/10-creation-questionnaire/">
         Création d'un questionnaire
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../11-creation-premiere-sequence/">
+<a class="md-nav__link" href="../../tutoriel/11-creation-premiere-sequence/">
         Création d'une première séquence
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../12-visualisation-questionnaire/">
+<a class="md-nav__link" href="../../tutoriel/12-visualisation-questionnaire/">
         Visualisation du questionnaire
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../13-creation-liste-qcu/">
+<a class="md-nav__link" href="../../tutoriel/13-creation-liste-qcu/">
         Création d'une réponse basée sur une liste
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../14-elaboration-structure/">
+<a class="md-nav__link" href="../../tutoriel/14-elaboration-structure/">
         Élaboration de la structure du questionnaire
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../15-creation-tableau/">
+<a class="md-nav__link" href="../../tutoriel/15-creation-tableau/">
         Création d'un tableau
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../16-creation-qcm/">
+<a class="md-nav__link" href="../../tutoriel/16-creation-qcm/">
         Création d'une question à choix multiples
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../17-finalisation-structure/">
+<a class="md-nav__link" href="../../tutoriel/17-finalisation-structure/">
         Finalisation de la structure du questionnaire
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutoriel/20-mise-en-place-filtre/">
         Mise en place d'un filtre
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../21-ajout-controle/">
+<a class="md-nav__link" href="../../tutoriel/21-ajout-controle/">
         Ajout d'un contrôle
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../22-ajout-infobulle/">
+<a class="md-nav__link" href="../../tutoriel/22-ajout-infobulle/">
         Insertion d'une infobulle
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../23-utilisation-variable-calculee/">
+<a class="md-nav__link" href="../../tutoriel/23-utilisation-variable-calculee/">
         Utilisation d'une variable calculée
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../24-personnalisation-libelle/">
+<a class="md-nav__link" href="../../tutoriel/24-personnalisation-libelle/">
         Personnalisation d'un libellé
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../25-mise-en-place-boucle/">
+<a class="md-nav__link" href="../../tutoriel/25-mise-en-place-boucle/">
         Mise en place d'une boucle
       </a>
 </li>
@@ -587,55 +681,306 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changements-au-niveau-du-langage">
+    Changements au niveau du langage
+  </a>
+<nav aria-label="Changements au niveau du langage" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quelques-operateurs-identiques">
+    Quelques opérateurs identiques
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quelques-operateurs-differents">
+    Quelques opérateurs différents
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#utilisation-de-texte">
+    Utilisation de texte
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changements-dus-au-format-des-variables-passage-xforms-lunatic">
+    Changements dûs au format des variables (passage XForms -&gt; Lunatic)
+  </a>
+<nav aria-label="Changements dûs au format des variables (passage XForms -&gt; Lunatic)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nature-des-modalites-de-reponse-aux-qcm">
+    Nature des modalités de réponse aux QCM
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comprendre-et-gerer-le-vide-et-la-nullite">
+    Comprendre et gérer le vide et la nullité
+  </a>
+<nav aria-label="Comprendre et gérer le vide et la nullité" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generalites">
+    Généralités
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sommer-des-variables">
+    Sommer des variables
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tester-la-nullitele-vide">
+    Tester la nullité/le vide
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#personnaliser-un-libelle">
+    Personnaliser un libellé
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#controles-et-variables-calculees">
+    Contrôles et variables calculées
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#controles-dans-les-qcm">
+    Contrôles dans les QCM
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#et-si-le-questionnaire-ne-peut-pas-etre-visualise-ou-se-visualise-mal">
+    Et si le questionnaire ne peut pas être visualisé ou se visualise mal ?
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="mise-en-place-dun-filtre">Mise en place d'un filtre</h1>
+<h1 id="xpath-et-vtl-les-differences">XPath et VTL, les différences</h1>
+<p>Ce document est un résumé permettant de traduire rapidement quelques fonctions ou syntaxes fréquemment utilisées dans les questionnaires entreprises saisis dans Pogues.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>À partir de cette section, il est utile de s'être familiarisé avec VTL en parcourant <a href="../../guide/vtl/">le guide dédié</a> et le consultant régulièrement.</p>
+<p>Pour (re)découvrir de façon plus approfondie et détaillée le langage VTL, <a href="../vtl/">le guide VTL de référence est ici</a>.</p>
 </div>
-<p>L'utilisation de filtres permet de déterminer l'affichage (ou non) d'une ou plusieurs séquences, sous-séquences ou questions.</p>
-<p>Pour cela, nous allons nous appuyer sur la fonctionnalité "Filtre" de Pogues mais aussi sur le langage VTL pour l'expression de la condition.</p>
-<p>Pour créer un filtre, il suffit de cliquer sur le bouton "+ Filtre" dans la barre d'action. La fenêtre modale qui s'ouvre affiche les champs :</p>
+<h2 id="changements-au-niveau-du-langage">Changements au niveau du langage</h2>
+<h3 id="quelques-operateurs-identiques">Quelques opérateurs identiques</h3>
+<table>
+<thead>
+<tr>
+<th>Opérateur ou fonction</th>
+<th>Xpath</th>
+<th>VTL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A est égal à B</td>
+<td>A = B</td>
+<td>A = B</td>
+</tr>
+<tr>
+<td>A plus B</td>
+<td>A + B</td>
+<td>A + B</td>
+</tr>
+<tr>
+<td>A moins B</td>
+<td>A - B</td>
+<td>A - B</td>
+</tr>
+<tr>
+<td>A fois B</td>
+<td>A * B</td>
+<td>A * B</td>
+</tr>
+<tr>
+<td>et logique</td>
+<td>and</td>
+<td>and</td>
+</tr>
+<tr>
+<td>ou logique</td>
+<td>or</td>
+<td>or</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quelques-operateurs-differents">Quelques opérateurs différents</h3>
+<table>
+<thead>
+<tr>
+<th>Opérateur ou fonction</th>
+<th>Xpath</th>
+<th>VTL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A différent de B</td>
+<td>A != B</td>
+<td>A &lt;&gt; B</td>
+</tr>
+<tr>
+<td>A divisé par B</td>
+<td>A div B</td>
+<td>A / B</td>
+</tr>
+<tr>
+<td>sous-chaine de longueur 2, à partir du 1er caractère</td>
+<td>substring(A,1,2)</td>
+<td>substr(A,1,2)</td>
+</tr>
+<tr>
+<td>concaténer A, B</td>
+<td>concat(A,B )</td>
+<td>A || B</td>
+</tr>
+<tr>
+<td>nullité (cf.  infra)</td>
+<td>A = ''</td>
+<td>isnull(A)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="utilisation-de-texte">Utilisation de texte</h3>
+<p>Dans les contrôles ou les filtres décrits dans Pogues, on n'utilise plus (comme c'était le cas en Xpath) les simples <code>'</code> mais des guillemets <code>"</code>.</p>
+<p><strong>Exemples</strong> :</p>
 <ul>
-<li><em>Description</em> : un libellé qui sera visible sur le questionnaire papier et remplacera le filtre dynamique des questionnaires web ou enquêteur</li>
-<li><em>Condition d'affichage</em> : l'expression VTL qui si elle est <strong>vraie</strong> déclenche l'affichage des éléments filtrés</li>
-<li><em>Début</em> : détermine où commence la couverture du filtre</li>
-<li><em>Fin</em> : détermine où termine la couverture du filtre.</li>
+<li>Filtre : <code>$VAR_TEXTE$ = "1" or $VAR_TEXTE$ ="2"</code></li>
+<li>Contrôle : <code>$VAR_TEXTE$ = "1" and $VAR_NUMERIQUE$ &gt; 1000</code></li>
 </ul>
-<p>Le cas d'usage dans le cadre de ce tutoriel est l'affichage des modules (ou séquences) qui suivent la première question (<a href="../11-creation-premiere-sequence/#création-dune-question">"Souhaitez-vous répondre à ce questionnaire ?"</a>). On veut donc s'assurer que la variable associée à cette question (<code>OKREP</code>) à la bonne valeur (<code>"1"</code> ici qui est le code associé à la modalité "Oui").</p>
-<p>Notre condition d'affichage est donc :</p>
-<pre><code>```vtl
-$OKREP$ = "1"
-```
-</code></pre>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Bien noter ici :</p>
+<h2 id="changements-dus-au-format-des-variables-passage-xforms-lunatic">Changements dûs au format des variables (passage XForms -&gt; Lunatic)</h2>
+<p>Le format des variables a évolué ce qui conduit à quelques évolutions dans la manière de formuler filtres ou contrôles.</p>
+<h3 id="nature-des-modalites-de-reponse-aux-qcm">Nature des modalités de réponse aux QCM</h3>
+<p>En VTL, on ne retourne plus des "0" / "1" ou des "" / "1" pour les modalités de réponse à un QCM, mais <strong>true</strong> si une modalité est cochée, <strong>null</strong> ou <strong>false</strong> si elle ne l'est pas. Cf. partie "les contrôles dans les QCM".</p>
+<h3 id="comprendre-et-gerer-le-vide-et-la-nullite">Comprendre et gérer le vide et la nullité</h3>
+<h4 id="generalites">Généralités</h4>
+<p>En xforms, la non-réponse était systématiquement une chaîne vide quel que soit le format.
+Dans le format Lunatic en revanche, un champ qui n’est pas encore rempli par le répondant est de valeur <strong>"null"</strong>, que ce soit un champ nombre, texte, un QCU, un QCM etc.
+Quand le répondant saisit une réponse, on va collecter un nombre, du texte, un booléen (valeurs true/false, cf. supra).
+<img alt="⚠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a0.svg" title=":warning:"/> Lorsque le répondant saisit une réponse puis l'efface, le champ collecté n'est pas systématiquement remis à <strong>null</strong> : il redeviendra <strong>null</strong> pour un champ nombre mais vaudra "" pour du texte, et false pour une modalité de QCM décochée.</p>
+<table>
+<thead>
+<tr>
+<th>Champ collecté</th>
+<th>jamais saisi</th>
+<th>répondu / coché</th>
+<th>effacé/décoché</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nombre</td>
+<td>null</td>
+<td>123</td>
+<td>null</td>
+</tr>
+<tr>
+<td>Texte</td>
+<td>null</td>
+<td>"xyz"</td>
+<td>""</td>
+</tr>
+<tr>
+<td>Modalité de QCM</td>
+<td>null</td>
+<td>true</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Modalité de QCU</td>
+<td>null</td>
+<td>un code (décrit dans Pogues)</td>
+<td>impossible</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sommer-des-variables">Sommer des variables</h4>
+<p>Quand on manipule des variables numériques en VTL, il faut se prémunir de ce null ou ce "" puisqu'en VTL, la valorisation de VAR1_NUMERIQUE + VAR2_NUMERIQUE, si VAR2_NUMERIQUE est non rempli, vaudra null (alors qu'on pourrait s'attendre à ce que la somme soit VAR1_NUMERIQUE).
+Pour cela, on utilise la fonction <strong>nvl</strong> qui permet de proposer une valeur en cas de null ou de "" :  nvl(\$MA_VARIABLE$, "valeur si nulle") c'est-à-dire : si \$MA_VARIABLE$ n'est pas renseignée, lui affecter la valeur si nulle, sinon lui affecter \$MA_VARIABLE$.</p>
+<p><strong>Exemple</strong>:</p>
 <ul>
-<li>la variable est entourée du caractère <code>$</code></li>
-<li>le code est bien du texte, il faut l'entourer par le caractère <code>"</code></li>
+<li><code>$VAR1_NUMERIQUE$ + $VAR2_NUMERIQUE$</code> =&gt; <code>nvl($VAR1_NUMERIQUE$,0) + nvl($VAR2_NUMERIQUE$,0)</code></li>
 </ul>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>En toute logique, le filtre que l'on est en train de créer va masquer les éléments choisis dès que la variable <code>OKREP</code> aura une valeur différente de "1" <img alt="🤓" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f913.svg" title=":nerd:"/></p>
-</div>
-<p>Il nous reste à préciser que le filtre à pour champ d'action les modules 2 à 4. Il faut bien noter que les éléments choisis dans <em>Début</em> et <em>Fin</em> sont <strong>inclus</strong> dans le périmètre du filtre.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../../img/pogues/filtre-configuration.png"><img alt="Configuration du filtre" src="../../../img/pogues/filtre-configuration.png"/></a></p>
-<p>Le filtre que l'on vient de créer devient visible dans la vue d'ensemble du questionnaire (sur les éléments choisis dans <em>Début</em> et <em>Fin</em>), on peut le modifier en cliquant dessus.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../../img/pogues/filtre-resultat.png"><img alt="Résultat du filtre" src="../../../img/pogues/filtre-resultat.png"/></a></p>
+<h4 id="tester-la-nullitele-vide">Tester la nullité/le vide</h4>
+<p>On peut vouloir détecter des potentielles non-réponses (par exemple pour ne pas déclencher un contrôle entre 2 variables VAR_A et VAR_B, si une des 2 variables n'est pas renseignée). Pour cela, on va devoir tester la nullité des variables et, en fonction de la nature de la variable collectée, s'assurer que l'on n'a pas aussi une chaîne vide.
+Plusieurs syntaxes sont possibles :</p>
+<ul>
+<li><code>isnull($VAR_NUMERIQUE$) (pour les variables numériques)</code></li>
+<li><code>isnull($VAR_TEXTE$) or $VAR_TEXTE$="" (pour les textes).</code></li>
+<li><code>isnull($VAR_QCM1$) or not $VAR_QCM1$ (pour les modalités de QCM).</code></li>
+<li><code>isnull($VAR_QCU$) (pour un QCU)</code></li>
+</ul>
+<p>On peut également tirer partie de la fonction <strong>nvl</strong> :</p>
+<ul>
+<li><code>nvl($VAR_TEXTE$, "") = ""</code></li>
+<li><code>nvl($VAR_QCM_1$, false)</code></li>
+</ul>
+<h3 id="personnaliser-un-libelle">Personnaliser un libellé</h3>
+<p>Trois éléments assez différents de Xpath :</p>
+<ul>
+<li>on utilise l’opérateur VTL <strong>||</strong> qui permet de concaténer des chaînes de caractères, ou une chaîne de caractères et une variable.</li>
+<li>pour être utilisées dans un libellé, les variables numériques collectées doivent être converties en chaînes de caractères (fonction <strong>cast</strong>)</li>
+<li>les variables externes, <em>quelle que soit leur nature</em>, sont vues comme des variables Texte, qui peuvent donc être utilisées dans des libellés (de questions, de déclarations, de messages d'erreur)</li>
+</ul>
+<p><strong>Exemples</strong> :</p>
+<ul>
+<li><code>"Hello" || $VAR_TEXTE$</code></li>
+<li><code>"En " || $VAR_TEXTE_EXTERNE$ || ", votre activité est-elle toujours " || $VAR_TEXTE_EXTERNE2$ || " ?"</code></li>
+<li><code>"Votre chiffre d'affaires est de " || cast($VAR1_NUMERIQUE$,string) || " euros et votre effectif de " ||  cast($VAR2_NUMERIQUE$,string) || " personnes".</code></li>
+<li><code>"Vous venez de déclarer un chiffre d'affaires de " || cast($VAR1_NUMERIQUE$,string) || " euros alors qu'il était de " ||  cast($VAR2_NUMERIQUE_EXTERNE$,string) || " euros l'an dernier".</code>
+ou
+ <code>"Vous venez de déclarer un chiffre d'affaires de " || cast($VAR1_NUMERIQUE$,string) || " euros alors qu'il était de " ||   $VAR2_NUMERIQUE_EXTERNE$ || " euros l'an dernier".</code></li>
+</ul>
+<h3 id="controles-et-variables-calculees">Contrôles et variables calculées</h3>
+<p>Il est assez simple d'écrire des contrôles ou de calculer des variables à partir des données collectées ou externes dès lors qu'on dispose des opérateurs (cf. infra), qu'on a compris le principe de la nullité et qu'on connaît la nature des variables, en particulier celles des variables externes.</p>
+<p><strong>Exemples</strong> :</p>
+<ul>
+<li><code>sans gestion du null : if $VAR_NUMERIQUE$ &lt; 10 then "1" else "2" ==&gt; renvoie 2 si null</code></li>
+<li><code>gestion du null : if nvl($VAR_NUMERIQUE$,0) &lt; 10 then  "1" else "0" ==&gt; renvoie 1 si null</code></li>
+<li><code>variable externe (on doit convertir la variable en numérique pour la comparer à 0 par exemple): if nvl($VAR2_NUMERIQUE_EXTERNE, "") &lt;&gt; 0 and cast($VAR2_NUMERIQUE_EXTERNE$,integer) &gt; 0 then "1" else "0"</code></li>
+<li><code>$VAR_SOMME$ = nvl($VAR1_NUMERIQUE,0) + nvl($VAR2_NUMERIQUE$,0)</code></li>
+</ul>
+<h3 id="controles-dans-les-qcm">Contrôles dans les QCM</h3>
+<p>Dans la nouvelle filière, on ne retourne plus des 0 / 1 pour les modalités de réponse à un QCM, mais des true si une modalité est cochée, null si elle ne l'est pas et false si elle est décochée.
+Les contrôles ou filtres impliquant ces variables doivent prendre en compte ces aspects.</p>
+<p><strong>Exemples</strong> :</p>
+<ul>
+<li>tester que QCM1 est cochée (pour un filtre par exemple) =&gt;  <code>nvl($QCM1$,false) = true</code></li>
+<li>tester une modalité exclusive (ici par exemple QCM4 ne peut pas être cochée si QCM1, QCM2, ou QCM3 l'est) =&gt; <code>(nvl($QCM4$,false) = true and nvl($QCM3$,false) = true) or (nvl($QCM4$,false) = true and nvl($QCM2$,false) = true) or (nvl($QCM4$,false) = true and nvl($QCM1$,false) = true))</code></li>
+</ul>
+<h2 id="et-si-le-questionnaire-ne-peut-pas-etre-visualise-ou-se-visualise-mal">Et si le questionnaire ne peut pas être visualisé ou se visualise mal ?</h2>
+<ul>
+<li>Si la visualisation du questionnaire ne fonctionne pas, il est possible de visualiser chaque séquence/sous-séquence l'une après l'autre, afin de déterminer quelle séquence/sous-séquence pose un problème, puis quelle question.</li>
+<li>Si une question filtrée s'affiche à tort, c'est que le filtre est incorrect (variable mal décrite, inexistante)</li>
+<li>Si es déclarations n’apparaissent pas, penser à vérifier que le(s) mode(s) de collecte est(sont) bien coché(s).</li>
+</ul>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
 <nav aria-label="Pied de page" class="md-footer__inner md-grid">
-<a aria-label="Précédent: Finalisation de la structure du questionnaire" class="md-footer__link md-footer__link--prev" href="../17-finalisation-structure/" rel="prev">
+<a aria-label="Précédent: Les listes de code" class="md-footer__link md-footer__link--prev" href="../liste-de-code/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -644,17 +989,17 @@ $OKREP$ = "1"
 <span class="md-footer__direction">
                   Précédent
                 </span>
-                Finalisation de la structure du questionnaire
+                Les listes de code
               </div>
 </div>
 </a>
-<a aria-label="Suivant: Ajout d'un contrôle" class="md-footer__link md-footer__link--next" href="../21-ajout-controle/" rel="next">
+<a aria-label="Suivant: Les problèmes connus" class="md-footer__link md-footer__link--next" href="../problemes-connus/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   Suivant
                 </span>
-                Ajout d'un contrôle
+                Les problèmes connus
               </div>
 </div>
 <div class="md-footer__button md-icon">
