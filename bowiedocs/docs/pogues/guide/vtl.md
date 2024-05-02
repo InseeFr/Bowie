@@ -28,7 +28,7 @@ VTL est utilisé dès que l’on souhaite :
 
 Les champs correspondants dans Pogues proposent dans la plupart des cas un **éditeur VTL** :
 
-![Editeur VTL](/img/vtl/code-list-editor.png 'Éditeur VTL')
+![Editeur VTL](/Bowie/img/vtl/code-list-editor.png 'Éditeur VTL')
 
 ## Fonctionnalités de l’éditeur
 
@@ -62,7 +62,7 @@ Un chiffre avec décimales :
 
 Voici un exemple de syntaxe pour un libellé personnalisé :
 
-![Libellé personnalisé](/img/vtl/vtl-in-pogues-custom-label.png 'Libellé personnalisé')
+![Libellé personnalisé](/Bowie/img/vtl/vtl-in-pogues-custom-label.png 'Libellé personnalisé')
 
 On utilise ici l’opérateur VTL `||` qui permet de concaténer des chaînes de caractères, ou une chaîne de caractères et une variable (ici `NOM`).
 
@@ -102,13 +102,13 @@ Mon libellé de question avec [une infobulle](. "dont voici le contenu").
 
 Un exemple de contrôle sur une valeur numérique :
 
-![Exemple de contrôle](/img/vtl/vtl-in-pogues-simple-control.png 'Exemple de contrôle')_Libellé personnalisé avec gestion de la nullité_
+![Exemple de contrôle](/Bowie/img/vtl/vtl-in-pogues-simple-control.png 'Exemple de contrôle')_Libellé personnalisé avec gestion de la nullité_
 
 ## Variables calculées
 
 Pogues permet de créer des variables calculées à partir de variables collectées. Dans l’exemple ci-dessous, on somme les variables de revenus de l’enquêté et de son conjoint :
 
-![Variable calculée](/img/vtl/vtl-in-pogues-computed-variable-earnings.png 'Variable calculée')_Une variable calculée_
+![Variable calculée](/Bowie/img/vtl/vtl-in-pogues-computed-variable-earnings.png 'Variable calculée')_Une variable calculée_
 
 L’expression VTL est :
 

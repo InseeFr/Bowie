@@ -1054,7 +1054,7 @@
 <li>définir la condition d’un filtre</li>
 </ul>
 <p>Les champs correspondants dans Pogues proposent dans la plupart des cas un <strong>éditeur VTL</strong> :</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="/img/vtl/code-list-editor.png"><img alt="Editeur VTL" src="/img/vtl/code-list-editor.png" title="Éditeur VTL"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="/Bowie/img/vtl/code-list-editor.png"><img alt="Editeur VTL" src="/Bowie/img/vtl/code-list-editor.png" title="Éditeur VTL"/></a></p>
 <h2 id="fonctionnalites-de-lediteur">Fonctionnalités de l’éditeur</h2>
 <p>L’éditeur fournit :</p>
 <ul>
@@ -1074,7 +1074,7 @@
 </code></pre></div>
 <h2 id="libelles">Libellés</h2>
 <p>Voici un exemple de syntaxe pour un libellé personnalisé :</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="/img/vtl/vtl-in-pogues-custom-label.png"><img alt="Libellé personnalisé" src="/img/vtl/vtl-in-pogues-custom-label.png" title="Libellé personnalisé"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="/Bowie/img/vtl/vtl-in-pogues-custom-label.png"><img alt="Libellé personnalisé" src="/Bowie/img/vtl/vtl-in-pogues-custom-label.png" title="Libellé personnalisé"/></a></p>
 <p>On utilise ici l’opérateur VTL <code>||</code> qui permet de concaténer des chaînes de caractères, ou une chaîne de caractères et une variable (ici <code>NOM</code>).</p>
 <div class="admonition warning">
 <p class="admonition-title">Attention!</p>
@@ -1098,10 +1098,10 @@
 <p><span class="label label-rounded label-warning">Attention !</span> Il faut bien respecter la syntaxe pour le contenu de l’infobulle : un <code>.</code> avant le texte entouré de guillemets <code>"</code>.</p>
 <h2 id="controles">Contrôles</h2>
 <p>Un exemple de contrôle sur une valeur numérique :</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="/img/vtl/vtl-in-pogues-simple-control.png"><img alt="Exemple de contrôle" src="/img/vtl/vtl-in-pogues-simple-control.png" title="Exemple de contrôle"/></a><em>Libellé personnalisé avec gestion de la nullité</em></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="/Bowie/img/vtl/vtl-in-pogues-simple-control.png"><img alt="Exemple de contrôle" src="/Bowie/img/vtl/vtl-in-pogues-simple-control.png" title="Exemple de contrôle"/></a><em>Libellé personnalisé avec gestion de la nullité</em></p>
 <h2 id="variables-calculees">Variables calculées</h2>
 <p>Pogues permet de créer des variables calculées à partir de variables collectées. Dans l’exemple ci-dessous, on somme les variables de revenus de l’enquêté et de son conjoint :</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="/img/vtl/vtl-in-pogues-computed-variable-earnings.png"><img alt="Variable calculée" src="/img/vtl/vtl-in-pogues-computed-variable-earnings.png" title="Variable calculée"/></a><em>Une variable calculée</em></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="/Bowie/img/vtl/vtl-in-pogues-computed-variable-earnings.png"><img alt="Variable calculée" src="/Bowie/img/vtl/vtl-in-pogues-computed-variable-earnings.png" title="Variable calculée"/></a><em>Une variable calculée</em></p>
 <p>L’expression VTL est :</p>
 <div class="highlight"><pre><span></span><code>cast(nvl($REVENUS$, "0"), integer) +
 cast(nvl($REVENUS_CONJOINT$, "0"), integer)
