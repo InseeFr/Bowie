@@ -13,10 +13,9 @@ On a donc choisi ce langage comme expression des contrôles et du dynamisme dans
 Les éléments les plus importants à retenir de l’usage de VTL dans Pogues :
 
 - l’écriture se fait via un éditeur de code VTL,
-- le type des variables que l’on collecte est toujours “texte”, ce qui oblige à changer ce type pour des opérations numériques : `cast($VARIABLE$, integer)`,
 - les références aux variables doivent être encadrées par des `$`
-- il est dans la plupart des cas nécessaires de gérer le cas où la variable n’est pas encore ou plus renseignée - sa valeur est nulle : `nvl($MA_VARIABLE$, "valeur si nulle")`,
-- VTL fournit un certain nombre de fonctions utilitaires - on vient de voir `` `cast`et`nvl` - on répertorie les plus utiles dans ce document.
+- il est dans le plus souvent nécessaire de gérer le cas où la variable n’est pas encore ou plus renseignée - sa valeur est nulle : `nvl($MA_VARIABLE$, "valeur si nulle")`,
+- VTL fournit un certain nombre de fonctions utilitaires - comme `cast`et`nvl` - on répertorie les plus utiles dans ce document.
 
 ## Utiliser VTL
 
@@ -32,8 +31,6 @@ Les champs correspondants dans Pogues proposent dans la plupart des cas un **éd
 ![Editeur VTL](/img/vtl/code-list-editor.png 'Éditeur VTL')
 
 ## Fonctionnalités de l’éditeur
-
-<span class="label label-rounded label-primary">À noter</span> L’éditeur disponible actuellement reste un work-in-progress.
 
 L’éditeur fournit :
 
@@ -55,7 +52,7 @@ Un entier s’écrira simplement :
 42
 ```
 
-Une chiffre avec décimales :
+Un chiffre avec décimales :
 
 ```
 3.14159
@@ -69,13 +66,17 @@ Voici un exemple de syntaxe pour un libellé personnalisé :
 
 On utilise ici l’opérateur VTL `||` qui permet de concaténer des chaînes de caractères, ou une chaîne de caractères et une variable (ici `NOM`).
 
-<span class="label label-rounded label-warning">Attention !</span> Pour des raisons d’implémentation historique, il est encore nécessaire d’encadrer les noms de variables par `$`. Ainsi, **on pourra rechercher la variable** `NOM` **en la tapant telle quelle dans l’éditeur**, puis on ajoutera `$` en préfixe et suffixe, pour obtenir `$NOM$`.
+!!! warning "Attention!"
 
-<span class="label label-rounded label-success">Astuce :)</span> Dans l’exemple précédent, on ne gère pas le cas où la variable n’a pas été remplie. Pour anticiper ce cas, on peut utiliser la fonction VTL `nvl`, le libellé personnalisé devient ainsi :
+    Pour des raisons d’implémentation historique, il est encore nécessaire d’encadrer les noms de variables par `$`. Ainsi, **on pourra rechercher la variable** `NOM` **en la tapant telle quelle dans l’éditeur**, puis on ajoutera `$` en préfixe et suffixe, pour obtenir `$NOM$`.
 
-![Fonction nvl](/img/vtl/vtl-in-pogues-custom-label-nvl.png 'Fonction nvl')_Libellé personnalisé avec gestion de la nullité_
+!!! tip
 
-Plus d’infos sur l’usage de `nvl` plus bas.
+    Dans l’exemple précédent, on ne gère pas le cas où la variable n’a pas été remplie. Pour anticiper ce cas, on peut utiliser la fonction VTL `nvl`, le libellé personnalisé devient ainsi :
+    
+    ![Fonction nvl](/img/vtl/vtl-in-pogues-custom-label-nvl.png 'Fonction nvl')_Libellé personnalisé avec gestion de la nullité_
+
+    Plus d’infos sur l’usage de `nvl` plus bas.
 
 On pourra mobiliser dans un libellé personnalisé des variables collectées, calculées ou externes.
 

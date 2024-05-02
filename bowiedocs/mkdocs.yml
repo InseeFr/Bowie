@@ -1,4 +1,5 @@
 site_name: Bowie
+site_url: https://inseefr.github.io/Bowie/
 theme:
   name: material
   language: fr
