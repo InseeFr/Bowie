@@ -74,7 +74,7 @@ On utilise ici l’opérateur VTL `||` qui permet de concaténer des chaînes de
 
     Dans l’exemple précédent, on ne gère pas le cas où la variable n’a pas été remplie. Pour anticiper ce cas, on peut utiliser la fonction VTL `nvl`, le libellé personnalisé devient ainsi :
     
-    ![Fonction nvl](/img/vtl/vtl-in-pogues-custom-label-nvl.png 'Fonction nvl')_Libellé personnalisé avec gestion de la nullité_
+    ![Fonction nvl](/Bowie/img/vtl/vtl-in-pogues-custom-label-nvl.png 'Fonction nvl')_Libellé personnalisé avec gestion de la nullité_
 
     Plus d’infos sur l’usage de `nvl` plus bas.
 
@@ -96,7 +96,9 @@ La syntaxe pour la création d’un infobulle est la suivante :
 Mon libellé de question avec [une infobulle](. "dont voici le contenu").
 ```
 
-<span class="label label-rounded label-warning">Attention !</span> Il faut bien respecter la syntaxe pour le contenu de l’infobulle : un `.` avant le texte entouré de guillemets `"`.
+!!! warning "Attention!"
+
+    Il faut bien respecter la syntaxe pour le contenu de l’infobulle : un `.` avant le texte entouré de guillemets `"`.
 
 ## Contrôles
 
@@ -106,24 +108,21 @@ Un exemple de contrôle sur une valeur numérique :
 
 ## Variables calculées
 
-Pogues permet de créer des variables calculées à partir de variables collectées. Dans l’exemple ci-dessous, on somme les variables de revenus de l’enquêté et de son conjoint :
+Pogues permet de créer des variables calculées à partir de variables collectées. Par exemple, pour sommer les revenus de l’enquêté et de son conjoint on écrira :
 
-![Variable calculée](/Bowie/img/vtl/vtl-in-pogues-computed-variable-earnings.png 'Variable calculée')_Une variable calculée_
+![Variable calculée pour le revenu](/Bowie/img/vtl/vtl-in-pogues-computed-variable-earnings.png)
 
-L’expression VTL est :
+L'expression VTL étant :
 
 ```
-cast(nvl($REVENUS$, "0"), integer) +
-cast(nvl($REVENUS_CONJOINT$, "0"), integer)
+nvl($REVENUS$, 0) + nvl($REVENUS_CONJOINT$, 0)
 ```
-
-<span class="label label-rounded label-warning">Attention !</span> Les variables collectées sont de type “chaîne de caractères” (`string` en VTL), pour les utiliser dans un calcul il faut les transformer, en entier par exemple. Pour cela, c’est la fonction `cast` qui est utilisé. Pour transformer la variable `REVENUS` en entier, j’écris donc `cast(nvl($REVENUS$, "0"), integer)`.
 
 ## Filtres
 
 Voici un exemple de filtre simple exprimé en VTL :
 
-![Filtre simple](/img/vtl/vtl-in-pogues-simple-filter.png 'Filtre simple')_Un filtre simple_
+![Filtre simple](/Bowie/img/vtl/vtl-in-pogues-simple-filter.png 'Filtre simple')_Un filtre simple_
 
 <span class="label label-rounded label-primary">À noter</span> À ce jour, le champ “Condition d’affichage” du filtre n’utilise pas l’éditeur VTL.
 
