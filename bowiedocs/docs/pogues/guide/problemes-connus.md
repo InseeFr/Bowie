@@ -22,3 +22,9 @@ Il y a plusieurs causes possibles :
 ### Mon libellé ne s'affiche pas
 
 S'il y a un espace ou une tabulation après le dernier caractère d'un libellé dans Pogues, celui-ci peut ne pas s'afficher dans le questionnaire généré. Supprimer cet espace ou cette tabulation corrige le problème.
+
+## Si le questionnaire ne peut pas être visualisé ou se visualise mal ?
+
+- Si la visualisation du questionnaire ne fonctionne pas, il est possible de visualiser chaque séquence/sous-séquence l'une après l'autre, afin de déterminer quelle séquence/sous-séquence pose un problème, puis quelle question.
+- Si une question filtrée s'affiche à tort, c'est que le filtre est incorrect (variable mal décrite, inexistante)
+- Si les déclarations n’apparaissent pas, penser à vérifier que le(s) mode(s) de collecte est(sont) bien coché(s).
