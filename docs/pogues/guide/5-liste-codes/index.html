@@ -461,6 +461,11 @@
     Spécifier la liste de codes
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chargement-a-partir-dun-fichier-csv">
+    Chargement à partir d'un fichier CSV
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -505,11 +510,6 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../liste-de-code/">
-        Les listes de code
-      </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../migration-xpath-vers-vtl/">
         XPath et VTL, les différences
       </a>
@@ -525,13 +525,13 @@
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_9_3_29" type="checkbox"/>
-<label class="md-nav__link" for="__nav_9_3_29" id="__nav_9_3_29_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_9_3_28" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9_3_28" id="__nav_9_3_28_label" tabindex="0">
           Variables
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_9_3_29_label" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_9_3_29">
+<nav aria-expanded="false" aria-labelledby="__nav_9_3_28_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_9_3_28">
 <span class="md-nav__icon md-icon"></span>
           Variables
         </label>
@@ -720,6 +720,11 @@
     Spécifier la liste de codes
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chargement-a-partir-dun-fichier-csv">
+    Chargement à partir d'un fichier CSV
+  </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -734,11 +739,22 @@
 <li>créer une nouvelle liste de codes :</li>
 <li>donner un nom à la Nouvelle liste de codes</li>
 <li>entrer pour chaque modalité de réponse, le code de la modalité et son libellé au fur et à mesure via le bouton "Ajouter un Code".</li>
-<li><em>ou</em> "importer une liste de codes" via un fichier csv en utf8 :  <a href="https://inseefr.github.io/Bowie/pogues/guide/liste-de-code/">https://inseefr.github.io/Bowie/pogues/guide/liste-de-code/</a></li>
+<li><em>ou</em> "importer une liste de codes" via un fichier csv en utf8 (voir plus bas)</li>
 <li>retrouver dans le questionnaire : propose les listes de codes précédemment créées pour le questionnaire</li>
 <li>retrouver dans le référentiel (non fonctionnel à ce jour) : proposera les listes de codes précédemment créées pour l'ensemble des questionnaires publiés dans RMéS depuis Pogues</li>
 </ul>
 <p>A noter la possibilité de dupliquer une liste de codes pour en créer une variante en cochant la case dédiée. Le titre de la liste initiale sera suffixé par _2 dans un premier temps pour la liste issue de la duplication puis sera modifiable par vos soins dans Pogues.</p>
+<h2 id="chargement-a-partir-dun-fichier-csv">Chargement à partir d'un fichier CSV</h2>
+<p>On peut charger une liste de code à partir d'un fichier CSV.</p>
+<p>Le fichier lui-même doit avoir les entêtes de colonnes :</p>
+<ul>
+<li>Parent : "1" ou "2" pour préciser le niveau d'arborescence</li>
+<li>Value : le code de l'item de liste</li>
+<li>Label : le libellé de l'item de liste</li>
+</ul>
+<p>Par exemple <img alt="👇" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f447.svg" title=":point_down:"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../../img/pogues/pogues-guide-liste-csv.png"><img alt="Exemple de structure CSV" src="../../../img/pogues/pogues-guide-liste-csv.png"/></a></p>
+<p>Pour le chargement lui-même, il faut utiliser le bouton "Import d'une liste de codes" au moment de la création de la liste dans Pogues, puis sélectionner le fichier CSV.</p>
 </article>
 </div>
 </div>
