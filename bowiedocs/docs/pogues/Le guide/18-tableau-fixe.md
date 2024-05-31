@@ -1,4 +1,4 @@
-# Question de type Tableau simple, fixe
+# Les tableaux simples, fixe
 
 Si on veut créer une question de type Tableau fixe (avec en-tête de lignes en première colonne), renseigner :
 
