@@ -1,7 +1,7 @@
-# Création d'une question de type Réponse à choix unique
+# Question de type Réponse à choix unique
 
 
-Si on créé une question de type **Réponse à choix unique**, renseigner pour toutes les variables :
+Pour créer une question de type **Réponse à choix unique**, renseigner pour toutes les variables :
 
 - le caractère _Obligatoire_ de la réponse (en 2024, l'information n'a pas d'effet sur l'affichage de la question au sein du questionnaire).
 - le _type de réponse_ (Bouton-radio, Liste déroulante, Recherche sur liste)
