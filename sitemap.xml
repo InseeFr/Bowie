@@ -146,11 +146,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://inseefr.github.io/Bowie/pogues/Le-guide/</loc>
-         <lastmod>2024-05-31</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://inseefr.github.io/Bowie/pogues/Commencer%20-%20le%20tutoriel/</loc>
          <lastmod>2024-05-31</lastmod>
          <changefreq>daily</changefreq>
@@ -222,6 +217,11 @@
     </url>
     <url>
          <loc>https://inseefr.github.io/Bowie/pogues/Commencer%20-%20le%20tutoriel/25-mise-en-place-boucle/</loc>
+         <lastmod>2024-05-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/pogues/Le%20guide/</loc>
          <lastmod>2024-05-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
