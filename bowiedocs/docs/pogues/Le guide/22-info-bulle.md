@@ -6,6 +6,7 @@ Elles doivent être concises et ne pas contenir d’informations cruciales à la
 
 ## Syntaxe
 
-Exemple : "Ceci est une question avec une [précision](. "une infobulle sur précision") avec infobulle sur le mot précision"
+Exemple : 
+\"Ceci est une question avec une [précision](. "une infobulle sur précision") avec infobulle sur le mot précision"\
 
 <https://inseefr.github.io/Bowie/pogues/tutoriel/22-ajout-infobulle/>
