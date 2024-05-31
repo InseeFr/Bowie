@@ -1,6 +1,6 @@
-# Création d'une question de type Réponse à choix multiples
+# Question de type Réponse à choix multiples
 
-Si la question est de type **Réponse à choix multiples**, la description dans Pogues est proche de celle des réponses à choix unique. 
+Pour créer une question de type **Réponse à choix multiples**, la description dans Pogues est proche de celle des réponses à choix unique. 
 
 - spécifier la _liste de codes_ (créer une liste ou la retrouver dans le questionnaire, cf. réponses à choix unique)
 - décrire la _représentation des réponses_
