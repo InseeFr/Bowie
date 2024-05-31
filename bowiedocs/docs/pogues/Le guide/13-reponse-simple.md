@@ -1,6 +1,6 @@
-# Création d'une question de type Réponse simple
+# Question de type Réponse simple
 
-Si on créé une question de type **Réponse simple**, remplir pour toutes les variables :
+Pour créer une question de type **Réponse simple**, remplir, pour toutes les variables :
 
 - le caractère _Obligatoire_ de la réponse (en 2024, l'information n'a pas d'effet sur l'affichage de la question au sein du questionnaire).
 - le _type de réponse_ (Texte, Date, Nombre, Booléen, Durée)
