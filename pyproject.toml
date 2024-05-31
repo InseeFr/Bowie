@@ -8,7 +8,7 @@ packages = [{ include = "bowiedocs" }]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-mkdocs-material = "^9.1.3"
+mkdocs-material = "^9.5"
 mkdocs-glightbox = "^0.3.2"
 
 
