@@ -7,4 +7,5 @@ Renseigner :
 - la _liste de codes_ permettant de décrire les différents liens possibles.
 
 !!! tip
+
 Cette variable fait partie des modules de base proposés par le TCM.
