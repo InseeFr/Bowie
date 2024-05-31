@@ -341,7 +341,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://inseefr.github.io/Bowie/pogues/Le%20guide/Variables/generer-variables/</loc>
+         <lastmod>2024-05-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://inseefr.github.io/Bowie/pogues/Le%20guide/Variables/nommage/</loc>
+         <lastmod>2024-05-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/pogues/Le%20guide/Variables/variables-calculees/</loc>
+         <lastmod>2024-05-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/pogues/Le%20guide/Variables/variables-externes/</loc>
+         <lastmod>2024-05-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/pogues/Le%20guide/Variables/variables-globales/</loc>
          <lastmod>2024-05-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
