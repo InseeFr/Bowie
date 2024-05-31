@@ -1,4 +1,4 @@
-# Création d'un contrôle
+# Les contrôles
 
 Un contrôle permet de vérifier la qualité des informations saisies au sein d'un questionnaire. On peut également parler de contrôles de cohérence interne au questionnaire. Cela peut inclure la cohérence avec les données antérieures.
 
