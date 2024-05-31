@@ -6,4 +6,5 @@ Renseigner :
 - la _variable source_, c'est-à-dire la variable qui sera utilisée pour la boucle (le prénom dans le cas du TCM)
 - la _liste de codes_ permettant de décrire les différents liens possibles.
 
-A noter : cette variable fait partie des modules de base proposés par le TCM.
+!!! tip
+Cette variable fait partie des modules de base proposés par le TCM.
