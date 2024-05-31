@@ -1,4 +1,4 @@
-# Question liens deux à deux
+# Les questions liens deux à deux
 
 Ce type de question est aujourd'hui exclusivement réservée au tronc commun des ménages : elle permet de caractériser les liens entre les différents habitants du logement. Elle se compose d'un ensemble de "listes déroulantes" demandant les liens entre tous les habitants du logement
 
