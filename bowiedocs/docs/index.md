@@ -1,6 +1,6 @@
 # Un atelier de conception d'enquêtes
 
-(build auto)
+(auto deploy?)
 
 Bowie est un ensemble de solutions open-source et cohérentes permettant la création de questionnaires à travers le principe de [métadonnées actives](metadata/).
 
