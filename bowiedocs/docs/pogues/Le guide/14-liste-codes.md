@@ -5,13 +5,13 @@ On peut mobliliser ces listes de 3 manières  :
 ### Créer une nouvelle liste de codes :
   - donner un nom à la nouvelle liste de codes
   - saisir pour chaque modalité de réponse, le code de la modalité et son libellé (via le bouton "Ajouter un Code")
-  *ou* 
+*ou* 
   - "importer une liste de codes" via un fichier csv en utf8 (voir plus bas)
 
-### retrouver dans le questionnaire 
+### Retrouver dans le questionnaire 
 - propose les listes de codes précédemment créées pour le questionnaire
 
-### - retrouver dans le référentiel (non fonctionnel à ce jour)
+### Retrouver dans le référentiel (non fonctionnel à ce jour)
 - proposera les listes de codes précédemment créées pour l'ensemble des questionnaires publiés dans RMéS depuis Pogues
 
 A noter la possibilité de dupliquer une liste de codes pour en créer une variante en cochant la case dédiée. Le titre de la liste initiale sera suffixé par _2 dans un premier temps pour la liste issue de la duplication puis sera modifiable par vos soins dans Pogues.
