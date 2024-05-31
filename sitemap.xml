@@ -321,11 +321,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://inseefr.github.io/Bowie/pogues/Le%20guide/42-sauvegarder/</loc>
-         <lastmod>2024-05-31</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://inseefr.github.io/Bowie/pogues/Le%20guide/43-details-suppression/</loc>
          <lastmod>2024-05-31</lastmod>
          <changefreq>daily</changefreq>
@@ -342,6 +337,11 @@
     </url>
     <url>
          <loc>https://inseefr.github.io/Bowie/pogues/Le%20guide/Questionnaire/41-fonctionnalites-element/</loc>
+         <lastmod>2024-05-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/pogues/Le%20guide/Questionnaire/42-sauvegarder/</loc>
          <lastmod>2024-05-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
