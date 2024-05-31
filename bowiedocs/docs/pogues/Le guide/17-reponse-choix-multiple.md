@@ -1,4 +1,4 @@
-# Question de type Réponse à choix multiples
+# Les questions de type Réponse à choix multiples
 
 Pour créer une question de type **Réponse à choix multiples**, la description dans Pogues est proche de celle des réponses à choix unique. 
 
