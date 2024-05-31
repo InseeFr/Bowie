@@ -1,4 +1,4 @@
-# Afficher une déclaration
+# Les déclarations
 
 La déclaration est un texte qui aidera l'enquêté à répondre. 
 On distingue :
