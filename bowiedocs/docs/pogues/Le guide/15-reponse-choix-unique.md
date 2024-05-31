@@ -1,4 +1,4 @@
-# Question de type Réponse à choix unique
+# Les questions de type Réponse à choix unique
 
 
 Pour créer une question de type **Réponse à choix unique**, renseigner pour toutes les variables :
