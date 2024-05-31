@@ -7,16 +7,19 @@ Si on créé une question de type **Réponse simple**, remplir pour toutes les v
 
 ## Type de réponse Texte
 Renseigner aussi : 
+
 - la _longueur maximale_ de la réponse (nombre de caractères)
 - le _motif_ (non fonctionnel pour l'instant, il permettra de spécifier des expressions régulières comme un Siret, un mèl etc.)
 
 ## Type de réponse Date
 Renseigner aussi :
+
 - le _format_ parmi AAAA-MM-JJ, AAAA-MM et AAAA 
 - un _minimum_ et un _maximum_
 
 ## Type de réponse Nombre
 Renseigner aussi :
+
 - le _minimum_ et le _maximum_ 
 - la _précision_ (nombre de chiffres après la virgule, par défaut : aucun)
 - l'_unité_ de mesure
