@@ -11,10 +11,11 @@ Dans l'onglet "Contrôles" de la question du questionnaire à partir de laquelle
 - la _description_ du contrôle : texte libre documentant le contrôle
 - la _condition_ (pour laquelle on affiche le message d'erreur), en VTL (<[https://inseefr.github.io/Bowie/pogues/guide/vtl](https://inseefr.github.io/Bowie/pogues/Le%20VTL%20dans%20Pogues/vtl/)/> et <[https://inseefr.github.io/Bowie/pogues/guide/migration-xpath-vers-vtl](https://inseefr.github.io/Bowie/pogues/Le%20guide/migration-xpath-vers-vtl/)/>)
 - le _message d'erreur_ : saisir ici le message d'erreur qui s'affichera à l'enquêté sur le questionnaire web si la condition est remplie (en VTL)
-- la _criticité_ : comme pour le type de déclaration, il n'y a actuellement pas de différence pour le questionnaire ou l'enquêté entre les 3 criticités mais renseigner ce qui paraît le plus approprié
-  - Information
-  - Avertissement
-  - Erreur
+- la _criticité_ : comme pour le type de déclaration, il n'y a actuellement pas de différence pour le questionnaire ou l'enquêté entre les 3 criticités mais renseigner celle qui paraît la plus appropriée :
+   
+    - Information
+    - Avertissement
+    - Erreur
 
 Valider
 
