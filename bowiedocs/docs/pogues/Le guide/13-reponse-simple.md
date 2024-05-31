@@ -1,4 +1,4 @@
-# Question de type Réponse simple
+# Les questions de type Réponse simple
 
 Pour créer une question de type **Réponse simple**, remplir, pour toutes les variables :
 
