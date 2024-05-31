@@ -1,4 +1,4 @@
-# Création d'un complément textuel "Autre"
+# Complément textuel "Autre"
 
 Lorsqu'une question de type "réponse à choix unique ou à choix multiple" propose une modalité "Autres", il est possible d'ajouter un complément textuel qui ne sera affiché qu'en cas de coche de la modalité "Autres"
 
