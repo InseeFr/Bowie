@@ -26,7 +26,7 @@ En collecte enquêteur, on conserve la multiplicité des déclarations qui peuve
 Renseigner :
 
 - le libellé de la déclaration, avec des sauts de lignes et du markdown si besoin
-- le type de la déclaration, parmi Aide / Consigne (enquêteur) / Carte-Code (l'enquêteur présenter une carte-code)
+- le type de la déclaration parmi Aide / Consigne (enquêteur) / Carte-Code (l'enquêteur présenter une carte-code)
 - la position (lorsqu'il s'agit d'une déclaration de question): avant ou après le libellé de question
 - le mode de collecte : pour préciser le mode de collecte concerné par la déclaration
 
