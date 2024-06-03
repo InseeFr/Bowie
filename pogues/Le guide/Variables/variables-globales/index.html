@@ -2443,6 +2443,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#syntaxe-mai-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntaxe (mai 2024)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2849,6 +2858,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#syntaxe-mai-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntaxe (mai 2024)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2868,11 +2886,14 @@
 <p>Les variables globales sont des variables fournies directement par le moteur de contrôle des questionnaires.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Leur statut particulier implique un usage particulier : il ne faut pas les appeler en les encadrant par des <code>$</code>. On écrira donc par exemple <code>GLOBAL_ITERATION_INDEX</code> et pas <code>$GLOBAL_ITERATION_INDEX$</code>.</p>
+<p>Leur statut particulier implique un usage particulier : il ne faut pas les appeler en les encadrant par des <code>$</code>. On écrira donc par exemple <code>GLOBAL_ITERATION_INDEX</code> et pas <code>$GLOBAL_ITERATION_INDEX$</code>. 
+De plus, en mai 2024, il est nécessaire de faire suivre la variable d'une chaine de caractères éventuellement vides pour qu'elle se valorise</p>
 </div>
 <h2 id="index-de-la-position-dans-une-boucle">Index de la position dans une boucle</h2>
-<p><mark><img alt="🧪" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f9ea.svg" title=":test_tube:" /> Fonctionnalité en cours de développement</mark></p>
-<p>Pour connaître l'index de la position dans une boucle, il est possible de mobiliser la variable <code>GLOBAL_ITERATION_INDEX</code>. Celle-ci vaudra <code>0</code> pour la première position, puis <code>1</code>, <code>2</code>, etc.</p>
+<p><mark><img alt="🧪" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f9ea.svg" title=":test_tube:" /> Fonctionnalité en cours de finalisation</mark></p>
+<p>Pour connaître l'index de la position dans une boucle, il est possible de mobiliser la variable <code>GLOBAL_ITERATION_INDEX</code>. Celle-ci vaudra <code>1</code> pour la première position, puis <code>2</code>, <code>3</code>, etc.</p>
+<h2 id="syntaxe-mai-2024">Syntaxe (mai 2024)</h2>
+<p><code>"Prénom de l'individu " || cast(GLOBAL_ITERATION_INDEX,string) || ""</code></p>
 
 
 
