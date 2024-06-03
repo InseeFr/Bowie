@@ -291,6 +291,29 @@ Pour plus de clarté, le calcul de la durée brute pourra être déportée dans 
 $DUREE$ / 86400000
 ```
 
+### Durée
+
+#### Contrôler un dépassement de borne
+
+Une variable de type Durée aura une des formes suivantes :
+
+- pour une mesure en "années/mois" : `PnaYnmM` où `na` sera le nombre d'années et `nm` le nombre de mois (par exemple : `P3Y10M` pour "trois ans et dix mois")
+- pour une mesure en "heures/mois" : `PTnhHnmM` avec `nh` le nombre d'heures et `nm` le nombre de minutes (`PT12H30M` pour "douze heures et trente minutes").
+
+Un contrôle typique est de s'assurer qu'on ne dépasse pas une borne max par exemple. Dans ce cas-là, on modifiera la valeur jusqu'à obtenir une valeur numérique, comme dans l'exemple ci-dessous :
+
+```
+// valeur initiale de DUREE : PT12H30M
+cast(
+    replace(
+        replace(
+            replace($DUREE$, "PT", ""), // "12H30M"
+        "M", ""),                       // "12H30"
+    "H", "."),                          // "12.30"
+number)                                 // 12.30
+> 7.3                                   // true
+```
+
 ### Liste à choix multiples
 
 #### Compter le nombre de choix
