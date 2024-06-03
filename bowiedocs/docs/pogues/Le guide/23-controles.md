@@ -29,3 +29,6 @@ Il est  possible de supprimer ou dupliquer un contrôle.
 - `$VAR_SOMME$ = nvl($VAR1_NUMERIQUE,0) + nvl($VAR2_NUMERIQUE$,0)`
 - tester que QCM1 est cochée (pour un filtre par exemple) =>  `nvl($QCM1$,false) = true`
 - tester une modalité exclusive (ici par exemple QCM4 ne peut pas être cochée si QCM1, QCM2, ou QCM3 l'est) => `(nvl($QCM4$,false) = true and nvl($QCM3$,false) = true) or (nvl($QCM4$,false) = true and nvl($QCM2$,false) = true) or (nvl($QCM4$,false) = true and nvl($QCM1$,false) = true))`
+
+
+Voir aussi : https://inseefr.github.io/Bowie/pogues/Le%20VTL%20dans%20Pogues/vtl/#duree ou https://inseefr.github.io/Bowie/pogues/Le%20VTL%20dans%20Pogues/vtl/#controles_1
