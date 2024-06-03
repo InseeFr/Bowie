@@ -1944,6 +1944,30 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#duree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Durée
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Durée">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controler-un-depassement-de-borne" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôler un dépassement de borne
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#liste-a-choix-multiples" class="md-nav__link">
     <span class="md-ellipsis">
       Liste à choix multiples
@@ -4778,6 +4802,30 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#duree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Durée
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Durée">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controler-un-depassement-de-borne" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôler un dépassement de borne
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#liste-a-choix-multiples" class="md-nav__link">
     <span class="md-ellipsis">
       Liste à choix multiples
@@ -5090,6 +5138,24 @@ substr(cast($DATE$, string, &quot;YYYY-MM-DD&quot;), 1, 4)
 </code></pre></div>
 <p>Pour plus de clarté, le calcul de la durée brute pourra être déportée dans une variable calculée, nommée par exemple <code>DUREE</code>, l'obtention du nombre de jours se fera alors à travers la formule :</p>
 <div class="highlight"><pre><span></span><code>$DUREE$ / 86400000
+</code></pre></div>
+<h3 id="duree">Durée</h3>
+<h4 id="controler-un-depassement-de-borne">Contrôler un dépassement de borne</h4>
+<p>Une variable de type Durée aura une des formes suivantes :</p>
+<ul>
+<li>pour une mesure en "années/mois" : <code>PnaYnmM</code> où <code>na</code> sera le nombre d'années et <code>nm</code> le nombre de mois (par exemple : <code>P3Y10M</code> pour "trois ans et dix mois")</li>
+<li>pour une mesure en "heures/mois" : <code>PTnhHnmM</code> avec <code>nh</code> le nombre d'heures et <code>nm</code> le nombre de minutes (<code>PT12H30M</code> pour "douze heures et trente minutes").</li>
+</ul>
+<p>Un contrôle typique est de s'assurer qu'on ne dépasse pas une borne max par exemple. Dans ce cas-là, on modifiera la valeur jusqu'à obtenir une valeur numérique, comme dans l'exemple ci-dessous :</p>
+<div class="highlight"><pre><span></span><code>// valeur initiale de DUREE : PT12H30M
+cast(
+    replace(
+        replace(
+            replace($DUREE$, &quot;PT&quot;, &quot;&quot;), // &quot;12H30M&quot;
+        &quot;M&quot;, &quot;&quot;),                       // &quot;12H30&quot;
+    &quot;H&quot;, &quot;.&quot;),                          // &quot;12.30&quot;
+number)                                 // 12.30
+&gt; 7.3                                   // true
 </code></pre></div>
 <h3 id="liste-a-choix-multiples">Liste à choix multiples</h3>
 <h4 id="compter-le-nombre-de-choix">Compter le nombre de choix</h4>
