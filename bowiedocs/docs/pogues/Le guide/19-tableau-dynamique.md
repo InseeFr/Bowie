@@ -11,7 +11,9 @@ Axe d'information principal :
 
 Information(s) mesurée(s) : renseigner une information de type _Réponse simple_ ou _Réponse à choix unique_
 
-==:test_tube: Fonctionnalité en cours de finalisation== 
+Valider
+
+==:test_tube: Fonctionnalité en cours de finalisation:== 
+
 On pourra y ajouter des contrôles de lignes ou de colonnes (description à venir), notamment le total de la colonne
 
-Valider
