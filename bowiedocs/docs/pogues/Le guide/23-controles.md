@@ -26,9 +26,20 @@ Il est  possible de supprimer ou dupliquer un contrôle.
 - `sans gestion du null : if $VAR_NUMERIQUE$ < 10 then "1" else "2" ==> renvoie 2 si null`
 - `gestion du null : if nvl($VAR_NUMERIQUE$,0) < 10 then  "1" else "0" ==> renvoie 1 si null`
 - `variable externe (on doit convertir la variable en numérique pour la comparer à 0 par exemple): if nvl($VAR2_NUMERIQUE_EXTERNE, "") <> 0 and cast($VAR2_NUMERIQUE_EXTERNE$,integer) > 0 then "1" else "0"`
-- `$VAR_SOMME$ = nvl($VAR1_NUMERIQUE,0) + nvl($VAR2_NUMERIQUE$,0)`
+- `nvl($VAR1_NUMERIQUE,0) + nvl($VAR2_NUMERIQUE$,0) > 0`
 - tester que QCM1 est cochée (pour un filtre par exemple) =>  `nvl($QCM1$,false) = true`
 - tester une modalité exclusive (ici par exemple QCM4 ne peut pas être cochée si QCM1, QCM2, ou QCM3 l'est) => `(nvl($QCM4$,false) = true and nvl($QCM3$,false) = true) or (nvl($QCM4$,false) = true and nvl($QCM2$,false) = true) or (nvl($QCM4$,false) = true and nvl($QCM1$,false) = true))`
+- tester une durée :
+ ```
+// valeur initiale de DUREE : PT12H30M
+cast(
+    replace(
+        replace(
+            replace($DUREE$, "PT", ""), // "12H30M"
+        "M", ""),                       // "12H30"
+    "H", "."),                          // "12.30"
+number)                                 // 12.30
+> 7.3                                   // true
+```
 
-
-Voir aussi : https://inseefr.github.io/Bowie/pogues/Le%20VTL%20dans%20Pogues/vtl/#duree ou https://inseefr.github.io/Bowie/pogues/Le%20VTL%20dans%20Pogues/vtl/#controles_1
+Voir aussi : [https://inseefr.github.io/Bowie/pogues/Le%20VTL%20dans%20Pogues/vtl/#controles_1](https://inseefr.github.io/Bowie/pogues/Le%20VTL%20dans%20Pogues/vtl/#dates)
