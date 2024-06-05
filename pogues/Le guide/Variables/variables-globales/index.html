@@ -2916,7 +2916,10 @@ De plus, en mai 2024, il est nécessaire de faire suivre la variable d'une chain
 <p><mark><img alt="🧪" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f9ea.svg" title=":test_tube:" /> Fonctionnalité en cours de finalisation</mark></p>
 <p>Pour connaître l'index de la position dans une boucle, il est possible de mobiliser la variable <code>GLOBAL_ITERATION_INDEX</code>. Celle-ci vaudra <code>1</code> pour la première position, puis <code>2</code>, <code>3</code>, etc.</p>
 <h2 id="syntaxe-mai-2024">Syntaxe (mai 2024)</h2>
-<p><code>"Prénom de l'individu " || cast(GLOBAL_ITERATION_INDEX,string) || ""</code></p>
+<p>Dans la première boucle, on pourra par exemple afficher :
+<code>"Prénom de l'individu " || cast(GLOBAL_ITERATION_INDEX,string) || ""</code>
+Dans les boucles liées (cf. Les Boucles) on pourra également utiliser cette variable, qui sera l'index dans la première boucle.
+On ne peut en revanche pas les utiliser hors boucle.</p>
 
 
 
