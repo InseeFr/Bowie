@@ -1,6 +1,9 @@
 # Guide
 
-Ce guide apporte un éclairage complet sur les fonctionnalités de conception de questionnaire à travers Pogues. Il est en cours de construction mais, couplé avec [le tutoriel d'autoformation](https://inseefr.github.io/Bowie/pogues/D%C3%A9couverte%20%28le%20tutoriel%29/), il apporte une base solide pour la conception.
+Ce guide apporte un éclairage complet sur les fonctionnalités de conception de questionnaire à travers Pogues. 
+Assez fortement revu en juin 2024, il est à coupler avec [le tutoriel d'autoformation](https://inseefr.github.io/Bowie/pogues/D%C3%A9couverte%20%28le%20tutoriel%29/).
+
+En cas de sujets de type VTL, se reporter à [:octicons-light-bulb-16: Le VTL dans Pogues](./Le VTL dans Pogues)/) qui propose des syntaxes, des astuces et quelques cas usuels.
 
 !!! note
     28/07/2023 - Ce guide est valide pour les enquêtes participant à la nouvelle filière unique (issue du programme Metallica). Les enquêtes entreprises en filière historique Coltrane doivent se référer [au guide précédent](https://inseefr.github.io/Pogues/fr/guide-utilisateur/guide-utilisateur.html).
