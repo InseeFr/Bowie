@@ -15,6 +15,9 @@ Pour connaître l'index de la position dans une boucle, il est possible de mobil
 
 ## Syntaxe (mai 2024)
 
+Dans la première boucle, on pourra par exemple afficher :
 `
 "Prénom de l'individu " || cast(GLOBAL_ITERATION_INDEX,string) || ""
 `
+Dans les boucles liées (cf. Les Boucles) on pourra également utiliser cette variable, qui sera l'index dans la première boucle.
+On ne peut en revanche pas les utiliser hors boucle.
