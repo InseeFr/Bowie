@@ -40,9 +40,10 @@ Orchestrateur-->QuestionnaireFinal
 ## Les orchestrateurs actuels
 
 - **Stromae** : orchestrateur d'instruments de collecte type "questionnaire Web". 
-    - une V1 (collecte d'enquêtes entreprises, plateforme Coltrane) 
-    - une V2 (collecte d'enquêtes ménages, filière unique, basée sur "Lunatic/ bases de donnéesPostgre") 
-	- une V3 en cours de développement et dont le premier utilisateur sera l'enquête annuelle de recensement de l'Insee.
+    - Stromae V1 (collecte d'enquêtes entreprises, plateforme Coltrane) 
+    - Stromae V2 (collecte d'enquêtes ménages, filière unique, basée sur "Lunatic/ bases de donnéesPostgre") 
+    - Stromae DSFR dont l'initiateur a été l'enquête annuelle de recensement de l'Insee et qui sera utilisée à l'automne 2024. Il a vocation à remplacer StromaeV2 puis StromaeV1.
+
 - **Queen** : orchestrateur d’instruments de collecte type "questionnaire Enquêteur" (téléphone et face-à-face) 
 - 2 autres orchestrateurs utilisent Lunatic : **Generic** et **Prisme**.
   
