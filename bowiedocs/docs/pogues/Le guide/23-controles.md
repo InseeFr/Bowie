@@ -25,7 +25,7 @@ Valider.
 Il est possible de supprimer ou dupliquer un contrôle.
 
 !!! tip
-   Côté collecte web, un contrôle se déclenche au clic sur suivant lorsque la condition est vraie. Les contrôles figurent sous les champs de saisie et lorsque plusieurs contrôles ont été décrits, ils apparaissent avec une précédence (un contrôle doit être résolu avant que le suivant ne se déclenche).
+    Côté collecte web, un contrôle se déclenche au clic sur suivant lorsque la condition est vraie. Les contrôles figurent sous les champs de saisie et lorsque plusieurs contrôles ont été décrits, ils apparaissent avec une précédence (un contrôle doit être résolu avant que le suivant ne se déclenche).
 
 !!! tip 
     Côté collecte enquêteur, les contrôles ne sont implémentés.
