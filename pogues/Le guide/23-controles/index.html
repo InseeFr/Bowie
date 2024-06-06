@@ -2904,25 +2904,34 @@
 
 
 <h1 id="les-controles">Les contrôles</h1>
-<p>Un contrôle permet de vérifier la qualité des informations saisies au sein d'un questionnaire. On peut également parler de contrôles de cohérence interne au questionnaire. Cela peut inclure la cohérence avec les données antérieures.</p>
-<p>Côté visualisation web du questionnaire un contrôle se déclenche au clic sur suivant lorsque la condition est vraie.</p>
+<p>Un contrôle permet de vérifier la qualité des informations saisies au sein d'un questionnaire.</p>
+<p>Deux types de contrôle sont implémentés :
+- les contrôles de format (automatiques, et dépendant de la nature de la variable décrite dans Pogues)
+- les contrôles de cohérence interne au questionnaire (éventuellement cohérence avec les données antérieures), décrits dans Pogues par le concepteur.</p>
 <h2 id="syntaxe">Syntaxe</h2>
 <p>Dans l'onglet "Contrôles" de la question du questionnaire à partir de laquelle on veut appliquer le contrôle, renseigner :</p>
 <ul>
 <li>la <em>description</em> du contrôle : texte libre documentant le contrôle</li>
 <li>la <em>condition</em> (pour laquelle on affiche le message d'erreur), en VTL (&lt;<a href="https://inseefr.github.io/Bowie/pogues/Le%20VTL%20dans%20Pogues/vtl/">https://inseefr.github.io/Bowie/pogues/guide/vtl</a>/&gt; et &lt;<a href="https://inseefr.github.io/Bowie/pogues/Le%20guide/migration-xpath-vers-vtl/">https://inseefr.github.io/Bowie/pogues/guide/migration-xpath-vers-vtl</a>/&gt;)</li>
-<li>le <em>message d'erreur</em> : saisir ici le message d'erreur qui s'affichera à l'enquêté sur le questionnaire web si la condition est remplie (en VTL)</li>
-<li>
-<p>la <em>criticité</em> : comme pour le type de déclaration, il n'y a actuellement pas de différence pour le questionnaire ou l'enquêté entre les 3 criticités mais renseigner celle qui paraît la plus appropriée :</p>
-<ul>
+<li>le <em>message d'erreur</em> : saisir ici le message d'erreur qui s'affichera à l'enquêté si la condition est remplie (à rédiger en VTL)</li>
+<li>la <em>criticité</em> :  choisir une criticité parmi<ul>
 <li>Information</li>
 <li>Avertissement</li>
 <li>Erreur</li>
 </ul>
 </li>
 </ul>
-<p>Valider</p>
-<p>Il est  possible de supprimer ou dupliquer un contrôle.</p>
+<p>A ce jour, aucun contrôle n'est bloquant et on ne valorise donc pas la criticité en termes de blocage de navigation, mais on distingue visuellement les contrôles de niveau information ou avertissement/erreur. Si on souhaite mettre en évidence une anomalie, on privilégiera les criticités Avertissement ou Erreur.</p>
+<p>Valider.</p>
+<p>Il est possible de supprimer ou dupliquer un contrôle.</p>
+<div class="admonition tip orchestrateurs">
+<p class="admonition-title">Tip</p>
+</div>
+<p>Côté collecte web, un contrôle se déclenche au clic sur suivant lorsque la condition est vraie. Les contrôles figurent sous les champs de saisie et lorsque plusieurs contrôles ont été décrits, ils apparaissent avec une précédence (un contrôle doit être résolu avant que le suivant ne se déclenche).</p>
+<div class="admonition tip orchestrateurs">
+<p class="admonition-title">Tip</p>
+</div>
+<p>Côté collecte enquêteur, les contrôles ne sont implémentés.</p>
 <h2 id="exemples-de-condition">Exemples de condition</h2>
 <ul>
 <li><code>sans gestion du null : if $VAR_NUMERIQUE$ &lt; 10 then "1" else "2" ==&gt; renvoie 2 si null</code></li>
@@ -2931,8 +2940,9 @@
 <li><code>nvl($VAR1_NUMERIQUE,0) + nvl($VAR2_NUMERIQUE$,0) &gt; 0</code></li>
 <li>tester que QCM1 est cochée (pour un filtre par exemple) =&gt;  <code>nvl($QCM1$,false) = true</code></li>
 <li>tester une modalité exclusive (ici par exemple QCM4 ne peut pas être cochée si QCM1, QCM2, ou QCM3 l'est) =&gt; <code>(nvl($QCM4$,false) = true and nvl($QCM3$,false) = true) or (nvl($QCM4$,false) = true and nvl($QCM2$,false) = true) or (nvl($QCM4$,false) = true and nvl($QCM1$,false) = true))</code></li>
-<li>tester une durée :
- ```
+<li>tester une durée :</li>
+</ul>
+<p>```
 // valeur initiale de DUREE : PT12H30M
 cast(
     replace(
@@ -2940,12 +2950,11 @@ cast(
             replace($DUREE$, "PT", ""), // "12H30M"
         "M", ""),                       // "12H30"
     "H", "."),                          // "12.30"
-number)                                 // 12.30<blockquote>
+number)                                 // 12.30</p>
+<blockquote>
 <p>7.3                                   // true
 ```</p>
 </blockquote>
-</li>
-</ul>
 <p>Voir aussi : <a href="https://inseefr.github.io/Bowie/pogues/Le%20VTL%20dans%20Pogues/vtl/#dates">https://inseefr.github.io/Bowie/pogues/Le%20VTL%20dans%20Pogues/vtl/#controles_1</a></p>
 
 
