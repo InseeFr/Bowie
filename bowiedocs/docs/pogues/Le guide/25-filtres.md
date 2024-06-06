@@ -18,6 +18,11 @@ La seconde contrainte est de ne pas construire des filtres qui se chevauchent - 
 !!! note
     Ces erreurs ne sont malheureusement pas captées lors de la conception dans Pogues, mais le seront lors de la génération et la visualisation.
 
+!!! traduction des filtres sur le questionnaire papier
+    Sur le questionnaire papier figure le champ _Description_ : pas de description, pas de libellé de filtre.
+
+
+
 ### Filtres corrects
 
 ![Filtres OK](../../img/pogues/guide-filtres-ok.png)
