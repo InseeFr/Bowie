@@ -10,4 +10,4 @@ Celle-ci fournit :
 
 L'instanciation de ces objets au sein d'un _orchestrateur_ se fait par le biais d'une structure de données JSON. L'Insee développe plusieurs orchestrateurs : [Stromae](../orchestrateurs/web) pour le web et [Queen](../orchestrateurs/enqueteur/) pour la collecte par enquêteur.
 
-Pour aller plus loin, vous pouvez parcourir la [documentation de Lunatic](https://inseefr.github.io/Lunatic/fr/).
+Pour aller plus loin, vous pouvez parcourir la [documentation de Lunatic](https://inseefr.github.io/Lunatic/docs/).
