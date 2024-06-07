@@ -106,11 +106,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://inseefr.github.io/Bowie/orchestrateurs/web/3-stromae/</loc>
-         <lastmod>2024-06-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://inseefr.github.io/Bowie/pogues/</loc>
          <lastmod>2024-06-07</lastmod>
          <changefreq>daily</changefreq>
@@ -392,6 +387,11 @@
     </url>
     <url>
          <loc>https://inseefr.github.io/Bowie/public-enemy/guide/2-visualisation-questionnaires/</loc>
+         <lastmod>2024-06-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/stromae-Queen/</loc>
          <lastmod>2024-06-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
