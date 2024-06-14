@@ -22,7 +22,31 @@ Si on choisit "Non", on peut remplacer la case par une expression VTL, comme ici
 
 ## Total en ligne
 
-...
+### Dans un tableau fixe
+
+C'est très proche de l'exemple juste au-dessus : on donnera comme valeur d'un total en ligne la somme des variables collectées des cases de la ligne.
+
+```
+$TABLEAU_FIXE_11$ + $TABLEAU_FIXE_12$ + ... + $TABLEAU_FIXE_1N$
+```
+
+où `N` est l'index de la dernière colonne avant la colonne portant le total.
+
+!!! note "Rappel"
+
+    Dans un tableau fixe, les variables générées par Pogues s'écrivent de la forme `<ID_DE_LA_QUESTION><INDICE_DE_LA_LIGNE><INDICE_DE_LA_COLONNE>`.
+
+    Soit, pour la cellule de la ligne 3 et de la colonne 4 du tableau de la question `DEPENSE_QUOTIDIENNE` : `DEPENSE_QUOTIDIENNE34`
+
+### Dans un tableau dynamique
+
+Le tableau dynamique ne contient pas de variable collectée pour chaque cellule mais il propose une variable vectorielle pour chaque colonne.
+
+Ainsi pour le total en ligne, on écrira simplement comme formule pour la colonne présentant les totaux de ligne :
+
+```
+$TABLEAU_DYNAMIQUE_VARIABLE1$ + $TABLEAU_DYNAMIQUE_VARIABLE2$ + ... + $TABLEAU_DYNAMIQUE_VARIABLEN$
+```
 
 ## Total en colonne
 
