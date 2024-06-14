@@ -2018,6 +2018,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Total en colonne">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dans-un-tableau-fixe_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dans un tableau fixe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dans-un-tableau-dynamique_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dans un tableau dynamique
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2755,6 +2779,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Total en colonne">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dans-un-tableau-fixe_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dans un tableau fixe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dans-un-tableau-dynamique_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dans un tableau dynamique
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2794,13 +2842,30 @@
 <p>Dans un tableau fixe, les variables générées par Pogues s'écrivent de la forme <code>&lt;ID_DE_LA_QUESTION&gt;&lt;INDICE_DE_LA_LIGNE&gt;&lt;INDICE_DE_LA_COLONNE&gt;</code>.</p>
 <p>Soit, pour la cellule de la ligne 3 et de la colonne 4 du tableau de la question <code>DEPENSE_QUOTIDIENNE</code> : <code>DEPENSE_QUOTIDIENNE34</code></p>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>Pour des expressions un peu longue, il est préférable de passer par une <a href="../../Variables/variables-calculees/">variable calculée</a>.</p>
+</div>
 <h3 id="dans-un-tableau-dynamique">Dans un tableau dynamique</h3>
 <p>Le tableau dynamique ne contient pas de variable collectée pour chaque cellule mais il propose une variable vectorielle pour chaque colonne.</p>
 <p>Ainsi pour le total en ligne, on écrira simplement comme formule pour la colonne présentant les totaux de ligne :</p>
 <div class="highlight"><pre><span></span><code>$TABLEAU_DYNAMIQUE_VARIABLE1$ + $TABLEAU_DYNAMIQUE_VARIABLE2$ + ... + $TABLEAU_DYNAMIQUE_VARIABLEN$
 </code></pre></div>
 <h2 id="total-en-colonne">Total en colonne</h2>
-<p>...</p>
+<h3 id="dans-un-tableau-fixe_1">Dans un tableau fixe</h3>
+<p>On reprend le principe de la somme en ligne vu plus haut, mais cette fois-ci on somme toutes les variables collectées d'une même colonne pour l'affecter comme valeur de la case représentant le total (a priori la dernière de la colonne).</p>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>Pour avoir un total correct même si toutes les cases ne sont pas remplies, il est nécessaire d'utiliser <a href="../../../Le%20VTL%20dans%20Pogues/vtl/#gestion-de-la-nullite">la fonction <code>nvl</code></a>.</p>
+<p>Par exemple :</p>
+<div class="highlight"><pre><span></span><code>nvl($TABLEAU_FIXE_11$, 0) + nvl($TABLEAU_FIXE_21$, 0) + ... + nvl($TABLEAU_FIXE_N1$, 0)
+</code></pre></div>
+</div>
+<h3 id="dans-un-tableau-dynamique_1">Dans un tableau dynamique</h3>
+<p>Comme vu plus haut, chaque colonne correspond à une variable vectorielle (contenant l'ensemble des valeurs). On peut donc écrire tout simplement :</p>
+<div class="highlight"><pre><span></span><code>sum($TABLEAU_DYNAMIQUE_VARIABLE1$)
+</code></pre></div>
+<p>la fonction <code>sum</code> calculant la somme des valeurs contenues dans la colonne.</p>
 
 
 
