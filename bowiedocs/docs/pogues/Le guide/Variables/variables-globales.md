@@ -9,11 +9,9 @@ Les variables globales sont des variables fournies directement par le moteur de 
 
 ## Index de la position dans une boucle
 
-==:test_tube: Fonctionnalité en cours de finalisation==
-
 Pour connaître l'index de la position dans une boucle, il est possible de mobiliser la variable `GLOBAL_ITERATION_INDEX`. Celle-ci vaudra `1` pour la première position, puis `2`, `3`, etc.
 
-## Syntaxe (mai 2024)
+### Syntaxe (mai 2024)
 
 Dans la première boucle, on pourra par exemple afficher :
 `
