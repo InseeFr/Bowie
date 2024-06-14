@@ -1985,6 +1985,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Total en ligne">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dans-un-tableau-fixe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dans un tableau fixe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dans-un-tableau-dynamique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dans un tableau dynamique
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2698,6 +2722,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Total en ligne">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dans-un-tableau-fixe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dans un tableau fixe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dans-un-tableau-dynamique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dans un tableau dynamique
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2736,7 +2784,21 @@
 <p>Si on choisit "Non", on peut remplacer la case par une expression VTL, comme ici la différence entre deux variable numériques :</p>
 <p><a class="glightbox" href="../../../../img/pogues/tableau_case_non_collectee.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Case non collectée" src="../../../../img/pogues/tableau_case_non_collectee.png" /></a></p>
 <h2 id="total-en-ligne">Total en ligne</h2>
-<p>...</p>
+<h3 id="dans-un-tableau-fixe">Dans un tableau fixe</h3>
+<p>C'est très proche de l'exemple juste au-dessus : on donnera comme valeur d'un total en ligne la somme des variables collectées des cases de la ligne.</p>
+<div class="highlight"><pre><span></span><code>$TABLEAU_FIXE_11$ + $TABLEAU_FIXE_12$ + ... + $TABLEAU_FIXE_1N$
+</code></pre></div>
+<p>où <code>N</code> est l'index de la dernière colonne avant la colonne portant le total.</p>
+<div class="admonition note">
+<p class="admonition-title">Rappel</p>
+<p>Dans un tableau fixe, les variables générées par Pogues s'écrivent de la forme <code>&lt;ID_DE_LA_QUESTION&gt;&lt;INDICE_DE_LA_LIGNE&gt;&lt;INDICE_DE_LA_COLONNE&gt;</code>.</p>
+<p>Soit, pour la cellule de la ligne 3 et de la colonne 4 du tableau de la question <code>DEPENSE_QUOTIDIENNE</code> : <code>DEPENSE_QUOTIDIENNE34</code></p>
+</div>
+<h3 id="dans-un-tableau-dynamique">Dans un tableau dynamique</h3>
+<p>Le tableau dynamique ne contient pas de variable collectée pour chaque cellule mais il propose une variable vectorielle pour chaque colonne.</p>
+<p>Ainsi pour le total en ligne, on écrira simplement comme formule pour la colonne présentant les totaux de ligne :</p>
+<div class="highlight"><pre><span></span><code>$TABLEAU_DYNAMIQUE_VARIABLE1$ + $TABLEAU_DYNAMIQUE_VARIABLE2$ + ... + $TABLEAU_DYNAMIQUE_VARIABLEN$
+</code></pre></div>
 <h2 id="total-en-colonne">Total en colonne</h2>
 <p>...</p>
 
