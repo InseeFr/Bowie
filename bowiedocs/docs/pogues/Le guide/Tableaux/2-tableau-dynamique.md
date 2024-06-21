@@ -13,17 +13,17 @@ Information(s) mesurée(s) : renseigner une information de type _Réponse simple
 
 Valider
 
- ## Totaux de lignes ou de colonnes
+## Totaux de lignes ou de colonnes
  
  - cf. [Total en ligne/](https://inseefr.github.io/Bowie/pogues/Le%20guide/Tableaux/3-cases-non-collectees/#total-en-ligne)
  - cf. [Total en colonne/](https://inseefr.github.io/Bowie/pogues/Le%20guide/Tableaux/3-cases-non-collectees/#total-en-colonne)
 
- ## Contrôles
+## Contrôles
 
 Dans l'onglet Contrôles, décrire classiquement le contrôle mais préciser son niveau : si le contrôle concerne les informations relatives à une ligne du tableau, préciser "Niveau : ligne"
 
- ![Contrôles par ligne](../../img/pogues/controle-tab-dynamique.png)
-  
+![Contrôles par ligne](../../img/pogues/controle-tab-dynamique.png)
+
 
 
 
