@@ -1972,9 +1972,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#totaux-de-lignes-ou-de-colonnes" class="md-nav__link">
+  <a href="#calculer-des-totaux-de-lignes-ou-de-colonnes" class="md-nav__link">
     <span class="md-ellipsis">
-      Totaux de lignes ou de colonnes
+      Calculer des totaux de lignes ou de colonnes
     </span>
   </a>
   
@@ -1984,6 +1984,24 @@
   <a href="#controles" class="md-nav__link">
     <span class="md-ellipsis">
       Contrôles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preremplir-un-tableau-avec-des-donnees-non-collectees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Préremplir un tableau avec des données non collectées
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supprimer-une-ligne-qui-nest-pas-la-derniere" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supprimer une ligne qui n'est pas la dernière
     </span>
   </a>
   
@@ -2697,9 +2715,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#totaux-de-lignes-ou-de-colonnes" class="md-nav__link">
+  <a href="#calculer-des-totaux-de-lignes-ou-de-colonnes" class="md-nav__link">
     <span class="md-ellipsis">
-      Totaux de lignes ou de colonnes
+      Calculer des totaux de lignes ou de colonnes
     </span>
   </a>
   
@@ -2709,6 +2727,24 @@
   <a href="#controles" class="md-nav__link">
     <span class="md-ellipsis">
       Contrôles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preremplir-un-tableau-avec-des-donnees-non-collectees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Préremplir un tableau avec des données non collectées
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supprimer-une-ligne-qui-nest-pas-la-derniere" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supprimer une ligne qui n'est pas la dernière
     </span>
   </a>
   
@@ -2730,8 +2766,13 @@
 
 
 <h1 id="les-tableaux-dynamiques">Les tableaux dynamiques</h1>
-<p>On peut vouloir créer des tableaux dont on ne connait pas à l'avance le nombre de lignes (Tableau dynamique). Ils se présenteront sans en-tête de lignes en première colonne, avec un bouton <em>Ajouter une ligne</em> (sous le tableau) et un bouton <em>supprimer une ligne</em>.
-Pour ce faire, on créera une question de type Tableau avec pour axe principal une liste.</p>
+<p>On peut vouloir créer des tableaux dont on ne connait pas à l'avance le nombre de lignes (Tableau dynamique). Ces tableaux se présenteront : </p>
+<ul>
+<li>sans en-tête de lignes en première colonne</li>
+<li>avec un bouton <em>Ajouter une ligne</em> (sous le tableau)</li>
+<li>et un bouton <em>Supprimer une ligne</em> (la dernière).</li>
+</ul>
+<p>Pour ce faire, on créera une question de type Tableau avec pour axe principal une liste.</p>
 <p>Axe d'information principal :  </p>
 <ul>
 <li>choisir Liste</li>
@@ -2740,14 +2781,20 @@ Pour ce faire, on créera une question de type Tableau avec pour axe principal u
 </ul>
 <p>Information(s) mesurée(s) : renseigner une information de type <em>Réponse simple</em> ou <em>Réponse à choix unique</em></p>
 <p>Valider</p>
-<h2 id="totaux-de-lignes-ou-de-colonnes">Totaux de lignes ou de colonnes</h2>
+<h2 id="calculer-des-totaux-de-lignes-ou-de-colonnes">Calculer des totaux de lignes ou de colonnes</h2>
+<p>Ces totaux peuvent être ensuite utilisées dans deslibellés, des filtres ou des contrôles</p>
 <ul>
-<li>cf. <a href="https://inseefr.github.io/Bowie/pogues/Le%20guide/Tableaux/3-cases-non-collectees/#total-en-ligne">Total en ligne/</a></li>
-<li>cf. <a href="https://inseefr.github.io/Bowie/pogues/Le%20guide/Tableaux/3-cases-non-collectees/#total-en-colonne">Total en colonne/</a></li>
+<li>cf. <a href="https://inseefr.github.io/Bowie/pogues/Le%20guide/Tableaux/3-cases-non-collectees/#total-en-ligne">Total en ligne</a></li>
+<li>cf. <a href="https://inseefr.github.io/Bowie/pogues/Le%20guide/Tableaux/3-cases-non-collectees/#total-en-colonne">Total en colonne</a></li>
 </ul>
 <h2 id="controles">Contrôles</h2>
-<p>Dans l'onglet Contrôles, décrire classiquement le contrôle mais préciser son niveau : si le contrôle concerne les informations relatives à une ligne du tableau, préciser "Niveau : ligne"</p>
+<p>Dans l'onglet Contrôles, décrire classiquement le contrôle en VTL mais préciser son niveau : si le contrôle concerne les informations relatives à une ligne du tableau, préciser "Niveau : ligne"</p>
 <p><a class="glightbox" href="../../../../img/pogues/controle-tab-dynamique.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Contrôles par ligne" src="../../../../img/pogues/controle-tab-dynamique.png" /></a></p>
+<h2 id="preremplir-un-tableau-avec-des-donnees-non-collectees">Préremplir un tableau avec des données non collectées</h2>
+<p>Pogues permet de préremplir certaines colonnes des tableaux dynamiques, que ce soit par de la donnée externe ou par des variables calculées. Ces colonnes ne sont alors pas modifiables en collecte.</p>
+<p><a href="https://inseefr.github.io/Bowie/pogues/Le%20guide/Tableaux/3-cases-non-collectees">Spécifier des données collectées</a></p>
+<h2 id="supprimer-une-ligne-qui-nest-pas-la-derniere">Supprimer une ligne qui n'est pas la dernière</h2>
+<p>Impossible. </p>
 
 
 
