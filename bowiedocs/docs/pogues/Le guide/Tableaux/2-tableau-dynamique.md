@@ -8,13 +8,14 @@ On peut vouloir créer des tableaux dont on ne connait pas à l'avance le nombre
 
 Pour ce faire, on créera une question de type Tableau avec pour axe principal une liste.
 
-Axe d'information principal :  
+__Choix de l'axe d'information principal__ :  
 
 - choisir Liste
-- indiquer le nombre de lignes minimum (aujourd'hui un nombre, à terme un champ VTL)
-- indiquer le nombre de lignes maximum (borné à 300).
+- indiquer le nombre de lignes minimum (aujourd'hui un nombre mais une évolution permettra à terme de saisir un champ VTL)
+- indiquer le nombre de lignes maximum (aujourd'hui un nombre borné à 300 mais une évolution permettra à terme de saisir un champ VTL)).
 
-Information(s) mesurée(s) : renseigner une information de type _Réponse simple_ ou _Réponse à choix unique_
+__Information(s) mesurée(s)__ : renseigner une information de type _Réponse simple_ ou _Réponse à choix unique_
+Si on souhaite qu'une de ces informations mesurées ne soit pas "collectée", voir l'item [données non-collectées](https://inseefr.github.io/Bowie/pogues/Le%20guide/Tableaux/3-cases-non-collectees)
 
 Valider
 
@@ -34,9 +35,9 @@ Dans l'onglet Contrôles, décrire classiquement le contrôle en VTL mais préci
 
 ## Préremplir un tableau avec des données non collectées
 
-Pogues permet de préremplir certaines colonnes des tableaux dynamiques, que ce soit par de la donnée externe ou par des variables calculées. Ces colonnes ne sont alors pas modifiables en collecte.
+Pogues permet de préremplir certaines __colonnes__ des tableaux dynamiques, que ce soit par de la donnée externe ou par des variables calculées. Ces __colonnes__ ne sont alors pas modifiables en collecte.
 
-[Spécifier des données collectées](https://inseefr.github.io/Bowie/pogues/Le%20guide/Tableaux/3-cases-non-collectees)
+[Spécifier des données non-collectées](https://inseefr.github.io/Bowie/pogues/Le%20guide/Tableaux/3-cases-non-collectees)
 
 
 ## Supprimer une ligne qui n'est pas la dernière
