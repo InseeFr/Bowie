@@ -18,7 +18,7 @@ Le Rond-point exploite une boucle principale (par exemple : collecte des informa
 
 Pour ajouter un comportement de type _Rond-point_ dans Pogues:
 
-1. il faut cliquer sur _+ Rond-point_ dans la barre des actions
+1. il faut cliquer sur _+ Rond-point_ dans la barre des actions après avoir placé la sélection sur la séquence précédent le placement du Rond-point
 2. dans la fenêtre modale qui s'ouvre, on donne un libellé et un identifiant (_NB_ le libellé sera affiché comme titre dans le questionnaire web)
 3. l'onglet _Boucle_ va permettre de décrire ce qu'on propose à la réponse via le Rond-point, le fonctionnement est similaire à celui d'une boucle simple :point_down:
 4. on donne un identifiant,
