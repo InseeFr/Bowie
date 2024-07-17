@@ -51,6 +51,26 @@ donnera ce visuel:
 
 !!!warning
 
-    Le Rond-point est uniquement disponible pour l'orchestrateur web Stromae DSFR
+    Le Rond-point est uniquement disponible pour les questionnaires web avec Stromae DSFR. Il n'est pas supporté par les autres visualisations dont les questionnaires enquêteurs
 
-...
+Voici une vue du Rond-point dans Stromae DSFR:
+
+![Anatomie du Rond-point dans Stromae DSFR](../../img/pogues/rond-point-web-anatomie.png)
+
+Les différents éléments:
+
+1. le libellé tel que défini dans Pogues
+2. le libellé d'une occurrence
+3. sa description
+4. le bouton d'accès au sous-questionnaire
+5. le bouton permettant de continuer dans le questionnaire au-delà des sous-questionnaires du Rond-point
+
+Comme vu plus haut, les libellés sont tous paramétrables.
+
+Le bouton en `4.` a le comportement suivant:
+
+- si le sous-questionnaire n'a pas été visité, le libellé est "Commencer",
+- si le sous-questionnaire a été visité mais pas terminé, "Reprendre",
+- s'il est achevé, "Modifier".
+
+Enfin, on voit que le sous-questionnaire de Charlie n'existe pas car nous avons appliqué un filtre grâce au champ _Sauf_ (voir plus haut).
