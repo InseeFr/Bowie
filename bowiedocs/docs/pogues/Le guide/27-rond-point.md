@@ -1,7 +1,5 @@
 # Le Rond-point
 
-:material-test-tube: Cette fonctionnalité est en cours de recette et sera déployée prochainement.
-
 Le _Rond-point_ est un composant de questionnaire permettant d'organiser une navigation non-linéaire pour les séquences répétées.
 
 Le cas typique d'utilisation est pour permettre la réponse non-ordonnée à des questionnaires individuels après le questionnement au niveau ménage. C'est cet exemple que nous allons dérouler dans la suite de ce document. Bien sûr, d'autres cas de figure sont possibles, par exemple pour la réponse à des questions de niveau "établissement" après avoir collecté des informations au niveau "entreprise".
