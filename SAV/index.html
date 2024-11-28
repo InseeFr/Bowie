@@ -2803,14 +2803,18 @@
 
 <h1 id="problemes-les-plus-frequents">Problèmes les plus fréquents</h1>
 <h2 id="souci-de-generation-a-la-visualisation-depuis-pogues-un-message-une-erreur-a-ete-rencontree">Souci de génération : à la visualisation depuis Pogues, un message "Une erreur a été rencontrée"</h2>
-<p>Tenter de générer le questionnaire séquence par séquence
-- si une séquence pose souci, descendre  sous-séquence par sous-séquence, voire question par question et identifier la question qui pose souci. 
-- si toutes les séquences se génèrent, il y a probablement un problème de boucles ou de doublons. En effet, des listes (dans les QCM ou QCU) peuvent avoir le même nom, notamment pour les questionnaires qui font appel à la composition. </p>
+<p>Tenter de générer le questionnaire séquence par séquence</p>
+<ul>
+<li>si une séquence pose souci, descendre  sous-séquence par sous-séquence, voire question par question et identifier la question qui pose souci. </li>
+<li>si toutes les séquences se génèrent, il y a probablement un problème de boucles ou de doublons. En effet, des listes (dans les QCM ou QCU) peuvent avoir le même nom, notamment pour les questionnaires qui font appel à la composition. </li>
+</ul>
 <h2 id="affichage-a-tort-de-questions-filtrees">Affichage à tort de questions filtrées</h2>
 <p>Principe général : si un filtre ne se valorise pas ou pas bien, la question est affichée donc si la question s'affiche "à tort", le filtre est probablement faux.</p>
-<p>Contrôler le filtre
-- vérifier que les autres variables dans le même filtre sont également affichées<br />
-- ajouter des déclarations contenant les variables impliquées dans le filtre afin de contrôler leurs valeurs</p>
+<p>Contrôler le filtre :</p>
+<ul>
+<li>vérifier que les autres variables dans le même filtre sont également affichées  </li>
+<li>ajouter des déclarations contenant les variables impliquées dans le filtre afin de contrôler leurs valeurs</li>
+</ul>
 <h3 id="nonaffichage-des-declarations">(Non)Affichage des déclarations</h3>
 <p>Les déclarations s'affichent en fonction des modes décrits dans Pogues : pas de mode, pas d'affichage et réciproquement si pas d'affichage, il manque probablement le mode</p>
 
