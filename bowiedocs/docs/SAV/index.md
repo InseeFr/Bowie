@@ -2,7 +2,7 @@
 
 ## Souci de génération : à la visualisation depuis Pogues, un message "Une erreur a été rencontrée" 
  
- Tenter de générer le questionnaire séquence par séquence
+Tenter de générer le questionnaire séquence par séquence
 - si une séquence pose souci, descendre  sous-séquence par sous-séquence, voire question par question et identifier la question qui pose souci. 
 - si toutes les séquences se génèrent, il y a probablement un problème de boucles ou de doublons. En effet, des listes (dans les QCM ou QCU) peuvent avoir le même nom, notamment pour les questionnaires qui font appel à la composition. 
         
