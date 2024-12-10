@@ -8,16 +8,41 @@ On peut vouloir créer des tableaux dont on ne connait pas à l'avance le nombre
 
 Pour ce faire, on créera une question de type Tableau avec pour axe principal une liste.
 
-__Choix de l'axe d'information principal__ :  
+### Choix de l'axe d'information principal :  
 
-- choisir Liste
-- indiquer le nombre de lignes minimum (aujourd'hui un nombre mais une évolution permettra à terme de saisir un champ VTL)
-- indiquer le nombre de lignes maximum (aujourd'hui un nombre borné à 300 mais une évolution permettra à terme de saisir un champ VTL)).
+Pour avoir un tableau dynamique, choisir `Liste`. <br>
+On a ensuite 2 choix pour le calcul du nombre de lignes : `Min/Max` ou `Formule`
 
-__Information(s) mesurée(s)__ : renseigner une information de type _Réponse simple_ ou _Réponse à choix unique_
+#### Nombre de lignes déterminés par `Min/Max`
+![choix min-max](../../../img/pogues/choix-nb-ligne-tab-min-max.png)
+
+- Indiquer le nombre de lignes minimum (aujourd'hui un nombre mais une évolution permettra à terme de saisir un champ VTL)
+- Indiquer le nombre de lignes maximum (aujourd'hui un nombre borné à 300 mais une évolution permettra à terme de saisir un champ VTL)).
+
+#### Nombre de lignes déterminés par `Formule`
+![choix formule](../../../img/pogues/choix-nb-ligne-tab-formule.png)
+
+- Indiquer une formule VTL qui doit retourner **un nombre**, imaginons `n`.
+- Le tableau généré aura exactement `n` lignes 
+
+??? danger "VTL non valide"
+
+    Si le résultat du VTL n'est pas interprété avec le type 'Nombre', ex `Formule = "Du texte"`, on a l'erreur suivante
+    ![formule different d'un nombre](../../../img/pogues/tab-dim-formule-vtl-diff-nb.png)
+
+???+ example "Exemple de tableau dynamique avec formule VTL"
+    
+    - Si on a un questionnaire avec une question `NB_PERSONNE` de type _Nombre_
+    ![input nb personnes](../../../img/pogues/input-5-pers.png)
+    - On peut alors créer ensuite un tableau dynamique avec pour formule de nombre de lignes `$NB_PERSONNE$`.
+    Dans le cas où l'utilisateur réponds 5 à la question `NB_PERSONNE`, alors le tableau aura exactement 5 lignes    
+    ![tableau dynamique](../../../img/pogues/tab-dyn-5-pers.png)
+
+
+### Information(s) mesurée(s) : 
+renseigner une information de type _Réponse simple_ ou _Réponse à choix unique_
 Si on souhaite qu'une de ces informations mesurées ne soit pas "collectée", voir l'item [données non-collectées](https://inseefr.github.io/Bowie/pogues/Le%20guide/Tableaux/3-cases-non-collectees)
 
-Valider
 
 ## Calculer des totaux de lignes ou de colonnes
 
