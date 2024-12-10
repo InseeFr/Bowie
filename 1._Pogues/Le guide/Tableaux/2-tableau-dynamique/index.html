@@ -1462,6 +1462,48 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#choix-de-laxe-dinformation-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choix de l'axe d'information principal :
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Choix de l'axe d'information principal :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nombre-de-lignes-determines-par-minmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nombre de lignes déterminés par Min/Max
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nombre-de-lignes-determines-par-formule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nombre de lignes déterminés par Formule
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informations-mesurees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information(s) mesurée(s) :
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#calculer-des-totaux-de-lignes-ou-de-colonnes" class="md-nav__link">
     <span class="md-ellipsis">
       Calculer des totaux de lignes ou de colonnes
@@ -2834,6 +2876,48 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#choix-de-laxe-dinformation-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choix de l'axe d'information principal :
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Choix de l'axe d'information principal :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nombre-de-lignes-determines-par-minmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nombre de lignes déterminés par Min/Max
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nombre-de-lignes-determines-par-formule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nombre de lignes déterminés par Formule
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informations-mesurees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information(s) mesurée(s) :
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#calculer-des-totaux-de-lignes-ou-de-colonnes" class="md-nav__link">
     <span class="md-ellipsis">
       Calculer des totaux de lignes ou de colonnes
@@ -2892,15 +2976,39 @@
 <li>et un bouton <em>Supprimer une ligne</em> (la dernière).</li>
 </ul>
 <p>Pour ce faire, on créera une question de type Tableau avec pour axe principal une liste.</p>
-<p><strong>Choix de l'axe d'information principal</strong> :  </p>
+<h3 id="choix-de-laxe-dinformation-principal">Choix de l'axe d'information principal :</h3>
+<p>Pour avoir un tableau dynamique, choisir <code>Liste</code>. <br>
+On a ensuite 2 choix pour le calcul du nombre de lignes : <code>Min/Max</code> ou <code>Formule</code></p>
+<h4 id="nombre-de-lignes-determines-par-minmax">Nombre de lignes déterminés par <code>Min/Max</code></h4>
+<p><a class="glightbox" href="../../../../img/pogues/choix-nb-ligne-tab-min-max.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="choix min-max" src="../../../../img/pogues/choix-nb-ligne-tab-min-max.png" /></a></p>
 <ul>
-<li>choisir Liste</li>
-<li>indiquer le nombre de lignes minimum (aujourd'hui un nombre mais une évolution permettra à terme de saisir un champ VTL)</li>
-<li>indiquer le nombre de lignes maximum (aujourd'hui un nombre borné à 300 mais une évolution permettra à terme de saisir un champ VTL)).</li>
+<li>Indiquer le nombre de lignes minimum (aujourd'hui un nombre mais une évolution permettra à terme de saisir un champ VTL)</li>
+<li>Indiquer le nombre de lignes maximum (aujourd'hui un nombre borné à 300 mais une évolution permettra à terme de saisir un champ VTL)).</li>
 </ul>
-<p><strong>Information(s) mesurée(s)</strong> : renseigner une information de type <em>Réponse simple</em> ou <em>Réponse à choix unique</em>
+<h4 id="nombre-de-lignes-determines-par-formule">Nombre de lignes déterminés par <code>Formule</code></h4>
+<p><a class="glightbox" href="../../../../img/pogues/choix-nb-ligne-tab-formule.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="choix formule" src="../../../../img/pogues/choix-nb-ligne-tab-formule.png" /></a></p>
+<ul>
+<li>Indiquer une formule VTL qui doit retourner <strong>un nombre</strong>, imaginons <code>n</code>.</li>
+<li>Le tableau généré aura exactement <code>n</code> lignes </li>
+</ul>
+<details class="danger">
+<summary>VTL non valide</summary>
+<p>Si le résultat du VTL n'est pas interprété avec le type 'Nombre', ex <code>Formule = "Du texte"</code>, on a l'erreur suivante
+<a class="glightbox" href="../../../../img/pogues/tab-dim-formule-vtl-diff-nb.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="formule different d'un nombre" src="../../../../img/pogues/tab-dim-formule-vtl-diff-nb.png" /></a></p>
+</details>
+<details class="example" open="open">
+<summary>Exemple de tableau dynamique avec formule VTL</summary>
+<ul>
+<li>Si on a un questionnaire avec une question <code>NB_PERSONNE</code> de type <em>Nombre</em>
+<a class="glightbox" href="../../../../img/pogues/input-5-pers.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="input nb personnes" src="../../../../img/pogues/input-5-pers.png" /></a></li>
+<li>On peut alors créer ensuite un tableau dynamique avec pour formule de nombre de lignes <code>$NB_PERSONNE$</code>.
+Dans le cas où l'utilisateur réponds 5 à la question <code>NB_PERSONNE</code>, alors le tableau aura exactement 5 lignes  <br />
+<a class="glightbox" href="../../../../img/pogues/tab-dyn-5-pers.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tableau dynamique" src="../../../../img/pogues/tab-dyn-5-pers.png" /></a></li>
+</ul>
+</details>
+<h3 id="informations-mesurees">Information(s) mesurée(s) :</h3>
+<p>renseigner une information de type <em>Réponse simple</em> ou <em>Réponse à choix unique</em>
 Si on souhaite qu'une de ces informations mesurées ne soit pas "collectée", voir l'item <a href="https://inseefr.github.io/Bowie/pogues/Le%20guide/Tableaux/3-cases-non-collectees">données non-collectées</a></p>
-<p>Valider</p>
 <h2 id="calculer-des-totaux-de-lignes-ou-de-colonnes">Calculer des totaux de lignes ou de colonnes</h2>
 <p>Ces totaux peuvent être ensuite utilisées dans deslibellés, des filtres ou des contrôles</p>
 <ul>
