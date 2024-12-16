@@ -1252,6 +1252,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#usage-des-controles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage des contrôles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niveau-rond-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      Niveau rond-point :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niveau-occurrence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Niveau occurrence :
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1268,6 +1295,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2890,6 +2926,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#usage-des-controles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage des contrôles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niveau-rond-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      Niveau rond-point :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niveau-occurrence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Niveau occurrence :
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2906,6 +2969,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2954,12 +3026,30 @@
 <p><code>"Le questionnaire individuel pour " || $PRENOM$</code></p>
 <p>donnera ce visuel:</p>
 <p><a class="glightbox" href="../../../img/pogues/rond-point-web-libelle.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Visuel d'un libellé pour un item du Rond-point" src="../../../img/pogues/rond-point-web-libelle.png" /></a></p>
+<h4 id="usage-des-controles">Usage des contrôles</h4>
+<p>Comme pour les questions, il est possible de définir des contrôles sur un rond point.
+Ces contrôles peuvent être à un niveau <code>rond-point</code> ou <code>occurrence</code>.</p>
+<h4 id="niveau-rond-point">Niveau <code>rond-point</code> :</h4>
+<p>Le contrôle considère les variables avec un niveau questionnaire : les variables de portée/niveau boucle sont considérés comme des vecteurs. (Ex: <code>PRENOMS = ["prénom1", "prénom2", "prénom3",...]</code>)</p>
+<p><strong>Ex de contrôle :</strong> <code>sum($SALAIRE$) &gt; 10000</code> avec pour message "La somme des salaires de votre ménage dépasse 10 000 euros."
+et ici <code>SALAIRE = [2900, 3500, 5000]</code>  </p>
+<h4 id="niveau-occurrence">Niveau <code>occurrence</code> :</h4>
+<ul>
+<li>Le contrôle considère les variables avec un niveau boucle (la même boucle qui est lié au rond point) : les contrôle s'applique sur <strong>chaque</strong> occurrence !</li>
+</ul>
+<p><strong>Ex de contrôle :</strong> <code>AGE &gt; 35</code> avec pour message "L'individu x a plus de 35 ans."
+et ici <code>AGE = [40, 30, 50]</code> <br>
+Le contrôle apparaîtra donc 2 fois, 1 fois pour ind1 (40) et une fois pour ind3(50). </p>
+<details class="example" open="open">
+<summary>Affichage de contrôles sur un rond-point</summary>
+<p><a class="glightbox" href="../../../img/pogues/control-ront-point.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="controles sur un rond-point" src="../../../img/pogues/control-ront-point.png" /></a></p>
+</details>
 <h3 id="dans-le-questionnaire-web">Dans le questionnaire web</h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Le Rond-point est uniquement disponible pour les questionnaires web avec Stromae DSFR. Il n'est pas supporté par les autres visualisations dont les questionnaires enquêteurs</p>
+<p>Le Rond-point est uniquement disponible pour les questionnaires web. Il n'est pas supporté par les autres visualisations dont les questionnaires enquêteurs</p>
 </div>
-<p>Voici une vue du Rond-point dans Stromae DSFR:</p>
+<p>Voici une vue du Rond-point :</p>
 <p><a class="glightbox" href="../../../img/pogues/rond-point-web-anatomie.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Anatomie du Rond-point dans Stromae DSFR" src="../../../img/pogues/rond-point-web-anatomie.png" /></a></p>
 <p>Les différents éléments:</p>
 <ol>
@@ -2977,6 +3067,7 @@
 <li>s'il est achevé, "Modifier".</li>
 </ul>
 <p>Enfin, on voit que le sous-questionnaire de Charlie n'existe pas car nous avons appliqué un filtre grâce au champ <em>Sauf</em> (voir plus haut).</p>
+<h2 id="_1"></h2>
 
 
 

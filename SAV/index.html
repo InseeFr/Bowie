@@ -2769,10 +2769,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Affichage à tort de questions filtrées">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#nonaffichage-des-declarations" class="md-nav__link">
     <span class="md-ellipsis">
       (Non)Affichage des déclarations
@@ -2780,9 +2779,13 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#vtl-avec-operations-dagregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      VTL avec opérations d’agrégation
+    </span>
+  </a>
   
 </li>
       
@@ -2802,21 +2805,47 @@
 
 
 <h1 id="problemes-les-plus-frequents">Problèmes les plus fréquents</h1>
-<h2 id="souci-de-generation-a-la-visualisation-depuis-pogues-un-message-une-erreur-a-ete-rencontree">Souci de génération : à la visualisation depuis Pogues, un message "Une erreur a été rencontrée"</h2>
+<h2 id="souci-de-generation-a-la-visualisation-depuis-pogues-un-message-une-erreur-a-ete-rencontree"><strong>Souci de génération : à la visualisation depuis Pogues, un message "Une erreur a été rencontrée"</strong></h2>
 <p>Tenter de générer le questionnaire séquence par séquence</p>
 <ul>
 <li>si une séquence pose souci, descendre  sous-séquence par sous-séquence, voire question par question et identifier la question qui pose souci. </li>
 <li>si toutes les séquences se génèrent, il y a probablement un problème de boucles ou de doublons. En effet, des listes (dans les QCM ou QCU) peuvent avoir le même nom, notamment pour les questionnaires qui font appel à la composition. </li>
 </ul>
-<h2 id="affichage-a-tort-de-questions-filtrees">Affichage à tort de questions filtrées</h2>
+<h2 id="affichage-a-tort-de-questions-filtrees"><strong>Affichage à tort de questions filtrées</strong></h2>
 <p>Principe général : si un filtre ne se valorise pas ou pas bien, la question est affichée donc si la question s'affiche "à tort", le filtre est probablement faux.</p>
 <p>Contrôler le filtre :</p>
 <ul>
 <li>vérifier que les autres variables dans le même filtre sont également affichées  </li>
 <li>ajouter des déclarations contenant les variables impliquées dans le filtre afin de contrôler leurs valeurs</li>
 </ul>
-<h3 id="nonaffichage-des-declarations">(Non)Affichage des déclarations</h3>
+<h2 id="nonaffichage-des-declarations"><strong>(Non)Affichage des déclarations</strong></h2>
 <p>Les déclarations s'affichent en fonction des modes décrits dans Pogues : pas de mode, pas d'affichage et réciproquement si pas d'affichage, il manque probablement le mode</p>
+<h2 id="vtl-avec-operations-dagregation"><strong>VTL avec opérations d’agrégation</strong></h2>
+<p>Dans le cas où l'on veut définir une expression VTL <strong>faisant des opérations sur les éléments d'une variable vecteur</strong>, hors d'un tableau ou d'une boucle (à un niveau questionnaire), il faut passer par une variable calculée, sinon <strong>le VTL est en erreur</strong> </p>
+<details class="example">
+<summary>Exemple avec un contrôle</summary>
+<p>Prenons une variable <code>SALAIRE</code> qui est collecté dans une boucle de 4 occurrences. <br>
+À la fin de la boucle, on a : <code>SALAIRE=[2500, 1300, 2000, 4000]</code>.<br>
+Si on veut faire un contrôle sur la somme des salaires, il faut d'abord <strong>créer une variable calculée</strong> <code>SUM_SALAIRE=sum($SALAIRE$)</code> de niveau questionnaire, puis définir un contrôle avec cette dernière.</p>
+<table>
+<thead>
+<tr>
+<th>Expression VTL du contrôle</th>
+<th>Affichage du contrôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sum($SALAIRE$) &gt; 5000</code></td>
+<td><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/274c.svg" title=":x:" /></td>
+</tr>
+<tr>
+<td><code>$SUM_SALAIRE$ &gt; 5000</code></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+</tr>
+</tbody>
+</table>
+</details>
 
 
 

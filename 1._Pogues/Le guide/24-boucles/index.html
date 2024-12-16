@@ -2913,10 +2913,10 @@
 <p>Un élément <strong>important</strong> des boucles liées : si je crée une boucle B2 liée à une boucle B1, toutes les variables collectées dans les occurences de B1 seront disponibles lors des répétitions de B2.</p>
 </div>
 <h2 id="portee-des-variables">Portée des variables</h2>
-<p>Les variables calculées ou externes possédent un paramètre de <em>Portée</em>. A quoi cela correspond-il ?</p>
+<p>Les variables calculées ou externes possèdent un paramètre de <em>Portée</em>. A quoi cela correspond-il ?</p>
 <p>Il s'agit de préciser si une variable est calculée ou injectée (dans le cas d'une variable externe) au sein d'une boucle.</p>
 <p>Imaginons une boucle <code>B1</code> sur un ensemble de questions relatives à des individus. Je veux pouvoir pour chacun d'eux créer une indicatrice permettant de savoir si l'individu est dans le champs en vérifiant son âge (variable collectée <code>AGE</code>) et sa nationalité (<code>NATIONALITE</code>).</p>
-<p>Pour cela, je crée une variable calculée <code>INDICATRICE</code> de portée <code>B1</code> dont la formule s'appuie pour chaque occurence de la boucle (chaque individu) sur les variables <code>AGE</code> et <code>NATIONALITE</code> (de chaque individu).</p>
+<p>Pour cela, je crée une variable calculée <code>INDICATRICE</code> de portée <code>B1</code> dont la formule s'appuie pour chaque occurrence de la boucle (chaque individu) sur les variables <code>AGE</code> et <code>NATIONALITE</code> (de chaque individu).</p>
 <p><a class="glightbox" href="../../../img/pogues/guide-boucle-portee.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variable avec portée boucle" src="../../../img/pogues/guide-boucle-portee.png" /></a></p>
 <h2 id="exclusion">Exclusion</h2>
 <p>Le champ <em>Sauf</em> permet d'exclure dans une boucle liée certaines des répétitions.</p>
