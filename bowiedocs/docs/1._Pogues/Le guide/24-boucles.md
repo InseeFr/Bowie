@@ -34,13 +34,13 @@ Pour créer une boucle liée, je remplis :
 
 ## Portée des variables
 
-Les variables calculées ou externes possédent un paramètre de _Portée_. A quoi cela correspond-il ?
+Les variables calculées ou externes possèdent un paramètre de _Portée_. A quoi cela correspond-il ?
 
 Il s'agit de préciser si une variable est calculée ou injectée (dans le cas d'une variable externe) au sein d'une boucle.
 
 Imaginons une boucle `B1` sur un ensemble de questions relatives à des individus. Je veux pouvoir pour chacun d'eux créer une indicatrice permettant de savoir si l'individu est dans le champs en vérifiant son âge (variable collectée `AGE`) et sa nationalité (`NATIONALITE`).
 
-Pour cela, je crée une variable calculée `INDICATRICE` de portée `B1` dont la formule s'appuie pour chaque occurence de la boucle (chaque individu) sur les variables `AGE` et `NATIONALITE` (de chaque individu).
+Pour cela, je crée une variable calculée `INDICATRICE` de portée `B1` dont la formule s'appuie pour chaque occurrence de la boucle (chaque individu) sur les variables `AGE` et `NATIONALITE` (de chaque individu).
 
 ![Variable avec portée boucle](../../img/pogues/guide-boucle-portee.png)
 

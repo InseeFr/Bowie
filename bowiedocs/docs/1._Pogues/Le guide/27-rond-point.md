@@ -45,13 +45,37 @@ donnera ce visuel:
 
 ![Visuel d'un libellé pour un item du Rond-point](../../img/pogues/rond-point-web-libelle.png)
 
+#### Usage des contrôles 
+
+Comme pour les questions, il est possible de définir des contrôles sur un rond point.
+Ces contrôles peuvent être à un niveau `rond-point` ou `occurrence`.
+
+#### Niveau `rond-point` :
+
+Le contrôle considère les variables avec un niveau questionnaire : les variables de portée/niveau boucle sont considérés comme des vecteurs. (Ex: `PRENOMS = ["prénom1", "prénom2", "prénom3",...]`)
+
+**Ex de contrôle :** `sum($SALAIRE$) > 10000` avec pour message "La somme des salaires de votre ménage dépasse 10 000 euros."
+et ici `SALAIRE = [2900, 3500, 5000]`  
+
+#### Niveau `occurrence` : 
+
+- Le contrôle considère les variables avec un niveau boucle (la même boucle qui est lié au rond point) : les contrôle s'applique sur **chaque** occurrence !
+
+**Ex de contrôle :** `AGE > 35` avec pour message "L'individu x a plus de 35 ans."
+et ici `AGE = [40, 30, 50]` <br>
+Le contrôle apparaîtra donc 2 fois, 1 fois pour ind1 (40) et une fois pour ind3(50). 
+
+???+ example "Affichage de contrôles sur un rond-point"
+
+    ![controles sur un rond-point](../../img/pogues/control-ront-point.png)
+
 ### Dans le questionnaire web
 
 !!!warning
 
-    Le Rond-point est uniquement disponible pour les questionnaires web avec Stromae DSFR. Il n'est pas supporté par les autres visualisations dont les questionnaires enquêteurs
+    Le Rond-point est uniquement disponible pour les questionnaires web. Il n'est pas supporté par les autres visualisations dont les questionnaires enquêteurs
 
-Voici une vue du Rond-point dans Stromae DSFR:
+Voici une vue du Rond-point :
 
 ![Anatomie du Rond-point dans Stromae DSFR](../../img/pogues/rond-point-web-anatomie.png)
 
@@ -72,3 +96,5 @@ Le bouton en `4.` a le comportement suivant:
 - s'il est achevé, "Modifier".
 
 Enfin, on voit que le sous-questionnaire de Charlie n'existe pas car nous avons appliqué un filtre grâce au champ _Sauf_ (voir plus haut).
+
+## 
