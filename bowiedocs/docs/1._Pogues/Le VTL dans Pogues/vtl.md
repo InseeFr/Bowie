@@ -384,79 +384,43 @@ match_characters(
 
 On se place dans le cas où le Siret est collecté à travers la variable `SIRET`. Le contrôle est alors :
 
-```
-mod(
-cast(substr($SIRET$, 1, 1), integer) +
-(
-    if cast(substr($SIRET$, 2, 1), integer) > 4 
-    then cast(substr($SIRET$, 2, 1), integer) * 2 - 9 
-    else cast(substr($SIRET$, 2, 1), integer) * 2
-) +
-cast(substr($SIRET$, 3, 1), integer) +
-(
-    if cast(substr($SIRET$, 4, 1), integer) > 4 
-    then cast(substr($SIRET$, 4, 1), integer) * 2 - 9 
-    else cast(substr($SIRET$, 4, 1), integer) * 2
-) +
-cast(substr($SIRET$, 5, 1), integer) +
-(
-    if cast(substr($SIRET$, 6, 1), integer) > 4 
-    then cast(substr($SIRET$, 6, 1), integer) * 2 - 9 
-    else cast(substr($SIRET$, 6, 1), integer) * 2
-) +
-cast(substr($SIRET$, 7, 1), integer) +
-(
-    if cast(substr($SIRET$, 8, 1), integer) > 4 
-    then cast(substr($SIRET$, 8, 1), integer) * 2 - 9 
-    else cast(substr($SIRET$, 8, 1), integer) * 2
-) +
-cast(substr($SIRET$, 9, 1), integer)
-, 10) = 0
-and
-mod(
-(
-    if cast(substr($SIRET$, 1, 1), integer) > 4 
-    then cast(substr($SIRET$, 1, 1), integer) * 2 - 9 
-    else cast(substr($SIRET$, 1, 1), integer) * 2
-) + 
-cast(substr($SIRET$, 2, 1), integer) +
-(
-    if cast(substr($SIRET$, 3, 1), integer) > 4 
-    then cast(substr($SIRET$, 3, 1), integer) * 2 - 9 
-    else cast(substr($SIRET$, 3, 1), integer) * 2
-) + 
-cast(substr($SIRET$, 4, 1), integer) +
-(
-    if cast(substr($SIRET$, 5, 1), integer) > 4 
-    then cast(substr($SIRET$, 5, 1), integer) * 2 - 9 
-    else cast(substr($SIRET$, 5, 1), integer) * 2
-) + 
-cast(substr($SIRET$, 6, 1), integer) +
-(
-    if cast(substr($SIRET$, 7, 1), integer) > 4 
-    then cast(substr($SIRET$, 7, 1), integer) * 2 - 9 
-    else cast(substr($SIRET$, 7, 1), integer) * 2
-) + 
-cast(substr($SIRET$, 8, 1), integer) +
-(
-    if cast(substr($SIRET$, 9, 1), integer) > 4 
-    then cast(substr($SIRET$, 9, 1), integer) * 2 - 9 
-    else cast(substr($SIRET$, 9, 1), integer) * 2
-) + 
-cast(substr($SIRET$, 10, 1), integer) +
-(
-    if cast(substr($SIRET$, 11, 1), integer) > 4 
-    then cast(substr($SIRET$, 11, 1), integer) * 2 - 9 
-    else cast(substr($SIRET$, 11, 1), integer) * 2
-) + 
-cast(substr($SIRET$, 12, 1), integer) +
-(
-    if cast(substr($SIRET$, 13, 1), integer) > 4 
-    then cast(substr($SIRET$, 13, 1), integer) * 2 - 9 
-    else cast(substr($SIRET$, 13, 1), integer) * 2
-) + 
-cast(substr($SIRET$, 14, 1), integer)
-, 10) <> 0
-```
+??? tip "Code VTL pour le contrôle du Siret"
+    ```
+    match_characters($SIRET$,"^[0-9]{14}$")
+    and ((mod(
+        cast(substr($SIRET$,1,1),integer)
+        + cast(substr($SIRET$,2,1),integer)*2 -(if (cast(substr($SIRET$,2,1),integer) > 4) then 9 else 0)
+        + cast(substr($SIRET$,3,1),integer)
+        + cast(substr($SIRET$,4,1),integer)*2 -(if (cast(substr($SIRET$,4,1),integer) > 4) then 9 else 0)
+        + cast(substr($SIRET$,5,1),integer)
+        + cast(substr($SIRET$,6,1),integer)*2 -(if (cast(substr($SIRET$,6,1),integer) > 4) then 9 else 0)
+        + cast(substr($SIRET$,7,1),integer)
+        + cast(substr($SIRET$,8,1),integer)*2 -(if (cast(substr($SIRET$,8,1),integer) > 4) then 9 else 0)
+        + cast(substr($SIRET$,9,1),integer)
+    ,10)) = 0)
+    and ((mod(
+        cast(substr($SIRET$,1,1),integer)*2 -(if (cast(substr($SIRET$,1,1),integer) > 4) then 9 else 0)
+        + cast(substr($SIRET$,2,1),integer)
+        + cast(substr($SIRET$,3,1),integer)*2 -(if (cast(substr($SIRET$,3,1),integer) > 4) then 9 else 0)
+        + cast(substr($SIRET$,4,1),integer)
+        + cast(substr($SIRET$,5,1),integer)*2 -(if (cast(substr($SIRET$,5,1),integer) > 4) then 9 else 0)
+        + cast(substr($SIRET$,6,1),integer)
+        + cast(substr($SIRET$,7,1),integer)*2 -(if (cast(substr($SIRET$,7,1),integer) > 4) then 9 else 0)
+        + cast(substr($SIRET$,8,1),integer)
+        + cast(substr($SIRET$,9,1),integer)*2 -(if (cast(substr($SIRET$,9,1),integer) > 4) then 9 else 0)
+        + cast(substr($SIRET$,10,1),integer)
+        + cast(substr($SIRET$,11,1),integer)*2 -(if (cast(substr($SIRET$,11,1),integer) > 4) then 9 else 0)
+        + cast(substr($SIRET$,12,1),integer)
+        + cast(substr($SIRET$,13,1),integer)*2 -(if (cast(substr($SIRET$,13,1),integer) > 4) then 9 else 0)
+        + cast(substr($SIRET$,14,1),integer)
+    ,10)) <> 0)
+    ```
+    __Explication du code__
+    
+    1. On vérifie que l'on a une chaîne de 14 chiffres
+    2. On fait une grosse addition dont on vérifie si elle est égale à 0 modulo 10
+    3. On a une action caractère par caractère : On regarde le chiffre et selon sa position, on le multiplie par 1 ou 2 ; lorsqu'on le multiplie par 2, si ça atteint ou dépasse 10, on enlève 9<br>
+    *ex :* `7*2` donne `1+4 (formule de Luhn) = 14-9 (formule calculée ici)`
 
-La première partie du contrôle s'assure que les 9 premiers chiffres forment un SIREN valide, la seconde que le SIRET est valide.
+    - La première partie du contrôle s'assure que les 9 premiers chiffres forment un SIREN valide. <br> 
+    - La seconde que le SIRET est valide.
