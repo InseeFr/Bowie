@@ -2923,13 +2923,23 @@
 <ul>
 <li>le <em>minimum</em> et le <em>maximum</em> </li>
 <li>la <em>précision</em> (nombre de chiffres après la virgule, par défaut : aucun)</li>
-<li>l'<em>unité</em> de mesure</li>
+<li>l'<em>unité</em> de mesure fixe ou personnalisée</li>
 </ul>
+<details class="example">
+<summary>Example d'utilisation d'une unité de mesure personnalisée</summary>
+<p><strong><em>Choix de l'unité de mesure</em></strong>
+<a class="glightbox" href="../../../img/pogues/choix-unite-de-mesure-perso.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="choix unite de mesure perso" src="../../../img/pogues/choix-unite-de-mesure-perso.png" /></a>
+<strong><em>Exemple d'une expression VTL pour l'unité de mesure. <code>(if $DEST$ = "1" then "Dirhams" else "Euros")</code></em></strong>
+<a class="glightbox" href="../../../img/pogues/unite-mesure-perso.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="unite mesure perso" src="../../../img/pogues/unite-mesure-perso.png" /></a>
+<strong><em>Si on choisi "Espagne" (<code>DEST=2</code>) alors on tombe dans le <code>else</code> et l'unité mesurée est "Euros"</em></strong>
+<a class="glightbox" href="../../../img/pogues/unite-mesure-perso-euro.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="unite mesure perso euro" src="../../../img/pogues/unite-mesure-perso-euro.png" /></a>
+<strong><em>Si on choisi "Maroc" (<code>DEST=1</code>) alors on tombe dans la condition du <code>if</code> et l'unité mesurée est "Dirham"</em></strong>
+<a class="glightbox" href="../../../img/pogues/unite-mesure-perso-dirhams.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="unite mesure perso dirham" src="../../../img/pogues/unite-mesure-perso-dirhams.png" /></a></p>
+</details>
 <h2 id="type-de-reponse-booleen">Type de réponse Booleen</h2>
 <p>On ne renseigne rien (unique cache à cocher cochable/décochable).</p>
 <h2 id="type-de-reponse-duree">Type de réponse Durée</h2>
 <p>Renseigner aussi le <em>format</em> parmi heures-minutes ou années-mois.</p>
-<p>Valider</p>
 
 
 
