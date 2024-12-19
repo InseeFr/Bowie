@@ -382,9 +382,35 @@ match_characters(
 
 #### Contrôle de validité d'un SIRET
 
-On se place dans le cas où le Siret est collecté à travers la variable `SIRET`. Le contrôle est alors :
+Il faut deux contrôles, chacun avec un message différent :
+
+- Vérification du Siren (9 premiers caractères) : **Contrôle Siret 1**
+> Les 9 premiers chiffres du numéro que vous avez renseigné ne correspondent pas à un numéro Siren.
+- Vérification du Siret sachant que le Siren est correct : **Contrôle Siret 2**
+> Les 9 premiers chiffres du numéro que vous avez renseigné correspondent à un numéro Siren, mais les 5 derniers font que l'ensemble n'est pas un numéro Siret.
+
+!!! warning 
+    On se place dans le cas où le Siret est collecté à travers la variable `SIRET`.
 
 ??? tip "Code VTL pour le contrôle du Siret"
+
+    __Contrôle Siret 1__
+    ```
+    match_characters($SIRET$,"^[0-9]{14}$")
+    and ((mod(
+        cast(substr($SIRET$,1,1),integer)
+        + cast(substr($SIRET$,2,1),integer)*2 -(if (cast(substr($SIRET$,2,1),integer) > 4) then 9 else 0)
+        + cast(substr($SIRET$,3,1),integer)
+        + cast(substr($SIRET$,4,1),integer)*2 -(if (cast(substr($SIRET$,4,1),integer) > 4) then 9 else 0)
+        + cast(substr($SIRET$,5,1),integer)
+        + cast(substr($SIRET$,6,1),integer)*2 -(if (cast(substr($SIRET$,6,1),integer) > 4) then 9 else 0)
+        + cast(substr($SIRET$,7,1),integer)
+        + cast(substr($SIRET$,8,1),integer)*2 -(if (cast(substr($SIRET$,8,1),integer) > 4) then 9 else 0)
+        + cast(substr($SIRET$,9,1),integer)
+    ,10)) != 0)
+    ```
+
+    __Contrôle Siret 2__
     ```
     match_characters($SIRET$,"^[0-9]{14}$")
     and ((mod(
@@ -422,5 +448,31 @@ On se place dans le cas où le Siret est collecté à travers la variable `SIRET
     3. On a une action caractère par caractère : On regarde le chiffre et selon sa position, on le multiplie par 1 ou 2 ; lorsqu'on le multiplie par 2, si ça atteint ou dépasse 10, on enlève 9<br>
     *ex :* `7*2` donne `1+4 (formule de Luhn) = 14-9 (formule calculée ici)`
 
-    - La première partie du contrôle s'assure que les 9 premiers chiffres forment un SIREN valide. <br> 
-    - La seconde que le SIRET est valide.
+#### Contrôle de validité d'un SIREN
+
+Comme pour le Siret, on va utiliser le premier contrôle en remplaçant la taille exigée à 9. Ce qui donne un contrôle avec le message suivant
+
+- Vérification du Siren (9 premiers caractères) : **Contrôle Siren**
+> Les 9 premiers chiffres du numéro que vous avez renseigné ne correspondent pas à un numéro Siren.
+
+!!! warning 
+    On se place dans le cas où le Siren est collecté à travers la variable `SIREN`.
+
+Et le code VTL
+??? tip "Code VTL pour le contrôle du Siren"
+
+    __Contrôle Siren__
+    ```
+    match_characters($SIREN$,"^[0-9]{9}$")
+    and ((mod(
+        cast(substr($SIREN$,1,1),integer)
+        + cast(substr($SIREN$,2,1),integer)*2 -(if (cast(substr($SIREN$,2,1),integer) > 4) then 9 else 0)
+        + cast(substr($SIREN$,3,1),integer)
+        + cast(substr($SIREN$,4,1),integer)*2 -(if (cast(substr($SIREN$,4,1),integer) > 4) then 9 else 0)
+        + cast(substr($SIREN$,5,1),integer)
+        + cast(substr($SIREN$,6,1),integer)*2 -(if (cast(substr($SIREN$,6,1),integer) > 4) then 9 else 0)
+        + cast(substr($SIREN$,7,1),integer)
+        + cast(substr($SIREN$,8,1),integer)*2 -(if (cast(substr($SIREN$,8,1),integer) > 4) then 9 else 0)
+        + cast(substr($SIREN$,9,1),integer)
+    ,10)) != 0)
+    ```
