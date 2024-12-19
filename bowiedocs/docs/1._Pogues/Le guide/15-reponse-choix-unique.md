@@ -14,6 +14,7 @@ Il faut "Spécifier la liste de codes" (c'est-à-dire décrire les modalités de
 ## Type de réponse Liste déroulante 
 Il faut "Spécifier la liste de codes" (c'est-à-dire décrire les modalités de réponse et les libellés associés)
 
-## Type de réponse Liste déroulante Recherche sur liste
-Ce type de variable permettra de proposer à l'enquêté de rechercher par autocomplétion (saisie de quelques caractère et renvoi d'échos). Exemple : libellé de PCS, département, nationalités, activités.
-Spécifier dans Pogues la nomenclature recherchée.
+## Type de réponse Liste déroulante - Recherche sur liste (Suggester)
+Le Suggester est le composant de recherche sur liste. Il permet d'offrir une recherche dynamique sur des listes volumineuses avec la présentation d'échos de réponse au fur et à mesure de la saisie.
+
+Plus de détails dans la page [Suggester](15b-suggester.md).
