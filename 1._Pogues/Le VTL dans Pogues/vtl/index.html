@@ -1161,6 +1161,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#controle-de-validite-dun-siren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôle de validité d'un SIREN
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3565,6 +3574,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#controle-de-validite-dun-siren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôle de validité d'un SIREN
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3849,10 +3867,39 @@ number)                                 // 12.30
 ) = false
 </code></pre></div>
 <h4 id="controle-de-validite-dun-siret">Contrôle de validité d'un SIRET</h4>
-<p>On se place dans le cas où le Siret est collecté à travers la variable <code>SIRET</code>. Le contrôle est alors :</p>
+<p>Il faut deux contrôles, chacun avec un message différent :</p>
+<ul>
+<li>Vérification du Siren (9 premiers caractères) : <strong>Contrôle Siret 1</strong><blockquote>
+<p>Les 9 premiers chiffres du numéro que vous avez renseigné ne correspondent pas à un numéro Siren.</p>
+</blockquote>
+</li>
+<li>Vérification du Siret sachant que le Siren est correct : <strong>Contrôle Siret 2</strong><blockquote>
+<p>Les 9 premiers chiffres du numéro que vous avez renseigné correspondent à un numéro Siren, mais les 5 derniers font que l'ensemble n'est pas un numéro Siret.</p>
+</blockquote>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>On se place dans le cas où le Siret est collecté à travers la variable <code>SIRET</code>.</p>
+</div>
 <details class="tip">
 <summary>Code VTL pour le contrôle du Siret</summary>
-<p><div class="highlight"><pre><span></span><code>match_characters($SIRET$,&quot;^[0-9]{14}$&quot;)
+<p><strong>Contrôle Siret 1</strong>
+<div class="highlight"><pre><span></span><code>match_characters($SIRET$,&quot;^[0-9]{14}$&quot;)
+and ((mod(
+    cast(substr($SIRET$,1,1),integer)
+    + cast(substr($SIRET$,2,1),integer)*2 -(if (cast(substr($SIRET$,2,1),integer) &gt; 4) then 9 else 0)
+    + cast(substr($SIRET$,3,1),integer)
+    + cast(substr($SIRET$,4,1),integer)*2 -(if (cast(substr($SIRET$,4,1),integer) &gt; 4) then 9 else 0)
+    + cast(substr($SIRET$,5,1),integer)
+    + cast(substr($SIRET$,6,1),integer)*2 -(if (cast(substr($SIRET$,6,1),integer) &gt; 4) then 9 else 0)
+    + cast(substr($SIRET$,7,1),integer)
+    + cast(substr($SIRET$,8,1),integer)*2 -(if (cast(substr($SIRET$,8,1),integer) &gt; 4) then 9 else 0)
+    + cast(substr($SIRET$,9,1),integer)
+,10)) != 0)
+</code></pre></div></p>
+<p><strong>Contrôle Siret 2</strong>
+<div class="highlight"><pre><span></span><code>match_characters($SIRET$,&quot;^[0-9]{14}$&quot;)
 and ((mod(
     cast(substr($SIRET$,1,1),integer)
     + cast(substr($SIRET$,2,1),integer)*2 -(if (cast(substr($SIRET$,2,1),integer) &gt; 4) then 9 else 0)
@@ -3885,15 +3932,39 @@ and ((mod(
 <ol>
 <li>On vérifie que l'on a une chaîne de 14 chiffres</li>
 <li>On fait une grosse addition dont on vérifie si elle est égale à 0 modulo 10</li>
-<li>
-<p>On a une action caractère par caractère : On regarde le chiffre et selon sa position, on le multiplie par 1 ou 2 ; lorsqu'on le multiplie par 2, si ça atteint ou dépasse 10, on enlève 9<br>
-<em>ex :</em> <code>7*2</code> donne <code>1+4 (formule de Luhn) = 14-9 (formule calculée ici)</code></p>
-</li>
-<li>
-<p>La première partie du contrôle s'assure que les 9 premiers chiffres forment un SIREN valide. <br> </p>
-</li>
-<li>La seconde que le SIRET est valide.</li>
+<li>On a une action caractère par caractère : On regarde le chiffre et selon sa position, on le multiplie par 1 ou 2 ; lorsqu'on le multiplie par 2, si ça atteint ou dépasse 10, on enlève 9<br>
+<em>ex :</em> <code>7*2</code> donne <code>1+4 (formule de Luhn) = 14-9 (formule calculée ici)</code></li>
 </ol>
+</details>
+<h4 id="controle-de-validite-dun-siren">Contrôle de validité d'un SIREN</h4>
+<p>Comme pour le Siret, on va utiliser le premier contrôle en remplaçant la taille exigée à 9. Ce qui donne un contrôle avec le message suivant</p>
+<ul>
+<li>Vérification du Siren (9 premiers caractères) : <strong>Contrôle Siren</strong><blockquote>
+<p>Les 9 premiers chiffres du numéro que vous avez renseigné ne correspondent pas à un numéro Siren.</p>
+</blockquote>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>On se place dans le cas où le Siren est collecté à travers la variable <code>SIREN</code>.</p>
+</div>
+<p>Et le code VTL</p>
+<details class="tip">
+<summary>Code VTL pour le contrôle du Siren</summary>
+<p><strong>Contrôle Siren</strong>
+<div class="highlight"><pre><span></span><code>match_characters($SIREN$,&quot;^[0-9]{9}$&quot;)
+and ((mod(
+    cast(substr($SIREN$,1,1),integer)
+    + cast(substr($SIREN$,2,1),integer)*2 -(if (cast(substr($SIREN$,2,1),integer) &gt; 4) then 9 else 0)
+    + cast(substr($SIREN$,3,1),integer)
+    + cast(substr($SIREN$,4,1),integer)*2 -(if (cast(substr($SIREN$,4,1),integer) &gt; 4) then 9 else 0)
+    + cast(substr($SIREN$,5,1),integer)
+    + cast(substr($SIREN$,6,1),integer)*2 -(if (cast(substr($SIREN$,6,1),integer) &gt; 4) then 9 else 0)
+    + cast(substr($SIREN$,7,1),integer)
+    + cast(substr($SIREN$,8,1),integer)*2 -(if (cast(substr($SIREN$,8,1),integer) &gt; 4) then 9 else 0)
+    + cast(substr($SIREN$,9,1),integer)
+,10)) != 0)
+</code></pre></div></p>
 </details>
 
 
