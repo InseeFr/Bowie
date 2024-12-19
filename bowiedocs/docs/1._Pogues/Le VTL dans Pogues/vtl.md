@@ -476,3 +476,18 @@ Et le code VTL
         + cast(substr($SIREN$,9,1),integer)
     ,10)) <> 0)
     ```
+
+#### Contrôle de validité d'un RNA
+
+Le format attendu est un code commençant par 'W' suivie de 9 chiffres. Un contrôle suffit.
+
+!!! warning 
+    On se place dans le cas où le RNA est collecté à travers la variable `RNA`.
+
+Et le code VTL
+??? tip "Code VTL pour le contrôle du RNA"
+
+    __Contrôle RNA__
+    ```
+    not(match_characters($RNA$,"^W[0-9]{9}$"))
+    ```
