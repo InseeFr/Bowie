@@ -407,7 +407,7 @@ Il faut deux contrôles, chacun avec un message différent :
         + cast(substr($SIRET$,7,1),integer)
         + cast(substr($SIRET$,8,1),integer)*2 -(if (cast(substr($SIRET$,8,1),integer) > 4) then 9 else 0)
         + cast(substr($SIRET$,9,1),integer)
-    ,10)) != 0)
+    ,10)) <> 0)
     ```
 
     __Contrôle Siret 2__
@@ -474,5 +474,5 @@ Et le code VTL
         + cast(substr($SIREN$,7,1),integer)
         + cast(substr($SIREN$,8,1),integer)*2 -(if (cast(substr($SIREN$,8,1),integer) > 4) then 9 else 0)
         + cast(substr($SIREN$,9,1),integer)
-    ,10)) != 0)
+    ,10)) <> 0)
     ```
