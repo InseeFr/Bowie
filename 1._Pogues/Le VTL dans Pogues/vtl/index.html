@@ -3896,7 +3896,7 @@ and ((mod(
     + cast(substr($SIRET$,7,1),integer)
     + cast(substr($SIRET$,8,1),integer)*2 -(if (cast(substr($SIRET$,8,1),integer) &gt; 4) then 9 else 0)
     + cast(substr($SIRET$,9,1),integer)
-,10)) != 0)
+,10)) &lt;&gt; 0)
 </code></pre></div></p>
 <p><strong>Contrôle Siret 2</strong>
 <div class="highlight"><pre><span></span><code>match_characters($SIRET$,&quot;^[0-9]{14}$&quot;)
@@ -3963,7 +3963,7 @@ and ((mod(
     + cast(substr($SIREN$,7,1),integer)
     + cast(substr($SIREN$,8,1),integer)*2 -(if (cast(substr($SIREN$,8,1),integer) &gt; 4) then 9 else 0)
     + cast(substr($SIREN$,9,1),integer)
-,10)) != 0)
+,10)) &lt;&gt; 0)
 </code></pre></div></p>
 </details>
 
