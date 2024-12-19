@@ -1170,6 +1170,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#controle-de-validite-dun-rna" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôle de validité d'un RNA
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3583,6 +3592,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#controle-de-validite-dun-rna" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôle de validité d'un RNA
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3964,6 +3982,19 @@ and ((mod(
     + cast(substr($SIREN$,8,1),integer)*2 -(if (cast(substr($SIREN$,8,1),integer) &gt; 4) then 9 else 0)
     + cast(substr($SIREN$,9,1),integer)
 ,10)) &lt;&gt; 0)
+</code></pre></div></p>
+</details>
+<h4 id="controle-de-validite-dun-rna">Contrôle de validité d'un RNA</h4>
+<p>Le format attendu est un code commençant par 'W' suivie de 9 chiffres. Un contrôle suffit.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>On se place dans le cas où le RNA est collecté à travers la variable <code>RNA</code>.</p>
+</div>
+<p>Et le code VTL</p>
+<details class="tip">
+<summary>Code VTL pour le contrôle du RNA</summary>
+<p><strong>Contrôle RNA</strong>
+<div class="highlight"><pre><span></span><code>not(match_characters($RNA$,&quot;^W[0-9]{9}$&quot;))
 </code></pre></div></p>
 </details>
 
