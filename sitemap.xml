@@ -86,11 +86,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://inseefr.github.io/Bowie/1._Pogues/Le%20VTL%20dans%20Pogues/migration-xpath-vers-vtl/</loc>
-         <lastmod>2024-12-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://inseefr.github.io/Bowie/1._Pogues/Le%20VTL%20dans%20Pogues/vtl/</loc>
          <lastmod>2024-12-19</lastmod>
          <changefreq>daily</changefreq>
@@ -132,6 +127,11 @@
     </url>
     <url>
          <loc>https://inseefr.github.io/Bowie/1._Pogues/Le%20guide/15-reponse-choix-unique/</loc>
+         <lastmod>2024-12-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/1._Pogues/Le%20guide/15b-suggester/</loc>
          <lastmod>2024-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
