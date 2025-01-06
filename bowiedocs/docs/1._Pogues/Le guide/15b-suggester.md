@@ -5,9 +5,10 @@ Les nomenclatures doivent contenir au moins les attributs/colonnes `id` et `labe
 On effectue la recherche sur les libellés et/ou les identifiants suivant le paramétrage qui a été choisi pour chacune de ces nomenclatures.
 
 Le paramétrage peut concerner les éléments suivants :
-    - recherche sur des libellés voire sur les identifiants
-    - recherche au 3ème caractère saisi par défaut mais peut être 1er ou 2ème selon les cas
-    - mise en place de stopwords ou synonymes
+
+- recherche sur des libellés voire sur les identifiants
+- recherche au 3ème caractère saisi par défaut mais peut être 1er ou 2ème selon les cas
+- mise en place de stopwords ou synonymes
 
 Entre 2 enquêtes, la recherche (paramétrage) est identique pour une même nomenclature.
 
