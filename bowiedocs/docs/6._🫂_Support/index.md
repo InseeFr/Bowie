@@ -1,5 +1,4 @@
 # :people_hugging: Problèmes les plus fréquents
-🫂
 
 ## **Génération KO pour la visualisation depuis Pogues**
 
