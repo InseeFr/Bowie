@@ -1,4 +1,5 @@
-# :lady_beetle: Problèmes les plus fréquents
+# :people_hugging: Problèmes les plus fréquents
+🫂
 
 ## **Génération KO pour la visualisation depuis Pogues**
 
