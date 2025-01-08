@@ -14,7 +14,7 @@ La liste des versions est affichée dans une modale. Chaque version contient les
 
 ![liste versions](../../img/pogues/list-versions.png)
 
-!!! info "Règle de conservation des versions"
+!!! abstract "Règle de conservation des versions"
     - Uniquement les 10 dernières versions de la journée actuelles sont conservées
     - Uniquement la dernière version des journées précédentes est conservée.
 
