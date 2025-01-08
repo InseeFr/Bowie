@@ -2,14 +2,14 @@
 
 ## Accéder à la liste de versions
 
-Pour accéder à la liste des versions d'un questionnaire, il suffit de cliquer sur le bouton version dans un questionnaire Pogues.
+Pour accéder à la liste des versions d'un questionnaire, il suffit de cliquer sur le bouton "Versions" dans un questionnaire Pogues.
 
 ![Bouton version](../../img/pogues/version-button.png)
 
 La liste des versions est affichée dans une modale. Chaque version contient les infos suivantes :
 
-- **Instant** (=Date/Heure) à laquelle la version a été enregistrée.
-- **Durée** depuis cette instant
+- **Date/Heure** à laquelle la version a été enregistrée;
+- **Durée** écoulée depuis cette date;
 - **idep** de la personne ayant enregistré cette version.
 
 ![liste versions](../../img/pogues/list-versions.png)
@@ -18,7 +18,7 @@ La liste des versions est affichée dans une modale. Chaque version contient les
     - Uniquement les 10 dernières versions de la journée actuelles sont conservées
     - Uniquement la dernière version des journées précédentes est conservée.
 
-???+ danger "Point de vigilance"
+??? info "Précisions sur la dernière journée sauvegardée"
     Le "nettoyage" des versions pour les jours précédents n'est déclenché que lorsqu'on sauvegarde une nouvelle version.
     
     **Exemple :** On est le 17/02/2025 à 15:00
@@ -50,12 +50,4 @@ Une confirmation apparaît "*Êtes vous sur ?*" avec deux choix <br>
 Si une modification du questionnaire est en cours, un avertissement est également affiché <br>
 ":warning: Vos modifications ne sont pas sauvegardées !"
 
-Une fois la version chargée, on se retrouve avec un questionnaire Pogues modifié avec le contenu de la version. Si on clique sur sauvegarder, cela crée une nouvelle version avec ces modifications.
-
-!!! tip "Astuce"
-    Avant de sauvegarder une version ainsi chargéem il est recommandé de
-
-    1. visualiser la version et vérifier qu'elle fonctionne bien 
-    1. apporter d'autres modifications
-    1. charger une autre version si ça ne va pas
-    1. sauvegarder les modifications et ainsi créer une nouvelle version
+Une fois la version chargée, on affiche le questionnaire Pogues. Quand on clique sur sauvegarder, cela crée une nouvelle version avec ces modifications.
