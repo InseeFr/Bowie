@@ -8,8 +8,8 @@ Pour accéder à la liste des versions d'un questionnaire, il suffit de cliquer 
 
 La liste des versions est affichée dans une modale. Chaque version contient les infos suivantes :
 
-- **Date/Heure** à laquelle la version a été enregistrée;
-- **Durée** écoulée depuis cette date;
+- **Date/Heure** à laquelle la version a été enregistrée ;
+- **Durée** écoulée depuis cette date ;
 - **idep** de la personne ayant enregistré cette version.
 
 ![liste versions](../../img/pogues/list-versions.png)
