@@ -15,7 +15,7 @@ La liste des versions est affichée dans une modale. Chaque version contient les
 ![liste versions](../../img/pogues/list-versions.png)
 
 !!! abstract "Règle de conservation des versions"
-    - Uniquement les 10 dernières versions de la journée actuelles sont conservées
+    - Uniquement les 10 dernières versions de la dernière journée où le questionnaire a été modifié sont conservées
     - Uniquement la dernière version des journées précédentes est conservée.
 
 ??? info "Précisions sur la dernière journée sauvegardée"
