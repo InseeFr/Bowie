@@ -18,6 +18,9 @@ Principe général : si un filtre ne se valorise pas ou pas bien, la question es
     - vérifier que les autres variables dans le même filtre sont également affichées  
     - ajouter des déclarations contenant les variables impliquées dans le filtre afin de contrôler leurs valeurs
 
+## **Filtre qui englobe la fin du questionnaire**
+Lorsqu'un filtre englobe toute la fin du questionnaire, un bug peut être constaté car Pogues ne peut pas rediriger l'utilisateur vers la prochaine question, car il n'y en a pas.
+Pour éviter ce désagrément, on vous conseille d'ajouter une séquence de fin, sur laquelle on ne pose aucun filtre (faire au plus simple, juste une séquence avec une déclaration "Fin").
 
 ## **(Non)Affichage des déclarations**
 Les déclarations s'affichent en fonction des modes décrits dans Pogues : pas de mode, pas d'affichage et réciproquement si pas d'affichage, il manque probablement le mode
