@@ -26,3 +26,8 @@ Par ailleurs, lorsqu'elles sont utilisées dans du code VTL, les noms des variab
     - il ne peut débuter avec un caractère spécial,
     - doit contenir au moins un caractère alphabétique,
     - ne peut être un mot réservé de VTL.
+
+!!! danger
+    Eviter de finir le nom d'une variable externe par une valeur numérique.
+    Une variable externe peut contenir un vecteur (par exemple : liste d'habitant issue de la base de sondages ou de la précédente enquête) et sera personnalisée en collecte avec un suffixe séquentiel.
+    Par exemple : on peut créer un vecteur de produits appelé PRODUITS, dans le fichier de personnalisation on pourra avoir PRODUITS_01, PRODUITS_02, etc
