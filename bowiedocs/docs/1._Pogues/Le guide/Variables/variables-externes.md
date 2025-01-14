@@ -22,3 +22,8 @@ Afin de récupérer ces variables dans le second questionnaire :
 - je crée  les variables externes `NBHAB` (Portée Questionnaire), `PRENOM` et `AGE` (portée `BOUCLE_PRINCIPALE`).
 
 Il faudra ensuite fournir à l'intégration un fichier CSV contenant les variables et valeurs ad hoc (voir [ici](../../../public-enemy/guide/1-guide-pe-echantillon.md), section "Variables de portée Boucle")
+
+!!! danger
+    Eviter de finir le nom d'une variable externe par une valeur numérique.
+    Une variable externe peut contenir un vecteur (par exemple : liste d'habitant issue de la base de sondages ou de la précédente enquête) et sera personnalisée en collecte avec un suffixe séquentiel.
+    Par exemple : pour un vecteur de produits appelé PRODUITS, dans le fichier de personnalisation on pourra avoir PRODUITS_01, PRODUITS_02, etc
