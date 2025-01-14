@@ -2868,6 +2868,12 @@
 <li>je crée  les variables externes <code>NBHAB</code> (Portée Questionnaire), <code>PRENOM</code> et <code>AGE</code> (portée <code>BOUCLE_PRINCIPALE</code>).</li>
 </ul>
 <p>Il faudra ensuite fournir à l'intégration un fichier CSV contenant les variables et valeurs ad hoc (voir <a href="../../../public-enemy/guide/1-guide-pe-echantillon.md">ici</a>, section "Variables de portée Boucle")</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Eviter de finir le nom d'une variable externe par une valeur numérique.
+Une variable externe peut contenir un vecteur (par exemple : liste d'habitant issue de la base de sondages ou de la précédente enquête) et sera personnalisée en collecte avec un suffixe séquentiel.
+Par exemple : pour un vecteur de produits appelé PRODUITS, dans le fichier de personnalisation on pourra avoir PRODUITS_01, PRODUITS_02, etc</p>
+</div>
 
 
 
