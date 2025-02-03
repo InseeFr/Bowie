@@ -4017,7 +4017,7 @@ and ((mod(
 <details class="tip">
 <summary>Code VTL pour le contrôle du RNA</summary>
 <p><strong>Contrôle RNA</strong>
-<div class="highlight"><pre><span></span><code>not(match_characters($RNA$,&quot;^W[0-9]{9}$&quot;))
+<div class="highlight"><pre><span></span><code>not(match_characters($RNA$,&quot;^W\d[\da-zA-Z]\d{7}$&quot;))
 </code></pre></div></p>
 </details>
 
