@@ -489,5 +489,5 @@ Et le code VTL
 
     __Contrôle RNA__
     ```
-    not(match_characters($RNA$,"^W[0-9]{9}$"))
+    not(match_characters($RNA$,"^W\d[\da-zA-Z]\d{7}$"))
     ```
