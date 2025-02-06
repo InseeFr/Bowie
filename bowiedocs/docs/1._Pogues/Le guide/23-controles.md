@@ -11,7 +11,7 @@ Deux types de contrôle sont implémentés :
 Dans l'onglet "Contrôles" de la question du questionnaire à partir de laquelle on veut appliquer le contrôle, renseigner :
 
 - la _description_ du contrôle : texte libre documentant le contrôle
-- la _condition_ (pour laquelle on affiche le message d'erreur), en VTL (<[https://inseefr.github.io/Bowie/pogues/guide/vtl](https://inseefr.github.io/Bowie/pogues/Le%20VTL%20dans%20Pogues/vtl/)/> et <[https://inseefr.github.io/Bowie/pogues/guide/migration-xpath-vers-vtl](https://inseefr.github.io/Bowie/pogues/Le%20guide/migration-xpath-vers-vtl/)/>)
+- la _condition_ (pour laquelle on affiche le message d'erreur), en VTL (<[guide/vtl](../Le%20VTL%20dans%20Pogues/vtl.md)/> et <[migration-xpath-vers-vtl](../Le%20VTL%20dans%20Pogues/migration-xpath-vers-vtl.md)/>)
 - le _message d'erreur_ : saisir ici le message d'erreur qui s'affichera à l'enquêté si la condition est remplie (à rédiger en VTL)
 - la _criticité_ :  choisir une criticité parmi
     - Information
