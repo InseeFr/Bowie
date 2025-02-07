@@ -1195,11 +1195,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#portee-des-variables" class="md-nav__link">
+  <a href="#portee-des-variables-champ-niveau-de-calcul" class="md-nav__link">
     <span class="md-ellipsis">
-      Portée des variables
+      Portée des variables (Champ "Niveau de calcul")
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Portée des variables (Champ "Niveau de calcul")">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple 2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2896,11 +2920,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#portee-des-variables" class="md-nav__link">
+  <a href="#portee-des-variables-champ-niveau-de-calcul" class="md-nav__link">
     <span class="md-ellipsis">
-      Portée des variables
+      Portée des variables (Champ "Niveau de calcul")
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Portée des variables (Champ "Niveau de calcul")">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple 2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2958,12 +3006,22 @@
 <p class="admonition-title">Tip</p>
 <p>Un élément <strong>important</strong> des boucles liées : si je crée une boucle B2 liée à une boucle B1, toutes les variables collectées dans les occurences de B1 seront disponibles lors des répétitions de B2.</p>
 </div>
-<h2 id="portee-des-variables">Portée des variables</h2>
-<p>Les variables calculées ou externes possèdent un paramètre de <em>Portée</em>. A quoi cela correspond-il ?</p>
-<p>Il s'agit de préciser si une variable est calculée ou injectée (dans le cas d'une variable externe) au sein d'une boucle.</p>
+<h2 id="portee-des-variables-champ-niveau-de-calcul">Portée des variables (Champ "Niveau de calcul")</h2>
+<p>Les variables calculées ou externes possèdent une portée indiquée par le paramètre <strong><em>Niveau de calcul</em></strong>. A quoi cela correspond-il ?</p>
+<p>Il s'agit de préciser si une variable est calculée ou injectée (dans le cas d'une variable externe) au sein d'une boucle ou dans le contexte du questionnaire dans son ensemble.</p>
+<h5 id="exemple-1">Exemple 1</h5>
 <p>Imaginons une boucle <code class="highlight"><span class="n">B1</span></code> sur un ensemble de questions relatives à des individus. Je veux pouvoir pour chacun d'eux créer une indicatrice permettant de savoir si l'individu est dans le champs en vérifiant son âge (variable collectée <code class="highlight"><span class="n">AGE</span></code>) et sa nationalité (<code class="highlight"><span class="n">NATIONALITE</span></code>).</p>
 <p>Pour cela, je crée une variable calculée <code class="highlight"><span class="n">INDICATRICE</span></code> de portée <code class="highlight"><span class="n">B1</span></code> dont la formule s'appuie pour chaque occurrence de la boucle (chaque individu) sur les variables <code class="highlight"><span class="n">AGE</span></code> et <code class="highlight"><span class="n">NATIONALITE</span></code> (de chaque individu).</p>
 <p><a class="glightbox" href="../../../img/pogues/guide-boucle-portee.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variable avec portée boucle" src="../../../img/pogues/guide-boucle-portee.png" /></a></p>
+<h5 id="exemple-2">Exemple 2</h5>
+<p>On veut contrôler si un individu est majeur ou non pour savoir quels questions lui poser. On va créer une variable calculée <code class="highlight"><span class="n">EST_MAJEUR</span></code> de portée <code class="highlight"><span class="n">B1</span></code> portant sur chaque valeur de <code class="highlight"><span class="n">AGE</span></code> et vérifiant si <code class="highlight"><span class="o">$</span><span class="n">AGE</span><span class="o">$</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="m">18</span></code></p>
+<p><a class="glightbox" href="../../../img/pogues/check_Is_adult.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/check_Is_adult.png" /></a></p>
+<ul>
+<li><strong>Portée Questionnaire :</strong> alors toutes les variables vecteurs seront bien considérées comme des vecteurs (liste d’élément). Il est donc possible d’effectuer des opération d’agrégation dessus (sum, count, ect)</li>
+<li><strong>Portée <Vecteur> :</strong> alors la variable calculée sera elle aussi un vecteur et la formule VTL associée portera sur toutes les occurrences du vecteur.
+    Ex : la var calculée CALC_VAR ayant pour formule VTL $CA_ENTREPRISE$ + 100 sera donc un vecteur auquel on aura ajouté 100 à chaque valeur de $CA_ENTREPRISE$.
+    <Vecteur> prend la valeur du nom d’une boucle ou d’un tableau dynamique.</li>
+</ul>
 <h2 id="exclusion">Exclusion</h2>
 <p>Le champ <em>Sauf</em> permet d'exclure dans une boucle liée certaines des répétitions.</p>
 <p>En reprenant l'exmple du paragraphe précédent, on pourrait par exemple exclure les mineurs avec la formule VTL :</p>
