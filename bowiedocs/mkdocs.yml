@@ -12,6 +12,7 @@ theme:
   features:
     - navigation.footer
     - navigation.indexes
+    - content.code.copy
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -23,11 +24,16 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.mark
   - pymdownx.tilde
+  - pymdownx.highlight:
+      default_lang: 'r'
+  - pymdownx.inlinehilite:
+      style_plain_text: 'r'
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
