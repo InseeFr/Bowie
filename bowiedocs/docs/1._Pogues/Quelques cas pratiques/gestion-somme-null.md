@@ -4,11 +4,11 @@
 Imaginons une question sous forme de tableau dynamique, `TAB`, collectant le chiffre d'affaire dans la variable collectée `CA` <br>
 
 - On créer une variable calculée faisant la somme de cette colonne `CA` : 
-```r
+```
 SUM_TAB = sum($CA$)
 ```
 - On affiche dans une déclaration cette somme via la formule : 
-```r
+```
 "Val somme TAB : " || cast($SUM_TAB$,string) || " **euros**"
 ```
 - On visualise et on va sur la page de notre tableau
@@ -27,19 +27,20 @@ SUM_TAB = sum($CA$)
 Ici, le vecteur `CA` est composé des valeurs suivant : `[63, null, 28]`. Or VTL ne sait pas faire `63 + null + 28`. Il faut donc transformer ce null en 0.
 
 !!! warning "Attention"
-    Contrairement à un champ texte ou un booléen, quand on efface la valeur (décocher ou supprimer la valeur du champ) d'un champ de type nombre, alors cette vraiable est remise à null. cf _lien vers explication à mettre_
+    Contrairement à un champ texte ou un booléen, quand on efface la valeur (décocher ou supprimer la valeur du champ) d'un champ de type nombre, alors cette variable est remise à null. <br>
+    Voir [le type nombre](../Le%20guide/13-reponse-simple.md/#type-de-reponse-nombre) pour plus de détail.
 
 
 ## Solution
 On va passer par une variable calculée qui va transformer les `null` en `0` pour le vecteur `CA`
 
 1. Créer une variable calculée `NULL_CHECK_TAB_COL` avec un niveau de calcul = `TAB`
-```r
+```
 NULL_CHECK_TAB_COL = nvl($CA$,0)
 ```
 
 2. Utiliser cette variable dans le calcul de la somme 
-```r
+```
 SUM_TAB = sum($NULL_CHECK_TAB_COL$)
 ```
 
