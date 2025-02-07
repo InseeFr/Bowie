@@ -84,7 +84,7 @@ On pourra mobiliser dans un libellé personnalisé des variables collectées, ca
 
 Pour créer un lien hypertexte, on s'appuie sur la syntaxe Markdown :
 
-```vtl
+```
 "Voici un [lien](http://monlien.fr)."
 ```
 
@@ -92,7 +92,7 @@ Pour créer un lien hypertexte, on s'appuie sur la syntaxe Markdown :
 
 La syntaxe pour la création d’un infobulle est la suivante :
 
-```vtl
+```
 Mon libellé de question avec [une infobulle](. "dont voici le contenu").
 ```
 
@@ -203,13 +203,13 @@ C’est l’état d’avancement de cette dernière qui permet de connaître les
 
 Les opérateurs `in` et `not_in` permettent de tester l'appartenance d'une valeur à un ensemble. Par exemple :
 
-```python
+```
 "a" in {"a", "b", "c"} # → true
 ```
 
 Il permet aussi de faire ce test en utilisant des variables :
 
-```python
+```
 $PRENOM$ not_in $PRENOMS_FAMILLE$
 # ou
 $PRENOM$ not_in {"Alice", "Bob", "Charlie"}
@@ -302,8 +302,7 @@ Une variable de type Durée aura une des formes suivantes :
 
 Un contrôle typique est de s'assurer qu'on ne dépasse pas une borne max par exemple. Dans ce cas-là, on modifiera la valeur jusqu'à obtenir une valeur numérique, comme dans l'exemple ci-dessous :
 
-```
-// valeur initiale de DUREE : PT12H30M
+``` title="valeur initiale de DUREE : PT12H30M"
 cast(
     replace(
         replace(
@@ -394,8 +393,7 @@ Il faut deux contrôles, chacun avec un message différent :
 
 ??? tip "Code VTL pour le contrôle du Siret"
 
-    __Contrôle Siret 1__
-    ```
+    ``` title="Contrôle Siret 1"
     match_characters($SIRET$,"^[0-9]{14}$")
     and ((mod(
         cast(substr($SIRET$,1,1),integer)
@@ -410,8 +408,7 @@ Il faut deux contrôles, chacun avec un message différent :
     ,10)) <> 0)
     ```
 
-    __Contrôle Siret 2__
-    ```
+    ``` title="Contrôle Siret 2"
     match_characters($SIRET$,"^[0-9]{14}$")
     and ((mod(
         cast(substr($SIRET$,1,1),integer)
@@ -461,8 +458,7 @@ Comme pour le Siret, on va utiliser le premier contrôle en remplaçant la taill
 Et le code VTL
 ??? tip "Code VTL pour le contrôle du Siren"
 
-    __Contrôle Siren__
-    ```
+    ``` title="Contrôle Siren"
     match_characters($SIREN$,"^[0-9]{9}$")
     and ((mod(
         cast(substr($SIREN$,1,1),integer)
@@ -487,7 +483,6 @@ Le format attendu est un code commençant par 'W' suivie de 9 chiffres. Un contr
 Et le code VTL
 ??? tip "Code VTL pour le contrôle du RNA"
 
-    __Contrôle RNA__
-    ```
+    ``` title="Contrôle RNA"
     not(match_characters($RNA$,"^W\d[\da-zA-Z]\d{7}$"))
     ```
