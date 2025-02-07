@@ -28,6 +28,6 @@ Par ailleurs, lorsqu'elles sont utilisées dans du code VTL, les noms des variab
     - ne peut être un mot réservé de VTL.
 
 !!! danger
-    Eviter de finir le nom d'une variable externe par une valeur numérique.
-    Une variable externe peut contenir un vecteur (par exemple : liste d'habitant issue de la base de sondages ou de la précédente enquête) et sera personnalisée en collecte avec un suffixe séquentiel.
-    Par exemple : pour un vecteur de produits appelé PRODUITS, dans le fichier de personnalisation on pourra avoir PRODUITS_01, PRODUITS_02, etc
+    Il faut éviter de finir le nom d'une variable vecteur (portée boucle ou tableau dynamique) par `_X` sinon Public Enemy ne fonctionnera pas correctement !
+
+    Voir [variable de portée boucle dans Public Enemy](../../../2._Public_Enemy/guide/1-guide-pe-echantillon.md) pour plus de détails.

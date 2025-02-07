@@ -22,14 +22,45 @@ On peut remplir les données à partir de ce fichier schéma :
 
 ...![Variables externes données](../../img/public-enemy/var-ext-data.png)
 
+!!!danger "Encadrer les données avec `""`"
+
+    - Les valeurs d'en-tête et de lignes doivent être encadrées de `""`. Le fichier schéma téléchargé depuis Public Enemy contient bien ces double quotes pour les en-têtes.
+    - Si on utilise Libre Office Calc pour éditer ce fichier, on peut utiliser [**cette astuce**](https://help.libreoffice.org/latest/fr/text/scalc/guide/csv_files.html) pour s'assurer que les `""` sont bien toujours présentes après enregistrement
+    - Pour bien s'assurer que cette contrainte est respectée, on peut ouvrir le fichier de données que l'on constitue avec un éditeur de texte comme Notepad++.
+
+    ???example "Exemple de fichier csv valide"
+        ```
+        "SIREN","ACTIVITE","SALARIE_PRENOM_1","SALARIE_PRENOM_2","SALARIE_PRENOM_3",
+        "120027016","BTP","Pierre","Géraldine",""
+        "987654321","COMMERCE","Solange","Ludovic","Camille"
+        ```
+
 !!!warning "Maximum 10 UE"
 
-    Un fichier de données ne pourra contenir qu'un maximum de 10 unités enquêtées.
+    - Un fichier de données ne pourra contenir qu'un maximum de 10 unités enquêtées.
 
-!!!warning "Encadrer les données avec `"`"
+!!!warning "Ordre des listes de plus de 10 éléments dans un tableau dynamique"
 
-    Les valeurs d'en-tête et de lignes doivent être encadrées de `"`. Le fichier schéma téléchargé depuis Public Enemy contient bien ces double quotes pour les en-têtes.
-    Pour bien s'assurer que cette contrainte est respectée, on peut ouvrir le fichier de données que l'on constitue avec un éditeur de texte comme Notepad++.
+    - Si pour une UE on a une variable sous forme de vecteur et qu'on injecte plus de 10 élément, alors ces derniers ne seront pas affichés dans le bon ordre
+    
+    
+    Ex: J'ai une variable externe LISTE
+    ```
+    LISTE = [LISTE_1,LISTE_2,...,LISTE_9,LISTE_10,LISTE_11]
+    ```
+    si j'injecte cette variable dans l'une des colonne d'un tableau et que je visualise, je vais avoir l'ordre suivant
+    ```
+    LISTE_1, LISTE_10, LISTE_11, LISTE_2, LISTE_3, ...
+    ```
+    
+    ??? example "exemple"
+        ```title="Exemple de csv à importer dans Public Enemy"
+        "LISTE_1","LISTE_2","LISTE_3","LISTE_4","LISTE_5","LISTE_6","LISTE_7","LISTE_8","LISTE_9","LISTE_10","LISTE_11"
+        "code 1","code 2","code 3","","","","","","","","11"
+        "1","2","3","4","5","","","","","",""
+        "1","2","3","4","5","6","7","8","9","10","11"
+        ```
+        ![alt text](../../img/pogues/wrong_order_list_ext.png)
 
 !!!note "Variables de portée Boucle ou lignes de tableaux dynamiques"
 
