@@ -3012,31 +3012,31 @@
 <blockquote>
 <p>On construit une séquence contenant les questions permettant d'identifier le Kish contenant la question du nombre d'habitants et la sous-séquence d'identification.</p>
 </blockquote>
-<p>On crée une séquence contenant une première question pour collecter le nombre d'habitants (variable numérique collectée <code>NBHAB</code>).</p>
-<p>On crée ensuite dans cette même séquence une sous-séquence <code>IDENTIFICATION</code> contenant :</p>
+<p>On crée une séquence contenant une première question pour collecter le nombre d'habitants (variable numérique collectée <code class="highlight"><span class="n">NBHAB</span></code>).</p>
+<p>On crée ensuite dans cette même séquence une sous-séquence <code class="highlight"><span class="n">IDENTIFICATION</span></code> contenant :</p>
 <ul>
-<li>une question pour collecter le prénom de chaque habitant (variable texte collectée <code>PRENOM</code>).</li>
-<li>une question pour collecter la date de naissance (variable date <code>DATE_DE_NAISANCE</code>)</li>
+<li>une question pour collecter le prénom de chaque habitant (variable texte collectée <code class="highlight"><span class="n">PRENOM</span></code>).</li>
+<li>une question pour collecter la date de naissance (variable date <code class="highlight"><span class="n">DATE_DE_NAISANCE</span></code>)</li>
 </ul>
-<p>Il faut ensuite créer une boucle <code>BOUCLE_PRENOMS</code> sur cette sous-séquence avec la formule <code>cast($NBHAB$, integer)</code> pour le minimum et le maximum.</p>
+<p>Il faut ensuite créer une boucle <code class="highlight"><span class="n">BOUCLE_PRENOMS</span></code> sur cette sous-séquence avec la formule <code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">NBHAB</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">integer</span><span class="p">)</span></code> pour le minimum et le maximum.</p>
 <h3 id="sequence-de-questions">Séquence de questions</h3>
 <blockquote>
 <p>On crée la séquence de questionnement</p>
 </blockquote>
-<p>Une séquence contenant une question <code>QUESTION_POUR_LE_KISH</code>, dont le libellé est personnalisé avec le prénom (via la formule VTL <code>"Question pour " || cast($PRENOM$, string)</code>).</p>
-<p>On crée la boucle <code>BOUCLE_QUESTION_KISH</code> basée sur <code>BOUCLE_PRENOMS</code> qui englobe la séquence de questions pour le Kish.</p>
+<p>Une séquence contenant une question <code class="highlight"><span class="n">QUESTION_POUR_LE_KISH</span></code>, dont le libellé est personnalisé avec le prénom (via la formule VTL <code class="highlight"><span class="s">&quot;Question pour &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="p">)</span></code>).</p>
+<p>On crée la boucle <code class="highlight"><span class="n">BOUCLE_QUESTION_KISH</span></code> basée sur <code class="highlight"><span class="n">BOUCLE_PRENOMS</span></code> qui englobe la séquence de questions pour le Kish.</p>
 <h2 id="calcul-du-kish">Calcul du Kish</h2>
 <blockquote>
 <p>Les éléments permettant de procéder au calcul lui-même</p>
 </blockquote>
 <p>Le coeur de la sélection est la formule permettant de former un score de sélection :</p>
-<p><code>cast(if $MOIS_NAISSANCE_INT$ &lt; 6 then $MOIS_NAISSANCE_INT$ + 12 else $MOIS_NAISSANCE_INT$, string) || "." || $JOUR_NAISSANCE_STR$</code></p>
+<p><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="n">if</span><span class="w"> </span><span class="o">$</span><span class="n">MOIS_NAISSANCE_INT</span><span class="o">$</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="o">$</span><span class="n">MOIS_NAISSANCE_INT</span><span class="o">$</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="o">$</span><span class="n">MOIS_NAISSANCE_INT</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">$</span><span class="n">JOUR_NAISSANCE_STR</span><span class="o">$</span></code></p>
 <p>Elle donnera par exemple :</p>
 <ul>
-<li>pour la date de naissance <code>01/06/2000</code> le score <code>6.01</code></li>
-<li>pour <code>10/05/1990</code> le score <code>17.10</code></li>
+<li>pour la date de naissance <code class="highlight"><span class="m">01</span><span class="o">/</span><span class="m">06</span><span class="o">/</span><span class="m">2000</span></code> le score <code class="highlight"><span class="m">6.01</span></code></li>
+<li>pour <code class="highlight"><span class="m">10</span><span class="o">/</span><span class="m">05</span><span class="o">/</span><span class="m">1990</span></code> le score <code class="highlight"><span class="m">17.10</span></code></li>
 </ul>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg></span> On ajoute à ce premier score un aléa tiré à partir de la position de certaines lettres dans le prénom, voir les formules ci-dessous des variables <code>ALEA_PRENOM</code> et <code>SCORE_KISH_INT_ALEA_PRENOM</code>. Cela permet de traiter le cas de personnes nées les mêmes jour et mois.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg></span> On ajoute à ce premier score un aléa tiré à partir de la position de certaines lettres dans le prénom, voir les formules ci-dessous des variables <code class="highlight"><span class="n">ALEA_PRENOM</span></code> et <code class="highlight"><span class="n">SCORE_KISH_INT_ALEA_PRENOM</span></code>. Cela permet de traiter le cas de personnes nées les mêmes jour et mois.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>La formule donnée plus bas pour la création de l'aléa peut être adaptée, amendée pour améliorer la production d'un aléa. Cependant, il faut veiller à rester parcimonieux pour ne pas créer un code difficile à maintenir.</p>
@@ -3056,53 +3056,53 @@
 <tr>
 <td>MOIS_NAISSANCE_INT</td>
 <td>BOUCLE_PRENOMS</td>
-<td><code>cast(cast(cast($DATE_DE_NAISSANCE$, date, "YYYY-MM-DD"), string, "MM"), integer)</code></td>
+<td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">DATE_DE_NAISSANCE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MM&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">integer</span><span class="p">)</span></code></td>
 </tr>
 <tr>
 <td>JOUR_NAISSANCE_STR</td>
 <td>BOUCLE_PRENOMS</td>
-<td><code>cast(cast($DATE_DE_NAISSANCE$, date, "YYYY-MM-DD"),string, "DD")</code></td>
+<td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">DATE_DE_NAISSANCE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">),</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DD&quot;</span><span class="p">)</span></code></td>
 </tr>
 <tr>
 <td>SCORE_KISH</td>
 <td>BOUCLE_PRENOMS</td>
-<td><code>cast(if $MOIS_NAISSANCE_INT$ &lt; 6 then $MOIS_NAISSANCE_INT$ + 12 else $MOIS_NAISSANCE_INT$, string) || "." || $JOUR_NAISSANCE_STR$</code></td>
+<td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="n">if</span><span class="w"> </span><span class="o">$</span><span class="n">MOIS_NAISSANCE_INT</span><span class="o">$</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="o">$</span><span class="n">MOIS_NAISSANCE_INT</span><span class="o">$</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="o">$</span><span class="n">MOIS_NAISSANCE_INT</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">$</span><span class="n">JOUR_NAISSANCE_STR</span><span class="o">$</span></code></td>
 </tr>
 <tr>
 <td>SCORE_KISH_INT</td>
 <td>BOUCLE_PRENOMS</td>
-<td><code>cast($SCORE_KISH$, number)</code></td>
+<td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">SCORE_KISH</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="p">)</span></code></td>
 </tr>
 <tr>
 <td>ALEA_PRENOM</td>
 <td>BOUCLE_PRENOMS</td>
-<td><code>instr(lower(PRENOM), "e") + instr(lower(PRENOM), "a") + instr(lower(PRENOM), "i") + instr(lower(PRENOM), "s") + instr(lower(PRENOM), "n") + instr(lower(PRENOM), "r") + instr(lower(PRENOM), "t") + instr(lower(PRENOM), "o")</code></td>
+<td><code class="highlight"><span class="nf">instr</span><span class="p">(</span><span class="nf">lower</span><span class="p">(</span><span class="n">PRENOM</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;e&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">instr</span><span class="p">(</span><span class="nf">lower</span><span class="p">(</span><span class="n">PRENOM</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;a&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">instr</span><span class="p">(</span><span class="nf">lower</span><span class="p">(</span><span class="n">PRENOM</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;i&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">instr</span><span class="p">(</span><span class="nf">lower</span><span class="p">(</span><span class="n">PRENOM</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;s&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">instr</span><span class="p">(</span><span class="nf">lower</span><span class="p">(</span><span class="n">PRENOM</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;n&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">instr</span><span class="p">(</span><span class="nf">lower</span><span class="p">(</span><span class="n">PRENOM</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;r&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">instr</span><span class="p">(</span><span class="nf">lower</span><span class="p">(</span><span class="n">PRENOM</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;t&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">instr</span><span class="p">(</span><span class="nf">lower</span><span class="p">(</span><span class="n">PRENOM</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;o&quot;</span><span class="p">)</span></code></td>
 </tr>
 <tr>
 <td>SCORE_KISH_INT_ALEA_PRENOM</td>
 <td>BOUCLE_PRENOMS</td>
-<td><code>$SCORE_KISH_INT$ + $ALEA_PRENOM$ / 100</code></td>
+<td><code class="highlight"><span class="o">$</span><span class="n">SCORE_KISH_INT</span><span class="o">$</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">$</span><span class="n">ALEA_PRENOM</span><span class="o">$</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">100</span></code></td>
 </tr>
 <tr>
 <td>KISH_MIN</td>
 <td>Questionnaire</td>
-<td><code>min($SCORE_KISH_INT_ALEA_PRENOM$)</code></td>
+<td><code class="highlight"><span class="nf">min</span><span class="p">(</span><span class="o">$</span><span class="n">SCORE_KISH_INT_ALEA_PRENOM</span><span class="o">$</span><span class="p">)</span></code></td>
 </tr>
 <tr>
 <td>KISH_INDICATOR</td>
 <td>BOUCLE_PRENOMS</td>
-<td><code>if $KISH_MIN$ = $SCORE_KISH_INT_ALEA_PRENOM$ then 1 else 0</code></td>
+<td><code class="highlight"><span class="n">if</span><span class="w"> </span><span class="o">$</span><span class="n">KISH_MIN</span><span class="o">$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">$</span><span class="n">SCORE_KISH_INT_ALEA_PRENOM</span><span class="o">$</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span></code></td>
 </tr>
 <tr>
 <td>NB_POTENTIAL_KISH</td>
 <td>Questionnaire</td>
-<td><code>sum($KISH_INDICATOR$)</code></td>
+<td><code class="highlight"><span class="nf">sum</span><span class="p">(</span><span class="o">$</span><span class="n">KISH_INDICATOR</span><span class="o">$</span><span class="p">)</span></code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="filtre">Filtre</h2>
 <p>Pour ne présenter qu'un seul jeu de questions à l'individu sélectionné, il est nécessaire d'ajouter un filtre sur ces questions à partir du score calculé en amont.</p>
-<p>Le filtre a pour formule <code>$KISH_INDICATOR$ = 1</code>.</p>
+<p>Le filtre a pour formule <code class="highlight"><span class="o">$</span><span class="n">KISH_INDICATOR</span><span class="o">$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span></code>.</p>
 <h2 id="questionnaire-exemple">Questionnaire exemple</h2>
 <p>Pour référence, <a href="https://pogues.demo.insee.io/questionnaire/l8lfytfu">un questionnaire implémentant cette solution</a>.</p>
 
@@ -3206,7 +3206,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

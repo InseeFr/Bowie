@@ -3055,7 +3055,7 @@
 
 
 <h1 id="suggester-philosophie-et-nomenclatures">Suggester : philosophie et nomenclatures</h1>
-<p>Les nomenclatures doivent contenir au moins les attributs/colonnes <code>id</code> et <code>label</code>.</p>
+<p>Les nomenclatures doivent contenir au moins les attributs/colonnes <code class="highlight"><span class="n">id</span></code> et <code class="highlight"><span class="n">label</span></code>.</p>
 <p>On effectue la recherche sur les libellés et/ou les identifiants suivant le paramétrage qui a été choisi pour chacune de ces nomenclatures.</p>
 <p>Le paramétrage peut concerner les éléments suivants :</p>
 <ul>
@@ -3073,7 +3073,7 @@ On souhaite pouvoir récupérer les valeurs en même temps la variable contenant
 <h3 id="scenario">Scenario</h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Dans l'exemple suivant, on souhaite récupérer dans la variable <code>CALC_VAR</code> la valeur correspondant à la colonne "label" de la nomenclature d'identifiant technique "COMMERCE-2024" lorsqu'on collecte comme identifiant la variable <code>SUGG</code></p>
+<p>Dans l'exemple suivant, on souhaite récupérer dans la variable <code class="highlight"><span class="n">CALC_VAR</span></code> la valeur correspondant à la colonne "label" de la nomenclature d'identifiant technique "COMMERCE-2024" lorsqu'on collecte comme identifiant la variable <code class="highlight"><span class="n">SUGG</span></code></p>
 </div>
 <h4 id="nomenclartue-commerce-2024">Nomenclartue <em>Commerce-2024</em></h4>
 <table>
@@ -3096,7 +3096,7 @@ On souhaite pouvoir récupérer les valeurs en même temps la variable contenant
 </table>
 <h4 id="etapes">Étapes</h4>
 <ol>
-<li>Créer une variable collectée basée sur une question à choix unique avec recherche sur liste et avec l'id <code>SUGG</code>.
+<li>Créer une variable collectée basée sur une question à choix unique avec recherche sur liste et avec l'id <code class="highlight"><span class="n">SUGG</span></code>.
 <a class="glightbox" href="../../../img/pogues/var-sugg.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/var-sugg.png" /></a></li>
 </ol>
 <div class="admonition abstract">
@@ -3104,12 +3104,12 @@ On souhaite pouvoir récupérer les valeurs en même temps la variable contenant
 <p>C'est toujours mieux de nommer les variables en MAJUSCULE séparé par des '_'</p>
 </div>
 <ol>
-<li>Créer une variable calculée <code>CALC_VAR</code> avec la formule suivante : <br>
-<code>left_join($SUGG$, "COMMERCE-2024" using id, label)</code>
+<li>Créer une variable calculée <code class="highlight"><span class="n">CALC_VAR</span></code> avec la formule suivante : <br>
+<code class="highlight"><span class="nf">left_join</span><span class="p">(</span><span class="o">$</span><span class="n">SUGG</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;COMMERCE-2024&quot;</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="p">)</span></code>
 <a class="glightbox" href="../../../img/pogues/ex-var-cal-left-join.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/ex-var-cal-left-join.png" /></a></li>
 </ol>
 <h4 id="resultats">Résultats</h4>
-<p>Je peux ensuite afficher cette valeur, par exemple dans une déclaration, en appelant la variable calculée <code>CALC_VAR</code></p>
+<p>Je peux ensuite afficher cette valeur, par exemple dans une déclaration, en appelant la variable calculée <code class="highlight"><span class="n">CALC_VAR</span></code></p>
 <details class="example" open="open">
 <summary>Exemple de déclaration en VTL</summary>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;Nomenclature avec les colonnes</span>
@@ -3231,7 +3231,7 @@ Ex : Un bouton qui permet d'ajouter une paire clé/valeur qui indique le nom de 
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

@@ -2880,15 +2880,15 @@
 <p>Pogues permet de référencer dans le questionnaire des variables externes, c'est à dire des variables qui sont fournies au chargement du questionnaire lors de la collecte, en provenance d'un fichier de données produit à partir de données connues et attachées à l'unité enquêtée.</p>
 <p>Si le <em>typage</em> disponible dans Pogues pour ces variables est celui disponible par ailleurs pour les variables collectées et calculées, on n'a en fait pas le choix : l'ensemble des variables externes injectées dans le questionnaire sont du <strong>texte</strong>.</p>
 <p>L'impact : si ces variables doivent être utilisées comme numériques, il faut alors <a href="../../guide/vtl.md#transtypage">les transformer</a>. Par exemple :</p>
-<div class="highlight"><pre><span></span><code>cast($VAR_EXT$, integer)
+<div class="highlight"><pre><span></span><code><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR_EXT</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">integer</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="ajouter-des-variables-externes-de-portee-boucle">Ajouter des variables externes de portée Boucle</h2>
 <p>Dans certains protocoles complexes, on peut vouloir intégrer des variables externes correspondant à des variables collectées précédemement dans un autre questionnaire à l'intérieur d'une boucle.</p>
-<p>Imaginons par exemple que dans le premier questionnaire, on ait demandé le nombre d'habitants du logement (variable <code>NBHAB</code>), puis, à l'intérieur d'une boucle répétée pour chaque habitant on ait collecté les prénoms et ages (respectivement les variables <code>PRENOM</code> et <code>AGE</code>).</p>
+<p>Imaginons par exemple que dans le premier questionnaire, on ait demandé le nombre d'habitants du logement (variable <code class="highlight"><span class="n">NBHAB</span></code>), puis, à l'intérieur d'une boucle répétée pour chaque habitant on ait collecté les prénoms et ages (respectivement les variables <code class="highlight"><span class="n">PRENOM</span></code> et <code class="highlight"><span class="n">AGE</span></code>).</p>
 <p>Afin de récupérer ces variables dans le second questionnaire :</p>
 <ul>
-<li>je crée dans celui-ci la boucle <code>BOUCLE_PRINCIPALE</code>, avec un min et max dont la valeur est la variable <code>NBHAB</code> (à créer, voir ci-dessous),</li>
-<li>je crée  les variables externes <code>NBHAB</code> (Portée Questionnaire), <code>PRENOM</code> et <code>AGE</code> (portée <code>BOUCLE_PRINCIPALE</code>).</li>
+<li>je crée dans celui-ci la boucle <code class="highlight"><span class="n">BOUCLE_PRINCIPALE</span></code>, avec un min et max dont la valeur est la variable <code class="highlight"><span class="n">NBHAB</span></code> (à créer, voir ci-dessous),</li>
+<li>je crée  les variables externes <code class="highlight"><span class="n">NBHAB</span></code> (Portée Questionnaire), <code class="highlight"><span class="n">PRENOM</span></code> et <code class="highlight"><span class="n">AGE</span></code> (portée <code class="highlight"><span class="n">BOUCLE_PRINCIPALE</span></code>).</li>
 </ul>
 <p>Il faudra ensuite fournir à l'intégration un fichier CSV contenant les variables et valeurs ad hoc (voir <a href="../../../public-enemy/guide/1-guide-pe-echantillon.md">ici</a>, section "Variables de portée Boucle")</p>
 <div class="admonition danger">
@@ -2998,7 +2998,7 @@ Par exemple : pour un vecteur de produits appelé PRODUITS, dans le fichier de p
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer", "navigation.indexes", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

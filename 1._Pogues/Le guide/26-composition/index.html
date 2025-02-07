@@ -3147,7 +3147,7 @@ Lorsqu'on compose un questionnaire qui utilise le questionnaire d'origine et le 
 <p><strong>=&gt; Utiliser le bouton de duplication de liste de code</strong>
 <a class="glightbox" href="../../../img/pogues/duplication-liste-code-case-non-cochee.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="duplication liste code case non cochée" src="../../../img/pogues/duplication-liste-code-case-non-cochee.png" /></a></p>
 <ul>
-<li>Juste après avoir coché la case un <code>_2</code> est rajouté à la fin du nom. Il est possible de le changer juste après</li>
+<li>Juste après avoir coché la case un <code class="highlight">_<span class="m">2</span></code> est rajouté à la fin du nom. Il est possible de le changer juste après</li>
 </ul>
 <p><a class="glightbox" href="../../../img/pogues/duplication-liste-code-case-cochee.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="duplication liste code case cochée" src="../../../img/pogues/duplication-liste-code-case-cochee.png" /></a></p>
 <ul>
@@ -3170,8 +3170,8 @@ Lorsqu'on compose un questionnaire qui utilise le questionnaire d'origine et le 
 <p>Attention à la duplication également lorsqu'on veut "sécuriser" son questionnaire. La composition se fait par référence.</p>
 <details class="example">
 <summary>Exemple</summary>
-<p>si C est la composition de A et B, alors C fait référence aux ids de A et de B (<code>id_A</code> et <code>id_B</code> par ex).<br>
-Si je duplique A en AA, B en BB, je crée 2 nouveaux id, <code>id_AA</code> et <code>id_BB</code> et que je modifie AA et BB, C faisant toujours référence par composition à <code>id_A</code> et <code>id_B</code>, donc à A et B, il n'aura pas les modifications contenus dans AA et BB.</p>
+<p>si C est la composition de A et B, alors C fait référence aux ids de A et de B (<code class="highlight"><span class="n">id_A</span></code> et <code class="highlight"><span class="n">id_B</span></code> par ex).<br>
+Si je duplique A en AA, B en BB, je crée 2 nouveaux id, <code class="highlight"><span class="n">id_AA</span></code> et <code class="highlight"><span class="n">id_BB</span></code> et que je modifie AA et BB, C faisant toujours référence par composition à <code class="highlight"><span class="n">id_A</span></code> et <code class="highlight"><span class="n">id_B</span></code>, donc à A et B, il n'aura pas les modifications contenus dans AA et BB.</p>
 </details>
 <h3 id="variables-creees-dans-un-questionnaire-et-utilisees-dans-un-autre">Variables créées dans un questionnaire et utilisées dans un autre</h3>
 <p>Un questionnaire qui sera utilisé dans un questionnaire hôte peut avoir des parties filtrées ou des variables calculées, utilisant les variables d'une autre partie de questionnaire : 
@@ -3294,7 +3294,7 @@ Si je duplique A en AA, B en BB, je crée 2 nouveaux id, <code>id_AA</code> et <
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

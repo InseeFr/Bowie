@@ -2923,32 +2923,32 @@ Elle peut contenir des sauts de lignes, du gras, de l'italique</p>
 <blockquote>
 <p>On souhaite afficher de l'italique (exemple : mot en anglais).</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>&quot;Je suis une aide de séquence Web et CAPI, après la question, avec :
-- de la mise en forme
-- de l&#39;*italique*
-&quot;
+<div class="highlight"><pre><span></span><code><span class="s">&quot;Je suis une aide de séquence Web et CAPI, après la question, avec :</span>
+<span class="s">- de la mise en forme</span>
+<span class="s">- de l&#39;*italique*</span>
+<span class="s">&quot;</span>
 </code></pre></div>
 <blockquote>
 <p>On souhaite afficher du gras.</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>&quot;Je suis une aide de séquence Web et CAPI, après la question, avec :
-- du texte en **gras**
-&quot;
+<div class="highlight"><pre><span></span><code><span class="s">&quot;Je suis une aide de séquence Web et CAPI, après la question, avec :</span>
+<span class="s">- du texte en **gras**</span>
+<span class="s">&quot;</span>
 </code></pre></div>
 <blockquote>
 <p>On souhaite afficher plusieurs lignes, conditionnées :</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>(if ($MINEUR$ = &quot;1&quot;) then (&quot;Nous souhaitons interroger un(e) représentant(e) légal(e) de &quot; || $PREN_IND$ || &quot;. 
-Le questionnaire portera sur les caractéristiques de ses déplacements personnels ou professionnels : durée, mode d&#39;hébergement, dépenses, destination en France ou à l’étranger et dates.&quot;) 
-else &quot;Le questionnaire portera sur les caractéristiques de ses déplacements personnels ou professionnels : durée, mode d&#39;hébergement, dépenses, destination en France ou à l’étranger et dates.&quot;)
-|| &quot;
- Vous pouvez aussi répondre au questionnaire si &quot; || $IL_ELLE$ || &quot; n’a pas voyagé.&quot;
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="o">$</span><span class="n">MINEUR</span><span class="o">$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">)</span><span class="w"> </span><span class="nf">then </span><span class="p">(</span><span class="s">&quot;Nous souhaitons interroger un(e) représentant(e) légal(e) de &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">$</span><span class="n">PREN_IND</span><span class="o">$</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot;. </span>
+<span class="s">Le questionnaire portera sur les caractéristiques de ses déplacements personnels ou professionnels : durée, mode d&#39;hébergement, dépenses, destination en France ou à l’étranger et dates.&quot;</span><span class="p">)</span><span class="w"> </span>
+<span class="n">else</span><span class="w"> </span><span class="s">&quot;Le questionnaire portera sur les caractéristiques de ses déplacements personnels ou professionnels : durée, mode d&#39;hébergement, dépenses, destination en France ou à l’étranger et dates.&quot;</span><span class="p">)</span>
+<span class="o">||</span><span class="w"> </span><span class="s">&quot;</span>
+<span class="s"> Vous pouvez aussi répondre au questionnaire si &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">$</span><span class="n">IL_ELLE</span><span class="o">$</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; n’a pas voyagé.&quot;</span>
 </code></pre></div>
 <p>ou encore :</p>
-<div class="highlight"><pre><span></span><code>&quot;Rappel de la dépense 1 en € : &quot; || nvl(cast($VAR1$,string),&quot;///&quot;) || &quot; 
-Dépense 2  : &quot; || nvl(cast($VAR2$,string),&quot;///&quot;) || &quot; 
-Dépense 3 : &quot; || nvl(cast($VAR3$,string),&quot;///&quot;) || &quot; 
-Dépense 4 : &quot; || nvl(cast($VAR4$,string),&quot;///&quot;) ```
+<div class="highlight"><pre><span></span><code><span class="s">&quot;Rappel de la dépense 1 en € : &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR1</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">),</span><span class="s">&quot;///&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; </span>
+<span class="s">Dépense 2  : &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR2</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">),</span><span class="s">&quot;///&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; </span>
+<span class="s">Dépense 3 : &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR3</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">),</span><span class="s">&quot;///&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; </span>
+<span class="s">Dépense 4 : &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR4</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">),</span><span class="s">&quot;///&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">``</span>`
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3057,7 +3057,7 @@ Dépense 4 : &quot; || nvl(cast($VAR4$,string),&quot;///&quot;) ```
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

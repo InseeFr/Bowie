@@ -2896,21 +2896,21 @@
 <p>Vous l'avez remarqué, le champ qui permet la création d'un libellé de question n'est pas un champ texte ordinaire. Il s'agit en effet d'un éditeur de code VTL !</p>
 <p>Cela signifie que l'on peut utiliser le langage VTL pour personnaliser le libellé, le rendre dynamique.</p>
 <p>On propose ici de créer une variable calculée permettant d'afficher le prénom du répondant s'il a été renseigné et de proposer un présentation plus générique si ce n'est pas le cas (pour rappel, le contrôle posé sur la remplissage du prénom n'est pas bloquant !).</p>
-<h2 id="creation-de-la-variable-calculee-persolib">Création de la variable calculée <code>PERSOLIB</code></h2>
-<p>Comme précédemment, au sein d'une question, dans l'onglet <em>Variables calculées</em>, on crée la variable <code>PERSOLIB</code> dont la valeur est :</p>
+<h2 id="creation-de-la-variable-calculee-persolib">Création de la variable calculée <code class="highlight"><span class="n">PERSOLIB</span></code></h2>
+<p>Comme précédemment, au sein d'une question, dans l'onglet <em>Variables calculées</em>, on crée la variable <code class="highlight"><span class="n">PERSOLIB</span></code> dont la valeur est :</p>
 <ul>
 <li>la variable PRENOM si elle est renseignée</li>
 <li>le texte "Cher répondant, " si ce n'est pas le cas.</li>
 </ul>
 <details class="example">
 <summary>Solution</summary>
-<p><code>if nvl($PRENOM$, "") = "" then "Cher répondant, " else $PRENOM$ || " ,"</code></p>
+<p><code class="highlight"><span class="n">if</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="s">&quot;Cher répondant, &quot;</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; ,&quot;</span></code></p>
 </details>
-<h2 id="personnalisation-du-libelle-de-la-question-appreciation">Personnalisation du libellé de la question <code>APPRECIATION</code></h2>
-<p>On peut retourner sur la question dont l'identifiant est <code>APPRECIATION</code>, pour modifier son libellé de manière à commencer par le texte produit par la variable <code>PERSOLIB</code>.</p>
+<h2 id="personnalisation-du-libelle-de-la-question-appreciation">Personnalisation du libellé de la question <code class="highlight"><span class="n">APPRECIATION</span></code></h2>
+<p>On peut retourner sur la question dont l'identifiant est <code class="highlight"><span class="n">APPRECIATION</span></code>, pour modifier son libellé de manière à commencer par le texte produit par la variable <code class="highlight"><span class="n">PERSOLIB</span></code>.</p>
 <details class="example">
 <summary>Solution</summary>
-<p><code>"" || $PERSOLIB$ || " avez-vous apprécié l'exercice ?"</code></p>
+<p><code class="highlight"><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">$</span><span class="n">PERSOLIB</span><span class="o">$</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; avez-vous apprécié l&#39;exercice ?&quot;</span></code></p>
 </details>
 
 
@@ -3013,7 +3013,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

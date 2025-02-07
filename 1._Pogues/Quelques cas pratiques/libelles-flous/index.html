@@ -2895,71 +2895,71 @@
 <h1 id="collecte-par-libelles-flous">Collecte par libellés flous</h1>
 <p>Lors de la collecte de la profession d'un enquêté, la première réponse se fait traditionnellement à travers une liste fournie de dénominations (et par le truchement d'une recherche sur liste avec autocomplétion). Il peut cependant arriver que le répondant ne trouve pas de libellés qui le satisfasse. Dans ce cas on lui proposera en deuxième intention un champ de réponse libre. Dans ce cas de figure on peut chercher à identifier ce que l'on appelle des <em>libellés flous</em> c'est-à-dire pour lesquels on va demander de préciser la réponse.</p>
 <p>Le schéma de questionnement est donc le suivant :</p>
-<div class="highlight"><pre><span></span><code>- La question initiale (liste simple ou suggester)
-- La question avec réponse sur champ libre
-  - Filtrée sur la non réponse à la question initiale
-  - Normalisation du libellé en clair
-- L&#39;identification d&#39;un libellé flou
-- La question de précision
-  - Filtrée sur l&#39;appartenance du libellé en clair à la liste des libellés flous
+<div class="highlight"><pre><span></span><code><span class="o">-</span><span class="w"> </span><span class="n">La</span><span class="w"> </span><span class="n">question</span><span class="w"> </span><span class="nf">initiale </span><span class="p">(</span><span class="n">liste</span><span class="w"> </span><span class="n">simple</span><span class="w"> </span><span class="n">ou</span><span class="w"> </span><span class="n">suggester</span><span class="p">)</span>
+<span class="o">-</span><span class="w"> </span><span class="n">La</span><span class="w"> </span><span class="n">question</span><span class="w"> </span><span class="n">avec</span><span class="w"> </span><span class="n">réponse</span><span class="w"> </span><span class="n">sur</span><span class="w"> </span><span class="n">champ</span><span class="w"> </span><span class="n">libre</span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">Filtrée</span><span class="w"> </span><span class="n">sur</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">non</span><span class="w"> </span><span class="n">réponse</span><span class="w"> </span>à<span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">question</span><span class="w"> </span><span class="n">initiale</span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">Normalisation</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">libellé</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="n">clair</span>
+<span class="o">-</span><span class="w"> </span><span class="n">L</span><span class="s">&#39;identification d&#39;</span><span class="n">un</span><span class="w"> </span><span class="n">libellé</span><span class="w"> </span><span class="n">flou</span>
+<span class="o">-</span><span class="w"> </span><span class="n">La</span><span class="w"> </span><span class="n">question</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">précision</span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">Filtrée</span><span class="w"> </span><span class="n">sur</span><span class="w"> </span><span class="n">l</span><span class="s">&#39;</span><span class="err">appartenance du libellé en clair à la liste des libellés flous</span>
 </code></pre></div>
 <h2 id="mode-operatoire">Mode opératoire</h2>
-<p>On commence donc par créer la question initiale, avec un type de réponse à choix unique ou via une recherche sur liste (<img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> pas encore directement implémenté dans Pogues). La variable issue de cette réponse sera nommée <code>PROFESSION</code>.</p>
-<p>Pour pouvoir proposer une deuxième question proposant un champ texte libre et une variable de collecte <code>PROFESSION_EN_CLAIR</code>. Cette question sera filtrée par l'expression :</p>
-<p><code>isnull($PROFESSION$)</code></p>
+<p>On commence donc par créer la question initiale, avec un type de réponse à choix unique ou via une recherche sur liste (<img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> pas encore directement implémenté dans Pogues). La variable issue de cette réponse sera nommée <code class="highlight"><span class="n">PROFESSION</span></code>.</p>
+<p>Pour pouvoir proposer une deuxième question proposant un champ texte libre et une variable de collecte <code class="highlight"><span class="n">PROFESSION_EN_CLAIR</span></code>. Cette question sera filtrée par l'expression :</p>
+<p><code class="highlight"><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">PROFESSION</span><span class="o">$</span><span class="p">)</span></code></p>
 <p>Avant de pouvoir mobiliser cette réponse, nous allons la normaliser pour coller à la liste existante des libellés flous. Cette normalisation :</p>
 <ul>
 <li>transforme les caractères en minuscules</li>
-<li>supprime les espaces (<code>" "</code>)</li>
-<li>remplace des caractères accentués en caractères non accentués (par exemple un <code>à</code> en <code>a</code>)</li>
+<li>supprime les espaces (<code class="highlight"><span class="s">&quot; &quot;</span></code>)</li>
+<li>remplace des caractères accentués en caractères non accentués (par exemple un <code class="highlight">à</code> en <code class="highlight"><span class="n">a</span></code>)</li>
 <li>enfin passe en majuscules le libellé obtenu par ces transformations</li>
 </ul>
 <p>Le code VTL sera :</p>
-<div class="highlight"><pre><span></span><code>upper(
-    replace(
-        replace(
-            replace(
-                replace(
-                    replace(
-                        replace(lower($PROFESSION_EN_CLAIR$), &quot; &quot;, &quot;&quot;)
-                        , &quot;à&quot;, &quot;a&quot;)
-                    , &quot;ç&quot;, &quot;c&quot;)
-                , &quot;é&quot;, &quot;e&quot;)
-            , &quot;è&quot;, &quot;e&quot;)
-        , &quot;ê&quot;, &quot;e&quot;)
-        )
+<div class="highlight"><pre><span></span><code><span class="nf">upper</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">replace</span><span class="p">(</span>
+<span class="w">        </span><span class="nf">replace</span><span class="p">(</span>
+<span class="w">            </span><span class="nf">replace</span><span class="p">(</span>
+<span class="w">                </span><span class="nf">replace</span><span class="p">(</span>
+<span class="w">                    </span><span class="nf">replace</span><span class="p">(</span>
+<span class="w">                        </span><span class="nf">replace</span><span class="p">(</span><span class="nf">lower</span><span class="p">(</span><span class="o">$</span><span class="n">PROFESSION_EN_CLAIR</span><span class="o">$</span><span class="p">),</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span>
+<span class="w">                        </span><span class="p">,</span><span class="w"> </span><span class="s">&quot;à&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;a&quot;</span><span class="p">)</span>
+<span class="w">                    </span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ç&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;c&quot;</span><span class="p">)</span>
+<span class="w">                </span><span class="p">,</span><span class="w"> </span><span class="s">&quot;é&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;e&quot;</span><span class="p">)</span>
+<span class="w">            </span><span class="p">,</span><span class="w"> </span><span class="s">&quot;è&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;e&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ê&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;e&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">)</span>
 </code></pre></div>
 <blockquote>
 <p>Vous trouverez plus bas, une explication détaillé du code.</p>
 </blockquote>
-<p>On crée ensuite une troisième question demandant des précisions sur le libellé entré en clair si celui-ci est dans la liste des libellés flous. Pour cela, on crée un filtre sur cette troisième question qui s'appuie sur la variable <code>PROFESSION_EN_CLAIR_DANS_LIBELLES_FLOUS</code> dont le code sera :</p>
-<div class="highlight"><pre><span></span><code>$PROFESSION_EN_CLAIR$ in {&quot;ACCOMPAGNATEUR&quot;,
-&quot;ACCOMPAGNATRICE&quot;,
-&quot;ACHETEUR&quot;,
-&quot;ACHETEUSE&quot;,
-&quot;ACTIVITESAISONNIERE&quot;,
-&quot;ADJOINT&quot;,
-&quot;ADJOINTADMINISTRATIF&quot;,
-&quot;ADJOINTADMINISTRATIFPRINCIPAL&quot;,
-&quot;ADJOINTADMINISTRATIFTERRITORIAL&quot;,
-&quot;ADJOINTTECHNIQUE&quot;,
-&quot;ADJOINTTECHNIQUEALACOMMUNE&quot;, 
-[...]
-}
+<p>On crée ensuite une troisième question demandant des précisions sur le libellé entré en clair si celui-ci est dans la liste des libellés flous. Pour cela, on crée un filtre sur cette troisième question qui s'appuie sur la variable <code class="highlight"><span class="n">PROFESSION_EN_CLAIR_DANS_LIBELLES_FLOUS</span></code> dont le code sera :</p>
+<div class="highlight"><pre><span></span><code><span class="o">$</span><span class="n">PROFESSION_EN_CLAIR</span><span class="o">$</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;ACCOMPAGNATEUR&quot;</span><span class="p">,</span>
+<span class="s">&quot;ACCOMPAGNATRICE&quot;</span><span class="p">,</span>
+<span class="s">&quot;ACHETEUR&quot;</span><span class="p">,</span>
+<span class="s">&quot;ACHETEUSE&quot;</span><span class="p">,</span>
+<span class="s">&quot;ACTIVITESAISONNIERE&quot;</span><span class="p">,</span>
+<span class="s">&quot;ADJOINT&quot;</span><span class="p">,</span>
+<span class="s">&quot;ADJOINTADMINISTRATIF&quot;</span><span class="p">,</span>
+<span class="s">&quot;ADJOINTADMINISTRATIFPRINCIPAL&quot;</span><span class="p">,</span>
+<span class="s">&quot;ADJOINTADMINISTRATIFTERRITORIAL&quot;</span><span class="p">,</span>
+<span class="s">&quot;ADJOINTTECHNIQUE&quot;</span><span class="p">,</span>
+<span class="s">&quot;ADJOINTTECHNIQUEALACOMMUNE&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="p">[</span><span class="kc">...</span><span class="p">]</span>
+<span class="p">}</span>
 </code></pre></div>
 <p>La liste même des libellés est à obtenir par ailleurs.</p>
 <h2 id="detail-du-code-de-transformation-du-libelle-en-clair">Détail du code de transformation du libellé en clair</h2>
 <ul>
 <li>
-<p><code>lower($PROFESSION_EN_CLAIR$)</code> : <code>PROFESSION_EN_CLAIR</code> est entièrement mis en minuscule
+<p><code class="highlight"><span class="nf">lower</span><span class="p">(</span><span class="o">$</span><span class="n">PROFESSION_EN_CLAIR</span><span class="o">$</span><span class="p">)</span></code> : <code class="highlight"><span class="n">PROFESSION_EN_CLAIR</span></code> est entièrement mis en minuscule
 –&gt; ex: “IntérmittÊnt du spèctàçle” devient “intérmittênt du spèctàçle”</p>
 </li>
 <li>
-<p><code>replace([...], " ", "")</code> : On retire tous les espaces du libellé en minuscule (y.c. ceux “légitimes” entre les mots)
+<p><code class="highlight"><span class="nf">replace</span><span class="p">([</span><span class="kc">...</span><span class="p">],</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span></code> : On retire tous les espaces du libellé en minuscule (y.c. ceux “légitimes” entre les mots)
 –&gt; ex: “intérmittênt du spèctàçle” devient “intérmittêntduspèctàçle”</p>
 </li>
 <li>
-<p><code>replace([...], "à", "a")</code> : On remplace - dans le libellé en minuscule, sans espace - tous les à en a, tous les ç en c, tous les éèê en e.
+<p><code class="highlight"><span class="nf">replace</span><span class="p">([</span><span class="kc">...</span><span class="p">],</span><span class="w"> </span><span class="s">&quot;à&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;a&quot;</span><span class="p">)</span></code> : On remplace - dans le libellé en minuscule, sans espace - tous les à en a, tous les ç en c, tous les éèê en e.
 –&gt; ex: “intérmittêntduspèctàçle” devient “intérmittêntduspèctaçle”
 puis “intérmittêntduspèctacle”
 puis “intermittêntduspèctacle”
@@ -2967,7 +2967,7 @@ puis “intermittêntduspectacle”
 puis “intermittentduspectacle”</p>
 </li>
 <li>
-<p><code>upper([...])</code> : Le libellé normalisé en minuscule est repassé entièrement en majuscules
+<p><code class="highlight"><span class="nf">upper</span><span class="p">([</span><span class="kc">...</span><span class="p">])</span></code> : Le libellé normalisé en minuscule est repassé entièrement en majuscules
 –&gt; ex: “intermittentduspectacle” devient “INTERMITTENTDUSPECTACLE”</p>
 </li>
 </ul>
@@ -3072,7 +3072,7 @@ puis “intermittentduspectacle”</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

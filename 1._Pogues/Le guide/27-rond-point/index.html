@@ -3057,7 +3057,7 @@
 <li>l'onglet <em>Boucle</em> va permettre de décrire ce qu'on propose à la réponse via le Rond-point, le fonctionnement est similaire à celui d'une boucle simple <img alt="👇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f447.svg" title=":point_down:" /></li>
 <li>on donne un identifiant,</li>
 <li>on définit <a href="../24-boucles/#boucle-liée">la boucle principale</a> qu'on exploite</li>
-<li>on peut ajouter dans <em>Sauf</em> une formule pour exclure du questionnement - par exemple <code>$AGE$ &lt; 18</code> pour exclure les mineurs (cf. plus bas)</li>
+<li>on peut ajouter dans <em>Sauf</em> une formule pour exclure du questionnement - par exemple <code class="highlight"><span class="o">$</span><span class="n">AGE</span><span class="o">$</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">18</span></code> pour exclure les mineurs (cf. plus bas)</li>
 <li>les champs <em>Début</em> et <em>Fin</em> permettre de préciser quelles parties questionnaires sont à remplir à travers le Rond-point</li>
 <li><em>Libellé identifiant une occurrence</em> permet d'afficher par exemple le prénom de l'habitant qui va répondre à un questionnaire individuel</li>
 <li><em>Description d'une occurrence</em> permet d'ajouter un texte descriptif pour chaque item du Rond-point (cf. plus bas)</li>
@@ -3069,22 +3069,22 @@
 <p>L'usage suit la même logique que pour les boucles : on utilise des variables, notamment des variables de boucles, pour permettre ou pas la réponse à une occurrence du Rond-point.</p>
 <h4 id="usage-de-la-description-dune-occurrence">Usage de la description d'une occurrence</h4>
 <p>Ce champ va permettre de décrire chaque item, et pour ce faire on peut utiliser une expression VTL et des variables de boucle. Par exemple:</p>
-<p><code>"Le questionnaire individuel pour " || $PRENOM$</code></p>
+<p><code class="highlight"><span class="s">&quot;Le questionnaire individuel pour &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span></code></p>
 <p>donnera ce visuel:</p>
 <p><a class="glightbox" href="../../../img/pogues/rond-point-web-libelle.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Visuel d'un libellé pour un item du Rond-point" src="../../../img/pogues/rond-point-web-libelle.png" /></a></p>
 <h4 id="usage-des-controles">Usage des contrôles</h4>
 <p>Comme pour les questions, il est possible de définir des contrôles sur un rond point.
-Ces contrôles peuvent être à un niveau <code>rond-point</code> ou <code>occurrence</code>.</p>
-<h4 id="niveau-rond-point">Niveau <code>rond-point</code> :</h4>
-<p>Le contrôle considère les variables avec un niveau questionnaire : les variables de portée/niveau boucle sont considérés comme des vecteurs. (Ex: <code>PRENOMS = ["prénom1", "prénom2", "prénom3",...]</code>)</p>
-<p><strong>Ex de contrôle :</strong> <code>sum($SALAIRE$) &gt; 10000</code> avec pour message "La somme des salaires de votre ménage dépasse 10 000 euros."
-et ici <code>SALAIRE = [2900, 3500, 5000]</code>  </p>
-<h4 id="niveau-occurrence">Niveau <code>occurrence</code> :</h4>
+Ces contrôles peuvent être à un niveau <code class="highlight"><span class="n">rond</span><span class="o">-</span><span class="n">point</span></code> ou <code class="highlight"><span class="n">occurrence</span></code>.</p>
+<h4 id="niveau-rond-point">Niveau <code class="highlight"><span class="n">rond</span><span class="o">-</span><span class="n">point</span></code> :</h4>
+<p>Le contrôle considère les variables avec un niveau questionnaire : les variables de portée/niveau boucle sont considérés comme des vecteurs. (Ex: <code class="highlight"><span class="n">PRENOMS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;prénom1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;prénom2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;prénom3&quot;</span><span class="p">,</span><span class="kc">...</span><span class="p">]</span></code>)</p>
+<p><strong>Ex de contrôle :</strong> <code class="highlight"><span class="nf">sum</span><span class="p">(</span><span class="o">$</span><span class="n">SALAIRE</span><span class="o">$</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">10000</span></code> avec pour message "La somme des salaires de votre ménage dépasse 10 000 euros."
+et ici <code class="highlight"><span class="n">SALAIRE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="m">2900</span><span class="p">,</span><span class="w"> </span><span class="m">3500</span><span class="p">,</span><span class="w"> </span><span class="m">5000</span><span class="p">]</span></code>  </p>
+<h4 id="niveau-occurrence">Niveau <code class="highlight"><span class="n">occurrence</span></code> :</h4>
 <ul>
 <li>Le contrôle considère les variables avec un niveau boucle (la même boucle qui est lié au rond point) : les contrôle s'applique sur <strong>chaque</strong> occurrence !</li>
 </ul>
-<p><strong>Ex de contrôle :</strong> <code>AGE &gt; 35</code> avec pour message "L'individu x a plus de 35 ans."
-et ici <code>AGE = [40, 30, 50]</code> <br>
+<p><strong>Ex de contrôle :</strong> <code class="highlight"><span class="n">AGE</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">35</span></code> avec pour message "L'individu x a plus de 35 ans."
+et ici <code class="highlight"><span class="n">AGE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">]</span></code> <br>
 Le contrôle apparaîtra donc 2 fois, 1 fois pour ind1 (40) et une fois pour ind3(50). </p>
 <details class="example" open="open">
 <summary>Affichage de contrôles sur un rond-point</summary>
@@ -3106,7 +3106,7 @@ Le contrôle apparaîtra donc 2 fois, 1 fois pour ind1 (40) et une fois pour ind
 <li>le bouton permettant de continuer dans le questionnaire au-delà des sous-questionnaires du Rond-point</li>
 </ol>
 <p>Comme vu plus haut, les libellés sont tous paramétrables.</p>
-<p>Le bouton en <code>4.</code> a le comportement suivant:</p>
+<p>Le bouton en <code class="highlight"><span class="m">4</span><span class="n">.</span></code> a le comportement suivant:</p>
 <ul>
 <li>si le sous-questionnaire n'a pas été visité, le libellé est "Commencer",</li>
 <li>si le sous-questionnaire a été visité mais pas terminé, "Reprendre",</li>
@@ -3215,7 +3215,7 @@ Le contrôle apparaîtra donc 2 fois, 1 fois pour ind1 (40) et une fois pour ind
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

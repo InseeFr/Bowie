@@ -2819,23 +2819,23 @@
 
 
 <h1 id="utilisation-dune-indicatrice-dans-une-boucle">Utilisation d'une indicatrice dans une boucle</h1>
-<p>Dans ce scénario, on collecte dans <strong>une boucle</strong> des informations sur l'occupation de résidences secondaires à travers une liste de statuts (propriétaire, locataire, etc.) - la collecte se faisant sur la variable <code>OCCUPATION</code>.</p>
+<p>Dans ce scénario, on collecte dans <strong>une boucle</strong> des informations sur l'occupation de résidences secondaires à travers une liste de statuts (propriétaire, locataire, etc.) - la collecte se faisant sur la variable <code class="highlight"><span class="n">OCCUPATION</span></code>.</p>
 <p>On veut précisément savoir s'il y a au moins une réponse de type "locataire" pour afficher après la boucle une question à ce sujet.</p>
 <p>Pour cette mise en place, nous allons :</p>
 <ul>
-<li>créer une variable calculée de <strong>portée boucle</strong> que nous appelons <code>OCCUPATION_LOCATION</code></li>
-<li>créer une variable calculée de <strong>portée questionnaire</strong> que nous appelons <code>SOMME_LOCATION</code></li>
+<li>créer une variable calculée de <strong>portée boucle</strong> que nous appelons <code class="highlight"><span class="n">OCCUPATION_LOCATION</span></code></li>
+<li>créer une variable calculée de <strong>portée questionnaire</strong> que nous appelons <code class="highlight"><span class="n">SOMME_LOCATION</span></code></li>
 <li>créer un filtre qui s'appuie sur cette dernière variable.</li>
 </ul>
-<p>La variable <code>OCCUPATION_LOCATION</code> est une indicatrice qui s'active si le choix se porte sur le statut "locataire" - dans ce cas la variable <code>OCCUPATION</code> prendra la valeur <code>"2"</code>. Le code VTL sera donc :</p>
-<div class="highlight"><pre><span></span><code>if $OCCUPATION$ = &quot;2&quot; then 1 else 0
+<p>La variable <code class="highlight"><span class="n">OCCUPATION_LOCATION</span></code> est une indicatrice qui s'active si le choix se porte sur le statut "locataire" - dans ce cas la variable <code class="highlight"><span class="n">OCCUPATION</span></code> prendra la valeur <code class="highlight"><span class="s">&quot;2&quot;</span></code>. Le code VTL sera donc :</p>
+<div class="highlight"><pre><span></span><code><span class="n">if</span><span class="w"> </span><span class="o">$</span><span class="n">OCCUPATION</span><span class="o">$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
-<p>On comprend donc que pour chaque réponse de type "locataire" on va créer une variable de boucle <code>OCCUPATION_LOCATION</code> qui vaudra <code>1</code>.</p>
-<p>La variable <code>SOMME_LOCATION</code> va agréger ces résultats avec :</p>
-<div class="highlight"><pre><span></span><code>sum($OCCUPATION_LOCATION$)
+<p>On comprend donc que pour chaque réponse de type "locataire" on va créer une variable de boucle <code class="highlight"><span class="n">OCCUPATION_LOCATION</span></code> qui vaudra <code class="highlight"><span class="m">1</span></code>.</p>
+<p>La variable <code class="highlight"><span class="n">SOMME_LOCATION</span></code> va agréger ces résultats avec :</p>
+<div class="highlight"><pre><span></span><code><span class="nf">sum</span><span class="p">(</span><span class="o">$</span><span class="n">OCCUPATION_LOCATION</span><span class="o">$</span><span class="p">)</span>
 </code></pre></div>
-<p>Si au moins une réponse de type "locataire" a été faite alors <code>SOMME_LOCATION</code> sera strictement positive. Le filtre aura donc comme code VTL :</p>
-<div class="highlight"><pre><span></span><code>SOMME_LOCATION &gt; 1
+<p>Si au moins une réponse de type "locataire" a été faite alors <code class="highlight"><span class="n">SOMME_LOCATION</span></code> sera strictement positive. Le filtre aura donc comme code VTL :</p>
+<div class="highlight"><pre><span></span><code><span class="n">SOMME_LOCATION</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 
 
@@ -2938,7 +2938,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

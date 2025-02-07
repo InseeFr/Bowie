@@ -2899,42 +2899,42 @@
 <li>les <em>variables calculées</em> : elles sont produites à partir d'une expression VTL,</li>
 <li>les <em>variables externes</em> : elles sont valorisées par des données externes qui seront injectées dans le questionnaire.</li>
 </ol>
-<p>Nous allons voir dans cette section comment mobiliser le deuxième type de variable pour mettre en place un contrôle sur la réponse à la question sur les activités professionnelles (<code>ACTIVITES</code>).</p>
+<p>Nous allons voir dans cette section comment mobiliser le deuxième type de variable pour mettre en place un contrôle sur la réponse à la question sur les activités professionnelles (<code class="highlight"><span class="n">ACTIVITES</span></code>).</p>
 <h2 id="creation-de-la-variable">Création de la variable</h2>
 <p>Pour créer une variable calculée, il suffit d'entrer dans le détail d'une question, n'importe laquelle (via le bouton <em>Voir le détail</em>), puis de sélectionner l'onglet <em>Variables calculées</em>.</p>
 <p>Cet onglet liste l'ensemble des variables calculées du questionnaire.</p>
 <p>Plusieurs champs sont à compléter :</p>
 <ul>
 <li><em>Libellé</em> : un texte court pour identifier la variable</li>
-<li><em>Identifiant</em> : un identifiant de la forme <code>MON_IDENTIFIANT</code></li>
+<li><em>Identifiant</em> : un identifiant de la forme <code class="highlight"><span class="n">MON_IDENTIFIANT</span></code></li>
 <li><em>Formule</em> : l'expression VTL qui valorise la variable</li>
 <li><em>Type de réponse</em> : comme pour une variable collectée, on renseigne les caractéristiques de la variable</li>
 <li>Autres champs associés au type de réponse</li>
 <li><em>Portée</em> : dans le cas général, la portée est <em>Questionnaire</em>, la variable est mobilisable dans l'ensemble du questionnaire. Pour des variables qui sont créées dans une occurence de boucle ou de tableau, il faut préciser que la portée se limite à cette boucle ou ce tableau.</li>
 </ul>
-<p>Notre variable aura comme identifiant <code>SOMME</code>, et aura comme valeur l'addition des variables produites par le <a href="../15-creation-tableau/">tableau créé précédemment</a> :</p>
-<pre><code>```vtl
-nvl($ACTIVITES11$, 0) +
-nvl($ACTIVITES21$, 0) +
-nvl($ACTIVITES31$, 0) +
-nvl($ACTIVITES41$, 0) +
-nvl($ACTIVITES51$, 0)
-```
-</code></pre>
+<p>Notre variable aura comme identifiant <code class="highlight"><span class="n">SOMME</span></code>, et aura comme valeur l'addition des variables produites par le <a href="../15-creation-tableau/">tableau créé précédemment</a> :</p>
+<div class="highlight"><pre><span></span><code><span class="n">```vtl</span>
+<span class="n">nvl($ACTIVITES11$, 0) +</span>
+<span class="n">nvl($ACTIVITES21$, 0) +</span>
+<span class="n">nvl($ACTIVITES31$, 0) +</span>
+<span class="n">nvl($ACTIVITES41$, 0) +</span>
+<span class="n">nvl($ACTIVITES51$, 0)</span>
+<span class="n">```</span>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>On utilise ici la fonction <code>nvl</code> qui permet de renvoyer une valeur par défaut si la variable est nulle. En effet, si on ne valorise pas une case du tableau, la variable correspondante aura comme valeur <code>null</code> ce qui ne permet pas de faire la somme.</p>
-<p>On lit <code>nvl($ACTIVITES11$, 0)</code> ainsi : si la variable <code>$ACTIVITES11$</code> est <code>null</code>, on renvoie <code>0</code> sinon on renvoie sa valeur.</p>
+<p>On utilise ici la fonction <code class="highlight"><span class="n">nvl</span></code> qui permet de renvoyer une valeur par défaut si la variable est nulle. En effet, si on ne valorise pas une case du tableau, la variable correspondante aura comme valeur <code class="highlight"><span class="n">null</span></code> ce qui ne permet pas de faire la somme.</p>
+<p>On lit <code class="highlight"><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">ACTIVITES11</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span></code> ainsi : si la variable <code class="highlight"><span class="o">$</span><span class="n">ACTIVITES11</span><span class="o">$</span></code> est <code class="highlight"><span class="n">null</span></code>, on renvoie <code class="highlight"><span class="m">0</span></code> sinon on renvoie sa valeur.</p>
 </div>
 <h2 id="utilisation-de-la-variable">Utilisation de la variable</h2>
-<p>On peut maintenant ajouter un contrôle sur la question <code>ACTIVITES</code> pour s'assurer que la ventilation est égale à 100%. Vous pouvez pour cela vous appuyer sur ce que l'on a vu <a href="../21-ajout-controle/">précédemment</a> et sur le <a href="../guide/vtl.md">guide VTL</a>... Pour les plus pressés d'entre vous, vous pouvez regarder la solution ci-dessous. <img alt="😃" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f603.svg" title=":smiley:" /></p>
+<p>On peut maintenant ajouter un contrôle sur la question <code class="highlight"><span class="n">ACTIVITES</span></code> pour s'assurer que la ventilation est égale à 100%. Vous pouvez pour cela vous appuyer sur ce que l'on a vu <a href="../21-ajout-controle/">précédemment</a> et sur le <a href="../guide/vtl.md">guide VTL</a>... Pour les plus pressés d'entre vous, vous pouvez regarder la solution ci-dessous. <img alt="😃" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f603.svg" title=":smiley:" /></p>
 <details class="example">
 <summary>Solution</summary>
-<p>La formule pour le contrôle pourra être <code>$SOMME$ &lt;&gt; 100</code>, l'opérateur <code>&lt;&gt;</code> signifiant "différent de".</p>
+<p>La formule pour le contrôle pourra être <code class="highlight"><span class="o">$</span><span class="n">SOMME</span><span class="o">$</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="m">100</span></code>, l'opérateur <code class="highlight"><span class="o">&lt;&gt;</span></code> signifiant "différent de".</p>
 <p>Par ailleurs, le message du contrôle pourra inclure la somme des ventilations déjà fournies :</p>
-<div class="highlight"><pre><span></span><code>&quot;Votre total doit être égal à 100% (&quot; || 
-cast($SOMME$, string) ||
-&quot;)&quot;
+<div class="highlight"><pre><span></span><code><span class="s">&quot;Votre total doit être égal à 100% (&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>
+<span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">SOMME</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span>
+<span class="s">&quot;)&quot;</span>
 </code></pre></div>
 </details>
 
@@ -3038,7 +3038,7 @@ cast($SOMME$, string) ||
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

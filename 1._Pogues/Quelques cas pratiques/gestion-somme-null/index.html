@@ -2912,9 +2912,9 @@
 
 <h1 id="sommer-un-vecteur-avec-des-valeurs-null">Sommer un vecteur avec des valeurs null</h1>
 <h2 id="probleme">Problème</h2>
-<p>Imaginons une question sous forme de tableau dynamique, <code>TAB</code>, collectant le chiffre d'affaire dans la variable collectée <code>CA</code> <br></p>
+<p>Imaginons une question sous forme de tableau dynamique, <code class="highlight"><span class="n">TAB</span></code>, collectant le chiffre d'affaire dans la variable collectée <code class="highlight"><span class="n">CA</span></code> <br></p>
 <ul>
-<li>On créer une variable calculée faisant la somme de cette colonne <code>CA</code> : 
+<li>On créer une variable calculée faisant la somme de cette colonne <code class="highlight"><span class="n">CA</span></code> : 
 <div class="highlight"><pre><span></span><code><span class="n">SUM_TAB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="o">$</span><span class="n">CA</span><span class="o">$</span><span class="p">)</span>
 </code></pre></div></li>
 <li>On affiche dans une déclaration cette somme via la formule : 
@@ -2925,27 +2925,27 @@
     <a class="glightbox" href="../../../img/pogues/somme_tab_null_init.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/somme_tab_null_init.png" /></a></p>
 <div class="admonition tip">
 <p class="admonition-title">info</p>
-<p>Quand on arrive au début du questionnaire sans rien avoir remplie, <code>CA</code> est un vecteur vide, <code>[]</code> <br>
-Donc <code>SUM_TAB = sum([]) = 0</code>.</p>
+<p>Quand on arrive au début du questionnaire sans rien avoir remplie, <code class="highlight"><span class="n">CA</span></code> est un vecteur vide, <code class="highlight"><span class="p">[]</span></code> <br>
+Donc <code class="highlight"><span class="n">SUM_TAB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sum</span><span class="p">([])</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span></code>.</p>
 </div>
 </li>
 <li>
 <p>On décide de remplir uniquement la première et la troisième ligne, on obtient le résultat suivant : 
 <a class="glightbox" href="../../../img/pogues/somme_tab_null.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/somme_tab_null.png" /></a>
-<strong>La somme des CA vaut <code>null</code></strong> <img alt="🤯" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f92f.svg" title=":exploding_head:" /> </p>
+<strong>La somme des CA vaut <code class="highlight"><span class="n">null</span></code></strong> <img alt="🤯" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f92f.svg" title=":exploding_head:" /> </p>
 </li>
 </ul>
 <h2 id="cause">Cause</h2>
-<p>Ici, le vecteur <code>CA</code> est composé des valeurs suivant : <code>[63, null, 28]</code>. Or VTL ne sait pas faire <code>63 + null + 28</code>. Il faut donc transformer ce null en 0.</p>
+<p>Ici, le vecteur <code class="highlight"><span class="n">CA</span></code> est composé des valeurs suivant : <code class="highlight"><span class="p">[</span><span class="m">63</span><span class="p">,</span><span class="w"> </span><span class="n">null</span><span class="p">,</span><span class="w"> </span><span class="m">28</span><span class="p">]</span></code>. Or VTL ne sait pas faire <code class="highlight"><span class="m">63</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">null</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">28</span></code>. Il faut donc transformer ce null en 0.</p>
 <div class="admonition warning">
 <p class="admonition-title">Attention</p>
 <p>Contrairement à un champ texte ou un booléen, quand on efface la valeur (décocher ou supprimer la valeur du champ) d'un champ de type nombre, alors cette vraiable est remise à null. cf <em>lien vers explication à mettre</em></p>
 </div>
 <h2 id="solution">Solution</h2>
-<p>On va passer par une variable calculée qui va transformer les <code>null</code> en <code>0</code> pour le vecteur <code>CA</code></p>
+<p>On va passer par une variable calculée qui va transformer les <code class="highlight"><span class="n">null</span></code> en <code class="highlight"><span class="m">0</span></code> pour le vecteur <code class="highlight"><span class="n">CA</span></code></p>
 <ol>
 <li>
-<p>Créer une variable calculée <code>NULL_CHECK_TAB_COL</code> avec un niveau de calcul = <code>TAB</code>
+<p>Créer une variable calculée <code class="highlight"><span class="n">NULL_CHECK_TAB_COL</span></code> avec un niveau de calcul = <code class="highlight"><span class="n">TAB</span></code>
 <div class="highlight"><pre><span></span><code><span class="n">NULL_CHECK_TAB_COL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">CA</span><span class="o">$</span><span class="p">,</span><span class="m">0</span><span class="p">)</span>
 </code></pre></div></p>
 </li>
@@ -3062,7 +3062,7 @@ Donc <code>SUM_TAB = sum([]) = 0</code>.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

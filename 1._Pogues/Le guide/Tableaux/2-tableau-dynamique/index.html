@@ -3023,32 +3023,32 @@
 </ul>
 <p>Pour ce faire, on créera une question de type Tableau avec pour axe principal une liste.</p>
 <h3 id="choix-de-laxe-dinformation-principal">Choix de l'axe d'information principal :</h3>
-<p>Pour avoir un tableau dynamique, choisir <code>Liste</code>. <br>
-On a ensuite 2 choix pour le calcul du nombre de lignes : <code>Min/Max</code> ou <code>Formule</code></p>
-<h4 id="nombre-de-lignes-determines-par-minmax">Nombre de lignes déterminés par <code>Min/Max</code></h4>
+<p>Pour avoir un tableau dynamique, choisir <code class="highlight"><span class="n">Liste</span></code>. <br>
+On a ensuite 2 choix pour le calcul du nombre de lignes : <code class="highlight"><span class="n">Min</span><span class="o">/</span><span class="n">Max</span></code> ou <code class="highlight"><span class="n">Formule</span></code></p>
+<h4 id="nombre-de-lignes-determines-par-minmax">Nombre de lignes déterminés par <code class="highlight"><span class="n">Min</span><span class="o">/</span><span class="n">Max</span></code></h4>
 <p><a class="glightbox" href="../../../../img/pogues/choix-nb-ligne-tab-min-max.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="choix min-max" src="../../../../img/pogues/choix-nb-ligne-tab-min-max.png" /></a></p>
 <ul>
 <li>Indiquer le nombre de lignes minimum (aujourd'hui un nombre mais une évolution permettra à terme de saisir un champ VTL)</li>
 <li>Indiquer le nombre de lignes maximum (aujourd'hui un nombre borné à 300 mais une évolution permettra à terme de saisir un champ VTL)).</li>
 </ul>
-<h4 id="nombre-de-lignes-determines-par-formule">Nombre de lignes déterminés par <code>Formule</code></h4>
+<h4 id="nombre-de-lignes-determines-par-formule">Nombre de lignes déterminés par <code class="highlight"><span class="n">Formule</span></code></h4>
 <p><a class="glightbox" href="../../../../img/pogues/choix-nb-ligne-tab-formule.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="choix formule" src="../../../../img/pogues/choix-nb-ligne-tab-formule.png" /></a></p>
 <ul>
-<li>Indiquer une formule VTL qui doit retourner <strong>un nombre</strong>, imaginons <code>n</code>.</li>
-<li>Le tableau généré aura exactement <code>n</code> lignes </li>
+<li>Indiquer une formule VTL qui doit retourner <strong>un nombre</strong>, imaginons <code class="highlight"><span class="n">n</span></code>.</li>
+<li>Le tableau généré aura exactement <code class="highlight"><span class="n">n</span></code> lignes </li>
 </ul>
 <details class="danger">
 <summary>VTL non valide</summary>
-<p>Si le résultat du VTL n'est pas interprété avec le type 'Nombre', ex <code>Formule = "Du texte"</code>, on a l'erreur suivante
+<p>Si le résultat du VTL n'est pas interprété avec le type 'Nombre', ex <code class="highlight"><span class="n">Formule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Du texte&quot;</span></code>, on a l'erreur suivante
 <a class="glightbox" href="../../../../img/pogues/tab-dim-formule-vtl-diff-nb.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="formule different d'un nombre" src="../../../../img/pogues/tab-dim-formule-vtl-diff-nb.png" /></a></p>
 </details>
 <details class="example" open="open">
 <summary>Exemple de tableau dynamique avec formule VTL</summary>
 <ul>
-<li>Si on a un questionnaire avec une question <code>NB_PERSONNE</code> de type <em>Nombre</em>
+<li>Si on a un questionnaire avec une question <code class="highlight"><span class="n">NB_PERSONNE</span></code> de type <em>Nombre</em>
 <a class="glightbox" href="../../../../img/pogues/input-5-pers.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="input nb personnes" src="../../../../img/pogues/input-5-pers.png" /></a></li>
-<li>On peut alors créer ensuite un tableau dynamique avec pour formule de nombre de lignes <code>$NB_PERSONNE$</code>.
-Dans le cas où l'utilisateur réponds 5 à la question <code>NB_PERSONNE</code>, alors le tableau aura exactement 5 lignes  <br />
+<li>On peut alors créer ensuite un tableau dynamique avec pour formule de nombre de lignes <code class="highlight"><span class="o">$</span><span class="n">NB_PERSONNE</span><span class="o">$</span></code>.
+Dans le cas où l'utilisateur réponds 5 à la question <code class="highlight"><span class="n">NB_PERSONNE</span></code>, alors le tableau aura exactement 5 lignes  <br />
 <a class="glightbox" href="../../../../img/pogues/tab-dyn-5-pers.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tableau dynamique" src="../../../../img/pogues/tab-dyn-5-pers.png" /></a></li>
 </ul>
 </details>
@@ -3170,7 +3170,7 @@ Si on souhaite qu'une de ces informations mesurées ne soit pas "collectée", vo
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer", "navigation.indexes", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

@@ -2961,13 +2961,13 @@
 <h2 id="portee-des-variables">Portée des variables</h2>
 <p>Les variables calculées ou externes possèdent un paramètre de <em>Portée</em>. A quoi cela correspond-il ?</p>
 <p>Il s'agit de préciser si une variable est calculée ou injectée (dans le cas d'une variable externe) au sein d'une boucle.</p>
-<p>Imaginons une boucle <code>B1</code> sur un ensemble de questions relatives à des individus. Je veux pouvoir pour chacun d'eux créer une indicatrice permettant de savoir si l'individu est dans le champs en vérifiant son âge (variable collectée <code>AGE</code>) et sa nationalité (<code>NATIONALITE</code>).</p>
-<p>Pour cela, je crée une variable calculée <code>INDICATRICE</code> de portée <code>B1</code> dont la formule s'appuie pour chaque occurrence de la boucle (chaque individu) sur les variables <code>AGE</code> et <code>NATIONALITE</code> (de chaque individu).</p>
+<p>Imaginons une boucle <code class="highlight"><span class="n">B1</span></code> sur un ensemble de questions relatives à des individus. Je veux pouvoir pour chacun d'eux créer une indicatrice permettant de savoir si l'individu est dans le champs en vérifiant son âge (variable collectée <code class="highlight"><span class="n">AGE</span></code>) et sa nationalité (<code class="highlight"><span class="n">NATIONALITE</span></code>).</p>
+<p>Pour cela, je crée une variable calculée <code class="highlight"><span class="n">INDICATRICE</span></code> de portée <code class="highlight"><span class="n">B1</span></code> dont la formule s'appuie pour chaque occurrence de la boucle (chaque individu) sur les variables <code class="highlight"><span class="n">AGE</span></code> et <code class="highlight"><span class="n">NATIONALITE</span></code> (de chaque individu).</p>
 <p><a class="glightbox" href="../../../img/pogues/guide-boucle-portee.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variable avec portée boucle" src="../../../img/pogues/guide-boucle-portee.png" /></a></p>
 <h2 id="exclusion">Exclusion</h2>
 <p>Le champ <em>Sauf</em> permet d'exclure dans une boucle liée certaines des répétitions.</p>
 <p>En reprenant l'exmple du paragraphe précédent, on pourrait par exemple exclure les mineurs avec la formule VTL :</p>
-<div class="highlight"><pre><span></span><code>AGE &lt; 18
+<div class="highlight"><pre><span></span><code><span class="n">AGE</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">18</span>
 </code></pre></div>
 <p>Ou mieux, exclure les individus hors champs en nous appuyant sur l'indicatrice calculée ! <img alt="😃" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f603.svg" title=":smiley:" /></p>
 
@@ -3071,7 +3071,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

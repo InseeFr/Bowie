@@ -2837,17 +2837,17 @@
 </ul>
 <p>On veut déclencher le contrôle en cas de non-réponse, on va tester dans notre cas :</p>
 <ul>
-<li>si l'on n'est jamais entré dans le champ de réponse (la variable est <code>null</code> au sens VTL),</li>
-<li>si l'on est entré dans le champ mais qu'on n'a rien saisi (la variable est égale à une chaîne de caractères vide, ou <code>""</code>).</li>
+<li>si l'on n'est jamais entré dans le champ de réponse (la variable est <code class="highlight"><span class="n">null</span></code> au sens VTL),</li>
+<li>si l'on est entré dans le champ mais qu'on n'a rien saisi (la variable est égale à une chaîne de caractères vide, ou <code class="highlight"><span class="s">&quot;&quot;</span></code>).</li>
 </ul>
 <p>L'expression VTL sera donc :</p>
-<pre><code>```vtl
-$PRENOM$ = "" or isnull($PRENOM$)
-```
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">```vtl</span>
+<span class="n">$PRENOM$ = &quot;&quot; or isnull($PRENOM$)</span>
+<span class="n">```</span>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>On notera l'utilisation de la fonction <code>isnull</code> qui permet de détecter si une variable n'a pas été valorisée (cf. guide VTL).</p>
+<p>On notera l'utilisation de la fonction <code class="highlight"><span class="n">isnull</span></code> qui permet de détecter si une variable n'a pas été valorisée (cf. guide VTL).</p>
 </div>
 <p>On aura une configuration sensiblement similaire à <img alt="👇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f447.svg" title=":point_down:" /></p>
 <p><a class="glightbox" href="../../../img/pogues/controle-configuration.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Configuration du contrôle" src="../../../img/pogues/controle-configuration.png" /></a></p>
@@ -2954,7 +2954,7 @@ $PRENOM$ = "" or isnull($PRENOM$)
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
