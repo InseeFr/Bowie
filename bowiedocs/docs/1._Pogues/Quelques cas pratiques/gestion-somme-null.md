@@ -48,5 +48,5 @@ SUM_TAB = sum($NULL_CHECK_TAB_COL$)
 
 ![alt text](../../img/pogues/somme_tab_null_res.png)
 
-!!! note "Info"
-    Voir _lien vers porté des variables_ pour plus de détails sur comment utilisé le niveau de calcul
+!!! tips "Info"
+    Voir **[portée des variables](../Le%20guide/24-boucles.md/#portee-des-variables-champ-niveau-de-calcul)** pour plus de détails sur comment utilisé le niveau de calcul
