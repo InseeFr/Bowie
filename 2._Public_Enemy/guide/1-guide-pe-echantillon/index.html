@@ -2830,14 +2830,47 @@
 <p><a class="glightbox" href="../../../img/public-enemy/var-ext-schema.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variables externes schéma" src="../../../img/public-enemy/var-ext-schema.png" /></a></p>
 <p>On peut remplir les données à partir de ce fichier schéma :</p>
 <p>...<a class="glightbox" href="../../../img/public-enemy/var-ext-data.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variables externes données" src="../../../img/public-enemy/var-ext-data.png" /></a></p>
-<div class="admonition warning">
-<p class="admonition-title">Maximum 10 UE</p>
-<p>Un fichier de données ne pourra contenir qu'un maximum de 10 unités enquêtées.</p>
+<div class="admonition danger">
+<p class="admonition-title">Encadrer les données avec <code class="highlight"><span class="s">&quot;&quot;</span></code></p>
+<ul>
+<li>Les valeurs d'en-tête et de lignes doivent être encadrées de <code class="highlight"><span class="s">&quot;&quot;</span></code>. Le fichier schéma téléchargé depuis Public Enemy contient bien ces double quotes pour les en-têtes.</li>
+<li>Si on utilise Libre Office Calc pour éditer ce fichier, on peut utiliser <a href="https://help.libreoffice.org/latest/fr/text/scalc/guide/csv_files.html"><strong>cette astuce</strong></a> pour s'assurer que les <code class="highlight"><span class="s">&quot;&quot;</span></code> sont bien toujours présentes après enregistrement</li>
+<li>Pour bien s'assurer que cette contrainte est respectée, on peut ouvrir le fichier de données que l'on constitue avec un éditeur de texte comme Notepad++.</li>
+</ul>
+<details class="example">
+<summary>Exemple de fichier csv valide</summary>
+<div class="highlight"><pre><span></span><code><span class="s">&quot;SIREN&quot;</span><span class="p">,</span><span class="s">&quot;ACTIVITE&quot;</span><span class="p">,</span><span class="s">&quot;SALARIE_PRENOM_1&quot;</span><span class="p">,</span><span class="s">&quot;SALARIE_PRENOM_2&quot;</span><span class="p">,</span><span class="s">&quot;SALARIE_PRENOM_3&quot;</span><span class="p">,</span>
+<span class="s">&quot;120027016&quot;</span><span class="p">,</span><span class="s">&quot;BTP&quot;</span><span class="p">,</span><span class="s">&quot;Pierre&quot;</span><span class="p">,</span><span class="s">&quot;Géraldine&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span>
+<span class="s">&quot;987654321&quot;</span><span class="p">,</span><span class="s">&quot;COMMERCE&quot;</span><span class="p">,</span><span class="s">&quot;Solange&quot;</span><span class="p">,</span><span class="s">&quot;Ludovic&quot;</span><span class="p">,</span><span class="s">&quot;Camille&quot;</span>
+</code></pre></div>
+</details>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Encadrer les données avec <code class="highlight"><span class="s">&quot;</span></code></p>
-<p>Les valeurs d'en-tête et de lignes doivent être encadrées de <code class="highlight"><span class="s">&quot;</span></code>. Le fichier schéma téléchargé depuis Public Enemy contient bien ces double quotes pour les en-têtes.
-Pour bien s'assurer que cette contrainte est respectée, on peut ouvrir le fichier de données que l'on constitue avec un éditeur de texte comme Notepad++.</p>
+<p class="admonition-title">Maximum 10 UE</p>
+<ul>
+<li>Un fichier de données ne pourra contenir qu'un maximum de 10 unités enquêtées.</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Ordre des listes de plus de 10 éléments dans un tableau dynamique</p>
+<ul>
+<li>Si pour une UE on a une variable sous forme de vecteur et qu'on injecte plus de 10 élément, alors ces derniers ne seront pas affichés dans le bon ordre</li>
+</ul>
+<p>Ex: J'ai une variable externe LISTE
+<div class="highlight"><pre><span></span><code><span class="n">LISTE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">LISTE_1</span><span class="p">,</span><span class="n">LISTE_2</span><span class="p">,</span><span class="kc">...</span><span class="p">,</span><span class="n">LISTE_9</span><span class="p">,</span><span class="n">LISTE_10</span><span class="p">,</span><span class="n">LISTE_11</span><span class="p">]</span>
+</code></pre></div>
+si j'injecte cette variable dans l'une des colonne d'un tableau et que je visualise, je vais avoir l'ordre suivant
+<div class="highlight"><pre><span></span><code><span class="n">LISTE_1</span><span class="p">,</span><span class="w"> </span><span class="n">LISTE_10</span><span class="p">,</span><span class="w"> </span><span class="n">LISTE_11</span><span class="p">,</span><span class="w"> </span><span class="n">LISTE_2</span><span class="p">,</span><span class="w"> </span><span class="n">LISTE_3</span><span class="p">,</span><span class="w"> </span><span class="kc">...</span>
+</code></pre></div></p>
+<details class="example">
+<summary>exemple</summary>
+<p><div class="highlight"><span class="filename">Exemple de csv à importer dans Public Enemy</span><pre><span></span><code><span class="s">&quot;LISTE_1&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_2&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_3&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_4&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_5&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_6&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_7&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_8&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_9&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_10&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_11&quot;</span>
+<span class="s">&quot;code 1&quot;</span><span class="p">,</span><span class="s">&quot;code 2&quot;</span><span class="p">,</span><span class="s">&quot;code 3&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;11&quot;</span>
+<span class="s">&quot;1&quot;</span><span class="p">,</span><span class="s">&quot;2&quot;</span><span class="p">,</span><span class="s">&quot;3&quot;</span><span class="p">,</span><span class="s">&quot;4&quot;</span><span class="p">,</span><span class="s">&quot;5&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span>
+<span class="s">&quot;1&quot;</span><span class="p">,</span><span class="s">&quot;2&quot;</span><span class="p">,</span><span class="s">&quot;3&quot;</span><span class="p">,</span><span class="s">&quot;4&quot;</span><span class="p">,</span><span class="s">&quot;5&quot;</span><span class="p">,</span><span class="s">&quot;6&quot;</span><span class="p">,</span><span class="s">&quot;7&quot;</span><span class="p">,</span><span class="s">&quot;8&quot;</span><span class="p">,</span><span class="s">&quot;9&quot;</span><span class="p">,</span><span class="s">&quot;10&quot;</span><span class="p">,</span><span class="s">&quot;11&quot;</span>
+</code></pre></div>
+<a class="glightbox" href="../../../img/pogues/wrong_order_list_ext.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/wrong_order_list_ext.png" /></a></p>
+</details>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Variables de portée Boucle ou lignes de tableaux dynamiques</p>
