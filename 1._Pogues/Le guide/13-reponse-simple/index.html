@@ -996,7 +996,7 @@
         <li class="md-nav__item">
   <a href="#type-de-reponse-booleen" class="md-nav__link">
     <span class="md-ellipsis">
-      Type de réponse Booleen
+      Type de réponse Booléen
     </span>
   </a>
   
@@ -2916,7 +2916,7 @@
         <li class="md-nav__item">
   <a href="#type-de-reponse-booleen" class="md-nav__link">
     <span class="md-ellipsis">
-      Type de réponse Booleen
+      Type de réponse Booléen
     </span>
   </a>
   
@@ -2958,12 +2958,43 @@
 <li>la <em>longueur maximale</em> de la réponse (nombre de caractères)</li>
 <li>le <em>motif</em> (non fonctionnel pour l'instant, il permettra de spécifier des expressions régulières comme un Siret, un mèl etc.)</li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>A l'initialisation du questionnaire, tout champ texte vaut <code class="highlight"><span class="n">null</span></code></li>
+<li>Quand on saisie une valeur, ex <code class="highlight"><span class="s">&quot;mon texte&quot;</span></code>, puis qu'on efface cette valeur du champ, alors le champ texte vaut <code class="highlight"><span class="s">&quot;&quot;</span></code> et non pas <code class="highlight"><span class="n">null</span></code> comme au début.</li>
+</ul>
+<p>C'est pourquoi quand on veut <strong><a href="../../Le%20VTL%20dans%20Pogues/vtl/#gestion-de-la-nullite">gérer la nullité</a></strong>, on remplace les valeurs <code class="highlight"><span class="n">null</span></code> par <code class="highlight"><span class="s">&quot;&quot;</span></code> pour gérer les cas de champ texte vide. <br>
+Ex de condition d'affichage d'un contrôle pour indiquer qu'un champ texte est vide
+<div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+</code></pre></div></p>
+</div>
 <h2 id="type-de-reponse-date">Type de réponse Date</h2>
 <p>Renseigner aussi :</p>
 <ul>
 <li>le <em>format</em> parmi AAAA-MM-JJ, AAAA-MM et AAAA </li>
 <li>un <em>minimum</em> et un <em>maximum</em></li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>A l'initialisation du questionnaire, tout champ date vaut <code class="highlight"><span class="n">null</span></code></li>
+<li>Quand on saisie une valeur, ex pour juste une année <code class="highlight"><span class="m">2025</span></code>, puis qu'on efface cette valeur du champ, alors le champ date vaut <code class="highlight"><span class="n">null</span></code> comme au début.</li>
+</ul>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Précaution</p>
+<ul>
+<li>
+<p>Si on laisse <strong>vide</strong> l'un des champs d'une date, alors <strong>aucune valeur ne sera collectée</strong> pour la variable associée. 
+<a class="glightbox" href="../../../img/pogues/incomplete_date.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/incomplete_date.png" /></a><br>
+<em>Dans cet exemple Quand on regarde la valeur de la variable collecté correspondante, on a <code class="highlight"><span class="n">null</span></code> car il manque le mois</em></p>
+</li>
+<li>
+<p>Comme le champ date est incorrect, si on clique sur continuer et qu'on fait précédent, tout les champs de date sont vide </p>
+</li>
+</ul>
+</div>
 <h2 id="type-de-reponse-nombre">Type de réponse Nombre</h2>
 <p>Renseigner aussi :</p>
 <ul>
@@ -2982,10 +3013,39 @@
 <strong><em>Si on choisi "Maroc" (<code class="highlight"><span class="n">DEST</span><span class="o">=</span><span class="m">1</span></code>) alors on tombe dans la condition du <code class="highlight"><span class="n">if</span></code> et l'unité mesurée est "Dirham"</em></strong>
 <a class="glightbox" href="../../../img/pogues/unite-mesure-perso-dirhams.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="unite mesure perso dirham" src="../../../img/pogues/unite-mesure-perso-dirhams.png" /></a></p>
 </details>
-<h2 id="type-de-reponse-booleen">Type de réponse Booleen</h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>A l'initialisation du questionnaire, tout champ nombre vaut <code class="highlight"><span class="n">null</span></code></li>
+<li>Quand on saisie une valeur, ex <code class="highlight"><span class="m">86</span></code>, puis qu'on efface cette valeur du champ, alors le champ nombre vaut <code class="highlight"><span class="n">null</span></code> comme au début.</li>
+</ul>
+</div>
+<h2 id="type-de-reponse-booleen">Type de réponse Booléen</h2>
 <p>On ne renseigne rien (unique cache à cocher cochable/décochable).</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>A l'initialisation du questionnaire, tout champ booléen vaut <code class="highlight"><span class="n">null</span></code>. La case est visuellement décochée.</li>
+<li>Quand on coche la case, alors la valeur collectée est <code class="highlight"><span class="n">true</span></code>, puis quand on décoche, alors la valeur collectée est <code class="highlight"><span class="n">false</span></code>.</li>
+</ul>
+<p>Comme pour le champ texte, il faut <strong><a href="../../Le%20VTL%20dans%20Pogues/vtl/#gestion-de-la-nullite">gérer le cas de la nullité</a></strong>, on remplace les valeurs <code class="highlight"><span class="n">null</span></code> par <code class="highlight"><span class="n">false</span></code> pour gérer les cas où la case est décochée. <br>
+Ex de condition d'affichage d'un contrôle pour indiquer qu'une case de type booléen n'est pas cochée.
+<div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">false</span>
+</code></pre></div></p>
+</div>
 <h2 id="type-de-reponse-duree">Type de réponse Durée</h2>
 <p>Renseigner aussi le <em>format</em> parmi heures-minutes ou années-mois.</p>
+<ul>
+<li>pour une mesure en "années/mois" : <code class="highlight"><span class="n">PnaYnmM</span></code> où <code class="highlight"><span class="n">na</span></code> sera le nombre d'années et <code class="highlight"><span class="n">nm</span></code> le nombre de mois (ex : <code class="highlight"><span class="n">P3Y10M</span></code> pour "trois ans et dix mois")</li>
+<li>pour une mesure en "heures/mois" : <code class="highlight"><span class="n">PTnhHnmM</span></code> avec <code class="highlight"><span class="n">nh</span></code> le nombre d'heures et <code class="highlight"><span class="n">nm</span></code> le nombre de minutes (ex : <code class="highlight"><span class="n">PT12H30M</span></code> pour "douze heures et trente minutes").</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>A l'initialisation du questionnaire, tout champ durée vaut <code class="highlight"><span class="n">null</span></code>.</li>
+<li>Quand on saisie une valeur, ex <code class="highlight"><span class="m">2025</span></code> et <code class="highlight"><span class="m">12</span></code> pour année/mois, puis qu'on efface ces deux valeurs des champs, alors le champ durée vaut <code class="highlight"><span class="n">null</span></code> comme au début.</li>
+</ul>
+</div>
 
 
 

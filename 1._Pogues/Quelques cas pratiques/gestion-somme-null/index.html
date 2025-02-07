@@ -2939,7 +2939,8 @@ Donc <code class="highlight"><span class="n">SUM_TAB</span><span class="w"> </sp
 <p>Ici, le vecteur <code class="highlight"><span class="n">CA</span></code> est composé des valeurs suivant : <code class="highlight"><span class="p">[</span><span class="m">63</span><span class="p">,</span><span class="w"> </span><span class="n">null</span><span class="p">,</span><span class="w"> </span><span class="m">28</span><span class="p">]</span></code>. Or VTL ne sait pas faire <code class="highlight"><span class="m">63</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">null</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">28</span></code>. Il faut donc transformer ce null en 0.</p>
 <div class="admonition warning">
 <p class="admonition-title">Attention</p>
-<p>Contrairement à un champ texte ou un booléen, quand on efface la valeur (décocher ou supprimer la valeur du champ) d'un champ de type nombre, alors cette vraiable est remise à null. cf <em>lien vers explication à mettre</em></p>
+<p>Contrairement à un champ texte ou un booléen, quand on efface la valeur (décocher ou supprimer la valeur du champ) d'un champ de type nombre, alors cette variable est remise à null. <br>
+Voir <a href="../../Le%20guide/13-reponse-simple/#type-de-reponse-nombre">le type nombre</a> pour plus de détail.</p>
 </div>
 <h2 id="solution">Solution</h2>
 <p>On va passer par une variable calculée qui va transformer les <code class="highlight"><span class="n">null</span></code> en <code class="highlight"><span class="m">0</span></code> pour le vecteur <code class="highlight"><span class="n">CA</span></code></p>
