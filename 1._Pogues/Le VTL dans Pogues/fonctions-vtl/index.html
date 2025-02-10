@@ -3115,7 +3115,7 @@ Il est donc nécessaire de gérer cette possible nullité. On utilise pour cela 
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Champ texte vide</label><label for="__tabbed_2_2">Comparaison de nombre</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Tester si un champ texte, <code class="highlight"><span class="n">PRENOM</span></code> est vide ou non. <em>Voir <a href="../Le%20guide/13-reponse-simple‧md/#type-de-reponse-texte">la note des réponses de type texte</a></em>
+<p>Tester si un champ texte, <code class="highlight"><span class="n">PRENOM</span></code> est vide ou non. <em>Voir <a href="../../Le%20guide/13-reponse-simple/#type-de-reponse-texte">la note des réponses de type texte</a></em>
 <div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
 </code></pre></div></p>
 </div>
@@ -3188,9 +3188,14 @@ Ex: pour les date on vaut le format cible. "YYYY" ; "YYYY-MM-DD" ; </li>
 <td><code class="highlight"><span class="s">&quot;18&quot;</span></code></td>
 </tr>
 <tr>
-<td><code class="highlight"><span class="m">1995-01-02</span></code></td>
+<td><code class="highlight"><span class="m">1995-01-17</span></code></td>
 <td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span></code></td>
-<td><code class="highlight"><span class="s">&quot;1995-01-02&quot;</span></code></td>
+<td><code class="highlight"><span class="s">&quot;1995-01-17&quot;</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="m">1995-01-17</span></code></td>
+<td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY&quot;</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="s">&quot;1995-01-17&quot;</span></code> <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /></td>
 </tr>
 <tr>
 <td><code class="highlight"><span class="m">1995</span></code></td>
@@ -3267,14 +3272,44 @@ Ex: pour les date on vaut le format cible. "YYYY" ; "YYYY-MM-DD" ; </li>
 </thead>
 <tbody>
 <tr>
-<td><code class="highlight"><span class="s">&quot;1995-01-02&quot;</span></code></td>
+<td><code class="highlight"><span class="s">&quot;1995-01-17&quot;</span></code></td>
 <td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span></code></td>
-<td><code class="highlight"><span class="m">1995-01-02</span></code></td>
+<td><code class="highlight"><span class="m">1995-01-17</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="s">&quot;1995-01-17&quot;</span></code></td>
+<td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM&quot;</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">1995-01</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="s">&quot;1995-01-17&quot;</span></code></td>
+<td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY&quot;</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">1995</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="s">&quot;1995-01-17&quot;</span></code></td>
+<td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MM&quot;</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">01</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="s">&quot;1995-01-17&quot;</span></code></td>
+<td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DD&quot;</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">17</span></code></td>
 </tr>
 <tr>
 <td><code class="highlight"><span class="s">&quot;1995&quot;</span></code></td>
 <td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY&quot;</span><span class="p">)</span></code></td>
 <td><code class="highlight"><span class="m">1995</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="s">&quot;1995&quot;</span></code></td>
+<td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM&quot;</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">1995-01</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="s">&quot;1995&quot;</span></code></td>
+<td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">1995-01-01</span></code></td>
 </tr>
 </tbody>
 </table>
