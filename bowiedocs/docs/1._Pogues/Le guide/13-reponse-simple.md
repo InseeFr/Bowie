@@ -24,13 +24,26 @@ Renseigner aussi :
 ## Type de réponse Date
 Renseigner aussi :
 
-- le _format_ parmi AAAA-MM-JJ, AAAA-MM et AAAA 
+- le _format_ parmi `AAAA-MM-JJ`, `AAAA-MM` et `AAAA`
 - un _minimum_ et un _maximum_
 
 !!! info
     - A l'initialisation du questionnaire, tout champ date vaut `null`
     - Quand on saisie une valeur, ex pour juste une année `2025`, puis qu'on efface cette valeur du champ, alors le champ date vaut `null` comme au début.
+
+!!! warning "Type d'une point de vu VTL"
+    - D'un point de vu Pogues, on parle bien d'un type *Date*, mais d'un point de vu VTL, une variable de type *Date* va en réalité être collecté en tant que **texte** sous l'un des formats cités plus haut.
     
+    ??? example "Exemple"
+        Si on collecte une date `ANNEE_NAIS` sous le format `AAAA-MM-JJ` et que l'on saisie les valeurs suivantes
+        ![alt text](../../img/pogues/date_input.png)
+
+        alors la variabel `ANNEE_NAIS` aura la valeur `"2025-02-01"` est sera un texte
+
+    C'est pourquoi il est nécessaire de [cast()](../Le%20VTL%20dans%20Pogues/fonctions-vtl.md/#cast) ces variables en `date` pour les comparer. Voir [exemple d'utilisation](../Le%20VTL%20dans%20Pogues/fonctions-vtl.md/#__tabbed_5_3)
+
+    - Dans cette même logique, cela veut dire que l'on peut directement afficher une variable de type date dans un libellé dans utiliser `cast()`
+
 !!! danger "Précaution"
     - Si on laisse **vide** l'un des champs d'une date, alors **aucune valeur ne sera collectée** pour la variable associée. 
     ![alt text](../../img/pogues/incomplete_date.png)<br>

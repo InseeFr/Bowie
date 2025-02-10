@@ -146,38 +146,6 @@ nvl($VARIABLE_EXCLUSIVE$, false) and
 (nvl($AUTRE_VARIABLE_1$, false) or nvl($AUTRE_VARIABLE_2$, false) or nvl($AUTRE_VARIABLE_3$, false))
 ```
 
-## Gestion de la nullité
-
-Lorsque l’on manipule des variables en VTL, on veut dans la plupart des cas se prémunir de valeurs nulles. Par exemple, un champ qui n’est pas encore rempli par le répondant est de valeur nulle.
-
-Il est donc nécessaire de gérer cette possible nullité, on utilise pour cela la fonction `nvl` dont la syntaxe est la suivante :
-
-```
-nvl($VAR$, "") // ← si la variable est nulle, on lui affecte une chaîne vide, sinon c'est sa valeur qui est renvoyée
-```
-
-## Types des variables
-
-> TODO
-
-### Transtypage
-
-Il est parfois nécessaire de passer d’un type de variable à un autre, on parle dans ce cas de transtypage.
-
-Par exemple, si l’on veut extraire l’année de la date du jour, on va dans un premier temps transformer cette date en chaîne :
-
-```
-cast(current_date(),string,"YYYY-MM-DD")
-```
-
-C’est la fonction cast qui opère ce transtypage, sa syntaxe est :
-
-```
-cast(<variable>, <type cible> [, <motif>])
-```
-
-Comme vu plus haut, on utilisera fréquemment `cast` pour correctement typer une variable numérique dans Pogues mais récupérée comme une chaîne dans les outils de collecte.
-
 ## Fonctions et opérateurs
 
 L’usage de VTL dans Pogues et les outils de collecte s’appuie sur les bibliothèques Lunatic (pour les composants graphiques) et Trevas (qui fournit le moteur VTL).
@@ -260,16 +228,6 @@ substr(cast($DATE$, string, "YYYY-MM-DD"), 6, 2) ||
 "/" ||
 substr(cast($DATE$, string, "YYYY-MM-DD"), 1, 4)
 ```
-
-#### Comparaison
-
-Pour comparer des dates :
-
-```
-cast($ARRIVEE$, date, "YYYY-MM-DD") > cast($DEPART$, date, "YYYY-MM-DD")
-```
-
-Renvoie `true` si la date d'arrivée est postérieure à la date de départ.
 
 #### Calcul de durée
 

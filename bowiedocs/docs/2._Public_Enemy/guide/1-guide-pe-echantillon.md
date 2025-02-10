@@ -1,5 +1,7 @@
 # Création des unités enquêtées
 
+## Processus
+
 Après l'import du questionnaire Pogues, il faut fournir les unités enquêtées de test afin de créer les questionnaires correspondant dans les différents orchestrateurs.
 
 Pour cela, il faut transmettre un fichier CSV donnant les valeurs associées aux variables externes décrites dans Pogues.
@@ -22,6 +24,8 @@ On peut remplir les données à partir de ce fichier schéma :
 
 ...![Variables externes données](../../img/public-enemy/var-ext-data.png)
 
+## Point d'attention
+
 !!!danger "Encadrer les données avec `""`"
 
     - Les valeurs d'en-tête et de lignes doivent être encadrées de `""`. Le fichier schéma téléchargé depuis Public Enemy contient bien ces double quotes pour les en-têtes.
@@ -34,6 +38,9 @@ On peut remplir les données à partir de ce fichier schéma :
         "120027016","BTP","Pierre","Géraldine",""
         "987654321","COMMERCE","Solange","Ludovic","Camille"
         ```
+
+!!! warning "Type des variables externes"
+    - Toutes les variables externes sont importées avec en tant que texte (= type `string`). **il faut donc bien penser à utiliser la fonction de [cast()](../../1._Pogues/Le%20VTL%20dans%20Pogues/fonctions-vtl.md/#cast) au besoin**  
 
 !!!warning "Maximum 10 UE"
 

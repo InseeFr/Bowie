@@ -4,8 +4,12 @@
 ### Les plus utilisés
 | Method      | Description                          |
 | ----------- | ------------------------------------ |
-| [**`nvl`**](fonctions-vtl.md/#nvl)       | Permet de gérer la nullité    |
-| [**`cast`**](fonctions-vtl.md/#cast)       | Permet de changer le tye de la donnée    |
+| [**`nvl()`**](fonctions-vtl.md/#nvl)       | Permet de gérer la nullité    |
+| [**`cast()`**](fonctions-vtl.md/#cast)       | Permet de changer le tye de la donnée    |
+| [**`substr()`**](fonctions-vtl.md/#substr)       | :construction: Coming soon ...    |
+| [**`isnull()`**](fonctions-vtl.md/#isnull)       | :construction: Coming soon ...    |
+| [**`in`**](fonctions-vtl.md/#in)       | :construction: Coming soon ...    |
+| [**`if ... then ...`**](fonctions-vtl.md/#if-then)       | :construction: Coming soon ...    |
 
 ## Détail des fonctions
 ##### nvl
@@ -22,7 +26,7 @@
     - `valeur par défaut` : valeur retournée dans le cas ou `var` vaut `null` 
 
 === "Texte"
-    | Données | Fonction | Résultat |
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
     | --- | ---| --- |
     | `"mon texte"` | `nvl($MA_VARIABLE$, "valeur par défaut")` | `"mon texte"` |
     | `null` | `nvl($MA_VARIABLE$, "valeur par défaut")` | `"valeur par défaut"` |
@@ -30,7 +34,7 @@
     | `""` | `nvl($MA_VARIABLE$, "")` | `""` |
     | `""` | `nvl($MA_VARIABLE$, "autre valeur par défaut")` | `""` |
 === "Nombre"
-    | Données | Fonction | Résultat |
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
     | --- | ---| --- |
     | `18`      | `nvl($MA_VARIABLE$, 25)`   | `18` |
     | `null`      | `nvl($MA_VARIABLE$, 25)`   | `25` |
@@ -84,59 +88,87 @@
     Ex: pour les date on vaut le format cible. "YYYY" ; "YYYY-MM-DD" ; 
 
 === "Texte"
-    | Données | Fonction | Résultat |
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
     | --- | ---| --- |
     | `18`      | `cast($MA_VARIABLE$, string)`   | `"18"` |
     | `"18"`      | `cast($MA_VARIABLE$, string)`   | `"18"` |
-    | `1995-01-17`      | `cast($MA_VARIABLE$, string, "YYYY-MM-DD")`   | `"1995-01-17"` |
-    | `1995-01-17`      | `cast($MA_VARIABLE$, string, "YYYY")`   | `"1995-01-17"` :warning: |
-    | `1995`      | `cast($MA_VARIABLE$, string, "YYYY")`   | `"1995"` |
+    | `1995-01-17`  (`date`) | `cast($MA_VARIABLE$, string, "YYYY-MM-DD")`   | `"1995-01-17"` |
+    | `1995-01-17`  (`date`) | `cast($MA_VARIABLE$, string, "YYYY")`   | `"1995-01-17"` :warning: |
+    | `1995`  (`date`) | `cast($MA_VARIABLE$, string, "YYYY")`   | `"1995"` |
 === "Nombre"
-    | Données | Fonction | Résultat |
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
     | --- | ---| --- |
     | `"25"`      | `cast($MA_VARIABLE$, integer)`   | `25` |
     | `25`      | `cast($MA_VARIABLE$, integer)`   | `25` |
 === "Booléen"
-    | Données | Fonction | Résultat |
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
     | --- | ---| --- |
     | `0`      | `cast($MA_VARIABLE$, boolean)`   | `false` |
     | `1`      | `cast($MA_VARIABLE$, boolean)`   | `true` |
     | `"true"`      | `cast($MA_VARIABLE$, boolean)`   | `true` |
     | `true`      | `cast($MA_VARIABLE$, boolean)`   | `true` |
 === "Date"
-    | Données | Fonction | Résultat |
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
     | --- | ---| --- |
-    | `"1995-01-17"`      | `cast($MA_VARIABLE$, date, "YYYY-MM-DD")`   | `1995-01-17` |
-    | `"1995-01-17"`      | `cast($MA_VARIABLE$, date, "YYYY-MM")`   | `1995-01` |
-    | `"1995-01-17"`      | `cast($MA_VARIABLE$, date, "YYYY")`   | `1995` |
-    | `"1995-01-17"`      | `cast($MA_VARIABLE$, date, "MM")`   | `01` |
-    | `"1995-01-17"`      | `cast($MA_VARIABLE$, date, "DD")`   | `17` |
-    | `"1995"`      | `cast($MA_VARIABLE$, date, "YYYY")`   | `1995` |
-    | `"1995"`      | `cast($MA_VARIABLE$, date, "YYYY-MM")`   | `1995-01` |
-    | `"1995"`      | `cast($MA_VARIABLE$, date, "YYYY-MM-DD")`   | `1995-01-01` |
+    | `"1995-01-17"`      | `cast($MA_VARIABLE$, date, "YYYY-MM-DD")`   | `1995-01-17` (`date`) |
+    | `"1995-01-17"`      | `cast($MA_VARIABLE$, date, "YYYY-MM")`   | `1995-01` (`date`) |
+    | `"1995-01-17"`      | `cast($MA_VARIABLE$, date, "YYYY")`   | `1995` (`date`) |
+    | `"1995-01-17"`      | `cast($MA_VARIABLE$, date, "MM")`   | `01` (`date`) |
+    | `"1995-01-17"`      | `cast($MA_VARIABLE$, date, "DD")`   | `17` (`date`) |
+    | `"1995"`      | `cast($MA_VARIABLE$, date, "YYYY")`   | `1995` (`date`) |
+    | `"1995"`      | `cast($MA_VARIABLE$, date, "YYYY-MM")`   | `1995-01` (`date`) |
+    | `"1995"`      | `cast($MA_VARIABLE$, date, "YYYY-MM-DD")`   | `1995-01-01` (`date`) |
 
 ??? example "Exemple d'utilisation"
-    Par exemple on veut afficher dans un libellé l'âge d'une personne. Un libellé de question ne peut interpréter que
-    
-    - **des textes en dur** : tout texte positionné entre des doubles quotes `"mon texte"`, 
-    - **une variable de type texte** : variable définie avec un "Type de réponse" égale à `Texte`
-    > Voir [personnalisation de libellé](../Quelques%20cas%20pratiques/personnaliser-libelles‧md) pour plus de détails et d'exemples
+    === "Personnalisation une libellé"
+        Par exemple on veut afficher dans un libellé l'âge d'une personne. Un libellé de question ne peut interpréter que
+        
+        - **des textes en dur** : tout texte positionné entre des doubles quotes `"mon texte"`, 
+        - **une variable de type texte** : variable définie avec un "Type de réponse" égale à `Texte`
+        > Voir [personnalisation de libellé](../Quelques%20cas%20pratiques/personnaliser-libelles.md) pour plus de détails et d'exemples
 
-    **Or** un âge est souvent enregistré dans une variable de type `Nombre`
-    > afin de pouvoir faire des comparaisons, ex savoir si la personne est majeur ou non, `$AGE$ < 18`.
+        **Or** un âge est souvent enregistré dans une variable de type `Nombre`
+        > afin de pouvoir faire des comparaisons, ex savoir si la personne est majeur ou non, `$AGE$ < 18`.
 
-    === "VTL :x:"
-        Si on essaye d'injecter directement la variable `AGE` dans le libellé,
-        ```
-        "Âge de l'individu : " || $AGE$ || " ans."
-        ```
-        le VTL n'est pas bien interprété et la formule est affichée tel quel dans la visualisation.
-        ![alt text](../../img/pogues/vtl_wrong_cast.png)
-    === "VTL :white_check_mark:"
-        Il faut donc **changer le type** de la variable `AGE` en un type texte. En VTL cela correspond au type `string`
-        ```
-        "Individu ayant " || cast($AGE$,string) || " ans."
-        ```
-        Et le libellé s'affiche maintenant correctement
+        === "VTL :x:"
+            Si on essaye d'injecter directement la variable `AGE` dans le libellé,
+            ```
+            "Âge de l'individu : " || $AGE$ || " ans."
+            ```
+            le VTL n'est pas bien interprété et la formule est affichée tel quel dans la visualisation.
+            ![alt text](../../img/pogues/vtl_wrong_cast.png)
+        === "VTL :white_check_mark:"
+            Il faut donc **changer le type** de la variable `AGE` en un type texte. En VTL cela correspond au type `string`
+            ```
+            "Âge de l'individu : " || cast($AGE$,string) || " ans."
+            ```
+            Et le libellé s'affiche maintenant correctement
 
-        ![alt text](../../img/pogues/vtl_correct_cast.png)
+            ![alt text](../../img/pogues/vtl_correct_cast.png)
+    === "Comparaison de Nombre"
+        Dans le cas où on a une variable externe, comme elles sont de base tout importées comme des textes (cf [import de données externes](../../2._Public_Enemy/guide/1-guide-pe-echantillon.md/#point-dattention)), il faut les transtyper en nombre (`integer`)
+        ```
+        cast($VARIABLE_EXTERNE$, integer) < 25
+        ```
+        Renvoie `true` si la variable externe est inférieur à `25` et `false` sinon.
+    === "Comparaison de date"
+        Quand on définit une variable de type date, on collecte en réalité un texte sous un format précis (`AAAA`, `AAAA-MM`, `AAAA-MM-JJ`). Voir [Type de réponse Date](../Le%20guide/13-reponse-simple.md/#type-de-reponse-date). <br>
+        Or on ne peut comparer deux textes en terme de supériorité ou infériorité numérique. 
+
+        > Si on fait `"1986-01" > "1987-02"`, la moteur VTL ne saura pas comment les interpréter pour la comparaison.
+
+        Il faut donc d'abord caster nos variables en `date` puis faire la comparaison :
+        ```
+        cast($ARRIVEE$, date, "YYYY-MM-DD") > cast($DEPART$, date, "YYYY-MM-DD")
+        ```
+        Renvoie `true` si la date d'arrivée est postérieure à la date de départ et `false` sinon.
+
+##### substr
+:construction: Coming soon ...
+##### isnull
+:construction: Coming soon ...
+##### in
+:construction: Coming soon ...
+##### if ... then ...
+:construction: Coming soon ...
+
