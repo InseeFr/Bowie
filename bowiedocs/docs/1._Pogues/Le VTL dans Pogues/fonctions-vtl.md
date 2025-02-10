@@ -22,7 +22,6 @@
     - `valeur par défaut` : valeur retournée dans le cas ou `var` vaut `null` 
 
 === "Texte"
-
     | Données | Fonction | Résultat |
     | --- | ---| --- |
     | `"mon texte"` | `nvl($MA_VARIABLE$, "valeur par défaut")` | `"mon texte"` |
@@ -30,10 +29,7 @@
     | `null` | `nvl($MA_VARIABLE$, "")` | `""` |
     | `""` | `nvl($MA_VARIABLE$, "")` | `""` |
     | `""` | `nvl($MA_VARIABLE$, "autre valeur par défaut")` | `""` |
-
-
 === "Nombre"
-
     | Données | Fonction | Résultat |
     | --- | ---| --- |
     | `18`      | `nvl($MA_VARIABLE$, 25)`   | `18` |
@@ -44,11 +40,10 @@
 
 ??? example "Exemple d'utilisation"
     === "Champ texte vide"
-        Tester si un champ texte, `PRENOM` est vide ou non. _Voir [la note des réponses de type texte](../Le%20guide/13-reponse-simple‧md/#type-de-reponse-texte)_
+        Tester si un champ texte, `PRENOM` est vide ou non. _Voir [la note des réponses de type texte](../Le%20guide/13-reponse-simple.md/#type-de-reponse-texte)_
         ```
         nvl($PRENOM$, "") = ""
         ```
-
     === "Comparaison de nombre"
         Comparer si une variable de type nombre est supérieure à une valeur.
         
@@ -93,7 +88,8 @@
     | --- | ---| --- |
     | `18`      | `cast($MA_VARIABLE$, string)`   | `"18"` |
     | `"18"`      | `cast($MA_VARIABLE$, string)`   | `"18"` |
-    | `1995-01-02`      | `cast($MA_VARIABLE$, string, "YYYY-MM-DD")`   | `"1995-01-02"` |
+    | `1995-01-17`      | `cast($MA_VARIABLE$, string, "YYYY-MM-DD")`   | `"1995-01-17"` |
+    | `1995-01-17`      | `cast($MA_VARIABLE$, string, "YYYY")`   | `"1995-01-17"` :warning: |
     | `1995`      | `cast($MA_VARIABLE$, string, "YYYY")`   | `"1995"` |
 === "Nombre"
     | Données | Fonction | Résultat |
@@ -110,8 +106,14 @@
 === "Date"
     | Données | Fonction | Résultat |
     | --- | ---| --- |
-    | `"1995-01-02"`      | `cast($MA_VARIABLE$, date, "YYYY-MM-DD")`   | `1995-01-02` |
+    | `"1995-01-17"`      | `cast($MA_VARIABLE$, date, "YYYY-MM-DD")`   | `1995-01-17` |
+    | `"1995-01-17"`      | `cast($MA_VARIABLE$, date, "YYYY-MM")`   | `1995-01` |
+    | `"1995-01-17"`      | `cast($MA_VARIABLE$, date, "YYYY")`   | `1995` |
+    | `"1995-01-17"`      | `cast($MA_VARIABLE$, date, "MM")`   | `01` |
+    | `"1995-01-17"`      | `cast($MA_VARIABLE$, date, "DD")`   | `17` |
     | `"1995"`      | `cast($MA_VARIABLE$, date, "YYYY")`   | `1995` |
+    | `"1995"`      | `cast($MA_VARIABLE$, date, "YYYY-MM")`   | `1995-01` |
+    | `"1995"`      | `cast($MA_VARIABLE$, date, "YYYY-MM-DD")`   | `1995-01-01` |
 
 ??? example "Exemple d'utilisation"
     Par exemple on veut afficher dans un libellé l'âge d'une personne. Un libellé de question ne peut interpréter que
