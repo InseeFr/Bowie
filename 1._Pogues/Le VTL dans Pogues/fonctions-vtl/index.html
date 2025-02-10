@@ -3016,13 +3016,18 @@
 </table>
 <h2 id="detail-des-fonctions">Détail des fonctions</h2>
 <h5 id="nvl">nvl</h5>
+<div class="admonition question">
+<p class="admonition-title">Utilité</p>
+<p>Lorsque l’on manipule des variables en VTL, on veut dans la plupart des cas se prémunir de valeurs nulles. Par exemple, <strong>un champ qui n’est pas encore rempli par le répondant est de valeur nulle</strong> (<code class="highlight"><span class="n">null</span></code>). <br>
+Il est donc nécessaire de gérer cette possible nullité. On utilise pour cela la fonction <code class="highlight"><span class="n">nvl</span></code></p>
+</div>
 <div class="admonition abstract">
-<p class="admonition-title">Utilisation</p>
-<div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="n">var</span><span class="p">,</span><span class="w"> </span><span class="n">default_value</span><span class="p">)</span>
+<p class="admonition-title">Syntaxe</p>
+<div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">&lt;</span><span class="n">var</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="o">&lt;</span><span class="n">valeur</span><span class="w"> </span><span class="n">par</span><span class="w"> </span><span class="n">défaut</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre></div>
 <ul>
-<li><code class="highlight"><span class="n">var</span></code> : variable sur laquelle on applique le transtypage</li>
-<li><code class="highlight"><span class="n">type</span></code> : type dans lequel on veut formater la variable</li>
+<li><code class="highlight"><span class="n">var</span></code> : variable sur laquelle on teste la nullité</li>
+<li><code class="highlight"><span class="n">valeur</span><span class="w"> </span><span class="n">par</span><span class="w"> </span><span class="n">défaut</span></code> : valeur retournée dans le cas ou <code class="highlight"><span class="n">var</span></code> vaut <code class="highlight"><span class="n">null</span></code> </li>
 </ul>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Texte</label><label for="__tabbed_1_2">Nombre</label></div>
@@ -3105,17 +3110,62 @@
 </div>
 </div>
 </div>
+<details class="example">
+<summary>Exemple d'utilisation</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Champ texte vide</label><label for="__tabbed_2_2">Comparaison de nombre</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Tester si un champ texte, <code class="highlight"><span class="n">PRENOM</span></code> est vide ou non. <em>Voir <a href="../Le%20guide/13-reponse-simple‧md/#type-de-reponse-texte">la note des réponses de type texte</a></em>
+<div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p>Comparer si une variable de type nombre est supérieure à une valeur.</p>
+<blockquote>
+<p>Ici je veux me prémunir du fait que ma variable pourrait ne pas être renseignée. Si l'enquêté décide de ne pas saisir de valeur pour une question donnée dont la réponse est un nombre, exemple un chiffre d'affaire <code class="highlight"><span class="n">CA</span></code>, on pourrait considérer que le <code class="highlight"><span class="n">CA</span></code> équivaut à <code class="highlight"><span class="m">0</span></code> afin de rester cohérent dans les traitements suivants. <br></p>
+</blockquote>
+<p>Exemple, on veut un filtre pour afficher une question uniquement dans le cas où <code class="highlight"><span class="n">CA</span></code> serait supérieur à <code class="highlight"><span class="m">24</span><span class="w"> </span><span class="m">000</span></code>. on écrirait alors dans la condition d'affichage du filtre,</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Condition sans <code class="highlight"><span class="n">nvl</span></code> <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/274c.svg" title=":x:" /></label><label for="__tabbed_3_2">Condition implicite <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></label><label for="__tabbed_3_3">Condition avec <code class="highlight"><span class="o">=</span><span class="n">true</span></code> <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="o">$</span><span class="n">CA</span><span class="o">$</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">24</span><span class="w"> </span><span class="m">000</span>
+</code></pre></div>
+Si l'enquêté ne répond rien à <code class="highlight"><span class="n">CA</span></code>, alors la filtre va être évalué avec <code class="highlight"><span class="n">null</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">24</span><span class="w"> </span><span class="m">000</span></code> ce qui renvoie une erreur et donc on affiche la question dans tous les cas (voir <a href="../../../6._%F0%9F%AB%82_Support/#affichage-à-tort-de-questions-filtrées">comportement filtre</a> pour plus de détails). Or on aurait aimé que si l'enquêté ne réponde rien ce soit comme si il avait un <code class="highlight"><span class="n">CA</span></code> de <code class="highlight"><span class="m">0</span></code>.</p>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">CA</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w">  </span><span class="m">24</span><span class="w"> </span><span class="m">000</span>
+</code></pre></div>
+Si l'enquêté ne répond rien à <code class="highlight"><span class="n">CA</span></code>, alors la filtre va être évalué avec <code class="highlight"><span class="m">0</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">24</span><span class="w"> </span><span class="m">000</span></code> ce qui renvoie <code class="highlight"><span class="n">false</span></code> et la condition d'affichage n'étant pas remplie, alors la question concernée sera filtrée.</p>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">CA</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w">  </span><span class="m">24</span><span class="w"> </span><span class="m">000</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span>
+</code></pre></div>
+Si l'enquêté ne répond rien à <code class="highlight"><span class="n">CA</span></code>, alors la filtre va être évalué avec <code class="highlight"><span class="m">0</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">24</span><span class="w"> </span><span class="m">000</span></code> ce qui renvoie <code class="highlight"><span class="n">false</span></code> et la condition d'affichage n'étant pas remplie, alors la question concernée sera filtrée.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</details>
 <h5 id="cast">cast</h5>
+<div class="admonition question">
+<p class="admonition-title">Utilité</p>
+<p>En VTL, Le typage <strong>définit la nature des valeurs que peuvent prendre les données que nous manipulons</strong>. <br>
+Il est parfois nécessaire de passer d’un type de variable à un autre, on parle dans ce cas de transtypage.</p>
+</div>
 <div class="admonition abstract">
-<p class="admonition-title">Utilisation</p>
-<div class="highlight"><pre><span></span><code><span class="nf">cast</span><span class="p">(</span><span class="n">var</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="p">)</span>
+<p class="admonition-title">Syntaxe</p>
+<div class="highlight"><pre><span></span><code><span class="nf">cast</span><span class="p">(</span><span class="o">&lt;</span><span class="n">var</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="o">&lt;</span><span class="n">type</span><span class="w"> </span><span class="n">cible</span><span class="o">&gt;</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="o">&lt;</span><span class="n">motif</span><span class="o">&gt;</span><span class="p">])</span>
 </code></pre></div>
 <ul>
 <li><code class="highlight"><span class="n">var</span></code> : variable sur laquelle on applique le transtypage</li>
-<li><code class="highlight"><span class="n">type</span></code> : type dans lequel on veut formater la variable</li>
+<li><code class="highlight"><span class="n">type</span><span class="w"> </span><span class="n">cible</span></code> : type dans lequel on veut formater la variable</li>
+<li><code class="highlight"><span class="n">motif</span></code> (optionnel) :  selon les type de cast on a besoin d'un information supplémentaire. 
+Ex: pour les date on vaut le format cible. "YYYY" ; "YYYY-MM-DD" ; </li>
 </ul>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Texte</label><label for="__tabbed_2_2">Nombre</label><label for="__tabbed_2_3">Booléen</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:4"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Texte</label><label for="__tabbed_4_2">Nombre</label><label for="__tabbed_4_3">Booléen</label><label for="__tabbed_4_4">Date</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -3136,6 +3186,16 @@
 <td><code class="highlight"><span class="s">&quot;18&quot;</span></code></td>
 <td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="p">)</span></code></td>
 <td><code class="highlight"><span class="s">&quot;18&quot;</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="m">1995-01-02</span></code></td>
+<td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="s">&quot;1995-01-02&quot;</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="m">1995</span></code></td>
+<td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY&quot;</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="s">&quot;1995&quot;</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -3196,13 +3256,64 @@
 </tbody>
 </table>
 </div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Données</th>
+<th>Fonction</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="highlight"><span class="s">&quot;1995-01-02&quot;</span></code></td>
+<td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">1995-01-02</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="s">&quot;1995&quot;</span></code></td>
+<td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY&quot;</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">1995</span></code></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Il est parfois nécessaire de passer d’un type de variable à un autre, on parle dans ce cas de transtypage.</p>
-<p>Par exemple, si l’on veut extraire l’année de la date du jour, on va dans un premier temps transformer cette date en chaîne :</p>
 </div>
+<details class="example">
+<summary>Exemple d'utilisation</summary>
+<p>Par exemple on veut afficher dans un libellé l'âge d'une personne. Un libellé de question ne peut interpréter que</p>
+<ul>
+<li><strong>des textes en dur</strong> : tout texte positionné entre des doubles quotes <code class="highlight"><span class="s">&quot;mon texte&quot;</span></code>, </li>
+<li><strong>une variable de type texte</strong> : variable définie avec un "Type de réponse" égale à <code class="highlight"><span class="n">Texte</span></code><blockquote>
+<p>Voir <a href="../Quelques%20cas%20pratiques/personnaliser-libelles‧md">personnalisation de libellé</a> pour plus de détails et d'exemples</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>Or</strong> un âge est souvent enregistré dans une variable de type <code class="highlight"><span class="n">Nombre</span></code></p>
+<blockquote>
+<p>afin de pouvoir faire des comparaisons, ex savoir si la personne est majeur ou non, <code class="highlight"><span class="o">$</span><span class="n">AGE</span><span class="o">$</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">18</span></code>.</p>
+</blockquote>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">VTL <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/274c.svg" title=":x:" /></label><label for="__tabbed_5_2">VTL <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Si on essaye d'injecter directement la variable <code class="highlight"><span class="n">AGE</span></code> dans le libellé,
+<div class="highlight"><pre><span></span><code><span class="s">&quot;Âge de l&#39;individu : &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">$</span><span class="n">AGE</span><span class="o">$</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; ans.&quot;</span>
+</code></pre></div>
+le VTL n'est pas bien interprété et la formule est affichée tel quel dans la visualisation.
+<a class="glightbox" href="../../../img/pogues/vtl_wrong_cast.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/vtl_wrong_cast.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p>Il faut donc <strong>changer le type</strong> de la variable <code class="highlight"><span class="n">AGE</span></code> en un type texte. En VTL cela correspond au type <code class="highlight"><span class="n">string</span></code>
+<div class="highlight"><pre><span></span><code><span class="s">&quot;Individu ayant &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">AGE</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; ans.&quot;</span>
+</code></pre></div>
+Et le libellé s'affiche maintenant correctement</p>
+<p><a class="glightbox" href="../../../img/pogues/vtl_correct_cast.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/vtl_correct_cast.png" /></a></p>
+</div>
+</div>
+</div>
+</details>
 
 
 
