@@ -814,6 +814,42 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#substr" class="md-nav__link">
+    <span class="md-ellipsis">
+      substr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isnull" class="md-nav__link">
+    <span class="md-ellipsis">
+      isnull
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in" class="md-nav__link">
+    <span class="md-ellipsis">
+      in
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-then" class="md-nav__link">
+    <span class="md-ellipsis">
+      if ... then ...
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2973,6 +3009,42 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#substr" class="md-nav__link">
+    <span class="md-ellipsis">
+      substr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isnull" class="md-nav__link">
+    <span class="md-ellipsis">
+      isnull
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in" class="md-nav__link">
+    <span class="md-ellipsis">
+      in
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-then" class="md-nav__link">
+    <span class="md-ellipsis">
+      if ... then ...
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3005,12 +3077,28 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="./#nvl"><strong><code class="highlight"><span class="n">nvl</span></code></strong></a></td>
+<td><a href="./#nvl"><strong><code class="highlight"><span class="nf">nvl</span><span class="p">()</span></code></strong></a></td>
 <td>Permet de gérer la nullité</td>
 </tr>
 <tr>
-<td><a href="./#cast"><strong><code class="highlight"><span class="n">cast</span></code></strong></a></td>
+<td><a href="./#cast"><strong><code class="highlight"><span class="nf">cast</span><span class="p">()</span></code></strong></a></td>
 <td>Permet de changer le tye de la donnée</td>
+</tr>
+<tr>
+<td><a href="./#substr"><strong><code class="highlight"><span class="nf">substr</span><span class="p">()</span></code></strong></a></td>
+<td><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f6a7.svg" title=":construction:" /> Coming soon ...</td>
+</tr>
+<tr>
+<td><a href="./#isnull"><strong><code class="highlight"><span class="nf">isnull</span><span class="p">()</span></code></strong></a></td>
+<td><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f6a7.svg" title=":construction:" /> Coming soon ...</td>
+</tr>
+<tr>
+<td><a href="./#in"><strong><code class="highlight"><span class="n">in</span></code></strong></a></td>
+<td><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f6a7.svg" title=":construction:" /> Coming soon ...</td>
+</tr>
+<tr>
+<td><a href="./#if-then"><strong><code class="highlight"><span class="n">if</span><span class="w"> </span><span class="kc">...</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="kc">...</span></code></strong></a></td>
+<td><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f6a7.svg" title=":construction:" /> Coming soon ...</td>
 </tr>
 </tbody>
 </table>
@@ -3036,7 +3124,7 @@ Il est donc nécessaire de gérer cette possible nullité. On utilise pour cela 
 <table>
 <thead>
 <tr>
-<th>Données</th>
+<th>Valeur de <code class="highlight"><span class="n">MA_VARIABLE</span></code></th>
 <th>Fonction</th>
 <th>Résultat</th>
 </tr>
@@ -3074,7 +3162,7 @@ Il est donc nécessaire de gérer cette possible nullité. On utilise pour cela 
 <table>
 <thead>
 <tr>
-<th>Données</th>
+<th>Valeur de <code class="highlight"><span class="n">MA_VARIABLE</span></code></th>
 <th>Fonction</th>
 <th>Résultat</th>
 </tr>
@@ -3171,7 +3259,7 @@ Ex: pour les date on vaut le format cible. "YYYY" ; "YYYY-MM-DD" ; </li>
 <table>
 <thead>
 <tr>
-<th>Données</th>
+<th>Valeur de <code class="highlight"><span class="n">MA_VARIABLE</span></code></th>
 <th>Fonction</th>
 <th>Résultat</th>
 </tr>
@@ -3188,17 +3276,17 @@ Ex: pour les date on vaut le format cible. "YYYY" ; "YYYY-MM-DD" ; </li>
 <td><code class="highlight"><span class="s">&quot;18&quot;</span></code></td>
 </tr>
 <tr>
-<td><code class="highlight"><span class="m">1995-01-17</span></code></td>
+<td><code class="highlight"><span class="m">1995-01-17</span></code>  (<code class="highlight"><span class="n">date</span></code>)</td>
 <td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span></code></td>
 <td><code class="highlight"><span class="s">&quot;1995-01-17&quot;</span></code></td>
 </tr>
 <tr>
-<td><code class="highlight"><span class="m">1995-01-17</span></code></td>
+<td><code class="highlight"><span class="m">1995-01-17</span></code>  (<code class="highlight"><span class="n">date</span></code>)</td>
 <td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY&quot;</span><span class="p">)</span></code></td>
 <td><code class="highlight"><span class="s">&quot;1995-01-17&quot;</span></code> <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /></td>
 </tr>
 <tr>
-<td><code class="highlight"><span class="m">1995</span></code></td>
+<td><code class="highlight"><span class="m">1995</span></code>  (<code class="highlight"><span class="n">date</span></code>)</td>
 <td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY&quot;</span><span class="p">)</span></code></td>
 <td><code class="highlight"><span class="s">&quot;1995&quot;</span></code></td>
 </tr>
@@ -3209,7 +3297,7 @@ Ex: pour les date on vaut le format cible. "YYYY" ; "YYYY-MM-DD" ; </li>
 <table>
 <thead>
 <tr>
-<th>Données</th>
+<th>Valeur de <code class="highlight"><span class="n">MA_VARIABLE</span></code></th>
 <th>Fonction</th>
 <th>Résultat</th>
 </tr>
@@ -3232,7 +3320,7 @@ Ex: pour les date on vaut le format cible. "YYYY" ; "YYYY-MM-DD" ; </li>
 <table>
 <thead>
 <tr>
-<th>Données</th>
+<th>Valeur de <code class="highlight"><span class="n">MA_VARIABLE</span></code></th>
 <th>Fonction</th>
 <th>Résultat</th>
 </tr>
@@ -3265,7 +3353,7 @@ Ex: pour les date on vaut le format cible. "YYYY" ; "YYYY-MM-DD" ; </li>
 <table>
 <thead>
 <tr>
-<th>Données</th>
+<th>Valeur de <code class="highlight"><span class="n">MA_VARIABLE</span></code></th>
 <th>Fonction</th>
 <th>Résultat</th>
 </tr>
@@ -3274,42 +3362,42 @@ Ex: pour les date on vaut le format cible. "YYYY" ; "YYYY-MM-DD" ; </li>
 <tr>
 <td><code class="highlight"><span class="s">&quot;1995-01-17&quot;</span></code></td>
 <td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span></code></td>
-<td><code class="highlight"><span class="m">1995-01-17</span></code></td>
+<td><code class="highlight"><span class="m">1995-01-17</span></code> (<code class="highlight"><span class="n">date</span></code>)</td>
 </tr>
 <tr>
 <td><code class="highlight"><span class="s">&quot;1995-01-17&quot;</span></code></td>
 <td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM&quot;</span><span class="p">)</span></code></td>
-<td><code class="highlight"><span class="m">1995-01</span></code></td>
+<td><code class="highlight"><span class="m">1995-01</span></code> (<code class="highlight"><span class="n">date</span></code>)</td>
 </tr>
 <tr>
 <td><code class="highlight"><span class="s">&quot;1995-01-17&quot;</span></code></td>
 <td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY&quot;</span><span class="p">)</span></code></td>
-<td><code class="highlight"><span class="m">1995</span></code></td>
+<td><code class="highlight"><span class="m">1995</span></code> (<code class="highlight"><span class="n">date</span></code>)</td>
 </tr>
 <tr>
 <td><code class="highlight"><span class="s">&quot;1995-01-17&quot;</span></code></td>
 <td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MM&quot;</span><span class="p">)</span></code></td>
-<td><code class="highlight"><span class="m">01</span></code></td>
+<td><code class="highlight"><span class="m">01</span></code> (<code class="highlight"><span class="n">date</span></code>)</td>
 </tr>
 <tr>
 <td><code class="highlight"><span class="s">&quot;1995-01-17&quot;</span></code></td>
 <td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DD&quot;</span><span class="p">)</span></code></td>
-<td><code class="highlight"><span class="m">17</span></code></td>
+<td><code class="highlight"><span class="m">17</span></code> (<code class="highlight"><span class="n">date</span></code>)</td>
 </tr>
 <tr>
 <td><code class="highlight"><span class="s">&quot;1995&quot;</span></code></td>
 <td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY&quot;</span><span class="p">)</span></code></td>
-<td><code class="highlight"><span class="m">1995</span></code></td>
+<td><code class="highlight"><span class="m">1995</span></code> (<code class="highlight"><span class="n">date</span></code>)</td>
 </tr>
 <tr>
 <td><code class="highlight"><span class="s">&quot;1995&quot;</span></code></td>
 <td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM&quot;</span><span class="p">)</span></code></td>
-<td><code class="highlight"><span class="m">1995-01</span></code></td>
+<td><code class="highlight"><span class="m">1995-01</span></code> (<code class="highlight"><span class="n">date</span></code>)</td>
 </tr>
 <tr>
 <td><code class="highlight"><span class="s">&quot;1995&quot;</span></code></td>
 <td><code class="highlight"><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span></code></td>
-<td><code class="highlight"><span class="m">1995-01-01</span></code></td>
+<td><code class="highlight"><span class="m">1995-01-01</span></code> (<code class="highlight"><span class="n">date</span></code>)</td>
 </tr>
 </tbody>
 </table>
@@ -3318,11 +3406,14 @@ Ex: pour les date on vaut le format cible. "YYYY" ; "YYYY-MM-DD" ; </li>
 </div>
 <details class="example">
 <summary>Exemple d'utilisation</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Personnalisation une libellé</label><label for="__tabbed_5_2">Comparaison de Nombre</label><label for="__tabbed_5_3">Comparaison de date</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>Par exemple on veut afficher dans un libellé l'âge d'une personne. Un libellé de question ne peut interpréter que</p>
 <ul>
 <li><strong>des textes en dur</strong> : tout texte positionné entre des doubles quotes <code class="highlight"><span class="s">&quot;mon texte&quot;</span></code>, </li>
 <li><strong>une variable de type texte</strong> : variable définie avec un "Type de réponse" égale à <code class="highlight"><span class="n">Texte</span></code><blockquote>
-<p>Voir <a href="../Quelques%20cas%20pratiques/personnaliser-libelles‧md">personnalisation de libellé</a> pour plus de détails et d'exemples</p>
+<p>Voir <a href="../../Quelques%20cas%20pratiques/personnaliser-libelles/">personnalisation de libellé</a> pour plus de détails et d'exemples</p>
 </blockquote>
 </li>
 </ul>
@@ -3330,7 +3421,7 @@ Ex: pour les date on vaut le format cible. "YYYY" ; "YYYY-MM-DD" ; </li>
 <blockquote>
 <p>afin de pouvoir faire des comparaisons, ex savoir si la personne est majeur ou non, <code class="highlight"><span class="o">$</span><span class="n">AGE</span><span class="o">$</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">18</span></code>.</p>
 </blockquote>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">VTL <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/274c.svg" title=":x:" /></label><label for="__tabbed_5_2">VTL <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">VTL <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/274c.svg" title=":x:" /></label><label for="__tabbed_6_2">VTL <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Si on essaye d'injecter directement la variable <code class="highlight"><span class="n">AGE</span></code> dans le libellé,
@@ -3341,14 +3432,42 @@ le VTL n'est pas bien interprété et la formule est affichée tel quel dans la 
 </div>
 <div class="tabbed-block">
 <p>Il faut donc <strong>changer le type</strong> de la variable <code class="highlight"><span class="n">AGE</span></code> en un type texte. En VTL cela correspond au type <code class="highlight"><span class="n">string</span></code>
-<div class="highlight"><pre><span></span><code><span class="s">&quot;Individu ayant &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">AGE</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; ans.&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="s">&quot;Âge de l&#39;individu : &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">AGE</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; ans.&quot;</span>
 </code></pre></div>
 Et le libellé s'affiche maintenant correctement</p>
 <p><a class="glightbox" href="../../../img/pogues/vtl_correct_cast.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/vtl_correct_cast.png" /></a></p>
 </div>
 </div>
 </div>
+</div>
+<div class="tabbed-block">
+<p>Dans le cas où on a une variable externe, comme elles sont de base tout importées comme des textes (cf <a href="../../../2._Public_Enemy/guide/1-guide-pe-echantillon/#point-dattention">import de données externes</a>), il faut les transtyper en nombre (<code class="highlight"><span class="n">integer</span></code>)
+<div class="highlight"><pre><span></span><code><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VARIABLE_EXTERNE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">25</span>
+</code></pre></div>
+Renvoie <code class="highlight"><span class="n">true</span></code> si la variable externe est inférieur à <code class="highlight"><span class="m">25</span></code> et <code class="highlight"><span class="n">false</span></code> sinon.</p>
+</div>
+<div class="tabbed-block">
+<p>Quand on définit une variable de type date, on collecte en réalité un texte sous un format précis (<code class="highlight"><span class="n">AAAA</span></code>, <code class="highlight"><span class="n">AAAA</span><span class="o">-</span><span class="n">MM</span></code>, <code class="highlight"><span class="n">AAAA</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">JJ</span></code>). Voir <a href="../../Le%20guide/13-reponse-simple/#type-de-reponse-date">Type de réponse Date</a>. <br>
+Or on ne peut comparer deux textes en terme de supériorité ou infériorité numérique. </p>
+<blockquote>
+<p>Si on fait <code class="highlight"><span class="s">&quot;1986-01&quot;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="s">&quot;1987-02&quot;</span></code>, la moteur VTL ne saura pas comment les interpréter pour la comparaison.</p>
+</blockquote>
+<p>Il faut donc d'abord caster nos variables en <code class="highlight"><span class="n">date</span></code> puis faire la comparaison :
+<div class="highlight"><pre><span></span><code><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">ARRIVEE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">DEPART</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span>
+</code></pre></div>
+Renvoie <code class="highlight"><span class="n">true</span></code> si la date d'arrivée est postérieure à la date de départ et <code class="highlight"><span class="n">false</span></code> sinon.</p>
+</div>
+</div>
+</div>
 </details>
+<h5 id="substr">substr</h5>
+<p><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f6a7.svg" title=":construction:" /> Coming soon ...</p>
+<h5 id="isnull">isnull</h5>
+<p><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f6a7.svg" title=":construction:" /> Coming soon ...</p>
+<h5 id="in">in</h5>
+<p><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f6a7.svg" title=":construction:" /> Coming soon ...</p>
+<h5 id="if-then">if ... then ...</h5>
+<p><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f6a7.svg" title=":construction:" /> Coming soon ...</p>
 
 
 

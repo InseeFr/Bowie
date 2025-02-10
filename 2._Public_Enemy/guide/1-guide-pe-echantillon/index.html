@@ -2045,6 +2045,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Création des unités enquêtées
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2054,6 +2065,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#processus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Processus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#point-dattention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Point d'attention
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2828,6 +2876,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#processus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Processus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#point-dattention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Point d'attention
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2842,6 +2916,7 @@
 
 
 <h1 id="creation-des-unites-enquetees">Création des unités enquêtées</h1>
+<h2 id="processus">Processus</h2>
 <p>Après l'import du questionnaire Pogues, il faut fournir les unités enquêtées de test afin de créer les questionnaires correspondant dans les différents orchestrateurs.</p>
 <p>Pour cela, il faut transmettre un fichier CSV donnant les valeurs associées aux variables externes décrites dans Pogues.</p>
 <p>Le bouton "Schéma CSV attendu" permet de télécharger un fichier CSV contenant l'entête des variables, à compléter avec les valeurs associées aux unités enquêtées.</p>
@@ -2853,6 +2928,7 @@
 <p><a class="glightbox" href="../../../img/public-enemy/var-ext-schema.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variables externes schéma" src="../../../img/public-enemy/var-ext-schema.png" /></a></p>
 <p>On peut remplir les données à partir de ce fichier schéma :</p>
 <p>...<a class="glightbox" href="../../../img/public-enemy/var-ext-data.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variables externes données" src="../../../img/public-enemy/var-ext-data.png" /></a></p>
+<h2 id="point-dattention">Point d'attention</h2>
 <div class="admonition danger">
 <p class="admonition-title">Encadrer les données avec <code class="highlight"><span class="s">&quot;&quot;</span></code></p>
 <ul>
@@ -2867,6 +2943,12 @@
 <span class="s">&quot;987654321&quot;</span><span class="p">,</span><span class="s">&quot;COMMERCE&quot;</span><span class="p">,</span><span class="s">&quot;Solange&quot;</span><span class="p">,</span><span class="s">&quot;Ludovic&quot;</span><span class="p">,</span><span class="s">&quot;Camille&quot;</span>
 </code></pre></div>
 </details>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Type des variables externes</p>
+<ul>
+<li>Toutes les variables externes sont importées avec en tant que texte (= type <code class="highlight"><span class="n">string</span></code>). <strong>il faut donc bien penser à utiliser la fonction de <a href="../../../1._Pogues/Le%20VTL%20dans%20Pogues/fonctions-vtl/#cast">cast()</a> au besoin</strong>  </li>
+</ul>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Maximum 10 UE</p>

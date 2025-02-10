@@ -901,39 +901,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gestion-de-la-nullite" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gestion de la nullité
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#types-des-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types des variables
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Types des variables">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#transtypage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Transtypage
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#fonctions-et-operateurs" class="md-nav__link">
     <span class="md-ellipsis">
       Fonctions et opérateurs
@@ -1047,15 +1014,6 @@
   <a href="#formater-laffichage-de-la-date" class="md-nav__link">
     <span class="md-ellipsis">
       Formater l'affichage de la date
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comparaison" class="md-nav__link">
-    <span class="md-ellipsis">
-      Comparaison
     </span>
   </a>
   
@@ -3369,39 +3327,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gestion-de-la-nullite" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gestion de la nullité
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#types-des-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types des variables
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Types des variables">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#transtypage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Transtypage
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#fonctions-et-operateurs" class="md-nav__link">
     <span class="md-ellipsis">
       Fonctions et opérateurs
@@ -3515,15 +3440,6 @@
   <a href="#formater-laffichage-de-la-date" class="md-nav__link">
     <span class="md-ellipsis">
       Formater l'affichage de la date
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comparaison" class="md-nav__link">
-    <span class="md-ellipsis">
-      Comparaison
     </span>
   </a>
   
@@ -3789,24 +3705,6 @@
 <div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VARIABLE_EXCLUSIVE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="nf">and</span>
 <span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">AUTRE_VARIABLE_1</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">AUTRE_VARIABLE_2</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">AUTRE_VARIABLE_3</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">))</span>
 </code></pre></div>
-<h2 id="gestion-de-la-nullite">Gestion de la nullité</h2>
-<p>Lorsque l’on manipule des variables en VTL, on veut dans la plupart des cas se prémunir de valeurs nulles. Par exemple, un champ qui n’est pas encore rempli par le répondant est de valeur nulle.</p>
-<p>Il est donc nécessaire de gérer cette possible nullité, on utilise pour cela la fonction <code class="highlight"><span class="n">nvl</span></code> dont la syntaxe est la suivante :</p>
-<div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">//</span><span class="w"> </span>←<span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="n">est</span><span class="w"> </span><span class="n">nulle</span><span class="p">,</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">lui</span><span class="w"> </span><span class="n">affecte</span><span class="w"> </span><span class="n">une</span><span class="w"> </span><span class="n">chaîne</span><span class="w"> </span><span class="n">vide</span><span class="p">,</span><span class="w"> </span><span class="n">sinon</span><span class="w"> </span><span class="n">c</span><span class="s">&#39;</span><span class="err">est sa valeur qui est renvoyée</span>
-</code></pre></div>
-<h2 id="types-des-variables">Types des variables</h2>
-<blockquote>
-<p>TODO</p>
-</blockquote>
-<h3 id="transtypage">Transtypage</h3>
-<p>Il est parfois nécessaire de passer d’un type de variable à un autre, on parle dans ce cas de transtypage.</p>
-<p>Par exemple, si l’on veut extraire l’année de la date du jour, on va dans un premier temps transformer cette date en chaîne :</p>
-<div class="highlight"><pre><span></span><code><span class="nf">cast</span><span class="p">(</span><span class="nf">current_date</span><span class="p">(),</span><span class="n">string</span><span class="p">,</span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span>
-</code></pre></div>
-<p>C’est la fonction cast qui opère ce transtypage, sa syntaxe est :</p>
-<div class="highlight"><pre><span></span><code><span class="nf">cast</span><span class="p">(</span><span class="o">&lt;</span><span class="n">variable</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="o">&lt;</span><span class="n">type</span><span class="w"> </span><span class="n">cible</span><span class="o">&gt;</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="o">&lt;</span><span class="n">motif</span><span class="o">&gt;</span><span class="p">])</span>
-</code></pre></div>
-<p>Comme vu plus haut, on utilisera fréquemment <code class="highlight"><span class="n">cast</span></code> pour correctement typer une variable numérique dans Pogues mais récupérée comme une chaîne dans les outils de collecte.</p>
 <h2 id="fonctions-et-operateurs">Fonctions et opérateurs</h2>
 <p>L’usage de VTL dans Pogues et les outils de collecte s’appuie sur les bibliothèques Lunatic (pour les composants graphiques) et Trevas (qui fournit le moteur VTL).</p>
 <p>C’est l’état d’avancement de cette dernière qui permet de connaître les opérateurs et fonctions disponibles : la référence est donc la <a href="https://inseefr.github.io/Trevas-JS/fr/coverage.html">page de suivi de l’implémentation</a>.</p>
@@ -3884,11 +3782,6 @@
 <span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">||</span>
 <span class="nf">substr</span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">DATE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">),</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">)</span>
 </code></pre></div>
-<h4 id="comparaison">Comparaison</h4>
-<p>Pour comparer des dates :</p>
-<div class="highlight"><pre><span></span><code><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">ARRIVEE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">DEPART</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span>
-</code></pre></div>
-<p>Renvoie <code class="highlight"><span class="n">true</span></code> si la date d'arrivée est postérieure à la date de départ.</p>
 <h4 id="calcul-de-duree">Calcul de durée</h4>
 <p>Pour calculer une durée à partir de variables collectées de type Date :</p>
 <div class="highlight"><pre><span></span><code><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">ARRIVEE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">DEPART</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span>

@@ -2995,7 +2995,7 @@ Ex de condition d'affichage d'un contrôle pour indiquer qu'un champ texte est v
 <h2 id="type-de-reponse-date">Type de réponse Date</h2>
 <p>Renseigner aussi :</p>
 <ul>
-<li>le <em>format</em> parmi AAAA-MM-JJ, AAAA-MM et AAAA </li>
+<li>le <em>format</em> parmi <code class="highlight"><span class="n">AAAA</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">JJ</span></code>, <code class="highlight"><span class="n">AAAA</span><span class="o">-</span><span class="n">MM</span></code> et <code class="highlight"><span class="n">AAAA</span></code></li>
 <li>un <em>minimum</em> et un <em>maximum</em></li>
 </ul>
 <div class="admonition info">
@@ -3003,6 +3003,22 @@ Ex de condition d'affichage d'un contrôle pour indiquer qu'un champ texte est v
 <ul>
 <li>A l'initialisation du questionnaire, tout champ date vaut <code class="highlight"><span class="n">null</span></code></li>
 <li>Quand on saisie une valeur, ex pour juste une année <code class="highlight"><span class="m">2025</span></code>, puis qu'on efface cette valeur du champ, alors le champ date vaut <code class="highlight"><span class="n">null</span></code> comme au début.</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Type d'une point de vu VTL</p>
+<ul>
+<li>D'un point de vu Pogues, on parle bien d'un type <em>Date</em>, mais d'un point de vu VTL, une variable de type <em>Date</em> va en réalité être collecté en tant que <strong>texte</strong> sous l'un des formats cités plus haut.</li>
+</ul>
+<details class="example">
+<summary>Exemple</summary>
+<p>Si on collecte une date <code class="highlight"><span class="n">ANNEE_NAIS</span></code> sous le format <code class="highlight"><span class="n">AAAA</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">JJ</span></code> et que l'on saisie les valeurs suivantes
+<a class="glightbox" href="../../../img/pogues/date_input.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/date_input.png" /></a></p>
+<p>alors la variabel <code class="highlight"><span class="n">ANNEE_NAIS</span></code> aura la valeur <code class="highlight"><span class="s">&quot;2025-02-01&quot;</span></code> est sera un texte</p>
+</details>
+<p>C'est pourquoi il est nécessaire de <a href="../../Le%20VTL%20dans%20Pogues/fonctions-vtl/#cast">cast()</a> ces variables en <code class="highlight"><span class="n">date</span></code> pour les comparer. Voir <a href="../../Le%20VTL%20dans%20Pogues/fonctions-vtl/#__tabbed_5_3">exemple d'utilisation</a></p>
+<ul>
+<li>Dans cette même logique, cela veut dire que l'on peut directement afficher une variable de type date dans un libellé dans utiliser <code class="highlight"><span class="nf">cast</span><span class="p">()</span></code></li>
 </ul>
 </div>
 <div class="admonition danger">

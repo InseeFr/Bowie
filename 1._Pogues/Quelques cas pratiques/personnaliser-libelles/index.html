@@ -2848,15 +2848,37 @@
 <li>pour être utilisées dans un libellé, les variables numériques collectées doivent être converties en chaînes de caractères (fonction <strong>cast</strong>)</li>
 <li>les variables externes, <em>quelle que soit leur nature</em>, sont vues comme des variables Texte, qui peuvent donc être utilisées dans des libellés (de questions, de déclarations, de messages d'erreur)</li>
 </ul>
-<p><strong>Exemples</strong> :</p>
-<ul>
-<li><code class="highlight"><span class="s">&quot;Hello&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">$</span><span class="n">VAR_TEXTE</span><span class="o">$</span></code></li>
-<li><code class="highlight"><span class="s">&quot;En &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">$</span><span class="n">VAR_TEXTE_EXTERNE</span><span class="o">$</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot;, votre activité est-elle toujours &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">$</span><span class="n">VAR_TEXTE_EXTERNE2</span><span class="o">$</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; ?&quot;</span></code></li>
-<li><code class="highlight"><span class="s">&quot;Votre chiffre d&#39;affaires est de &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR1_NUMERIQUE</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; euros et votre effectif de &quot;</span><span class="w"> </span><span class="o">||</span><span class="w">  </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR2_NUMERIQUE</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; personnes&quot;</span><span class="n">.</span></code></li>
-<li><code class="highlight"><span class="s">&quot;Vous venez de déclarer un chiffre d&#39;affaires de &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR1_NUMERIQUE</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; euros alors qu&#39;il était de &quot;</span><span class="w"> </span><span class="o">||</span><span class="w">  </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR2_NUMERIQUE_EXTERNE</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; euros l&#39;an dernier&quot;</span><span class="n">.</span></code>
-ou
- <code class="highlight"><span class="s">&quot;Vous venez de déclarer un chiffre d&#39;affaires de &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR1_NUMERIQUE</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; euros alors qu&#39;il était de &quot;</span><span class="w"> </span><span class="o">||</span><span class="w">   </span><span class="o">$</span><span class="n">VAR2_NUMERIQUE_EXTERNE</span><span class="o">$</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; euros l&#39;an dernier&quot;</span><span class="n">.</span></code></li>
-</ul>
+<div class="admonition example">
+<p class="admonition-title">Exemples</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">1.</label><label for="__tabbed_1_2">2.</label><label for="__tabbed_1_3">3.</label><label for="__tabbed_1_4">4.</label><label for="__tabbed_1_5">5.</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="s">&quot;Hello&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">$</span><span class="n">VAR_TEXTE</span><span class="o">$</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="s">&quot;En &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">$</span><span class="n">VAR_TEXTE_EXTERNE</span><span class="o">$</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot;, </span>
+<span class="s">votre activité est-elle toujours &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">$</span><span class="n">VAR_TEXTE_EXTERNE2</span><span class="o">$</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; ?&quot;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="s">&quot;Votre chiffre d&#39;affaires est de &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR1_NUMERIQUE</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; euros </span>
+<span class="s">et votre effectif de &quot;</span><span class="w"> </span><span class="o">||</span><span class="w">  </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR2_NUMERIQUE</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; personnes&quot;</span><span class="n">.</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="s">&quot;Vous venez de déclarer un chiffre d&#39;affaires de &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR1_NUMERIQUE</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; euros </span>
+<span class="s">alors qu&#39;il était de &quot;</span><span class="w"> </span><span class="o">||</span><span class="w">  </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR2_NUMERIQUE_EXTERNE</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; euros l&#39;an dernier&quot;</span><span class="n">.</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="s">&quot;Vous venez de déclarer un chiffre d&#39;affaires de &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR1_NUMERIQUE</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; euros </span>
+<span class="s">alors qu&#39;il était de &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">$</span><span class="n">VAR2_NUMERIQUE_EXTERNE</span><span class="o">$</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; euros l&#39;an dernier&quot;</span><span class="n">.</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
 
 
 
