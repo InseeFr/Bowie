@@ -71,3 +71,6 @@ Il est possible de supprimer ou dupliquer un contrôle.
         ```
 
 Voir d'autres [exemples](../Le%20VTL%20dans%20Pogues/vtl.md/#cookbook)
+
+!!! warning "Cohérence avec les filtres"
+    Si on ajoute un contrôle sur une question qui est filtré, il faut rajouter la condition du filtre dans ce contrôle pour que ce dernier ne se déclenche pas quand la question n'est pas affiché
