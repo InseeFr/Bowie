@@ -1221,35 +1221,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#contraintes-dusage" class="md-nav__link">
+  <a href="#contraintes-dusage-warning" class="md-nav__link">
     <span class="md-ellipsis">
-      Contraintes d'usage
+      Contraintes d'usage :warning
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Contraintes d'usage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#filtres-corrects" class="md-nav__link">
-    <span class="md-ellipsis">
-      Filtres corrects
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#filtres-incorrects" class="md-nav__link">
-    <span class="md-ellipsis">
-      Filtres incorrects
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2898,35 +2874,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#contraintes-dusage" class="md-nav__link">
+  <a href="#contraintes-dusage-warning" class="md-nav__link">
     <span class="md-ellipsis">
-      Contraintes d'usage
+      Contraintes d'usage :warning
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Contraintes d'usage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#filtres-corrects" class="md-nav__link">
-    <span class="md-ellipsis">
-      Filtres corrects
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#filtres-incorrects" class="md-nav__link">
-    <span class="md-ellipsis">
-      Filtres incorrects
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2954,9 +2906,9 @@
 <li><em>Début</em> : détermine où commence la couverture du filtre</li>
 <li><em>Fin</em> : détermine où termine la couverture du filtre.</li>
 </ul>
-<h2 id="contraintes-dusage">Contraintes d'usage</h2>
-<p>La première contrainte concerne les éléments de début et de fin du filtre : ceux-ci doivent être de même nature. Par exemple, si un filtre débute sur une séquence, il doit finir sur une séquence (la même ou une séquence se situant plus loin dans le questionnaire).</p>
-<p>La seconde contrainte est de ne pas construire des filtres qui se chevauchent - comme illustré plus bas.</p>
+<h2 id="contraintes-dusage-warning">Contraintes d'usage :warning</h2>
+<p>1/ Concerne les éléments de début et de fin du filtre : ceux-ci doivent être de même nature. Par exemple, si un filtre débute sur une séquence, il doit finir sur une séquence (la même ou une séquence se situant plus loin dans le questionnaire).</p>
+<p>2/ Ne pas construire des filtres qui se chevauchent - comme illustré plus bas.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Ces erreurs ne sont malheureusement pas captées lors de la conception dans Pogues, mais le seront lors de la génération et la visualisation.</p>
@@ -2965,10 +2917,20 @@
 <p class="admonition-title">Traduction</p>
 <p>Sur le questionnaire papier figure le champ <em>Description</em> : pas de description, pas de libellé de filtre.</p>
 </div>
-<h3 id="filtres-corrects">Filtres corrects</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Filtres corrects</label><label for="__tabbed_1_2">Filtres incorrects</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p><a class="glightbox" href="../../../img/pogues/guide-filtres-ok.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Filtres OK" src="../../../img/pogues/guide-filtres-ok.png" /></a></p>
-<h3 id="filtres-incorrects">Filtres incorrects</h3>
+</div>
+<div class="tabbed-block">
 <p><a class="glightbox" href="../../../img/pogues/guide-filtres-ko.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Filtres KO" src="../../../img/pogues/guide-filtres-ko.png" /></a></p>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Cohérence avec les contrôles</p>
+<p>Si on filtre une question avec un contrôle, il faut rajouter la condition du filtre dans le contrôle pour que ce dernier ne se déclenche pas quand la question n'est pas affiché</p>
+</div>
 
 
 
