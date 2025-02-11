@@ -1187,15 +1187,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#exemples-de-condition" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemples de condition
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2891,15 +2882,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#exemples-de-condition" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemples de condition
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2944,30 +2926,49 @@
 <p class="admonition-title">Tip</p>
 <p>Côté collecte enquêteur, les contrôles ne sont implémentés.</p>
 </div>
-<h2 id="exemples-de-condition">Exemples de condition</h2>
-<ul>
-<li><code class="highlight"><span class="n">sans</span><span class="w"> </span><span class="n">gestion</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">null</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">if</span><span class="w"> </span><span class="o">$</span><span class="n">VAR_NUMERIQUE</span><span class="o">$</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="w"> </span><span class="o">==&gt;</span><span class="w"> </span><span class="n">renvoie</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">null</span></code></li>
-<li><code class="highlight"><span class="n">gestion</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">null</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">if</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR_NUMERIQUE</span><span class="o">$</span><span class="p">,</span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="n">then</span><span class="w">  </span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="o">==&gt;</span><span class="w"> </span><span class="n">renvoie</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">null</span></code></li>
-<li><code class="highlight"><span class="n">variable</span><span class="w"> </span><span class="nf">externe </span><span class="p">(</span><span class="n">on</span><span class="w"> </span><span class="n">doit</span><span class="w"> </span><span class="n">convertir</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="n">numérique</span><span class="w"> </span><span class="n">pour</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">comparer</span><span class="w"> </span>à<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="n">par</span><span class="w"> </span><span class="n">exemple</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="n">if</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR2_NUMERIQUE_EXTERNE</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR2_NUMERIQUE_EXTERNE</span><span class="o">$</span><span class="p">,</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="s">&quot;0&quot;</span></code></li>
-<li><code class="highlight"><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR1_NUMERIQUE</span><span class="p">,</span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR2_NUMERIQUE</span><span class="o">$</span><span class="p">,</span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span></code></li>
-<li>tester que QCM1 est cochée (pour un filtre par exemple) =&gt;  <code class="highlight"><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM1</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span></code></li>
-<li>tester une modalité exclusive (ici par exemple QCM4 ne peut pas être cochée si QCM1, QCM2, ou QCM3 l'est) =&gt; <code class="highlight"><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM4</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM3</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="p">)</span><span class="w"> </span><span class="nf">or </span><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM4</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM2</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="p">)</span><span class="w"> </span><span class="nf">or </span><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM4</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM1</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="p">))</span></code></li>
-<li>tester une durée :</li>
-</ul>
-<p>```
-// valeur initiale de DUREE : PT12H30M
-cast(
-    replace(
-        replace(
-            replace($DUREE$, "PT", ""), // "12H30M"
-        "M", ""),                       // "12H30"
-    "H", "."),                          // "12.30"
-number)                                 // 12.30</p>
-<blockquote>
-<p>7.3                                   // true
-```</p>
-</blockquote>
-<p>Voir aussi : <a href="https://inseefr.github.io/Bowie/pogues/Le%20VTL%20dans%20Pogues/vtl/#dates">https://inseefr.github.io/Bowie/pogues/Le%20VTL%20dans%20Pogues/vtl/#controles_1</a></p>
+<div class="admonition example">
+<p class="admonition-title">Exemples de condition pour les contrôles</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">sans et avec gestion du null</label><label for="__tabbed_1_2">variable externe</label><label for="__tabbed_1_3">case cochée</label><label for="__tabbed_1_4">modalité exclusive</label><label for="__tabbed_1_5">durée</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="n">if</span><span class="w"> </span><span class="o">$</span><span class="n">VAR_NUMERIQUE</span><span class="o">$</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="w"> </span><span class="o">==&gt;</span><span class="w"> </span><span class="n">renvoie</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">null</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">if</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR_NUMERIQUE</span><span class="o">$</span><span class="p">,</span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="n">then</span><span class="w">  </span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="o">==&gt;</span><span class="w"> </span><span class="n">renvoie</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">null</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR1_NUMERIQUE</span><span class="p">,</span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR2_NUMERIQUE</span><span class="o">$</span><span class="p">,</span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span>`
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p>On doit convertir la variable en numérique pour la comparer à 0 par exemple
+<div class="highlight"><pre><span></span><code><span class="n">if</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR2_NUMERIQUE_EXTERNE</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR2_NUMERIQUE_EXTERNE</span><span class="o">$</span><span class="p">,</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="s">&quot;0&quot;</span>
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p>Pour un filtre par exemple
+<div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM1</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span>
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p>Ici par exemple QCM4 ne peut pas être cochée si QCM1, QCM2, ou QCM3 l'est
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM4</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM3</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="p">)</span><span class="w"> </span><span class="nf">or </span><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM4</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM2</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="p">)</span><span class="w"> </span><span class="nf">or </span><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM4</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM1</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="p">))</span>
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="o">//</span><span class="w"> </span><span class="n">valeur</span><span class="w"> </span><span class="n">initiale</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">DUREE</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">PT12H30M</span>
+<span class="nf">cast</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">replace</span><span class="p">(</span>
+<span class="w">        </span><span class="nf">replace</span><span class="p">(</span>
+<span class="w">            </span><span class="nf">replace</span><span class="p">(</span><span class="o">$</span><span class="n">DUREE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PT&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">),</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="s">&quot;12H30M&quot;</span>
+<span class="w">        </span><span class="s">&quot;M&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">),</span><span class="w">                       </span><span class="o">//</span><span class="w"> </span><span class="s">&quot;12H30&quot;</span>
+<span class="w">    </span><span class="s">&quot;H&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="p">),</span><span class="w">                          </span><span class="o">//</span><span class="w"> </span><span class="s">&quot;12.30&quot;</span>
+<span class="n">number</span><span class="p">)</span><span class="w">                                 </span><span class="o">//</span><span class="w"> </span><span class="m">12.30</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="m">7.3</span><span class="w">                                   </span><span class="o">//</span><span class="w"> </span><span class="n">true</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<p>Voir d'autres <a href="../../Le%20VTL%20dans%20Pogues/vtl/#cookbook">exemples</a></p>
 
 
 

@@ -3094,7 +3094,7 @@
 </tr>
 <tr>
 <td><a href="./#in"><strong><code class="highlight"><span class="n">in</span></code></strong></a></td>
-<td><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f6a7.svg" title=":construction:" /> Coming soon ...</td>
+<td>Permet de tester l'appartenance d'une valeur à un ensemble</td>
 </tr>
 <tr>
 <td><a href="./#if-then"><strong><code class="highlight"><span class="n">if</span><span class="w"> </span><span class="kc">...</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="kc">...</span></code></strong></a></td>
@@ -3465,7 +3465,89 @@ Renvoie <code class="highlight"><span class="n">true</span></code> si la date d'
 <h5 id="isnull">isnull</h5>
 <p><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f6a7.svg" title=":construction:" /> Coming soon ...</p>
 <h5 id="in">in</h5>
-<p><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f6a7.svg" title=":construction:" /> Coming soon ...</p>
+<div class="admonition question">
+<p class="admonition-title">Utilité</p>
+<p>Il peut être intéressant de savoir si un élément est présent dans un vecteur ou non.
+Ex, on veut savoir si parmi les prénoms récoltés, il y a quelqu'un qui s'appelle "Bob"</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Syntaxe</p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">var</span><span class="o">&gt;</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ensemble</span><span class="o">&gt;</span>
+</code></pre></div>
+<ul>
+<li><code class="highlight"><span class="n">var</span></code> : variable dont on veut savoir la présence dans une liste d'éléments</li>
+<li><code class="highlight"><span class="n">ensemble</span></code> : liste d'éléments sur lequel on teste la présence de <code class="highlight"><span class="n">var</span></code></li>
+</ul>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Texte</label><label for="__tabbed_7_2">Nombre</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Valeur de <code class="highlight"><span class="n">MA_VARIABLE</span></code></th>
+<th>Valeur de <code class="highlight"><span class="n">ENSEMBLE</span></code></th>
+<th>Fonction</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="highlight"><span class="s">&quot;a&quot;</span></code></td>
+<td><code class="highlight"><span class="p">{</span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;c&quot;</span><span class="p">}</span></code></td>
+<td><code class="highlight"><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">$</span><span class="n">ENSEMBLE</span><span class="o">$</span></code></td>
+<td><code class="highlight"><span class="n">true</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="s">&quot;d&quot;</span></code></td>
+<td><code class="highlight"><span class="p">{</span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;c&quot;</span><span class="p">}</span></code></td>
+<td><code class="highlight"><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">$</span><span class="n">ENSEMBLE</span><span class="o">$</span></code></td>
+<td><code class="highlight"><span class="n">false</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Valeur de <code class="highlight"><span class="n">MA_VARIABLE</span></code></th>
+<th>Valeur de <code class="highlight"><span class="n">ENSEMBLE</span></code></th>
+<th>Fonction</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="highlight"><span class="m">18</span></code></td>
+<td><code class="highlight"><span class="p">{</span><span class="m">18</span><span class="p">,</span><span class="w"> </span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">}</span></code></td>
+<td><code class="highlight"><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">$</span><span class="n">ENSEMBLE</span><span class="o">$</span></code></td>
+<td><code class="highlight"><span class="n">true</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="m">6</span></code></td>
+<td><code class="highlight"><span class="p">{</span><span class="m">18</span><span class="p">,</span><span class="w"> </span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">}</span></code></td>
+<td><code class="highlight"><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">$</span><span class="n">ENSEMBLE</span><span class="o">$</span></code></td>
+<td><code class="highlight"><span class="n">false</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<details class="example">
+<summary>Exemple d'utilisation</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">avec des variables</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="w"> </span><span class="n">not_in</span><span class="w"> </span><span class="o">$</span><span class="n">PRENOMS_FAMILLE</span><span class="o">$</span>
+<span class="c1"># ou</span>
+<span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="w"> </span><span class="n">not_in</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bob&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Charlie&quot;</span><span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</details>
 <h5 id="if-then">if ... then ...</h5>
 <p><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f6a7.svg" title=":construction:" /> Coming soon ...</p>
 
