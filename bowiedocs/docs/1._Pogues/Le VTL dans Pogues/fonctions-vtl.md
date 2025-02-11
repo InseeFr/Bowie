@@ -8,7 +8,7 @@
 | [**`cast()`**](fonctions-vtl.md/#cast)       | Permet de changer le tye de la donnée    |
 | [**`substr()`**](fonctions-vtl.md/#substr)       | :construction: Coming soon ...    |
 | [**`isnull()`**](fonctions-vtl.md/#isnull)       | :construction: Coming soon ...    |
-| [**`in`**](fonctions-vtl.md/#in)       | :construction: Coming soon ...    |
+| [**`in`**](fonctions-vtl.md/#in)       | Permet de tester l'appartenance d'une valeur à un ensemble    |
 | [**`if ... then ...`**](fonctions-vtl.md/#if-then)       | :construction: Coming soon ...    |
 
 ## Détail des fonctions
@@ -75,7 +75,6 @@
 !!! question "Utilité"
     En VTL, Le typage **définit la nature des valeurs que peuvent prendre les données que nous manipulons**. <br>
     Il est parfois nécessaire de passer d’un type de variable à un autre, on parle dans ce cas de transtypage.
-    
 
 !!! abstract "Syntaxe"
     ```
@@ -168,7 +167,38 @@
 ##### isnull
 :construction: Coming soon ...
 ##### in
-:construction: Coming soon ...
+
+!!! question "Utilité"
+    Il peut être intéressant de savoir si un élément est présent dans un vecteur ou non.
+    Ex, on veut savoir si parmi les prénoms récoltés, il y a quelqu'un qui s'appelle "Bob"
+    
+!!! abstract "Syntaxe"
+    ```
+    <var> in <ensemble>
+    ```
+
+    - `var` : variable dont on veut savoir la présence dans une liste d'éléments
+    - `ensemble` : liste d'éléments sur lequel on teste la présence de `var`
+
+=== "Texte"
+    | Valeur de `MA_VARIABLE` | Valeur de `ENSEMBLE` | Fonction | Résultat |
+    | --- | ---| --- | --- |
+    | `"a"` | `{"a", "b", "c"}` | `$MA_VARIABLE$ in $ENSEMBLE$`   | `true` |
+    | `"d"` | `{"a", "b", "c"}` | `$MA_VARIABLE$ in $ENSEMBLE$`   | `false` |
+=== "Nombre"
+    | Valeur de `MA_VARIABLE` | Valeur de `ENSEMBLE` | Fonction | Résultat |
+    | --- | ---| --- | --- |
+    | `18` | `{18, 25, 3}` | `$MA_VARIABLE$ in $ENSEMBLE$`   | `true` |
+    | `6` | `{18, 25, 3}` | `$MA_VARIABLE$ in $ENSEMBLE$`   | `false` |
+
+??? example "Exemple d'utilisation"
+    === "avec des variables"
+        ```
+        $PRENOM$ not_in $PRENOMS_FAMILLE$
+        # ou
+        $PRENOM$ not_in {"Alice", "Bob", "Charlie"}
+        ```
+
 ##### if ... then ...
 :construction: Coming soon ...
 

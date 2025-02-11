@@ -28,7 +28,7 @@ VTL est utilisé dès que l’on souhaite :
 
 Les champs correspondants dans Pogues proposent dans la plupart des cas un **éditeur VTL** :
 
-![Editeur VTL](/Bowie/img/vtl/code-list-editor.png 'Éditeur VTL')
+![Editeur VTL](../../img/vtl/code-list-editor.png 'Éditeur VTL')
 
 ## Fonctionnalités de l’éditeur
 
@@ -62,7 +62,7 @@ Un chiffre avec décimales :
 
 Voici un exemple de syntaxe pour un libellé personnalisé :
 
-![Libellé personnalisé](/Bowie/img/vtl/vtl-in-pogues-custom-label.png 'Libellé personnalisé')
+![Libellé personnalisé](../..//img/vtl/vtl-in-pogues-custom-label.png 'Libellé personnalisé')
 
 On utilise ici l’opérateur VTL `||` qui permet de concaténer des chaînes de caractères, ou une chaîne de caractères et une variable (ici `NOM`).
 
@@ -104,13 +104,13 @@ Mon libellé de question avec [une infobulle](. "dont voici le contenu").
 
 Un exemple de contrôle sur une valeur numérique :
 
-![Exemple de contrôle](/Bowie/img/vtl/vtl-in-pogues-simple-control.png 'Exemple de contrôle')_Libellé personnalisé avec gestion de la nullité_
+![Exemple de contrôle](../..//img/vtl/vtl-in-pogues-simple-control.png 'Exemple de contrôle')_Libellé personnalisé avec gestion de la nullité_
 
 ## Variables calculées
 
 Pogues permet de créer des variables calculées à partir de variables collectées. Par exemple, pour sommer les revenus de l’enquêté et de son conjoint on écrira :
 
-![Variable calculée pour le revenu](/Bowie/img/vtl/vtl-in-pogues-computed-variable-earnings.png)
+![Variable calculée pour le revenu](../..//img/vtl/vtl-in-pogues-computed-variable-earnings.png)
 
 L'expression VTL étant :
 
@@ -122,7 +122,7 @@ nvl($REVENUS$, 0) + nvl($REVENUS_CONJOINT$, 0)
 
 Voici un exemple de filtre simple exprimé en VTL :
 
-![Filtre simple](/Bowie/img/vtl/vtl-in-pogues-simple-filter.png 'Filtre simple')_Un filtre simple_
+![Filtre simple](../..//img/vtl/vtl-in-pogues-simple-filter.png 'Filtre simple')_Un filtre simple_
 
 <span class="label label-rounded label-primary">À noter</span> À ce jour, le champ “Condition d’affichage” du filtre n’utilise pas l’éditeur VTL.
 
@@ -150,7 +150,7 @@ nvl($VARIABLE_EXCLUSIVE$, false) and
 
 L’usage de VTL dans Pogues et les outils de collecte s’appuie sur les bibliothèques Lunatic (pour les composants graphiques) et Trevas (qui fournit le moteur VTL).
 
-C’est l’état d’avancement de cette dernière qui permet de connaître les opérateurs et fonctions disponibles : la référence est donc la [page de suivi de l’implémentation](https://inseefr.github.io/Trevas-JS/fr/coverage.html).
+C’est l’état d’avancement de cette dernière qui permet de connaître les opérateurs et fonctions disponibles : la référence est donc la [page de suivi de l’implémentation](https://inseefr.github.io/Trevas-TS/docs/coverage).
 
 ### Logique
 
@@ -166,22 +166,6 @@ C’est l’état d’avancement de cette dernière qui permet de connaître les
 | Nom          | Symbole | Exemple                            |
 | ------------ | ------- | ---------------------------------- |
 | Remplacement | replace | `replace("bag", "g", "c") # → bac` |
-
-### Appartenance
-
-Les opérateurs `in` et `not_in` permettent de tester l'appartenance d'une valeur à un ensemble. Par exemple :
-
-```
-"a" in {"a", "b", "c"} # → true
-```
-
-Il permet aussi de faire ce test en utilisant des variables :
-
-```
-$PRENOM$ not_in $PRENOMS_FAMILLE$
-# ou
-$PRENOM$ not_in {"Alice", "Bob", "Charlie"}
-```
 
 ## Cookbook
 
@@ -339,8 +323,10 @@ match_characters(
 
 #### Contrôle de validité d'un SIRET
 
-Il faut deux contrôles, chacun avec un message différent :
+Il faut 3 contrôles, chacun avec un message différent :
 
+- Vérification du format du Siret (14 caractères et uniquement des chiffres) : **Contrôle Siret de format**
+> Le Siret doit être composé uniquement de 14 chiffres
 - Vérification du Siren (9 premiers caractères) : **Contrôle Siret 1**
 > Les 9 premiers chiffres du numéro que vous avez renseigné ne correspondent pas à un numéro Siren.
 - Vérification du Siret sachant que le Siren est correct : **Contrôle Siret 2**
@@ -351,51 +337,56 @@ Il faut deux contrôles, chacun avec un message différent :
 
 ??? tip "Code VTL pour le contrôle du Siret"
 
-    ``` title="Contrôle Siret 1"
-    match_characters($SIRET$,"^[0-9]{14}$")
-    and ((mod(
-        cast(substr($SIRET$,1,1),integer)
-        + cast(substr($SIRET$,2,1),integer)*2 -(if (cast(substr($SIRET$,2,1),integer) > 4) then 9 else 0)
-        + cast(substr($SIRET$,3,1),integer)
-        + cast(substr($SIRET$,4,1),integer)*2 -(if (cast(substr($SIRET$,4,1),integer) > 4) then 9 else 0)
-        + cast(substr($SIRET$,5,1),integer)
-        + cast(substr($SIRET$,6,1),integer)*2 -(if (cast(substr($SIRET$,6,1),integer) > 4) then 9 else 0)
-        + cast(substr($SIRET$,7,1),integer)
-        + cast(substr($SIRET$,8,1),integer)*2 -(if (cast(substr($SIRET$,8,1),integer) > 4) then 9 else 0)
-        + cast(substr($SIRET$,9,1),integer)
-    ,10)) <> 0)
-    ```
-
-    ``` title="Contrôle Siret 2"
-    match_characters($SIRET$,"^[0-9]{14}$")
-    and ((mod(
-        cast(substr($SIRET$,1,1),integer)
-        + cast(substr($SIRET$,2,1),integer)*2 -(if (cast(substr($SIRET$,2,1),integer) > 4) then 9 else 0)
-        + cast(substr($SIRET$,3,1),integer)
-        + cast(substr($SIRET$,4,1),integer)*2 -(if (cast(substr($SIRET$,4,1),integer) > 4) then 9 else 0)
-        + cast(substr($SIRET$,5,1),integer)
-        + cast(substr($SIRET$,6,1),integer)*2 -(if (cast(substr($SIRET$,6,1),integer) > 4) then 9 else 0)
-        + cast(substr($SIRET$,7,1),integer)
-        + cast(substr($SIRET$,8,1),integer)*2 -(if (cast(substr($SIRET$,8,1),integer) > 4) then 9 else 0)
-        + cast(substr($SIRET$,9,1),integer)
-    ,10)) = 0)
-    and ((mod(
-        cast(substr($SIRET$,1,1),integer)*2 -(if (cast(substr($SIRET$,1,1),integer) > 4) then 9 else 0)
-        + cast(substr($SIRET$,2,1),integer)
-        + cast(substr($SIRET$,3,1),integer)*2 -(if (cast(substr($SIRET$,3,1),integer) > 4) then 9 else 0)
-        + cast(substr($SIRET$,4,1),integer)
-        + cast(substr($SIRET$,5,1),integer)*2 -(if (cast(substr($SIRET$,5,1),integer) > 4) then 9 else 0)
-        + cast(substr($SIRET$,6,1),integer)
-        + cast(substr($SIRET$,7,1),integer)*2 -(if (cast(substr($SIRET$,7,1),integer) > 4) then 9 else 0)
-        + cast(substr($SIRET$,8,1),integer)
-        + cast(substr($SIRET$,9,1),integer)*2 -(if (cast(substr($SIRET$,9,1),integer) > 4) then 9 else 0)
-        + cast(substr($SIRET$,10,1),integer)
-        + cast(substr($SIRET$,11,1),integer)*2 -(if (cast(substr($SIRET$,11,1),integer) > 4) then 9 else 0)
-        + cast(substr($SIRET$,12,1),integer)
-        + cast(substr($SIRET$,13,1),integer)*2 -(if (cast(substr($SIRET$,13,1),integer) > 4) then 9 else 0)
-        + cast(substr($SIRET$,14,1),integer)
-    ,10)) <> 0)
-    ```
+    === "Contrôle Siret de format"
+        ```
+        not match_characters($SIRET$,"^[0-9]{14}$")
+        ```
+    === "Contrôle Siret 1"
+        ```
+        match_characters($SIRET$,"^[0-9]{14}$")
+        and ((mod(
+            cast(substr($SIRET$,1,1),integer)
+            + cast(substr($SIRET$,2,1),integer)*2 -(if (cast(substr($SIRET$,2,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,3,1),integer)
+            + cast(substr($SIRET$,4,1),integer)*2 -(if (cast(substr($SIRET$,4,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,5,1),integer)
+            + cast(substr($SIRET$,6,1),integer)*2 -(if (cast(substr($SIRET$,6,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,7,1),integer)
+            + cast(substr($SIRET$,8,1),integer)*2 -(if (cast(substr($SIRET$,8,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,9,1),integer)
+        ,10)) <> 0)
+        ```
+    === "Contrôle Siret 2"
+        ```
+        match_characters($SIRET$,"^[0-9]{14}$")
+        and ((mod(
+            cast(substr($SIRET$,1,1),integer)
+            + cast(substr($SIRET$,2,1),integer)*2 -(if (cast(substr($SIRET$,2,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,3,1),integer)
+            + cast(substr($SIRET$,4,1),integer)*2 -(if (cast(substr($SIRET$,4,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,5,1),integer)
+            + cast(substr($SIRET$,6,1),integer)*2 -(if (cast(substr($SIRET$,6,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,7,1),integer)
+            + cast(substr($SIRET$,8,1),integer)*2 -(if (cast(substr($SIRET$,8,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,9,1),integer)
+        ,10)) = 0)
+        and ((mod(
+            cast(substr($SIRET$,1,1),integer)*2 -(if (cast(substr($SIRET$,1,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,2,1),integer)
+            + cast(substr($SIRET$,3,1),integer)*2 -(if (cast(substr($SIRET$,3,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,4,1),integer)
+            + cast(substr($SIRET$,5,1),integer)*2 -(if (cast(substr($SIRET$,5,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,6,1),integer)
+            + cast(substr($SIRET$,7,1),integer)*2 -(if (cast(substr($SIRET$,7,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,8,1),integer)
+            + cast(substr($SIRET$,9,1),integer)*2 -(if (cast(substr($SIRET$,9,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,10,1),integer)
+            + cast(substr($SIRET$,11,1),integer)*2 -(if (cast(substr($SIRET$,11,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,12,1),integer)
+            + cast(substr($SIRET$,13,1),integer)*2 -(if (cast(substr($SIRET$,13,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,14,1),integer)
+        ,10)) <> 0)
+        ```
     __Explication du code__
     
     1. On vérifie que l'on a une chaîne de 14 chiffres
@@ -407,6 +398,8 @@ Il faut deux contrôles, chacun avec un message différent :
 
 Comme pour le Siret, on va utiliser le premier contrôle en remplaçant la taille exigée à 9. Ce qui donne un contrôle avec le message suivant
 
+- Vérification du format du Siren (9 caractères et uniquement des chiffres) : **Contrôle Siren de format**
+> Le Siren doit être composé uniquement de 9 chiffres
 - Vérification du Siren (9 premiers caractères) : **Contrôle Siren**
 > Les 9 premiers chiffres du numéro que vous avez renseigné ne correspondent pas à un numéro Siren.
 
@@ -416,20 +409,25 @@ Comme pour le Siret, on va utiliser le premier contrôle en remplaçant la taill
 Et le code VTL
 ??? tip "Code VTL pour le contrôle du Siren"
 
-    ``` title="Contrôle Siren"
-    match_characters($SIREN$,"^[0-9]{9}$")
-    and ((mod(
-        cast(substr($SIREN$,1,1),integer)
-        + cast(substr($SIREN$,2,1),integer)*2 -(if (cast(substr($SIREN$,2,1),integer) > 4) then 9 else 0)
-        + cast(substr($SIREN$,3,1),integer)
-        + cast(substr($SIREN$,4,1),integer)*2 -(if (cast(substr($SIREN$,4,1),integer) > 4) then 9 else 0)
-        + cast(substr($SIREN$,5,1),integer)
-        + cast(substr($SIREN$,6,1),integer)*2 -(if (cast(substr($SIREN$,6,1),integer) > 4) then 9 else 0)
-        + cast(substr($SIREN$,7,1),integer)
-        + cast(substr($SIREN$,8,1),integer)*2 -(if (cast(substr($SIREN$,8,1),integer) > 4) then 9 else 0)
-        + cast(substr($SIREN$,9,1),integer)
-    ,10)) <> 0)
-    ```
+    === "Contrôle Siret de format"
+        ```
+        not match_characters($SIRET$,"^[0-9]{9}$")
+        ```
+    === "Contrôle Siren"
+        ```
+        match_characters($SIREN$,"^[0-9]{9}$")
+        and ((mod(
+            cast(substr($SIREN$,1,1),integer)
+            + cast(substr($SIREN$,2,1),integer)*2 -(if (cast(substr($SIREN$,2,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIREN$,3,1),integer)
+            + cast(substr($SIREN$,4,1),integer)*2 -(if (cast(substr($SIREN$,4,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIREN$,5,1),integer)
+            + cast(substr($SIREN$,6,1),integer)*2 -(if (cast(substr($SIREN$,6,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIREN$,7,1),integer)
+            + cast(substr($SIREN$,8,1),integer)*2 -(if (cast(substr($SIREN$,8,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIREN$,9,1),integer)
+        ,10)) <> 0)
+        ```
 
 #### Contrôle de validité d'un RNA
 
