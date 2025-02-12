@@ -167,51 +167,12 @@ C’est l’état d’avancement de cette dernière qui permet de connaître les
 | ------------ | ------- | ---------------------------------- |
 | Remplacement | replace | `replace("bag", "g", "c") # → bac` |
 
+!!! tip "Aide"
+    Une page référençant les fonctions les plus utilisées avec des exemples est disponible [ici](fonctions-vtl.md)
+
 ## Cookbook
 
-### Chaînes de caractères
-
-#### Gestion des majuscules
-
-Imaginons que l'on collecte un prénom à travers la bien nommée variable `PRENOM`. On souhaite que quelque soit la casse de la réponse, on affiche le prénom sous la forme `Prénom`.
-
-Voici une formule pour le cas d'un prénom simple:
-
-```
-upper(substr(PRENOM, 1, 1)) || lower(substr(PRENOM, 2, length(PRENOM)))
-```
-
-Attention, cela ne fonctionnera pas pour les prénoms composés pour lesquels il sera nécessaire de rendre compte d'un séparateur (un espace, un tiret).
-
-### Dates
-
-#### Récupérer l'année
-
-On a créé une question dont la réponse est au format Date dans Pogues, la variable collectée `DATE_NAISSANCE`.
-
-Voici comment obtenir l’année :
-
-```
-substr(cast($DATE_NAISSANCE$, string, "YYYY-MM-DD"), 1, 4)
-```
-
-On transforme la variable de type date en chaîne de caractères, puis on extrait les 4 premiers caractères. Le motif "YYYY-MM-DD" permet de la traduction
-
-<span class="label label-rounded label-warning">Attention !</span> Si Pogues permet de choisir trois types de formats de date, seul le format JJMMAAAA (jour, mois, année) est aujourd’hui proposé à l’enquêté. Par ailleurs, si le format présenté lui-même est JJMMAAAA, la variable collectée est au format AAAAMMJJ, ce qui explique le code VTL précédent.
-
-#### Formater l'affichage de la date
-
-Comme vu plus haut, le format des variables Date n'est pas forcément idéal pour l'affichage, on veut pouvoir présenter l'information avec le motif `JJ/MM/AAAA` (jour, mois, année).
-
-Le code suivant permet cette transformation :
-
-```
-substr(cast($DATE$, string, "YYYY-MM-DD"), 9, 2) ||
-"/" ||
-substr(cast($DATE$, string, "YYYY-MM-DD"), 6, 2) ||
-"/" ||
-substr(cast($DATE$, string, "YYYY-MM-DD"), 1, 4)
-```
+### Durée
 
 #### Calcul de durée
 
@@ -232,8 +193,6 @@ Pour plus de clarté, le calcul de la durée brute pourra être déportée dans 
 ```
 $DUREE$ / 86400000
 ```
-
-### Durée
 
 #### Contrôler un dépassement de borne
 

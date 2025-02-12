@@ -51,10 +51,4 @@ Dépense 4 : " || nvl(cast($VAR4$,string),"///") ```
 ```
 
 !!!note
-
     La déclaration n'a cependant pas vocation à être trop complexe car trop longue, elle pourrait ne pas être lue par l'enquêté.
- 
-
-## Questionnaire exemple
-
-A venir

@@ -68,3 +68,7 @@ Je peux ensuite afficher cette valeur, par exemple dans une déclaration, en app
     Elle est bien considérée comme une variable collectée dans Lunatic. On peut la récupérer en téléchargeant les données depuis la visualisation DSFR. <br>
     A terme, on aura un UX dans Pogues qui sera plus cohérent avec ce concept. <br>
     Ex : Un bouton qui permet d'ajouter une paire clé/valeur qui indique le nom de la nouvelle variable collecté et le nom de la colonne dans la nomenclature 
+
+### Questionnaire exemple
+
+Pour référence, un [questionnaire implémentant cette solution](https://conception-questionnaires.demo.insee.io/questionnaire/m1holrzlDOC) est disponible dans l'environnement de demo, sous le timbre DOCUMENTATION

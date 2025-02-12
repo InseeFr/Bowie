@@ -82,4 +82,5 @@ Le filtre a pour formule `$KISH_INDICATOR$ = 1`.
 
 ## Questionnaire exemple
 
-Pour référence, [un questionnaire implémentant cette solution](https://pogues.demo.insee.io/questionnaire/l8lfytfu).
+Pour référence, un [questionnaire implémentant cette solution](https://conception-questionnaires.demo.insee.io/questionnaire/l8lfytfu) est disponible dans l'environnement de demo, sous le timbre DOCUMENTATION
+

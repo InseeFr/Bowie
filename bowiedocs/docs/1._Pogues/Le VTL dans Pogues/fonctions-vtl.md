@@ -1,12 +1,11 @@
 # Fonctions VTL et usages
 
 ## Liste de fonctions
-### Les plus utilisés
 | Method      | Description                          |
 | ----------- | ------------------------------------ |
 | [**`nvl()`**](fonctions-vtl.md/#nvl)       | Permet de gérer la nullité    |
-| [**`cast()`**](fonctions-vtl.md/#cast)       | Permet de changer le tye de la donnée    |
-| [**`substr()`**](fonctions-vtl.md/#substr)       | :construction: Coming soon ...    |
+| [**`cast()`**](fonctions-vtl.md/#cast)       | Permet de changer le type de la donnée    |
+| [**`substr()`**](fonctions-vtl.md/#substr)       | Permet d'extraire un sous ensemble de caractère d'un texte
 | [**`isnull()`**](fonctions-vtl.md/#isnull)       | :construction: Coming soon ...    |
 | [**`in`**](fonctions-vtl.md/#in)       | Permet de tester l'appartenance d'une valeur à un ensemble    |
 | [**`if ... then ...`**](fonctions-vtl.md/#if-then)       | :construction: Coming soon ...    |
@@ -163,9 +162,75 @@
         Renvoie `true` si la date d'arrivée est postérieure à la date de départ et `false` sinon.
 
 ##### substr
-:construction: Coming soon ...
+
+!!! question "Utilité"
+    Retourne la partie d'une chaîne de caractères comprise entre l'indice de départ et un certain nombre de caractères après celui-ci. <br>
+    Par exemple pour une Date qui est une chaîne de caractère au format `"AAAA-MM-JJ"`, on veut récupérer uniquement l'année. On va donc récupérer uniquement les 4 premiers caractères de cette chaîne : `substr("AAAA-MM-JJ", 1, 4)` renvoie la chaîne `"AAAA"`
+    
+!!! abstract "Syntaxe"
+    ```
+    substr(<var>, <index>, <longueur>)
+    ```
+
+    - `var` : variable de type `string` (texte/chaîne de caractère) sur laquelle on veut extraire un sous ensemble caractères
+    - `index` : position, dans la chaîne de caractères `var`, du départ du sous ensemble à extraire  
+    - `longueur` : taille du sous ensemble à extraire
+
+=== "Texte"
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
+    | --- | ---| --- |
+    | `"mon texte complet !"` | `substr($MA_VARIABLE$, 1, 5)` | `"mon t"` |
+    | `"mon texte complet !"` | `substr($MA_VARIABLE$, 3, 5)` | `"on te"` |
+    | `"mon texte complet !"` | `substr($MA_VARIABLE$, 3, 11)` | `"on texte co"` |
+
+
+??? example "Exemple d'utilisation"
+    === "Date"
+        On a créé une question dont la réponse est au format Date `"AAAA-MM-JJ"` dans Pogues, la variable collectée est `DATE_NAISSANCE` avec la valeur `"1995-02-15"`. 
+        On peut extraire les éléments suivant :
+        === "l’année"
+            ```
+            substr($DATE_NAISSANCE$, 1, 4) -> "1995"
+            ```
+        === "le mois"
+            ```
+            substr($DATE_NAISSANCE$, 6, 2) -> "02"
+            ```
+        === "le jour"
+            ```
+            substr($DATE_NAISSANCE$, 9, 2) -> "15"
+            ```
+
+    === "Formater l'affichage d'une date"
+        Comme vu plus haut, le format des variables Date n'est pas forcément idéal pour l'affichage, on veut pouvoir présenter l'information avec le motif `"JJ/MM/AAAA"` (jour, mois, année).
+
+        Le code suivant permet cette transformation :
+        ```
+        substr(cast($DATE$, string, "YYYY-MM-DD"), 9, 2) ||
+        "/" ||
+        substr(cast($DATE$, string, "YYYY-MM-DD"), 6, 2) ||
+        "/" ||
+        substr(cast($DATE$, string, "YYYY-MM-DD"), 1, 4)
+        ```
+
+        Si `DATE` vaut `"1995-02-15"`, alors la function ci dessus renvoie `"15/02/1995"`
+
+    === "Gestion des majuscules"
+        Imaginons que l'on collecte un prénom à travers la bien nommée variable `PRENOM`. On souhaite que quelque soit la casse de la réponse, on affiche le prénom sous la forme `Prénom`. <br>
+        Voici une formule pour le cas d'un prénom simple:
+        ```
+        upper(substr(PRENOM, 1, 1)) || lower(substr(PRENOM, 2, length(PRENOM)))
+        ```
+
+        !!! warning ""
+            :warning: cela ne fonctionnera pas pour les prénoms composés pour lesquels il sera nécessaire de rendre compte d'un séparateur (un espace, un tiret).
+
+
+
 ##### isnull
+
 :construction: Coming soon ...
+
 ##### in
 
 !!! question "Utilité"
@@ -200,5 +265,6 @@
         ```
 
 ##### if ... then ...
+
 :construction: Coming soon ...
 
