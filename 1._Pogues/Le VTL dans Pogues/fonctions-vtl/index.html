@@ -769,21 +769,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Liste de fonctions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#les-plus-utilises" class="md-nav__link">
-    <span class="md-ellipsis">
-      Les plus utilisés
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2964,21 +2949,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Liste de fonctions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#les-plus-utilises" class="md-nav__link">
-    <span class="md-ellipsis">
-      Les plus utilisés
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3067,7 +3037,6 @@
 
 <h1 id="fonctions-vtl-et-usages">Fonctions VTL et usages</h1>
 <h2 id="liste-de-fonctions">Liste de fonctions</h2>
-<h3 id="les-plus-utilises">Les plus utilisés</h3>
 <table>
 <thead>
 <tr>
@@ -3082,11 +3051,11 @@
 </tr>
 <tr>
 <td><a href="./#cast"><strong><code class="highlight"><span class="nf">cast</span><span class="p">()</span></code></strong></a></td>
-<td>Permet de changer le tye de la donnée</td>
+<td>Permet de changer le type de la donnée</td>
 </tr>
 <tr>
 <td><a href="./#substr"><strong><code class="highlight"><span class="nf">substr</span><span class="p">()</span></code></strong></a></td>
-<td><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f6a7.svg" title=":construction:" /> Coming soon ...</td>
+<td>Permet d'extraire un sous ensemble de caractère d'un texte</td>
 </tr>
 <tr>
 <td><a href="./#isnull"><strong><code class="highlight"><span class="nf">isnull</span><span class="p">()</span></code></strong></a></td>
@@ -3461,7 +3430,100 @@ Renvoie <code class="highlight"><span class="n">true</span></code> si la date d'
 </div>
 </details>
 <h5 id="substr">substr</h5>
-<p><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f6a7.svg" title=":construction:" /> Coming soon ...</p>
+<div class="admonition question">
+<p class="admonition-title">Utilité</p>
+<p>Retourne la partie d'une chaîne de caractères comprise entre l'indice de départ et un certain nombre de caractères après celui-ci. <br>
+Par exemple pour une Date qui est une chaîne de caractère au format <code class="highlight"><span class="s">&quot;AAAA-MM-JJ&quot;</span></code>, on veut récupérer uniquement l'année. On va donc récupérer uniquement les 4 premiers caractères de cette chaîne : <code class="highlight"><span class="nf">substr</span><span class="p">(</span><span class="s">&quot;AAAA-MM-JJ&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">)</span></code> renvoie la chaîne <code class="highlight"><span class="s">&quot;AAAA&quot;</span></code></p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Syntaxe</p>
+<div class="highlight"><pre><span></span><code><span class="nf">substr</span><span class="p">(</span><span class="o">&lt;</span><span class="n">var</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="o">&lt;</span><span class="n">index</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="o">&lt;</span><span class="n">longueur</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li><code class="highlight"><span class="n">var</span></code> : variable de type <code class="highlight"><span class="n">string</span></code> (texte/chaîne de caractère) sur laquelle on veut extraire un sous ensemble caractères</li>
+<li><code class="highlight"><span class="n">index</span></code> : position, dans la chaîne de caractères <code class="highlight"><span class="n">var</span></code>, du départ du sous ensemble à extraire  </li>
+<li><code class="highlight"><span class="n">longueur</span></code> : taille du sous ensemble à extraire</li>
+</ul>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Texte</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Valeur de <code class="highlight"><span class="n">MA_VARIABLE</span></code></th>
+<th>Fonction</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="highlight"><span class="s">&quot;mon texte complet !&quot;</span></code></td>
+<td><code class="highlight"><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="s">&quot;mon t&quot;</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="s">&quot;mon texte complet !&quot;</span></code></td>
+<td><code class="highlight"><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="s">&quot;on te&quot;</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="s">&quot;mon texte complet !&quot;</span></code></td>
+<td><code class="highlight"><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">11</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="s">&quot;on texte co&quot;</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<details class="example">
+<summary>Exemple d'utilisation</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Date</label><label for="__tabbed_8_2">Formater l'affichage d'une date</label><label for="__tabbed_8_3">Gestion des majuscules</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>On a créé une question dont la réponse est au format Date <code class="highlight"><span class="s">&quot;AAAA-MM-JJ&quot;</span></code> dans Pogues, la variable collectée est <code class="highlight"><span class="n">DATE_NAISSANCE</span></code> avec la valeur <code class="highlight"><span class="s">&quot;1995-02-15&quot;</span></code>. 
+On peut extraire les éléments suivant :</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:3"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><input id="__tabbed_9_3" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">l’année</label><label for="__tabbed_9_2">le mois</label><label for="__tabbed_9_3">le jour</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">DATE_NAISSANCE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;1995&quot;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">DATE_NAISSANCE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;02&quot;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">DATE_NAISSANCE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;15&quot;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<p>Comme vu plus haut, le format des variables Date n'est pas forcément idéal pour l'affichage, on veut pouvoir présenter l'information avec le motif <code class="highlight"><span class="s">&quot;JJ/MM/AAAA&quot;</span></code> (jour, mois, année).</p>
+<p>Le code suivant permet cette transformation :
+<div class="highlight"><pre><span></span><code><span class="nf">substr</span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">DATE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">),</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="o">||</span>
+<span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">||</span>
+<span class="nf">substr</span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">DATE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">),</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="o">||</span>
+<span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">||</span>
+<span class="nf">substr</span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">DATE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">),</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">)</span>
+</code></pre></div></p>
+<p>Si <code class="highlight"><span class="n">DATE</span></code> vaut <code class="highlight"><span class="s">&quot;1995-02-15&quot;</span></code>, alors la function ci dessus renvoie <code class="highlight"><span class="s">&quot;15/02/1995&quot;</span></code></p>
+</div>
+<div class="tabbed-block">
+<p>Imaginons que l'on collecte un prénom à travers la bien nommée variable <code class="highlight"><span class="n">PRENOM</span></code>. On souhaite que quelque soit la casse de la réponse, on affiche le prénom sous la forme <code class="highlight"><span class="n">Prénom</span></code>. <br>
+Voici une formule pour le cas d'un prénom simple:
+<div class="highlight"><pre><span></span><code><span class="nf">upper</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="n">PRENOM</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">lower</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="n">PRENOM</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">PRENOM</span><span class="p">)))</span>
+</code></pre></div></p>
+<div class="admonition warning">
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> cela ne fonctionnera pas pour les prénoms composés pour lesquels il sera nécessaire de rendre compte d'un séparateur (un espace, un tiret).</p>
+</div>
+</div>
+</div>
+</div>
+</details>
 <h5 id="isnull">isnull</h5>
 <p><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f6a7.svg" title=":construction:" /> Coming soon ...</p>
 <h5 id="in">in</h5>
@@ -3479,7 +3541,7 @@ Ex, on veut savoir si parmi les prénoms récoltés, il y a quelqu'un qui s'appe
 <li><code class="highlight"><span class="n">ensemble</span></code> : liste d'éléments sur lequel on teste la présence de <code class="highlight"><span class="n">var</span></code></li>
 </ul>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Texte</label><label for="__tabbed_7_2">Nombre</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Texte</label><label for="__tabbed_10_2">Nombre</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -3537,7 +3599,7 @@ Ex, on veut savoir si parmi les prénoms récoltés, il y a quelqu'un qui s'appe
 </div>
 <details class="example">
 <summary>Exemple d'utilisation</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">avec des variables</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">avec des variables</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="w"> </span><span class="n">not_in</span><span class="w"> </span><span class="o">$</span><span class="n">PRENOMS_FAMILLE</span><span class="o">$</span>
