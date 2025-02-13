@@ -292,7 +292,7 @@
 
 ??? example "Exemple d'utilisation"
     === "Précision d'un nombre"
-        Si on veut vérifier qu'une variable `JOUR` est renseignée avec une précision à là demi-journée près. On peut écrire un contrôle avec la condition d'affichage suivante :   
+        Si on veut vérifier qu'une variable `JOUR` est renseignée avec une précision à là demi-journée près, on peut écrire un contrôle avec la condition d'affichage suivante :   
         ```
         mod($JOUR$, 0.5)<>0    
         // ou   
