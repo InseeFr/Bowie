@@ -9,6 +9,8 @@
 | [**`isnull()`**](fonctions-vtl.md/#isnull)       | :construction: Coming soon ...    |
 | [**`in`**](fonctions-vtl.md/#in)       | Permet de tester l'appartenance d'une valeur à un ensemble    |
 | [**`if ... then ...`**](fonctions-vtl.md/#if-then)       | :construction: Coming soon ...    |
+| [**`mod()`**](fonctions-vtl.md/#mod)     | Permet de récupérer le modulo = le reste d'une division entière  |
+
 
 ## Détail des fonctions
 ##### nvl
@@ -268,3 +270,31 @@
 
 :construction: Coming soon ...
 
+##### mod
+
+!!! question "Utilité"
+    Pratique dans les contrôles quand on veut récupérer le reste d'une division
+    
+!!! abstract "Syntaxe"
+    ```
+    mod(<var>, <diviseur>)
+    ```
+
+    - `var` : nombre à diviser
+    - `diviseur` : valeur par laquelle on veut diviser `var`
+
+=== "Nombre"
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
+    | --- | ---| --- |
+    | `18` | `mod($MA_VARIABLE$,5)`   | `3` |
+    | `18` | `mod($MA_VARIABLE$,18)`   | `0` |
+    | `18` | `mod($MA_VARIABLE$,1)`   | `0` |
+
+??? example "Exemple d'utilisation"
+    === "Précision d'un nombre"
+        Si on veut vérifier qu'une variable `JOUR` est renseignée avec une précision à là demi-journée près. On peut écrire un contrôle avec la condition d'affichage suivante :   
+        ```
+        mod($JOUR$, 0.5)<>0    
+        // ou   
+        mod($JOUR$*10, 5)<>0 
+        ```
