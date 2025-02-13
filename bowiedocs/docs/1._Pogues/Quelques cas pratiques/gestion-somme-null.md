@@ -50,3 +50,7 @@ SUM_TAB = sum($NULL_CHECK_TAB_COL$)
 
 !!! tips "Info"
     Voir **[portée des variables](../Le%20guide/24-boucles.md/#portee-des-variables-champ-niveau-de-calcul)** pour plus de détails sur comment utilisé le niveau de calcul
+
+## Questionnaire exemple
+
+Pour référence, un [questionnaire implémentant cette solution](https://conception-questionnaires.demo.insee.io/questionnaire/m2iwuqca) est disponible dans l'environnement de demo, sous le timbre DOCUMENTATION

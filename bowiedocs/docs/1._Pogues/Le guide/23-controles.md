@@ -11,7 +11,7 @@ Deux types de contrôle sont implémentés :
 Dans l'onglet "Contrôles" de la question du questionnaire à partir de laquelle on veut appliquer le contrôle, renseigner :
 
 - la _description_ du contrôle : texte libre documentant le contrôle
-- la _condition_ (pour laquelle on affiche le message d'erreur), en VTL (<[guide/vtl](../Le%20VTL%20dans%20Pogues/vtl.md)/> et <[migration-xpath-vers-vtl](../Le%20VTL%20dans%20Pogues/migration-xpath-vers-vtl.md)/>)
+- la _condition_ (pour laquelle on affiche le message d'erreur)
 - le _message d'erreur_ : saisir ici le message d'erreur qui s'affichera à l'enquêté si la condition est remplie (à rédiger en VTL)
 - la _criticité_ :  choisir une criticité parmi
     - Information
@@ -28,7 +28,7 @@ Il est possible de supprimer ou dupliquer un contrôle.
     Côté collecte web, un contrôle se déclenche au clic sur suivant lorsque la condition est vraie. Les contrôles figurent sous les champs de saisie et lorsque plusieurs contrôles ont été décrits, ils apparaissent avec une précédence (un contrôle doit être résolu avant que le suivant ne se déclenche).
 
 !!! tip 
-    Côté collecte enquêteur, les contrôles ne sont implémentés.
+    Côté collecte enquêteur, les contrôles ne sont implémentés mais des développement sont prévu pour fin 2025 
   
 
 !!! example "Exemples de condition pour les contrôles"
@@ -74,3 +74,173 @@ Voir d'autres [exemples](../Le%20VTL%20dans%20Pogues/vtl.md/#cookbook)
 
 !!! warning "Cohérence avec les filtres"
     Si on ajoute un contrôle sur une question qui est filtré, il faut rajouter la condition du filtre dans ce contrôle pour que ce dernier ne se déclenche pas quand la question n'est pas affiché
+
+## Exemples pratiques
+
+### Non-réponse
+
+Dans la plupart des cas, vérifier une potentielle non-réponse c'est vérifier que la variable sous-jacente n'a pas été valorisée. Il faut donc écrire un contrôle pour tester la **_nullité_**. <br> 
+
+!!! example ""
+    Dépendamment du [type de la variable](13-reponse-simple.md), la formule VTL de conditionnant l'affichage du contrôle de non réponse est différente.
+
+    === "Date - Nombre - Durée"
+        Pour ces types, la formule VTL est simple avec seulement l'utilisation de [**isnull()**](../Le%20VTL%20dans%20Pogues/fonctions-vtl.md/#isnull)
+        ```
+        isnull($VAR$)
+        ```
+    === "Texte"
+        Comme pour le [Booléen](#__tabbed_2_3), il faut gérer aussi le cas où un répondant à commencé à remplir le champ mais a finalement effacé sa réponse. Dans ce cas la valeur de la variable n'est plus `null` mais `""`. <br>
+        On peut gérer ça des deux manière suivantes : 
+        ```
+        isnull($VAR) or $VAR = ""
+        ```
+        Ou en utilisant la fonction [**nvl()**](../Le%20VTL%20dans%20Pogues/fonctions-vtl.md/#nvl) :
+
+        ```
+        nvl($VAR, "") = ""
+        ```
+    === "Booléen"
+        Comme pour le [Texte](#__tabbed_2_3), il faut gérer aussi le cas où un répondant à cocher la case mais a finalement décoché. Dans ce cas la valeur de la variable n'est plus `null` mais `false`. <br>
+        On peut gérer ça des deux manière suivantes : 
+        ```
+        isnull($VAR) or $VAR = false
+        ```
+        Ou en utilisant la fonction [**nvl()**](../Le%20VTL%20dans%20Pogues/fonctions-vtl.md/#nvl) :
+
+        ```
+        nvl($VAR, false) = false
+        ```
+
+### Contrôle de validité d'une adresse mail
+
+Certains questionnaires peuvent collecter des informations de contact. Dans le cas d'une adresse _mail_, on veut pouvoir s'assurer de la justesse syntaxique de celle-ci. S'il n'existe pas de formule assurant la compatibilité à 100% avec la spécification initiale relative aux adresses mail, ce que l'on utilise dans la formule suivante permet d'empêcher la plupart des erreurs :
+
+```
+match_characters(
+    $MAIL$,
+    "^[A-Za-z0-9._+\-\']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$"
+) = false
+```
+
+### Contrôle de validité d'un SIRET
+
+!!! abstract "3 contrôles, chacun avec un but différent"
+    - Vérification du format du Siret (14 caractères et uniquement des chiffres) : **Contrôle Siret de format**
+    > Le Siret doit être composé uniquement de 14 chiffres
+    - Vérification du Siren (9 premiers caractères) : **Contrôle Siret 1**
+    > Les 9 premiers chiffres du numéro que vous avez renseigné ne correspondent pas à un numéro Siren.
+    - Vérification du Siret sachant que le Siren est correct : **Contrôle Siret 2**
+    > Les 9 premiers chiffres du numéro que vous avez renseigné correspondent à un numéro Siren, mais les 5 derniers font que l'ensemble n'est pas un numéro Siret.
+   
+???+ tip "Formule VTL"
+    !!! warning "On se place dans le cas où le Siret est collecté à travers la variable `SIRET`"
+
+    === "Contrôle Siret de format"
+        ```
+        not match_characters($SIRET$,"^[0-9]{14}$")
+        ```
+    === "Contrôle Siret 1"
+        ```
+        match_characters($SIRET$,"^[0-9]{14}$")
+        and ((mod(
+            cast(substr($SIRET$,1,1),integer)
+            + cast(substr($SIRET$,2,1),integer)*2 -(if (cast(substr($SIRET$,2,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,3,1),integer)
+            + cast(substr($SIRET$,4,1),integer)*2 -(if (cast(substr($SIRET$,4,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,5,1),integer)
+            + cast(substr($SIRET$,6,1),integer)*2 -(if (cast(substr($SIRET$,6,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,7,1),integer)
+            + cast(substr($SIRET$,8,1),integer)*2 -(if (cast(substr($SIRET$,8,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,9,1),integer)
+        ,10)) <> 0)
+        ```
+    === "Contrôle Siret 2"
+        ```
+        match_characters($SIRET$,"^[0-9]{14}$")
+        and ((mod(
+            cast(substr($SIRET$,1,1),integer)
+            + cast(substr($SIRET$,2,1),integer)*2 -(if (cast(substr($SIRET$,2,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,3,1),integer)
+            + cast(substr($SIRET$,4,1),integer)*2 -(if (cast(substr($SIRET$,4,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,5,1),integer)
+            + cast(substr($SIRET$,6,1),integer)*2 -(if (cast(substr($SIRET$,6,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,7,1),integer)
+            + cast(substr($SIRET$,8,1),integer)*2 -(if (cast(substr($SIRET$,8,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,9,1),integer)
+        ,10)) = 0)
+        and ((mod(
+            cast(substr($SIRET$,1,1),integer)*2 -(if (cast(substr($SIRET$,1,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,2,1),integer)
+            + cast(substr($SIRET$,3,1),integer)*2 -(if (cast(substr($SIRET$,3,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,4,1),integer)
+            + cast(substr($SIRET$,5,1),integer)*2 -(if (cast(substr($SIRET$,5,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,6,1),integer)
+            + cast(substr($SIRET$,7,1),integer)*2 -(if (cast(substr($SIRET$,7,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,8,1),integer)
+            + cast(substr($SIRET$,9,1),integer)*2 -(if (cast(substr($SIRET$,9,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,10,1),integer)
+            + cast(substr($SIRET$,11,1),integer)*2 -(if (cast(substr($SIRET$,11,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,12,1),integer)
+            + cast(substr($SIRET$,13,1),integer)*2 -(if (cast(substr($SIRET$,13,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIRET$,14,1),integer)
+        ,10)) <> 0)
+        ```
+        __Explication du code__
+        
+        1. On vérifie que l'on a une chaîne de 14 chiffres
+        2. On fait une grosse addition dont on vérifie si elle est égale à 0 modulo 10
+        3. On a une action caractère par caractère : On regarde le chiffre et selon sa position, on le multiplie par 1 ou 2 ; lorsqu'on le multiplie par 2, si ça atteint ou dépasse 10, on enlève 9<br>
+        *ex :* `7*2` donne `1+4 (formule de Luhn) = 14-9 (formule calculée ici)`
+
+### Contrôle de validité d'un SIREN
+
+!!! abstract "2 contrôles, chacun avec un but différent"
+    - Vérification du format du Siren (9 caractères et uniquement des chiffres) : **Contrôle Siren de format**
+    > Le Siren doit être composé uniquement de 9 chiffres
+    - Vérification du Siren (9 premiers caractères) : **Contrôle Siren**
+    > Les 9 premiers chiffres du numéro que vous avez renseigné ne correspondent pas à un numéro Siren.
+
+???+ tip "Formule VTL"
+    !!! warning "On se place dans le cas où le Siren est collecté à travers la variable `SIREN`"
+    === "Contrôle Siret de format"
+        ```
+        not match_characters($SIRET$,"^[0-9]{9}$")
+        ```
+    === "Contrôle Siren"
+        ```
+        match_characters($SIREN$,"^[0-9]{9}$")
+        and ((mod(
+            cast(substr($SIREN$,1,1),integer)
+            + cast(substr($SIREN$,2,1),integer)*2 -(if (cast(substr($SIREN$,2,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIREN$,3,1),integer)
+            + cast(substr($SIREN$,4,1),integer)*2 -(if (cast(substr($SIREN$,4,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIREN$,5,1),integer)
+            + cast(substr($SIREN$,6,1),integer)*2 -(if (cast(substr($SIREN$,6,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIREN$,7,1),integer)
+            + cast(substr($SIREN$,8,1),integer)*2 -(if (cast(substr($SIREN$,8,1),integer) > 4) then 9 else 0)
+            + cast(substr($SIREN$,9,1),integer)
+        ,10)) <> 0)
+        ```
+
+### Contrôle de validité d'un RNA
+
+!!! abstract "Le format attendu est un code avec les contraintes suivantes dans l'ordre"
+
+    1. Commence par 'W'
+    2. 1 chiffre
+    3. 1 caractère (lettre ou chiffre)
+    4. Suite de 7 chiffres. 
+
+    **=> Un contrôle suffit.**
+
+???+ tip "Formule VTL pour le contrôle du RNA"
+    !!! warning "On se place dans le cas où le RNA est collecté à travers la variable `RNA`"
+
+    ``` title="Contrôle RNA"
+    not(match_characters($RNA$,"^W\d[\da-zA-Z]\d{7}$"))
+    ```
+
+## Questionnaire exemple
+
+Pour référence, un [questionnaire implémentant les contrôles de Siret, Siren et Rna](https://conception-questionnaires.demo.insee.io/questionnaire/m4tmy4kl) est disponible dans l'environnement de demo, sous le timbre DOCUMENTATION
