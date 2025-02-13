@@ -1187,6 +1187,75 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exemples-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples pratiques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemples pratiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#non-reponse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-réponse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controle-de-validite-dune-adresse-mail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôle de validité d'une adresse mail
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controle-de-validite-dun-siret" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôle de validité d'un SIRET
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controle-de-validite-dun-siren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôle de validité d'un SIREN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controle-de-validite-dun-rna" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôle de validité d'un RNA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questionnaire-exemple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questionnaire exemple
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2882,6 +2951,75 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exemples-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples pratiques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemples pratiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#non-reponse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-réponse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controle-de-validite-dune-adresse-mail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôle de validité d'une adresse mail
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controle-de-validite-dun-siret" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôle de validité d'un SIRET
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controle-de-validite-dun-siren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôle de validité d'un SIREN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controle-de-validite-dun-rna" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôle de validité d'un RNA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questionnaire-exemple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questionnaire exemple
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2906,7 +3044,7 @@
 <p>Dans l'onglet "Contrôles" de la question du questionnaire à partir de laquelle on veut appliquer le contrôle, renseigner :</p>
 <ul>
 <li>la <em>description</em> du contrôle : texte libre documentant le contrôle</li>
-<li>la <em>condition</em> (pour laquelle on affiche le message d'erreur), en VTL (&lt;<a href="../../Le%20VTL%20dans%20Pogues/vtl/">guide/vtl</a>/&gt; et &lt;<a href="../../Le%20VTL%20dans%20Pogues/migration-xpath-vers-vtl/">migration-xpath-vers-vtl</a>/&gt;)</li>
+<li>la <em>condition</em> (pour laquelle on affiche le message d'erreur)</li>
 <li>le <em>message d'erreur</em> : saisir ici le message d'erreur qui s'affichera à l'enquêté si la condition est remplie (à rédiger en VTL)</li>
 <li>la <em>criticité</em> :  choisir une criticité parmi<ul>
 <li>Information</li>
@@ -2924,7 +3062,7 @@
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Côté collecte enquêteur, les contrôles ne sont implémentés.</p>
+<p>Côté collecte enquêteur, les contrôles ne sont implémentés mais des développement sont prévu pour fin 2025 </p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exemples de condition pour les contrôles</p>
@@ -2973,6 +3111,195 @@
 <p class="admonition-title">Cohérence avec les filtres</p>
 <p>Si on ajoute un contrôle sur une question qui est filtré, il faut rajouter la condition du filtre dans ce contrôle pour que ce dernier ne se déclenche pas quand la question n'est pas affiché</p>
 </div>
+<h2 id="exemples-pratiques">Exemples pratiques</h2>
+<h3 id="non-reponse">Non-réponse</h3>
+<p>Dans la plupart des cas, vérifier une potentielle non-réponse c'est vérifier que la variable sous-jacente n'a pas été valorisée. Il faut donc écrire un contrôle pour tester la <strong><em>nullité</em></strong>. <br> </p>
+<div class="admonition example">
+<p>Dépendamment du <a href="../13-reponse-simple/">type de la variable</a>, la formule VTL de conditionnant l'affichage du contrôle de non réponse est différente.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Date - Nombre - Durée</label><label for="__tabbed_2_2">Texte</label><label for="__tabbed_2_3">Booléen</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Pour ces types, la formule VTL est simple avec seulement l'utilisation de <a href="../../Le%20VTL%20dans%20Pogues/fonctions-vtl/#isnull"><strong>isnull()</strong></a>
+<div class="highlight"><pre><span></span><code><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">VAR</span><span class="o">$</span><span class="p">)</span>
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p>Comme pour le <a href="#__tabbed_2_3">Booléen</a>, il faut gérer aussi le cas où un répondant à commencé à remplir le champ mais a finalement effacé sa réponse. Dans ce cas la valeur de la variable n'est plus <code class="highlight"><span class="n">null</span></code> mais <code class="highlight"><span class="s">&quot;&quot;</span></code>. <br>
+On peut gérer ça des deux manière suivantes : 
+<div class="highlight"><pre><span></span><code><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">VAR</span><span class="p">)</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="o">$</span><span class="n">VAR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+</code></pre></div>
+Ou en utilisant la fonction <a href="../../Le%20VTL%20dans%20Pogues/fonctions-vtl/#nvl"><strong>nvl()</strong></a> :</p>
+<div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Comme pour le <a href="#__tabbed_2_3">Texte</a>, il faut gérer aussi le cas où un répondant à cocher la case mais a finalement décoché. Dans ce cas la valeur de la variable n'est plus <code class="highlight"><span class="n">null</span></code> mais <code class="highlight"><span class="n">false</span></code>. <br>
+On peut gérer ça des deux manière suivantes : 
+<div class="highlight"><pre><span></span><code><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">VAR</span><span class="p">)</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="o">$</span><span class="n">VAR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">false</span>
+</code></pre></div>
+Ou en utilisant la fonction <a href="../../Le%20VTL%20dans%20Pogues/fonctions-vtl/#nvl"><strong>nvl()</strong></a> :</p>
+<div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">false</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h3 id="controle-de-validite-dune-adresse-mail">Contrôle de validité d'une adresse mail</h3>
+<p>Certains questionnaires peuvent collecter des informations de contact. Dans le cas d'une adresse <em>mail</em>, on veut pouvoir s'assurer de la justesse syntaxique de celle-ci. S'il n'existe pas de formule assurant la compatibilité à 100% avec la spécification initiale relative aux adresses mail, ce que l'on utilise dans la formule suivante permet d'empêcher la plupart des erreurs :</p>
+<div class="highlight"><pre><span></span><code><span class="nf">match_characters</span><span class="p">(</span>
+<span class="w">    </span><span class="o">$</span><span class="n">MAIL</span><span class="o">$</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;^[A-Za-z0-9._+\-\&#39;]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$&quot;</span>
+<span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">false</span>
+</code></pre></div>
+<h3 id="controle-de-validite-dun-siret">Contrôle de validité d'un SIRET</h3>
+<div class="admonition abstract">
+<p class="admonition-title">3 contrôles, chacun avec un but différent</p>
+<ul>
+<li>Vérification du format du Siret (14 caractères et uniquement des chiffres) : <strong>Contrôle Siret de format</strong><blockquote>
+<p>Le Siret doit être composé uniquement de 14 chiffres</p>
+</blockquote>
+</li>
+<li>Vérification du Siren (9 premiers caractères) : <strong>Contrôle Siret 1</strong><blockquote>
+<p>Les 9 premiers chiffres du numéro que vous avez renseigné ne correspondent pas à un numéro Siren.</p>
+</blockquote>
+</li>
+<li>Vérification du Siret sachant que le Siren est correct : <strong>Contrôle Siret 2</strong><blockquote>
+<p>Les 9 premiers chiffres du numéro que vous avez renseigné correspondent à un numéro Siren, mais les 5 derniers font que l'ensemble n'est pas un numéro Siret.</p>
+</blockquote>
+</li>
+</ul>
+</div>
+<details class="tip" open="open">
+<summary>Formule VTL</summary>
+<div class="admonition warning">
+<p class="admonition-title">On se place dans le cas où le Siret est collecté à travers la variable <code class="highlight"><span class="n">SIRET</span></code></p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Contrôle Siret de format</label><label for="__tabbed_3_2">Contrôle Siret 1</label><label for="__tabbed_3_3">Contrôle Siret 2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">not</span><span class="w"> </span><span class="nf">match_characters</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="s">&quot;^[0-9]{14}$&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nf">match_characters</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="s">&quot;^[0-9]{14}$&quot;</span><span class="p">)</span>
+<span class="nf">and </span><span class="p">((</span><span class="nf">mod</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="o">*</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="o">*</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="o">*</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="o">*</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">9</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="p">,</span><span class="m">10</span><span class="p">))</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="nf">match_characters</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="s">&quot;^[0-9]{14}$&quot;</span><span class="p">)</span>
+<span class="nf">and </span><span class="p">((</span><span class="nf">mod</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="o">*</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="o">*</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="o">*</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="o">*</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">9</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="p">,</span><span class="m">10</span><span class="p">))</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="nf">and </span><span class="p">((</span><span class="nf">mod</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="o">*</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="o">*</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="o">*</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="o">*</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">9</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="o">*</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">9</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">10</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">11</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="o">*</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">11</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">12</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">13</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="o">*</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">13</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="m">14</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="p">,</span><span class="m">10</span><span class="p">))</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+</code></pre></div>
+<strong>Explication du code</strong></p>
+<ol>
+<li>On vérifie que l'on a une chaîne de 14 chiffres</li>
+<li>On fait une grosse addition dont on vérifie si elle est égale à 0 modulo 10</li>
+<li>On a une action caractère par caractère : On regarde le chiffre et selon sa position, on le multiplie par 1 ou 2 ; lorsqu'on le multiplie par 2, si ça atteint ou dépasse 10, on enlève 9<br>
+<em>ex :</em> <code class="highlight"><span class="m">7</span><span class="o">*</span><span class="m">2</span></code> donne <code class="highlight"><span class="m">1+4</span><span class="w"> </span><span class="p">(</span><span class="n">formule</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">Luhn</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">14-9</span><span class="w"> </span><span class="p">(</span><span class="n">formule</span><span class="w"> </span><span class="n">calculée</span><span class="w"> </span><span class="n">ici</span><span class="p">)</span></code></li>
+</ol>
+</div>
+</div>
+</div>
+</details>
+<h3 id="controle-de-validite-dun-siren">Contrôle de validité d'un SIREN</h3>
+<div class="admonition abstract">
+<p class="admonition-title">2 contrôles, chacun avec un but différent</p>
+<ul>
+<li>Vérification du format du Siren (9 caractères et uniquement des chiffres) : <strong>Contrôle Siren de format</strong><blockquote>
+<p>Le Siren doit être composé uniquement de 9 chiffres</p>
+</blockquote>
+</li>
+<li>Vérification du Siren (9 premiers caractères) : <strong>Contrôle Siren</strong><blockquote>
+<p>Les 9 premiers chiffres du numéro que vous avez renseigné ne correspondent pas à un numéro Siren.</p>
+</blockquote>
+</li>
+</ul>
+</div>
+<details class="tip" open="open">
+<summary>Formule VTL</summary>
+<div class="admonition warning">
+<p class="admonition-title">On se place dans le cas où le Siren est collecté à travers la variable <code class="highlight"><span class="n">SIREN</span></code></p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Contrôle Siret de format</label><label for="__tabbed_4_2">Contrôle Siren</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">not</span><span class="w"> </span><span class="nf">match_characters</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="s">&quot;^[0-9]{9}$&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nf">match_characters</span><span class="p">(</span><span class="o">$</span><span class="n">SIREN</span><span class="o">$</span><span class="p">,</span><span class="s">&quot;^[0-9]{9}$&quot;</span><span class="p">)</span>
+<span class="nf">and </span><span class="p">((</span><span class="nf">mod</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIREN</span><span class="o">$</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIREN</span><span class="o">$</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="o">*</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIREN</span><span class="o">$</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIREN</span><span class="o">$</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIREN</span><span class="o">$</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="o">*</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIREN</span><span class="o">$</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIREN</span><span class="o">$</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIREN</span><span class="o">$</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="o">*</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIREN</span><span class="o">$</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIREN</span><span class="o">$</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIREN</span><span class="o">$</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="o">*</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIREN</span><span class="o">$</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="o">$</span><span class="n">SIREN</span><span class="o">$</span><span class="p">,</span><span class="m">9</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">integer</span><span class="p">)</span>
+<span class="p">,</span><span class="m">10</span><span class="p">))</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</details>
+<h3 id="controle-de-validite-dun-rna">Contrôle de validité d'un RNA</h3>
+<div class="admonition abstract">
+<p class="admonition-title">Le format attendu est un code avec les contraintes suivantes dans l'ordre</p>
+<ol>
+<li>Commence par 'W'</li>
+<li>1 chiffre</li>
+<li>1 caractère (lettre ou chiffre)</li>
+<li>Suite de 7 chiffres. </li>
+</ol>
+<p><strong>=&gt; Un contrôle suffit.</strong></p>
+</div>
+<details class="tip" open="open">
+<summary>Formule VTL pour le contrôle du RNA</summary>
+<div class="admonition warning">
+<p class="admonition-title">On se place dans le cas où le RNA est collecté à travers la variable <code class="highlight"><span class="n">RNA</span></code></p>
+</div>
+<div class="highlight"><span class="filename">Contrôle RNA</span><pre><span></span><code><span class="nf">not</span><span class="p">(</span><span class="nf">match_characters</span><span class="p">(</span><span class="o">$</span><span class="n">RNA</span><span class="o">$</span><span class="p">,</span><span class="s">&quot;^W\d[\da-zA-Z]\d{7}$&quot;</span><span class="p">))</span>
+</code></pre></div>
+</details>
+<h2 id="questionnaire-exemple">Questionnaire exemple</h2>
+<p>Pour référence, un <a href="https://conception-questionnaires.demo.insee.io/questionnaire/m4tmy4kl">questionnaire implémentant les contrôles de Siret, Siren et Rna</a> est disponible dans l'environnement de demo, sous le timbre DOCUMENTATION</p>
 
 
 
