@@ -6,7 +6,16 @@ Elles doivent être concises et ne pas contenir d’informations cruciales à la
 
 ## Syntaxe
 
-Exemple : 
-\"Ceci est une question avec une [précision](. "une infobulle sur précision") avec infobulle sur le mot précision"\
+!!! example "Exemple"
+    ```
+    \"Ceci est une question avec une [précision](. "une infobulle sur précision") avec infobulle sur le mot précision"\
+    ```
+    ce qui done <br>
 
-<https://inseefr.github.io/Bowie/pogues/tutoriel/22-ajout-infobulle/>
+    \"Ceci est une question avec une [précision](. "une infobulle sur précision") avec infobulle sur le mot précision"\
+
+
+Plus de détails dans [le tutoriel](../../D%C3%A9couverte%20%28le%20tutoriel%29/22-ajout-infobulle/)
+
+!!! warning "Incompatibilité"
+    Les infobulles ne fonctionnent pas quand on a des parenthèses dans l'infobulle
