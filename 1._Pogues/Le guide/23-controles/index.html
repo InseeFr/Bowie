@@ -3235,6 +3235,9 @@ Ou en utilisant la fonction <a href="../../Le%20VTL%20dans%20Pogues/fonctions-vt
 </div>
 </div>
 </div>
+<p>Si on ne veut pas que ces contrôles se déclenchent dans le cas où le champ est vide, il faut rajouter au début de chacun la formule
+<div class="highlight"><pre><span></span><code><span class="nf">not </span><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">SIRET</span><span class="o">$</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="kc">...</span><span class="w"> </span>
+</code></pre></div></p>
 </details>
 <h3 id="controle-de-validite-dun-siren">Contrôle de validité d'un SIREN</h3>
 <div class="admonition abstract">
@@ -3278,6 +3281,9 @@ Ou en utilisant la fonction <a href="../../Le%20VTL%20dans%20Pogues/fonctions-vt
 </div>
 </div>
 </div>
+<p>Si on ne veut pas que ces contrôles se déclenchent dans le cas où le champ est vide, il faut rajouter au début de chacun la formule
+<div class="highlight"><pre><span></span><code><span class="nf">not </span><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">SIREN</span><span class="o">$</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="kc">...</span><span class="w"> </span>
+</code></pre></div></p>
 </details>
 <h3 id="controle-de-validite-dun-rna">Contrôle de validité d'un RNA</h3>
 <div class="admonition abstract">
@@ -3297,9 +3303,16 @@ Ou en utilisant la fonction <a href="../../Le%20VTL%20dans%20Pogues/fonctions-vt
 </div>
 <div class="highlight"><span class="filename">Contrôle RNA</span><pre><span></span><code><span class="nf">not</span><span class="p">(</span><span class="nf">match_characters</span><span class="p">(</span><span class="o">$</span><span class="n">RNA</span><span class="o">$</span><span class="p">,</span><span class="s">&quot;^W\d[\da-zA-Z]\d{7}$&quot;</span><span class="p">))</span>
 </code></pre></div>
+<p>Si on ne veut pas que ces contrôles se déclenchent dans le cas où le champ est vide, il faut rajouter au début de chacun la formule
+<div class="highlight"><pre><span></span><code><span class="nf">not </span><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">RNA</span><span class="o">$</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="kc">...</span><span class="w"> </span>
+</code></pre></div></p>
 </details>
 <h2 id="questionnaire-exemple">Questionnaire exemple</h2>
-<p>Pour référence, un <a href="https://conception-questionnaires.demo.insee.io/questionnaire/m4tmy4kl">questionnaire implémentant les contrôles de Siret, Siren et Rna</a> est disponible dans l'environnement de demo, sous le timbre DOCUMENTATION</p>
+<p>Pour référence, des questionnaires illustrant ces contrôles sont disponibles dans l'environnement de demo, sous le timbre <em>DOCUMENTATION</em>.</p>
+<ul>
+<li>Un <a href="https://conception-questionnaires.demo.insee.io/questionnaire/m4tmy4kl">questionnaire implémentant les contrôles de Siret, Siren et Rna</a> </li>
+<li>Un <a href="https://conception-questionnaires.demo.insee.io/questionnaire/m74nlrpj">questionnaire similaire</a> où les contrôles ne se déclenchent aussi quand le champ est vide </li>
+</ul>
 
 
 
