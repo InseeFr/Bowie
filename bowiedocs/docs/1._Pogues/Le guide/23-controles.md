@@ -192,6 +192,11 @@ match_characters(
         2. On fait une grosse addition dont on vérifie si elle est égale à 0 modulo 10
         3. On a une action caractère par caractère : On regarde le chiffre et selon sa position, on le multiplie par 1 ou 2 ; lorsqu'on le multiplie par 2, si ça atteint ou dépasse 10, on enlève 9<br>
         *ex :* `7*2` donne `1+4 (formule de Luhn) = 14-9 (formule calculée ici)`
+    
+    Si on ne veut pas que ces contrôles se déclenchent dans le cas où le champ est vide, il faut rajouter au début de chacun la formule
+    ```
+    not (nvl($SIRET$,"")="") and ... 
+    ```
 
 ### Contrôle de validité d'un SIREN
 
@@ -222,6 +227,11 @@ match_characters(
             + cast(substr($SIREN$,9,1),integer)
         ,10)) <> 0)
         ```
+    
+    Si on ne veut pas que ces contrôles se déclenchent dans le cas où le champ est vide, il faut rajouter au début de chacun la formule
+    ```
+    not (nvl($SIREN$,"")="") and ... 
+    ```
 
 ### Contrôle de validité d'un RNA
 
@@ -241,6 +251,14 @@ match_characters(
     not(match_characters($RNA$,"^W\d[\da-zA-Z]\d{7}$"))
     ```
 
+    Si on ne veut pas que ces contrôles se déclenchent dans le cas où le champ est vide, il faut rajouter au début de chacun la formule
+    ```
+    not (nvl($RNA$,"")="") and ... 
+    ```
+
 ## Questionnaire exemple
 
-Pour référence, un [questionnaire implémentant les contrôles de Siret, Siren et Rna](https://conception-questionnaires.demo.insee.io/questionnaire/m4tmy4kl) est disponible dans l'environnement de demo, sous le timbre DOCUMENTATION
+Pour référence, des questionnaires illustrant ces contrôles sont disponibles dans l'environnement de demo, sous le timbre *DOCUMENTATION*.
+
+- Un [questionnaire implémentant les contrôles de Siret, Siren et Rna](https://conception-questionnaires.demo.insee.io/questionnaire/m4tmy4kl) 
+- Un [questionnaire similaire](https://conception-questionnaires.demo.insee.io/questionnaire/m74nlrpj) où les contrôles ne se déclenchent aussi quand le champ est vide 
