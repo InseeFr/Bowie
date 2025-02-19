@@ -12,9 +12,40 @@ Le paramétrage peut concerner les éléments suivants :
 
 Entre 2 enquêtes, la recherche (paramétrage) est identique pour une même nomenclature.
 
-### En cas d'échos non trouvés ?
+### Recherche sur liste avec réponse libre
 
-Dans les variables TCM, les listes contiennent une modalité "je n'ai pas trouvé dans la liste" et on on crée une autre variable avec une question filtrée
+On peut définir un QCU avec recherche sur liste **et réponse libre** :  l'enquêté peut conserver le texte saisi si la recherche avec ce texte ne renvoie pas d'occurrence dans la nomenclature spécifiée par le concepteur.
+
+??? example "Exemple d'utilisation"
+    1. Pour activer cette fonctionnalité, il suffit de sélectionner `Oui` pour le champ **"Autoriser une réponse libre"**. (Par défaut ce champ vaut `Non`).
+    ![alt text](../../img/pogues/suggester_rep_libre.png)
+    2. En générant les variables collectées, on remarque que l'on a **2 variables** :
+
+        - Variable collectée `MA_VARIABLE` : *correspond aux recherches ayant abouti dans la liste.*
+        - Variable collectée `MA_VARIABLE_ARBITRARY` : *correspondant aux recherches infructueuses pour lesquelles l'enquêté / l'enquêteur n'a aucun résultat et choisit de conserver sa saisie.*
+
+            ??? note "Nommage de `MA_VARIABLE_ARBITRARY`"
+                :warning: Le nom de la seconde variable est automatiquement générée mais est modifiable depuis l'onglet de gestion des variables collectées.
+                ![alt text](../../img/pogues/generate_arbitrary_var_for_suggester.png)
+        
+        !!! danger "Attention"
+            On ne peut avoir une valeur renseigné pour ces deux variables en même temps : c'est l'une ou l'autre. **Ce point est à prendre en compte si on fait du pré-remplissage**
+        
+    3. Prenons par exemple la nomenclature sur les activités. Si on saisit 'Activités extract' on obtient les echos suivants
+        ![alt text](../../img/pogues/suggester_act_echo.png)
+        En sélectionnant l'un des echos puis en appuyant sur 'Continuer', alors `MA_VARIABLE` prend la valeur de cet echo et `MA_VARIABLE_ARBITRARY` est `null`.
+
+        Si on saisit 'extractionnn' aucun echo n'est trouvé dans la liste. On a alors la possibilité de sélectionner 'extractionnn' comme réponse.
+        ![alt text](../../img/pogues/suggester_act_echo_not_found.png)
+        Si on clique sur 'choisir "extractionnn"' puis qu'on clique sur 'Continuer', alors `MA_VARIABLE_ARBITRARY` prend la valeur 'extractionnn' et `MA_VARIABLE` vaut `null`.
+
+    L'option `Non` désactive cette fonctionnalité : l'utilisateur ne peut pas saisir de "réponse libre" = comportement "classique" du suggester.
+
+!!! warning "Exception"
+    **La fonctionnalité de recherche sur liste avec réponse libre ne marche dans les tableaux**
+
+!!! tip "Ancien fonctionnement dans le TCM"
+    Dans les variables TCM, les listes contiennent une modalité "je n'ai pas trouvé dans la liste" et on on crée une autre variable avec une question filtrée
 
 ## Suggester à choix multi-variables (une réponse valorise plusieurs variables)
 
@@ -62,12 +93,13 @@ Je peux ensuite afficher cette valeur, par exemple dans une déclaration, en app
 ##### En sélectionnant "Commerce de lignite"
 ![alt text](../../img/pogues/res-sugg-commerce-lignite.png)
 
-!!! warning
-    Le comportement actuel est temporaire du point de vue de l'UI Pogues.
-    En effet, la variable CALC_VAR est définie dans Pogues comme une variable calculée mais d'un point de vue métier, c'est une variable **collectée**.
+!!! warning "Détail technique"
+    Le comportement actuel est temporaire du point de vue du parcours utilisateur dans Pogues. <br>
+    En effet, la variable `CALC_VAR` est définie dans Pogues comme une variable calculée mais d'un point de vue métier, c'est une variable **collectée**.
     Elle est bien considérée comme une variable collectée dans Lunatic. On peut la récupérer en téléchargeant les données depuis la visualisation DSFR. <br>
-    A terme, on aura un UX dans Pogues qui sera plus cohérent avec ce concept. <br>
-    Ex : Un bouton qui permet d'ajouter une paire clé/valeur qui indique le nom de la nouvelle variable collecté et le nom de la colonne dans la nomenclature 
+    
+    A terme, on aura un parcours utilisateur dans Pogues qui sera plus cohérent avec ce concept. <br>
+    Ex : Un bouton qui permet d'ajouter une paire clé/valeur qui indique le nom de la nouvelle variable collectée et le nom de la colonne dans la nomenclature 
 
 ### Questionnaire exemple
 
