@@ -48,8 +48,8 @@ Si on souhaite qu'une de ces informations mesurées ne soit pas "collectée", vo
 
 Ces totaux peuvent être ensuite utilisées dans deslibellés, des filtres ou des contrôles
 
-- cf. [Total en ligne](https://inseefr.github.io/Bowie/pogues/Le%20guide/Tableaux/3-cases-non-collectees/#total-en-ligne)
-- cf. [Total en colonne](https://inseefr.github.io/Bowie/pogues/Le%20guide/Tableaux/3-cases-non-collectees/#total-en-colonne)
+- cf. [Total en ligne](./3-cases-non-collectees.md/#total-en-ligne)
+- cf. [Total en colonne](./3-cases-non-collectees.md/#total-en-colonne)
 
 ## Contrôles
 
@@ -62,7 +62,7 @@ Dans l'onglet Contrôles, décrire classiquement le contrôle en VTL mais préci
 
 Pogues permet de préremplir certaines __colonnes__ des tableaux dynamiques, que ce soit par de la donnée externe ou par des variables calculées. Ces __colonnes__ ne sont alors pas modifiables en collecte.
 
-[Spécifier des données non-collectées](https://inseefr.github.io/Bowie/pogues/Le%20guide/Tableaux/3-cases-non-collectees)
+[Spécifier des données non-collectées](./3-cases-non-collectees.md)
 
 
 ## Supprimer une ligne qui n'est pas la dernière
