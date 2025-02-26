@@ -3,8 +3,13 @@
 Un contrôle permet de vérifier la qualité des informations saisies au sein d'un questionnaire.
 
 Deux types de contrôle sont implémentés :
+
 - les contrôles de format (automatiques, et dépendant de la nature de la variable décrite dans Pogues)
 - les contrôles de cohérence interne au questionnaire (éventuellement cohérence avec les données antérieures), décrits dans Pogues par le concepteur.
+
+!!! danger "Les contrôles et filtres ne fonctionnent pas quand on fait une visualisation sur une sous partie du questionnaire : séquence, sous séquence ou question"
+    Pour tester le bon fonctionnement des contrôles, on peut faire une visualisation et voir si ces derniers se déclenchent correctement.
+    Il faut visualiser le questionnaire **dans son entièreté**. <br>
 
 ## Syntaxe
 

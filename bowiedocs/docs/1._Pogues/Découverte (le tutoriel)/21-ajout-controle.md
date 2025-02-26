@@ -4,7 +4,7 @@ On souhaite pouvoir s'assurer d'une bonne qualité de réponse aux différentes 
 
 !!!note
 
-    Actuellement, seuls les contrôles de format - par exemple une valeur minimum dans un champ numérique - sont bloquants. Les contrôles de cohérence comme celui que l'on s'apprête à créer ne bloque pas le déroulement du questionnaire.
+    Actuellement, seuls les contrôles de format, par exemple une valeur minimum dans un champ numérique, sont bloquants. Les contrôles de cohérence comme celui que l'on s'apprête à créer ne bloque pas le déroulement du questionnaire.
 
 Ici, on va créer un contrôle affichant un message d'incitation si l'on ne donne pas son prénom.
 
@@ -26,11 +26,10 @@ On veut déclencher le contrôle en cas de non-réponse, on va tester dans notre
 - si l'on n'est jamais entré dans le champ de réponse (la variable est `null` au sens VTL),
 - si l'on est entré dans le champ mais qu'on n'a rien saisi (la variable est égale à une chaîne de caractères vide, ou `""`).
 
-L'expression VTL sera donc :
-
-    ```vtl
-    $PRENOM$ = "" or isnull($PRENOM$)
-    ```
+L'expression VTL sera donc 
+```    
+$PRENOM$ = "" or isnull($PRENOM$)
+```
 
 !!!note
 
@@ -39,7 +38,3 @@ L'expression VTL sera donc :
 On aura une configuration sensiblement similaire à :point_down:
 
 ![Configuration du contrôle](../../img/pogues/controle-configuration.png)
-
-Lors du parcours du questionnaire, si vous ne remplissez pas la réponse à la question sur le prénom vous devriez voir apparaître le message du contrôle :
-
-![Affichage du contrôle](../../img/pogues/controle-affichage.png)
