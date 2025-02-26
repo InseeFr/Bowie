@@ -2845,7 +2845,7 @@
 <p>On souhaite pouvoir s'assurer d'une bonne qualité de réponse aux différentes questions que l'on propose. Pour cela, on peut utiliser le mécanisme de contrôle inhérent aux outils de l'atelier.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Actuellement, seuls les contrôles de format - par exemple une valeur minimum dans un champ numérique - sont bloquants. Les contrôles de cohérence comme celui que l'on s'apprête à créer ne bloque pas le déroulement du questionnaire.</p>
+<p>Actuellement, seuls les contrôles de format, par exemple une valeur minimum dans un champ numérique, sont bloquants. Les contrôles de cohérence comme celui que l'on s'apprête à créer ne bloque pas le déroulement du questionnaire.</p>
 </div>
 <p>Ici, on va créer un contrôle affichant un message d'incitation si l'on ne donne pas son prénom.</p>
 <p>Pour cela, on va modifier la question dont l'identifiant est PRENOM (en cliquant sur _Voir le détail).</p>
@@ -2863,19 +2863,15 @@
 <li>si l'on n'est jamais entré dans le champ de réponse (la variable est <code class="highlight"><span class="n">null</span></code> au sens VTL),</li>
 <li>si l'on est entré dans le champ mais qu'on n'a rien saisi (la variable est égale à une chaîne de caractères vide, ou <code class="highlight"><span class="s">&quot;&quot;</span></code>).</li>
 </ul>
-<p>L'expression VTL sera donc :</p>
-<div class="highlight"><pre><span></span><code><span class="n">```vtl</span>
-<span class="n">$PRENOM$ = &quot;&quot; or isnull($PRENOM$)</span>
-<span class="n">```</span>
-</code></pre></div>
+<p>L'expression VTL sera donc 
+<div class="highlight"><pre><span></span><code><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="p">)</span>
+</code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>On notera l'utilisation de la fonction <code class="highlight"><span class="n">isnull</span></code> qui permet de détecter si une variable n'a pas été valorisée (cf. guide VTL).</p>
 </div>
 <p>On aura une configuration sensiblement similaire à <img alt="👇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f447.svg" title=":point_down:" /></p>
 <p><a class="glightbox" href="../../../img/pogues/controle-configuration.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Configuration du contrôle" src="../../../img/pogues/controle-configuration.png" /></a></p>
-<p>Lors du parcours du questionnaire, si vous ne remplissez pas la réponse à la question sur le prénom vous devriez voir apparaître le message du contrôle :</p>
-<p><a class="glightbox" href="../../../img/pogues/controle-affichage.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Affichage du contrôle" src="../../../img/pogues/controle-affichage.png" /></a></p>
 
 
 

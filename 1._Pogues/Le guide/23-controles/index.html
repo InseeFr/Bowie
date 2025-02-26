@@ -3037,9 +3037,16 @@
 
 <h1 id="les-controles">Les contrôles</h1>
 <p>Un contrôle permet de vérifier la qualité des informations saisies au sein d'un questionnaire.</p>
-<p>Deux types de contrôle sont implémentés :
-- les contrôles de format (automatiques, et dépendant de la nature de la variable décrite dans Pogues)
-- les contrôles de cohérence interne au questionnaire (éventuellement cohérence avec les données antérieures), décrits dans Pogues par le concepteur.</p>
+<p>Deux types de contrôle sont implémentés :</p>
+<ul>
+<li>les contrôles de format (automatiques, et dépendant de la nature de la variable décrite dans Pogues)</li>
+<li>les contrôles de cohérence interne au questionnaire (éventuellement cohérence avec les données antérieures), décrits dans Pogues par le concepteur.</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Les contrôles et filtres ne fonctionnent pas quand on fait une visualisation sur une sous partie du questionnaire : séquence, sous séquence ou question</p>
+<p>Pour tester le bon fonctionnement des contrôles, on peut faire une visualisation et voir si ces derniers se déclenchent correctement.
+Il faut visualiser le questionnaire <strong>dans son entièreté</strong>. <br></p>
+</div>
 <h2 id="syntaxe">Syntaxe</h2>
 <p>Dans l'onglet "Contrôles" de la question du questionnaire à partir de laquelle on veut appliquer le contrôle, renseigner :</p>
 <ul>
