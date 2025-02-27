@@ -2986,7 +2986,7 @@
 <li>A l'initialisation du questionnaire, tout champ texte vaut <code class="highlight"><span class="n">null</span></code></li>
 <li>Quand on saisie une valeur, ex <code class="highlight"><span class="s">&quot;mon texte&quot;</span></code>, puis qu'on efface cette valeur du champ, alors le champ texte vaut <code class="highlight"><span class="s">&quot;&quot;</span></code> et non pas <code class="highlight"><span class="n">null</span></code> comme au début.</li>
 </ul>
-<p>C'est pourquoi, pour gérer les cas de champ texte vide, il faut <strong><a href="../../Le%20VTL%20dans%20Pogues/vtl/#gestion-de-la-nullite">gérer la nullité</a></strong>. On remplace ainsi les valeurs <code class="highlight"><span class="n">null</span></code> par <code class="highlight"><span class="s">&quot;&quot;</span></code> . <br>
+<p>C'est pourquoi, pour gérer les cas de champ texte vide, il faut <strong><a href="../23-controles/#non-reponse">gérer la nullité</a></strong>. On remplace ainsi les valeurs <code class="highlight"><span class="n">null</span></code> par <code class="highlight"><span class="s">&quot;&quot;</span></code> . <br>
 Ex de condition d'affichage d'un contrôle pour indiquer qu'un champ texte est vide
 <div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
 </code></pre></div></p>
@@ -3076,7 +3076,7 @@ Ex de condition d'affichage d'un contrôle pour indiquer qu'un champ texte est v
 <li>A l'initialisation du questionnaire, tout champ booléen vaut <code class="highlight"><span class="n">null</span></code>. La case est visuellement décochée.</li>
 <li>Quand on coche la case, alors la valeur collectée est <code class="highlight"><span class="n">true</span></code>, puis quand on décoche, alors la valeur collectée est <code class="highlight"><span class="n">false</span></code>.</li>
 </ul>
-<p>Comme pour le champ texte, il faut <strong><a href="../../Le%20VTL%20dans%20Pogues/vtl/#gestion-de-la-nullite">gérer le cas de la nullité</a></strong>, on remplace les valeurs <code class="highlight"><span class="n">null</span></code> par <code class="highlight"><span class="n">false</span></code> pour gérer les cas où la case est décochée. <br>
+<p>Comme pour le champ texte, il faut <strong><a href="../23-controles/#non-reponse">gérer le cas de la nullité</a></strong>, on remplace les valeurs <code class="highlight"><span class="n">null</span></code> par <code class="highlight"><span class="n">false</span></code> pour gérer les cas où la case est décochée. <br>
 Ex de condition d'affichage d'un contrôle pour indiquer qu'une case de type booléen n'est pas cochée.
 <div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">false</span>
 </code></pre></div></p>
