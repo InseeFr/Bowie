@@ -1,15 +1,27 @@
 # Fonctions VTL et usages
 
 ## Liste de fonctions
+
+### Les plus utilisés
 | Method      | Description                          |
 | ----------- | ------------------------------------ |
-| [**`nvl()`**](fonctions-vtl.md/#nvl)       | Permet de gérer la nullité    |
-| [**`cast()`**](fonctions-vtl.md/#cast)       | Permet de changer le type de la donnée    |
-| [**`substr()`**](fonctions-vtl.md/#substr)       | Permet d'extraire un sous ensemble de caractère d'un texte
-| [**`isnull()`**](fonctions-vtl.md/#isnull)       | :construction: Coming soon ...    |
-| [**`in`**](fonctions-vtl.md/#in)       | Permet de tester l'appartenance d'une valeur à un ensemble    |
-| [**`if ... then ...`**](fonctions-vtl.md/#if-then)       | :construction: Coming soon ...    |
-| [**`mod()`**](fonctions-vtl.md/#mod)     | Permet de récupérer le modulo = le reste d'une division entière  |
+| [**`nvl()`**](fonctions-vtl.md/#nvl)       | Gère la nullité    |
+| [**`cast()`**](fonctions-vtl.md/#cast)       | Change le type de la donnée    |
+| [**`substr()`**](fonctions-vtl.md/#substr)       | Extrait un sous ensemble de caractère d'un texte |
+| [**`isnull()`**](fonctions-vtl.md/#isnull)       | Teste la nullité d'une variable    |
+| [**`in ...`**](fonctions-vtl.md/#in)       | Teste l'appartenance d'une valeur à un ensemble    |
+| [**`if ... then ... else ...`**](fonctions-vtl.md/#if-then-else)  | Teste si un condition est vraie, _et retourne le contenu du then_ ou fausse, _et retourne le contenu du else_ |
+
+
+### Numériques
+| Method      | Description                          |
+| ----------- | ------------------------------------ |
+| [**`abs()`**](fonctions-vtl.md/#abs)     | Retourne la valeur absolue d'un nombre  |
+| [**`ceil()`**](fonctions-vtl.md/#ceil)     | Retourne le plus petit entier supérieur ou égal au nombre donné  |
+| [**`exp()`**](fonctions-vtl.md/#exp)     | Retourne l'exponentielle d'un nombre  |
+| [**`floor()`**](fonctions-vtl.md/#floor)     | Retourne le plus grand entier qui est inférieur ou égal à un nombre donné |
+| [**`mod()`**](fonctions-vtl.md/#mod)     | Retourne le modulo = le reste d'une division entière  |
+| [**`round()`**](fonctions-vtl.md/#round)     | Retourne la valeur d'un nombre arrondi à l'entier le plus proche  |
 
 
 ## Détail des fonctions
@@ -266,14 +278,70 @@
         $PRENOM$ not_in {"Alice", "Bob", "Charlie"}
         ```
 
-##### if ... then ...
+##### if ... then ... else ...
 
 :construction: Coming soon ...
+
+##### abs
+
+:construction: Coming soon ...
+
+##### ceil
+!!! question "Utilité"
+    Retourne le plus petit entier supérieur ou égal au nombre donné.
+
+!!! abstract "Syntaxe"
+    ```
+    ceil(<var>)
+    ```
+
+    - `var` : nombre à arrondir
+
+=== "Positif"
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
+    | --- | ---| --- |
+    | `0.95` | `ceil($MA_VARIABLE$)` | `1` |
+    | `4` | `ceil($MA_VARIABLE$)` | `4` |
+    | `7.004` | `ceil($MA_VARIABLE$)` | `8` |
+=== "Négatif"
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
+    | --- | ---| --- |
+    | `-0.95` | `ceil($MA_VARIABLE$)` | `0` |
+    | `-4` | `ceil($MA_VARIABLE$)` | `-4` |
+    | `-7.004` | `ceil($MA_VARIABLE$)` | `-7` |
+
+##### exp
+
+:construction: Coming soon ...
+
+##### floor
+!!! question "Utilité"
+    Renvoie le plus grand entier qui est inférieur ou égal à un nombre donné.
+
+!!! abstract "Syntaxe"
+    ```
+    floor(<var>)
+    ```
+
+    - `var` : nombre à arrondir
+
+=== "Positif"
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
+    | --- | ---| --- |
+    | `5.95` | `floor($MA_VARIABLE$)` | `5` |
+    | `5.05` | `floor($MA_VARIABLE$)` | `5` |
+    | `5` | `floor($MA_VARIABLE$)` | `5` |
+=== "Négatif"
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
+    | --- | ---| --- |
+    | `-5.95` | `floor($MA_VARIABLE$)` | `-6` |
+    | `-5.05` | `floor($MA_VARIABLE$)` | `-6` |
+    | `-5` | `floor($MA_VARIABLE$)` | `-5` |
 
 ##### mod
 
 !!! question "Utilité"
-    Pratique dans les contrôles quand on veut récupérer le reste d'une division
+    Pratique dans les contrôles quand on veut récupérer le reste d'une division.
     
 !!! abstract "Syntaxe"
     ```
@@ -298,3 +366,50 @@
         // ou   
         mod($JOUR$*10, 5)<>0 
         ```
+
+##### round
+
+!!! question "Utilité"
+    Quand on veut récupérer le résultat d'une division sans les décimales ou avec une précision moindre.
+
+!!! abstract "Syntaxe"
+    ```
+    round(<var>, <precision>)
+    ```
+
+    - `var` : nombre à arrondir
+    - `precision` : nombre de chiffre après la virgule `var`
+
+=== "Precision 0"
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
+    | --- | ---| --- |
+    | `5` | `round($MA_VARIABLE$, 0)` | `5` |
+    | `-5` | `round($MA_VARIABLE$, 0)` | `-5` |
+    | `5.05` | `round($MA_VARIABLE$, 0)` | `5` |
+    | `-5.05` | `round($MA_VARIABLE$, 0)` | `-6` |
+    | `5.952` | `round($MA_VARIABLE$, 0)` | `6` |
+    | `5.052` | `round($MA_VARIABLE$, 0)` | `5` |
+    | `-5.058` | `round($MA_VARIABLE$, 0)` | `-5` |
+    | `-5.952` | `round($MA_VARIABLE$, 0)` | `-6` |
+=== "Precision 1"
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
+    | --- | ---| --- |
+    | `5` | `round($MA_VARIABLE$, 1)` | `5` |
+    | `-5` | `round($MA_VARIABLE$, 1)` | `-5` |
+    | `5.05` | `round($MA_VARIABLE$, 1)` | `5.1` |
+    | `-5.05` | `round($MA_VARIABLE$, 1)` | `-5` |
+    | `5.952` | `round($MA_VARIABLE$, 1)` | `6` |
+    | `5.052` | `round($MA_VARIABLE$, 1)` | `5.1` |
+    | `-5.058` | `round($MA_VARIABLE$, 1)` | `-5.1` |
+    | `-5.952` | `round($MA_VARIABLE$, 1)` | `-6` |
+=== "Precision 2"
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
+    | --- | ---| --- |
+    | `5` | `round($MA_VARIABLE$, 2)` | `5` |
+    | `-5` | `round($MA_VARIABLE$, 2)` | `-5` |
+    | `5.05` | `round($MA_VARIABLE$, 2)` | `5.05` |
+    | `-5.05` | `round($MA_VARIABLE$, 2)` | `-5.05` |
+    | `5.952` | `round($MA_VARIABLE$, 2)` | `5.95` |
+    | `5.052` | `round($MA_VARIABLE$, 2)` | `5.05` |
+    | `-5.058` | `round($MA_VARIABLE$, 2)` | `-5.06` |
+    | `-5.952` | `round($MA_VARIABLE$, 2)` | `-5.95` |
