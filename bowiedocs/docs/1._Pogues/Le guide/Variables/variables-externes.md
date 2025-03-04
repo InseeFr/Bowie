@@ -4,7 +4,7 @@ Pogues permet de référencer dans le questionnaire des variables externes, c'es
 
 Si le _typage_ disponible dans Pogues pour ces variables est celui disponible par ailleurs pour les variables collectées et calculées, on n'a en fait pas le choix : l'ensemble des variables externes injectées dans le questionnaire sont du __texte__.
 
-L'impact : si ces variables doivent être utilisées comme numériques, il faut alors [les transformer](../../guide/vtl.md#transtypage). Par exemple :
+L'impact : si ces variables doivent être utilisées comme numériques, il faut alors les transformer avec la fonction [cast()](../../Le%20VTL%20dans%20Pogues/fonctions-vtl.md/#cast):
 
 ```vtl
 cast($VAR_EXT$, integer)

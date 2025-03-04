@@ -11,11 +11,17 @@ Les variables globales sont des variables fournies directement par le moteur de 
 
 Pour connaître l'index de la position dans une boucle, il est possible de mobiliser la variable `GLOBAL_ITERATION_INDEX`. Celle-ci vaudra `1` pour la première position, puis `2`, `3`, etc.
 
-### Syntaxe (mai 2024)
+### Syntaxe
 
 Dans la première boucle, on pourra par exemple afficher :
-`
+```
 "Prénom de l'individu " || cast(GLOBAL_ITERATION_INDEX,string) || ""
-`
+```
 Dans les boucles liées (cf. Les Boucles) on pourra également utiliser cette variable, qui sera l'index dans la première boucle.
 On ne peut en revanche pas les utiliser hors boucle.
+
+!!! warning "Il faut toujours mettre un texte après le cast, `|| ""` !!"
+    L'exemple ci dessous ne fonctionne pas par exemple
+    ```
+    "Prénom de l'individu " || cast(GLOBAL_ITERATION_INDEX,string)
+    ```
