@@ -1722,9 +1722,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#syntaxe-mai-2024" class="md-nav__link">
+  <a href="#syntaxe" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntaxe (mai 2024)
+      Syntaxe
     </span>
   </a>
   
@@ -2901,9 +2901,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#syntaxe-mai-2024" class="md-nav__link">
+  <a href="#syntaxe" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntaxe (mai 2024)
+      Syntaxe
     </span>
   </a>
   
@@ -2938,11 +2938,18 @@ De plus, en mai 2024, il est nécessaire de faire suivre la variable d'une chain
 </div>
 <h2 id="index-de-la-position-dans-une-boucle">Index de la position dans une boucle</h2>
 <p>Pour connaître l'index de la position dans une boucle, il est possible de mobiliser la variable <code class="highlight"><span class="n">GLOBAL_ITERATION_INDEX</span></code>. Celle-ci vaudra <code class="highlight"><span class="m">1</span></code> pour la première position, puis <code class="highlight"><span class="m">2</span></code>, <code class="highlight"><span class="m">3</span></code>, etc.</p>
-<h3 id="syntaxe-mai-2024">Syntaxe (mai 2024)</h3>
+<h3 id="syntaxe">Syntaxe</h3>
 <p>Dans la première boucle, on pourra par exemple afficher :
-<code class="highlight"><span class="s">&quot;Prénom de l&#39;individu &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="n">GLOBAL_ITERATION_INDEX</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot;&quot;</span></code>
+<div class="highlight"><pre><span></span><code><span class="s">&quot;Prénom de l&#39;individu &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="n">GLOBAL_ITERATION_INDEX</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+</code></pre></div>
 Dans les boucles liées (cf. Les Boucles) on pourra également utiliser cette variable, qui sera l'index dans la première boucle.
 On ne peut en revanche pas les utiliser hors boucle.</p>
+<div class="admonition warning">
+<p class="admonition-title">Il faut toujours mettre un texte après le cast, <code class="highlight"><span class="o">||</span><span class="w"> </span><span class="s">&quot;&quot;</span></code> !!</p>
+<p>L'exemple ci dessous ne fonctionne pas par exemple
+<div class="highlight"><pre><span></span><code><span class="s">&quot;Prénom de l&#39;individu &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="n">GLOBAL_ITERATION_INDEX</span><span class="p">,</span><span class="n">string</span><span class="p">)</span>
+</code></pre></div></p>
+</div>
 
 
 

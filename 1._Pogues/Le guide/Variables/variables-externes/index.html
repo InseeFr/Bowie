@@ -2902,7 +2902,7 @@
 <h1 id="les-variables-externes">Les variables externes</h1>
 <p>Pogues permet de référencer dans le questionnaire des variables externes, c'est à dire des variables qui sont fournies au chargement du questionnaire lors de la collecte, en provenance d'un fichier de données produit à partir de données connues et attachées à l'unité enquêtée.</p>
 <p>Si le <em>typage</em> disponible dans Pogues pour ces variables est celui disponible par ailleurs pour les variables collectées et calculées, on n'a en fait pas le choix : l'ensemble des variables externes injectées dans le questionnaire sont du <strong>texte</strong>.</p>
-<p>L'impact : si ces variables doivent être utilisées comme numériques, il faut alors <a href="../../guide/vtl.md#transtypage">les transformer</a>. Par exemple :</p>
+<p>L'impact : si ces variables doivent être utilisées comme numériques, il faut alors les transformer avec la fonction <a href="../../../Le%20VTL%20dans%20Pogues/fonctions-vtl/#cast">cast()</a>:</p>
 <div class="highlight"><pre><span></span><code><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR_EXT</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">integer</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="ajouter-des-variables-externes-de-portee-boucle">Ajouter des variables externes de portée Boucle</h2>
