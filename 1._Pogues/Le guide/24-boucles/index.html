@@ -1245,6 +1245,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#type-de-portee" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type de portée
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3026,6 +3035,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#type-de-portee" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type de portée
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3066,7 +3084,7 @@
 <h2 id="boucle-sur-valeurs">Boucle sur valeurs</h2>
 <p>Pour créer une telle boucle, il faut remplir les champs suivants :</p>
 <ul>
-<li><em>Identifiant</em>, par exemple B_LE_NOM_DE_MA_BOUCLE</li>
+<li><em>Identifiant</em>, par exemple <code class="highlight"><span class="n">B_LE_NOM_DE_MA_BOUCLE</span></code></li>
 <li><em>Minimum</em>, la valeur minimum de répétition</li>
 <li><em>Maximum</em>, la valeur maximum de répétition</li>
 <li><em>Début</em>, l'élément par lequel commence la boucle (une séquence ou une sous-séquence donc)</li>
@@ -3075,7 +3093,7 @@
 <h2 id="boucle-liee">Boucle liée</h2>
 <p>Pour créer une boucle liée, je remplis :</p>
 <ul>
-<li><em>Identifiant</em>, par exemple B_LE_NOM_DE_MA_BOUCLE</li>
+<li><em>Identifiant</em>, par exemple <code class="highlight"><span class="n">B_LE_NOM_DE_MA_BOUCLE</span></code></li>
 <li><em>Basé sur</em>, en allant chercher une structure répétée, c'est-à-dire une boucle ou un tableau</li>
 <li><em>Sauf</em>, permet d'exclure certaines répétitions de la boucle</li>
 <li><em>Début</em>, l'élément par lequel commence la boucle (une séquence ou une sous-séquence donc)</li>
@@ -3083,7 +3101,7 @@
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Un élément <strong>important</strong> des boucles liées : si je crée une boucle B2 liée à une boucle B1, toutes les variables collectées dans les occurences de B1 seront disponibles lors des répétitions de B2.</p>
+<p>Un élément <strong>important</strong> des boucles liées : si je crée une boucle <code class="highlight"><span class="n">B2</span></code> liée à une boucle <code class="highlight"><span class="n">B1</span></code>, toutes les variables collectées dans les occurences de B1 seront disponibles lors des répétitions de <code class="highlight"><span class="n">B2</span></code>.</p>
 </div>
 <h2 id="portee-des-variables-champ-niveau-de-calcul">Portée des variables (Champ "Niveau de calcul")</h2>
 <p>Les variables calculées ou externes possèdent une portée indiquée par le paramètre <strong><em>Niveau de calcul</em></strong>. A quoi cela correspond-il ?</p>
@@ -3095,11 +3113,12 @@
 <h5 id="exemple-2">Exemple 2</h5>
 <p>On veut contrôler si un individu est majeur ou non pour savoir quels questions lui poser. On va créer une variable calculée <code class="highlight"><span class="n">EST_MAJEUR</span></code> de portée <code class="highlight"><span class="n">B1</span></code> portant sur chaque valeur de <code class="highlight"><span class="n">AGE</span></code> et vérifiant si <code class="highlight"><span class="o">$</span><span class="n">AGE</span><span class="o">$</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="m">18</span></code></p>
 <p><a class="glightbox" href="../../../img/pogues/check_Is_adult.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/check_Is_adult.png" /></a></p>
+<h3 id="type-de-portee">Type de portée</h3>
 <ul>
-<li><strong>Portée Questionnaire :</strong> alors toutes les variables vecteurs seront bien considérées comme des vecteurs (liste d’élément). Il est donc possible d’effectuer des opération d’agrégation dessus (sum, count, ect)</li>
-<li><strong>Portée <Vecteur> :</strong> alors la variable calculée sera elle aussi un vecteur et la formule VTL associée portera sur toutes les occurrences du vecteur.
-    Ex : la var calculée CALC_VAR ayant pour formule VTL $CA_ENTREPRISE$ + 100 sera donc un vecteur auquel on aura ajouté 100 à chaque valeur de $CA_ENTREPRISE$.
-    <Vecteur> prend la valeur du nom d’une boucle ou d’un tableau dynamique.</li>
+<li><strong>Portée <code class="highlight"><span class="n">Questionnaire</span></code> :</strong> alors toutes les variables vecteurs seront bien considérées comme des vecteurs (liste d’élément). Il est donc possible d’effectuer des opération d’agrégation dessus (sum, count, ect)</li>
+<li><strong>Portée <code class="highlight"><span class="n">Boucle</span></code> (ou <code class="highlight"><span class="o">&lt;</span><span class="n">Vecteur</span><span class="o">&gt;</span></code>) :</strong> alors la variable calculée sera elle aussi un vecteur et la formule VTL associée portera sur toutes les occurrences du vecteur.
+    Ex : la var calculée <code class="highlight"><span class="n">CALC_VAR</span></code> ayant pour formule VTL <code class="highlight"><span class="o">$</span><span class="n">CA_ENTREPRISE</span><span class="o">$</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">100</span></code> sera donc un vecteur auquel on aura ajouté <code class="highlight"><span class="m">100</span></code> à chaque valeur de <code class="highlight"><span class="o">$</span><span class="n">CA_ENTREPRISE</span><span class="o">$</span></code>.
+    <code class="highlight"><span class="o">&lt;</span><span class="n">Vecteur</span><span class="o">&gt;</span></code> prend la valeur du nom d’une boucle ou d’un tableau dynamique.</li>
 </ul>
 <h2 id="exclusion">Exclusion</h2>
 <p>Le champ <em>Sauf</em> permet d'exclure dans une boucle liée certaines des répétitions.</p>
