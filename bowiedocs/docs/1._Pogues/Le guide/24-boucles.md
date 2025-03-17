@@ -13,7 +13,7 @@ Quel que soit son type, une boucle sera créée en cliquant dans la barre d'acti
 
 Pour créer une telle boucle, il faut remplir les champs suivants :
 
-- _Identifiant_, par exemple B_LE_NOM_DE_MA_BOUCLE
+- _Identifiant_, par exemple `B_LE_NOM_DE_MA_BOUCLE`
 - _Minimum_, la valeur minimum de répétition
 - _Maximum_, la valeur maximum de répétition
 - _Début_, l'élément par lequel commence la boucle (une séquence ou une sous-séquence donc)
@@ -23,14 +23,14 @@ Pour créer une telle boucle, il faut remplir les champs suivants :
 
 Pour créer une boucle liée, je remplis :
 
-- _Identifiant_, par exemple B_LE_NOM_DE_MA_BOUCLE
+- _Identifiant_, par exemple `B_LE_NOM_DE_MA_BOUCLE`
 - _Basé sur_, en allant chercher une structure répétée, c'est-à-dire une boucle ou un tableau
 - _Sauf_, permet d'exclure certaines répétitions de la boucle
 - _Début_, l'élément par lequel commence la boucle (une séquence ou une sous-séquence donc)
 - _Fin_, l'élément avec lequel termine la boucle - une séquence si on a commencé par une séquence, une sous-séquence dans l'autre cas.
 
 !!! tip
-    Un élément __important__ des boucles liées : si je crée une boucle B2 liée à une boucle B1, toutes les variables collectées dans les occurences de B1 seront disponibles lors des répétitions de B2.
+    Un élément __important__ des boucles liées : si je crée une boucle `B2` liée à une boucle `B1`, toutes les variables collectées dans les occurences de B1 seront disponibles lors des répétitions de `B2`.
 
 ## Portée des variables (Champ "Niveau de calcul")
 
@@ -52,11 +52,12 @@ On veut contrôler si un individu est majeur ou non pour savoir quels questions 
 
 
 
+### Type de portée
 
-- **Portée Questionnaire :** alors toutes les variables vecteurs seront bien considérées comme des vecteurs (liste d’élément). Il est donc possible d’effectuer des opération d’agrégation dessus (sum, count, ect)
-- **Portée <Vecteur> :** alors la variable calculée sera elle aussi un vecteur et la formule VTL associée portera sur toutes les occurrences du vecteur.
-    Ex : la var calculée CALC_VAR ayant pour formule VTL $CA_ENTREPRISE$ + 100 sera donc un vecteur auquel on aura ajouté 100 à chaque valeur de $CA_ENTREPRISE$.
-    <Vecteur> prend la valeur du nom d’une boucle ou d’un tableau dynamique.
+- **Portée `Questionnaire` :** alors toutes les variables vecteurs seront bien considérées comme des vecteurs (liste d’élément). Il est donc possible d’effectuer des opération d’agrégation dessus (sum, count, ect)
+- **Portée `Boucle` (ou `<Vecteur>`) :** alors la variable calculée sera elle aussi un vecteur et la formule VTL associée portera sur toutes les occurrences du vecteur.
+    Ex : la var calculée `CALC_VAR` ayant pour formule VTL `$CA_ENTREPRISE$ + 100` sera donc un vecteur auquel on aura ajouté `100` à chaque valeur de `$CA_ENTREPRISE$`.
+    `<Vecteur>` prend la valeur du nom d’une boucle ou d’un tableau dynamique.
 
 ## Exclusion
 
@@ -64,7 +65,7 @@ Le champ _Sauf_ permet d'exclure dans une boucle liée certaines des répétitio
 
 En reprenant l'exmple du paragraphe précédent, on pourrait par exemple exclure les mineurs avec la formule VTL :
 
-```vtl
+```
 AGE < 18
 ```
 
