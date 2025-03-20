@@ -51,3 +51,21 @@ _TODO_
 ### Utiliser une liste de code dans un questionnaire 
 _TODO_
 
+#### Ajouter un "Autre préciser"
+
+Pour ajouter un [Complément textuel "Autre"](14b-autre-precisez.md), il suffit de cliquer sur le bouton `Ajouter un "Préciser"` puis d'indiquer son contenu dans le champ VTL `Libellé` qui est apparut.
+
+![list-code-preciser](../../img/pogues/list-code-preciser.png)
+> Le champ `Identifiant` est généré automatiquement. Pas besoin d'y toucher
+
+Pour éditer un `Préciser` il suffit de cliquer sur le bouton d'édition
+![list-code-preciser](../../img/pogues/list-code-preciser-edition.png)
+
+!!! note 
+    Cet information n'est pas associée à la liste de code en elle même mais bien à la **question qui utilise cette liste de code**.
+    Ainsi pour une même liste de code on peut avoir différent `Préciser` définis dans différentes questions.
+
+
+!!! warning "Un seul `Préciser` par liste de code associé à une question"
+
+!!! tip "Pour plus de détails, voir [Complément textuel "Autre"](14b-autre-precisez.md)."
