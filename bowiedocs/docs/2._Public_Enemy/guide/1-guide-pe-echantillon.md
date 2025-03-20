@@ -40,7 +40,7 @@ On peut remplir les données à partir de ce fichier schéma :
         ```
 
 !!! warning "Type des variables externes"
-    - Toutes les variables externes sont importées avec en tant que texte (= type `string`). **il faut donc bien penser à utiliser la fonction de [cast()](../../1._Pogues/Le%20VTL%20dans%20Pogues/fonctions-vtl.md/#cast) au besoin**  
+    - Toutes les variables externes sont importées avec en tant que texte (= type `string`). **il faut donc bien penser à utiliser la fonction de [cast()](../../1._Pogues/💻_VTL/fonctions-vtl.md/#cast) au besoin**  
 
 !!!warning "Maximum 10 UE"
 
