@@ -1,33 +1,53 @@
-# Spécifier la liste de codes
+# Spécifier une liste de codes (New ✨)
 
-On peut mobliliser ces listes de 3 manières  :
+On accède aux différentes listes de codes via le bouton sur la gauche
+![list code menu button](../../img/pogues/list-code-menu.png)
 
-### Créer une nouvelle liste de codes :
-  - donner un nom à la nouvelle liste de codes
-  - saisir pour chaque modalité de réponse, le code de la modalité et son libellé (via le bouton "Ajouter un Code")
-*ou* 
-  - "importer une liste de codes" via un fichier csv en utf8 (voir plus bas)
+On arrive ensuite sur la page de gestion des listes de codes du questionnaire
 
-### Retrouver dans le questionnaire 
-- propose les listes de codes précédemment créées pour le questionnaire
+![list code home](../../img/pogues/list-code-home.png)
+!!! abstract "Légende"
+    1. `Identifiant` du questionnaire
+    1. `Bouton de création` d'une nouvelle liste de codes
+    1. `Nom` d'une liste de code
+    1. Colonne associée au `Code` des différentes modalités
+    1. Colonne associée au `Libellé` des différentes modalités
+    1. Une `Modalité` avec ses valeurs associés (`Code` et `Libellé`)
 
-### Retrouver dans le référentiel (non fonctionnel à ce jour)
-- proposera les listes de codes précédemment créées pour l'ensemble des questionnaires publiés dans RMéS depuis Pogues
 
-A noter la possibilité de dupliquer une liste de codes pour en créer une variante en cochant la case dédiée. Le titre de la liste initiale sera suffixé par _2 dans un premier temps pour la liste issue de la duplication puis sera modifiable par vos soins dans Pogues.
+### Créer une nouvelle liste de codes
 
-## Chargement à partir d'un fichier CSV
+Après avoir appuyer sur le bouton de création d'une nouvelle liste de codes, la page suivante s'affiche
 
-On peut charger une liste de code à partir d'un fichier CSV.
+![list code creation](../../img/pogues/list-code-creation.png)
+!!! abstract "Légende"
+    1. `Nom` de la liste de code
+    1. Une `Modalité`
+        1. `Code` de la modalité avec un champ texte
+        1. `Libellé` de la modalité avec un éditeur `VTL`
+        1. `Ajouter` une `Modalité` **enfant** (voir [gestion des niveaux](#gestion-des-niveaux))
+        2. `Supprimer` une `Modalité`
+    1. `Ajouter` une nouvelle `Modalité`
+    1. `Créer` (ou `Annuler`) la liste de code 
 
-Le fichier lui-même doit avoir les entêtes de colonnes :
+!!! warning "Champs requis"
+    Pour créer une liste de code, il faut au moins
+    
+    - Un nom
+    - Une modalité avec un code et un libellé (la formule VTL associée doit être valide)  
 
-- Parent : "1" ou "2" pour préciser le niveau d'arborescence
-- Value : le code de l'item de liste
-- Label : le libellé de l'item de liste
+#### Gestion des niveaux
 
-Par exemple :point_down:
+_TODO_
 
-![Exemple de structure CSV](../../img/pogues/pogues-guide-liste-csv.png)
+### Éditer une nouvelle liste de codes
 
-Pour le chargement lui-même, il faut utiliser le bouton "Import d'une liste de codes" au moment de la création de la liste dans Pogues, puis sélectionner le fichier CSV.
+_TODO_
+
+### Supprimer une nouvelle liste de codes
+
+_TODO_
+
+### Utiliser une liste de code dans un questionnaire 
+_TODO_
+
