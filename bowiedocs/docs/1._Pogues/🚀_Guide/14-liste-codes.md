@@ -1,7 +1,7 @@
 # Spécifier une liste de codes (New ✨)
 
 On accède aux différentes listes de codes via le bouton sur la gauche
-![list code menu button](../../img/pogues/list-code-menu.png)
+![alt text](image-11.png)
 
 On arrive ensuite sur la page de gestion des listes de codes du questionnaire
 
@@ -23,10 +23,10 @@ Après avoir appuyer sur le bouton de création d'une nouvelle liste de codes, l
 !!! abstract "Légende"
     1. `Nom` de la liste de code
     1. Une `Modalité`
-        1. `Code` de la modalité avec un champ texte
-        1. `Libellé` de la modalité avec un éditeur `VTL`
-        1. `Ajouter` une `Modalité` **enfant** (voir [gestion des niveaux](#gestion-des-niveaux))
-        2. `Supprimer` une `Modalité`
+        - `Code` de la modalité avec un champ texte
+        - `Libellé` de la modalité avec un éditeur `VTL`
+        - `Ajouter` une `Modalité` **enfant** (voir [gestion des niveaux](#gestion-des-niveaux))
+        - `Supprimer` une `Modalité`
     1. `Ajouter` une nouvelle `Modalité`
     1. `Créer` (ou `Annuler`) la liste de codes 
 
