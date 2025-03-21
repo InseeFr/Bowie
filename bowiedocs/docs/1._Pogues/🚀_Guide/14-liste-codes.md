@@ -80,7 +80,8 @@ On peut ensuite, sur une liste de codes déjà existante, exécuter les actions 
 - `Modifier` : Accède à la page de modification de liste de codes
 - `Dupliquer` : Crée une copie de la liste de code et l'ajoute en bas de la liste
 - `Supprimer` : Supprime la liste de codes.
-    !!! warning "Liste de code utilisée dans une question"
+
+    !!! warning "Supprimer une liste de code utilisée dans une question"
         On ne peut pas supprimer une liste de code utilisée par des questions. La liste des questions concernées sont alors affichées dans une pop-up
 
 ### Utiliser une liste de codes dans un questionnaire 
