@@ -38,7 +38,9 @@ Après avoir appuyé sur le bouton de création d'une nouvelle liste de codes, l
 
 #### Gestion des niveaux
 
-Il est possible d'avoir plusieurs niveaux de modalités dans une même liste de code
+Il est possible d'avoir plusieurs niveaux de modalités dans une même liste de codes
+
+!!! danger "Les niveaux ne sont supportés que pour les tableaux et les QCM avec une liste de codes pour réponse (pas booléen)"
 
 !!! tip "Ajouter des modalité "enfant""
     === "Liste initiale" 
