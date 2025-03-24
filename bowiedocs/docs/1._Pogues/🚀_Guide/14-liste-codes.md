@@ -1,7 +1,7 @@
 # Spécifier une liste de codes (New ✨)
 
 On accède aux différentes listes de codes via le bouton sur la gauche
-![alt text](image-11.png)
+![alt text](../../img/pogues/list-code-menu.png)
 
 On arrive ensuite sur la page de gestion des listes de codes du questionnaire
 
@@ -45,33 +45,33 @@ Il est possible d'avoir plusieurs niveaux de modalités dans une même liste de 
 !!! tip "Ajouter des modalité "enfant""
     === "Liste initiale" 
         Quand on clique sur le :octicons-plus-24: à droite de la modalité, cela ajoute une nouvelle modalité enfant.
-        ![alt text](image-1.png)
+        ![alt text](../../img/pogues/list-code-level-init.png)
     === "Ajouter un enfant"
-        ![alt text](image-2.png)
+        ![alt text](../../img/pogues/list-code-level-add-child.png)
     === "Ajouter un 2ème enfant"
         Si on clique encore sur ce même :octicons-plus-24: cela rajoute une deuxième modalité enfant
-        ![alt text](image-3.png)
+        ![alt text](../../img/pogues/list-code-level-add-second-child.png)
     === "Ajouter un petit-enfant"
         En cliquant sur le :octicons-plus-24: de l'enfant on peut aller plus loin dans les niveau et avoir un enfant de l'enfant
-        ![alt text](image-4.png)
+        ![alt text](../../img/pogues/list-code-level-add-grand-child.png)
 
 !!! tip "Changer l'ordre des modalités"
     === "Ordre initial"
         On peut facilement changer l'ordre des modalités ou en supprimer
-        ![alt text](image-5.png)
+        ![alt text](../../img/pogues/list-code-level-init-order.png)
     === "Changer l'ordre"
-        ![alt text](image-6.png)
+        ![alt text](../../img/pogues/list-code-level-changed-order.png)
 
 !!! tip "Supprimer une modalité avec des enfants"
     === "Liste initiale"
         Quand on clique sur l'icone :octicons-trash-24: à droite de la modalité, cela la modalité parent avec tous ses enfants.
-        ![alt text](image-7.png)
+        ![alt text](../../img/pogues/list-code-level-init-before-delete.png)
     === "Parent 1 supprimé"
-        ![alt text](image-8.png)
+        ![alt text](../../img/pogues/list-code-level-parent-deleted.png)
 
 
 ??? exemple "Exemple complet"
-    ![alt text](image.png)
+    ![alt text](../../img/pogues/list-code-level-complete-exemple.png)
 
 
 ### Éditer une nouvelle liste de codes
@@ -85,13 +85,14 @@ On peut ensuite, sur une liste de codes déjà existante, exécuter les actions 
 
     !!! warning "Supprimer une liste de code utilisée dans une question"
         On ne peut pas supprimer une liste de code utilisée par des questions. La liste des questions concernées sont alors affichées dans une pop-up
+        ![delete list code](../../img/pogues/delete_used_code_list.png)
 
 ### Utiliser une liste de codes dans un questionnaire 
 Lors de la création d'une question avec réponse à choix unique ou multiple, on peut sélectionner la liste de codes à associer avec le champ `Choisir une liste de codes*`
 === "Choisir une liste de codes"
-    ![alt text](image-9.png)
+    ![alt text](../../img/pogues/list-code-chose-in-pogues.png)
 === "Liste de codes sélectionnée"
-    ![alt text](image-10.png)
+    ![alt text](../../img/pogues/list-code-selected.png)
 
 #### "Autre préciser"
 
