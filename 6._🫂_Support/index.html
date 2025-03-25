@@ -3064,26 +3064,26 @@ Si on veut faire un contrôle sur la somme des salaires, il faut d'abord <strong
 </table>
 </details>
 <h2 id="recherche-sur-liste-ko-en-visualisation"><strong>Recherche sur liste KO en visualisation</strong></h2>
-<p>La recherche sur liste (suggester) peut mal être chargé lors d'une visualisation. On a alors le message suivant <code class="highlight"><span class="n">Erreur</span><span class="w"> </span><span class="n">lors</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">chargement</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">liste</span></code>
+<p>La nomenclature sélectionnée pour une recherche sur liste (suggester) peut mal être chargée lors d'une visualisation. On a alors un message <code class="highlight"><span class="n">Erreur</span><span class="w"> </span><span class="n">lors</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">chargement</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">liste</span></code>.
 <a class="glightbox" href="../img/pogues/suggester-error-loading.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../img/pogues/suggester-error-loading.png" /></a></p>
-<p>Dans ce cas, il s'agit d'un conflit entre plusieurs questions qui ont chargés des versions différentes de la nomenclature (Ex: Pays du millésime de 2023 et celle du millésime de 2024)</p>
+<p>Dans ce cas, il s'agit d'un conflit entre plusieurs questions qui ont été créées avec des versions différentes de la nomenclature (Ex: Pays du millésime de 2023 et celle du millésime de 2024).</p>
 <details class="example" open="open">
 <summary>Cas concret</summary>
 <ol>
-<li>On définit, dans un questionnaire <code class="highlight"><span class="n">X</span></code>, une question <code class="highlight"><span class="n">T_PAYP</span></code> sur le pays d'origine du père dans Pogues, fin décembre 2023 en utilisant la nomenclature <code class="highlight"><span class="n">PAYS</span></code> disponible dans l'application.
+<li>On définit, dans un questionnaire <code class="highlight"><span class="n">X</span></code>, une question <code class="highlight"><span class="n">T_PAYP</span></code> sur le pays d'origine du père dans Pogues, fin décembre 2023 en utilisant la nomenclature <code class="highlight"><span class="n">PAYS</span></code>.
 <a class="glightbox" href="../img/pogues/suggester-pays-selected.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../img/pogues/suggester-pays-selected.png" /></a><blockquote>
 <p>Ici "Pays" va être associé à la nomenclature <code class="highlight"><span class="n">PAYS</span></code> du millésime 2023. <code class="highlight"><span class="n">PAYS_2023</span></code></p>
 </blockquote>
 </li>
-<li>En début d'année 2024, la nomenclature <code class="highlight"><span class="n">PAYS</span></code> pour le millésime 2024, <code class="highlight"><span class="n">PAYS_2024</span></code> est publiée et est intégrée dans Pogues.</li>
-<li>Après cela, on rédige une nouvelle question <code class="highlight"><span class="n">T_PAYM</span></code> sur le pays d'origine de la mère. Quand on va sélectionner "Pays" dans Pogues, ce dernier sera lié à <strong>la nomenclature la plus récente disponible</strong>, c'est à dire, <code class="highlight"><span class="n">PAYS_2024</span></code>.</li>
+<li>En début d'année 2024, la nomenclature <code class="highlight"><span class="n">PAYS</span></code> pour le millésime 2024, <code class="highlight"><span class="n">PAYS_2024</span></code> est publiée et intégrée dans Pogues.</li>
+<li>Après cela, on crée une nouvelle question <code class="highlight"><span class="n">T_PAYM</span></code> sur le pays d'origine de la mère. Quand on va sélectionner "Pays" dans Pogues, ce dernier sera lié à <strong>la nomenclature la plus récente disponible</strong>, c'est à dire, <code class="highlight"><span class="n">PAYS_2024</span></code>.</li>
 </ol>
 <p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> Quand on va vouloir visualiser, on va avoir un conflit dans les nomenclatures chargées et Pogues va prendre l'une des deux (imaginons pour l'exemple que c'est <code class="highlight"><span class="n">PAYS_2024</span></code>). De ce fait quand on arrivera sur la question <code class="highlight"><span class="n">T_PAYP</span></code>, la recherche sur liste semblera être indisponible car il ne trouvera pas <code class="highlight"><span class="n">PAYS_2023</span></code> mais pour <code class="highlight"><span class="n">T_PAYM</span></code> elle sera bien chargée.</p>
 </details>
 <div class="admonition tip">
 <p class="admonition-title">Solution</p>
-<p>Recharger depuis Pogues les suggesters concernées pour qu'ils aient tous la dernière version de la nomenclature. </p>
-<p>Si on reprend notre exemple décrit dans le "Cas concret", il suffit d'aller sur <code class="highlight"><span class="n">T_PAYP</span></code> et de resélectionner "Pays".
+<p>Retourner sur la question avec la nomenclature de l'ancien millésime et recharger depuis Pogues les suggesters concernés pour qu'ils aient tous la dernière version de la nomenclature. </p>
+<p>Si on reprend notre exemple décrit dans le "Cas concret", il suffit d'aller sur <code class="highlight"><span class="n">T_PAYP</span></code> et de resélectionner la liste "Pays".
 <a class="glightbox" href="../img/pogues/suggester-select-pays.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../img/pogues/suggester-select-pays.png" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Remarque</p>
