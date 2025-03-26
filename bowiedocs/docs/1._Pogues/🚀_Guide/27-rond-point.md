@@ -20,7 +20,7 @@ Pour ajouter un comportement de type _Rond-point_ dans Pogues:
 2. dans la fenêtre modale qui s'ouvre, on donne un libellé et un identifiant (_NB_ le libellé sera affiché comme titre dans le questionnaire web)
 3. l'onglet _Boucle_ va permettre de décrire ce qu'on propose à la réponse via le Rond-point, le fonctionnement est similaire à celui d'une boucle simple :point_down:
 4. on donne un identifiant,
-5. on définit [la boucle principale](24-boucles.md#boucle-liée) qu'on exploite
+5. on définit [la boucle principale](24-boucles.md#boucle-liee) qu'on exploite
 6. on peut ajouter dans _Sauf_ une formule pour exclure du questionnement - par exemple `$AGE$ < 18` pour exclure les mineurs (cf. plus bas)
 7. les champs _Début_ et _Fin_ permettre de préciser quelles parties questionnaires sont à remplir à travers le Rond-point
 8. _Libellé identifiant une occurrence_ permet d'afficher par exemple le prénom de l'habitant qui va répondre à un questionnaire individuel

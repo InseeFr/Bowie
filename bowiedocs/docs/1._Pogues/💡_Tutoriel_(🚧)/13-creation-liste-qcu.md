@@ -26,4 +26,4 @@ Sous le champ _Nouvelle liste de code_ on trouve les modalités de la liste. Pou
 
 ## Finalisation
 
-Nous avons modifié le format de la réponse, il est donc nécessaire [de générer une nouvelle fois la variable sous-jacente](../2-creation-premiere-sequence/#creation-de-la-variable) qui a changé de nature.
+Nous avons modifié le format de la réponse, il est donc nécessaire [de générer une nouvelle fois la variable sous-jacente](11-creation-premiere-sequence.md/#creation-de-la-variable) qui a changé de nature.

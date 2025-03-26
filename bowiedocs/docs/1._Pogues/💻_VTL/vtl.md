@@ -62,7 +62,7 @@ Un chiffre avec décimales :
 
 Voici un exemple de syntaxe pour un libellé personnalisé :
 
-![Libellé personnalisé](../..//img/vtl/vtl-in-pogues-custom-label.png 'Libellé personnalisé')
+![Libellé personnalisé](../../img/vtl/vtl-in-pogues-custom-label.png 'Libellé personnalisé')
 
 On utilise ici l’opérateur VTL `||` qui permet de concaténer des chaînes de caractères, ou une chaîne de caractères et une variable (ici `NOM`).
 
@@ -74,7 +74,7 @@ On utilise ici l’opérateur VTL `||` qui permet de concaténer des chaînes de
 
     Dans l’exemple précédent, on ne gère pas le cas où la variable n’a pas été remplie. Pour anticiper ce cas, on peut utiliser la fonction VTL `nvl`, le libellé personnalisé devient ainsi :
     
-    ![Fonction nvl](/Bowie/img/vtl/vtl-in-pogues-custom-label-nvl.png 'Fonction nvl')_Libellé personnalisé avec gestion de la nullité_
+    ![Fonction nvl](../../img/vtl/vtl-in-pogues-custom-label-nvl.png 'Fonction nvl')_Libellé personnalisé avec gestion de la nullité_
 
     Plus d’infos sur l’usage de `nvl` plus bas.
 

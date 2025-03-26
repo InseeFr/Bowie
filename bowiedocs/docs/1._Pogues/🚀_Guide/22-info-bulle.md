@@ -8,14 +8,14 @@ Elles doivent être concises et ne pas contenir d’informations cruciales à la
 
 !!! example "Exemple"
     ```
-    \"Ceci est une question avec une [précision](. "une infobulle sur précision") avec infobulle sur le mot précision"\
+    "Ceci est une question avec une [précision](. "une infobulle sur précision") avec infobulle sur le mot précision"
     ```
-    ce qui done <br>
+    ce qui done : <br>
 
-    \"Ceci est une question avec une [précision](. "une infobulle sur précision") avec infobulle sur le mot précision"\
+    Ceci est une question avec une [précision](. "une infobulle sur précision") avec infobulle sur le mot précision
 
 
-Plus de détails dans [le tutoriel](../💡_Tutoriel_(🚧)/22-ajout-infobulle.md)
+Plus de détails dans [le tutoriel](../%F0%9F%92%A1_Tutoriel_%28%F0%9F%9A%A7%29/22-ajout-infobulle.md)
 
 !!! warning "Incompatibilité"
     Les infobulles ne fonctionnent pas quand on a des parenthèses dans l'infobulle

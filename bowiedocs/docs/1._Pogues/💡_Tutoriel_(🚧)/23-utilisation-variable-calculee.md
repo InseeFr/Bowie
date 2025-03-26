@@ -41,7 +41,7 @@ Notre variable aura comme identifiant `SOMME`, et aura comme valeur l'addition d
 
 ## Utilisation de la variable
 
-On peut maintenant ajouter un contrôle sur la question `ACTIVITES` pour s'assurer que la ventilation est égale à 100%. Vous pouvez pour cela vous appuyer sur ce que l'on a vu [précédemment](21-ajout-controle.md) et sur le [guide VTL](../💻_VTL/)... Pour les plus pressés d'entre vous, vous pouvez regarder la solution ci-dessous. :smiley:
+On peut maintenant ajouter un contrôle sur la question `ACTIVITES` pour s'assurer que la ventilation est égale à 100%. Vous pouvez pour cela vous appuyer sur ce que l'on a vu [précédemment](21-ajout-controle.md) et sur le [guide VTL](../💻_VTL/index.md)... Pour les plus pressés d'entre vous, vous pouvez regarder la solution ci-dessous. :smiley:
 
 ??? example "Solution"
 

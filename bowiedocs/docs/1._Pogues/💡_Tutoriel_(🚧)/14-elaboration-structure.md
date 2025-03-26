@@ -1,6 +1,6 @@
 # Élaboration de la structure du questionnaire
 
-Nous poursuivons la construction du questionnaire avec une nouvelle séquence [comme précédemment](../2-creation-premiere-sequence/#creation-de-la-sequence) dont :
+Nous poursuivons la construction du questionnaire avec une nouvelle séquence [comme précédemment](11-creation-premiere-sequence.md/#creation-de-la-sequence) dont :
 
 - le libellé est "En savoir plus sur vous",
 - l'identifiant est "MODULE2".

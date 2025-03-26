@@ -57,7 +57,7 @@
 
 ??? example "Exemple d'utilisation"
     === "Champ texte vide"
-        Tester si un champ texte, `PRENOM` est vide ou non. _Voir [la note des réponses de type texte](../Le%20guide/13-reponse-simple.md/#type-de-reponse-texte)_
+        Tester si un champ texte, `PRENOM` est vide ou non. _Voir [la note des réponses de type texte](../🚀_Guide/13-reponse-simple.md/#type-de-reponse-texte)_
         ```
         nvl($PRENOM$, "") = ""
         ```
@@ -72,7 +72,7 @@
             ```
             $CA$ > 24 000
             ```
-            Si l'enquêté ne répond rien à `CA`, alors la filtre va être évalué avec `null > 24 000` ce qui renvoie une erreur et donc on affiche la question dans tous les cas (voir [comportement filtre](../../6._🫂_Support/index.md/#affichage-à-tort-de-questions-filtrées) pour plus de détails). Or on aurait aimé que si l'enquêté ne réponde rien ce soit comme si il avait un `CA` de `0`.
+            Si l'enquêté ne répond rien à `CA`, alors la filtre va être évalué avec `null > 24 000` ce qui renvoie une erreur et donc on affiche la question dans tous les cas (voir [comportement filtre](../../6._🫂_Support/index.md/#affichage-a-tort-de-questions-filtrees) pour plus de détails). Or on aurait aimé que si l'enquêté ne réponde rien ce soit comme si il avait un `CA` de `0`.
         === "Condition implicite :white_check_mark:"
             ```
             nvl($CA$, 0) >  24 000
@@ -164,7 +164,7 @@
         ```
         Renvoie `true` si la variable externe est inférieur à `25` et `false` sinon.
     === "Comparaison de date"
-        Quand on définit une variable de type date, on collecte en réalité un texte sous un format précis (`AAAA`, `AAAA-MM`, `AAAA-MM-JJ`). Voir [Type de réponse Date](../Le%20guide/13-reponse-simple.md/#type-de-reponse-date). <br>
+        Quand on définit une variable de type date, on collecte en réalité un texte sous un format précis (`AAAA`, `AAAA-MM`, `AAAA-MM-JJ`). Voir [Type de réponse Date](../🚀_Guide/13-reponse-simple.md/#type-de-reponse-date). <br>
         Or on ne peut comparer deux textes en terme de supériorité ou infériorité numérique. 
 
         > Si on fait `"1986-01" > "1987-02"`, la moteur VTL ne saura pas comment les interpréter pour la comparaison.

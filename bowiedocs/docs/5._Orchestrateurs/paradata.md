@@ -2,7 +2,7 @@
 
 Les [paradonnées](https://en.wikipedia.org/wiki/Paradata) forment un ensemble d'informations relatives à la manière dont le questionnaire a été rempli. Elles permettent d'améliorer la compréhension des usages des répondants et de la manière dont ils répondent aux questions.
 
-Actuellement la collecte de paradonnées n'est effectuée que sur les questionnaires autoadministrés sur le web (dans [Stromae](../web/) donc).
+Actuellement la collecte de paradonnées n'est effectuée que sur les questionnaires autoadministrés sur le web (dans [Stromae](Stromae-DSFR/index.md) donc).
 
 L'offre de service actuelle, qui correspond aux paradonnées de type _orchestrateur_, permet de collecter :
 

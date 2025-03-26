@@ -2,7 +2,7 @@
 
 !!!note
 
-    À partir de cette section, il est utile de s'être familiarisé avec VTL en parcourant [le guide dédié](../💻_VTL/) et le consultant régulièrement.
+    À partir de cette section, il est utile de s'être familiarisé avec VTL en parcourant [le guide dédié](../💻_VTL/index.md) et le consultant régulièrement.
 
 L'utilisation de filtres permet de déterminer l'affichage (ou non) d'une ou plusieurs séquences, sous-séquences ou questions.
 
@@ -15,7 +15,7 @@ Pour créer un filtre, il suffit de cliquer sur le bouton "+ Filtre" dans la bar
 - _Début_ : détermine où commence la couverture du filtre
 - _Fin_ : détermine où termine la couverture du filtre.
 
-Le cas d'usage dans le cadre de ce tutoriel est l'affichage des modules (ou séquences) qui suivent la première question (["Souhaitez-vous répondre à ce questionnaire ?"](11-creation-premiere-sequence.md#création-dune-question)). On veut donc s'assurer que la variable associée à cette question (`OKREP`) à la bonne valeur (`"1"` ici qui est le code associé à la modalité "Oui").
+Le cas d'usage dans le cadre de ce tutoriel est l'affichage des modules (ou séquences) qui suivent la première question (["Souhaitez-vous répondre à ce questionnaire ?"](11-creation-premiere-sequence.md/#creation-dune-question)). On veut donc s'assurer que la variable associée à cette question (`OKREP`) à la bonne valeur (`"1"` ici qui est le code associé à la modalité "Oui").
 
 Notre condition d'affichage est donc :
 
