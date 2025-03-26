@@ -19,7 +19,7 @@ Les modifications commitées sont automatiquement publiées.
 
 Il est nécessaire de mettre en place certains outils pour visualiser le site avant la génération, et pour la génération elle-même.
 
-#### Sur son poste
+#### 🖥️ Sur son poste 
 
 A minima sont nécessaires :
 
@@ -27,24 +27,36 @@ A minima sont nécessaires :
 - l'installation des dépendances à MkDocs
   - pour ce dernier point, on utilise ici Poetry
 
-Une fois poetry installé, il suffit de lancer la commande `poetry install` à la racine du projet.
+Une fois poetry installé, il suffit de lancer la commande suivante à la racine du projet.
+```bash
+poetry install
+```
 
-#### Sur le datalab
+#### [Recommandé] 🐉 Sur le datalab (Onixia)
 
 Lancer un environnement pré-configuré sur le datalab [en cliquant sur ce lien](https://datalab.sspcloud.fr/launcher/ide/vscode-python?autoLaunch=false&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2FInseeFr%2FBowie%2Fpages%2Finit.sh%C2%BB).
 
-Une fois dans VSCode:
 
-- ouvrir un terminal (F1 > Terminal: Create new)
+Une fois dans VSCode: 
+- ouvrir un terminal (Appuyer sur `F1`, puis `Terminal: Create new`)
 - coller `export PATH="/home/onyxia/.local/bin:$PATH"` puis entrée
 
-#### Utiliser MkDocs
+[Recommandé] Ou alors utiliser le script de préconfiguraiton
+- Depuis la préconfiguration, aller dans `Init` puis rajouter dans PersonalInit l'ardesse https://raw.githubusercontent.com/InseeFr/Bowie/pages/init.sh
+- Ajouter vos identifiants pour GitHub : Name, Email et Token (voir [manage personal token on GitHub](https://docs.github.com/fr/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens))
+
+
+### Utiliser MkDocs
 
 Une fois tout bien configuré en suivant une des méthodes précédentes, vous pouvez commencer à travailler sur le site (cf. la documentation donnée au paragraphe "Contribuer" plus haut.)
 
-Pour visualiser les changements apportés, il faut (toujours dans un terminal) lancer la commande suivante à la racine du dossier de base `Bowie`:
+> [!NOTE]
+> Pour visualiser les changements apportés, il faut (toujours dans un terminal) lancer la commande suivante à la racine du dossier de base `Bowie`.
+> Un simple `cd Bowie/` depuis work suffit à se placer à la racine
 
-`bash serve.sh`
+```bash
+bash serve.sh
+```
 
 qui va lancer un serveur local permettant de voir le fonctionnement du site.
 
@@ -54,13 +66,26 @@ Pour publier les changements (après avoir bien sûr commité les changements da
 
 Pour ça, il suffit de se placer à la racine du dossier `Bowie` puis de lancer la commande suivante:
 
-`bash build.sh`
+
+```bash
+bash build.sh
+```
 
 Le script va produire un nouveau dossier `docs` à la racine qui contient le nouveau site généré.
 
 On peut ensuite commiter et pousser les changements
 
-- `git add *` pour ajouter les fichiers modifiés, ce qui inclut les fichiers HTML générés,
-- les classiques `git commit -m "Votre message de commit"` puis `git push`.
+- Ajouter les fichiers modifiés, ce qui inclut les fichiers HTML générés,
+  ```bash
+  git add *
+  ```
+- Commit les changements avec un message
+  ```bash
+  git commit -m "Votre message de commit"
+  ```
+- Envoyer les changements sur le repository (pour voir les changement sur https://inseefr.github.io/Bowie/)
+  ```bash
+  git push
+  ```
 
 La publication des nouveautés sur le site se fait ensuite automatiquement via GitHub Pages (configuré sur le repo de Bowie).
