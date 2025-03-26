@@ -1,5 +1,6 @@
 # Spécifier une liste de codes (New ✨)
 
+## Accès aux listes de codes
 On accède aux différentes listes de codes via le bouton sur la gauche
 ![alt text](../../img/pogues/list-code-menu.png)
 
@@ -14,6 +15,9 @@ On arrive ensuite sur la page de gestion des listes de codes du questionnaire
     1. Colonne associée au `Libellé` des différentes modalités
     1. Une `Modalité` avec ses valeurs associées (`Code` et `Libellé`)
 
+## Gérer les listes de codes
+
+!!! warning "Toute modification/création/suppression d'une liste de codes va automatiquement créer une nouvelle version du questionnaire"
 
 ### Créer une nouvelle liste de codes
 
