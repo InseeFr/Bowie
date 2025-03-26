@@ -2937,7 +2937,7 @@
 <h1 id="mise-en-place-dun-filtre">Mise en place d'un filtre</h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>À partir de cette section, il est utile de s'être familiarisé avec VTL en parcourant <a href="../💻_VTL/">le guide dédié</a> et le consultant régulièrement.</p>
+<p>À partir de cette section, il est utile de s'être familiarisé avec VTL en parcourant <a href="../../%F0%9F%92%BB_VTL/">le guide dédié</a> et le consultant régulièrement.</p>
 </div>
 <p>L'utilisation de filtres permet de déterminer l'affichage (ou non) d'une ou plusieurs séquences, sous-séquences ou questions.</p>
 <p>Pour cela, nous allons nous appuyer sur la fonctionnalité "Filtre" de Pogues mais aussi sur le langage VTL pour l'expression de la condition.</p>
@@ -2948,7 +2948,7 @@
 <li><em>Début</em> : détermine où commence la couverture du filtre</li>
 <li><em>Fin</em> : détermine où termine la couverture du filtre.</li>
 </ul>
-<p>Le cas d'usage dans le cadre de ce tutoriel est l'affichage des modules (ou séquences) qui suivent la première question (<a href="../11-creation-premiere-sequence/#création-dune-question">"Souhaitez-vous répondre à ce questionnaire ?"</a>). On veut donc s'assurer que la variable associée à cette question (<code class="highlight"><span class="n">OKREP</span></code>) à la bonne valeur (<code class="highlight"><span class="s">&quot;1&quot;</span></code> ici qui est le code associé à la modalité "Oui").</p>
+<p>Le cas d'usage dans le cadre de ce tutoriel est l'affichage des modules (ou séquences) qui suivent la première question (<a href="../11-creation-premiere-sequence/#creation-dune-question">"Souhaitez-vous répondre à ce questionnaire ?"</a>). On veut donc s'assurer que la variable associée à cette question (<code class="highlight"><span class="n">OKREP</span></code>) à la bonne valeur (<code class="highlight"><span class="s">&quot;1&quot;</span></code> ici qui est le code associé à la modalité "Oui").</p>
 <p>Notre condition d'affichage est donc :</p>
 <div class="highlight"><pre><span></span><code><span class="n">```vtl</span>
 <span class="n">$OKREP$ = &quot;1&quot;</span>
