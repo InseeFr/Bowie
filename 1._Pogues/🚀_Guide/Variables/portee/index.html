@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%92%A1_Tutoriel_%28%F0%9F%9A%A7%29/16-creation-qcm/">
+        <link rel="canonical" href="https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/Variables/portee/">
       
       
-        <link rel="prev" href="../15-creation-tableau/">
+        <link rel="prev" href="../nommage/">
       
       
-        <link rel="next" href="../17-finalisation-structure/">
+        <link rel="next" href="../variables-calculees/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
-        <title>Création d'une question à choix multiples - Atelier de Conception d'Enquêtes (Bowie)</title>
+        <title>Portée des variables - Atelier de Conception d'Enquêtes (Bowie)</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,14 +48,14 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -64,7 +64,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creation-dune-question-a-choix-multiples" class="md-skip">
+        <a href="#portee-des-variables" class="md-skip">
           Aller au contenu
         </a>
       
@@ -97,7 +97,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../../.." title="Atelier de Conception d&#39;Enquêtes (Bowie)" class="md-header__button md-logo" aria-label="Atelier de Conception d'Enquêtes (Bowie)" data-md-component="logo">
+    <a href="../../../.." title="Atelier de Conception d&#39;Enquêtes (Bowie)" class="md-header__button md-logo" aria-label="Atelier de Conception d'Enquêtes (Bowie)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.5 20 4.86-9.73H13V4l-5 9.73h3.5V20M12 2c2.75 0 5.1 1 7.05 2.95C21 6.9 22 9.25 22 12s-1 5.1-2.95 7.05C17.1 21 14.75 22 12 22s-5.1-1-7.05-2.95C3 17.1 2 14.75 2 12s1-5.1 2.95-7.05C6.9 3 9.25 2 12 2Z"/></svg>
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Création d'une question à choix multiples
+              Portée des variables
             
           </span>
         </div>
@@ -192,7 +192,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Atelier de Conception d&#39;Enquêtes (Bowie)" class="md-nav__button md-logo" aria-label="Atelier de Conception d'Enquêtes (Bowie)" data-md-component="logo">
+    <a href="../../../.." title="Atelier de Conception d&#39;Enquêtes (Bowie)" class="md-nav__button md-logo" aria-label="Atelier de Conception d'Enquêtes (Bowie)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.5 20 4.86-9.73H13V4l-5 9.73h3.5V20M12 2c2.75 0 5.1 1 7.05 2.95C21 6.9 22 9.25 22 12s-1 5.1-2.95 7.05C17.1 21 14.75 22 12 22s-5.1-1-7.05-2.95C3 17.1 2 14.75 2 12s1-5.1 2.95-7.05C6.9 3 9.25 2 12 2Z"/></svg>
@@ -210,7 +210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -258,7 +258,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -288,8 +288,6 @@
                 
   
   
-    
-  
   
   
     
@@ -330,16 +328,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../../%F0%9F%92%A1_Tutoriel_%28%F0%9F%9A%A7%29/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -356,7 +354,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             💡 Tutoriel (🚧)
@@ -372,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10-creation-questionnaire/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%A1_Tutoriel_%28%F0%9F%9A%A7%29/10-creation-questionnaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -393,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../11-creation-premiere-sequence/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%A1_Tutoriel_%28%F0%9F%9A%A7%29/11-creation-premiere-sequence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -414,7 +412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../12-visualisation-questionnaire/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%A1_Tutoriel_%28%F0%9F%9A%A7%29/12-visualisation-questionnaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -435,7 +433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../13-creation-liste-qcu/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%A1_Tutoriel_%28%F0%9F%9A%A7%29/13-creation-liste-qcu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -456,7 +454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../14-elaboration-structure/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%A1_Tutoriel_%28%F0%9F%9A%A7%29/14-elaboration-structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -477,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../15-creation-tableau/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%A1_Tutoriel_%28%F0%9F%9A%A7%29/15-creation-tableau/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -495,19 +493,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../%F0%9F%92%A1_Tutoriel_%28%F0%9F%9A%A7%29/16-creation-qcm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -516,7 +505,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -529,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../17-finalisation-structure/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%A1_Tutoriel_%28%F0%9F%9A%A7%29/17-finalisation-structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -550,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../20-mise-en-place-filtre/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%A1_Tutoriel_%28%F0%9F%9A%A7%29/20-mise-en-place-filtre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -571,7 +559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../21-ajout-controle/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%A1_Tutoriel_%28%F0%9F%9A%A7%29/21-ajout-controle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -592,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../22-ajout-infobulle/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%A1_Tutoriel_%28%F0%9F%9A%A7%29/22-ajout-infobulle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -613,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../23-utilisation-variable-calculee/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%A1_Tutoriel_%28%F0%9F%9A%A7%29/23-utilisation-variable-calculee/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -634,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../24-personnalisation-libelle/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%A1_Tutoriel_%28%F0%9F%9A%A7%29/24-personnalisation-libelle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -655,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../25-mise-en-place-boucle/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%A1_Tutoriel_%28%F0%9F%9A%A7%29/25-mise-en-place-boucle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -708,7 +696,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../%F0%9F%92%BB_VTL/" class="md-nav__link ">
+            <a href="../../../%F0%9F%92%BB_VTL/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -741,7 +729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%92%BB_VTL/fonctions-vtl/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%BB_VTL/fonctions-vtl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -762,7 +750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%92%BB_VTL/migration-xpath-vers-vtl/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%BB_VTL/migration-xpath-vers-vtl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -783,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%92%BB_VTL/vtl/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%BB_VTL/vtl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -844,7 +832,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../%F0%9F%93%9D_Cas_pratiques/" class="md-nav__link ">
+            <a href="../../../%F0%9F%93%9D_Cas_pratiques/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -877,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%93%9D_Cas_pratiques/declarations-complexes/" class="md-nav__link">
+      <a href="../../../%F0%9F%93%9D_Cas_pratiques/declarations-complexes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -898,7 +886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%93%9D_Cas_pratiques/gestion-somme-null/" class="md-nav__link">
+      <a href="../../../%F0%9F%93%9D_Cas_pratiques/gestion-somme-null/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -919,7 +907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%93%9D_Cas_pratiques/indicatrice-boucle/" class="md-nav__link">
+      <a href="../../../%F0%9F%93%9D_Cas_pratiques/indicatrice-boucle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -940,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%93%9D_Cas_pratiques/kish/" class="md-nav__link">
+      <a href="../../../%F0%9F%93%9D_Cas_pratiques/kish/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -961,7 +949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%93%9D_Cas_pratiques/libelles-flous/" class="md-nav__link">
+      <a href="../../../%F0%9F%93%9D_Cas_pratiques/libelles-flous/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -982,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%93%9D_Cas_pratiques/personnaliser-libelles/" class="md-nav__link">
+      <a href="../../../%F0%9F%93%9D_Cas_pratiques/personnaliser-libelles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1003,7 +991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%93%9D_Cas_pratiques/position-boucle/" class="md-nav__link">
+      <a href="../../../%F0%9F%93%9D_Cas_pratiques/position-boucle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1029,6 +1017,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1085,16 +1075,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../%F0%9F%9A%80_Guide/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1111,7 +1101,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             🚀 Guide
@@ -1127,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/10-sequences/" class="md-nav__link">
+      <a href="../../10-sequences/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1148,7 +1138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/11-sous-sequences/" class="md-nav__link">
+      <a href="../../11-sous-sequences/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1169,7 +1159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/12-questions/" class="md-nav__link">
+      <a href="../../12-questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1190,7 +1180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/13-reponse-simple/" class="md-nav__link">
+      <a href="../../13-reponse-simple/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1211,7 +1201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/14-liste-codes-old/" class="md-nav__link">
+      <a href="../../14-liste-codes-old/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1232,7 +1222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/14-liste-codes/" class="md-nav__link">
+      <a href="../../14-liste-codes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1253,7 +1243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/14b-autre-precisez/" class="md-nav__link">
+      <a href="../../14b-autre-precisez/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1274,7 +1264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/15-reponse-choix-unique/" class="md-nav__link">
+      <a href="../../15-reponse-choix-unique/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1295,7 +1285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/15b-suggester/" class="md-nav__link">
+      <a href="../../15b-suggester/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1316,7 +1306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/16-liens-2a2/" class="md-nav__link">
+      <a href="../../16-liens-2a2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1337,7 +1327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/17-reponse-choix-multiple/" class="md-nav__link">
+      <a href="../../17-reponse-choix-multiple/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1358,7 +1348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/21-declarations/" class="md-nav__link">
+      <a href="../../21-declarations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1379,7 +1369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/22-info-bulle/" class="md-nav__link">
+      <a href="../../22-info-bulle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1400,7 +1390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/23-controles/" class="md-nav__link">
+      <a href="../../23-controles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1421,7 +1411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/24-boucles/" class="md-nav__link">
+      <a href="../../24-boucles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1442,7 +1432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/25-filtres/" class="md-nav__link">
+      <a href="../../25-filtres/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1463,7 +1453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/26-composition/" class="md-nav__link">
+      <a href="../../26-composition/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1484,7 +1474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/27-rond-point/" class="md-nav__link">
+      <a href="../../27-rond-point/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1505,7 +1495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/28-versionning/" class="md-nav__link">
+      <a href="../../28-versionning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1573,7 +1563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/Questionnaire/40-controles-integrite/" class="md-nav__link">
+      <a href="../../Questionnaire/40-controles-integrite/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1594,7 +1584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/Questionnaire/41-fonctionnalites-element/" class="md-nav__link">
+      <a href="../../Questionnaire/41-fonctionnalites-element/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1615,7 +1605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/Questionnaire/42-sauvegarder/" class="md-nav__link">
+      <a href="../../Questionnaire/42-sauvegarder/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1636,7 +1626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/Questionnaire/43-details-suppression/" class="md-nav__link">
+      <a href="../../Questionnaire/43-details-suppression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1657,7 +1647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/Questionnaire/44-deplacer-element/" class="md-nav__link">
+      <a href="../../Questionnaire/44-deplacer-element/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1729,7 +1719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/Tableaux/1-tableau-fixe/" class="md-nav__link">
+      <a href="../../Tableaux/1-tableau-fixe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1750,7 +1740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/Tableaux/2-tableau-dynamique/" class="md-nav__link">
+      <a href="../../Tableaux/2-tableau-dynamique/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1771,7 +1761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/Tableaux/3-cases-non-collectees/" class="md-nav__link">
+      <a href="../../Tableaux/3-cases-non-collectees/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1797,8 +1787,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1817,11 +1809,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_23" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_23" checked>
         
           
           <label class="md-nav__link" for="__nav_2_5_23" id="__nav_2_5_23_label" tabindex="0">
@@ -1835,7 +1827,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_23_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_23_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5_23">
             <span class="md-nav__icon md-icon"></span>
             Variables
@@ -1849,7 +1841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/Variables/generer-variables/" class="md-nav__link">
+      <a href="../generer-variables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1870,7 +1862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/Variables/nommage/" class="md-nav__link">
+      <a href="../nommage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1888,10 +1880,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/Variables/portee/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Portée des variables
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1900,6 +1912,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple 1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-de-portee" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type de portée
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1912,7 +1971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/Variables/variables-calculees/" class="md-nav__link">
+      <a href="../variables-calculees/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1933,7 +1992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/Variables/variables-externes/" class="md-nav__link">
+      <a href="../variables-externes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1954,7 +2013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/Variables/variables-globales/" class="md-nav__link">
+      <a href="../variables-globales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2020,7 +2079,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../2._Public_Enemy/" class="md-nav__link ">
+            <a href="../../../../2._Public_Enemy/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2071,7 +2130,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../2._Public_Enemy/gestion-des-erreurs/" class="md-nav__link ">
+            <a href="../../../../2._Public_Enemy/gestion-des-erreurs/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2129,7 +2188,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../2._Public_Enemy/guide/" class="md-nav__link ">
+            <a href="../../../../2._Public_Enemy/guide/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2162,7 +2221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2._Public_Enemy/guide/1-guide-pe-echantillon/" class="md-nav__link">
+      <a href="../../../../2._Public_Enemy/guide/1-guide-pe-echantillon/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2183,7 +2242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2._Public_Enemy/guide/2-visualisation-questionnaires/" class="md-nav__link">
+      <a href="../../../../2._Public_Enemy/guide/2-visualisation-questionnaires/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2237,7 +2296,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../3._Eno/" class="md-nav__link ">
+            <a href="../../../../3._Eno/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2290,7 +2349,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../4._Lunatic/" class="md-nav__link ">
+            <a href="../../../../4._Lunatic/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2349,7 +2408,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../5._Orchestrateurs/" class="md-nav__link ">
+            <a href="../../../../5._Orchestrateurs/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2382,7 +2441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../5._Orchestrateurs/paradata/" class="md-nav__link">
+      <a href="../../../../5._Orchestrateurs/paradata/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2421,7 +2480,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../5._Orchestrateurs/Queen/" class="md-nav__link ">
+            <a href="../../../../5._Orchestrateurs/Queen/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2475,7 +2534,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../5._Orchestrateurs/Stromae-DSFR/" class="md-nav__link ">
+            <a href="../../../../5._Orchestrateurs/Stromae-DSFR/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2536,7 +2595,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../6._%F0%9F%AB%82_Support/" class="md-nav__link ">
+            <a href="../../../../6._%F0%9F%AB%82_Support/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2589,7 +2648,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../architecture/" class="md-nav__link ">
+            <a href="../../../../architecture/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2652,7 +2711,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../conception-de-questionnaire/" class="md-nav__link ">
+            <a href="../../../../conception-de-questionnaire/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2685,7 +2744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../conception-de-questionnaire/0-conception/" class="md-nav__link">
+      <a href="../../../../conception-de-questionnaire/0-conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2706,7 +2765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../conception-de-questionnaire/1-conception/" class="md-nav__link">
+      <a href="../../../../conception-de-questionnaire/1-conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2727,7 +2786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../conception-de-questionnaire/2-conception/" class="md-nav__link">
+      <a href="../../../../conception-de-questionnaire/2-conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2748,7 +2807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../conception-de-questionnaire/3-conception/" class="md-nav__link">
+      <a href="../../../../conception-de-questionnaire/3-conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2769,7 +2828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../conception-de-questionnaire/4-conception/" class="md-nav__link">
+      <a href="../../../../conception-de-questionnaire/4-conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2817,7 +2876,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../couverture-fonctionnelle/" class="md-nav__link ">
+            <a href="../../../../couverture-fonctionnelle/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2850,7 +2909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../couverture-fonctionnelle/couverture-fonctionnelle-detail/" class="md-nav__link">
+      <a href="../../../../couverture-fonctionnelle/couverture-fonctionnelle-detail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2896,7 +2955,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../metadata/" class="md-nav__link ">
+            <a href="../../../../metadata/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2944,6 +3003,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple 1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-de-portee" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type de portée
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2957,18 +3051,26 @@
                   
 
 
-<h1 id="creation-dune-question-a-choix-multiples">Création d'une question à choix multiples</h1>
-<p>La prochaine question sera à choix multiples. Pour cela :</p>
-<ul>
-<li>on crée une question avec le libellé "Avez-vous déjà exercé les activités suivantes au sein de votre carrière ?" et l'identifiant "CARRIERE"</li>
-<li>le <em>Type de question</em> est "Réponse à choix multiple"</li>
-<li>dont la réponse est basée sur une liste de code <a href="../../../data/metiers.csv">"metiers.csv"</a></li>
-<li>pour la <em>Représentation des réponse</em> on garde le choix par défaut "Booléen".</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>La génération des variables ici va générer autant de variables <em>booléennes</em> (vrai / faux) que d'éléments de la liste de codes.</p>
+<h1 id="portee-des-variables">Portée des variables</h1>
+<div class="admonition question">
+<p class="admonition-title">Champ <em>Niveau de calcul</em></p>
+<p>Les variables calculées ou externes possèdent une portée indiquée par le paramètre <strong><em>Niveau de calcul</em></strong>. A quoi cela correspond-il ?</p>
+<p>Il s'agit de préciser si une variable est calculée ou injectée (dans le cas d'une variable externe) au sein d'une boucle ou dans le contexte du questionnaire dans son ensemble.</p>
 </div>
+<h5 id="exemple-1">Exemple 1</h5>
+<p>Imaginons une boucle <code class="highlight"><span class="n">B1</span></code> sur un ensemble de questions relatives à des individus. Je veux pouvoir pour chacun d'eux créer une indicatrice permettant de savoir si l'individu est dans le champs en vérifiant son âge (variable collectée <code class="highlight"><span class="n">AGE</span></code>) et sa nationalité (<code class="highlight"><span class="n">NATIONALITE</span></code>).</p>
+<p>Pour cela, je crée une variable calculée <code class="highlight"><span class="n">INDICATRICE</span></code> de portée <code class="highlight"><span class="n">B1</span></code> dont la formule s'appuie pour chaque occurrence de la boucle (chaque individu) sur les variables <code class="highlight"><span class="n">AGE</span></code> et <code class="highlight"><span class="n">NATIONALITE</span></code> (de chaque individu).</p>
+<p><a class="glightbox" href="../../../../img/pogues/guide-boucle-portee.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variable avec portée boucle" src="../../../../img/pogues/guide-boucle-portee.png" /></a></p>
+<h5 id="exemple-2">Exemple 2</h5>
+<p>On veut contrôler si un individu est majeur ou non pour savoir quels questions lui poser. On va créer une variable calculée <code class="highlight"><span class="n">EST_MAJEUR</span></code> de portée <code class="highlight"><span class="n">B1</span></code> portant sur chaque valeur de <code class="highlight"><span class="n">AGE</span></code> et vérifiant si <code class="highlight"><span class="o">$</span><span class="n">AGE</span><span class="o">$</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="m">18</span></code></p>
+<p><a class="glightbox" href="../../../../img/pogues/check_Is_adult.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/check_Is_adult.png" /></a></p>
+<h3 id="type-de-portee">Type de portée</h3>
+<ul>
+<li><strong>Portée <code class="highlight"><span class="n">Questionnaire</span></code> :</strong> alors toutes les variables vecteurs seront bien considérées comme des vecteurs (liste d’élément). Il est donc possible d’effectuer des opération d’agrégation dessus (sum, count, ect)</li>
+<li><strong>Portée <code class="highlight"><span class="n">Boucle</span></code> (ou <code class="highlight"><span class="o">&lt;</span><span class="n">Vecteur</span><span class="o">&gt;</span></code>) :</strong> alors la variable calculée sera elle aussi un vecteur et la formule VTL associée portera sur toutes les occurrences du vecteur.
+    Ex : la var calculée <code class="highlight"><span class="n">CALC_VAR</span></code> ayant pour formule VTL <code class="highlight"><span class="o">$</span><span class="n">CA_ENTREPRISE</span><span class="o">$</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">100</span></code> sera donc un vecteur auquel on aura ajouté <code class="highlight"><span class="m">100</span></code> à chaque valeur de <code class="highlight"><span class="o">$</span><span class="n">CA_ENTREPRISE</span><span class="o">$</span></code>.
+    <code class="highlight"><span class="o">&lt;</span><span class="n">Vecteur</span><span class="o">&gt;</span></code> prend la valeur du nom d’une boucle ou d’un tableau dynamique.</li>
+</ul>
 
 
 
@@ -2998,7 +3100,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../15-creation-tableau/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Création d&#39;un tableau">
+          <a href="../nommage/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Nommage des variables">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3008,20 +3110,20 @@
                 Précédent
               </span>
               <div class="md-ellipsis">
-                Création d'un tableau
+                Nommage des variables
               </div>
             </div>
           </a>
         
         
           
-          <a href="../17-finalisation-structure/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Finalisation de la structure du questionnaire">
+          <a href="../variables-calculees/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Création d&#39;une variable calculée">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                Finalisation de la structure du questionnaire
+                Création d'une variable calculée
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -3070,10 +3172,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer", "navigation.indexes", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

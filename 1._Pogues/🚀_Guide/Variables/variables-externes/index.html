@@ -1804,6 +1804,8 @@
       
         
       
+        
+      
     
     
     
@@ -1865,6 +1867,27 @@
   
   <span class="md-ellipsis">
     Nommage des variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../portee/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Portée des variables
   </span>
   
 
@@ -2993,11 +3016,17 @@
 
 
 <h1 id="les-variables-externes">Les variables externes</h1>
+<div class="admonition question">
+<p class="admonition-title">Variables Externes</p>
 <p>Pogues permet de référencer dans le questionnaire des variables externes, c'est à dire des variables qui sont fournies au chargement du questionnaire lors de la collecte, en provenance d'un fichier de données produit à partir de données connues et attachées à l'unité enquêtée.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Si le <em>typage</em> disponible dans Pogues pour ces variables est celui disponible par ailleurs pour les variables collectées et calculées, on n'a en fait pas le choix : l'ensemble des variables externes injectées dans le questionnaire sont du <strong>texte</strong>.</p>
 <p>L'impact : si ces variables doivent être utilisées comme numériques, il faut alors les transformer avec la fonction <a href="../../../%F0%9F%92%BB_VTL/fonctions-vtl/#cast">cast()</a>:</p>
 <div class="highlight"><pre><span></span><code><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR_EXT</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">integer</span><span class="p">)</span>
 </code></pre></div>
+</div>
 <h2 id="ajouter-des-variables-externes-de-portee-boucle">Ajouter des variables externes de portée Boucle</h2>
 <p>Dans certains protocoles complexes, on peut vouloir intégrer des variables externes correspondant à des variables collectées précédemement dans un autre questionnaire à l'intérieur d'une boucle.</p>
 <p>Imaginons par exemple que dans le premier questionnaire, on ait demandé le nombre d'habitants du logement (variable <code class="highlight"><span class="n">NBHAB</span></code>), puis, à l'intérieur d'une boucle répétée pour chaque habitant on ait collecté les prénoms et ages (respectivement les variables <code class="highlight"><span class="n">PRENOM</span></code> et <code class="highlight"><span class="n">AGE</span></code>).</p>
