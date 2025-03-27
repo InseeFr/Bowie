@@ -1,6 +1,7 @@
 # Les variables globales
 
-Les variables globales sont des variables fournies directement par le moteur de contrôle des questionnaires.
+!!! question "Variables Globales"
+    Les variables globales sont des variables fournies directement par le moteur de contrôle des questionnaires.
 
 !!! warning
 

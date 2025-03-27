@@ -1,7 +1,5 @@
 # Les cases non-collectées
 
-:material-test-tube: En cours de développement / recette
-
 ## Décrire une case non-collectée
 
 On souhaite parfois qu'une ou plusieurs cases d'un tableau porte une donnée calculée ou externe plutôt qu'une donnée collectée. 
