@@ -5,15 +5,22 @@ On accède aux différentes listes de codes via le bouton sur la gauche
 ![alt text](../../img/pogues/list-code-menu.png)
 
 On arrive ensuite sur la page de gestion des listes de codes du questionnaire
-
 ![list code home](../../img/pogues/list-code-home.png)
 !!! abstract "Légende"
     1. `Identifiant` du questionnaire
     1. `Bouton de création` d'une nouvelle liste de codes
-    1. `Nom` d'une liste de code
-    1. Colonne associée au `Code` des différentes modalités
-    1. Colonne associée au `Libellé` des différentes modalités
-    1. Une `Modalité` avec ses valeurs associées (`Code` et `Libellé`)
+    1. `Nom` d'une liste de codes
+    1. `Liste de codes`
+        1. Colonne associée au `Code` des différentes modalités
+        1. Colonne associée au `Libellé` des différentes modalités
+        1. Une `Modalité` avec ses valeurs associées (`Code` et `Libellé`)
+    1. `Nombre de question` utilisant cette liste de codes
+        
+        !!! tip "Un clique ou un survol permet d'afficher la liste des questions."
+    1. Bouton pour `Modifier`, `Dupliquer` ou `Supprimer` une liste de codes.
+        
+        !!! warning "La suppression est grisée car on na peut supprimer une liste de codes utilisée par des questions."
+    1. Flèche permettant de visualiser le `détail` d'une liste de codes en ouvrant la fenêtre (possibilité à l'inverse de la fermée quand cette dernière est déjà ouverte).
 
 ## Gérer les listes de codes
 
@@ -25,7 +32,7 @@ Après avoir appuyé sur le bouton de création d'une nouvelle liste de codes, l
 
 ![list code creation](../../img/pogues/list-code-creation.png)
 !!! abstract "Légende"
-    1. `Nom` de la liste de code
+    1. `Nom` de la liste de codes
     1. Une `Modalité`
         - `Code` de la modalité avec un champ texte
         - `Libellé` de la modalité avec un éditeur `VTL`
@@ -35,7 +42,7 @@ Après avoir appuyé sur le bouton de création d'une nouvelle liste de codes, l
     1. `Créer` (ou `Annuler`) la liste de codes 
 
 !!! warning "Champs requis"
-    Pour créer une liste de code, il faut au moins
+    Pour créer une liste de codes, il faut au moins
     
     - Un nom
     - Une modalité avec un code et un libellé (la formule VTL associée doit être valide)  
@@ -84,12 +91,12 @@ Une fois la liste de codes créée, on revient sur la page principale des listes
 On peut ensuite, sur une liste de codes déjà existante, exécuter les actions suivantes 
 
 - `Modifier` : Accède à la page de modification de liste de codes
-- `Dupliquer` : Crée une copie de la liste de code et l'ajoute en bas de la liste
+- `Dupliquer` : Crée une copie de la liste de codes et l'ajoute en bas de la liste
 - `Supprimer` : Supprime la liste de codes.
 
-    !!! warning "Supprimer une liste de code utilisée dans une question"
-        On ne peut pas supprimer une liste de code utilisée par des questions. La liste des questions concernées sont alors affichées dans une pop-up
-        ![delete list code](../../img/pogues/delete_used_code_list.png)
+    !!! warning "Supprimer une liste de codes utilisée dans une question"
+        On ne peut pas supprimer une liste de codes utilisée par des questions. On peut voir quelles sont les questions concernées et il faut les modifier pour qu'elles n'utilisent plus cette liste de codes. <br>
+        Un liste de codes associée à aucune question peut être supprimée.
 
 ### Utiliser une liste de codes dans un questionnaire 
 Lors de la création d'une question avec réponse à choix unique ou multiple, on peut sélectionner la liste de codes à associer avec le champ `Choisir une liste de codes*`
@@ -113,6 +120,6 @@ Lors de la création d'une question avec réponse à choix unique ou multiple, o
     ![list-code-preciser](../../img/pogues/list-code-preciser-edition.png)
 
 !!! note 
-    La demande de précision n'est pas associée à la liste de codes en elle-même mais bien à la **question qui utilise cette liste de code**.
+    La demande de précision n'est pas associée à la liste de codes en elle-même mais bien à la **question qui utilise cette liste de codes**.
     Ainsi pour une même liste de codes on peut avoir différents `Préciser` définis dans différentes questions.
 
