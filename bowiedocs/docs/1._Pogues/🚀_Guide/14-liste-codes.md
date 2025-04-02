@@ -107,12 +107,10 @@ Lors de la création d'une question avec réponse à choix unique ou multiple, o
 
 #### "Autre préciser"
 
-!!! tip "Pour plus de détails, voir [Complément textuel "Autre"](14b-autre-precisez.md)."
-
 !!! warning "Un seul `Préciser` par liste de codes associé à une question"
 
 === "Ajouter un `Préciser`"
-    Pour ajouter un [Complément textuel "Autre"](14b-autre-precisez.md), il suffit de cliquer sur le bouton `Ajouter un "Préciser"` puis d'indiquer son contenu dans le champ VTL `Libellé` qui est apparu.
+    Pour ajouter un Complément textuel "Autre", il suffit de cliquer sur le bouton `Ajouter un "Préciser"` puis d'indiquer son contenu dans le champ VTL `Libellé` qui est apparu.
     ![list-code-preciser](../../img/pogues/list-code-preciser.png)
     > Le champ `Identifiant` est généré automatiquement et peut être édité. La valeur saisie par l'enquêté est enregistrée dans cette variable.
 === "Éditer un `Préciser`" 
