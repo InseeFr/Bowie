@@ -2955,6 +2955,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#generation-ko-boucle-tableau-dynamique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generation KO Boucle + Tableau dynamique
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3042,13 +3051,17 @@ Si on veut faire un contrôle sur la somme des salaires, il faut d'abord <strong
 </details>
 <h2 id="recherche-sur-liste-ko-en-visualisation"><strong>Recherche sur liste KO en visualisation</strong></h2>
 <p>La nomenclature sélectionnée pour une recherche sur liste (suggester) peut mal être chargée lors d'une visualisation. On a alors un message <code class="highlight"><span class="n">Erreur</span><span class="w"> </span><span class="n">lors</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">chargement</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">liste</span></code>.
-<a class="glightbox" href="../img/pogues/suggester-error-loading.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../img/pogues/suggester-error-loading.png" /></a></p>
+<a class="glightbox" href="../img/support/suggester-error-loading.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../img/support/suggester-error-loading.png" /></a></p>
 <p>Dans ce cas, il s'agit d'un conflit entre plusieurs questions qui ont été créées avec des versions différentes de la nomenclature (Ex: Pays du millésime de 2023 et celle du millésime de 2024).</p>
-<details class="example" open="open">
-<summary>Cas concret</summary>
+<div class="admonition tip">
+<p class="admonition-title">Solution</p>
+<p>Retourner sur la question avec la nomenclature de l'ancien millésime et recharger depuis Pogues les suggesters concernés pour qu'ils aient tous la dernière version de la nomenclature. </p>
+</div>
+<details class="example">
+<summary>Exemple concret</summary>
 <ol>
 <li>On définit, dans un questionnaire <code class="highlight"><span class="n">X</span></code>, une question <code class="highlight"><span class="n">T_PAYP</span></code> sur le pays d'origine du père dans Pogues, fin décembre 2023 en utilisant la nomenclature <code class="highlight"><span class="n">PAYS</span></code>.
-<a class="glightbox" href="../img/pogues/suggester-pays-selected.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../img/pogues/suggester-pays-selected.png" /></a><blockquote>
+<a class="glightbox" href="../img/support/suggester-pays-selected.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../img/support/suggester-pays-selected.png" /></a><blockquote>
 <p>Ici "Pays" va être associé à la nomenclature <code class="highlight"><span class="n">PAYS</span></code> du millésime 2023. <code class="highlight"><span class="n">PAYS_2023</span></code></p>
 </blockquote>
 </li>
@@ -3056,17 +3069,38 @@ Si on veut faire un contrôle sur la somme des salaires, il faut d'abord <strong
 <li>Après cela, on crée une nouvelle question <code class="highlight"><span class="n">T_PAYM</span></code> sur le pays d'origine de la mère. Quand on va sélectionner "Pays" dans Pogues, ce dernier sera lié à <strong>la nomenclature la plus récente disponible</strong>, c'est à dire, <code class="highlight"><span class="n">PAYS_2024</span></code>.</li>
 </ol>
 <p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> Quand on va vouloir visualiser, on va avoir un conflit dans les nomenclatures chargées et Pogues va prendre l'une des deux (imaginons pour l'exemple que c'est <code class="highlight"><span class="n">PAYS_2024</span></code>). De ce fait quand on arrivera sur la question <code class="highlight"><span class="n">T_PAYP</span></code>, la recherche sur liste semblera être indisponible car il ne trouvera pas <code class="highlight"><span class="n">PAYS_2023</span></code> mais pour <code class="highlight"><span class="n">T_PAYM</span></code> elle sera bien chargée.</p>
-</details>
 <div class="admonition tip">
-<p class="admonition-title">Solution</p>
-<p>Retourner sur la question avec la nomenclature de l'ancien millésime et recharger depuis Pogues les suggesters concernés pour qu'ils aient tous la dernière version de la nomenclature. </p>
 <p>Si on reprend notre exemple décrit dans le "Cas concret", il suffit d'aller sur <code class="highlight"><span class="n">T_PAYP</span></code> et de resélectionner la liste "Pays".
-<a class="glightbox" href="../img/pogues/suggester-select-pays.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../img/pogues/suggester-select-pays.png" /></a></p>
+<a class="glightbox" href="../img/support/suggester-select-pays.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../img/support/suggester-select-pays.png" /></a></p>
 <div class="admonition note">
-<p class="admonition-title">Remarque</p>
 <p>On peut remarquer que la question semble être <em>désélectionnée</em> alors que la variable est bien générée. C'est le signe qu'on est bien dans le cas décrit ci-dessus !</p>
 </div>
 </div>
+</details>
+<h2 id="generation-ko-boucle-tableau-dynamique"><strong>Generation KO Boucle + Tableau dynamique</strong></h2>
+<p>Erreur lors d'une visualisation :
+<div class="highlight"><pre><span></span><code>Variable<span class="w"> </span><span class="s1">&#39;X&#39;</span><span class="w"> </span>is<span class="w"> </span>used<span class="w"> </span>to<span class="w"> </span>define<span class="w"> </span>the<span class="w"> </span>size<span class="w"> </span>of<span class="w"> </span>different<span class="w"> </span>iterations<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>questionnaire.<span class="w"> </span>
+Check<span class="w"> </span>loop<span class="w"> </span><span class="s1">&#39;max&#39;</span><span class="w"> </span>iteration<span class="w"> </span>expressions,<span class="w"> </span>dynamic<span class="w"> </span>table<span class="w"> </span>max<span class="w"> </span>size<span class="w"> </span>expressions.
+</code></pre></div></p>
+<div class="admonition tip">
+<p class="admonition-title">Solution</p>
+<p>Avoir exactement les mêmes formule VTL quand on définit à plusieurs endroit les dimensions d'une boucle ou d'un tableau dynamique à partir d'une formule VTL</p>
+</div>
+<details class="example">
+<summary>Exemple concret</summary>
+<p>Si dans un même questionnaire, on a une boucle récoltant un vecteur, exemple la liste des prénoms <code class="highlight"><span class="n">PRENOM</span></code>, et qu'on veut injecter dans un tableau dynamique ce vecteur, on va vouloir que ce tableau fasse la même dimension que la boucle.</p>
+<p>Imaginons la taille de la boucle est définie par la variable numérique <code class="highlight"><span class="n">NBPERS</span></code>.
+On a alors pour la boucle <code class="highlight"><span class="n">BOUCLE_PRENOM</span></code> les valeurs suivantes
+<a class="glightbox" href="../img/support/dim-loop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../img/support/dim-loop.png" /></a>
+La dimension est <code class="highlight"><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">NBPERS</span><span class="o">$</span><span class="p">,</span><span class="m">1</span><span class="p">)</span></code></p>
+<p>Pour mon tableau je définie la dimension <code class="highlight"><span class="o">$</span><span class="n">NBPERS</span><span class="o">$</span></code>. En voulant visualiser je vais avoir l'erreur suivante 
+<a class="glightbox" href="../img/support/error-tab-loop-same-dim.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../img/support/error-tab-loop-same-dim.png" /></a></p>
+<div class="admonition tip">
+<p>Il suffit de mettre la même formule pour les deux dimensions <code class="highlight"><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">NBPERS</span><span class="o">$</span><span class="p">,</span><span class="m">1</span><span class="p">)</span></code> ou <code class="highlight"><span class="o">$</span><span class="n">NBPERS</span><span class="o">$</span></code>.
+Dans notre cas on choisi de mettre <code class="highlight"><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">NBPERS</span><span class="o">$</span><span class="p">,</span><span class="m">1</span><span class="p">)</span></code> pour le tableau et la visu fonctionne de nouveau ✨
+<a class="glightbox" href="../img/support/tab-dim.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../img/support/tab-dim.png" /></a></p>
+</div>
+</details>
 
 
 
