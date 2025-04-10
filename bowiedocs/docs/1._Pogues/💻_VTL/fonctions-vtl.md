@@ -297,7 +297,7 @@
 === "Type `Date`"
     | Date actuelle | Fonction | Résultat |
     | --- | ---| --- |
-    | 12 mars 2025 | `current_date()` | `Wed Mar 12 2025 01:00:00 GMT+0100` |
+    | 12 mars 2025 | `current_date()` | `Wed Mar 12 2025 16:39:46 GMT+0200` |
 === "Type `Texte`"
     On peut directement récupérer la date complète ou une partie (mois, jour) en format texte.<br>
     Pour se faire on utilise le transtypage en texte avec la fonction [**`cast(<date>,string,<format>)`**](#cast).
@@ -320,6 +320,14 @@
     | 12 mars 2025 | `cast(cast(current_date(),string,"YYYY"),integer)` | `2025` |
     | 12 mars 2025 | `cast(cast(current_date(),string,"MM"),integer)` | `3` |
     | 12 mars 2025 | `cast(cast(current_date(),string,"DD"),integer)` | `12` |
+
+??? example "Exemple d'utilisation"
+    === "Comparaison d'une date saisie par l'enquêté avec la date du jour"
+        Utilisation de cette comparaison dans un contrôle de cohérence par exemple
+        ```
+        cast($DATE_NAIS$,date,"YYYY-MM-DD") > cast(current_date(),date,"YYYY-MM-DD")
+        ```
+
 
 ##### abs
 
