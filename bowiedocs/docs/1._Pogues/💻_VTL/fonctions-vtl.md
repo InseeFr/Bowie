@@ -5,23 +5,25 @@
 ### Les plus utilisés
 | Method      | Description                          |
 | ----------- | ------------------------------------ |
-| [**`nvl()`**](fonctions-vtl.md/#nvl)       | Gère la nullité    |
-| [**`cast()`**](fonctions-vtl.md/#cast)       | Change le type de la donnée    |
-| [**`substr()`**](fonctions-vtl.md/#substr)       | Extrait un sous ensemble de caractère d'un texte |
-| [**`isnull()`**](fonctions-vtl.md/#isnull)       | Teste la nullité d'une variable    |
-| [**`in ...`**](fonctions-vtl.md/#in)       | Teste l'appartenance d'une valeur à un ensemble    |
-| [**`if ... then ... else ...`**](fonctions-vtl.md/#if-then-else)  | Teste si un condition est vraie, _et retourne le contenu du then_ ou fausse, _et retourne le contenu du else_ |
+| [**`nvl()`**](#nvl)       | Gère la nullité    |
+| [**`cast()`**](#cast)       | Change le type de la donnée    |
+| [**`substr()`**](#substr)       | Extrait un sous ensemble de caractère d'un texte |
+| [**`isnull()`**](#isnull)       | Teste la nullité d'une variable    |
+| [**`in ...`**](#in)       | Teste l'appartenance d'une valeur à un ensemble    |
+| [**`if ... then ... else ...`**](#if-then-else)  | Teste si un condition est vraie, _et retourne le contenu du then_ ou fausse, _et retourne le contenu du else_ |
+| [**`current_date()`**](#current_date)  | Retourne la date du jour au format `date` |
+
 
 
 ### Numériques
 | Method      | Description                          |
 | ----------- | ------------------------------------ |
-| [**`abs()`**](fonctions-vtl.md/#abs)     | Retourne la valeur absolue d'un nombre  |
-| [**`ceil()`**](fonctions-vtl.md/#ceil)     | Retourne le plus petit entier supérieur ou égal au nombre donné  |
-| [**`exp()`**](fonctions-vtl.md/#exp)     | Retourne l'exponentielle d'un nombre  |
-| [**`floor()`**](fonctions-vtl.md/#floor)     | Retourne le plus grand entier qui est inférieur ou égal à un nombre donné |
-| [**`mod()`**](fonctions-vtl.md/#mod)     | Retourne le modulo = le reste d'une division entière  |
-| [**`round()`**](fonctions-vtl.md/#round)     | Retourne la valeur d'un nombre arrondi à l'entier le plus proche  |
+| [**`abs()`**](#abs)     | Retourne la valeur absolue d'un nombre  |
+| [**`ceil()`**](#ceil)     | Retourne le plus petit entier supérieur ou égal au nombre donné  |
+| [**`exp()`**](#exp)     | Retourne l'exponentielle d'un nombre  |
+| [**`floor()`**](#floor)     | Retourne le plus grand entier qui est inférieur ou égal à un nombre donné |
+| [**`mod()`**](#mod)     | Retourne le modulo = le reste d'une division entière  |
+| [**`round()`**](#round)     | Retourne la valeur d'un nombre arrondi à l'entier le plus proche  |
 
 
 ## Détail des fonctions
@@ -282,6 +284,43 @@
 
 :construction: Coming soon ...
 
+##### current_date
+
+!!! question "Utilité"
+    Quand on veut récupérer le date du jour pour pouvoir avoir des contrôles dynamiques selon les années de l'enquête, et ainsi ne pas avoir à mettre à jour tous les contrôles tous les ans.
+
+!!! abstract "Syntaxe"
+    ```
+    current_date()
+    ```
+
+=== "Type `Date`"
+    | Date actuelle | Fonction | Résultat |
+    | --- | ---| --- |
+    | 12 mars 2025 | `current_date()` | `Wed Mar 12 2025 01:00:00 GMT+0100` |
+=== "Type `Texte`"
+    On peut directement récupérer la date complète ou une partie (mois, jour) en format texte.<br>
+    Pour se faire on utilise le transtypage en texte avec la fonction [**`cast(<date>,string,<format>)`**](#cast).
+
+    | Date actuelle | Fonction | Résultat |
+    | --- | ---| --- |
+    | 12 mars 2025 | `cast(current_date(),string,"YYYY-MM-DD")` | `"2025-03-12"` |
+    | 12 mars 2025 | `cast(current_date(),string,"YYYY-MM")` | `"2025-03"` |
+    | 12 mars 2025 | `cast(current_date(),string,"YYYY")` | `"2025"` |
+    | 12 mars 2025 | `cast(current_date(),string,"MM-DD")` | `"03-12"` |
+    | 12 mars 2025 | `cast(current_date(),string,"MM")` | `"03"` |
+    | 12 mars 2025 | `cast(current_date(),string,"DD")` | `"12"` |
+=== "Type `Numérique`"
+    On est obligé de d'abord passer par un transtypage en texte (voir [*En Texte*](#__tabbed_17_2)), puis de transtyper en nombre avec [**`cast(<date au format texte>,integer)`**](#cast).
+    !!! info ""
+        Pratique si on veut faire des comparaisons de dates : `DATE_1 < DATE_2`
+
+    | Date actuelle | Fonction | Résultat |
+    | --- | ---| --- |
+    | 12 mars 2025 | `cast(cast(current_date(),string,"YYYY"),integer)` | `2025` |
+    | 12 mars 2025 | `cast(cast(current_date(),string,"MM"),integer)` | `3` |
+    | 12 mars 2025 | `cast(cast(current_date(),string,"DD"),integer)` | `12` |
+
 ##### abs
 
 :construction: Coming soon ...
@@ -413,3 +452,4 @@
     | `5.052` | `round($MA_VARIABLE$, 2)` | `5.05` |
     | `-5.058` | `round($MA_VARIABLE$, 2)` | `-5.06` |
     | `-5.952` | `round($MA_VARIABLE$, 2)` | `-5.95` |
+    
