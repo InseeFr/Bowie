@@ -1804,6 +1804,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Générer les variables collectées
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1813,6 +1824,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables-non-collectees-dans-un-tableau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables non collectées dans un tableau
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2900,6 +2939,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables-non-collectees-dans-un-tableau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables non collectées dans un tableau
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2914,10 +2970,26 @@
 
 
 <h1 id="generer-les-variables-collectees">Générer les variables collectées</h1>
-<p>Pour toute question créée, il faut générer les variables collectées : aller dans l'onglet "Variables collectées", cliquer sur le bouton "Générer les variables collectées" et modifier les libellés et identifiants proposés par défaut par l'application par un libellé signifiant (penser à vos successeurs) et l'identifiant métier de la ou des variables collectées.</p>
-<p><strong>Dans le cas où certaines cellules d'un tableau ou d'une question à choix multiples ne sont pas à collecter car sans objet ou destinées par exemple à rappeler un total calculé, collecté ou en dur (par exemple 100%), décocher pour chaque cellule concernée le booléen Collectée associée à la variable collectée ad hoc.</strong></p>
+<ol>
+<li>
+<p>Pour toute question créée, il faut générer les variables collectées : aller dans l'onglet <code class="highlight"><span class="n">Variables</span><span class="w"> </span><span class="n">collectées</span></code>, cliquer sur le bouton <code class="highlight"><span class="n">Générer</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">variables</span><span class="w"> </span><span class="n">collectées</span></code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Nommage des variables générées</p>
+<p>Il est recommandé lors de la création de vos question de garder dans un premier temps le nom des variables qui est donné par défaut lors de la génération. </p>
+<div class="admonition warning">
+<p>À chaque fois qu'on régénère les variables, Pogues va écraser tous les noms des libellés et identifiant et il faudra tout renommer à la main. Cela peut vite devenir fastidieux sur de gros tableaux ou QCM.</p>
+</div>
+<p>Une fois la question stabilisée dans le questionnaire, on peut modifier les libellés et identifiants proposés par défaut par des noms plus signifiant. Cela permet une maintenance plus facile du questionnaire pour vos successeurs, mais aussi pour le futur vous.</p>
+</div>
+</li>
+<li>
 <p>Au fur et à mesure de vos modifications, cliquer sur le bouton "Valider" affiché le plus haut et le plus à droite de votre écran (en bas à droite de l'écran grisé).</p>
-<p>A la fin de vos modifications, cliquer sur le bouton "Valider" au milieu un peu plus bas dans la partie blanche de l'écran pour valider l'ensemble de vos modifications.</p>
+</li>
+<li>A la fin de vos modifications, cliquer sur le bouton "Valider" au milieu un peu plus bas dans la partie blanche de l'écran pour valider l'ensemble de vos modifications.</li>
+</ol>
+<h3 id="variables-non-collectees-dans-un-tableau">Variables non collectées dans un tableau</h3>
+<p>Dans le cas où certaines cellules d'un tableau ou d'une question à choix multiples ne sont pas à collecter car sans objet ou destinées par exemple à rappeler un total calculé, collecté ou en dur (par exemple 100%), décocher pour chaque cellule concernée le booléen Collectée associée à la variable collectée ad hoc.</p>
+<p>Pour plus d'info, voir <a href="../../Tableaux/3-cases-non-collectees/">Les cases non-collectées</a></p>
 
 
 
