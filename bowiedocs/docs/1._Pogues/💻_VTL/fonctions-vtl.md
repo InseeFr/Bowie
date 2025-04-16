@@ -311,7 +311,7 @@
     | 12 mars 2025 | `cast(current_date(),string,"MM")` | `"03"` |
     | 12 mars 2025 | `cast(current_date(),string,"DD")` | `"12"` |
 === "Type `Numérique`"
-    On est obligé de d'abord passer par un transtypage en texte (voir [*En Texte*](#__tabbed_17_2)), puis de transtyper en nombre avec [**`cast(<date au format texte>,integer)`**](#cast).
+    On est obligé de d'abord passer par un transtypage en texte (voir [*En Texte*](#__tabbed_12_2)), puis de transtyper en nombre avec [**`cast(<date au format texte>,integer)`**](#cast).
     !!! info ""
         Pratique si on veut faire des comparaisons de dates : `DATE_1 < DATE_2`
 

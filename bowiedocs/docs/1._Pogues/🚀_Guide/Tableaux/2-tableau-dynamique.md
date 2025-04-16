@@ -63,8 +63,3 @@ Dans l'onglet Contrôles, décrire classiquement le contrôle en VTL mais préci
 Pogues permet de préremplir certaines __colonnes__ des tableaux dynamiques, que ce soit par de la donnée externe ou par des variables calculées. Ces __colonnes__ ne sont alors pas modifiables en collecte.
 
 [Spécifier des données non-collectées](./3-cases-non-collectees.md)
-
-
-## Supprimer une ligne qui n'est pas la dernière
-
-Impossible. 

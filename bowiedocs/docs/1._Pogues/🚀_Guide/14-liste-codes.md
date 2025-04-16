@@ -98,26 +98,67 @@ On peut ensuite, sur une liste de codes déjà existante, exécuter les actions 
         On ne peut pas supprimer une liste de codes utilisée par des questions. On peut voir quelles sont les questions concernées et il faut les modifier pour qu'elles n'utilisent plus cette liste de codes. <br>
         Un liste de codes associée à aucune question peut être supprimée.
 
-### Utiliser une liste de codes dans un questionnaire 
+## Utiliser une liste de codes dans un questionnaire 
 Lors de la création d'une question avec réponse à choix unique ou multiple, on peut sélectionner la liste de codes à associer avec le champ `Choisir une liste de codes*`
 === "Choisir une liste de codes"
     ![alt text](../../img/pogues/list-code-chose-in-pogues.png)
 === "Liste de codes sélectionnée"
     ![alt text](../../img/pogues/list-code-selected.png)
 
-#### "Autre préciser"
+## Ajouter un "Préciser"
 
 !!! warning "Un seul `Préciser` par liste de codes associé à une question"
 
 === "Ajouter un `Préciser`"
-    Pour ajouter un Complément textuel "Autre", il suffit de cliquer sur le bouton `Ajouter un "Préciser"` puis d'indiquer son contenu dans le champ VTL `Libellé` qui est apparu.
+    Il suffit de cliquer sur le bouton `Ajouter un "Préciser"` puis d'indiquer son contenu dans le champ VTL `Libellé` qui est apparu.
     ![list-code-preciser](../../img/pogues/list-code-preciser.png)
     > Le champ `Identifiant` est généré automatiquement et peut être édité. La valeur saisie par l'enquêté est enregistrée dans cette variable.
 === "Éditer un `Préciser`" 
-    Pour éditer un `Préciser` il suffit de cliquer sur le bouton d'édition
+    Il suffit de cliquer sur le bouton d'édition
     ![list-code-preciser](../../img/pogues/list-code-preciser-edition.png)
 
 !!! note 
     La demande de précision n'est pas associée à la liste de codes en elle-même mais bien à la **question qui utilise cette liste de codes**.
     Ainsi pour une même liste de codes on peut avoir différents `Préciser` définis dans différentes questions.
 
+
+## Filtrer une liste de codes
+
+Il est possible de filtrer, pour des questions de type QCM (réponse booléenne uniquement) ou QCU, une liste de modalités selon une formule VTL.
+
+=== "Ajouter un `Filtre`"
+    On renseigne le filtre dans un éditeur VTL accessible via le bouton `Ajouter un filtre`
+    ![alt text](../../img/pogues/code-list-add-filter.png)
+=== "Éditer un `Filtre`"
+    On peut l'éditer via le bouton d'édition
+    ![alt text](../../img/pogues/code-list-edit-filter.png)
+
+La même logique que pour filtrer une question est appliquée : on propose un éditeur VTL conditionnant l'affichage de la modalité avec les règles suivantes :
+
+| Validité de la Formule VTL | Condition d'affichage | Résultat |
+| ----------------- | --------------------- | --------- |
+| Pas de formule | / | la modalité est affichée |
+| ❌ | `ERROR` | la modalité est affichée |
+| ✅ | `TRUE`  | la modalité est affichée |
+| ✅ | `FALSE` | la modalité n'est pas affichée |
+
+??? example "Exemple"
+    Imaginons la liste de code suivante
+    ![alt text](../../img/pogues/code-list-to-filter.png)
+    On rajoute alors 2 filtres :
+
+    - la modalité `En emploi` ne s'affiche que si la variable `AGE` est supérieure à `16`
+    - la modalité `À la retraite` ne s'affiche que si la variable `AGE` est supérieure à `62`
+
+    ![alt text](../../img/pogues/code-list-with-filter.png)
+
+    Ce qui donne les résultats suivants :
+
+    === "$AGE$ = `null`"
+        ![alt text](../../img/pogues/code-list-filtered-age-null.png)
+    === "$AGE$ = `15`"
+        ![alt text](../../img/pogues/code-list-filtered-age-15.png)
+    === "$AGE$ = `17`"
+        ![alt text](../../img/pogues/code-list-filtered-age-17.png)
+    === "$AGE$ = `65`"
+        ![alt text](../../img/pogues/code-list-filtered-age-65.png)
