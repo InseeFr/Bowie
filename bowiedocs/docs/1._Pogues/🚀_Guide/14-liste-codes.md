@@ -122,7 +122,7 @@ Lors de la création d'une question avec réponse à choix unique ou multiple, o
     Ainsi pour une même liste de codes on peut avoir différents `Préciser` définis dans différentes questions.
 
 
-## Filtrer une liste de codes
+## ✨ Filtrer une liste de codes
 
 Il est possible de filtrer, pour des questions de type QCM (réponse booléenne uniquement) ou QCU, une liste de modalités selon une formule VTL.
 
