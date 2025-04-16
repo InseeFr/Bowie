@@ -1833,6 +1833,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#filtrer-des-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Filtrer des cases
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3097,6 +3106,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#filtrer-des-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Filtrer des cases
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3165,6 +3183,84 @@ Si on souhaite qu'une de ces informations mesurées ne soit pas "collectée", vo
 <h2 id="preremplir-un-tableau-avec-des-donnees-non-collectees">Préremplir un tableau avec des données non collectées</h2>
 <p>Pogues permet de préremplir certaines <strong>colonnes</strong> des tableaux dynamiques, que ce soit par de la donnée externe ou par des variables calculées. Ces <strong>colonnes</strong> ne sont alors pas modifiables en collecte.</p>
 <p><a href="../3-cases-non-collectees/">Spécifier des données non-collectées</a></p>
+<h2 id="filtrer-des-cases">✨ Filtrer des cases</h2>
+<p>Il est possible de filtrer des cases dans un tableau dynamique selon une formule VTL.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Ajouter une <code class="highlight"><span class="n">Condition</span><span class="w"> </span><span class="n">d</span><span class="s">&#39;</span><span class="err">affichage</span></code> sur une colonne du tableau</label><label for="__tabbed_1_2">Éditer la formule VTL</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="glightbox" href="../image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" href="../image-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-1.png" /></a></p>
+</div>
+</div>
+</div>
+<p>La même logique que pour filtrer une question est appliquée : on propose un éditeur VTL conditionnant l'affichage de la case avec les règles suivantes :</p>
+<table>
+<thead>
+<tr>
+<th>Validité de la Formule VTL</th>
+<th>Condition d'affichage</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pas de formule</td>
+<td>/</td>
+<td>la case est affichée, l'enquêté peut la renseigner</td>
+</tr>
+<tr>
+<td>❌</td>
+<td><code class="highlight"><span class="n">ERROR</span></code></td>
+<td>la case est affichée, l'enquêté peut la renseigner</td>
+</tr>
+<tr>
+<td>✅</td>
+<td><code class="highlight"><span class="kc">TRUE</span></code></td>
+<td>la case est affichée, l'enquêté peut la renseigner</td>
+</tr>
+<tr>
+<td>✅</td>
+<td><code class="highlight"><span class="kc">FALSE</span></code></td>
+<td>la case n'est pas affichée, l'enquêté ne peut pas la renseigner</td>
+</tr>
+</tbody>
+</table>
+<details class="example">
+<summary>Exemple</summary>
+<p>Imaginons le tableau suivant avec l'identifiant <code class="highlight"><span class="n">PRODUIT</span></code>
+<a class="glightbox" href="../image-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-2.png" /></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Variables générées du tableau.</p>
+<ol>
+<li>La première variable est non collectée. On y injecte une variable externe.</li>
+<li><code class="highlight"><span class="n">PRODUIT2</span></code> est un booléen : case à cocher qui vaut <code class="highlight"><span class="n">true</span></code> ou <code class="highlight"><span class="n">false</span></code>.</li>
+<li><code class="highlight"><span class="n">PRODUIT3</span></code> est le <code class="highlight"><span class="n">CA</span></code> que l'on veut collecter.</li>
+</ol>
+</div>
+<p>Pour une liste de produits, on veut savoir quels sont les produits pour lesquels une entreprise à un CA de plus de 10 000€, et avoir la valeur précise de ce CA <strong>uniquement dans ce cas</strong>. <br>
+On veut donc éviter que l'enquêté puisse saisir une valeur dans la colonne <code class="highlight"><span class="n">Précision</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">CA</span></code> si son CA est inférieur à 10 000€ pour un produit. Pour ce faire on va rajouter une <code class="highlight"><span class="n">Condition</span><span class="w"> </span><span class="n">d</span><span class="s">&#39;</span><span class="err">affichage</span></code> pour cette colonne.
+<a class="glightbox" href="../image-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-3.png" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">En VTL, <code class="highlight"><span class="o">$</span><span class="n">PRODUIT2</span><span class="o">$</span></code> est équivalent à <code class="highlight"><span class="o">$</span><span class="n">PRODUIT2</span><span class="o">$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span></code></p>
+</div>
+<p>Si <code class="highlight"><span class="n">PRODUIT2</span></code> vaut <code class="highlight"><span class="n">true</span></code>, l'enquêté a coché la case, alors on affiche le champ pour collecter la variable $PRODUIT3$ (colonne "Précision du CA")</p>
+<p>Ce qui donne le tableau suivant</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">0 case coché</label><label for="__tabbed_2_2">1 case coché</label><label for="__tabbed_2_3">3 case cochés avec 1 case remplie</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="glightbox" href="../image-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-4.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" href="../image-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-5.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" href="../image-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-6.png" /></a></p>
+</div>
+</div>
+</div>
+</details>
 
 
 
