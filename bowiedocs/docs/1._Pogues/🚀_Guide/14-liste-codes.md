@@ -51,7 +51,7 @@ Après avoir appuyé sur le bouton de création d'une nouvelle liste de codes, l
 
 Il est possible d'avoir plusieurs niveaux de modalités dans une même liste de codes
 
-!!! danger "Les niveaux ne sont supportés que pour les tableaux et les QCM avec une liste de codes pour réponse (pas booléen)"
+!!! danger "Les niveaux ne sont supportés que pour les tableaux et les QCM avec une liste de codes pour réponse (pas booléen). Le reste ne donne pas une bonne expérience utilisateur."
 
 !!! tip "Ajouter des modalité "enfant""
     === "Liste initiale" 
@@ -106,6 +106,8 @@ Lors de la création d'une question avec réponse à choix unique ou multiple, o
     ![alt text](../../img/pogues/list-code-selected.png)
 
 ## Ajouter un "Préciser"
+
+!!! danger "Fonctionnalité non supportée pour les listes de codes avec [des niveaux](#gestion-des-niveaux)"
 
 !!! warning "Un seul `Préciser` par liste de codes associé à une question"
 
