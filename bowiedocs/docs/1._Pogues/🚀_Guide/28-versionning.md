@@ -15,11 +15,10 @@ La liste des versions est affichée dans une modale. Chaque version contient les
 ![liste versions](../../img/pogues/list-versions.png)
 
 !!! abstract "Règle de conservation des versions"
-    - Uniquement les 10 dernières versions de la dernière journée où le questionnaire a été modifié sont conservées
-    - Uniquement la dernière version des journées précédentes est conservée.
+    - Tous les soirs, toutes les sauvegardes du jour, puis les 10 précédentes sont conservées. Au-delà, la dernière de chaque jour est conservée."
 
 ??? info "Précisions sur la dernière journée sauvegardée"
-    Le "nettoyage" des versions pour les jours précédents n'est déclenché que lorsqu'on sauvegarde une nouvelle version.
+    Le "nettoyage" des versions pour les jours précédents est déclenché tous les soirs sauf le samedi et dimanche soir.
     
     **Exemple :** On est le 17/02/2025 à 15:00
     
@@ -31,13 +30,14 @@ La liste des versions est affichée dans une modale. Chaque version contient les
         - 1 version du 04/01/2025 à 09:00
     4. On retourne sur le questionnaire, on l'édite, on sauvegarde. Un nouvelle version du questionnaire est donc créée.
     5. On clique sur le bouton `Versions`, la modale s'ouvre.
-    6. On observe une liste de 4 version :
+    6. On observe une liste de 6 version :
         - 1 version du 17/02/2025 à 15:02
-        - 1 versions du 01/02/2025 11:35 :exploding_head: Les deux premières versions du 01/02/2025 ne sont plus là.
+        - 3 versions du 01/02/2025 à 09:30, 11:00 et 11:35
         - 1 version du 28/01/2025 à 14:00
         - 1 version du 04/01/2025 à 09:00
 
-    **Explication :** Au moment où on sauvegarde une nouvelle version, pour des raisons d'optimisation, on va ne garder que la dernière version du dernier jour (ici le 01/02/2025)
+    - Si jamais on enregistre 16 version pour le 17/02, le lendemain il n'y aura plus que 10 version pour le 17/02 et autant que l'on veut pour le 18/02
+    - Si jamais on enregistre 8 version pour le 17/02, le lendemain il y aura toujours les 8 version pour le 17/02, autant que l'on veut pour le 18/02 mais plus que 2 pour le 01/02 (11:00 et 11:35)
 
 ## Charger une ancienne version
 
