@@ -3022,13 +3022,12 @@
 <div class="admonition abstract">
 <p class="admonition-title">Règle de conservation des versions</p>
 <ul>
-<li>Uniquement les 10 dernières versions de la dernière journée où le questionnaire a été modifié sont conservées</li>
-<li>Uniquement la dernière version des journées précédentes est conservée.</li>
+<li>Tous les soirs, toutes les sauvegardes du jour, puis les 10 précédentes sont conservées. Au-delà, la dernière de chaque jour est conservée."</li>
 </ul>
 </div>
 <details class="info">
 <summary>Précisions sur la dernière journée sauvegardée</summary>
-<p>Le "nettoyage" des versions pour les jours précédents n'est déclenché que lorsqu'on sauvegarde une nouvelle version.</p>
+<p>Le "nettoyage" des versions pour les jours précédents est déclenché tous les soirs sauf le samedi et dimanche soir.</p>
 <p><strong>Exemple :</strong> On est le 17/02/2025 à 15:00</p>
 <ol>
 <li>On va sur un questionnaire qui a été dernièrement modifié le 01/02/2025.</li>
@@ -3041,15 +3040,20 @@
 </li>
 <li>On retourne sur le questionnaire, on l'édite, on sauvegarde. Un nouvelle version du questionnaire est donc créée.</li>
 <li>On clique sur le bouton <code class="highlight"><span class="n">Versions</span></code>, la modale s'ouvre.</li>
-<li>On observe une liste de 4 version :<ul>
+<li>
+<p>On observe une liste de 6 version :</p>
+<ul>
 <li>1 version du 17/02/2025 à 15:02</li>
-<li>1 versions du 01/02/2025 11:35 <img alt="🤯" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f92f.svg" title=":exploding_head:" /> Les deux premières versions du 01/02/2025 ne sont plus là.</li>
+<li>3 versions du 01/02/2025 à 09:30, 11:00 et 11:35</li>
 <li>1 version du 28/01/2025 à 14:00</li>
 <li>1 version du 04/01/2025 à 09:00</li>
 </ul>
 </li>
+<li>
+<p>Si jamais on enregistre 16 version pour le 17/02, le lendemain il n'y aura plus que 10 version pour le 17/02 et autant que l'on veut pour le 18/02</p>
+</li>
+<li>Si jamais on enregistre 8 version pour le 17/02, le lendemain il y aura toujours les 8 version pour le 17/02, autant que l'on veut pour le 18/02 mais plus que 2 pour le 01/02 (11:00 et 11:35)</li>
 </ol>
-<p><strong>Explication :</strong> Au moment où on sauvegarde une nouvelle version, pour des raisons d'optimisation, on va ne garder que la dernière version du dernier jour (ici le 01/02/2025)</p>
 </details>
 <h2 id="charger-une-ancienne-version">Charger une ancienne version</h2>
 <p>On peut charger une version depuis la liste avec le bouton "Charger". <br>
