@@ -98,6 +98,15 @@ On peut ensuite, sur une liste de codes déjà existante, exécuter les actions 
         On ne peut pas supprimer une liste de codes utilisée par des questions. On peut voir quelles sont les questions concernées et il faut les modifier pour qu'elles n'utilisent plus cette liste de codes. <br>
         Un liste de codes associée à aucune question peut être supprimée.
 
+!!! danger "La modification d'une lite de codes entraine la regénération des variables collectées associées aux questions concernées"
+    Imaginons une question `COULEUR` qui est un QCM utilisant la liste de code `L_COULEUR` avec 3 modalités : `"R"`, `"B"` et `"J"` <br>
+    On aura alors par défaut les variables collectées `COULEUR1`, `COULEUR2` et `COULEUR3`. <br>
+    Pour plus de clarté on décide de **les renommer `COULEUR_R`, `COULEUR_B` et `COULEUR_J`.** <br>
+    
+    Si jamais on est amené à modifier `L_COULEUR`, en ajoutant une 4eme modalité par exemple `"V"`, alors au moment où l'on **valide cette modification, les variables collectées liées à `COULEUR` vont être régénérées et on aura 4 variables :**  `COULEUR1`, `COULEUR2`, `COULEUR3` et `COULEUR4`. <br>
+    
+    ⚠️ Tout filtre ou autre formule VTL se basant sur `COULEUR_R`, `COULEUR_B` ou `COULEUR_J` ne fonctionneront plus car les identifiants ont changé.
+
 ## Utiliser une liste de codes dans un questionnaire 
 Lors de la création d'une question avec réponse à choix unique ou multiple, on peut sélectionner la liste de codes à associer avec le champ `Choisir une liste de codes*`
 === "Choisir une liste de codes"
