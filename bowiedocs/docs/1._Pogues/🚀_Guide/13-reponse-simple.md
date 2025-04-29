@@ -47,13 +47,6 @@ Pour créer une question de type **Réponse simple**, remplir, pour toutes les v
 
     - Dans cette même logique, cela veut dire que l'on peut directement afficher une variable de type date dans un libellé dans utiliser
 
-!!! danger "Précaution"
-    - Si on laisse **vide** l'un des champs d'une date, alors **aucune valeur ne sera collectée** pour la variable associée. 
-    ![alt text](../../img/pogues/incomplete_date.png)<br>
-    _Dans cet exemple Quand on regarde la valeur de la variable collecté correspondante, on a `null` car il manque le mois_
-
-    - Comme le champ date est incorrect, si on clique sur continuer et qu'on fait précédent, tous les champs de date sont vides 
-
 
 ## Type de réponse Nombre
 **Paramètres :**
