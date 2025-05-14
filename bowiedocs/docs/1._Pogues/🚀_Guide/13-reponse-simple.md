@@ -2,8 +2,25 @@
 
 Pour créer une question de type **Réponse simple**, remplir, pour toutes les variables :
 
-- le caractère _Obligatoire_ de la réponse (en 2024, l'information n'a pas d'effet sur l'affichage de la question au sein du questionnaire).
+- le caractère _Obligatoire_ de la réponse
 - le _type de réponse_ (Texte, Date, Nombre, Booléen, Durée)
+
+
+### Variable Obligatoire 
+
+!!! tip "Recommendations"
+    - Les **variables structurantes** (indicateurs incontournables, base de filtres) de l’enquête peuvent être expliquées aux enquêteurs en formation (à quoi elles servent, comment inciter l’enquêté à répondre …). Cette **sensibilisation en amont** permet d’éviter les situations de blocage en cours d’entretien avec un enquêté avec des erreurs bloquantes ou variables obligatoires.
+
+    - Utiliser les variables obligatoires avec **parcimonie**. Sur le web : les enquêtés ne peuvent pas poursuivre le questionnaire s’ils sont dans une situation où ils ne peuvent pas répondre facilement ou ne souhaitent pas répondre.
+
+| Situation/Déclenchement | Comportement Stromae                                      | Comportement Queen                                              |
+|:----------------------- | --------------------------------------------------------- | --------------------------------------------------------------- |
+| 1er ou 2eme clic sur continuer  | Affichage du message standardisé + focus sur le 1er champ obligatoire ⛔| *On n'a pas le bouton continuer avant d'avoir rempli l'input* |
+| 1er clic sur NSP/RF     | /                                                         | Affichage du message standardisé + bouton continuer grisé       |
+| 2ème clic sur NSP/RF    | /                                                         | Pas d'effet du clic, le message reste affiché ⛔                |
+
+⛔ : l'utilisateur ne peut plus poursuivre le questionnaire
+
 
 ## Type de réponse Texte
 **Paramètres :**

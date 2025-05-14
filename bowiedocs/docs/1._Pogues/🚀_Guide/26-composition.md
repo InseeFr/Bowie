@@ -59,7 +59,7 @@ Il est également possible de filtrer une référence. :point_down:
 
 ![Filtre sur référence](../../img/pogues/composition-filtre.png)
 
-## Précautions et "bonnes pratiques"
+## Précautions et "bonnes pratiques" 👍
 
 ### Boucles 
 
@@ -80,7 +80,7 @@ Pour créer une "boucle liée", il est nécessaire d'avoir déjà créé la bouc
     ⚠️ Pour avoir un comportement similaire à ce qui est décrit au dessus, le tableau dynamique ne doit pas être peuplé par une variable externe mais par une variable collecté. <br>
     Ce fonctionnelle avec un vecteur injecté sous forme de variable externe n'est pas encore supporté.
 
-### Gestion des doublons d'identifiant
+### 🐞 Gestion des doublons d'identifiant
 
 #### Listes de codes et référence au questionnaire d'origine
 

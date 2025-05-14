@@ -9,5 +9,3 @@ Pour créer une séquence, cliquer sur _+ Sequence_ et remplir les champs suivan
 - les _modes de collecte_ (non fonctionnel en 2024)
 
 Si besoin, renseigner une déclaration dans l'onglet "Déclarations" dédié (cf. Création d'une déclaration)
-
-Valider

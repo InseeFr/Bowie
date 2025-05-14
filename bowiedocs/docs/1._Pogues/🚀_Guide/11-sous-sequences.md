@@ -9,5 +9,3 @@ Pour créer une sous-équence, cliquer sur _+ Sous-sequence_ et remplir les cham
 - des _modes de collecte_ si la sous-séquence ne concerne pas tous les modes associés au questionnaire (non fonctionnel en 2024)
 
 Si besoin, renseigner une déclaration dans l'onglet "Déclarations" dédié (cf. Création d'une déclaration)
-
-Valider

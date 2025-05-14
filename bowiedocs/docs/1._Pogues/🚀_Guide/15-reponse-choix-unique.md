@@ -3,9 +3,18 @@
 
 Pour créer une question de type **Réponse à choix unique**, renseigner pour toutes les variables :
 
-- le caractère _Obligatoire_ de la réponse (en 2024, l'information n'a pas d'effet sur l'affichage de la question au sein du questionnaire).
+- le caractère _Obligatoire_ de la réponse
 - le _type de réponse_ (Bouton-radio, Liste déroulante, Recherche sur liste)
  
+### Variable Obligatoire 
+
+!!! danger "Ne fonctionne pas s'il y a un ["Préciser"](./14-liste-codes.md/#ajouter-un-preciser) sur l'une des modalités"
+
+!!! tip "Recommendations"
+    - Les **variables structurantes** (indicateurs incontournables, base de filtres) de l’enquête peuvent être expliquées aux enquêteurs en formation (à quoi elles servent, comment inciter l’enquêté à répondre …). Cette **sensibilisation en amont** permet d’éviter les situations de blocage en cours d’entretien avec un enquêté avec des erreurs bloquantes ou variables obligatoires.
+
+    - Utiliser les variables obligatoires avec **parcimonie**. Sur le web : les enquêtés ne peuvent pas poursuivre le questionnaire s’ils sont dans une situation où ils ne peuvent pas répondre facilement ou ne souhaitent pas répondre.
+
 
 ## Type de réponse Bouton-radio 
 Ergonomie web standard pour ce type de réponse, on ne peut pas décocher la réponse à la question (on peut changer la réponse, mais on ne peut pas supprimer une réponse)). Exemple classique : Oui/Non, tranche de taille

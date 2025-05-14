@@ -16,5 +16,3 @@ Dans le cas où la question correspond à une seule réponse et donc à une seul
     - Réponse _à choix multiple_ (cf. batterie de questions)
     - _Tableau_
     - _Liens deux à deux_
-  
-Valider

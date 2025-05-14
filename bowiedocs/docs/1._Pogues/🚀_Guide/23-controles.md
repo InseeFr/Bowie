@@ -7,34 +7,31 @@ Deux types de contrôle sont implémentés :
 - les contrôles de format (automatiques, et dépendant de la nature de la variable décrite dans Pogues)
 - les contrôles de cohérence interne au questionnaire (éventuellement cohérence avec les données antérieures), décrits dans Pogues par le concepteur.
 
+Il est possible de supprimer ou dupliquer un contrôle.
+
 !!! danger "Les contrôles et filtres ne fonctionnent pas quand on fait une visualisation sur une sous partie du questionnaire : séquence, sous séquence ou question"
     Pour tester le bon fonctionnement des contrôles, on peut faire une visualisation et voir si ces derniers se déclenchent correctement.
     Il faut visualiser le questionnaire **dans son entièreté**. <br>
+
+!!! tip "Recommendations"
+    - Utiliser les erreurs bloquantes **avec parcimonie**. Sur le web : les enquêtés ne peuvent pas poursuivre le questionnaire s’ils sont dans une situation où ils ne peuvent pas répondre facilement ou ne souhaitent pas répondre.
+
+    - Dans tous les cas, mettre un **message d’erreur explicite** et/ou une déclaration qui rappelle les conditions de déclenchement du contrôle.
+
+    - Penser son questionnaire en **multi-mode** : les erreurs bloquantes que les enquêteurs peuvent éluder avec NSP/RF sont vraiment bloquantes en web.
+
+    - Les contrôles sont des contrôles de cohérence sur **données remplies** et pas du contrôle de remplissage.
 
 ## Syntaxe
 
 Dans l'onglet "Contrôles" de la question du questionnaire à partir de laquelle on veut appliquer le contrôle, renseigner :
 
-- la _description_ du contrôle : texte libre documentant le contrôle
-- la _condition_ (pour laquelle on affiche le message d'erreur)
-- le _message d'erreur_ : saisir ici le message d'erreur qui s'affichera à l'enquêté si la condition est remplie (à rédiger en VTL)
-- la _criticité_ :  choisir une criticité parmi
-    - Information
-    - Avertissement
-    - Erreur
-
-A ce jour, aucun contrôle n'est bloquant et on ne valorise donc pas la criticité en termes de blocage de navigation, mais on distingue visuellement les contrôles de niveau information ou avertissement/erreur. Si on souhaite mettre en évidence une anomalie, on privilégiera les criticités Avertissement ou Erreur.
-
-Valider.
-
-Il est possible de supprimer ou dupliquer un contrôle.
-
-!!! tip
-    Côté collecte web, un contrôle se déclenche au clic sur suivant lorsque la condition est vraie. Les contrôles figurent sous les champs de saisie et lorsque plusieurs contrôles ont été décrits, ils apparaissent avec une précédence (un contrôle doit être résolu avant que le suivant ne se déclenche).
-
-!!! tip 
-    Côté collecte enquêteur, les contrôles ne sont implémentés mais des développement sont prévu pour fin 2025 
-  
+- la `description` du contrôle : texte libre documentant le contrôle
+- la `condition` (pour laquelle on affiche le message d'erreur)
+- le `message d'erreur` : saisir ici le message d'erreur qui s'affichera à l'enquêté si la condition est remplie (à rédiger en VTL)
+- la `criticité` :  choisir une criticité parmi
+    - Avertissement (Non bloquant)
+    - Erreur (Bloquant)
 
 !!! example "Exemples de condition pour les contrôles"
     === "sans et avec gestion du null"
@@ -77,8 +74,27 @@ Il est possible de supprimer ou dupliquer un contrôle.
 
 Voir d'autres [exemples](../💻_VTL/vtl.md/#cookbook)
 
-!!! warning "Cohérence avec les filtres"
-    Si on ajoute un contrôle sur une question qui est filtré, il faut rajouter la condition du filtre dans ce contrôle pour que ce dernier ne se déclenche pas quand la question n'est pas affiché
+## Comportements
+
+### Avertissement (Non bloquant)
+| Situation/Déclenchement | Comportement Stromae       | Comportement Queen         |
+|:----------------------- | -------------------------- | -------------------------- |
+| 1er clic sur continuer (Queen) ou changement page (Stromae) | Affichage du message       | Affichage du message       |
+| 2ème clic sur continuer (Queen) ou changement page (Stromae)| Passage à la page suivante | Passage à la page suivante |
+| 1er clic sur NSP/RF     | /                          | Passage à la page suivante |
+
+### Erreur (Bloquant)
+
+!!! abstract "Concept"
+    Il s'agit de contrôles entre données remplies ! Un NSP/refus est une non-réponse donc ne peut pas déclencher un contrôle bloquant.
+
+| Situation/Déclenchement | Comportement Stromae                          | Comportement Queen                            |
+|:----------------------- | --------------------------------------------- | --------------------------------------------- |
+| 1er clic sur continuer (Queen) ou changement page (Stromae) | Affichage du message + focus sur le 1er champ en erreur | Affichage du message + bouton continuer grisé |
+| 2ème clic sur continuer | Focus sur le 1er champ en erreur    ⛔      | Bouton désactivé donc ne fait rien            |
+| 1er clic sur NSP/RF     | /                                             | Passage à la page suivante |
+  
+⛔ : l'utilisateur ne peut plus poursuivre le questionnaire
 
 ## Exemples pratiques
 
