@@ -9,6 +9,8 @@ Pour créer une question de type **Réponse à choix unique**, renseigner pour t
 ### Variable Obligatoire 
 
 !!! danger "Ne fonctionne pas s'il y a un ["Préciser"](./14-liste-codes.md/#ajouter-un-preciser) sur l'une des modalités"
+    Actuellement on peut combiner dans Pogues Variable obligatoire et demande de clarification mais cela ne fonctionne pas en visualisation, le caractère obligatoire est KO. <br>
+    Une modification à venir dans l'IHM permettra d'éviter cette spécification inopérante.
 
 !!! tip "Recommendations"
     - Les **variables structurantes** (indicateurs incontournables, base de filtres) de l’enquête peuvent être expliquées aux enquêteurs en formation (à quoi elles servent, comment inciter l’enquêté à répondre …). Cette **sensibilisation en amont** permet d’éviter les situations de blocage en cours d’entretien avec un enquêté avec des erreurs bloquantes ou variables obligatoires.
