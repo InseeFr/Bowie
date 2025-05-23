@@ -89,13 +89,8 @@ Lorsqu'on duplique un questionnaire, cet identifiant est conservé.<br>
 Lorsqu'on compose un questionnaire qui utilise le questionnaire d'origine et le questionnaire dupliqué, on a alors un souci de doublons.
 
 ??? success "Solution"
-    **=> Utiliser le bouton de duplication de liste de code**
-    ![duplication liste code case non cochée](../../img/pogues/duplication-liste-code-case-non-cochee.png)
-    
-    - Juste après avoir coché la case un `_2` est rajouté à la fin du nom. Il est possible de le changer juste après
-
-    ![duplication liste code case cochée](../../img/pogues/duplication-liste-code-case-cochee.png)
-
+    **=> Utiliser le bouton de duplication de liste de code** dans la page des listes de code  
+    - Changer juste après le nom pour distinguer de l'ancienne
     - On peut ensuite régénérer les variables calculées et valider les modifications. :tada: Plus de problèmes de doublons
 
 
