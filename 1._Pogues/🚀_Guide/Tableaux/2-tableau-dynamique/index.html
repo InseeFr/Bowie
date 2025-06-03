@@ -1842,6 +1842,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cases-en-lecture-seule" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Cases en lecture seule
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3115,6 +3124,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cases-en-lecture-seule" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Cases en lecture seule
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3184,14 +3202,17 @@ Si on souhaite qu'une de ces informations mesurées ne soit pas "collectée", vo
 <p>Pogues permet de préremplir certaines <strong>colonnes</strong> des tableaux dynamiques, que ce soit par de la donnée externe ou par des variables calculées. Ces <strong>colonnes</strong> ne sont alors pas modifiables en collecte.</p>
 <p><a href="../3-cases-non-collectees/">Spécifier des données non-collectées</a></p>
 <h2 id="filtrer-des-cases">✨ Filtrer des cases</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Objectif</p>
 <p>Il est possible de filtrer des cases dans un tableau dynamique selon une formule VTL.</p>
+</div>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Ajouter une <code class="highlight"><span class="n">Condition</span><span class="w"> </span><span class="n">d</span><span class="s">&#39;</span><span class="err">affichage</span></code> sur une colonne du tableau</label><label for="__tabbed_1_2">Éditer la formule VTL</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><a class="glightbox" href="../image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image.png" /></a></p>
+<p><a class="glightbox" href="../dyn-tab-filter-cell-add.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../dyn-tab-filter-cell-add.png" /></a></p>
 </div>
 <div class="tabbed-block">
-<p><a class="glightbox" href="../image-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-1.png" /></a></p>
+<p><a class="glightbox" href="../dyn-tab-filter-cell-edit.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../dyn-tab-filter-cell-edit.png" /></a></p>
 </div>
 </div>
 </div>
@@ -3227,10 +3248,11 @@ Si on souhaite qu'une de ces informations mesurées ne soit pas "collectée", vo
 </tr>
 </tbody>
 </table>
+<p>Le choix "Non" est sélectionné par défaut : aucune case de la colonne n'est filtrée = toutes les cases sont affichées.</p>
 <details class="example">
 <summary>Exemple</summary>
 <p>Imaginons le tableau suivant avec l'identifiant <code class="highlight"><span class="n">PRODUIT</span></code>
-<a class="glightbox" href="../image-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-2.png" /></a></p>
+<a class="glightbox" href="../dyn-tab-filter-cell-ex-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../dyn-tab-filter-cell-ex-1.png" /></a></p>
 <div class="admonition abstract">
 <p class="admonition-title">Variables générées du tableau.</p>
 <ol>
@@ -3241,7 +3263,7 @@ Si on souhaite qu'une de ces informations mesurées ne soit pas "collectée", vo
 </div>
 <p>Pour une liste de produits, on veut savoir quels sont les produits pour lesquels une entreprise à un CA de plus de 10 000€, et avoir la valeur précise de ce CA <strong>uniquement dans ce cas</strong>. <br>
 On veut donc éviter que l'enquêté puisse saisir une valeur dans la colonne <code class="highlight"><span class="n">Précision</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">CA</span></code> si son CA est inférieur à 10 000€ pour un produit. Pour ce faire on va rajouter une <code class="highlight"><span class="n">Condition</span><span class="w"> </span><span class="n">d</span><span class="s">&#39;</span><span class="err">affichage</span></code> sur cette colonne pour afficher ou non les case selon la formule VTL $PRODUIT2$.
-<a class="glightbox" href="../image-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-3.png" /></a></p>
+<a class="glightbox" href="../dyn-tab-filter-cell-ex-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../dyn-tab-filter-cell-ex-2.png" /></a></p>
 <div class="admonition tip">
 <p class="admonition-title">En VTL, <code class="highlight"><span class="o">$</span><span class="n">PRODUIT2</span><span class="o">$</span></code> est équivalent à <code class="highlight"><span class="o">$</span><span class="n">PRODUIT2</span><span class="o">$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span></code></p>
 </div>
@@ -3250,17 +3272,69 @@ On veut donc éviter que l'enquêté puisse saisir une valeur dans la colonne <c
 <div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">0 case coché</label><label for="__tabbed_2_2">1 case coché</label><label for="__tabbed_2_3">3 case cochés avec 1 case remplie</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><a class="glightbox" href="../image-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-4.png" /></a></p>
+<p><a class="glightbox" href="../dyn-tab-filter-cell-ex-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../dyn-tab-filter-cell-ex-3.png" /></a></p>
 </div>
 <div class="tabbed-block">
-<p><a class="glightbox" href="../image-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-5.png" /></a></p>
+<p><a class="glightbox" href="../dyn-tab-filter-cell-ex-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../dyn-tab-filter-cell-ex-4.png" /></a></p>
 </div>
 <div class="tabbed-block">
-<p><a class="glightbox" href="../image-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-6.png" /></a></p>
+<p><a class="glightbox" href="../dyn-tab-filter-cell-ex-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../dyn-tab-filter-cell-ex-5.png" /></a></p>
 </div>
 </div>
 </div>
 </details>
+<h2 id="cases-en-lecture-seule">✨ Cases en lecture seule</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Objectif</p>
+<p>Le concepteur peut spécifier des règles qui mettent en lecture seule certaines cases d'un tableau dynamique. Cette fonctionnalité est utile par exemple lorsqu'on pré-remplit les données d'un tableau et qu'on ne souhaite pas laisser la possibilité à l'enquêté de modifier les valeurs.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Limitations</p>
+<p>Les types <code class="highlight"><span class="n">Date</span></code> et <code class="highlight"><span class="n">Durée</span></code> ne sont pour l'instant pas supportés</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Ajouter une <code class="highlight"><span class="n">Condition</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">lecture</span><span class="w"> </span><span class="n">seule</span></code> sur une colonne du tableau</label><label for="__tabbed_3_2">Éditer la formule VTL</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="glightbox" href="../dyn-tab-read-only-add.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../dyn-tab-read-only-add.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" href="../dyn-tab-read-only-edit.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../dyn-tab-read-only-edit.png" /></a></p>
+</div>
+</div>
+</div>
+<p>On propose un éditeur VTL conditionnant la possibilité de mettre en lecture seule (de ne pas pouvoir éditer) la case avec les règles suivantes :</p>
+<table>
+<thead>
+<tr>
+<th>Validité de la Formule VTL</th>
+<th>Condition de lecture seule</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pas de formule</td>
+<td>/</td>
+<td>la case est accessible en modification pour l'enquêté</td>
+</tr>
+<tr>
+<td>❌</td>
+<td><code class="highlight"><span class="n">ERROR</span></code></td>
+<td>la case est en lecture seule, l'enquêté ne peut pas l'éditer</td>
+</tr>
+<tr>
+<td>✅</td>
+<td><code class="highlight"><span class="kc">TRUE</span></code></td>
+<td>la case est en lecture seule, l'enquêté ne peut pas l'éditer</td>
+</tr>
+<tr>
+<td>✅</td>
+<td><code class="highlight"><span class="kc">FALSE</span></code></td>
+<td>la case est accessible en modification pour l'enquêté</td>
+</tr>
+</tbody>
+</table>
+<p>Le choix "Non" est sélectionné par défaut : aucune case de la colonne n'est en lecture seule = toutes les cases de la colonne sont modifiables.</p>
 
 
 
