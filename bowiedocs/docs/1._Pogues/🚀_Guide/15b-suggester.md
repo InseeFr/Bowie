@@ -13,7 +13,7 @@ Le paramétrage peut concerner les éléments suivants :
 Entre 2 enquêtes, la recherche (paramétrage) est identique pour une même nomenclature.
 
 ## ✨ Page de Nomenclatures
-On peut maintenant accéder à la page des nomenclatures via un bouton sur le menu droit. Cette page est en lecture seule, on ne peut donc pas éditer une nomenclature.
+On peut maintenant accéder à la page des nomenclatures via un bouton sur le menu à gauche. Cette page est en lecture seule, on ne peut donc pas éditer une nomenclature.
 
 !!! abstract "Légende"
     Pour chaque nomenclature, on dispose :
