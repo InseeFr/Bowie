@@ -12,7 +12,24 @@ Le paramétrage peut concerner les éléments suivants :
 
 Entre 2 enquêtes, la recherche (paramétrage) est identique pour une même nomenclature.
 
-### Recherche sur liste avec réponse libre
+## ✨ Page de Nomenclatures
+On peut maintenant accéder à la page des nomenclatures via un bouton sur le menu droit. Cette page est en lecture seule, on ne peut donc pas éditer une nomenclature.
+
+!!! abstract "Légende"
+    Pour chaque nomenclature, on dispose :
+
+    1. du nom métier de la nomenclature : Nom dans le menu déroulant dans Pogues
+    2. de sa version : Nom du fichier chargé dans Pogues
+    
+!!! example "Exemple"
+    Pour la nomenclature Pays on aura les infos :
+    
+    - Pays
+    - L_PAYS-1-2-0
+    
+    ![alt text](../../img/pogues/nomenclature-page.png)
+
+## Recherche sur liste avec réponse libre
 
 On peut définir un QCU avec recherche sur liste **et réponse libre** :  l'enquêté peut conserver le texte saisi si la recherche avec ce texte ne renvoie pas d'occurrence dans la nomenclature spécifiée par le concepteur.
 
