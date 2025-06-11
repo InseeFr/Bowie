@@ -3924,6 +3924,10 @@ Ex, on veut savoir si parmi les prénoms récoltés, il y a quelqu'un qui s'appe
 <p class="admonition-title">Utilité</p>
 <p>Quand on veut récupérer le date du jour pour pouvoir avoir des contrôles dynamiques selon les années de l'enquête, et ainsi ne pas avoir à mettre à jour tous les contrôles tous les ans.</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Limite d'utilisation</p>
+<p>Il est préconisé de n'utiliser cette fonction que pour de "l'affichage" car le calcul en aval ne se fait pas bien : On recalcule cette formule avec la date de l'extraction et non pas la réel date d'enquête. Des travaux sont prévu pour ne plus avoir ce soucis.</p>
+</div>
 <div class="admonition abstract">
 <p class="admonition-title">Syntaxe</p>
 <div class="highlight"><pre><span></span><code><span class="nf">current_date</span><span class="p">()</span>
