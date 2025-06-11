@@ -289,6 +289,9 @@
 !!! question "Utilité"
     Quand on veut récupérer le date du jour pour pouvoir avoir des contrôles dynamiques selon les années de l'enquête, et ainsi ne pas avoir à mettre à jour tous les contrôles tous les ans.
 
+!!! warning "Limite d'utilisation"
+    Il est préconisé de n'utiliser cette fonction que pour de "l'affichage" car le calcul en aval ne se fait pas bien : On recalcule cette formule avec la date de l'extraction et non pas la réel date d'enquête. Des travaux sont prévu pour ne plus avoir ce soucis.
+
 !!! abstract "Syntaxe"
     ```
     current_date()
