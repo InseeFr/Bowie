@@ -6,7 +6,7 @@ On souhaite parfois qu'une ou plusieurs cases d'un tableau porte une donnée cal
 
 Par exemple dans le tableau de taille fixe suivant où les cases de la dernière colonne représentant la différence entre les deux cases précédentes.:
 
-![Tableau fixe avec total en ligne](../../../img/pogues/tf_total_en_ligne_tableau.png)
+![Tableau statique avec total en ligne](../../../img/pogues/tf_total_en_ligne_tableau.png)
 
 
 ou dans le tableau dynamique où la première colonne est une donnée externe - préremplie : 
@@ -16,7 +16,7 @@ ou dans le tableau dynamique où la première colonne est une donnée externe - 
 
 Pour spécifier ce type de comportement, Pogues met à disposition le mécanisme de __case non-collectée__.
 
-### Dans un tableau fixe
+### Dans un tableau statique
 
 Une case de tableau est par défaut une variable standard collectée. Dans l'onglet "Variables collectées", on note que par défaut la valeur de Collectée est à Oui :
 
@@ -50,7 +50,7 @@ et utilisée ainsi :
 
 ## Total en ligne
 
-### Dans un tableau fixe
+### Dans un tableau statique
 
 C'est très proche de l'exemple juste au-dessus : on donnera comme valeur d'un total en ligne la somme des variables collectées des cases de la ligne.
 
@@ -62,7 +62,7 @@ où `N` est l'index de la dernière colonne avant la colonne portant le total.
 
 !!! note "Rappel"
 
-    Dans un tableau fixe, les variables générées par Pogues s'écrivent de la forme `<ID_DE_LA_QUESTION><INDICE_DE_LA_LIGNE><INDICE_DE_LA_COLONNE>`.
+    Dans un tableau statique, les variables générées par Pogues s'écrivent de la forme `<ID_DE_LA_QUESTION><INDICE_DE_LA_LIGNE><INDICE_DE_LA_COLONNE>`.
 
     Soit, pour la cellule de la ligne 3 et de la colonne 4 du tableau de la question `DEPENSE_QUOTIDIENNE` : `DEPENSE_QUOTIDIENNE34`
 
@@ -82,7 +82,7 @@ $TABLEAU_DYNAMIQUE_VARIABLE1$ + $TABLEAU_DYNAMIQUE_VARIABLE2$ + ... + $TABLEAU_D
 
 ## Total en colonne
 
-### Dans un tableau fixe
+### Dans un tableau statique
 
 On reprend le principe de la somme en ligne vu plus haut, mais cette fois-ci on somme toutes les variables collectées d'une même colonne pour l'affecter comme valeur de la case représentant le total (a priori la dernière de la colonne).
 

@@ -1,37 +1,68 @@
 # Les tableaux dynamiques
 
-On peut vouloir créer des tableaux dont on ne connait pas à l'avance le nombre de lignes (Tableau dynamique). Ces tableaux se présenteront : 
+On peut vouloir créer des tableaux dont on ne connaît pas à l'avance le nombre de lignes. Ces tableaux se présenteront : 
 
 - sans en-tête de lignes en première colonne
-- avec un bouton _Ajouter une ligne_ (sous le tableau)
-- et un bouton _Supprimer une ligne_ (la dernière).
+- avec un bouton `Ajouter une ligne` (sous le tableau)
+- et un bouton `Supprimer une ligne` (la dernière).
 
-Pour ce faire, on créera une question de type Tableau avec pour axe principal une liste.
+!!! info "Cas nombre de lignes max identique à min"
+    Dans ce cas, les boutons `Ajouter une ligne` et `Supprimer une ligne` n'apparaissent pas lors de la visualisation.
 
-### Choix de l'axe d'information principal :  
 
-Pour avoir un tableau dynamique, choisir `Liste`. <br>
-On a ensuite 2 choix pour le calcul du nombre de lignes : `Min/Max` ou `Formule`
+Pour ce faire, on créera une question de type Tableau avec les paramètres suivant :
 
-#### Nombre de lignes déterminés par `Min/Max`
-![choix min-max](../../../img/pogues/choix-nb-ligne-tab-min-max.png)
+!!! abstract "Description"
+    === "Défaut"
+        - l'Axe d'information principal : 
+            - [`1`] Format de l'axe principal* : Choisir `Dynamique`
+            - [`2`] [Mode de calcul du nombre de lignes*](#mode-de-calcul-du-nombre-de-lignes)
+            - [`3`] Nombre de lignes max identique à min*
+            - [`4`] Nombre de lignes*
+        - [`5`] [Information mesurée](#informations-mesurees)  
+        ![alt text](image.png)
+    === "Nombre de lignes Min <> Max "
+        - l'Axe d'information principal : 
+            - [`1`] Format de l'axe principal* : Choisir `Dynamique`
+            - [`2`] [Mode de calcul du nombre de lignes*](#mode-de-calcul-du-nombre-de-lignes)
+            - [`3`] Nombre de lignes max identique à min*
+            - [`4.a`] Nombre de lignes min.*
+            - [`4.b`] Nombre de lignes max.*
+        - [`5`] [Information mesurée](#informations-mesurees)  
+        ![alt text](image-1.png)
 
-- Indiquer le nombre de lignes minimum (aujourd'hui un nombre mais une évolution permettra à terme de saisir un champ VTL)
-- Indiquer le nombre de lignes maximum (aujourd'hui un nombre borné à 300 mais une évolution permettra à terme de saisir un champ VTL)).
 
-#### Nombre de lignes déterminés par `Formule`
-![choix formule](../../../img/pogues/choix-nb-ligne-tab-formule.png)
+## Mode de calcul du nombre de lignes 
 
-- Indiquer une formule VTL qui doit retourner **un nombre**, imaginons `n`.
-- Le tableau généré aura exactement `n` lignes 
+On a le choix entre deux type de calcul pour le nombre de lignes : 
+
+- `Nombre` : déterminé par un nombre entier -> Le champ n'accepte que des nombres
+- `Formule` : déterminé par une formule VTL -> Le champ est un éditeur VTL
+
+### Nombre de lignes déterminés par `Nombre`
+
+??? example "Exemple de tableau dynamique avec un Nombre entier déterminant le nombre de lignes"
+    
+    === "Défaut"
+        - Si on indique `2` pour le champ `Nombre de lignes`, on obtient un tableau qui ressemble à ça
+            ![alt text](image-2.png)
+    === "Min <> Max"
+        - Si on indique `1` pour le champ `Nombre de lignes min` et `2` pour le champ `Nombre de lignes max`, on obtient un tableau qui ressemble à ça
+            ![alt text](image-3.png)
+        - et on peut ajouter une ligne pour atteindre le max
+            ![alt text](image-4.png)
+
+!!! tip ""
+    Ici la première colonne est une variable non collectée avec la formule VTL ```"Individu " || cast(GLOBAL_ITERATION_INDEX,string) || ""```
+
+### Nombre de lignes déterminés par `Formule`
+
 
 ??? danger "VTL non valide"
-
     Si le résultat du VTL n'est pas interprété avec le type 'Nombre', ex `Formule = "Du texte"`, on a l'erreur suivante
     ![formule different d'un nombre](../../../img/pogues/tab-dim-formule-vtl-diff-nb.png)
 
-???+ example "Exemple de tableau dynamique avec formule VTL"
-    
+??? example "Exemple de tableau dynamique avec formule VTL"
     - Si on a un questionnaire avec une question `NB_PERSONNE` de type _Nombre_
     ![input nb personnes](../../../img/pogues/input-5-pers.png)
     - On peut alors créer ensuite un tableau dynamique avec pour formule de nombre de lignes `$NB_PERSONNE$`.
@@ -39,30 +70,30 @@ On a ensuite 2 choix pour le calcul du nombre de lignes : `Min/Max` ou `Formule`
     ![tableau dynamique](../../../img/pogues/tab-dyn-5-pers.png)
 
 
-### Information(s) mesurée(s) : 
-renseigner une information de type _Réponse simple_ ou _Réponse à choix unique_
-Si on souhaite qu'une de ces informations mesurées ne soit pas "collectée", voir l'item [données non-collectées](3-cases-non-collectees.md)
+### Information(s) mesurée(s)
+- Renseigner une information de type `Réponse simple` ou `Réponse à choix unique`
 
+- ✨ On peut aussi [filtrer certaines cases](#filtrer-des-cases) ou rendre c'est dernière en mode [lecture seule](#cases-en-lecture-seule).
+
+- Pogues permet de préremplir certaines **colonnes** des tableaux dynamiques, que ce soit par de la donnée externe ou par des variables calculées. Ces **colonnes** ne sont alors pas modifiables en collecte. Voir [Spécifier des données non-collectées](./3-cases-non-collectees.md)
 
 ## Calculer des totaux de lignes ou de colonnes
 
-Ces totaux peuvent être ensuite utilisées dans deslibellés, des filtres ou des contrôles
+Ces totaux peuvent être ensuite utilisées dans des libellés, des filtres ou des contrôles
 
 - cf. [Total en ligne](./3-cases-non-collectees.md/#total-en-ligne)
 - cf. [Total en colonne](./3-cases-non-collectees.md/#total-en-colonne)
 
 ## Contrôles
 
-Dans l'onglet Contrôles, décrire classiquement le contrôle en VTL mais préciser son niveau : si le contrôle concerne les informations relatives à une ligne du tableau, préciser "Niveau : ligne"
+Dans l'onglet Contrôles, décrire classiquement le contrôle en VTL mais préciser son niveau : 
+
+- si le contrôle concerne les informations relatives à l'ensemble des lignes du tableau (ex la somme des valeurs d'une colonne), préciser `Niveau* : Tableau` (par défaut)
+- si le contrôle doit être interprété ligne par ligne, préciser `Niveau* : Ligne`
+ 
 
 ![Contrôles par ligne](../../../img/pogues/controle-tab-dynamique.png)
 
-
-## Préremplir un tableau avec des données non collectées
-
-Pogues permet de préremplir certaines __colonnes__ des tableaux dynamiques, que ce soit par de la donnée externe ou par des variables calculées. Ces __colonnes__ ne sont alors pas modifiables en collecte.
-
-[Spécifier des données non-collectées](./3-cases-non-collectees.md)
 
 ## ✨ Filtrer des cases
 
