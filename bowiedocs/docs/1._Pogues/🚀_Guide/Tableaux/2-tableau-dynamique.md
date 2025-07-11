@@ -1,4 +1,4 @@
-# Les tableaux dynamiques
+# Les tableaux dynamiques (Maj ✨)
 
 On peut vouloir créer des tableaux dont on ne connaît pas à l'avance le nombre de lignes. Ces tableaux se présenteront : 
 
@@ -14,14 +14,20 @@ Pour ce faire, on créera une question de type Tableau avec les paramètres suiv
 
 !!! abstract "Description"
     === "Défaut"
+
+        ![alt text](../../../img/pogues/dyn-tab-desc1.png)
+        
         - l'Axe d'information principal : 
             - [`1`] Format de l'axe principal* : Choisir `Dynamique`
             - [`2`] [Mode de calcul du nombre de lignes*](#mode-de-calcul-du-nombre-de-lignes)
             - [`3`] Nombre de lignes max identique à min*
             - [`4`] Nombre de lignes*
         - [`5`] [Information mesurée](#informations-mesurees)  
-        ![alt text](image.png)
+        
     === "Nombre de lignes Min <> Max "
+        
+        ![alt text](../../../img/pogues/dyn-tab-desc2.png)
+
         - l'Axe d'information principal : 
             - [`1`] Format de l'axe principal* : Choisir `Dynamique`
             - [`2`] [Mode de calcul du nombre de lignes*](#mode-de-calcul-du-nombre-de-lignes)
@@ -29,7 +35,7 @@ Pour ce faire, on créera une question de type Tableau avec les paramètres suiv
             - [`4.a`] Nombre de lignes min.*
             - [`4.b`] Nombre de lignes max.*
         - [`5`] [Information mesurée](#informations-mesurees)  
-        ![alt text](image-1.png)
+        
 
 
 ## Mode de calcul du nombre de lignes 
@@ -45,12 +51,12 @@ On a le choix entre deux type de calcul pour le nombre de lignes :
     
     === "Défaut"
         - Si on indique `2` pour le champ `Nombre de lignes`, on obtient un tableau qui ressemble à ça
-            ![alt text](image-2.png)
+            ![alt text](../../../img/pogues/dyn-tab-nb-line-nb1.png)
     === "Min <> Max"
         - Si on indique `1` pour le champ `Nombre de lignes min` et `2` pour le champ `Nombre de lignes max`, on obtient un tableau qui ressemble à ça
-            ![alt text](image-3.png)
+            ![alt text](../../../img/pogues/dyn-tab-nb-line-nb2.png)
         - et on peut ajouter une ligne pour atteindre le max
-            ![alt text](image-4.png)
+            ![alt text](../../../img/pogues/dyn-tab-nb-line-nb3.png)
 
 !!! tip ""
     Ici la première colonne est une variable non collectée avec la formule VTL ```"Individu " || cast(GLOBAL_ITERATION_INDEX,string) || ""```
