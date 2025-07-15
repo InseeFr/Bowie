@@ -103,7 +103,7 @@ Voir d'autres [exemples](../💻_VTL/vtl.md/#cookbook)
 Dans la plupart des cas, vérifier une potentielle non-réponse c'est vérifier que la variable sous-jacente n'a pas été valorisée. Il faut donc écrire un contrôle pour tester la **_nullité_**. <br> 
 
 !!! example ""
-    Dépendamment du [type de la variable](13-reponse-simple.md), la formule VTL de conditionnant l'affichage du contrôle de non réponse est différente.
+    Dépendamment du [type de la variable](./Questions/13-reponse-simple.md), la formule VTL de conditionnant l'affichage du contrôle de non réponse est différente.
 
     === "Date - Nombre - Durée"
         Pour ces types, la formule VTL est simple avec seulement l'utilisation de [**isnull()**](../💻_VTL/fonctions-vtl.md/#isnull)

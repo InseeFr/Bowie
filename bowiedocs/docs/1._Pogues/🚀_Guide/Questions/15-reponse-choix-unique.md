@@ -8,7 +8,7 @@ Pour créer une question de type **Réponse à choix unique**, renseigner pour t
  
 ### Variable Obligatoire 
 
-!!! danger "Ne fonctionne pas s'il y a un ["Préciser"](./14-liste-codes.md/#ajouter-un-preciser) sur l'une des modalités"
+!!! danger "Ne fonctionne pas s'il y a un ["Préciser"](.././14-liste-codes.md/#ajouter-un-preciser) sur l'une des modalités"
     Actuellement on peut combiner dans Pogues Variable obligatoire et demande de clarification mais cela ne fonctionne pas en visualisation, le caractère obligatoire est KO. <br>
     Une modification à venir dans l'IHM permettra d'éviter cette spécification inopérante.
 

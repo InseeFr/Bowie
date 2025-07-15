@@ -28,7 +28,7 @@ Ici, le vecteur `CA` est composé des valeurs suivant : `[63, null, 28]`. Or VTL
 
 !!! warning "Attention"
     Contrairement à un champ texte ou un booléen, quand on efface la valeur (décocher ou supprimer la valeur du champ) d'un champ de type nombre, alors cette variable est remise à null. <br>
-    Voir [le type nombre](../🚀_Guide/13-reponse-simple.md/#type-de-reponse-nombre) pour plus de détail.
+    Voir [le type nombre](../🚀_Guide/Questions/13-reponse-simple.md/#type-de-reponse-nombre) pour plus de détail.
 
 
 ## Solution

@@ -31,7 +31,7 @@ Pour créer une question de type **Réponse simple**, remplir, pour toutes les v
     - A l'initialisation du questionnaire, tout champ texte vaut `null`
     - Quand on saisie une valeur, ex `"mon texte"`, puis qu'on efface cette valeur du champ, alors le champ texte vaut `""` et non pas `null` comme au début.
     
-    C'est pourquoi, pour gérer les cas de champ texte vide, il faut **[gérer la nullité](23-controles.md/#non-reponse)**. On remplace ainsi les valeurs `null` par `""` . <br>
+    C'est pourquoi, pour gérer les cas de champ texte vide, il faut **[gérer la nullité](../23-controles.md/#non-reponse)**. On remplace ainsi les valeurs `null` par `""` . <br>
     Ex de condition d'affichage d'un contrôle pour indiquer qu'un champ texte est vide
     ```
     nvl($VAR$, "") = ""
@@ -46,7 +46,7 @@ Pour créer une question de type **Réponse simple**, remplir, pour toutes les v
 !!! info
     - A l'initialisation du questionnaire, tout champ date vaut `null`
     - Quand on saisit une valeur, ex pour juste une année `2025`, puis qu'on efface cette valeur du champ, alors le champ date vaut `null` comme au début.VTL
-    - Pour gérer un champ Date vide il suffit d'utiliser [isnull()](../💻_VTL/fonctions-vtl.md/#isnull)
+    - Pour gérer un champ Date vide il suffit d'utiliser [isnull()](../../💻_VTL/fonctions-vtl.md/#isnull)
         ```
         isnull($DATE$)
         ```
@@ -56,11 +56,11 @@ Pour créer une question de type **Réponse simple**, remplir, pour toutes les v
     
         ??? example "Exemple"
             Si on collecte une date `ANNEE_NAIS` sous le format `AAAA-MM-JJ` et que l'on saisie les valeurs suivantes
-            ![alt text](../../img/pogues/date_input.png)
+            ![alt text](../../../img/pogues/date_input.png)
 
             alors la variabel `ANNEE_NAIS` aura la valeur `"2025-02-01"` est sera un texte
 
-        C'est pourquoi il est nécessaire de transtyper en utilisant la fonction [cast()](../💻_VTL/fonctions-vtl.md/#cast) ces variables en `date` pour les comparer. Voir [exemple d'utilisation](../💻_VTL/fonctions-vtl.md/#__tabbed_5_3)
+        C'est pourquoi il est nécessaire de transtyper en utilisant la fonction [cast()](../../💻_VTL/fonctions-vtl.md/#cast) ces variables en `date` pour les comparer. Voir [exemple d'utilisation](../../💻_VTL/fonctions-vtl.md/#__tabbed_5_3)
 
     - Dans cette même logique, cela veut dire que l'on peut directement afficher une variable de type date dans un libellé dans utiliser
 
@@ -74,18 +74,18 @@ Pour créer une question de type **Réponse simple**, remplir, pour toutes les v
 
     ??? example "Exemple d'utilisation d'une unité de mesure personnalisée"
         ___Choix de l'unité de mesure___
-        ![choix unite de mesure perso](../../img/pogues/choix-unite-de-mesure-perso.png)
+        ![choix unite de mesure perso](../../../img/pogues/choix-unite-de-mesure-perso.png)
         ___Exemple d'une expression VTL pour l'unité de mesure. `(if $DEST$ = "1" then "Dirhams" else "Euros")`___
-        ![unite mesure perso](../../img/pogues/unite-mesure-perso.png)
+        ![unite mesure perso](../../../img/pogues/unite-mesure-perso.png)
         ___Si on choisi "Espagne" (`DEST=2`) alors on tombe dans le `else` et l'unité mesurée est "Euros"___
-        ![unite mesure perso euro](../../img/pogues/unite-mesure-perso-euro.png)
+        ![unite mesure perso euro](../../../img/pogues/unite-mesure-perso-euro.png)
         ___Si on choisi "Maroc" (`DEST=1`) alors on tombe dans la condition du `if` et l'unité mesurée est "Dirham"___
-        ![unite mesure perso dirham](../../img/pogues/unite-mesure-perso-dirhams.png)
+        ![unite mesure perso dirham](../../../img/pogues/unite-mesure-perso-dirhams.png)
 
 !!! info
     - A l'initialisation du questionnaire, tout champ nombre vaut `null`
     - Quand on saisie une valeur, ex `86`, puis qu'on efface cette valeur du champ, alors le champ nombre vaut `null` comme au début.
-    - Pour gérer un champ Nombre vide il suffit d'utiliser [isnull()](../💻_VTL/fonctions-vtl.md/#isnull)
+    - Pour gérer un champ Nombre vide il suffit d'utiliser [isnull()](../../💻_VTL/fonctions-vtl.md/#isnull)
         ```
         isnull($NOMBRE$)
         ```
@@ -96,7 +96,7 @@ Pour créer une question de type **Réponse simple**, remplir, pour toutes les v
     - A l'initialisation du questionnaire, tout champ booléen vaut `null`. La case est visuellement décochée.
     - Quand on coche la case, alors la valeur collectée est `true`, puis quand on décoche, alors la valeur collectée est `false`.
     
-    Comme pour le champ texte, il faut **[gérer le cas de la nullité](23-controles.md/#non-reponse)**, on remplace les valeurs `null` par `false` pour gérer les cas où la case est décochée. <br>
+    Comme pour le champ texte, il faut **[gérer le cas de la nullité](../23-controles.md/#non-reponse)**, on remplace les valeurs `null` par `false` pour gérer les cas où la case est décochée. <br>
     Ex de condition d'affichage d'un contrôle pour indiquer qu'une case de type booléen n'est pas cochée.
     ```
     nvl($VAR$, false) = false
@@ -114,7 +114,7 @@ Pour créer une question de type **Réponse simple**, remplir, pour toutes les v
 !!! info
     - A l'initialisation du questionnaire, tout champ durée vaut `null`.
     - Quand on saisie une valeur, ex `2025` et `12` pour année/mois, puis qu'on efface ces deux valeurs des champs, alors le champ durée vaut `null` comme au début.
-    - Pour gérer un champ Durée vide il suffit d'utiliser [isnull()](../💻_VTL/fonctions-vtl.md/#isnull)
+    - Pour gérer un champ Durée vide il suffit d'utiliser [isnull()](../../💻_VTL/fonctions-vtl.md/#isnull)
         ```
         isnull($DUREE$)
         ```
