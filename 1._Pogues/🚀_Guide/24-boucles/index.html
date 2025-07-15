@@ -1275,18 +1275,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#boucle-sur-valeurs" class="md-nav__link">
+  <a href="#boucle-principale" class="md-nav__link">
     <span class="md-ellipsis">
-      Boucle sur valeurs
+      Boucle Principale
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Boucle Principale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#affichage-des-occurrences-new" class="md-nav__link">
+    <span class="md-ellipsis">
+      Affichage des occurrences (New ✨)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#boucle-liee" class="md-nav__link">
     <span class="md-ellipsis">
-      Boucle liée
+      Boucle Liée
     </span>
   </a>
   
@@ -3023,18 +3038,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#boucle-sur-valeurs" class="md-nav__link">
+  <a href="#boucle-principale" class="md-nav__link">
     <span class="md-ellipsis">
-      Boucle sur valeurs
+      Boucle Principale
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Boucle Principale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#affichage-des-occurrences-new" class="md-nav__link">
+    <span class="md-ellipsis">
+      Affichage des occurrences (New ✨)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#boucle-liee" class="md-nav__link">
     <span class="md-ellipsis">
-      Boucle liée
+      Boucle Liée
     </span>
   </a>
   
@@ -3074,40 +3104,95 @@
 
 
 <h1 id="les-boucles">Les boucles</h1>
-<p>Une boucle est une répétition d'un ensemble de séquences ou de sous-séquences du questionnaire.</p>
+<p>Une boucle est une répétition d'un ensemble de séquences ou de sous-séquences du questionnaire. On va appeler cet ensemble <strong>occurrence</strong>. <br>
+Ex : ensemble des questions pour identifier une personnes, <code class="highlight"><span class="n">PRENOM</span></code>, <code class="highlight"><span class="n">AGE</span></code>, <code class="highlight"><span class="n">SEXE</span></code>, etc.</p>
 <p>On peut concevoir dans Pogues deux types de boucles :</p>
-<ol>
-<li>des boucles qui s'appuient sur des valeurs (des nombres fixes ou issus de variables),</li>
-<li>des boucles qui s'appuient sur une autre boucle ou sur un tableau, que l'on appelle une <em>boucle liée</em>.</li>
-</ol>
-<p>Quel que soit son type, une boucle sera créée en cliquant dans la barre d'actions sur le bouton <em>+ Boucle</em>.</p>
-<h2 id="boucle-sur-valeurs">Boucle sur valeurs</h2>
+<ul>
+<li>des boucles qui s'appuient sur des valeurs (des nombres fixes ou issus de variables) : <strong>Boucle Principale</strong>,</li>
+<li>des boucles qui s'appuient sur une autre boucle ou sur un tableau : <strong>Boucle Liée</strong>.</li>
+</ul>
+<p>Quel que soit son type, une boucle sera créée en cliquant dans la barre d'actions sur le bouton <code class="highlight"><span class="o">+</span><span class="w"> </span><span class="n">Boucle</span></code>.</p>
+<h2 id="boucle-principale">Boucle Principale</h2>
 <p>Pour créer une telle boucle, il faut remplir les champs suivants :</p>
+<div class="admonition abstract">
+<p class="admonition-title">Description</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Nombre d'occurrences max = min</label><label for="__tabbed_1_2">Nombre d'occurrences max &lt;&gt; min</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <ul>
-<li><em>Identifiant</em>, par exemple <code class="highlight"><span class="n">B_LE_NOM_DE_MA_BOUCLE</span></code></li>
-<li><em>Minimum</em>, la valeur minimum de répétition</li>
-<li><em>Maximum</em>, la valeur maximum de répétition</li>
-<li><em>Début</em>, l'élément par lequel commence la boucle (une séquence ou une sous-séquence donc)</li>
-<li><em>Fin</em>, l'élément avec lequel termine la boucle - une séquence si on a commencé par une séquence, une sous-séquence dans l'autre cas.</li>
+<li><code class="highlight"><span class="n">Identifiant</span></code>, par exemple <code class="highlight"><span class="n">B_LE_NOM_DE_MA_BOUCLE</span></code></li>
+<li><code class="highlight"><span class="n">Nombre</span><span class="w"> </span><span class="n">d</span><span class="s">&#39;</span><span class="err">occurrences max identique à min</span></code>, ici vaut <strong>OUI</strong></li>
+<li><code class="highlight"><span class="n">Nombre</span><span class="w"> </span><span class="n">d</span>’<span class="n">occurrences</span></code>, le nombre de répétitions</li>
+<li><code class="highlight"><span class="n">Afficher</span><span class="w"> </span><span class="n">toutes</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">occurrences</span><span class="w"> </span><span class="n">sur</span><span class="w"> </span><span class="n">une</span><span class="w"> </span><span class="n">seule</span><span class="w"> </span><span class="n">page</span></code>, définit l'affichage des questions avec <strong>toutes les occurrences</strong> sur une même page ou avec <strong>une occurrence</strong> par page.</li>
+<li><code class="highlight"><span class="n">Début</span></code>, l'élément par lequel commence la boucle (une séquence ou une sous-séquence donc)</li>
+<li><code class="highlight"><span class="n">Fin</span></code>, l'élément avec lequel termine la boucle - une séquence si on a commencé par une séquence, une sous-séquence dans l'autre cas.</li>
 </ul>
-<h2 id="boucle-liee">Boucle liée</h2>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><code class="highlight"><span class="n">Identifiant</span></code>, par exemple <code class="highlight"><span class="n">B_LE_NOM_DE_MA_BOUCLE</span></code></li>
+<li><code class="highlight"><span class="n">Nombre</span><span class="w"> </span><span class="n">d</span><span class="s">&#39;</span><span class="err">occurrences max identique à min</span></code> : <strong>NON</strong></li>
+<li><code class="highlight"><span class="n">Nombre</span><span class="w"> </span><span class="n">d</span><span class="s">&#39;</span><span class="err">occurrences minimum</span></code>, la valeur minimum de répétitions</li>
+<li><code class="highlight"><span class="n">Nombre</span><span class="w"> </span><span class="n">d</span><span class="s">&#39;</span><span class="err">occurrences maximum</span></code>, la valeur maximum de répétitions</li>
+<li><code class="highlight"><span class="n">Début</span></code>, l'élément par lequel commence la boucle (une séquence ou une sous-séquence donc)</li>
+<li><code class="highlight"><span class="n">Fin</span></code>, l'élément avec lequel termine la boucle - une séquence si on a commencé par une séquence, une sous-séquence dans l'autre cas.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3 id="affichage-des-occurrences-new">Affichage des occurrences (New ✨)</h3>
+<p>Par défaut, <strong>toutes les occurrences</strong> d'une boucle sont affichées sur la même page. Dans le cas où le nombre d'occurrences max est identique au min, on peut décider de changer cet affichage via le paramètre <code class="highlight"><span class="n">Afficher</span><span class="w"> </span><span class="n">toutes</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">occurrences</span><span class="w"> </span><span class="n">sur</span><span class="w"> </span><span class="n">une</span><span class="w"> </span><span class="n">seule</span><span class="w"> </span><span class="n">page</span></code> en mettant <code class="highlight"><span class="n">NON</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Cette affichage n'est disponible que pour les enquêtes WEB en contexte Ménage</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple d'utilisation</p>
+<ul>
+<li>Regrouper les questions sur l'identité d'une personne (Prénom, Age, Sexe, etc) sur la même page pour <strong>chaque</strong> individu.</li>
+<li>Ici <strong>une occurrence</strong> = question <code class="highlight"><span class="n">PRENOM</span></code> + question <code class="highlight"><span class="n">SEXE</span></code> + question <code class="highlight"><span class="n">AGE</span></code></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Affichage des occurrences sur la même page</label><label for="__tabbed_2_2">Affichage d'une occurrence par page</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="glightbox" href="../../../img/pogues/loop-all-occu-same-page.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/loop-all-occu-same-page.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Page 1</label><label for="__tabbed_3_2">Page 2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="glightbox" href="../../../img/pogues/loop-all-occu-by-page-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/loop-all-occu-by-page-1.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" href="../../../img/pogues/loop-all-occu-by-page-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/loop-all-occu-by-page-2.png" /></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="boucle-liee">Boucle Liée</h2>
 <p>Pour créer une boucle liée, je remplis :</p>
+<div class="admonition abstract">
+<p class="admonition-title">Description</p>
 <ul>
-<li><em>Identifiant</em>, par exemple <code class="highlight"><span class="n">B_LE_NOM_DE_MA_BOUCLE</span></code></li>
-<li><em>Basé sur</em>, en allant chercher une structure répétée, c'est-à-dire une boucle ou un tableau</li>
-<li><em>Sauf</em>, permet d'exclure certaines répétitions de la boucle</li>
-<li><em>Début</em>, l'élément par lequel commence la boucle (une séquence ou une sous-séquence donc)</li>
-<li><em>Fin</em>, l'élément avec lequel termine la boucle - une séquence si on a commencé par une séquence, une sous-séquence dans l'autre cas.</li>
+<li><code class="highlight"><span class="n">Identifiant</span></code>, par exemple <code class="highlight"><span class="n">B_LE_NOM_DE_MA_BOUCLE</span></code></li>
+<li><code class="highlight"><span class="n">Basé</span><span class="w"> </span><span class="n">sur</span></code>, en allant chercher une structure répétée, c'est-à-dire une boucle ou un tableau</li>
+<li><code class="highlight"><span class="n">Sauf</span></code>, permet d'exclure certaines répétitions de la boucle</li>
+<li><code class="highlight"><span class="n">Début</span></code>, l'élément par lequel commence la boucle (une séquence ou une sous-séquence donc)</li>
+<li><code class="highlight"><span class="n">Fin</span></code>, l'élément avec lequel termine la boucle - une séquence si on a commencé par une séquence, une sous-séquence dans l'autre cas.</li>
 </ul>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Un élément <strong>important</strong> des boucles liées : si je crée une boucle <code class="highlight"><span class="n">B2</span></code> liée à une boucle <code class="highlight"><span class="n">B1</span></code>, toutes les variables collectées dans les occurences de B1 seront disponibles lors des répétitions de <code class="highlight"><span class="n">B2</span></code>.</p>
+<p>Un élément <strong>important</strong> des boucles liées : si je crée une boucle <code class="highlight"><span class="n">B2</span></code> liée à une boucle <code class="highlight"><span class="n">B1</span></code>, toutes les variables collectées dans les occurrences de <code class="highlight"><span class="n">B1</span></code> seront disponibles lors des répétitions de <code class="highlight"><span class="n">B2</span></code>.</p>
 </div>
 <h2 id="portee-des-variables-champ-niveau-de-calcul">Portée des variables (Champ "Niveau de calcul")</h2>
 <p>Se référer à la section <a href="../Variables/portee/">Portée des variables</a></p>
 <h2 id="exclusion">Exclusion</h2>
-<p>Le champ <em>Sauf</em> permet d'exclure dans une boucle liée certaines des répétitions.</p>
-<p>En reprenant l'exmple du paragraphe précédent, on pourrait par exemple exclure les mineurs avec la formule VTL :</p>
+<p>Le champ <code class="highlight"><span class="n">Sauf</span></code> permet d'exclure dans une boucle liée certaines des répétitions.</p>
+<p>En reprenant l'exemple du paragraphe précédent, on pourrait par exemple exclure les mineurs avec la formule VTL :</p>
 <div class="highlight"><pre><span></span><code><span class="n">AGE</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">18</span>
 </code></pre></div>
 <p>Ou mieux, exclure les individus hors champs en nous appuyant sur l'indicatrice calculée ! <img alt="😃" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f603.svg" title=":smiley:" /></p>
