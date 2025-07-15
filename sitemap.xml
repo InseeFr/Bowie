@@ -161,37 +161,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/12-questions/</loc>
-         <lastmod>2025-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/13-reponse-simple/</loc>
-         <lastmod>2025-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/14-liste-codes/</loc>
-         <lastmod>2025-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/15-reponse-choix-unique/</loc>
-         <lastmod>2025-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/15b-suggester/</loc>
-         <lastmod>2025-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/16-liens-2a2/</loc>
-         <lastmod>2025-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/17-reponse-choix-multiple/</loc>
          <lastmod>2025-07-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -257,6 +227,36 @@
     </url>
     <url>
          <loc>https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/Questionnaire/44-deplacer-element/</loc>
+         <lastmod>2025-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/Questions/</loc>
+         <lastmod>2025-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/Questions/13-reponse-simple/</loc>
+         <lastmod>2025-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/Questions/15-reponse-choix-unique/</loc>
+         <lastmod>2025-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/Questions/15b-suggester/</loc>
+         <lastmod>2025-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/Questions/16-liens-2a2/</loc>
+         <lastmod>2025-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/Questions/17-reponse-choix-multiple/</loc>
          <lastmod>2025-07-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
