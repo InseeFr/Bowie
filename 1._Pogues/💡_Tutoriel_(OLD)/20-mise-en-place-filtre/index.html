@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%92%A1_Tutoriel_%28%F0%9F%9A%A7%29/21-ajout-controle/">
+        <link rel="canonical" href="https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%92%A1_Tutoriel_%28OLD%29/20-mise-en-place-filtre/">
       
       
-        <link rel="prev" href="../20-mise-en-place-filtre/">
+        <link rel="prev" href="../17-finalisation-structure/">
       
       
-        <link rel="next" href="../22-ajout-infobulle/">
+        <link rel="next" href="../21-ajout-controle/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Ajout d'un contrôle - Atelier de Conception d'Enquêtes (Bowie)</title>
+        <title>Mise en place d'un filtre - Atelier de Conception d'Enquêtes (Bowie)</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ajout-dun-controle" class="md-skip">
+        <a href="#mise-en-place-dun-filtre" class="md-skip">
           Aller au contenu
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ajout d'un contrôle
+              Mise en place d'un filtre
             
           </span>
         </div>
@@ -343,7 +343,7 @@
               
   
   <span class="md-ellipsis">
-    💡 Tutoriel (🚧)
+    💡 Tutoriel (OLD)
   </span>
   
 
@@ -359,7 +359,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
-            💡 Tutoriel (🚧)
+            💡 Tutoriel (OLD)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -537,27 +537,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../20-mise-en-place-filtre/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Mise en place d'un filtre
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -574,12 +553,33 @@
         
   
   <span class="md-ellipsis">
-    Ajout d'un contrôle
+    Mise en place d'un filtre
   </span>
   
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-ajout-controle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ajout d'un contrôle
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2963,37 +2963,42 @@
                   
 
 
-<h1 id="ajout-dun-controle">Ajout d'un contrôle</h1>
-<p>On souhaite pouvoir s'assurer d'une bonne qualité de réponse aux différentes questions que l'on propose. Pour cela, on peut utiliser le mécanisme de contrôle inhérent aux outils de l'atelier.</p>
+<h1 id="mise-en-place-dun-filtre">Mise en place d'un filtre</h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Actuellement, seuls les contrôles de format, par exemple une valeur minimum dans un champ numérique, sont bloquants. Les contrôles de cohérence comme celui que l'on s'apprête à créer ne bloque pas le déroulement du questionnaire.</p>
+<p>À partir de cette section, il est utile de s'être familiarisé avec VTL en parcourant <a href="../../%F0%9F%92%BB_VTL/">le guide dédié</a> et le consultant régulièrement.</p>
 </div>
-<p>Ici, on va créer un contrôle affichant un message d'incitation si l'on ne donne pas son prénom.</p>
-<p>Pour cela, on va modifier la question dont l'identifiant est PRENOM (en cliquant sur _Voir le détail).</p>
-<p><a class="glightbox" href="../../../img/pogues/controle-modification-question.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Modification de la question PRENOM" src="../../../img/pogues/controle-modification-question.png" /></a></p>
-<p>On choisit ensuite l'onglet <em>Contrôles</em>.</p>
-<p>Pour créer un contrôle, il faut remplir quatre champs :</p>
+<p>L'utilisation de filtres permet de déterminer l'affichage (ou non) d'une ou plusieurs séquences, sous-séquences ou questions.</p>
+<p>Pour cela, nous allons nous appuyer sur la fonctionnalité "Filtre" de Pogues mais aussi sur le langage VTL pour l'expression de la condition.</p>
+<p>Pour créer un filtre, il suffit de cliquer sur le bouton "+ Filtre" dans la barre d'action. La fenêtre modale qui s'ouvre affiche les champs :</p>
 <ul>
-<li><em>Description du contrôle</em> Un texte permettant de décrire le contrôle,</li>
-<li><em>Condition d'affichage</em> Une expression VTL qui déclenche le contrôle,</li>
-<li><em>Message d'erreur</em> Le texte qui s'affiche lorsque l'erreur est levée,</li>
-<li><em>Criticité</em> Un champ informatif sur le degré d'importance de l'erreur (actuellement n'a aucune incidence sur l'affichage).</li>
+<li><em>Description</em> : un libellé qui sera visible sur le questionnaire papier et remplacera le filtre dynamique des questionnaires web ou enquêteur</li>
+<li><em>Condition d'affichage</em> : l'expression VTL qui si elle est <strong>vraie</strong> déclenche l'affichage des éléments filtrés</li>
+<li><em>Début</em> : détermine où commence la couverture du filtre</li>
+<li><em>Fin</em> : détermine où termine la couverture du filtre.</li>
 </ul>
-<p>On veut déclencher le contrôle en cas de non-réponse, on va tester dans notre cas :</p>
+<p>Le cas d'usage dans le cadre de ce tutoriel est l'affichage des modules (ou séquences) qui suivent la première question (<a href="../11-creation-premiere-sequence/#creation-dune-question">"Souhaitez-vous répondre à ce questionnaire ?"</a>). On veut donc s'assurer que la variable associée à cette question (<code class="highlight"><span class="n">OKREP</span></code>) à la bonne valeur (<code class="highlight"><span class="s">&quot;1&quot;</span></code> ici qui est le code associé à la modalité "Oui").</p>
+<p>Notre condition d'affichage est donc :</p>
+<div class="highlight"><pre><span></span><code><span class="n">```vtl</span>
+<span class="n">$OKREP$ = &quot;1&quot;</span>
+<span class="n">```</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Bien noter ici :</p>
 <ul>
-<li>si l'on n'est jamais entré dans le champ de réponse (la variable est <code class="highlight"><span class="n">null</span></code> au sens VTL),</li>
-<li>si l'on est entré dans le champ mais qu'on n'a rien saisi (la variable est égale à une chaîne de caractères vide, ou <code class="highlight"><span class="s">&quot;&quot;</span></code>).</li>
+<li>la variable est entourée du caractère <code class="highlight"><span class="o">$</span></code></li>
+<li>le code est bien du texte, il faut l'entourer par le caractère <code class="highlight"><span class="s">&quot;</span></code></li>
 </ul>
-<p>L'expression VTL sera donc 
-<div class="highlight"><pre><span></span><code><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="p">)</span>
-</code></pre></div></p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>On notera l'utilisation de la fonction <code class="highlight"><span class="n">isnull</span></code> qui permet de détecter si une variable n'a pas été valorisée (cf. guide VTL).</p>
+<p>En toute logique, le filtre que l'on est en train de créer va masquer les éléments choisis dès que la variable <code class="highlight"><span class="n">OKREP</span></code> aura une valeur différente de "1" <img alt="🤓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f913.svg" title=":nerd:" /></p>
 </div>
-<p>On aura une configuration sensiblement similaire à <img alt="👇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f447.svg" title=":point_down:" /></p>
-<p><a class="glightbox" href="../../../img/pogues/controle-configuration.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Configuration du contrôle" src="../../../img/pogues/controle-configuration.png" /></a></p>
+<p>Il nous reste à préciser que le filtre à pour champ d'action les modules 2 à 4. Il faut bien noter que les éléments choisis dans <em>Début</em> et <em>Fin</em> sont <strong>inclus</strong> dans le périmètre du filtre.</p>
+<p><a class="glightbox" href="../../../img/pogues/filtre-configuration.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Configuration du filtre" src="../../../img/pogues/filtre-configuration.png" /></a></p>
+<p>Le filtre que l'on vient de créer devient visible dans la vue d'ensemble du questionnaire (sur les éléments choisis dans <em>Début</em> et <em>Fin</em>), on peut le modifier en cliquant dessus.</p>
+<p><a class="glightbox" href="../../../img/pogues/filtre-resultat.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Résultat du filtre" src="../../../img/pogues/filtre-resultat.png" /></a></p>
 
 
 
@@ -3023,7 +3028,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../20-mise-en-place-filtre/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Mise en place d&#39;un filtre">
+          <a href="../17-finalisation-structure/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Finalisation de la structure du questionnaire">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3033,20 +3038,20 @@
                 Précédent
               </span>
               <div class="md-ellipsis">
-                Mise en place d'un filtre
+                Finalisation de la structure du questionnaire
               </div>
             </div>
           </a>
         
         
           
-          <a href="../22-ajout-infobulle/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Insertion d&#39;une infobulle">
+          <a href="../21-ajout-controle/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Ajout d&#39;un contrôle">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                Insertion d'une infobulle
+                Ajout d'un contrôle
               </div>
             </div>
             <div class="md-footer__button md-icon">

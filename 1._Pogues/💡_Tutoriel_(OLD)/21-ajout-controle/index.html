@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%92%A1_Tutoriel_%28%F0%9F%9A%A7%29/16-creation-qcm/">
+        <link rel="canonical" href="https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%92%A1_Tutoriel_%28OLD%29/21-ajout-controle/">
       
       
-        <link rel="prev" href="../15-creation-tableau/">
+        <link rel="prev" href="../20-mise-en-place-filtre/">
       
       
-        <link rel="next" href="../17-finalisation-structure/">
+        <link rel="next" href="../22-ajout-infobulle/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Création d'une question à choix multiples - Atelier de Conception d'Enquêtes (Bowie)</title>
+        <title>Ajout d'un contrôle - Atelier de Conception d'Enquêtes (Bowie)</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creation-dune-question-a-choix-multiples" class="md-skip">
+        <a href="#ajout-dun-controle" class="md-skip">
           Aller au contenu
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Création d'une question à choix multiples
+              Ajout d'un contrôle
             
           </span>
         </div>
@@ -343,7 +343,7 @@
               
   
   <span class="md-ellipsis">
-    💡 Tutoriel (🚧)
+    💡 Tutoriel (OLD)
   </span>
   
 
@@ -359,7 +359,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
-            💡 Tutoriel (🚧)
+            💡 Tutoriel (OLD)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -495,19 +495,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../16-creation-qcm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -516,7 +507,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -568,10 +558,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../21-ajout-controle/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -580,6 +579,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -2963,18 +2963,37 @@
                   
 
 
-<h1 id="creation-dune-question-a-choix-multiples">Création d'une question à choix multiples</h1>
-<p>La prochaine question sera à choix multiples. Pour cela :</p>
-<ul>
-<li>on crée une question avec le libellé "Avez-vous déjà exercé les activités suivantes au sein de votre carrière ?" et l'identifiant "CARRIERE"</li>
-<li>le <em>Type de question</em> est "Réponse à choix multiple"</li>
-<li>dont la réponse est basée sur une liste de code <a href="../../../data/metiers.csv">"metiers.csv"</a></li>
-<li>pour la <em>Représentation des réponse</em> on garde le choix par défaut "Booléen".</li>
-</ul>
+<h1 id="ajout-dun-controle">Ajout d'un contrôle</h1>
+<p>On souhaite pouvoir s'assurer d'une bonne qualité de réponse aux différentes questions que l'on propose. Pour cela, on peut utiliser le mécanisme de contrôle inhérent aux outils de l'atelier.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>La génération des variables ici va générer autant de variables <em>booléennes</em> (vrai / faux) que d'éléments de la liste de codes.</p>
+<p>Actuellement, seuls les contrôles de format, par exemple une valeur minimum dans un champ numérique, sont bloquants. Les contrôles de cohérence comme celui que l'on s'apprête à créer ne bloque pas le déroulement du questionnaire.</p>
 </div>
+<p>Ici, on va créer un contrôle affichant un message d'incitation si l'on ne donne pas son prénom.</p>
+<p>Pour cela, on va modifier la question dont l'identifiant est PRENOM (en cliquant sur _Voir le détail).</p>
+<p><a class="glightbox" href="../../../img/pogues/controle-modification-question.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Modification de la question PRENOM" src="../../../img/pogues/controle-modification-question.png" /></a></p>
+<p>On choisit ensuite l'onglet <em>Contrôles</em>.</p>
+<p>Pour créer un contrôle, il faut remplir quatre champs :</p>
+<ul>
+<li><em>Description du contrôle</em> Un texte permettant de décrire le contrôle,</li>
+<li><em>Condition d'affichage</em> Une expression VTL qui déclenche le contrôle,</li>
+<li><em>Message d'erreur</em> Le texte qui s'affiche lorsque l'erreur est levée,</li>
+<li><em>Criticité</em> Un champ informatif sur le degré d'importance de l'erreur (actuellement n'a aucune incidence sur l'affichage).</li>
+</ul>
+<p>On veut déclencher le contrôle en cas de non-réponse, on va tester dans notre cas :</p>
+<ul>
+<li>si l'on n'est jamais entré dans le champ de réponse (la variable est <code class="highlight"><span class="n">null</span></code> au sens VTL),</li>
+<li>si l'on est entré dans le champ mais qu'on n'a rien saisi (la variable est égale à une chaîne de caractères vide, ou <code class="highlight"><span class="s">&quot;&quot;</span></code>).</li>
+</ul>
+<p>L'expression VTL sera donc 
+<div class="highlight"><pre><span></span><code><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="p">)</span>
+</code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On notera l'utilisation de la fonction <code class="highlight"><span class="n">isnull</span></code> qui permet de détecter si une variable n'a pas été valorisée (cf. guide VTL).</p>
+</div>
+<p>On aura une configuration sensiblement similaire à <img alt="👇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f447.svg" title=":point_down:" /></p>
+<p><a class="glightbox" href="../../../img/pogues/controle-configuration.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Configuration du contrôle" src="../../../img/pogues/controle-configuration.png" /></a></p>
 
 
 
@@ -3004,7 +3023,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../15-creation-tableau/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Création d&#39;un tableau">
+          <a href="../20-mise-en-place-filtre/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Mise en place d&#39;un filtre">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3014,20 +3033,20 @@
                 Précédent
               </span>
               <div class="md-ellipsis">
-                Création d'un tableau
+                Mise en place d'un filtre
               </div>
             </div>
           </a>
         
         
           
-          <a href="../17-finalisation-structure/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Finalisation de la structure du questionnaire">
+          <a href="../22-ajout-infobulle/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Insertion d&#39;une infobulle">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                Finalisation de la structure du questionnaire
+                Insertion d'une infobulle
               </div>
             </div>
             <div class="md-footer__button md-icon">
