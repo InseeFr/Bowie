@@ -1,7 +1,7 @@
 # Guide
 
 Ce guide apporte un éclairage complet sur les fonctionnalités de conception de questionnaire à travers Pogues. 
-Assez fortement revu en juin 2024, il est à coupler avec [le tutoriel d'autoformation](../💡_Tutoriel_(🚧)/index.md).
+Assez fortement revu en juin 2024, il est à coupler avec [le tutoriel d'autoformation](../💡_Tutoriel_(OLD)/index.md).
 
 En cas de sujets de type VTL, se reporter à [:octicons-device-desktop-16: Le VTL dans Pogues](../💻_VTL/index.md).
 
