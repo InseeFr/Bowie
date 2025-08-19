@@ -1,4 +1,6 @@
-# Création d'une variable calculée
+# Les variables calculées
+
+## Création d'une variable calculée
 
 Il peut être nécessaire de calculer des variables à partir d'autres variables du questionnaire pour certains contrôles notamment.
 Une variable calculée se définit via l'onglet "Variables calculées" de n'importe quelle question du questionnaire.

@@ -1,4 +1,6 @@
-# Générer les variables collectées
+# Les variables collectées
+
+## Générer les variables collectées
 
 1. Pour toute question créée, il faut générer les variables collectées : aller dans l'onglet `Variables collectées`, cliquer sur le bouton `Générer les variables collectées`.
     
