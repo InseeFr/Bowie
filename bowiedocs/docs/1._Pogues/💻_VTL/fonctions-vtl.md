@@ -160,7 +160,7 @@
 
             ![alt text](../../img/pogues/vtl_correct_cast.png)
     === "Comparaison de Nombre"
-        Dans le cas où on a une variable externe, comme elles sont de base tout importées comme des textes (cf [import de données externes](../../2._Public_Enemy/guide/1-guide-pe-echantillon.md/#point-dattention)), il faut les transtyper en nombre (`integer`)
+        Dans le cas où on a une variable externe, comme elles sont de base tout importées comme des textes (cf [import de données externes](../🚀_Guide/Personnalisation/2-guide-perso-echantillon.md#point-dattention)), il faut les transtyper en nombre (`integer`)
         ```
         cast($VARIABLE_EXTERNE$, integer) < 25
         ```

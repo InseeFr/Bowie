@@ -23,7 +23,7 @@ Afin de récupérer ces variables dans le second questionnaire :
 - je crée dans celui-ci la boucle `BOUCLE_PRINCIPALE`, avec un min et max dont la valeur est la variable `NBHAB` (à créer, voir ci-dessous),
 - je crée  les variables externes `NBHAB` (Portée Questionnaire), `PRENOM` et `AGE` (portée `BOUCLE_PRINCIPALE`).
 
-Il faudra ensuite fournir à l'intégration un fichier CSV contenant les variables et valeurs ad hoc (voir [ici](../../../2._Public_Enemy/guide/1-guide-pe-echantillon.md), section "Variables de portée Boucle")
+Il faudra ensuite fournir à l'intégration un fichier CSV contenant les variables et valeurs ad hoc (voir [ici](../Personnalisation/2-guide-perso-echantillon.md), section "Variables de portée Boucle")
 
 !!! danger
     Eviter de finir le nom d'une variable externe par une valeur numérique.

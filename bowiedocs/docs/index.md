@@ -8,6 +8,6 @@ Il propose :
 - [un générateur de questionnaires](3._Eno/index.md)
 - une bibliothèque de [composants graphiques incluant un moteur de contrôle](4._Lunatic/index.md)
 - deux solutions d'orchestration de ces composants pour [le web](5._Orchestrateurs/Stromae-DSFR/index.md) d'une part et [la collecte par enquêteur](5._Orchestrateurs/Queen/index.md) d'autre part
-- [une application de visualisation enrichie des questionnaires](2._Public_Enemy/index.md)
+- [une personnalisation pour une visualisation enrichie des questionnaires](1._Pogues/🚀_Guide/Personnalisation/index.md)
 
 Bowie est développé à l'Insee en [open-source](https://github.com/InseeFr/Bowie). Il s'articule idéalement pour la mise en oeuvre de collectes de données avec la plateforme de collecte _open-source_ de l'Insee.
