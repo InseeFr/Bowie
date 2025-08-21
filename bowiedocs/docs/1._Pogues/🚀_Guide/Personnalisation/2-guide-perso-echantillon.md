@@ -162,3 +162,59 @@ Pour récupérer le fichier json attendu du questionnaire, il suffit de faire
 
     On clique sur valider dans la pop-up de confirmation pour finaliser la création de la personnalisation 
 
+!!! tip "Plusieurs UE en même temps"
+
+    Il est possible de charger plusieurs UE en même temps. Il suffit d'avoir un fichier json sous forme de liste, `[{"data" : {...}},{"data" : {...}},{"data" : {...}}]` et avec chaque object `{"data" : {...}}` représentant chaque UE.
+    ```json
+    [
+        {
+            "data": {
+                "CALCULATED": {},
+                "EXTERNAL": {
+                    "ADR": "mon adresse"
+                },
+                "COLLECTED": {
+                    "T_NHAB": {
+                        "COLLECTED": 2
+                    },
+                    "T_PRENOM": {
+                        "COLLECTED": [
+                            "Pipo",
+                            "Popi"
+                        ]
+                    }
+                }
+            },
+            "stateData": {
+                "state": "INIT",
+                "date": 1755698985271,
+                "currentPage": "3"
+            }
+        },
+        {
+            "data": {
+                "CALCULATED": {},
+                "EXTERNAL": {
+                    "ADR": "100 Quai de la Chenille verte"
+                },
+                "COLLECTED": {
+                    "T_NHAB": {
+                        "COLLECTED": 3
+                    },
+                    "T_PRENOM": {
+                        "COLLECTED": [
+                            "TOTO",
+                            "TATA",
+                            "TITI"
+                        ]
+                    }
+                }
+            },
+            "stateData": {
+                "state": "INIT",
+                "date": 1755698985272,
+                "currentPage": "2"
+            }
+        },
+    ]
+    ```
