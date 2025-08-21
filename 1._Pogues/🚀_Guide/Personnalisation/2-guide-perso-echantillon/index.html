@@ -3104,7 +3104,7 @@ Par exemple, pour une variable externe <code class="highlight"><span class="n">P
 <li>une visualisation simple depuis Pogues (ex visualisation Web ménage)</li>
 <li>remplir les question que l'on souhaite pré-saisir et télécharger le fichier de données
     Ici on saisie des valeurs pour la variable PRENOM qui est dans une boucle
-    <a class="glightbox" href="../../../../img/personnalisation/image-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/personnalisation/image-2.png" /></a>
+    <a class="glightbox" href="../../../../img/personnalisation/ex-download-collected-data.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/personnalisation/ex-download-collected-data.png" /></a>
     un récupère un json de la forme suivante
     <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -3131,12 +3131,12 @@ Par exemple, pour une variable externe <code class="highlight"><span class="n">P
 </code></pre></div></li>
 <li>
 <p>On charge ensuite le fichier</p>
-<p><a class="glightbox" href="../../../../img/personnalisation/image-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/personnalisation/image-4.png" /></a></p>
+<p><a class="glightbox" href="../../../../img/personnalisation/perso-upload-data.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/personnalisation/perso-upload-data.png" /></a></p>
 <details class="warning">
 <summary>Variables externes manquantes</summary>
 <p>Dans une visualisation simple depuis Pogues, il n'y a pas de variables externes, donc il n'y en a pas dans le json de données téléchargé non plus. Il faut les ajouter si besoin dans l'attribut <code class="highlight"><span class="s">&quot;EXTERNAL&quot;</span></code></p>
 <p>Ex : dans mon cas il me manque la variable externe <code class="highlight"><span class="n">ADR</span></code> car elle est définie dans mon questionnaire mais pas dans mon fichier json. Un message d'erreur apparait alors au moment de charger le fichier
-<a class="glightbox" href="../../../../img/personnalisation/image-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/personnalisation/image-3.png" /></a></p>
+<a class="glightbox" href="../../../../img/personnalisation/perso-upload-json-with-missing-data.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/personnalisation/perso-upload-json-with-missing-data.png" /></a></p>
 <p>Il suffit de modifier le fichier ane ajoutant un attribut <code class="highlight"><span class="s">&quot;ADR&quot;</span></code> dans <code class="highlight"><span class="s">&quot;EXTERNAL&quot;</span></code> pour que cela fonctionne.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -3167,7 +3167,7 @@ Par exemple, pour une variable externe <code class="highlight"><span class="n">P
 </li>
 <li>
 <p>Enfin on valide
-    <a class="glightbox" href="../../../../img/personnalisation/image-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/personnalisation/image-5.png" /></a></p>
+    <a class="glightbox" href="../../../../img/personnalisation/perso-validate.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/personnalisation/perso-validate.png" /></a></p>
 <p>On clique sur valider dans la pop-up de confirmation pour finaliser la création de la personnalisation </p>
 </li>
 </ol>
