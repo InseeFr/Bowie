@@ -92,7 +92,7 @@ Pour récupérer le fichier json attendu du questionnaire, il suffit de faire
 1. une visualisation simple depuis Pogues (ex visualisation Web ménage)
 1. remplir les question que l'on souhaite pré-saisir et télécharger le fichier de données
     Ici on saisie des valeurs pour la variable PRENOM qui est dans une boucle
-    ![alt text](../../../img/personnalisation/image-2.png)
+    ![alt text](../../../img/personnalisation/ex-download-collected-data.png)
     un récupère un json de la forme suivante
     ```json
     {
@@ -120,13 +120,13 @@ Pour récupérer le fichier json attendu du questionnaire, il suffit de faire
     ```
 1. On charge ensuite le fichier
 
-    ![alt text](../../../img/personnalisation/image-4.png)
+    ![alt text](../../../img/personnalisation/perso-upload-data.png)
 
     ??? warning "Variables externes manquantes"
         Dans une visualisation simple depuis Pogues, il n'y a pas de variables externes, donc il n'y en a pas dans le json de données téléchargé non plus. Il faut les ajouter si besoin dans l'attribut `"EXTERNAL"`
 
         Ex : dans mon cas il me manque la variable externe `ADR` car elle est définie dans mon questionnaire mais pas dans mon fichier json. Un message d'erreur apparait alors au moment de charger le fichier
-        ![alt text](../../../img/personnalisation/image-3.png)
+        ![alt text](../../../img/personnalisation/perso-upload-json-with-missing-data.png)
 
         Il suffit de modifier le fichier ane ajoutant un attribut `"ADR"` dans `"EXTERNAL"` pour que cela fonctionne.
     
@@ -158,7 +158,7 @@ Pour récupérer le fichier json attendu du questionnaire, il suffit de faire
         ```
 
 1. Enfin on valide
-    ![alt text](../../../img/personnalisation/image-5.png)
+    ![alt text](../../../img/personnalisation/perso-validate.png)
 
     On clique sur valider dans la pop-up de confirmation pour finaliser la création de la personnalisation 
 
