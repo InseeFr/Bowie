@@ -1,5 +1,19 @@
 # Fonctions VTL et usages
 
+## Liste des opérateurs
+
+|    VTL     | Opérateur         |
+|:----------:| ----------------- |
+|  `A = B`   | A est égal à B    |
+|  `A + B`   | A plus B          |
+|  `A - B`   | A moins B         | 
+|  `A * B`   | A fois B          |
+|   `and`    | et logique        |
+|    `or`    | ou logique        |
+|  `A <> B`  | A différent de B  |
+|  `A / B`   | A divisé par B    |
+| `A \|\| B` | concaténer A et B |
+
 ## Liste de fonctions
 
 ### Les plus utilisés
