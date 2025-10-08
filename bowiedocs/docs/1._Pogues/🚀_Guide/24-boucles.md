@@ -34,7 +34,7 @@ Pour créer une telle boucle, il faut remplir les champs suivants :
 
 Par défaut, **toutes les occurrences** d'une boucle sont affichées sur la même page. Dans le cas où le nombre d'occurrences max est identique au min, on peut décider de changer cet affichage via le paramètre `Afficher toutes les occurrences sur une seule page` en mettant `NON`
 
-!!! Warning "Cette affichage n'est disponible que pour les enquêtes WEB en contexte Ménage"
+!!! Warning "La fonctionnalité _Afficher une occurrence par page_ est réservée aux questionnaires web en contexte ménage."
 
 !!! example "Exemple d'utilisation"
     - Regrouper les questions sur l'identité d'une personne (Prénom, Age, Sexe, etc) sur la même page pour **chaque** individu.
