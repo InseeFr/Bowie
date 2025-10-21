@@ -148,7 +148,7 @@
     | `"1995"`      | `cast($MA_VARIABLE$, date, "YYYY-MM-DD")`   | `1995-01-01` (`date`) |
 
 ??? example "Exemple d'utilisation"
-    === "Personnalisation une libellé"
+    === "Personnalisation d'un libellé"
         Par exemple on veut afficher dans un libellé l'âge d'une personne. Un libellé de question ne peut interpréter que
         
         - **des textes en dur** : tout texte positionné entre des doubles quotes `"mon texte"`, 
