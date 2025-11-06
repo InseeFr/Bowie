@@ -19,3 +19,8 @@ Il faut "Spécifier la liste de codes" (c'est-à-dire décrire les modalités de
 Le Suggester est le composant de recherche sur liste. Il permet d'offrir une recherche dynamique sur des listes volumineuses avec la présentation d'échos de réponse au fur et à mesure de la saisie.
 
 Plus de détails dans la page [Suggester](15b-suggester.md).
+
+
+## Filtrer des modalités
+
+Il est possible de filtrer la liste de modalités associée à la QCU selon des formules VTL. Pour plus d'info, voir la doc [Filtrer une liste de codes](../14-liste-codes.md/#filtrer-une-liste-de-codes)
