@@ -1,6 +1,6 @@
 # Les variables externes
 
-!!! question "Variables Externes"
+!!! question "Définition"
     Pogues permet de référencer dans le questionnaire des variables externes, c'est à dire des variables qui sont fournies au chargement du questionnaire lors de la collecte, en provenance d'un fichier de données produit à partir de données connues et attachées à l'unité enquêtée.
 
 !!! note

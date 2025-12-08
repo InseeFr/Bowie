@@ -50,12 +50,27 @@ Pour finaliser la création, on appuie sur le bouton "Valider" en bas de la fen�
     | `QC` | `"Questionnaire commun"` | 
     | `FIN` | `"Fin du questionnaire"` | 
 
+??? success "Solution"
+    ![alt text](solution1-seq-created.png)
+
 !!! abstract "Pour aller plus loin"
     - [Les Séquence](../🚀_Guide/10-sequences.md)
 
-## Création d'une question
+!!! Mais ce n'est pas fini... 
+    On peut voir que le questionnaire est toujours mécontent et nous indique qu'il faut aussi créer au moins une question, ce que nous allons faire de ce pas ! 
 
-Dans la barre des actions, le bouton "+ Question" permet la création d'une question.
+## Création d'une question
+Nous allons maintenant créer la première question de nôtre questionnaire et la placer dans la première séquence.
+
+1. PLacez vous sur la première séquence `LOG` : cliquer sur le bloc associé à `LOG`.     
+    _Vous devez voir qu'une fois sélectionné, le bloc grossit et est mis en évidence par l'encadré en bleu._
+    ![alt text](seq-bloc-focused.png)
+2. Dans la barre des actions, le bouton "+ Question" permet la création d'une question.
+3. Suivez les prochaines indications afin de spécifier une question avec les informations suivantes : 
+    - Un identifiant `T_NHAB` 
+    - Une réponse simple 
+    - Un type numérique 
+    - Une variable collectée associée même identifiant `T_NHAB` et les mêmes paramètres
 
 ### Identification
 
@@ -83,7 +98,7 @@ Pogues averti qu'il manque des informations dans l'onglet "Variables collectées
 
 ![alt text](question-creation-missing-collected-var.png)
 
-Pour cela, il reste une dernière étape, la création de la variable sous-jacente.
+Pour cela, il reste une dernière étape, la création de la variable sous-jacente (appelé aussi "Variable collectée" associée).
 
 ### Création de la variable
 
@@ -96,15 +111,34 @@ On peut enfin valider la question en cliquant sur le plus gros bouton "Valider" 
 ![alt text](question-creation-generate-collected-var-validation.png)
 
 !!! Note
-
     Lorsque vous validez une question, une fenêtre peut apparaître avec le texte "Modifications non validées. Merci de valider toutes les actions sur l'élément.".
+    ![alt text](question-creation-validate-edited-data-modal.png)
 
     Cela signifie tout simplement que certains champs à l'intérieur de la question n'ont pas été explicitement validés (à l'aide d'un bouton de validation dédié).
 
     Si vous êtes sûr du contenu de ces éléments, vous pouvez tout simplement cliquer sur _Valider en l'état_, l'ensemble de ce que vous avez saisi sera sauvegardé.
 
+!!! tip
+    Lorsqu'on est sur l'onglet des "Variables Collectée". On peut cliquer sur la variable afin de voir les informations associées
+    ![alt text](generated-collected-var-info.png)
+
+    Ici, seul les champs _Identifiant_ et _Libellé_ sont modifiables. Ces champs sont important pour la documentation de vos variables dans la suite du processus de l'enquête ! Il faut donc leur donner un nom et une description plus parlante que celle donnée par défaut.
+
+    !!! warning "Mais pas si vite !"
+        Dans le cadre de ce tutoriel, et en général lors de la construction d'un questionnaire, nous préconisions de **ne pas toucher à ces champs et laisser les valeurs par défaut**
+
+        À chaque fois qu'on régénère les variables, Pogues va écraser tous les noms des libellés et identifiant et il faudra tout renommer à la main. Cela peut vite devenir fastidieux sur de gros tableaux ou QCM.
+
+    Les autres champs ne sont pas modifiables car sont **directement associés aux paramètres de la question**. Si jamais ces informations sont incorrectes, c'est que votre question l'est aussi. Il faut alors retourner sur l'onglet "Format des réponses" et changer ces paramètres en conséquence.
+
 !!! abstract "Pour aller plus loin"
     - [Les questions](../🚀_Guide/Questions/index.md)
+    - [Variables Collectées](../🚀_Guide/Variables/variables-collectees.md)
+    - [Nommage des variables](../🚀_Guide/Variables/nommage.md)
+
+!!! success "Solution"
+    Pogues est enfin content ! Il ne râle plus et on peut enfin **sauvegarder** nôtre questionnaire.
+    ![alt text](survey-with-1st-question.png)
 
 ## Sauvegarde du questionnaire
 
