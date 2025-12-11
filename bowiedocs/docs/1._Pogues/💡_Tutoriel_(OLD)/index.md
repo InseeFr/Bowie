@@ -10,11 +10,7 @@
 !!! tip
     Pour bénéficier pleinement de ce tutoriel, nous vous encourageons à créer vos propres questionnaires sur cet [espace d'exploration](https://conception-questionnaires.demo.insee.io/). Plus d'info [ici](00-demo-env.md)
 
-Pogues est l'interface graphique permettant de créer des questionnaires utilisables à travers l'ensemble de l'écosystème Bowie. Un triple principe est au coeur de cette interface :
-
-- parler le langage du concepteur,
-- permettre des itérations rapides,
-- produire le modèle du questionnaire à travers des standards de métadonnées.
+Pogues est l'interface graphique permettant de créer des questionnaires.
 
 
 ## Présentation du questionnaire pour le tutoriel 📄
@@ -42,5 +38,5 @@ Nous allons créer un questionnaire avec la structure suivante :
 !!! tip
     Nous détaillerons toutes ces notions dans les parties suivantes.
 
-## Let's go 🚀
+## C'est parti ! 🚀
 Débutons par la [création d'un questionnaire](10-creation-questionnaire.md).

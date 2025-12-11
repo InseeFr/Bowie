@@ -1,9 +1,7 @@
 # Les variables collectées
 
 !!! question "Définition"
-    Les **variables collectées** sont la donnée principale d'une enquête. Comme son nom l'indique ce sont des **variables** qui **collectent** l'information que l'on veut récupérer de l'enquêté, grâce à *une* question, posée au sein d'un questionnaire structuré. Ces variables seront ensuite analysées et utilisées pour la conception d'indicateurs statistiques liés à la thématique de l'enquête.
-
-    voir aussi 
+    Les **variables collectées** sont la donnée principale d'une enquête. Comme son nom l'indique ce sont des **variables** qui **collectent** l'information que l'on veut récupérer de l'enquêté, grâce à **une** question, posée au sein d'un questionnaire structuré. Ces variables seront ensuite analysées et utilisées pour la conception d'indicateurs statistiques liés à la thématique de l'enquête.
 
 ## Générer les variables collectées
 

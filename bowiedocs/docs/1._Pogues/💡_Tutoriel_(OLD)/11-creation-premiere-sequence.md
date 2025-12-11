@@ -9,12 +9,13 @@ Donnons-lui du contenu ! :smile:
     Un questionnaire est composé de séquences, sous-séquences et questions. Les possibilités d'articulation sont les suivantes :
 
     ```
-    |- Séquence
-    |--- Question
-    |--- Sous-séquence
-    |----- Question
-    ```
-    
+    Questionnaire
+    |-- [Séquence]
+        |-- [Question]
+        |-- [Sous-séquence]
+            |-- [Question]
+    ``` 
+
     Un questionnaire doit contenir au moins une séquence et une question.
     Une séquence contient des questions et/ou des sous-séquences. Une sous-séquence peut contenir des questions.
 
@@ -30,7 +31,7 @@ Une fenêtre modale s'ouvre avec deux champs à remplir :
 
 Les modes de collecte restent les mêmes que ceux du questionnaire.
 
-!!! example
+!!! example "Cas pratique"
     Saisissons la première séquence avec le *libellé* `"Informations sur le logement"`.
     
     Quand on sort du champ *libellé*, on voit que le champ *identifiant* est automatiquement remplit avec `INFORMATIO`. Ici Pogues prend les 10 premier caractères alphanumériques du libellé les concatène et les met en majuscule. Ce nom est arbitraire et peu parlant pour la suite du questionnaire. Donnons lui l'identifiant suivant `LGT`
@@ -39,7 +40,7 @@ Pour finaliser la création, on appuie sur le bouton "Valider" en bas de la fen�
 
 ![Valider la séquence](../../img/pogues/creation-sequence-valider.png)
 
-!!! example
+!!! example "Cas pratique"
     Vous allez créer les 4 séquences qui constituent notre questionnaire "Tutoriel"
 
     | Identifiant | Libellé |
@@ -56,21 +57,22 @@ Pour finaliser la création, on appuie sur le bouton "Valider" en bas de la fen�
 !!! abstract "Pour aller plus loin"
     - [Les Séquence](../🚀_Guide/10-sequences.md)
 
-!!! Mais ce n'est pas fini... 
+!!! warning "Mais ce n'est pas fini..." 
     On peut voir que le questionnaire est toujours mécontent et nous indique qu'il faut aussi créer au moins une question, ce que nous allons faire de ce pas ! 
 
 ## Création d'une question
 Nous allons maintenant créer la première question de nôtre questionnaire et la placer dans la première séquence.
 
-1. PLacez vous sur la première séquence `LOG` : cliquer sur le bloc associé à `LOG`.     
-    _Vous devez voir qu'une fois sélectionné, le bloc grossit et est mis en évidence par l'encadré en bleu._
-    ![alt text](seq-bloc-focused.png)
-2. Dans la barre des actions, le bouton "+ Question" permet la création d'une question.
-3. Suivez les prochaines indications afin de spécifier une question avec les informations suivantes : 
-    - Un identifiant `T_NHAB` 
-    - Une réponse simple 
-    - Un type numérique 
-    - Une variable collectée associée même identifiant `T_NHAB` et les mêmes paramètres
+!!! example "Cas pratique"
+    1. PLacez vous sur la première séquence `LOG` : cliquer sur le bloc associé à `LOG`.     
+        _Vous devez voir qu'une fois sélectionné, le bloc grossit et est mis en évidence par l'encadré en bleu._
+        ![alt text](seq-bloc-focused.png)
+    2. Dans la barre des actions, le bouton "+ Question" permet la création d'une question.
+    3. Suivez les prochaines indications afin de spécifier une question avec les informations suivantes : 
+        - Un identifiant `T_NHAB` 
+        - Une réponse simple 
+        - Un type numérique 
+        - Une variable collectée associée même identifiant `T_NHAB` et les mêmes paramètres
 
 ### Identification
 
@@ -102,12 +104,12 @@ Pour cela, il reste une dernière étape, la création de la variable sous-jacen
 
 ### Création de la variable
 
-Pogues distingue **la question** de **la réponse** et de **la donnée collectée - la variable**. Il faut donc explicitement créer cette dernière.
+Pogues distingue **la question** de **la réponse** et de **la donnée collectée, la variable**. Il faut donc explicitement créer cette dernière.
 
 Pour cela, on se dirige vers l'onglet "Variables collectées" puis on clique sur le bouton "Générer variables collectées".
 ![alt text](question-creation-generate-collected-var.png)
 
-On peut enfin valider la question en cliquant sur le plus gros bouton "Valider" en bas de la fenêtre.
+On voit alors apparaître une variable `T_NHAB`. On peut enfin valider la question en cliquant sur le plus gros bouton "Valider" en bas de la fenêtre.
 ![alt text](question-creation-generate-collected-var-validation.png)
 
 !!! Note
@@ -131,14 +133,15 @@ On peut enfin valider la question en cliquant sur le plus gros bouton "Valider" 
 
     Les autres champs ne sont pas modifiables car sont **directement associés aux paramètres de la question**. Si jamais ces informations sont incorrectes, c'est que votre question l'est aussi. Il faut alors retourner sur l'onglet "Format des réponses" et changer ces paramètres en conséquence.
 
+??? success "Solution"
+    Pogues est enfin content ! Il ne râle plus et on peut enfin **sauvegarder** nôtre questionnaire.
+    ![alt text](survey-with-1st-question.png)
+
 !!! abstract "Pour aller plus loin"
     - [Les questions](../🚀_Guide/Questions/index.md)
     - [Variables Collectées](../🚀_Guide/Variables/variables-collectees.md)
     - [Nommage des variables](../🚀_Guide/Variables/nommage.md)
-
-!!! success "Solution"
-    Pogues est enfin content ! Il ne râle plus et on peut enfin **sauvegarder** nôtre questionnaire.
-    ![alt text](survey-with-1st-question.png)
+    - [Les questions simples de type nombre](../🚀_Guide/Questions/13-reponse-simple.md/#type-de-réponse-nombre)
 
 ## Sauvegarde du questionnaire
 
@@ -148,3 +151,6 @@ Un simple clic sur le bouton "Sauvegarder" de la barre d'action fait l'affaire.
 
 !!! tip
     Vous pouvez facilement gérer la liste de vos sauvegardes avec le menu [**historique**](../🚀_Guide/29-historique.md) ✨
+
+## Suite
+Nous allons maintenant [visualiser le questionnaire](12-visualisation-questionnaire.md).
