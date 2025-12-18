@@ -1,4 +1,5 @@
 # Insertion d'une infobulle
+!!! danger "Page à mettre à jour"
 
 L'ajout d'une [infobulle](https://fr.wikipedia.org/wiki/Infobulle) est possible dans les libellés des questions en appliquant une syntaxe particulière :
 

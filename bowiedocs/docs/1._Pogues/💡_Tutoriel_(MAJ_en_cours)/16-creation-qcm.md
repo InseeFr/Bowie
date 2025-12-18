@@ -1,4 +1,5 @@
 # Création d'une question à choix multiples
+!!! danger "Page à mettre à jour"
 
 La prochaine question sera à choix multiples. Pour cela :
 

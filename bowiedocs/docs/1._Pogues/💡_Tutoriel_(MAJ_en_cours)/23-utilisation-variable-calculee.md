@@ -1,4 +1,5 @@
 # Utilisation d'une variable calculée
+!!! danger "Page à mettre à jour"
 
 Pogues permet la création de trois types de variables dans le questionnaire :
 

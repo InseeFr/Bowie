@@ -1,5 +1,8 @@
 # Les variables collectées
 
+!!! question "Définition"
+    Les **variables collectées** sont la donnée principale d'une enquête. Comme son nom l'indique ce sont des **variables** qui **collectent** l'information que l'on veut récupérer de l'enquêté, grâce à **une** question, posée au sein d'un questionnaire structuré. Ces variables seront ensuite analysées et utilisées pour la conception d'indicateurs statistiques liés à la thématique de l'enquête.
+
 ## Générer les variables collectées
 
 1. Pour toute question créée, il faut générer les variables collectées : aller dans l'onglet `Variables collectées`, cliquer sur le bouton `Générer les variables collectées`.
@@ -11,6 +14,8 @@
             À chaque fois qu'on régénère les variables, Pogues va écraser tous les noms des libellés et identifiant et il faudra tout renommer à la main. Cela peut vite devenir fastidieux sur de gros tableaux ou QCM.
         
         Une fois la question stabilisée dans le questionnaire, on peut modifier les libellés et identifiants proposés par défaut par des noms plus signifiant. Cela permet une maintenance plus facile du questionnaire pour vos successeurs, mais aussi pour le futur vous.
+
+        Mais surtout ce sont des informations importantes qui pourrons directement être utilisée pour la documentation de vos variables en fin de collecte !
 
 2. Au fur et à mesure de vos modifications, cliquer sur le bouton "Valider" affiché le plus haut et le plus à droite de votre écran (en bas à droite de l'écran grisé).
 3. A la fin de vos modifications, cliquer sur le bouton "Valider" au milieu un peu plus bas dans la partie blanche de l'écran pour valider l'ensemble de vos modifications.

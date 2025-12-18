@@ -1,4 +1,5 @@
 # Ajout d'un contrôle
+!!! danger "Page à mettre à jour"
 
 On souhaite pouvoir s'assurer d'une bonne qualité de réponse aux différentes questions que l'on propose. Pour cela, on peut utiliser le mécanisme de contrôle inhérent aux outils de l'atelier.
 
