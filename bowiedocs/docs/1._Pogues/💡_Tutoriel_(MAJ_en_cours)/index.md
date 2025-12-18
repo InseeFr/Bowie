@@ -1,7 +1,9 @@
 # Apprendre à utiliser Pogues
 
-!!! danger ":construction: Le tutoriel est en cours de mise à jour majeur :construction:"
+!!! warning ":construction: Le tutoriel est en cours de mise à jour majeur :construction:"
     Il est encore utilisable mais certaines fonctionnalités décrites ne sont plus à jour. <br>
+    Les pages qui n'ont pas encore été mise à jour commencent par un bloc comme tel
+    !!! danger "Page à mettre à jour"
     En cas de doute, **se référer au [:octicons-rocket-16: guide](../🚀_Guide/index.md)**
 
 !!! note

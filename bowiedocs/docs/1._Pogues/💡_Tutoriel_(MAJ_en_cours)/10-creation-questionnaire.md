@@ -46,7 +46,7 @@ Pour ce tutoriel, nous choisissons "Filtre" et "VTL".
 
 Les champs "Série", "Opération statistique" et "Campagne" sont remplis en fonction de l'enquête correspondante. 
 Par défaut ces champs sont vides et ne sont pas proposés lors de la création du questionnaire. Vous pouvez les spécifier après création du questionnaire via le bouton "Voir le détail" depuis la page "Questionnaire".
-![alt text](survey-detail-modal.png)
+![alt text](../../img/pogues/survey-detail-modal.png)
 C'est un processus spécifique au contexte Insee, on ne le détaille pas ici.
 
 !!! tip

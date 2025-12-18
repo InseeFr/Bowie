@@ -52,7 +52,7 @@ Pour finaliser la création, on appuie sur le bouton "Valider" en bas de la fen�
     | `FIN` | `"Fin du questionnaire"` | 
 
 ??? success "Solution"
-    ![alt text](solution1-seq-created.png)
+    ![alt text](../../img/pogues/solution1-seq-created.png)
 
 !!! abstract "Pour aller plus loin"
     - [Les Séquence](../🚀_Guide/10-sequences.md)
@@ -66,7 +66,7 @@ Nous allons maintenant créer la première question de nôtre questionnaire et l
 !!! example "Cas pratique"
     1. PLacez vous sur la première séquence `LOG` : cliquer sur le bloc associé à `LOG`.     
         _Vous devez voir qu'une fois sélectionné, le bloc grossit et est mis en évidence par l'encadré en bleu._
-        ![alt text](seq-bloc-focused.png)
+        ![alt text](../../img/pogues/seq-bloc-focused.png)
     2. Dans la barre des actions, le bouton "+ Question" permet la création d'une question.
     3. Suivez les prochaines indications afin de spécifier une question avec les informations suivantes : 
         - Un identifiant `T_NHAB` 
@@ -94,11 +94,11 @@ On revient dans la section suivante sur le détail des options, mais terminons d
 
 cliquez sur "VALIDER"
 
-![alt text](quesiton-creation-validation.png)
+![alt text](../../img/pogues/quesiton-creation-validation.png)
 
 Pogues averti qu'il manque des informations dans l'onglet "Variables collectées"
 
-![alt text](question-creation-missing-collected-var.png)
+![alt text](../../img/pogues/question-creation-missing-collected-var.png)
 
 Pour cela, il reste une dernière étape, la création de la variable sous-jacente (appelé aussi "Variable collectée" associée).
 
@@ -107,14 +107,14 @@ Pour cela, il reste une dernière étape, la création de la variable sous-jacen
 Pogues distingue **la question** de **la réponse** et de **la donnée collectée, la variable**. Il faut donc explicitement créer cette dernière.
 
 Pour cela, on se dirige vers l'onglet "Variables collectées" puis on clique sur le bouton "Générer variables collectées".
-![alt text](question-creation-generate-collected-var.png)
+![alt text](../../img/pogues/question-creation-generate-collected-var.png)
 
 On voit alors apparaître une variable `T_NHAB`. On peut enfin valider la question en cliquant sur le plus gros bouton "Valider" en bas de la fenêtre.
-![alt text](question-creation-generate-collected-var-validation.png)
+![alt text](../../img/pogues/question-creation-generate-collected-var-validation.png)
 
 !!! Note
     Lorsque vous validez une question, une fenêtre peut apparaître avec le texte "Modifications non validées. Merci de valider toutes les actions sur l'élément.".
-    ![alt text](question-creation-validate-edited-data-modal.png)
+    ![alt text](../../img/pogues/question-creation-validate-edited-data-modal.png)
 
     Cela signifie tout simplement que certains champs à l'intérieur de la question n'ont pas été explicitement validés (à l'aide d'un bouton de validation dédié).
 
@@ -122,7 +122,7 @@ On voit alors apparaître une variable `T_NHAB`. On peut enfin valider la questi
 
 !!! tip
     Lorsqu'on est sur l'onglet des "Variables Collectée". On peut cliquer sur la variable afin de voir les informations associées
-    ![alt text](generated-collected-var-info.png)
+    ![alt text](../../img/pogues/generated-collected-var-info.png)
 
     Ici, seul les champs _Identifiant_ et _Libellé_ sont modifiables. Ces champs sont important pour la documentation de vos variables dans la suite du processus de l'enquête ! Il faut donc leur donner un nom et une description plus parlante que celle donnée par défaut.
 
@@ -135,13 +135,13 @@ On voit alors apparaître une variable `T_NHAB`. On peut enfin valider la questi
 
 ??? success "Solution"
     Pogues est enfin content ! Il ne râle plus et on peut enfin **sauvegarder** nôtre questionnaire.
-    ![alt text](survey-with-1st-question.png)
+    ![alt text](../../img/pogues/survey-with-1st-question.png)
 
 !!! abstract "Pour aller plus loin"
     - [Les questions](../🚀_Guide/Questions/index.md)
     - [Variables Collectées](../🚀_Guide/Variables/variables-collectees.md)
     - [Nommage des variables](../🚀_Guide/Variables/nommage.md)
-    - [Les questions simples de type nombre](../🚀_Guide/Questions/13-reponse-simple.md/#type-de-réponse-nombre)
+    - [Les questions simples de type nombre](../🚀_Guide/Questions/13-reponse-simple.md/#type-de-reponse-nombre)
 
 ## Sauvegarde du questionnaire
 

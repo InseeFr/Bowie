@@ -1,4 +1,5 @@
 # Création d'une réponse basée sur une liste
+!!! danger "Page à mettre à jour"
 
 Dans notre première version de la question "OKREP", nous avons choisi comme format de réponse un champ textuel. Après coup, il semble préférable de fournir une liste fermée de réponse - "Oui" ou "Non".
 

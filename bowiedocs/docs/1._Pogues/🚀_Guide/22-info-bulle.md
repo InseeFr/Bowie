@@ -15,7 +15,7 @@ Elles doivent être concises et ne pas contenir d’informations cruciales à la
     Ceci est une question avec une [précision](. "une infobulle sur précision") avec infobulle sur le mot précision
 
 
-Plus de détails dans [le tutoriel](../💡_Tutoriel_(OLD)/22-ajout-infobulle.md)
+Plus de détails dans [le tutoriel](../💡_Tutoriel_(MAJ_en_cours)/22-ajout-infobulle.md)
 
 !!! warning "Incompatibilité"
     Les infobulles ne fonctionnent pas quand on a des parenthèses dans l'infobulle

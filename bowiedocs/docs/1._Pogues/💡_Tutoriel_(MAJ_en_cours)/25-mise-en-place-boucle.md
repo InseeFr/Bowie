@@ -1,4 +1,5 @@
 # Mise en place d'une boucle
+!!! danger "Page à mettre à jour"
 
 Une boucle permet de répéter une partie du questionnaire (au niveau séquence ou sous-séquence), à partir de valeurs prédéterminées ou de variables du questionnaire.
 

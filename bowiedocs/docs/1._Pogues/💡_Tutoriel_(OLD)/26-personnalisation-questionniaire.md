@@ -1,3 +1,0 @@
-# Personnaliser son questionnaire
-
-🚧 TODO 🚧

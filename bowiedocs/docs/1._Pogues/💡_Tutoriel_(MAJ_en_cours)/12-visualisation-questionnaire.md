@@ -24,7 +24,7 @@ Vous pouvez vérifier que le questionnaire produit est fidèle à la conception 
 
 ??? success "Solution"
     Vous devriez avoir une question qui s'affiche sous la forme suivante :
-    ![visu first question](visulisation-1st-question.png)
+    ![visu first question](../../img/pogues/visulisation-1st-question.png)
 
 Nous venons de boucler un premier cycle dans la construction d'un questionnaire dans Pogues
 

@@ -1,4 +1,5 @@
 # Personnalisation d'un libellé
+!!! danger "Page à mettre à jour"
 
 Vous l'avez remarqué, le champ qui permet la création d'un libellé de question n'est pas un champ texte ordinaire. Il s'agit en effet d'un éditeur de code VTL !
 
@@ -13,7 +14,7 @@ Comme précédemment, au sein d'une question, dans l'onglet _Variables calculée
 - la variable PRENOM si elle est renseignée
 - le texte "Cher répondant, " si ce n'est pas le cas.
 
-??? example "Solution"
+??? success "Solution"
 
     `if nvl($PRENOM$, "") = "" then "Cher répondant, " else $PRENOM$ || " ,"`
 
@@ -21,6 +22,6 @@ Comme précédemment, au sein d'une question, dans l'onglet _Variables calculée
 
 On peut retourner sur la question dont l'identifiant est `APPRECIATION`, pour modifier son libellé de manière à commencer par le texte produit par la variable `PERSOLIB`.
 
-??? example "Solution"
+??? success "Solution"
 
     `"" || $PERSOLIB$ || " avez-vous apprécié l'exercice ?"`

@@ -26,26 +26,26 @@ Questionnaire
 
 ## Création des sous-séquences
 D’abord, créons les deux sous séquences. Pour ce faire on se place sur la séquence qui nous intéresse (clic sur le bloc `THL`), puis on clique sur le bouton "Sous-séquence" dans le bandeau du haut
-![alt text](sub-seq-creation.png)
+![alt text](../../img/pogues/sub-seq-creation.png)
 
 Il suffit ensuite de remplir la modale qui vient de s'ouvrir avec les informations suivantes et valider.
 
 - _Identifiant_ : `THL_PRENOM`
 - _Libellé_ : " "
 
-![alt text](sub-seq-creation-modal.png)
+![alt text](../../img/pogues/sub-seq-creation-modal.png)
 
 Faire de même avec `THL_DHL` et le libellé "Caractéristiques"
 
 ??? success "Solution"
-    ![alt text](sub-seq-creation-solution.png)
+    ![alt text](../../img/pogues/sub-seq-creation-solution.png)
 
 !!! abstract "Pour aller plus loin"
     - [Les sous-séquences](../🚀_Guide/11-sous-sequences.md)
 
 ### Question sur les Prénoms
 Nous allons maintenant créer la première question concernant les prénoms. Placez vous sur la sous séquence concernée (clic sur `THL_PRENOM`), puis appuyez sur le bouton de création de question.
-![alt text](question-creation.png)
+![alt text](../../img/pogues/question-creation.png)
 
 Remplissez les champs avec les infos suivantes : 
 
@@ -60,7 +60,7 @@ Remplissez les champs avec les infos suivantes :
 Générez la variable puis validez.
 
 !!! abstract "Pour aller plus loin"
-    - [Les questions simples de type texte](../🚀_Guide/Questions/13-reponse-simple.md/#type-de-réponse-texte)
+    - [Les questions simples de type texte](../🚀_Guide/Questions/13-reponse-simple.md/#type-de-reponse-texte)
 
 ### Question sur l'âge
 Nous allons créer maintenant une question simple, `T_DATENAIS`, mais avec un nouveau type de réponse, le type "Date".
@@ -79,12 +79,12 @@ On a besoin pour ce type de question de spécifier un format et des bornes minim
     - _Maximum_ : `2026-12-31`
 
 ??? success "Solution"
-    ![alt text](question-creation-simple-date.png)
+    ![alt text](../../img/pogues/question-creation-simple-date.png)
 
 Générez la variable puis validez.
 
 !!! abstract "Pour aller plus loin"
-    - [Les questions simples de type date](../🚀_Guide/Questions/13-reponse-simple.md/#type-de-réponse-date)
+    - [Les questions simples de type date](../🚀_Guide/Questions/13-reponse-simple.md/#type-de-reponse-date)
 
 Ici on récupère bien une date au format année/mois/jour. Nous verrons plus tard comment réutiliser cette variable collectée en calculant l'âge via justement ce qu'on appelle une "variable calculée".
 
@@ -98,9 +98,9 @@ Ici on récupère bien une date au format année/mois/jour. Nous verrons plus ta
 Cette fois utilisons la visualisation "Web entreprise". Cette visualisation a la particularité de mettre **toutes les questions d'une même séquence sur la même page**. 
 
 On observe ainsi pour la première séquence la page suivante,
-![alt text](visualisation-thl-page1.png)
+![alt text](../../img/pogues/visualisation-thl-page1.png)
 Et pour la deuxième page, nous avons les deux questions que l'on vient de créer, séparées par les deux sous séquences " " et "Caractéristiques"
-![alt text](visualisation-thl-page2.png)
+![alt text](../../img/pogues/visualisation-thl-page2.png)
 
 Une fois que nos changements sont valides, **on sauvegarde !**
 
