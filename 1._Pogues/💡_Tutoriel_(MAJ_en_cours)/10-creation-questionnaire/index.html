@@ -3107,48 +3107,47 @@
 
 
 <h1 id="creation-dun-questionnaire">Création d'un questionnaire</h1>
-<p>Sur la page d'accueil de Pogues, le bouton suivant est visible :
+<p>Sur la page d'accueil de Pogues, cliquer sur le bouton "Créer un questionnaire" :
 <a class="glightbox" href="../../../img/pogues/creation-questionnaire-go.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Bouton de création d'un questionnaire" src="../../../img/pogues/creation-questionnaire-go.png" /></a></p>
-<p>En cliquant sur le bouton, on ouvre la fenêtre de création du questionnaire. Celle-ci permet de renseigner ses paramètres.</p>
+<p>La fenêtre de création du questionnaire permet de renseigner les paramètres de contexte du questionnaire (identifiant, dynamisme) et de l'enquête (modes de collecte).</p>
 <p><a class="glightbox" href="../../../img/pogues/creation-questionnaire-page.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="creation-questionnaire-page" src="../../../img/pogues/creation-questionnaire-page.png" /></a></p>
 <h2 id="identification">Identification</h2>
 <p>Il faut donner un "Titre" au questionnaire. Par défaut, un identifiant sera créé à partir de ce titre, vous pouvez par la suite le modifier en cliquant sur "Voir le détail" depuis la page "Questionnaire".</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Par convention, les identifiants des éléments du questionnaire (séquences, boucles, variables, etc.) seront écrits sous la forme <code class="highlight"><span class="n">MON_IDENTIFIANT</span></code></p>
+<p>Par convention, les identifiants des éléments du questionnaire (séquences, boucles, variables, etc.) seront écrits sous la forme <code class="highlight"><span class="n">MON_IDENTIFIANT</span></code>: pas de caractères spéciaux ni d'accents</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Cas pratique</p>
-<p>Dans le cadre de ce tutoriel, nous allons utiliser <code class="highlight"><span class="n">Tutoriel</span></code> comme titre. Vous verrez que l'identifiant associez sera alors <code class="highlight"><span class="n">TUTORIEL</span></code></p>
+<p>Dans le cadre de ce tutoriel, nous allons utiliser <code class="highlight"><span class="n">Tutoriel</span></code> comme titre. Vous verrez que l'identifiant automatiquement généré sera alors <code class="highlight"><span class="n">TUTORIEL</span></code>. Vous avez la possibilité de modifier cet identifiant.</p>
 </div>
 <h2 id="modes">Modes</h2>
-<p>Quatre modes de collecte sont disponibles, choisissez ceux qui vous concernent :</p>
+<p>Quatre modes de collecte sont disponibles, vous pouvez sélectionner une ou plusieurs modalités selon le contexte de votre enquête :</p>
 <ul>
 <li>CAPI, pour les enquêtes en face-à-face par l'intermédiaire d'un enquêteur</li>
 <li>CATI, pour les enquêtes par téléphone</li>
 <li>CAWI, pour les enquêtes via Internet</li>
-<li>PAPI, pour les enquêtes au format papier</li>
+<li>PAPI, pour les enquêtes avec questionnaire au format papier</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Actuellement, l'impact sur les questionnaires mêmes est mince : seule les déclarations (aide à la saisie, consigne enquêteur) sont affichées ou non selon leur mode de collecte.</p>
+<p>Actuellement, l'impact sur les questionnaires mêmes est mince : seules les déclarations (aides enquêté, consignes enquêteur) sont affichées ou non selon leur mode de collecte.</p>
 </div>
 <h2 id="dynamisme">Dynamisme</h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Les options "Redirection" et "XPath" ne sont pas à utiliser pour les nouveaux questionnaires. Ils ne concernent que les questionnaires intégrés à la platforme de collecte Coltrane.</p>
-</div>
 <p>Les dernières options permettent de définir les aspects dynamiques du parcours du questionnaire :</p>
 <ul>
 <li>la gestion de l'affichage ou non des objets ("Redirection" ou "Filtre")</li>
 <li>le langage utilisé pour les contrôles, filtres, calculs de variables ("XPath" ou "VTL")</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Les options "Redirection" et "XPath" sont réservées exclusivement aux questionnaires intégrés à la plateforme de collecte Coltrane.</p>
+</div>
 <p>Pour ce tutoriel, nous choisissons "Filtre" et "VTL".</p>
 <h2 id="information-sur-le-processus">Information sur le processus</h2>
-<p>Les champs "Série", "Opération statistique" et "Campagne" sont remplis en fonction de l'enquête correspondante. 
-Par défaut ces champs sont vides et ne sont pas proposés lors de la création du questionnaire. Vous pouvez les spécifier après création du questionnaire via le bouton "Voir le détail" depuis la page "Questionnaire".
-<a class="glightbox" href="../../../img/pogues/survey-detail-modal.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/survey-detail-modal.png" /></a>
-C'est un processus spécifique au contexte Insee, on ne le détaille pas ici.</p>
+<p>On peut ajouter des informations "Série", "Opération statistique" et "Campagne" en fonction de l'enquête correspondante telle que décrite dans Bauhaus (processus spécifique au contexte Insee, on ne le détaille pas ici.). 
+Par défaut ces champs sont vides et ne sont pas proposés lors de la création du questionnaire, ils n'ont pas d'influence sur la suite du processus. Vous pouvez les spécifier après création du questionnaire via le bouton "Voir le détail" depuis la page "Questionnaire".
+<a class="glightbox" href="../../../img/pogues/survey-detail-modal.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/survey-detail-modal.png" /></a></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Si vous êtes en train de vous autoformer, vous pouvez choisir n'importe quelles valeurs, cela n'a pas d'impact sur le reste du questionnaire</p>
