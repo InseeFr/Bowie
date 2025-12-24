@@ -534,9 +534,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#question-sur-lage" class="md-nav__link">
+  <a href="#question-sur-la-date-de-naissance" class="md-nav__link">
     <span class="md-ellipsis">
-      Question sur l'âge
+      Question sur la date de naissance
     </span>
   </a>
   
@@ -545,7 +545,7 @@
           <li class="md-nav__item">
   <a href="#visualiser-cest-tester" class="md-nav__link">
     <span class="md-ellipsis">
-      Visualiser, c'est tester
+      Visualiser, c'est tester !
     </span>
   </a>
   
@@ -3090,9 +3090,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#question-sur-lage" class="md-nav__link">
+  <a href="#question-sur-la-date-de-naissance" class="md-nav__link">
     <span class="md-ellipsis">
-      Question sur l'âge
+      Question sur la date de naissance
     </span>
   </a>
   
@@ -3101,7 +3101,7 @@
           <li class="md-nav__item">
   <a href="#visualiser-cest-tester" class="md-nav__link">
     <span class="md-ellipsis">
-      Visualiser, c'est tester
+      Visualiser, c'est tester !
     </span>
   </a>
   
@@ -3141,11 +3141,11 @@
 <p>Nous poursuivons la construction du questionnaire en spécifiant les questions de la séquence sur le "Tableau des habitants du logement". Pour rappel, la composition de cette séquence ressemble à ça :</p>
 <ul>
 <li>Une séquence "Tableau des habitants du logement" :</li>
-<li>Des question d'identification des individus constituant le ménage</li>
+<li>Une question de comptage des individus constituant le ménage</li>
 <li>Une boucle Principale <code class="highlight"><span class="n">BOUCLE_PRENOMS</span></code> permettant d'identifier les individus du ménages</li>
-<li>Une boucle Liée <code class="highlight"><span class="n">BOUCLE_INDIV</span></code> basé sur <code class="highlight"><span class="n">BOUCLE_PRENOMS</span></code> permettant de poser une série de questions sur l'État civil de chaque individu du ménage.</li>
+<li>Une boucle Liée <code class="highlight"><span class="n">BOUCLE_INDIV</span></code> basée sur <code class="highlight"><span class="n">BOUCLE_PRENOMS</span></code> permettant de poser une série de questions sur l'état civil de chaque individu du ménage.</li>
 </ul>
-<p>Nous allons introduire deux <em>sous-séquences</em>, <code class="highlight"><span class="n">THL_PRENOM</span></code> et <code class="highlight"><span class="n">THL_DHL</span></code>, pour mieux délimiter le concept de la boucle principale et de la boucle liée. Nous visons ainsi la structure suivante</p>
+<p>Nous allons introduire deux <em>sous-séquences</em>, <code class="highlight"><span class="n">THL_PRENOM</span></code> et <code class="highlight"><span class="n">THL_DHL</span></code>, pour mieux délimiter le concept de la boucle principale et de la boucle liée. Nous visons ainsi la structure suivante :</p>
 <div class="highlight"><pre><span></span><code><span class="n">Questionnaire</span>
 <span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Séquence</span><span class="p">]</span><span class="w"> </span><span class="n">LGT</span>
 <span class="o">|</span><span class="w">   </span><span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Question</span><span class="w"> </span><span class="n">simple</span><span class="p">]</span><span class="w"> </span><span class="n">T_NBHAB</span>
@@ -3158,7 +3158,7 @@
 <span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Séquence</span><span class="p">]</span><span class="w"> </span><span class="n">QI</span>
 </code></pre></div>
 <h2 id="creation-des-sous-sequences">Création des sous-séquences</h2>
-<p>D’abord, créons les deux sous séquences. Pour ce faire on se place sur la séquence qui nous intéresse (clic sur le bloc <code class="highlight"><span class="n">THL</span></code>), puis on clique sur le bouton "Sous-séquence" dans le bandeau du haut
+<p>D’abord, créons les deux sous séquences. Pour ce faire on se place sur la séquence qui nous intéresse (clic sur le bloc <code class="highlight"><span class="n">THL</span></code>), puis on clique sur le bouton "Sous-séquence" dans le bandeau du haut.
 <a class="glightbox" href="../../../img/pogues/sub-seq-creation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/sub-seq-creation.png" /></a></p>
 <p>Il suffit ensuite de remplir la modale qui vient de s'ouvrir avec les informations suivantes et valider.</p>
 <ul>
@@ -3166,7 +3166,7 @@
 <li><em>Libellé</em> : " "</li>
 </ul>
 <p><a class="glightbox" href="../../../img/pogues/sub-seq-creation-modal.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/sub-seq-creation-modal.png" /></a></p>
-<p>Faire de même avec <code class="highlight"><span class="n">THL_DHL</span></code> et le libellé "Caractéristiques"</p>
+<p>Faire de même avec une nouvelle sous-séquence <code class="highlight"><span class="n">THL_DHL</span></code> ayant le libellé "Caractéristiques".</p>
 <details class="success">
 <summary>Solution</summary>
 <p><a class="glightbox" href="../../../img/pogues/sub-seq-creation-solution.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/sub-seq-creation-solution.png" /></a></p>
@@ -3178,7 +3178,7 @@
 </ul>
 </div>
 <h3 id="question-sur-les-prenoms">Question sur les Prénoms</h3>
-<p>Nous allons maintenant créer la première question concernant les prénoms. Placez vous sur la sous séquence concernée (clic sur <code class="highlight"><span class="n">THL_PRENOM</span></code>), puis appuyez sur le bouton de création de question.
+<p>Nous allons maintenant créer la première question concernant les prénoms. Placez vous sur la sous-séquence concernée (clic sur <code class="highlight"><span class="n">THL_PRENOM</span></code>), puis appuyez sur le bouton de création de question.
 <a class="glightbox" href="../../../img/pogues/question-creation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/question-creation.png" /></a></p>
 <p>Remplissez les champs avec les infos suivantes : </p>
 <ul>
@@ -3198,9 +3198,9 @@
 <li><a href="../../%F0%9F%9A%80_Guide/Questions/13-reponse-simple/#type-de-reponse-texte">Les questions simples de type texte</a></li>
 </ul>
 </div>
-<h3 id="question-sur-lage">Question sur l'âge</h3>
+<h3 id="question-sur-la-date-de-naissance">Question sur la date de naissance</h3>
 <p>Nous allons créer maintenant une question simple, <code class="highlight"><span class="n">T_DATENAIS</span></code>, mais avec un nouveau type de réponse, le type "Date".</p>
-<p>On a besoin pour ce type de question de spécifier un format et des bornes minimum et maximum, à spécifier selon le format.</p>
+<p>On a besoin pour ce type de question de spécifier un format (AAAA-MM-JJ, AAAA-MM, AAAA) et des bornes minimum et maximum, décrites selon le format choisi.</p>
 <div class="admonition example">
 <p class="admonition-title">Cas pratique</p>
 <p>Placez vous sur la sous-séquence <code class="highlight"><span class="n">THL_DHL</span></code> puis créez une nouvelle question simple avec les information suivantes :</p>
@@ -3225,20 +3225,20 @@
 <li><a href="../../%F0%9F%9A%80_Guide/Questions/13-reponse-simple/#type-de-reponse-date">Les questions simples de type date</a></li>
 </ul>
 </div>
-<p>Ici on récupère bien une date au format année/mois/jour. Nous verrons plus tard comment réutiliser cette variable collectée en calculant l'âge via justement ce qu'on appelle une "variable calculée".</p>
-<h3 id="visualiser-cest-tester">Visualiser, c'est tester</h3>
+<p>Ici on récupère bien une date au format année/mois/jour. Nous verrons plus tard comment réutiliser cette variable collectée pour calculer l'âge via justement ce qu'on appelle une "variable calculée".</p>
+<h3 id="visualiser-cest-tester">Visualiser, c'est tester !</h3>
 <div class="admonition info">
-<p class="admonition-title">On n'oublie pas de Visualiser, Valider puis Sauvegarder !</p>
+<p class="admonition-title">On n'oublie pas de Visualiser et Sauvegarder si la visualisation est valide !</p>
 <p>Nous avons fait quelques changements dans le questionnaire. Une bonne pratique est de ne pas attendre d'avoir fait trop de changements avant de visualiser pour les valider. Il faut aller pas à pas pour bien maîtriser ce que l'on fait.</p>
 </div>
-<p>Cette fois utilisons la visualisation "Web entreprise". Cette visualisation a la particularité de mettre <strong>toutes les questions d'une même séquence sur la même page</strong>. </p>
+<p>Cette fois, utilisons la visualisation "Web entreprise". Cette visualisation a la particularité de mettre <strong>toutes les questions d'une même séquence sur la même page</strong>. </p>
 <p>On observe ainsi pour la première séquence la page suivante,
 <a class="glightbox" href="../../../img/pogues/visualisation-thl-page1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/visualisation-thl-page1.png" /></a>
 Et pour la deuxième page, nous avons les deux questions que l'on vient de créer, séparées par les deux sous séquences " " et "Caractéristiques"
 <a class="glightbox" href="../../../img/pogues/visualisation-thl-page2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/visualisation-thl-page2.png" /></a></p>
-<p>Une fois que nos changements sont valides, <strong>on sauvegarde !</strong></p>
+<p>Lorsqu'on est satisfaits des changements réalisés, <strong>on sauvegarde !</strong></p>
 <div class="admonition tip">
-<p class="admonition-title">N'hésitez pas à varier les contexte de visualisation durant tout ce tutoriel</p>
+<p class="admonition-title">N'hésitez pas à varier les contextes de visualisation durant tout ce tutoriel</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Pour aller plus loin</p>
