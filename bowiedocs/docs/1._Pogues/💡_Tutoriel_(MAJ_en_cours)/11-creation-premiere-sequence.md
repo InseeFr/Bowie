@@ -87,12 +87,10 @@ Pogues propose plusieurs formats de réponse qui peuvent être ensuite paramétr
 
 Dans l'onglet "Format des réponses", on choisit comme _Type de question_ "Réponse simple" et _Type de réponse_ "Nombre", ce qui va permettre de créer un champ de réponse numérique.
 
-Puis choisissez un minimum et un maximum (prenons par exemple 1 et 20.
-Ici il n'y a pas de précision, et pas d'unité de mesure pour cette question.
+Puis choisissez un minimum et un maximum (prenons par exemple 1 et 20).
+Ici il n'y a pas de précision (nombre de décimales après la virgule), et pas d'unité de mesure pour cette question.
 
-On revient dans la section suivante sur le détail des options, mais terminons d'abord la création de cette première question.
-
-cliquez sur "VALIDER"
+On revient dans la section suivante sur le détail des options, mais terminons d'abord la création de cette première question en cliquant sur "VALIDER".
 
 ![alt text](../../img/pogues/quesiton-creation-validation.png)
 
@@ -121,12 +119,12 @@ On voit alors apparaître une variable `T_NHAB`. On peut enfin valider la questi
     Si vous êtes sûr du contenu de ces éléments, vous pouvez tout simplement cliquer sur _Valider en l'état_, l'ensemble de ce que vous avez saisi sera sauvegardé.
 
 !!! tip
-    Lorsqu'on est sur l'onglet des "Variables Collectées". On peut cliquer sur la variable afin de voir les informations associées
+    Lorsqu'on est sur l'onglet des "Variables Collectées". On peut cliquer sur la variable afin de voir les informations associées.
     ![alt text](../../img/pogues/generated-collected-var-info.png)
 
     Ici, seuls les champs _Identifiant_ et _Libellé_ sont modifiables. Ces champs sont importants pour la documentation de vos variables dans la suite du processus de l'enquête ! Le libellé (description) et l'identifiant doivent vous permettre de vous repérer dans l'ensemble des variables du questionnaire. 
 
-    !!! warning "Mais pas si vite !"
+    !!! warning 
         Dans le cadre de ce tutoriel, et en général lors de la construction d'un questionnaire, nous préconisions de **ne pas toucher à ces champs et laisser les valeurs par défaut**
 
         À chaque fois qu'on régénère les variables, Pogues va écraser tous les noms des libellés et identifiant et il faudra tout renommer à la main. Cela peut vite devenir fastidieux sur de gros tableaux ou QCM.
