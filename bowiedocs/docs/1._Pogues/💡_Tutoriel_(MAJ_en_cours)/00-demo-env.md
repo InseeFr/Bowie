@@ -1,5 +1,5 @@
 # Environnement de démo
-Les environnement de Pogues « interne Insee » et le Pogues proposé sur demo.insee.io sont mis à jour simultanément et son synchronisé en terme de version et de paramétrage. Vous retrouverez donc les mêmes fonctionnalités.
+Les environnements de Pogues « interne Insee » et le Pogues SSM proposé sur demo.insee.io sont mis à jour simultanément et synchronisés (même version, même paramétrage). Vous retrouverez donc les mêmes fonctionnalités dans les deux environnements.
 
 !!! note
     - **Il sera demandé à l’utilisateur de créer un compte à la première connexion**.
@@ -11,13 +11,11 @@ Les environnement de Pogues « interne Insee » et le Pogues proposé sur demo.i
 
 ![alt text](../../img/pogues/demo-account-login.png)
 
-- Remplir les champs avec vos information professionnelles 
+- Remplir les champs avec vos informations professionnelles 
 
 ![alt text](../../img/pogues/demo-account-registration.png)
 
 - Choisir l'organisation parmi la liste déroulante
 
 !!! note
-    Pour l’organisation, prenez celle qui vous correspond. 
-
-    Vous aurez toujours accès aux différents timbres comme avant. Une réattribution des timbres plus propre sera faite plus tard une fois le comportement stabilisé.
+    Pour l’organisation, prenez celle qui vous correspond. Ensuite créer vos questionnaires dans le timbre de votre unité.
