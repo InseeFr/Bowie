@@ -1,7 +1,7 @@
 # Création d'une première séquence
 
 Une fois le questionnaire créé, on arrive sur la vue d'ensemble (dite _vue structurelle_) du questionnaire.
-Celui-ci est vide et nous demande d'ailleurs de créer une séquence et une question. 
+Le questionnaire est vide et une alerte nous invite (lourdement !) à créer une séquence et une question. 
 ![empty-survey](../../img/pogues/empty-survey.png)
 Donnons-lui du contenu ! :smile:
 
@@ -24,17 +24,17 @@ Donnons-lui du contenu ! :smile:
 Pour créer la première séquence, il suffit de cliquer sur le bouton "+ Séquence" de la barre d'actions :
 ![Création d'une séquence](../../img/pogues/barre-actions-sequence.png)
 
-Une fenêtre modale s'ouvre avec deux champs à remplir :
+Une fenêtre modale s'ouvre avec deux champs à remplir obligatoirement :
 
-- _Libellé_ : Titre de la séquence qui va apparaître dans le questionnaire
-- _Identifiant_ : Identifiant métier de la séquence. par défaut l'application propose les premiers caractères du libellé de la séquence, il est modifiable.
+- _Libellé_ : Titre de la séquence tel qu'il va apparaître dans le questionnaire aux enquêtés ou enquêteurs
+- _Identifiant_ : Identifiant métier de la séquence. Par défaut l'application propose les premiers caractères du libellé de la séquence, il est modifiable.
 
 Les modes de collecte restent les mêmes que ceux du questionnaire.
 
 !!! example "Cas pratique"
     Saisissons la première séquence avec le *libellé* `"Informations sur le logement"`.
     
-    Quand on sort du champ *libellé*, on voit que le champ *identifiant* est automatiquement remplit avec `INFORMATIO`. Ici Pogues prend les 10 premier caractères alphanumériques du libellé les concatène et les met en majuscule. Ce nom est arbitraire et peu parlant pour la suite du questionnaire. Donnons lui l'identifiant suivant `LGT`
+    Quand on sort du champ *libellé*, on voit que le champ *identifiant* est automatiquement rempli avec `INFORMATIO`. Ici Pogues prend les 10 premiers caractères alphanumériques du libellé les concatène et les met en majuscule. Ce nom est arbitraire et peu parlant pour la suite du questionnaire. Donnons lui l'identifiant `LGT` pour logement.
 
 Pour finaliser la création, on appuie sur le bouton "Valider" en bas de la fenêtre :
 
@@ -55,24 +55,24 @@ Pour finaliser la création, on appuie sur le bouton "Valider" en bas de la fen�
     ![alt text](../../img/pogues/solution1-seq-created.png)
 
 !!! abstract "Pour aller plus loin"
-    - [Les Séquence](../🚀_Guide/10-sequences.md)
+    - [Les Séquences](../🚀_Guide/10-sequences.md)
 
 !!! warning "Mais ce n'est pas fini..." 
     On peut voir que le questionnaire est toujours mécontent et nous indique qu'il faut aussi créer au moins une question, ce que nous allons faire de ce pas ! 
 
 ## Création d'une question
-Nous allons maintenant créer la première question de nôtre questionnaire et la placer dans la première séquence.
+Nous allons maintenant créer la première question de notre questionnaire et la placer dans la première séquence.
 
 !!! example "Cas pratique"
     1. PLacez vous sur la première séquence `LOG` : cliquer sur le bloc associé à `LOG`.     
-        _Vous devez voir qu'une fois sélectionné, le bloc grossit et est mis en évidence par l'encadré en bleu._
+        _Vous devez voir qu'une fois sélectionné, le bloc est mis en évidence par l'encadré en bleu._
         ![alt text](../../img/pogues/seq-bloc-focused.png)
     2. Dans la barre des actions, le bouton "+ Question" permet la création d'une question.
     3. Suivez les prochaines indications afin de spécifier une question avec les informations suivantes : 
         - Un identifiant `T_NHAB` 
         - Une réponse simple 
         - Un type numérique 
-        - Une variable collectée associée même identifiant `T_NHAB` et les mêmes paramètres
+        - Une variable collectée associée de même identifiant `T_NHAB` et caractéristiques
 
 ### Identification
 
@@ -87,7 +87,7 @@ Pogues propose plusieurs formats de réponse qui peuvent être ensuite paramétr
 
 Dans l'onglet "Format des réponses", on choisit comme _Type de question_ "Réponse simple" et _Type de réponse_ "Nombre", ce qui va permettre de créer un champ de réponse numérique.
 
-Puis choisissez un minimum et un maximum (prenons par exemple 1 et 20).
+Puis choisissez un minimum et un maximum (prenons par exemple 1 et 20.
 Ici il n'y a pas de précision, et pas d'unité de mesure pour cette question.
 
 On revient dans la section suivante sur le détail des options, mais terminons d'abord la création de cette première question.
@@ -96,17 +96,17 @@ cliquez sur "VALIDER"
 
 ![alt text](../../img/pogues/quesiton-creation-validation.png)
 
-Pogues averti qu'il manque des informations dans l'onglet "Variables collectées"
+Pogues nous alerte d'une anomalie dans l'onglet "Variables collectées" : nous n'avons pas généré les variables collectées !
+Il reste une dernière étape, la création de la variable collectée associée (variable sous-jacente).
 
 ![alt text](../../img/pogues/question-creation-missing-collected-var.png)
 
-Pour cela, il reste une dernière étape, la création de la variable sous-jacente (appelé aussi "Variable collectée" associée).
 
 ### Création de la variable
 
-Pogues distingue **la question** de **la réponse** et de **la donnée collectée, la variable**. Il faut donc explicitement créer cette dernière.
+Pogues distingue **la question** de **la réponse** de **la donnée collectée, la variable**. Il faut donc explicitement créer cette dernière.
 
-Pour cela, on se dirige vers l'onglet "Variables collectées" puis on clique sur le bouton "Générer variables collectées".
+Pour cela, on se dirige vers l'onglet "Variables collectées" puis on clique sur le bouton "Générer les variables collectées".
 ![alt text](../../img/pogues/question-creation-generate-collected-var.png)
 
 On voit alors apparaître une variable `T_NHAB`. On peut enfin valider la question en cliquant sur le plus gros bouton "Valider" en bas de la fenêtre.
@@ -121,10 +121,10 @@ On voit alors apparaître une variable `T_NHAB`. On peut enfin valider la questi
     Si vous êtes sûr du contenu de ces éléments, vous pouvez tout simplement cliquer sur _Valider en l'état_, l'ensemble de ce que vous avez saisi sera sauvegardé.
 
 !!! tip
-    Lorsqu'on est sur l'onglet des "Variables Collectée". On peut cliquer sur la variable afin de voir les informations associées
+    Lorsqu'on est sur l'onglet des "Variables Collectées". On peut cliquer sur la variable afin de voir les informations associées
     ![alt text](../../img/pogues/generated-collected-var-info.png)
 
-    Ici, seul les champs _Identifiant_ et _Libellé_ sont modifiables. Ces champs sont important pour la documentation de vos variables dans la suite du processus de l'enquête ! Il faut donc leur donner un nom et une description plus parlante que celle donnée par défaut.
+    Ici, seuls les champs _Identifiant_ et _Libellé_ sont modifiables. Ces champs sont importants pour la documentation de vos variables dans la suite du processus de l'enquête ! Le libellé (description) et l'identifiant doivent vous permettre de vous repérer dans l'ensemble des variables du questionnaire. 
 
     !!! warning "Mais pas si vite !"
         Dans le cadre de ce tutoriel, et en général lors de la construction d'un questionnaire, nous préconisions de **ne pas toucher à ces champs et laisser les valeurs par défaut**
@@ -134,7 +134,7 @@ On voit alors apparaître une variable `T_NHAB`. On peut enfin valider la questi
     Les autres champs ne sont pas modifiables car sont **directement associés aux paramètres de la question**. Si jamais ces informations sont incorrectes, c'est que votre question l'est aussi. Il faut alors retourner sur l'onglet "Format des réponses" et changer ces paramètres en conséquence.
 
 ??? success "Solution"
-    Pogues est enfin content ! Il ne râle plus et on peut enfin **sauvegarder** nôtre questionnaire.
+    Pogues est enfin content ! Il ne râle plus et on peut enfin **sauvegarder** notre questionnaire.
     ![alt text](../../img/pogues/survey-with-1st-question.png)
 
 !!! abstract "Pour aller plus loin"
