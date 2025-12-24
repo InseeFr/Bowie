@@ -18,4 +18,4 @@ Les environnements de Pogues « interne Insee » et le Pogues SSM proposé sur d
 - Choisir l'organisation parmi la liste déroulante
 
 !!! note
-    Pour l’organisation, prenez celle qui vous correspond. Ensuite créer vos questionnaires dans le timbre de votre unité.
+    Pour l’organisation, prenez celle qui vous correspond. Ensuite vous pourrez créer vos questionnaires dans le timbre de votre organisation.
