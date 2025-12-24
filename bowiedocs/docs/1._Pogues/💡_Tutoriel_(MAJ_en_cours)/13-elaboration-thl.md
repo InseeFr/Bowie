@@ -5,11 +5,11 @@
 Nous poursuivons la construction du questionnaire en spécifiant les questions de la séquence sur le "Tableau des habitants du logement". Pour rappel, la composition de cette séquence ressemble à ça :
 
 - Une séquence "Tableau des habitants du logement" :
-- Des question d'identification des individus constituant le ménage
+- Une question de comptage des individus constituant le ménage
 - Une boucle Principale `BOUCLE_PRENOMS` permettant d'identifier les individus du ménages
-- Une boucle Liée `BOUCLE_INDIV` basé sur `BOUCLE_PRENOMS` permettant de poser une série de questions sur l'État civil de chaque individu du ménage.
+- Une boucle Liée `BOUCLE_INDIV` basée sur `BOUCLE_PRENOMS` permettant de poser une série de questions sur l'état civil de chaque individu du ménage.
 
-Nous allons introduire deux _sous-séquences_, `THL_PRENOM` et `THL_DHL`, pour mieux délimiter le concept de la boucle principale et de la boucle liée. Nous visons ainsi la structure suivante
+Nous allons introduire deux _sous-séquences_, `THL_PRENOM` et `THL_DHL`, pour mieux délimiter le concept de la boucle principale et de la boucle liée. Nous visons ainsi la structure suivante :
 
 ```
 Questionnaire
@@ -25,7 +25,7 @@ Questionnaire
 ```
 
 ## Création des sous-séquences
-D’abord, créons les deux sous séquences. Pour ce faire on se place sur la séquence qui nous intéresse (clic sur le bloc `THL`), puis on clique sur le bouton "Sous-séquence" dans le bandeau du haut
+D’abord, créons les deux sous séquences. Pour ce faire on se place sur la séquence qui nous intéresse (clic sur le bloc `THL`), puis on clique sur le bouton "Sous-séquence" dans le bandeau du haut.
 ![alt text](../../img/pogues/sub-seq-creation.png)
 
 Il suffit ensuite de remplir la modale qui vient de s'ouvrir avec les informations suivantes et valider.
@@ -35,7 +35,7 @@ Il suffit ensuite de remplir la modale qui vient de s'ouvrir avec les informatio
 
 ![alt text](../../img/pogues/sub-seq-creation-modal.png)
 
-Faire de même avec `THL_DHL` et le libellé "Caractéristiques"
+Faire de même avec une nouvelle sous-séquence `THL_DHL` ayant le libellé "Caractéristiques".
 
 ??? success "Solution"
     ![alt text](../../img/pogues/sub-seq-creation-solution.png)
@@ -44,7 +44,7 @@ Faire de même avec `THL_DHL` et le libellé "Caractéristiques"
     - [Les sous-séquences](../🚀_Guide/11-sous-sequences.md)
 
 ### Question sur les Prénoms
-Nous allons maintenant créer la première question concernant les prénoms. Placez vous sur la sous séquence concernée (clic sur `THL_PRENOM`), puis appuyez sur le bouton de création de question.
+Nous allons maintenant créer la première question concernant les prénoms. Placez vous sur la sous-séquence concernée (clic sur `THL_PRENOM`), puis appuyez sur le bouton de création de question.
 ![alt text](../../img/pogues/question-creation.png)
 
 Remplissez les champs avec les infos suivantes : 
@@ -62,10 +62,10 @@ Générez la variable puis validez.
 !!! abstract "Pour aller plus loin"
     - [Les questions simples de type texte](../🚀_Guide/Questions/13-reponse-simple.md/#type-de-reponse-texte)
 
-### Question sur l'âge
+### Question sur la date de naissance
 Nous allons créer maintenant une question simple, `T_DATENAIS`, mais avec un nouveau type de réponse, le type "Date".
 
-On a besoin pour ce type de question de spécifier un format et des bornes minimum et maximum, à spécifier selon le format.
+On a besoin pour ce type de question de spécifier un format (AAAA-MM-JJ, AAAA-MM, AAAA) et des bornes minimum et maximum, décrites selon le format choisi.
 
 !!! example "Cas pratique"
     Placez vous sur la sous-séquence `THL_DHL` puis créez une nouvelle question simple avec les information suivantes :
@@ -86,25 +86,25 @@ Générez la variable puis validez.
 !!! abstract "Pour aller plus loin"
     - [Les questions simples de type date](../🚀_Guide/Questions/13-reponse-simple.md/#type-de-reponse-date)
 
-Ici on récupère bien une date au format année/mois/jour. Nous verrons plus tard comment réutiliser cette variable collectée en calculant l'âge via justement ce qu'on appelle une "variable calculée".
+Ici on récupère bien une date au format année/mois/jour. Nous verrons plus tard comment réutiliser cette variable collectée pour calculer l'âge via justement ce qu'on appelle une "variable calculée".
 
 
 
-### Visualiser, c'est tester
+### Visualiser, c'est tester !
 
-!!! info "On n'oublie pas de Visualiser, Valider puis Sauvegarder !"
+!!! info "On n'oublie pas de Visualiser et Sauvegarder si la visualisation est valide !"
     Nous avons fait quelques changements dans le questionnaire. Une bonne pratique est de ne pas attendre d'avoir fait trop de changements avant de visualiser pour les valider. Il faut aller pas à pas pour bien maîtriser ce que l'on fait.
 
-Cette fois utilisons la visualisation "Web entreprise". Cette visualisation a la particularité de mettre **toutes les questions d'une même séquence sur la même page**. 
+Cette fois, utilisons la visualisation "Web entreprise". Cette visualisation a la particularité de mettre **toutes les questions d'une même séquence sur la même page**. 
 
 On observe ainsi pour la première séquence la page suivante,
 ![alt text](../../img/pogues/visualisation-thl-page1.png)
 Et pour la deuxième page, nous avons les deux questions que l'on vient de créer, séparées par les deux sous séquences " " et "Caractéristiques"
 ![alt text](../../img/pogues/visualisation-thl-page2.png)
 
-Une fois que nos changements sont valides, **on sauvegarde !**
+Lorsqu'on est satisfaits des changements réalisés, **on sauvegarde !**
 
-!!! tip "N'hésitez pas à varier les contexte de visualisation durant tout ce tutoriel"
+!!! tip "N'hésitez pas à varier les contextes de visualisation durant tout ce tutoriel"
 
 !!! abstract "Pour aller plus loin"
     - [La visualisation web](../../5._Orchestrateurs/Stromae-DSFR/index.md)
