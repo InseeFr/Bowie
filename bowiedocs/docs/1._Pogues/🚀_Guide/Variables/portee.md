@@ -1,9 +1,5 @@
 # Portée des variables
 
-!!! question "Champ *Niveau de calcul*"
-    Les variables calculées ou externes possèdent une portée indiquée par le paramètre **_Niveau de calcul_**. A quoi cela correspond-il ?
-
-    Il s'agit de préciser si une variable est calculée ou injectée (dans le cas d'une variable externe) au sein d'une boucle ou dans le contexte du questionnaire dans son ensemble.
 
 ### Type de portée
 
@@ -11,6 +7,9 @@
 - **Portée `Boucle/Tableau` (ou `<Vecteur>`) :** alors la variable calculée sera elle aussi un vecteur et la formule VTL associée portera sur toutes les occurrences du vecteur.
     Ex : la var calculée `CALC_VAR` ayant pour formule VTL `$CA_ENTREPRISE$ + 100` sera donc un vecteur auquel on aura ajouté `100` à chaque valeur de `$CA_ENTREPRISE$`.
     `<Vecteur>` prend la valeur du nom d’une boucle ou d’un tableau dynamique.
+
+  !!! question "Champ *Niveau de calcul*"
+    On définit une portée pour les variables calculées ou externes via par le paramètre **_Niveau de calcul_** : il s'agit de préciser si une variable est calculée ou injectée (dans le cas d'une variable externe) au sein d'une boucle, d'un tableau ou dans le contexte du questionnaire dans son ensemble.
 
 ## Exemple pour les boucles
 Imaginons une boucle `B1` sur un ensemble de questions relatives à des individus. Je veux pouvoir pour chacun d'eux créer une indicatrice permettant de savoir si l'individu est dans le champs en vérifiant son âge (variable collectée `AGE`) et sa nationalité (`NATIONALITE`).
@@ -21,7 +20,7 @@ Pour cela, je crée une variable calculée de portée `B1` dont la formule s'app
 
 **Cas pratique :**  
 
-On veut contrôler si un individu est majeur ou non pour savoir quels questions lui poser. On va créer une variable calculée `EST_MAJEUR` de portée `B1` portant sur chaque valeur de `AGE` et vérifiant si `$AGE$ >= 18`
+On veut contrôler si un individu est majeur ou non pour savoir quelles questions lui poser. On va créer une variable calculée `EST_MAJEUR` de portée `B1` portant sur chaque valeur de `AGE` et vérifiant si `$AGE$ >= 18`
 
 ![alt text](../../../img/pogues/check_Is_adult.png)
 
