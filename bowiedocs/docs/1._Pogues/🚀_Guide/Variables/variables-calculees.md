@@ -16,7 +16,7 @@
     1. `Libellé*` : description de la variable
     1. `Formule*` : Éditeur VTL permettant de définir la formule VTL de calcul de la variable
 		- Exemples : Nombre total de personne dans le ménage interrogé ; somme des pourcentages du chiffre d'affaires dédiés à certaines activités ou nombre de majeurs d'un ménage
-    1. `Niveau de calcul*` : correspond à la portée de la variable. Plus de détails [ici](https://user-juliencarmona-654711-0.user.lab.sspcloud.fr/proxy/8000/Bowie/1._Pogues/%F0%9F%9A%80_Guide/Variables/portee/)
+    1. `Niveau de calcul*` : correspond à la portée de la variable. Plus de détails [ici](https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/Variables/portee/)
 		
 		!!! note "Note"
 			Par défaut il faut laisser `Questionnaire` comme niveau de calcul si la variable vaut la même valeur sur l’ensemble du questionnaire. Si la variable est occurrentielle (cad, sa valeur dépend de la ligne sur laquelle on se trouve au sein d’un tableau dynamique ou de l’occurrence sur laquelle on se trouve au sein d’une boucle), on renseigne ici l'élément itérable (identifiant du tableau dynamique ou boucle du questionnaire) auquel se réfère la variable.
