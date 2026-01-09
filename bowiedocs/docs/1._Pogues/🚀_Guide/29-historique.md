@@ -1,4 +1,4 @@
-# Historique de sauvegardes (New ✨)
+# Historique de sauvegardes
 
 ## Accéder à l'historique
 

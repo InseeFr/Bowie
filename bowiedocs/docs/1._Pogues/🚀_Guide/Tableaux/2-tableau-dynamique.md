@@ -101,7 +101,7 @@ Dans l'onglet Contrôles, décrire classiquement le contrôle en VTL mais préci
 ![Contrôles par ligne](../../../img/pogues/controle-tab-dynamique.png)
 
 
-## ✨ Filtrer des cases
+## Filtrer des cases ✨
 
 !!! abstract "Objectif"
     Il est possible de filtrer des cases dans un tableau dynamique selon une formule VTL.
@@ -144,7 +144,7 @@ Le choix "Non" est sélectionné par défaut : aucune case de la colonne n'est f
     === "3 case cochés avec 1 case remplie"
         ![alt text](../../../img/pogues/dyn-tab-filter-cell-ex-5.png)
 
-## ✨ Cases en lecture seule
+## Cases en lecture seule ✨
 !!! abstract "Objectif"
     Le concepteur peut spécifier des règles qui mettent en lecture seule certaines cases d'un tableau dynamique. Cette fonctionnalité est utile par exemple lorsqu'on pré-remplit les données d'un tableau et qu'on ne souhaite pas laisser la possibilité à l'enquêté de modifier les valeurs.
 

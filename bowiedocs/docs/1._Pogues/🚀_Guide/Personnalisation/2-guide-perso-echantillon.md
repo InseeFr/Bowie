@@ -29,27 +29,15 @@ On peut remplir les données à partir de ce fichier schéma :
 
 ...![Variables externes données](../../../img/personnalisation/var-ext-data.png)
 
-## Point d'attention
+Puis charger avec le bouton "Charger les unités enquêtées", puis valider la création avec le bouton "Créer le questionnaire dans les orchestrateurs".
 
-!!!danger "Encadrer les données avec `""`"
+!!!note
+    Selon la taille du questionnaire cette création peut durer plusieurs minutes.
 
-    - Les valeurs d'en-tête et de lignes doivent être encadrées de `""`. Le fichier schéma téléchargé depuis Public Enemy contient bien ces double quotes pour les en-têtes.
-    - Si on utilise Libre Office Calc pour éditer ce fichier, on peut utiliser [**cette astuce**](https://help.libreoffice.org/latest/fr/text/scalc/guide/csv_files.html) pour s'assurer que les `""` sont bien toujours présentes après enregistrement
-    - Pour bien s'assurer que cette contrainte est respectée, on peut ouvrir le fichier de données que l'on constitue avec un éditeur de texte comme Notepad++.
+## Variables externes de portée Boucle ou Tableau dynamique
 
-    ???example "Exemple de fichier csv valide"
-        ```
-        "SIREN","ACTIVITE","SALARIE_PRENOM_1","SALARIE_PRENOM_2","SALARIE_PRENOM_3",
-        "120027016","BTP","Pierre","Géraldine",""
-        "987654321","COMMERCE","Solange","Ludovic","Camille"
-        ```
-
-!!! warning "Type des variables externes"
-    - Toutes les variables externes sont importées avec en tant que texte (= type `string`). **il faut donc bien penser à utiliser la fonction de [cast()](../../💻_VTL/fonctions-vtl.md/#cast) au besoin**  
-
-!!!warning "Maximum 10 UE"
-
-    - Un fichier de données ne pourra contenir qu'un maximum de 10 unités enquêtées.
+Pour les variables de portée "Boucle" ou les lignes de tableaux dynamiques, il faudra créer autant de variables suffixées par un index que l'on veut d'occurrences ou de lignes. 
+Par exemple, pour une variable externe `PRENOM`, on fournira un fichier contenant `PRENOM_1`, `PRENOM_2`, ..., `PRENOM_N`.
 
 !!!warning "Ordre des listes de plus de 10 éléments dans un tableau dynamique"
 
@@ -74,16 +62,27 @@ On peut remplir les données à partir de ce fichier schéma :
         ```
         ![alt text](../../../img/pogues/wrong_order_list_ext.png)
 
-!!!note "Variables de portée Boucle ou lignes de tableaux dynamiques"
+## Point d'attention
 
-    Pour les variables de portée "Boucle" ou les lignes de tableaux dynamiques, il faudra créer autant de variables suffixées par un index que l'on veut d'occurrences ou de lignes. 
-    Par exemple, pour une variable externe `PRENOM`, on fournira un fichier contenant `PRENOM_1`, `PRENOM_2`, ..., `PRENOM_N`.
+!!!danger "Encadrer les données avec `""`"
 
-Puis charger avec le bouton "Charger les unités enquêtées", puis valider la création avec le bouton "Créer le questionnaire dans les orchestrateurs".
+    - Les valeurs d'en-tête et de lignes doivent être encadrées de `""`. Le fichier schéma téléchargé depuis Public Enemy contient bien ces double quotes pour les en-têtes.
+    - Si on utilise Libre Office Calc pour éditer ce fichier, on peut utiliser [**cette astuce**](https://help.libreoffice.org/latest/fr/text/scalc/guide/csv_files.html) pour s'assurer que les `""` sont bien toujours présentes après enregistrement
+    - Pour bien s'assurer que cette contrainte est respectée, on peut ouvrir le fichier de données que l'on constitue avec un éditeur de texte comme Notepad++.
 
-!!!note
+    ???example "Exemple de fichier csv valide"
+        ```
+        "SIREN","ACTIVITE","SALARIE_PRENOM_1","SALARIE_PRENOM_2","SALARIE_PRENOM_3",
+        "120027016","BTP","Pierre","Géraldine",""
+        "987654321","COMMERCE","Solange","Ludovic","Camille"
+        ```
 
-    Selon la taille du questionnaire cette création peut durer plusieurs minutes.
+!!! warning "Type des variables externes"
+    - Toutes les variables externes sont importées avec en tant que texte (= type `string`). **il faut donc bien penser à utiliser la fonction de [cast()](../../💻_VTL/fonctions-vtl.md/#cast) au besoin**  
+
+!!!warning "Maximum 10 UE"
+
+    - Un fichier de données ne pourra contenir qu'un maximum de 10 unités enquêtées.
 
 ## Variables externes et pré-remplissage - JSON (New ✨)
 
