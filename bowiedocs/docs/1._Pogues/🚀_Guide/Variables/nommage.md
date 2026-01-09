@@ -35,4 +35,4 @@ Par ailleurs, lorsqu'elles sont utilisées dans du code VTL, les noms des variab
 !!! danger
     Il faut éviter de finir le nom d'une variable vecteur (portée boucle ou tableau dynamique) par `_X` sinon Public Enemy ne fonctionnera pas correctement !
 
-    Voir [variable de portée boucle dans Public Enemy](../Personnalisation/2-guide-perso-echantillon.md) pour plus de détails.
+    Voir [Création des unités enquêtées dans la Personnalisation](../Personnalisation/2-guide-perso-echantillon.md) pour plus de détails.
