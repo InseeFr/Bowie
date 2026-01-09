@@ -3,15 +3,15 @@
 ## Types de variables 
 
 - [**Collectée**](variables-collectees.md) : Donnée principale d'une enquête = information que l'on veut récupérer pour ensuite l’analyser.
-- [**Calculée**](variables-calculees.md) : Variable calculée des variables à partir d'autres variables du questionnaire
+- [**Calculée**](variables-calculees.md) : Variable calculée à partir d'autres variables du questionnaire
 - [**Externe**](variables-externes.md) : Variable permettant de personnaliser un questionnaire. Ex : Année de l'enquête
 - [**Globale**](variables-globales.md) : Variables fournies directement par le moteur de contrôle des questionnaires
 
 
 ## Liste de Variables
 
-Un page listant toutes les variables du questionnaire est disponible via le menu "Variables".
-Elles sont accessible en lecture seule (pas d'édition pour l'instant) avec un classement par portée (niveau de calcul pour les boucles et les tableaux).
+Une page listant toutes les variables du questionnaire est disponible via le menu "Variables".
+Elles sont accessibles en lecture seule pour les variables collectées et en édition pour les variables calculées et externes avec un classement par portée (niveau de calcul pour les boucles et les tableaux).
 
 !!! abstract "Variables d'un questionnaire"
     ![variable-list](../../../img/pogues/variable-list.png)
