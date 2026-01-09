@@ -1,13 +1,12 @@
 # Les variables externes ✨
 
 
-!!! question "Définition"
-    Pogues permet de référencer dans le questionnaire des variables externes, c'est à dire des variables qui sont fournies au chargement du questionnaire lors de la collecte, en provenance d'un fichier de données produit à partir de données connues et attachées à l'unité enquêtée.
+Pogues permet de référencer dans le questionnaire des variables externes, c'est à dire des variables qui sont fournies au chargement du questionnaire lors de la collecte, en provenance d'un fichier de données produit à partir de données connues et attachées à l'unité enquêtée.
 
-!!! note
-    Si le _typage_ disponible dans Pogues pour ces variables est celui disponible par ailleurs pour les variables collectées et calculées, on n'a en fait pas le choix : l'ensemble des variables externes injectées dans le questionnaire sont du __texte__.
+!!! danger
+   Le _typage_ disponible dans Pogues pour ces variables est celui disponible par ailleurs pour les variables collectées et calculées, mais l'outil impose un format texte afin d'être facilement lu tout au long de la chaîne de traitement : l'ensemble des variables externes injectées dans le questionnaire sont du __texte__.
 
-    L'impact : si ces variables doivent être utilisées comme numériques, il faut alors les transformer avec la fonction [cast()](../../💻_VTL/fonctions-vtl.md/#cast):
+    Impact : si ces variables doivent être utilisées comme numériques, il faut alors les transformer avec la fonction [cast()](../../💻_VTL/fonctions-vtl.md/#cast):
 
     ```vtl
     cast($VAR_EXT$, integer)
@@ -15,19 +14,19 @@
 
 ## Création d'une variable externe
 
-✨ Une variable externe se définit via le menu "Variables" puis en cliquant sur le bouton en haut à droite "Créer une variable". 
+✨ On crée les variables externes via le menu "Variables" en cliquant sur le bouton en haut à droite "Créer une variable".
 
 !!! abstract "Nouvelle variable externe"
     ![alt text](../../../img/pogues/var-creation-external.png)
 
-    1. `Type de variable*` : permets de changer entre la création d'une variable calculée et une variable externe
-    1. `Variable réinitialisable` :
+    1. `Type de variable*` : permet de sélectionner le type de variable souhaité : calculée ou externe
+    1. `Variable réinitialisable` : attribut réservé aux enquêtes ayant un protocole complexe de collecte concurrentielle enquêteur / web : il peut arriver que l'enquêteur reprenne la main sur un questionnaire web et ait besoin de "supprimer" les réponses web : on offrira donc à l'enquêteur, dans Sabiane, la possibilité de remettre les données du questionnaire à vide. L'attribut `Variable réinitialisable` permet de tagger les variables qu'on permet de vider.
     1. `Identifiant*` : correspond au nom de la variable
     1. `Libellé*` : description de la variable
-    1. `Niveau de calcul*` : défini la portée de la variable. Plus de détails [ici](https://user-juliencarmona-654711-0.user.lab.sspcloud.fr/proxy/8000/Bowie/1._Pogues/%F0%9F%9A%80_Guide/Variables/portee/)
+    1. `Niveau de calcul*` : correspond à la portée de la variable. Plus de détails [ici](https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/Variables/portee/)
 		
 		!!! note "Note"
-			Par défaut la valeur est `Questionnaire` si la variable vaut la même valeur sur l’ensemble du questionnaire. Si la variable est occurrentielle (cad, sa valeur dépend de la ligne sur laquelle on se trouve au sein d’un tableau dynamique ou de l’occurrence sur laquelle on se trouve au sein d’une boucle), renseigner ici l'élément itérable (identifiant du tableau dynamique ou boucle du questionnaire) auquel se réfère la variable.
+			Par défaut il faut laisser `Questionnaire` comme niveau de calcul si la variable vaut la même valeur sur l’ensemble du questionnaire. Si la variable est occurrentielle (cad, sa valeur dépend de la ligne sur laquelle on se trouve au sein d’un tableau dynamique ou de l’occurrence sur laquelle on se trouve au sein d’une boucle), on renseigne ici l'élément itérable (identifiant du tableau dynamique ou boucle du questionnaire) auquel se réfère la variable.
 
     1. `Type de réponse*` : parmi Texte, Date, Nombre, Booléen (cf. Création d'une question de type réponse simple)
       > Suivant la valeur sélectionnée, d'autres champs associés au type apparaissent.
