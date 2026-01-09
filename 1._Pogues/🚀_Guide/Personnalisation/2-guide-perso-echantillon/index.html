@@ -1197,7 +1197,7 @@
         
   
   <span class="md-ellipsis">
-    Spécifier une liste de codes
+    Les listes de codes
   </span>
   
 
@@ -1365,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Historique de sauvegardes (New ✨)
+    Historique de sauvegardes
   </span>
   
 
@@ -1522,6 +1522,15 @@
   <a href="#variables-externes-seules-csv" class="md-nav__link">
     <span class="md-ellipsis">
       Variables externes seules - CSV
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-externes-de-portee-boucle-ou-tableau-dynamique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables externes de portée Boucle ou Tableau dynamique
     </span>
   </a>
   
@@ -2205,7 +2214,7 @@
         
   
   <span class="md-ellipsis">
-    Les variables calculées
+    Les variables calculées ✨
   </span>
   
 
@@ -2247,7 +2256,7 @@
         
   
   <span class="md-ellipsis">
-    Les variables externes
+    Les variables externes ✨
   </span>
   
 
@@ -3058,6 +3067,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#variables-externes-de-portee-boucle-ou-tableau-dynamique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables externes de portée Boucle ou Tableau dynamique
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#point-dattention" class="md-nav__link">
     <span class="md-ellipsis">
       Point d'attention
@@ -3108,6 +3126,35 @@
 <p><a class="glightbox" href="../../../../img/personnalisation/var-ext-schema.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variables externes schéma" src="../../../../img/personnalisation/var-ext-schema.png" /></a></p>
 <p>On peut remplir les données à partir de ce fichier schéma :</p>
 <p>...<a class="glightbox" href="../../../../img/personnalisation/var-ext-data.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variables externes données" src="../../../../img/personnalisation/var-ext-data.png" /></a></p>
+<p>Puis charger avec le bouton "Charger les unités enquêtées", puis valider la création avec le bouton "Créer le questionnaire dans les orchestrateurs".</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Selon la taille du questionnaire cette création peut durer plusieurs minutes.</p>
+</div>
+<h2 id="variables-externes-de-portee-boucle-ou-tableau-dynamique">Variables externes de portée Boucle ou Tableau dynamique</h2>
+<p>Pour les variables de portée "Boucle" ou les lignes de tableaux dynamiques, il faudra créer autant de variables suffixées par un index que l'on veut d'occurrences ou de lignes. 
+Par exemple, pour une variable externe <code class="highlight"><span class="n">PRENOM</span></code>, on fournira un fichier contenant <code class="highlight"><span class="n">PRENOM_1</span></code>, <code class="highlight"><span class="n">PRENOM_2</span></code>, ..., <code class="highlight"><span class="n">PRENOM_N</span></code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Ordre des listes de plus de 10 éléments dans un tableau dynamique</p>
+<ul>
+<li>Si pour une UE on a une variable sous forme de vecteur et qu'on injecte plus de 10 élément, alors ces derniers ne seront pas affichés dans le bon ordre</li>
+</ul>
+<p>Ex: J'ai une variable externe LISTE
+<div class="highlight"><pre><span></span><code><span class="n">LISTE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">LISTE_1</span><span class="p">,</span><span class="n">LISTE_2</span><span class="p">,</span><span class="kc">...</span><span class="p">,</span><span class="n">LISTE_9</span><span class="p">,</span><span class="n">LISTE_10</span><span class="p">,</span><span class="n">LISTE_11</span><span class="p">]</span>
+</code></pre></div>
+si j'injecte cette variable dans l'une des colonne d'un tableau et que je visualise, je vais avoir l'ordre suivant
+<div class="highlight"><pre><span></span><code><span class="n">LISTE_1</span><span class="p">,</span><span class="w"> </span><span class="n">LISTE_10</span><span class="p">,</span><span class="w"> </span><span class="n">LISTE_11</span><span class="p">,</span><span class="w"> </span><span class="n">LISTE_2</span><span class="p">,</span><span class="w"> </span><span class="n">LISTE_3</span><span class="p">,</span><span class="w"> </span><span class="kc">...</span>
+</code></pre></div></p>
+<details class="example">
+<summary>exemple</summary>
+<p><div class="highlight"><span class="filename">Exemple de csv à importer dans Public Enemy</span><pre><span></span><code><span class="s">&quot;LISTE_1&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_2&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_3&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_4&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_5&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_6&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_7&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_8&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_9&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_10&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_11&quot;</span>
+<span class="s">&quot;code 1&quot;</span><span class="p">,</span><span class="s">&quot;code 2&quot;</span><span class="p">,</span><span class="s">&quot;code 3&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;11&quot;</span>
+<span class="s">&quot;1&quot;</span><span class="p">,</span><span class="s">&quot;2&quot;</span><span class="p">,</span><span class="s">&quot;3&quot;</span><span class="p">,</span><span class="s">&quot;4&quot;</span><span class="p">,</span><span class="s">&quot;5&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span>
+<span class="s">&quot;1&quot;</span><span class="p">,</span><span class="s">&quot;2&quot;</span><span class="p">,</span><span class="s">&quot;3&quot;</span><span class="p">,</span><span class="s">&quot;4&quot;</span><span class="p">,</span><span class="s">&quot;5&quot;</span><span class="p">,</span><span class="s">&quot;6&quot;</span><span class="p">,</span><span class="s">&quot;7&quot;</span><span class="p">,</span><span class="s">&quot;8&quot;</span><span class="p">,</span><span class="s">&quot;9&quot;</span><span class="p">,</span><span class="s">&quot;10&quot;</span><span class="p">,</span><span class="s">&quot;11&quot;</span>
+</code></pre></div>
+<a class="glightbox" href="../../../../img/pogues/wrong_order_list_ext.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/wrong_order_list_ext.png" /></a></p>
+</details>
+</div>
 <h2 id="point-dattention">Point d'attention</h2>
 <div class="admonition danger">
 <p class="admonition-title">Encadrer les données avec <code class="highlight"><span class="s">&quot;&quot;</span></code></p>
@@ -3135,37 +3182,6 @@
 <ul>
 <li>Un fichier de données ne pourra contenir qu'un maximum de 10 unités enquêtées.</li>
 </ul>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Ordre des listes de plus de 10 éléments dans un tableau dynamique</p>
-<ul>
-<li>Si pour une UE on a une variable sous forme de vecteur et qu'on injecte plus de 10 élément, alors ces derniers ne seront pas affichés dans le bon ordre</li>
-</ul>
-<p>Ex: J'ai une variable externe LISTE
-<div class="highlight"><pre><span></span><code><span class="n">LISTE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">LISTE_1</span><span class="p">,</span><span class="n">LISTE_2</span><span class="p">,</span><span class="kc">...</span><span class="p">,</span><span class="n">LISTE_9</span><span class="p">,</span><span class="n">LISTE_10</span><span class="p">,</span><span class="n">LISTE_11</span><span class="p">]</span>
-</code></pre></div>
-si j'injecte cette variable dans l'une des colonne d'un tableau et que je visualise, je vais avoir l'ordre suivant
-<div class="highlight"><pre><span></span><code><span class="n">LISTE_1</span><span class="p">,</span><span class="w"> </span><span class="n">LISTE_10</span><span class="p">,</span><span class="w"> </span><span class="n">LISTE_11</span><span class="p">,</span><span class="w"> </span><span class="n">LISTE_2</span><span class="p">,</span><span class="w"> </span><span class="n">LISTE_3</span><span class="p">,</span><span class="w"> </span><span class="kc">...</span>
-</code></pre></div></p>
-<details class="example">
-<summary>exemple</summary>
-<p><div class="highlight"><span class="filename">Exemple de csv à importer dans Public Enemy</span><pre><span></span><code><span class="s">&quot;LISTE_1&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_2&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_3&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_4&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_5&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_6&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_7&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_8&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_9&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_10&quot;</span><span class="p">,</span><span class="s">&quot;LISTE_11&quot;</span>
-<span class="s">&quot;code 1&quot;</span><span class="p">,</span><span class="s">&quot;code 2&quot;</span><span class="p">,</span><span class="s">&quot;code 3&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;11&quot;</span>
-<span class="s">&quot;1&quot;</span><span class="p">,</span><span class="s">&quot;2&quot;</span><span class="p">,</span><span class="s">&quot;3&quot;</span><span class="p">,</span><span class="s">&quot;4&quot;</span><span class="p">,</span><span class="s">&quot;5&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span>
-<span class="s">&quot;1&quot;</span><span class="p">,</span><span class="s">&quot;2&quot;</span><span class="p">,</span><span class="s">&quot;3&quot;</span><span class="p">,</span><span class="s">&quot;4&quot;</span><span class="p">,</span><span class="s">&quot;5&quot;</span><span class="p">,</span><span class="s">&quot;6&quot;</span><span class="p">,</span><span class="s">&quot;7&quot;</span><span class="p">,</span><span class="s">&quot;8&quot;</span><span class="p">,</span><span class="s">&quot;9&quot;</span><span class="p">,</span><span class="s">&quot;10&quot;</span><span class="p">,</span><span class="s">&quot;11&quot;</span>
-</code></pre></div>
-<a class="glightbox" href="../../../../img/pogues/wrong_order_list_ext.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/wrong_order_list_ext.png" /></a></p>
-</details>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Variables de portée Boucle ou lignes de tableaux dynamiques</p>
-<p>Pour les variables de portée "Boucle" ou les lignes de tableaux dynamiques, il faudra créer autant de variables suffixées par un index que l'on veut d'occurrences ou de lignes. 
-Par exemple, pour une variable externe <code class="highlight"><span class="n">PRENOM</span></code>, on fournira un fichier contenant <code class="highlight"><span class="n">PRENOM_1</span></code>, <code class="highlight"><span class="n">PRENOM_2</span></code>, ..., <code class="highlight"><span class="n">PRENOM_N</span></code>.</p>
-</div>
-<p>Puis charger avec le bouton "Charger les unités enquêtées", puis valider la création avec le bouton "Créer le questionnaire dans les orchestrateurs".</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Selon la taille du questionnaire cette création peut durer plusieurs minutes.</p>
 </div>
 <h2 id="variables-externes-et-pre-remplissage-json-new">Variables externes et pré-remplissage - JSON (New ✨)</h2>
 <p>Pour récupérer le fichier json attendu du questionnaire, il suffit de faire</p>

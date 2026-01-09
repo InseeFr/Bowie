@@ -22,7 +22,7 @@
     
     
       
-        <title>Les variables externes - Atelier de Conception d'Enquêtes (Bowie)</title>
+        <title>Les variables externes ✨ - Atelier de Conception d'Enquêtes (Bowie)</title>
       
     
     
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Les variables externes
+              Les variables externes ✨
             
           </span>
         </div>
@@ -1197,7 +1197,7 @@
         
   
   <span class="md-ellipsis">
-    Spécifier une liste de codes
+    Les listes de codes
   </span>
   
 
@@ -1365,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Historique de sauvegardes (New ✨)
+    Historique de sauvegardes
   </span>
   
 
@@ -2129,7 +2129,7 @@
         
   
   <span class="md-ellipsis">
-    Les variables calculées
+    Les variables calculées ✨
   </span>
   
 
@@ -2180,7 +2180,7 @@
           
   
   <span class="md-ellipsis">
-    Les variables externes
+    Les variables externes ✨
   </span>
   
 
@@ -2191,7 +2191,7 @@
         
   
   <span class="md-ellipsis">
-    Les variables externes
+    Les variables externes ✨
   </span>
   
 
@@ -2211,6 +2211,15 @@
       Table des matières
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creation-dune-variable-externe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Création d'une variable externe
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#ajouter-des-variables-externes-de-portee-boucle" class="md-nav__link">
@@ -3013,6 +3022,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#creation-dune-variable-externe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Création d'une variable externe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ajouter-des-variables-externes-de-portee-boucle" class="md-nav__link">
     <span class="md-ellipsis">
       Ajouter des variables externes de portée Boucle
@@ -3036,7 +3054,7 @@
                   
 
 
-<h1 id="les-variables-externes">Les variables externes</h1>
+<h1 id="les-variables-externes">Les variables externes ✨</h1>
 <div class="admonition question">
 <p class="admonition-title">Définition</p>
 <p>Pogues permet de référencer dans le questionnaire des variables externes, c'est à dire des variables qui sont fournies au chargement du questionnaire lors de la collecte, en provenance d'un fichier de données produit à partir de données connues et attachées à l'unité enquêtée.</p>
@@ -3048,6 +3066,32 @@
 <div class="highlight"><pre><span></span><code><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR_EXT</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">integer</span><span class="p">)</span>
 </code></pre></div>
 </div>
+<h2 id="creation-dune-variable-externe">Création d'une variable externe</h2>
+<p>✨ Une variable externe se définit via le menu "Variables" puis en cliquant sur le bouton en haut à droite "Créer une variable". </p>
+<div class="admonition abstract">
+<p class="admonition-title">Nouvelle variable externe</p>
+<p><a class="glightbox" href="../../../../img/pogues/var-creation-external.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/var-creation-external.png" /></a></p>
+<ol>
+<li><code class="highlight"><span class="n">Type</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">variable</span><span class="o">*</span></code> : permets de changer entre la création d'une variable calculée et une variable externe</li>
+<li><code class="highlight"><span class="n">Variable</span><span class="w"> </span><span class="n">réinitialisable</span></code> :</li>
+<li><code class="highlight"><span class="n">Identifiant</span><span class="o">*</span></code> : correspond au nom de la variable</li>
+<li><code class="highlight"><span class="n">Libellé</span><span class="o">*</span></code> : description de la variable</li>
+<li>
+<p><code class="highlight"><span class="n">Niveau</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">calcul</span><span class="o">*</span></code> : défini la portée de la variable. Plus de détails <a href="https://user-juliencarmona-654711-0.user.lab.sspcloud.fr/proxy/8000/Bowie/1._Pogues/%F0%9F%9A%80_Guide/Variables/portee/">ici</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Par défaut la valeur est <code class="highlight"><span class="n">Questionnaire</span></code> si la variable vaut la même valeur sur l’ensemble du questionnaire. Si la variable est occurrentielle (cad, sa valeur dépend de la ligne sur laquelle on se trouve au sein d’un tableau dynamique ou de l’occurrence sur laquelle on se trouve au sein d’une boucle), renseigner ici l'élément itérable (identifiant du tableau dynamique ou boucle du questionnaire) auquel se réfère la variable.</p>
+</div>
+</li>
+<li>
+<p><code class="highlight"><span class="n">Type</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">réponse</span><span class="o">*</span></code> : parmi Texte, Date, Nombre, Booléen (cf. Création d'une question de type réponse simple)</p>
+<blockquote>
+<p>Suivant la valeur sélectionnée, d'autres champs associés au type apparaissent.
+Plus de détails sur les différents types <a href="../../Questions/13-reponse-simple/">ici</a></p>
+</blockquote>
+</li>
+</ol>
+</div>
 <h2 id="ajouter-des-variables-externes-de-portee-boucle">Ajouter des variables externes de portée Boucle</h2>
 <p>Dans certains protocoles complexes, on peut vouloir intégrer des variables externes correspondant à des variables collectées précédemement dans un autre questionnaire à l'intérieur d'une boucle.</p>
 <p>Imaginons par exemple que dans le premier questionnaire, on ait demandé le nombre d'habitants du logement (variable <code class="highlight"><span class="n">NBHAB</span></code>), puis, à l'intérieur d'une boucle répétée pour chaque habitant on ait collecté les prénoms et ages (respectivement les variables <code class="highlight"><span class="n">PRENOM</span></code> et <code class="highlight"><span class="n">AGE</span></code>).</p>
@@ -3056,10 +3100,10 @@
 <li>je crée dans celui-ci la boucle <code class="highlight"><span class="n">BOUCLE_PRINCIPALE</span></code>, avec un min et max dont la valeur est la variable <code class="highlight"><span class="n">NBHAB</span></code> (à créer, voir ci-dessous),</li>
 <li>je crée  les variables externes <code class="highlight"><span class="n">NBHAB</span></code> (Portée Questionnaire), <code class="highlight"><span class="n">PRENOM</span></code> et <code class="highlight"><span class="n">AGE</span></code> (portée <code class="highlight"><span class="n">BOUCLE_PRINCIPALE</span></code>).</li>
 </ul>
-<p>Il faudra ensuite fournir à l'intégration un fichier CSV contenant les variables et valeurs ad hoc (voir <a href="../../Personnalisation/2-guide-perso-echantillon/">ici</a>, section "Variables de portée Boucle")</p>
+<p>Il faudra ensuite fournir à l'intégration un fichier CSV contenant les variables et valeurs ad hoc (voir <a href="../../Personnalisation/2-guide-perso-echantillon/#variables-externes-de-portee-boucle-ou-tableau-dynamique">ici</a>, section "Variables de portée Boucle")</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>Eviter de finir le nom d'une variable externe par une valeur numérique.
+<p>Éviter de finir le nom d'une variable externe par une valeur numérique.
 Une variable externe peut contenir un vecteur (par exemple : liste d'habitant issue de la base de sondages ou de la précédente enquête) et sera personnalisée en collecte avec un suffixe séquentiel.
 Par exemple : pour un vecteur de produits appelé PRODUITS, dans le fichier de personnalisation on pourra avoir PRODUITS_01, PRODUITS_02, etc</p>
 </div>
