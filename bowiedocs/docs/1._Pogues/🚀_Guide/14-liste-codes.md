@@ -1,4 +1,4 @@
-# Spécifier une liste de codes
+# Les listes de codes
 
 ## Les listes de codes
 On accède aux différentes listes de codes via le bouton sur la gauche

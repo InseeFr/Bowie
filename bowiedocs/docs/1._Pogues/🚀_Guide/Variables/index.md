@@ -8,7 +8,7 @@
 - [**Globale**](variables-globales.md) : Variables fournies directement par le moteur de contrôle des questionnaires
 
 
-## Liste de Variables (New ✨)
+## Liste de Variables
 
 Un page listant toutes les variables du questionnaire est disponible via le menu "Variables".
 Elles sont accessible en lecture seule (pas d'édition pour l'instant) avec un classement par portée (niveau de calcul pour les boucles et les tableaux).
@@ -28,3 +28,4 @@ Elles sont accessible en lecture seule (pas d'édition pour l'instant) avec un c
         1. `Type de réponse`
         1. `Type de variable`
         > Si la variable est de type **Calculée**, alors on a la possibilité de voir la formule VTL associée au survol ou en cliquant sur le bouton.
+    5. `Créer une variable` : bouton redirigeant sur la page de création de variable **externe** ou **calculée**
