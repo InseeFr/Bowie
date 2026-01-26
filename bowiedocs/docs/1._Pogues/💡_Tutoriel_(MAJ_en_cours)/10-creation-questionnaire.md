@@ -55,5 +55,13 @@ Par défaut ces champs sont vides et ne sont pas proposés lors de la création 
     Si vous êtes en train de vous autoformer, vous pouvez choisir n'importe quelles valeurs, cela n'a pas d'impact sur le reste du questionnaire
 
 
+!!! warning
+
+    Il est possible de modifier **l'identifiant du questionnaire** qui a été généré automatiquement lors de la création du questionnaire.
+    Il est impératif d'utiliser **uniquement des caractères alphanumériques** pour la suite des traitements.
+
+
+
+
 ## Suite
 Nous allons maintenant créer une [première séquence](11-creation-premiere-sequence.md).
