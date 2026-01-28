@@ -11,7 +11,8 @@ On crée une nouvelle liste L_SEXE avec les modalités classiques "1" = "Homme",
 
 (capture)
 
-!!! abstract "Pour aller plus loin" - [Les listes de codes](../🚀_Guide/Questions/14-liste-codes/).
+!!! abstract "Pour aller plus loin" 
+- [Les listes de codes](../🚀_Guide/Questions/14-liste-codes/).
 
 
 ## Création de la question
@@ -22,7 +23,7 @@ On retourne au questionnaire en cliquant sur "Questionnaire", puis on se place s
 On crée une question de type "Réponse à choix unique", de type saisie "Bouton radio", et dans le menu déroulant des listes de codes on choisit la liste de codes "L_SEXE" qu'on vient de créer.
 
 !!! example "Cas pratique"
-    Placez vous sur la sous-séquence `THL_DHL` puis créez une nouvelle question simple avec les information suivantes :
+    Placez vous sur la question `T_DATENAIS` puis créez une nouvelle question avec les informations suivantes :
 
     - _Libellé_ : "Quel est votre sexe ?"
     - _Identifiant_ : `T_SEXE`
@@ -30,4 +31,4 @@ On crée une question de type "Réponse à choix unique", de type saisie "Bouton
     - _Type de saisie_ : Bouton radio
     - _Choix de la liste de codes_ : L_SEXE
 
-On oublie pas de générer les variables collectées avant de valider la question.
+Comme d'habitude, on n'oublie pas de générer les variables collectées avant de valider la question.
