@@ -1,30 +1,33 @@
 # Création d'une réponse basée sur une liste
-!!! danger "Page à mettre à jour"
 
-Dans notre première version de la question "OKREP", nous avons choisi comme format de réponse un champ textuel. Après coup, il semble préférable de fournir une liste fermée de réponse - "Oui" ou "Non".
+Pour collecter le sexe du répondant, nous allons créer une question de type question à choix unique (QCU) : on va laisser le répondant choisir la modalité qui décrit le mieux sa situation dans une liste fermée de réponses.
+Avant de créer la question, on va créer la liste de codes avec les modalités de réponse. 
 
-Pour modifier la question, il faut sélectionner l'élément qui matérialise cette dernière puis cliquer sur le bouton "Voir le détail" :
-
-![Modifier une question](../../img/pogues/modification-question-okrep.png)
 
 ## Création d'une liste
 
-Modifions dans l'onglet "Format des réponses" le _Type de question_ pour choisir "Réponse à choix unique".
+Dans le menu de gauche, cliquer sur "Liste de codes" pour ouvrir la page de gestion des listes de codes puis sur "Créer une liste de codes".
+On crée une nouvelle liste L_SEXE avec les modalités classiques "1" = "Homme", "2" = "Femme".
 
-On garde l'option "Créer une liste", puis on donne un nom à la liste que l'on va créer, par exemple "LISTE_OUI_NON" (champ _Nouvelle liste de code_).
+(capture)
 
-![Création liste](../../img/pogues/qcu-creation-liste.png)
+!!! abstract "Pour aller plus loin" - [Les listes de codes](../🚀_Guide/Questions/14-liste-codes/).
 
-## Ajout de modalités
 
-Sous le champ _Nouvelle liste de code_ on trouve les modalités de la liste. Pour l'instant, cette liste est vide, créons une nouvelle modalité :
+## Création de la question
 
-- en cliquant sur "+ Ajouter un code"
-- dans le champ qui apparaît, en renseignant "1" pour le code de la modalité et "Oui" pour le libellé.
-- même chose avec le code "2" et le libellé "Non".
+Maintenant que notre liste de codes est prête, on peut créer notre question !
 
-![Création modalité](../../img/pogues/qcu-creation-modalite.png)
+On retourne au questionnaire en cliquant sur "Questionnaire", puis on se place sur l'élément sous lequel on veut positionner la nouvelle question (ici c'est la question sur la date de naissance) et on clique sur "Question".
+On crée une question de type "Réponse à choix unique", de type saisie "Bouton radio", et dans le menu déroulant des listes de codes on choisit la liste de codes "L_SEXE" qu'on vient de créer.
 
-## Finalisation
+!!! example "Cas pratique"
+    Placez vous sur la sous-séquence `THL_DHL` puis créez une nouvelle question simple avec les information suivantes :
 
-Nous avons modifié le format de la réponse, il est donc nécessaire [de générer une nouvelle fois la variable sous-jacente](11-creation-premiere-sequence.md/#creation-de-la-variable) qui a changé de nature.
+    - _Libellé_ : "Quel est votre sexe ?"
+    - _Identifiant_ : `T_SEXE`
+    - _Type de question_ : Réponse à choix unique
+    - _Type de saisie_ : Bouton radio
+    - _Choix de la liste de codes_ : L_SEXE
+
+On oublie pas de générer les variables collectées avant de valider la question.
