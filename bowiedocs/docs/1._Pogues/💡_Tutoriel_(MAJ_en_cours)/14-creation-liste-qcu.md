@@ -11,7 +11,7 @@ On crée une nouvelle liste L_SEXE avec les modalités classiques "1" = "Homme",
 
 ![Créer liste de codes](../../img/pogues/tuto-nouvelle-liste-codes.png)
 
-!!! abstract "Pour aller plus loin"  -  [Les listes de codes](bowiedocs/docs/1._Pogues/🚀_Guide/14-liste-codes.md).
+!!! abstract "Pour aller plus loin"  -  [Les listes de codes](../🚀_Guide/14-liste-codes.md).
 
 
 ## Création de la question
