@@ -536,18 +536,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ajout-de-modalites" class="md-nav__link">
+  <a href="#creation-de-la-question" class="md-nav__link">
     <span class="md-ellipsis">
-      Ajout de modalités
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#finalisation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Finalisation
+      Création de la question
     </span>
   </a>
   
@@ -3038,18 +3029,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ajout-de-modalites" class="md-nav__link">
+  <a href="#creation-de-la-question" class="md-nav__link">
     <span class="md-ellipsis">
-      Ajout de modalités
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#finalisation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Finalisation
+      Création de la question
     </span>
   </a>
   
@@ -3071,26 +3053,29 @@
 
 
 <h1 id="creation-dune-reponse-basee-sur-une-liste">Création d'une réponse basée sur une liste</h1>
-<div class="admonition danger">
-<p class="admonition-title">Page à mettre à jour</p>
-</div>
-<p>Dans notre première version de la question "OKREP", nous avons choisi comme format de réponse un champ textuel. Après coup, il semble préférable de fournir une liste fermée de réponse - "Oui" ou "Non".</p>
-<p>Pour modifier la question, il faut sélectionner l'élément qui matérialise cette dernière puis cliquer sur le bouton "Voir le détail" :</p>
-<p><a class="glightbox" href="../../../img/pogues/modification-question-okrep.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Modifier une question" src="../../../img/pogues/modification-question-okrep.png" /></a></p>
+<p>Pour collecter le sexe du répondant, nous allons créer une question de type question à choix unique (QCU) : on va laisser le répondant choisir la modalité qui décrit le mieux sa situation dans une liste fermée de réponses.
+Avant de créer la question, on va créer la liste de codes avec les modalités de réponse. </p>
 <h2 id="creation-dune-liste">Création d'une liste</h2>
-<p>Modifions dans l'onglet "Format des réponses" le <em>Type de question</em> pour choisir "Réponse à choix unique".</p>
-<p>On garde l'option "Créer une liste", puis on donne un nom à la liste que l'on va créer, par exemple "LISTE_OUI_NON" (champ <em>Nouvelle liste de code</em>).</p>
-<p><a class="glightbox" href="../../../img/pogues/qcu-creation-liste.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création liste" src="../../../img/pogues/qcu-creation-liste.png" /></a></p>
-<h2 id="ajout-de-modalites">Ajout de modalités</h2>
-<p>Sous le champ <em>Nouvelle liste de code</em> on trouve les modalités de la liste. Pour l'instant, cette liste est vide, créons une nouvelle modalité :</p>
+<p>Dans le menu de gauche, cliquer sur "Liste de codes" pour ouvrir la page de gestion des listes de codes puis sur "Créer une liste de codes".
+On crée une nouvelle liste L_SEXE avec les modalités classiques "1" = "Homme", "2" = "Femme".</p>
+<p>(capture)</p>
+<p>!!! abstract "Pour aller plus loin" - <a href="../🚀_Guide/Questions/14-liste-codes/">Les listes de codes</a>.</p>
+<h2 id="creation-de-la-question">Création de la question</h2>
+<p>Maintenant que notre liste de codes est prête, on peut créer notre question !</p>
+<p>On retourne au questionnaire en cliquant sur "Questionnaire", puis on se place sur l'élément sous lequel on veut positionner la nouvelle question (ici c'est la question sur la date de naissance) et on clique sur "Question".
+On crée une question de type "Réponse à choix unique", de type saisie "Bouton radio", et dans le menu déroulant des listes de codes on choisit la liste de codes "L_SEXE" qu'on vient de créer.</p>
+<div class="admonition example">
+<p class="admonition-title">Cas pratique</p>
+<p>Placez vous sur la sous-séquence <code class="highlight"><span class="n">THL_DHL</span></code> puis créez une nouvelle question simple avec les information suivantes :</p>
 <ul>
-<li>en cliquant sur "+ Ajouter un code"</li>
-<li>dans le champ qui apparaît, en renseignant "1" pour le code de la modalité et "Oui" pour le libellé.</li>
-<li>même chose avec le code "2" et le libellé "Non".</li>
+<li><em>Libellé</em> : "Quel est votre sexe ?"</li>
+<li><em>Identifiant</em> : <code class="highlight"><span class="n">T_SEXE</span></code></li>
+<li><em>Type de question</em> : Réponse à choix unique</li>
+<li><em>Type de saisie</em> : Bouton radio</li>
+<li><em>Choix de la liste de codes</em> : L_SEXE</li>
 </ul>
-<p><a class="glightbox" href="../../../img/pogues/qcu-creation-modalite.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création modalité" src="../../../img/pogues/qcu-creation-modalite.png" /></a></p>
-<h2 id="finalisation">Finalisation</h2>
-<p>Nous avons modifié le format de la réponse, il est donc nécessaire <a href="../11-creation-premiere-sequence/#creation-de-la-variable">de générer une nouvelle fois la variable sous-jacente</a> qui a changé de nature.</p>
+</div>
+<p>On oublie pas de générer les variables collectées avant de valider la question.</p>
 
 
 
