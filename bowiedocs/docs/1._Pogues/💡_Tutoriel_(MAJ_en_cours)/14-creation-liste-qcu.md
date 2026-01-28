@@ -7,6 +7,7 @@ Avant de créer la question, on va créer la liste de codes avec les modalités 
 ## Création d'une liste
 
 Dans le menu de gauche, cliquer sur "Liste de codes" pour ouvrir la page de gestion des listes de codes puis sur "Créer une liste de codes".
+
 On crée une nouvelle liste L_SEXE avec les modalités classiques "1" = "Homme", "2" = "Femme".
 
 ![Créer liste de codes](../../img/pogues/tuto-nouvelle-liste-codes.png)
