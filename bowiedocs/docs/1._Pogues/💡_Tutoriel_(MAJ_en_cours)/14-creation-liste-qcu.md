@@ -12,7 +12,7 @@ On crée une nouvelle liste L_SEXE avec les modalités classiques "1" = "Homme",
 (capture)
 
 !!! abstract "Pour aller plus loin" 
-- [Les listes de codes](../🚀_Guide/Questions/14-liste-codes/).
+- [Les listes de codes](./🚀_Guide/Questions/14-liste-codes/).
 
 
 ## Création de la question
