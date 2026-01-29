@@ -22,7 +22,7 @@
     
     
       
-        <title>Création d'une question à choix multiples - Atelier de Conception d'Enquêtes (Bowie)</title>
+        <title>Création d'une question à choix multiples et recherche sur liste - Atelier de Conception d'Enquêtes (Bowie)</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creation-dune-question-a-choix-multiples" class="md-skip">
+        <a href="#creation-dune-question-a-choix-multiples-et-recherche-sur-liste" class="md-skip">
           Aller au contenu
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Création d'une question à choix multiples
+              Création d'une question à choix multiples et recherche sur liste
             
           </span>
         </div>
@@ -536,7 +536,7 @@
         
   
   <span class="md-ellipsis">
-    Création d'une question à choix multiples
+    Création d'une question à choix multiples et recherche sur liste
   </span>
   
 
@@ -558,7 +558,7 @@
         
   
   <span class="md-ellipsis">
-    Finalisation de la structure du questionnaire
+    Finalisation structure
   </span>
   
 
@@ -2978,8 +2978,9 @@
                   
 
 
-<h1 id="creation-dune-question-a-choix-multiples">Création d'une question à choix multiples</h1>
-<p>La prochaine question sera à choix multiples qui permettra d'interroger notre enquêté sur sa/ses nationalité(s). Pour cela, on va poser une première question afin de déterminer s'il dispose uniquement de la nationalité française, uniquement d'une nationalité étrangère ou s'il est français et étranger.</p>
+<h1 id="creation-dune-question-a-choix-multiples-et-recherche-sur-liste">Création d'une question à choix multiples et recherche sur liste</h1>
+<p>La prochaine question sera à une question à choix multiples (QCM) suivie d'une recherche sur liste. L'enchaînement des deux questions permettra d'interroger notre enquêté sur sa/ses nationalité(s). </p>
+<p>Pour cela, on va poser une première question afin de déterminer s'il dispose uniquement de la nationalité française, uniquement d'une nationalité étrangère ou s'il est français et étranger.</p>
 <ul>
 <li>
 <p>On crée une liste de code avec les différentes modalités de notre question, on va prendre les 4 modalités qui sont habituellement proposées dans le cadre des enquêtes ménage. 
@@ -2996,6 +2997,23 @@
 <p class="admonition-title">Note</p>
 <p>La génération des variables ici va générer autant de variables <em>booléennes</em> (vrai / faux) que d'éléments de la liste de codes.</p>
 </div>
+<p>Ensuite on va ajouter une question de type recherche sur liste (QCU recherche sur liste) afin d'inviter l'enquêté à choisir la nationalité qui lui correspond. Idéalement on voudrait ne poser cette question qu'aux personnes déclarant qu'elles ont une nationalité étrangère, c'est-à-dire qu'on voudrait filtrer cette question... patience, on verra prochainement comment mettre un place un filtre dans notre questionnaire.</p>
+<p>Pogues propose un certain nombre de listes de nomenclatures mutualisées pour satisfaire le plus grand nombre d'enquêtes : nationalités, nationalités étrangères, départements, communes, professions par sexe, diplômes, les activités (NAF sur 2 positions) etc. Pour mobiliser les listes de nomenclatures ont utilise un composant recherche sur liste (suggester). </p>
+<div class="admonition abstract">
+<p class="admonition-title">Pour aller plus loin</p>
+<ul>
+<li><a href="../../%F0%9F%9A%80_Guide/Questions/15b-suggester/">Les listes de codes</a>.</li>
+</ul>
+</div>
+<ul>
+<li>on crée une question avec le libellé "Quelle est votre nationalité étrangère ?" et l'identifiant "T_NATIONETR"</li>
+<li>le <em>Type de question</em> est "Réponse à choix unique"</li>
+<li>le <em>Type de saisie</em> est "Recherche sur liste"</li>
+<li>la <em>Nomenclature</em> à sélectionner dans le menu déroulant est "Nationalités étrangères".</li>
+<li>on ne permet pas de réponse libre (cf le guide pour plus d'infos sur la réponse libre)</li>
+</ul>
+<p>On génère les variables et on valide notre question : on vient de créer notre première question de type recherche sur liste !
+Et on sera encore plus satisfait lorsqu'on aura vu comment filtrer la question pour ne la proposer qu'à ceux qui en ont effectivement une...</p>
 
 
 
@@ -3042,13 +3060,13 @@
         
         
           
-          <a href="../17-finalisation-structure/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Finalisation de la structure du questionnaire">
+          <a href="../17-finalisation-structure/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Finalisation structure">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                Finalisation de la structure du questionnaire
+                Finalisation structure
               </div>
             </div>
             <div class="md-footer__button md-icon">
