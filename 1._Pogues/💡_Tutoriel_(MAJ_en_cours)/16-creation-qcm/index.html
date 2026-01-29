@@ -2979,14 +2979,17 @@
 
 
 <h1 id="creation-dune-question-a-choix-multiples">Création d'une question à choix multiples</h1>
-<div class="admonition danger">
-<p class="admonition-title">Page à mettre à jour</p>
-</div>
-<p>La prochaine question sera à choix multiples. Pour cela :</p>
+<p>La prochaine question sera à choix multiples qui permettra d'interroger notre enquêté sur sa/ses nationalité(s). Pour cela, on va poser une première question afin de déterminer s'il dispose uniquement de la nationalité française, uniquement d'une nationalité étrangère ou s'il est français et étranger.</p>
 <ul>
-<li>on crée une question avec le libellé "Avez-vous déjà exercé les activités suivantes au sein de votre carrière ?" et l'identifiant "CARRIERE"</li>
+<li>
+<p>On crée une liste de code avec les différentes modalités de notre question, on va prendre les 4 modalités qui sont habituellement proposées dans le cadre des enquêtes ménage. 
+<a class="glightbox" href="../liste-modalit%C3%A9s-nationalit%C3%A9s.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="L_NATIO" src="../liste-modalit%C3%A9s-nationalit%C3%A9s.png" /></a></p>
+</li>
+<li>
+<p>on crée une question avec le libellé "Quelle est votre nationalité ?" et l'identifiant "T_NATIO"</p>
+</li>
 <li>le <em>Type de question</em> est "Réponse à choix multiple"</li>
-<li>dont la réponse est basée sur une liste de code <a href="../../../data/metiers.csv">"metiers.csv"</a></li>
+<li>dont la réponse est basée sur la liste de code L_NATIO qu'on vient de créer</li>
 <li>pour la <em>Représentation des réponse</em> on garde le choix par défaut "Booléen".</li>
 </ul>
 <div class="admonition note">
