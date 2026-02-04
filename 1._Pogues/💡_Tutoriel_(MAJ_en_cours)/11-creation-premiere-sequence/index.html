@@ -483,24 +483,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#identification" class="md-nav__link">
-    <span class="md-ellipsis">
-      Identification
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#format-de-reponse" class="md-nav__link">
-    <span class="md-ellipsis">
-      Format de réponse
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#creation-de-la-variable" class="md-nav__link">
     <span class="md-ellipsis">
       Création de la variable
@@ -3090,24 +3072,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#identification" class="md-nav__link">
-    <span class="md-ellipsis">
-      Identification
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#format-de-reponse" class="md-nav__link">
-    <span class="md-ellipsis">
-      Format de réponse
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#creation-de-la-variable" class="md-nav__link">
     <span class="md-ellipsis">
       Création de la variable
@@ -3182,14 +3146,14 @@ Une séquence contient des questions et/ou des sous-séquences. Une sous-séquen
 <p>Les modes de collecte restent les mêmes que ceux du questionnaire.</p>
 <div class="admonition example">
 <p class="admonition-title">Cas pratique</p>
-<p>Saisissons la première séquence avec le <em>libellé</em> <code class="highlight"><span class="s">&quot;Informations sur le logement&quot;</span></code>.</p>
-<p>Quand on sort du champ <em>libellé</em>, on voit que le champ <em>identifiant</em> est automatiquement rempli avec <code class="highlight"><span class="n">INFORMATIO</span></code>. Ici Pogues prend les 10 premiers caractères alphanumériques du libellé les concatène et les met en majuscule. Ce nom est arbitraire et peu parlant pour la suite du questionnaire. Donnons lui l'identifiant <code class="highlight"><span class="n">LGT</span></code> pour logement.</p>
+<p>Saisissons la première séquence avec le <em>libellé</em> <code class="highlight"><span class="s">&quot;Quelques informations sur vous&quot;</span></code>.</p>
+<p>Quand on sort du champ <em>libellé</em>, on voit que le champ <em>identifiant</em> est automatiquement rempli avec <code class="highlight"><span class="n">QUELQUESIN</span></code>. Ici Pogues prend les 10 premiers caractères alphanumériques du libellé les concatène et les met en majuscule. Ce nom est arbitraire et peu parlant pour la suite du questionnaire. Donnons lui l'identifiant <code class="highlight"><span class="n">INDIV</span></code> pour individu.</p>
 </div>
 <p>Pour finaliser la création, on appuie sur le bouton "Valider" en bas de la fenêtre :</p>
 <p><a class="glightbox" href="../../../img/pogues/creation-sequence-valider.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Valider la séquence" src="../../../img/pogues/creation-sequence-valider.png" /></a></p>
 <div class="admonition example">
 <p class="admonition-title">Cas pratique</p>
-<p>Vous allez créer les 4 séquences qui constituent notre questionnaire "Tutoriel"</p>
+<p>Vous allez créer les 2 séquences qui constituent notre questionnaire "Tutoriel"</p>
 <table>
 <thead>
 <tr>
@@ -3199,31 +3163,19 @@ Une séquence contient des questions et/ou des sous-séquences. Une sous-séquen
 </thead>
 <tbody>
 <tr>
-<td><code class="highlight"><span class="n">LGT</span></code></td>
-<td><code class="highlight"><span class="s">&quot;Informations sur le logement&quot;</span></code></td>
+<td><code class="highlight"><span class="n">INDIV</span></code></td>
+<td><code class="highlight"><span class="s">&quot;Quelques informations sur vous&quot;</span></code></td>
 </tr>
 <tr>
-<td><code class="highlight"><span class="n">THL</span></code></td>
-<td><code class="highlight"><span class="s">&quot;Tableau des habitants du logement&quot;</span></code></td>
-</tr>
-<tr>
-<td><code class="highlight"><span class="n">QI</span></code></td>
-<td><code class="highlight"><span class="s">&quot;Questionnaire individuel&quot;</span></code></td>
-</tr>
-<tr>
-<td><code class="highlight"><span class="n">QC</span></code></td>
-<td><code class="highlight"><span class="s">&quot;Questionnaire commun&quot;</span></code></td>
-</tr>
-<tr>
-<td><code class="highlight"><span class="n">FIN</span></code></td>
-<td><code class="highlight"><span class="s">&quot;Fin du questionnaire&quot;</span></code></td>
+<td><code class="highlight"><span class="n">EXO</span></code></td>
+<td><code class="highlight"><span class="s">&quot;Avis sur l&#39;exercice&quot;</span></code></td>
 </tr>
 </tbody>
 </table>
 </div>
 <details class="success">
 <summary>Solution</summary>
-<p><a class="glightbox" href="../../../img/pogues/solution1-seq-created.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/solution1-seq-created.png" /></a></p>
+<p><a class="glightbox" href="../../../img/pogues/creation-s%C3%A9quence.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création des séquences" src="../../../img/pogues/creation-s%C3%A9quence.png" /></a></p>
 </details>
 <div class="admonition abstract">
 <p class="admonition-title">Pour aller plus loin</p>
@@ -3231,50 +3183,34 @@ Une séquence contient des questions et/ou des sous-séquences. Une sous-séquen
 <li><a href="../../%F0%9F%9A%80_Guide/10-sequences/">Les Séquences</a></li>
 </ul>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Mais ce n'est pas fini...</p>
-<p>On peut voir que le questionnaire est toujours mécontent et nous indique qu'il faut aussi créer au moins une question, ce que nous allons faire de ce pas ! </p>
-</div>
+<p>Mais ce n'est pas fini... On peut voir que le questionnaire est toujours mécontent et nous indique qu'il faut aussi créer au moins une question, ce que nous allons faire de ce pas ! </p>
 <h2 id="creation-dune-question">Création d'une question</h2>
 <p>Nous allons maintenant créer la première question de notre questionnaire et la placer dans la première séquence.</p>
 <div class="admonition example">
 <p class="admonition-title">Cas pratique</p>
 <ol>
 <li>PLacez vous sur la première séquence <code class="highlight"><span class="n">LOG</span></code> : cliquer sur le bloc associé à <code class="highlight"><span class="n">LOG</span></code>.   <br />
-<em>Vous devez voir qu'une fois sélectionné, le bloc est mis en évidence par l'encadré en bleu.</em>
-    <a class="glightbox" href="../../../img/pogues/seq-bloc-focused.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/seq-bloc-focused.png" /></a></li>
+<em>Vous devez voir qu'une fois sélectionné, le bloc est mis en évidence par l'encadré en bleu.</em></li>
 <li>Dans la barre des actions, le bouton "+ Question" permet la création d'une question.</li>
 <li>Suivez les prochaines indications afin de spécifier une question avec les informations suivantes : <ul>
-<li>Un identifiant <code class="highlight"><span class="n">T_NHAB</span></code> </li>
+<li>Un identifiant <code class="highlight"><span class="n">PRENOM</span></code> </li>
 <li>Une réponse simple </li>
-<li>Un type numérique </li>
-<li>Une variable collectée associée de même identifiant <code class="highlight"><span class="n">T_NHAB</span></code> et caractéristiques</li>
+<li>Un type texte de taille 40</li>
+<li>Une variable collectée associée de même identifiant <code class="highlight"><span class="n">PRENOM</span></code> et caractéristiques</li>
 </ul>
 </li>
 </ol>
 </div>
-<h3 id="identification">Identification</h3>
-<p>Dans la fenêtre modale qui apparaît :</p>
-<ul>
-<li><em>Libellé</em> : <code class="highlight"><span class="s">&quot;En vous comptant, combien de personnes habitent dans le logement ?&quot;</span></code></li>
-<li><em>Identifiant</em> : <code class="highlight"><span class="n">T_NHAB</span></code></li>
-</ul>
-<h3 id="format-de-reponse">Format de réponse</h3>
-<p>Pogues propose plusieurs formats de réponse qui peuvent être ensuite paramétrés.</p>
-<p>Dans l'onglet "Format des réponses", on choisit comme <em>Type de question</em> "Réponse simple" et <em>Type de réponse</em> "Nombre", ce qui va permettre de créer un champ de réponse numérique.</p>
-<p>Puis choisissez un minimum et un maximum (prenons par exemple 1 et 20).
-Ici il n'y a pas de précision (nombre de décimales après la virgule), et pas d'unité de mesure pour cette question.</p>
 <p>On revient dans la section suivante sur le détail des options, mais terminons d'abord la création de cette première question en cliquant sur "VALIDER".</p>
-<p><a class="glightbox" href="../../../img/pogues/quesiton-creation-validation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/quesiton-creation-validation.png" /></a></p>
+<p><a class="glightbox" href="../../../img/pogues/question-validation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Validation de la question PRENOM" src="../../../img/pogues/question-validation.png" /></a></p>
 <p>Pogues nous alerte d'une anomalie dans l'onglet "Variables collectées" : nous n'avons pas généré les variables collectées !
 Il reste une dernière étape, la création de la variable collectée associée (variable sous-jacente).</p>
-<p><a class="glightbox" href="../../../img/pogues/question-creation-missing-collected-var.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/question-creation-missing-collected-var.png" /></a></p>
+<p><a class="glightbox" href="../../../img/pogues/question-creation-missing-collected-var.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Validation avant d'avoir généré les variables collectées" src="../../../img/pogues/question-creation-missing-collected-var.png" /></a></p>
 <h3 id="creation-de-la-variable">Création de la variable</h3>
 <p>Pogues distingue <strong>la question</strong> de <strong>la réponse</strong> de <strong>la donnée collectée, la variable</strong>. Il faut donc explicitement créer cette dernière.</p>
-<p>Pour cela, on se dirige vers l'onglet "Variables collectées" puis on clique sur le bouton "Générer les variables collectées".
-<a class="glightbox" href="../../../img/pogues/question-creation-generate-collected-var.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/question-creation-generate-collected-var.png" /></a></p>
-<p>On voit alors apparaître une variable <code class="highlight"><span class="n">T_NHAB</span></code>. On peut enfin valider la question en cliquant sur le plus gros bouton "Valider" en bas de la fenêtre.
-<a class="glightbox" href="../../../img/pogues/question-creation-generate-collected-var-validation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/question-creation-generate-collected-var-validation.png" /></a></p>
+<p>Pour cela, on se dirige vers l'onglet "Variables collectées" puis on clique sur le bouton "Générer les variables collectées".</p>
+<p>On voit alors apparaître une variable <code class="highlight"><span class="n">PRENOM</span></code>. On peut enfin valider la question en cliquant sur le plus gros bouton "Valider" en bas de la fenêtre.
+<a class="glightbox" href="../../../img/pogues/question-creation-generate-collected-var-validation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création des variables collectées" src="../../../img/pogues/question-creation-generate-collected-var-validation.png" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Lorsque vous validez une question, une fenêtre peut apparaître avec le texte "Modifications non validées. Merci de valider toutes les actions sur l'élément.".
@@ -3285,7 +3221,7 @@ Il reste une dernière étape, la création de la variable collectée associée 
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Lorsqu'on est sur l'onglet des "Variables Collectées". On peut cliquer sur la variable afin de voir les informations associées.
-<a class="glightbox" href="../../../img/pogues/generated-collected-var-info.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/generated-collected-var-info.png" /></a></p>
+<a class="glightbox" href="../../../img/pogues/generated-collected-var-info.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zoom sur les variables collectées" src="../../../img/pogues/generated-collected-var-info.png" /></a></p>
 <p>Ici, seuls les champs <em>Identifiant</em> et <em>Libellé</em> sont modifiables. Ces champs sont importants pour la documentation de vos variables dans la suite du processus de l'enquête ! Le libellé (description) et l'identifiant doivent vous permettre de vous repérer dans l'ensemble des variables du questionnaire. </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -3297,7 +3233,7 @@ Il reste une dernière étape, la création de la variable collectée associée 
 <details class="success">
 <summary>Solution</summary>
 <p>Pogues est enfin content ! Il ne râle plus et on peut enfin <strong>sauvegarder</strong> notre questionnaire.
-<a class="glightbox" href="../../../img/pogues/survey-with-1st-question.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/survey-with-1st-question.png" /></a></p>
+<a class="glightbox" href="../../../img/pogues/survey-with-1st-question.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Questionnaire-séquences-1ère-question" src="../../../img/pogues/survey-with-1st-question.png" /></a></p>
 </details>
 <div class="admonition abstract">
 <p class="admonition-title">Pour aller plus loin</p>
