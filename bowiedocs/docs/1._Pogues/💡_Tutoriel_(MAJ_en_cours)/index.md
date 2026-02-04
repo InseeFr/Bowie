@@ -21,23 +21,17 @@ L'objectif est de vous permettre de démarrer sereinement avec l'outil, pour les
 ## Présentation du questionnaire pour le tutoriel 📄
 
 ### Contexte
-Étude d'un **dispositif** auprès de ménages.
+Étude des **relations aux travail** auprès d'individus.
 
 ### Structure
 Nous allons créer un questionnaire avec la structure suivante :
 
-- Séquence "Informations sur le logement" :
-    - Questions sur le logement du ménage interrogé
-- Séquence "Tableau des habitants du logement" :
-    - Questions d'identification des individus constituant le ménage
-        - Boucle Principale `BOUCLE_PRENOMS` permettant d'identifier les individus du ménages
-        - Boucle Liée `BOUCLE_INDIV` basée sur `BOUCLE_PRENOMS` permettant de poser une série de questions sur l'état civil de chaque individu du ménage.
-- Séquence "Questionnaire individuel" :
-    - Questions individuelles concernant le dispositif pour chaque
-        - Rond-Point basé sur `BOUCLE_PRENOMS` premettant de naviguer entre les individus plus facilement qu'une boucle afin de leur poser à chacun les questions sur le dispositif.
-        - Exclusion du questionnement les individus ne bénéficiant pas du dispositif 
-- Séquence "Questionnaire commun" :
-    - Questions concernant le dispositif mais pour tout le ménage cette fois
+- Séquence "Quelques informations sur vous" :
+    - Questions sur la personne interrogée pour décrire ses caractéristiques sociales
+- Sous-séquence "Parlez-nous de vos collègues" :
+    - Questions sur les relations avec les collègues dans une boucle 
+- Séquence "Avis sur l'exercice" :
+    - Questions concernant l'exercice pour clôturer le questionnaire
 - Séquence "Fin"
 
 !!! tip
