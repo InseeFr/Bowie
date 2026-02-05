@@ -3136,8 +3136,8 @@ Donnons-lui du contenu ! <img alt="😄" class="twemoji" src="https://cdn.jsdeli
 Une séquence contient des questions et/ou des sous-séquences. Une sous-séquence peut contenir des questions.</p>
 </div>
 <h2 id="creation-de-la-sequence">Création de la séquence</h2>
-<p>Pour créer la première séquence, il suffit de cliquer sur le bouton "+ Séquence" de la barre d'actions :
-<a class="glightbox" href="../../../img/pogues/barre-actions-sequence.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création d'une séquence" src="../../../img/pogues/barre-actions-sequence.png" /></a></p>
+<p>Pour créer la première séquence, il suffit de cliquer sur le bouton "+ Séquence" de la barre d'actions :</p>
+<p><a class="glightbox" href="../../../img/pogues/barre-actions-sequence.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création d'une séquence" src="../../../img/pogues/barre-actions-sequence.png" /></a></p>
 <p>Une fenêtre modale s'ouvre avec deux champs à remplir obligatoirement :</p>
 <ul>
 <li><em>Libellé</em> : Titre de la séquence tel qu'il va apparaître dans le questionnaire aux enquêtés ou enquêteurs</li>
@@ -3189,14 +3189,13 @@ Une séquence contient des questions et/ou des sous-séquences. Une sous-séquen
 <div class="admonition example">
 <p class="admonition-title">Cas pratique</p>
 <ol>
-<li>PLacez vous sur la première séquence <code class="highlight"><span class="n">LOG</span></code> : cliquer sur le bloc associé à <code class="highlight"><span class="n">LOG</span></code>.   <br />
+<li>Placez vous sur la première séquence <code class="highlight"><span class="n">INDIV</span></code> : cliquer sur le bloc associé à <code class="highlight"><span class="n">INDIV</span></code>.   <br />
 <em>Vous devez voir qu'une fois sélectionné, le bloc est mis en évidence par l'encadré en bleu.</em></li>
 <li>Dans la barre des actions, le bouton "+ Question" permet la création d'une question.</li>
 <li>Suivez les prochaines indications afin de spécifier une question avec les informations suivantes : <ul>
 <li>Un identifiant <code class="highlight"><span class="n">PRENOM</span></code> </li>
 <li>Une réponse simple </li>
 <li>Un type texte de taille 40</li>
-<li>Une variable collectée associée de même identifiant <code class="highlight"><span class="n">PRENOM</span></code> et caractéristiques</li>
 </ul>
 </li>
 </ol>
@@ -3207,7 +3206,7 @@ Une séquence contient des questions et/ou des sous-séquences. Une sous-séquen
 Il reste une dernière étape, la création de la variable collectée associée (variable sous-jacente).</p>
 <p><a class="glightbox" href="../../../img/pogues/question-creation-missing-collected-var.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Validation avant d'avoir généré les variables collectées" src="../../../img/pogues/question-creation-missing-collected-var.png" /></a></p>
 <h3 id="creation-de-la-variable">Création de la variable</h3>
-<p>Pogues distingue <strong>la question</strong> de <strong>la réponse</strong> de <strong>la donnée collectée, la variable</strong>. Il faut donc explicitement créer cette dernière.</p>
+<p>Pogues distingue <strong>la question</strong> de <strong>la réponse</strong> de <strong>la donnée collectée (= la variable)</strong>. Il faut donc explicitement créer cette dernière.</p>
 <p>Pour cela, on se dirige vers l'onglet "Variables collectées" puis on clique sur le bouton "Générer les variables collectées".</p>
 <p>On voit alors apparaître une variable <code class="highlight"><span class="n">PRENOM</span></code>. On peut enfin valider la question en cliquant sur le plus gros bouton "Valider" en bas de la fenêtre.
 <a class="glightbox" href="../../../img/pogues/question-creation-generate-collected-var-validation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création des variables collectées" src="../../../img/pogues/question-creation-generate-collected-var-validation.png" /></a></p>
@@ -3226,7 +3225,7 @@ Il reste une dernière étape, la création de la variable collectée associée 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Dans le cadre de ce tutoriel, et en général lors de la construction d'un questionnaire, nous préconisions de <strong>ne pas toucher à ces champs et laisser les valeurs par défaut</strong></p>
-<p>À chaque fois qu'on régénère les variables, Pogues va écraser tous les noms des libellés et identifiant et il faudra tout renommer à la main. Cela peut vite devenir fastidieux sur de gros tableaux ou QCM.</p>
+<p>À chaque fois qu'on régénère les variables, Pogues va écraser tous les noms des libellés et identifiants et il faudra tout renommer à la main. Cela peut vite devenir fastidieux sur de gros tableaux ou QCM.</p>
 </div>
 <p>Les autres champs ne sont pas modifiables car sont <strong>directement associés aux paramètres de la question</strong>. Si jamais ces informations sont incorrectes, c'est que votre question l'est aussi. Il faut alors retourner sur l'onglet "Format des réponses" et changer ces paramètres en conséquence.</p>
 </div>
@@ -3241,7 +3240,7 @@ Il reste une dernière étape, la création de la variable collectée associée 
 <li><a href="../../%F0%9F%9A%80_Guide/Questions/">Les questions</a></li>
 <li><a href="../../%F0%9F%9A%80_Guide/Variables/variables-collectees/">Variables Collectées</a></li>
 <li><a href="../../%F0%9F%9A%80_Guide/Variables/nommage/">Nommage des variables</a></li>
-<li><a href="../../%F0%9F%9A%80_Guide/Questions/13-reponse-simple/#type-de-reponse-nombre">Les questions simples de type nombre</a></li>
+<li><a href="../../%F0%9F%9A%80_Guide/Questions/13-reponse-simple/#type-de-reponse-texte">Les questions simples de type texte</a></li>
 </ul>
 </div>
 <h2 id="sauvegarde-du-questionnaire">Sauvegarde du questionnaire</h2>
