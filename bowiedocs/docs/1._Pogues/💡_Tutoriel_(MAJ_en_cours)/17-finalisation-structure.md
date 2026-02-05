@@ -20,3 +20,10 @@
 | Séquence          | MODULE2 - "Avis sur l'exercice"                                                                                            |  :material-check:                |
 | Question          | APPRECIATION - "Avez-vous apprécié l'exercice ?" - QCU Oui-Non                                                             |                  |
 | Question          | COMMENTAIRE - "Plus précisément, qu'est-ce qui vous a plu ou déplu ?" - Texte 500                                          |                  |
+
+
+Vous pouvez maintenant créer en autonomie en question qui manquent : `TEMPS_PARTIEL`, `COLLABORATION`, `APPRECIATION` et `COMMENTAIRE`. N'oubliez pas au préalable de créer la liste de codes L_OUI_NON pour les questions de type QCU Oui-Non (`TEMPS_PARTIEL`, `COLLABORATION` et `APPRECIATION`).
+
+??? success "Solution"
+    ![Structure finale](../../img/pogues/structure-finale.png)
+   
