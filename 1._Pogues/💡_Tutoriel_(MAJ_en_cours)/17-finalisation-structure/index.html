@@ -2979,9 +2979,6 @@
 
 
 <h1 id="finalisation-structure">Finalisation structure</h1>
-<div class="admonition danger">
-<p class="admonition-title">Page à mettre à jour</p>
-</div>
 <p>À partir des fonctionnalités vues dans les précédentes section de ce tutoriel, nous sommes capables de continuer la création de la structure du questionnaire suivant le schéma suivant <img alt="👇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f447.svg" title=":point_down:" />.</p>
 <table>
 <thead>
@@ -2994,22 +2991,42 @@
 <tbody>
 <tr>
 <td>Séquence</td>
-<td style="text-align: left;">MODULE1 - "Participation au questionnaire"</td>
+<td style="text-align: left;">MODULE1 - "Quelques informations sur vous"</td>
 <td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
 </tr>
 <tr>
 <td>Question</td>
-<td style="text-align: left;">OKREP - "Souhaitez-vous répondre à ce questionnaire ?" - QCU Oui-Non</td>
+<td style="text-align: left;">PRENOM - "Quel est votre prénom ?" - Texte 40</td>
 <td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
 </tr>
 <tr>
-<td>Séquence</td>
-<td style="text-align: left;">MODULE2 - "En savoir plus sur vous"</td>
+<td>Sous-Séquence</td>
+<td style="text-align: left;">CARACTERISTIQUES - "Parlons de vous"</td>
 <td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
 </tr>
 <tr>
 <td>Question</td>
-<td style="text-align: left;">PRENOM - "Quel est votre prénom ?" - Texte 30</td>
+<td style="text-align: left;">T_DATENAIS - "Quelle est votre date de naissance ?" - Date [AAAA-MM-JJ - 1901-01-01 - 2026-12-31]</td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
+</tr>
+<tr>
+<td>Question</td>
+<td style="text-align: left;">T_SEXE - "Quel est votre sexe ?" - QCU</td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
+</tr>
+<tr>
+<td>Question</td>
+<td style="text-align: left;">T_NATIO - "Quelle est votre nationalité ?" - QCM</td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
+</tr>
+<tr>
+<td>Question</td>
+<td style="text-align: left;">T_NATIONETR - "Quelle est votre nationalité étrangère ?" - QCU Recherche sur liste</td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
+</tr>
+<tr>
+<td>Sous-Séquence</td>
+<td style="text-align: left;">TRAVAIL - "Votre environnement de travail"</td>
 <td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
 </tr>
 <tr>
@@ -3019,23 +3036,13 @@
 </tr>
 <tr>
 <td>Question</td>
-<td style="text-align: left;">CARRIERE - "Avez-vous déjà exercé les activités suivantes au sein de votre carrière ?" - QCM</td>
+<td style="text-align: left;">COMBIEN_PARTAGE - "Combien de personnes partagent votre bureau ?"      - Nombre [0-10]</td>
 <td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
 </tr>
 <tr>
-<td>Question</td>
-<td style="text-align: left;">COMBIEN_QUESTIONS - "Combien de questions souhaitez-vous spécifier dans Pogues ?" - Nombre [0-200]</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td>Question</td>
-<td style="text-align: left;">COMBIEN_PARTAGE - "Combien de personnes partagent votre bureau ?"      - Nombre [0-10]</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
 <td>Sous-Séquence</td>
-<td style="text-align: left;">COLLEGUE - "Parlez-nous de votre collège"</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">COLLEGUE - "Parlez-nous de votre collègue"</td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
 </tr>
 <tr>
 <td>Question</td>
@@ -3049,22 +3056,17 @@
 </tr>
 <tr>
 <td>Séquence</td>
-<td style="text-align: left;">MODULE3 - "Votre questionnaire"</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td>Question</td>
-<td style="text-align: left;">DEBUT_TRAVAIL - "A quelle date avez-vous commencé à travailler" - Date [AAAA-MM-JJ - 1980-01-01 - 2022-01-01]</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td>Séquence</td>
-<td style="text-align: left;">MODULE4 - "Avis sur l'exercice"</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">MODULE2 - "Avis sur l'exercice"</td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
 </tr>
 <tr>
 <td>Question</td>
 <td style="text-align: left;">APPRECIATION - "Avez-vous apprécié l'exercice ?" - QCU Oui-Non</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td>Question</td>
+<td style="text-align: left;">COMMENTAIRE - "Plus précisément, qu'est-ce qui vous a plu ou déplu ?" - Texte 500</td>
 <td style="text-align: left;"></td>
 </tr>
 </tbody>
