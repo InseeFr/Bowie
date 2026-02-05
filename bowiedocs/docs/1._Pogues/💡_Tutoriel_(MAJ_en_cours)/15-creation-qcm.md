@@ -26,7 +26,7 @@ Ensuite on va ajouter une question de type recherche sur liste (QCU recherche su
 Pogues propose un certain nombre de listes de nomenclatures mutualisées pour satisfaire le plus grand nombre d'enquêtes : nationalités, nationalités étrangères, départements, communes, professions par sexe, diplômes, les activités (NAF sur 2 positions) etc. Pour mobiliser les listes de nomenclatures ont utilise un composant recherche sur liste (suggester). 
 
 !!! abstract "Pour aller plus loin"  
-    -  [Le suggester](../🚀_Guide/Questions/15b-suggester.md).
+    -  [Le suggester](../🚀_Guide/Questions/15b-suggester.md)
 
 - on crée une question avec le libellé "Quelle est votre nationalité étrangère ?" et l'identifiant "T_NATIONETR"
 - le _Type de question_ est "Réponse à choix unique"

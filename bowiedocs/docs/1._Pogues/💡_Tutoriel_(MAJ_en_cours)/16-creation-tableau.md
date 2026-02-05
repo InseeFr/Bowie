@@ -51,6 +51,10 @@ Il ne reste qu'à générer les variables puis à valider la question.
     La génération des variables ici va générer autant de variables que de cases dans le tableau.
 
 
+!!! abstract "Pour aller plus loin"  
+    -  [Les tableaux](../../🚀_Guide/Tableaux/)
+
+
 Pour finir cette sous séquence, on va créer une question simple de type numérique pour interroger notre enquêté sur le nombre de collègues qui partagent son bureau.
 ![Question numérique sur le nombre de collègues](../../img/pogues/QNUM.png)
 
