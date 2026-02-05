@@ -83,7 +83,10 @@ Ici on récupère bien une date au format année/mois/jour. Nous verrons plus ta
 Cette fois, utilisons la visualisation "Web entreprise". Cette visualisation a la particularité de mettre **toutes les questions d'une même séquence sur la même page**. 
 
 On observe ainsi toute la structure de la première séquence, avec l'enchaînement des sous-séquences et les questions qu'elles contiennent.
+
 ![Visualisation en contexte entrepris](../../img/pogues/visu-business.png)
+
+Sur la page suivante, on retrouve la deuxième séquence "Avis sur l'exercice" qui reste à construire.
 
 
 Lorsqu'on est satisfaits des changements réalisés, **on sauvegarde !**

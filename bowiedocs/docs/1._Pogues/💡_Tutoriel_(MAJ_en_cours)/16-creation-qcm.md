@@ -34,3 +34,8 @@ Pogues propose un certain nombre de listes de nomenclatures mutualisées pour sa
 On génère les variables et on valide notre question : on vient de créer notre première question de type recherche sur liste !
 Et on sera encore plus satisfait lorsqu'on aura vu comment filtrer la question pour ne la proposer qu'à ceux qui répondent avoir effectivement uen nationalité autre ...
 
+??? success "Solution"
+    ![Sous-séquence Caractéristiques](../../img/pogues/seq-carac-complet.png)
+
+
+
