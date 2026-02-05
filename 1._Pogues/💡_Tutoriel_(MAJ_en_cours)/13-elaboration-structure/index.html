@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%92%A1_Tutoriel_%28MAJ_en_cours%29/13-elaboration-thl/">
+        <link rel="canonical" href="https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%92%A1_Tutoriel_%28MAJ_en_cours%29/13-elaboration-structure/">
       
       
         <link rel="prev" href="../12-visualisation-questionnaire/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Construction de la partie "Tableau des habitants du logement" - Atelier de Conception d'Enquêtes (Bowie)</title>
+        <title>Construction de la structure du questionnaire - Atelier de Conception d'Enquêtes (Bowie)</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#construction-de-la-partie-tableau-des-habitants-du-logement" class="md-skip">
+        <a href="#construction-de-la-structure-du-questionnaire" class="md-skip">
           Aller au contenu
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Construction de la partie "Tableau des habitants du logement"
+              Construction de la structure du questionnaire
             
           </span>
         </div>
@@ -473,7 +473,7 @@
           
   
   <span class="md-ellipsis">
-    Construction de la partie "Tableau des habitants du logement"
+    Construction de la structure du questionnaire
   </span>
   
 
@@ -484,7 +484,7 @@
         
   
   <span class="md-ellipsis">
-    Construction de la partie "Tableau des habitants du logement"
+    Construction de la structure du questionnaire
   </span>
   
 
@@ -506,9 +506,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#structure-de-la-sequence" class="md-nav__link">
+  <a href="#structure-de-la-sequence-quelques-informations-sur-vous" class="md-nav__link">
     <span class="md-ellipsis">
-      Structure de la séquence
+      Structure de la séquence "Quelques informations sur vous"
     </span>
   </a>
   
@@ -523,15 +523,6 @@
   
     <nav class="md-nav" aria-label="Création des sous-séquences">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#question-sur-les-prenoms" class="md-nav__link">
-    <span class="md-ellipsis">
-      Question sur les Prénoms
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#question-sur-la-date-de-naissance" class="md-nav__link">
@@ -3062,9 +3053,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#structure-de-la-sequence" class="md-nav__link">
+  <a href="#structure-de-la-sequence-quelques-informations-sur-vous" class="md-nav__link">
     <span class="md-ellipsis">
-      Structure de la séquence
+      Structure de la séquence "Quelques informations sur vous"
     </span>
   </a>
   
@@ -3079,15 +3070,6 @@
   
     <nav class="md-nav" aria-label="Création des sous-séquences">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#question-sur-les-prenoms" class="md-nav__link">
-    <span class="md-ellipsis">
-      Question sur les Prénoms
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#question-sur-la-date-de-naissance" class="md-nav__link">
@@ -3136,37 +3118,40 @@
                   
 
 
-<h1 id="construction-de-la-partie-tableau-des-habitants-du-logement">Construction de la partie "Tableau des habitants du logement"</h1>
-<h2 id="structure-de-la-sequence">Structure de la séquence</h2>
-<p>Nous poursuivons la construction du questionnaire en spécifiant les questions de la séquence sur le "Tableau des habitants du logement". Pour rappel, la composition de cette séquence ressemble à ça :</p>
-<ul>
-<li>Une séquence "Tableau des habitants du logement" :</li>
-<li>Une question de comptage des individus constituant le ménage</li>
-<li>Une boucle Principale <code class="highlight"><span class="n">BOUCLE_PRENOMS</span></code> permettant d'identifier les individus du ménages</li>
-<li>Une boucle Liée <code class="highlight"><span class="n">BOUCLE_INDIV</span></code> basée sur <code class="highlight"><span class="n">BOUCLE_PRENOMS</span></code> permettant de poser une série de questions sur l'état civil de chaque individu du ménage.</li>
-</ul>
-<p>Nous allons introduire deux <em>sous-séquences</em>, <code class="highlight"><span class="n">THL_PRENOM</span></code> et <code class="highlight"><span class="n">THL_DHL</span></code>, pour mieux délimiter le concept de la boucle principale et de la boucle liée. Nous visons ainsi la structure suivante :</p>
+<h1 id="construction-de-la-structure-du-questionnaire">Construction de la structure du questionnaire</h1>
+<h2 id="structure-de-la-sequence-quelques-informations-sur-vous">Structure de la séquence "Quelques informations sur vous"</h2>
+<p>Nous poursuivons la construction du questionnaire en spécifiant les sous-séquences et les questions de la première séquence "Quelques informations sur vous". Pour rappel, la composition de cette séquence ressemble à ça :</p>
 <div class="highlight"><pre><span></span><code><span class="n">Questionnaire</span>
-<span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Séquence</span><span class="p">]</span><span class="w"> </span><span class="n">LGT</span>
-<span class="o">|</span><span class="w">   </span><span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Question</span><span class="w"> </span><span class="n">simple</span><span class="p">]</span><span class="w"> </span><span class="n">T_NBHAB</span>
-<span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Séquence</span><span class="p">]</span><span class="w"> </span><span class="n">THL</span>
-<span class="o">|</span><span class="w">   </span><span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Sous</span><span class="o">-</span><span class="n">séquence</span><span class="p">]</span><span class="w"> </span><span class="n">THL_PRENOM</span>
-<span class="o">|</span><span class="w">   </span><span class="o">|</span><span class="w">   </span><span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Question</span><span class="w"> </span><span class="n">simple</span><span class="p">]</span><span class="w"> </span><span class="n">T_PRENOM</span><span class="w"> </span>
-<span class="o">|</span><span class="w">   </span><span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Sous</span><span class="o">-</span><span class="n">séquence</span><span class="p">]</span><span class="w"> </span><span class="n">THL_DHL</span>
-<span class="o">|</span><span class="w">       </span><span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">QCU</span><span class="p">]</span><span class="w"> </span><span class="n">T_SEXE</span>
-<span class="o">|</span><span class="w">       </span><span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Question</span><span class="w"> </span><span class="n">simple</span><span class="p">]</span><span class="w"> </span><span class="n">T_DATENAIS</span>
-<span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Séquence</span><span class="p">]</span><span class="w"> </span><span class="n">QI</span>
+<span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Séquence</span><span class="p">]</span><span class="w"> </span><span class="n">INDIV</span>
+<span class="o">|</span><span class="w">   </span><span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Question</span><span class="w"> </span><span class="n">simple</span><span class="p">]</span><span class="w"> </span><span class="n">PRENOM</span>
+<span class="o">|</span><span class="w">   </span><span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Sous</span><span class="o">-</span><span class="n">séquence</span><span class="p">]</span><span class="w"> </span><span class="n">CARACTERISTIQUES</span>
+<span class="o">|</span><span class="w">   </span><span class="o">|</span><span class="w">   </span><span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Question</span><span class="w"> </span><span class="n">simple</span><span class="p">]</span><span class="w"> </span><span class="n">T_DATENAIS</span><span class="w"> </span>
+<span class="o">|</span><span class="w">   </span><span class="o">|</span><span class="w">   </span><span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Question</span><span class="w"> </span>à<span class="w"> </span><span class="n">choix</span><span class="w"> </span><span class="n">unique</span><span class="p">]</span><span class="w"> </span><span class="n">T_SEXE</span><span class="w"> </span>
+<span class="o">|</span><span class="w">   </span><span class="o">|</span><span class="w">   </span><span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Question</span><span class="w"> </span>à<span class="w"> </span><span class="n">choix</span><span class="w"> </span><span class="n">multiple</span><span class="p">]</span><span class="w"> </span><span class="n">T_NATIO</span><span class="w"> </span>
+<span class="o">|</span><span class="w">   </span><span class="o">|</span><span class="w">   </span><span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Question</span><span class="w"> </span>à<span class="w"> </span><span class="n">choix</span><span class="w"> </span><span class="n">unique</span><span class="p">,</span><span class="w"> </span><span class="n">recherche</span><span class="w"> </span><span class="n">sur</span><span class="w"> </span><span class="n">liste</span><span class="p">]</span><span class="w"> </span><span class="n">T_NATIONETR</span><span class="w"> </span>
+<span class="o">|</span><span class="w">   </span><span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Sous</span><span class="o">-</span><span class="n">séquence</span><span class="p">]</span><span class="w"> </span><span class="n">TRAVAIL</span>
+<span class="o">|</span><span class="w">       </span><span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Tableau</span><span class="p">]</span><span class="w"> </span><span class="n">ACTIVITES</span>
+<span class="o">|</span><span class="w">       </span><span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Question</span><span class="w"> </span><span class="n">simple</span><span class="p">]</span><span class="w"> </span><span class="n">COMBIEN_PARTAGE</span>
+<span class="o">|</span><span class="w">   </span><span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Sous</span><span class="o">-</span><span class="n">séquence</span><span class="p">]</span><span class="w"> </span><span class="n">COLLEGUE</span>
+<span class="o">|</span><span class="w">   </span><span class="o">|</span><span class="w">   </span><span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Question</span><span class="w"> </span>à<span class="w"> </span><span class="n">choix</span><span class="w"> </span><span class="n">unique</span><span class="p">]</span><span class="w"> </span><span class="n">TEMPS_PARTIEL</span><span class="w"> </span>
+<span class="o">|</span><span class="w">   </span><span class="o">|</span><span class="w">   </span><span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Question</span><span class="w"> </span>à<span class="w"> </span><span class="n">choix</span><span class="w"> </span><span class="n">unique</span><span class="p">]</span><span class="w"> </span><span class="n">COLLABORATION</span>
+<span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">Séquence</span><span class="p">]</span><span class="w"> </span><span class="n">EXO</span>
 </code></pre></div>
 <h2 id="creation-des-sous-sequences">Création des sous-séquences</h2>
-<p>D’abord, créons les deux sous séquences. Pour ce faire on se place sur la séquence qui nous intéresse (clic sur le bloc <code class="highlight"><span class="n">THL</span></code>), puis on clique sur le bouton "Sous-séquence" dans le bandeau du haut.
-<a class="glightbox" href="../../../img/pogues/sub-seq-creation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/sub-seq-creation.png" /></a></p>
+<p>D’abord, créons les trois sous-séquences. </p>
+<p>Commençons par la sous-séquence <code class="highlight"><span class="n">CARACTERISTIQUES</span></code>. Pour cela on se place dans la séquence qui nous intéresse, sur l'élément sous lequel on veut voir apparaître notre sous-séquence : on clique sur la question <code class="highlight"><span class="n">PRENOM</span></code> puis on clique sur le bouton "Sous-séquence" dans le bandeau du haut.
+<a class="glightbox" href="../../../img/pogues/sub-seq-creation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Créer une sous-séquence" src="../../../img/pogues/sub-seq-creation.png" /></a></p>
 <p>Il suffit ensuite de remplir la modale qui vient de s'ouvrir avec les informations suivantes et valider.</p>
 <ul>
-<li><em>Identifiant</em> : <code class="highlight"><span class="n">THL_PRENOM</span></code></li>
-<li><em>Libellé</em> : " "</li>
+<li><em>Identifiant</em> : <code class="highlight"><span class="n">CARACTERISTIQUES</span></code></li>
+<li><em>Libellé</em> : "Parlons de vous"</li>
 </ul>
 <p><a class="glightbox" href="../../../img/pogues/sub-seq-creation-modal.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/sub-seq-creation-modal.png" /></a></p>
-<p>Faire de même avec une nouvelle sous-séquence <code class="highlight"><span class="n">THL_DHL</span></code> ayant le libellé "Caractéristiques".</p>
+<p>Faire de même avec les deux autres sous-séquences :</p>
+<ul>
+<li>sous-séquence <code class="highlight"><span class="n">TRAVAIL</span></code> ayant le libellé "Votre environnement de travail";</li>
+<li>sous-séquence <code class="highlight"><span class="n">COLLEGUE</span></code> ayant le libellé "Parlez-nous de votre collègue".</li>
+</ul>
 <details class="success">
 <summary>Solution</summary>
 <p><a class="glightbox" href="../../../img/pogues/sub-seq-creation-solution.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/sub-seq-creation-solution.png" /></a></p>
@@ -3175,27 +3160,6 @@
 <p class="admonition-title">Pour aller plus loin</p>
 <ul>
 <li><a href="../../%F0%9F%9A%80_Guide/11-sous-sequences/">Les sous-séquences</a></li>
-</ul>
-</div>
-<h3 id="question-sur-les-prenoms">Question sur les Prénoms</h3>
-<p>Nous allons maintenant créer la première question concernant les prénoms. Placez vous sur la sous-séquence concernée (clic sur <code class="highlight"><span class="n">THL_PRENOM</span></code>), puis appuyez sur le bouton de création de question.
-<a class="glightbox" href="../../../img/pogues/question-creation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/question-creation.png" /></a></p>
-<p>Remplissez les champs avec les infos suivantes : </p>
-<ul>
-<li><em>Libellé</em> : "Quel est votre prénom ?"</li>
-<li><em>Identifiant</em> : <code class="highlight"><span class="n">T_PRENOM</span></code></li>
-<li><em>Type de question</em> : Réponse simple</li>
-<li><em>Type de réponse</em> : Texte (laissez la taille par défaut)</li>
-</ul>
-<details class="success">
-<summary>Solution</summary>
-<p><a class="glightbox" href="../../../img/pogues/question-creation-simple-texte.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Question simple textuelle" src="../../../img/pogues/question-creation-simple-texte.png" /></a></p>
-</details>
-<p>Générez la variable puis validez.</p>
-<div class="admonition abstract">
-<p class="admonition-title">Pour aller plus loin</p>
-<ul>
-<li><a href="../../%F0%9F%9A%80_Guide/Questions/13-reponse-simple/#type-de-reponse-texte">Les questions simples de type texte</a></li>
 </ul>
 </div>
 <h3 id="question-sur-la-date-de-naissance">Question sur la date de naissance</h3>
@@ -3232,10 +3196,8 @@
 <p>Nous avons fait quelques changements dans le questionnaire. Une bonne pratique est de ne pas attendre d'avoir fait trop de changements avant de visualiser pour les valider. Il faut aller pas à pas pour bien maîtriser ce que l'on fait.</p>
 </div>
 <p>Cette fois, utilisons la visualisation "Web entreprise". Cette visualisation a la particularité de mettre <strong>toutes les questions d'une même séquence sur la même page</strong>. </p>
-<p>On observe ainsi pour la première séquence la page suivante,
-<a class="glightbox" href="../../../img/pogues/visualisation-thl-page1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/visualisation-thl-page1.png" /></a>
-Et pour la deuxième page, nous avons les deux questions que l'on vient de créer, séparées par les deux sous séquences " " et "Caractéristiques"
-<a class="glightbox" href="../../../img/pogues/visualisation-thl-page2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/visualisation-thl-page2.png" /></a></p>
+<p>On observe ainsi toute la structure de la première séquence, avec l'enchaînement des sous-séquences et les questions qu'elles contiennent.
+<a class="glightbox" href="../../../img/pogues/visu-business.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Visualisation en contexte entrepris" src="../../../img/pogues/visu-business.png" /></a></p>
 <p>Lorsqu'on est satisfaits des changements réalisés, <strong>on sauvegarde !</strong></p>
 <div class="admonition tip">
 <p class="admonition-title">N'hésitez pas à varier les contextes de visualisation durant tout ce tutoriel</p>
