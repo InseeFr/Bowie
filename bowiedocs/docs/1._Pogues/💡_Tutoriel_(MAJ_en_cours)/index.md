@@ -1,7 +1,10 @@
 # Apprendre à utiliser Pogues
 
-Pogues est l'interface graphique permettant de créer des questionnaires.Ce tutoriel décrit pas à pas la création d'un questionnaire pour aider les nouveaux utilisateurs de Pogues à se familiariser avec l'outil en implémentant les éléments les plus utilisés : séquences, questions, aides à l'enquêté, filtres, boucles... 
-L'objectif est de vous permettre de démarrer sereinement avec l'outil, pour les fonctionnalités plus sophistiquées, rendez-vous dans le [:octicons-rocket-16: guide](../🚀_Guide/index.md).
+Pogues est l'interface graphique permettant de créer des questionnaires. 
+
+Ce tutoriel décrit pas à pas la création d'un questionnaire pour aider les nouveaux utilisateurs de Pogues à se familiariser avec l'outil en implémentant les éléments les plus utilisés : séquences, questions, aides à l'enquêté, filtres, boucles... 
+
+L'objectif est de vous permettre de démarrer sereinement avec l'outil : pour les fonctionnalités plus sophistiquées, rendez-vous dans le [:octicons-rocket-16: guide](../🚀_Guide/index.md).
 
 !!! warning ":construction: Pogues évolue en continu pour mieux répondre aux besoins des utilisateurs ! Le tutoriel est en cours de mise à jour pour prendre en compte ces évolutions :construction:"
     Il est encore utilisable mais certaines fonctionnalités décrites ne sont plus à jour. <br>

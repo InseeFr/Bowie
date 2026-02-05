@@ -22,6 +22,7 @@ Donnons-lui du contenu ! :smile:
 ## Création de la séquence
 
 Pour créer la première séquence, il suffit de cliquer sur le bouton "+ Séquence" de la barre d'actions :
+
 ![Création d'une séquence](../../img/pogues/barre-actions-sequence.png)
 
 Une fenêtre modale s'ouvre avec deux champs à remplir obligatoirement :
@@ -60,14 +61,13 @@ Mais ce n'est pas fini... On peut voir que le questionnaire est toujours mécont
 Nous allons maintenant créer la première question de notre questionnaire et la placer dans la première séquence.
 
 !!! example "Cas pratique"
-    1. PLacez vous sur la première séquence `LOG` : cliquer sur le bloc associé à `LOG`.     
+    1. Placez vous sur la première séquence `INDIV` : cliquer sur le bloc associé à `INDIV`.     
         _Vous devez voir qu'une fois sélectionné, le bloc est mis en évidence par l'encadré en bleu._
     2. Dans la barre des actions, le bouton "+ Question" permet la création d'une question.
     3. Suivez les prochaines indications afin de spécifier une question avec les informations suivantes : 
         - Un identifiant `PRENOM` 
         - Une réponse simple 
         - Un type texte de taille 40
-        - Une variable collectée associée de même identifiant `PRENOM` et caractéristiques
 
 
 On revient dans la section suivante sur le détail des options, mais terminons d'abord la création de cette première question en cliquant sur "VALIDER".
@@ -82,7 +82,7 @@ Il reste une dernière étape, la création de la variable collectée associée 
 
 ### Création de la variable
 
-Pogues distingue **la question** de **la réponse** de **la donnée collectée, la variable**. Il faut donc explicitement créer cette dernière.
+Pogues distingue **la question** de **la réponse** de **la donnée collectée (= la variable)**. Il faut donc explicitement créer cette dernière.
 
 Pour cela, on se dirige vers l'onglet "Variables collectées" puis on clique sur le bouton "Générer les variables collectées".
 
@@ -106,7 +106,7 @@ On voit alors apparaître une variable `PRENOM`. On peut enfin valider la questi
     !!! warning 
         Dans le cadre de ce tutoriel, et en général lors de la construction d'un questionnaire, nous préconisions de **ne pas toucher à ces champs et laisser les valeurs par défaut**
 
-        À chaque fois qu'on régénère les variables, Pogues va écraser tous les noms des libellés et identifiant et il faudra tout renommer à la main. Cela peut vite devenir fastidieux sur de gros tableaux ou QCM.
+        À chaque fois qu'on régénère les variables, Pogues va écraser tous les noms des libellés et identifiants et il faudra tout renommer à la main. Cela peut vite devenir fastidieux sur de gros tableaux ou QCM.
 
     Les autres champs ne sont pas modifiables car sont **directement associés aux paramètres de la question**. Si jamais ces informations sont incorrectes, c'est que votre question l'est aussi. Il faut alors retourner sur l'onglet "Format des réponses" et changer ces paramètres en conséquence.
 
@@ -118,7 +118,7 @@ On voit alors apparaître une variable `PRENOM`. On peut enfin valider la questi
     - [Les questions](../🚀_Guide/Questions/index.md)
     - [Variables Collectées](../🚀_Guide/Variables/variables-collectees.md)
     - [Nommage des variables](../🚀_Guide/Variables/nommage.md)
-    - [Les questions simples de type nombre](../🚀_Guide/Questions/13-reponse-simple.md/#type-de-reponse-nombre)
+    - [Les questions simples de type texte](../🚀_Guide/Questions/13-reponse-simple.md/#type-de-reponse-texte)
 
 ## Sauvegarde du questionnaire
 
