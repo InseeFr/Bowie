@@ -97,18 +97,18 @@ On voit alors apparaître une variable `PRENOM`. On peut enfin valider la questi
 
     Si vous êtes sûr du contenu de ces éléments, vous pouvez tout simplement cliquer sur _Valider en l'état_, l'ensemble de ce que vous avez saisi sera sauvegardé.
 
-!!! tip
-    Lorsqu'on est sur l'onglet des "Variables Collectées". On peut cliquer sur la variable afin de voir les informations associées.
+### Gestion de la variable collectée
+
+Lorsqu'on est sur l'onglet des "Variables Collectées". On peut cliquer sur la variable afin de voir les informations associées.
     ![Zoom sur les variables collectées](../../img/pogues/generated-collected-var-info.png)
-    
-    Ici, seuls les champs _Identifiant_ et _Libellé_ sont modifiables. Ces champs sont importants pour la documentation de vos variables dans la suite du processus de l'enquête ! Le libellé (description) et l'identifiant doivent vous permettre de vous repérer dans l'ensemble des variables du questionnaire. 
 
-    !!! warning 
-        Dans le cadre de ce tutoriel, et en général lors de la construction d'un questionnaire, nous préconisions de **ne pas toucher à ces champs et laisser les valeurs par défaut**
 
-        À chaque fois qu'on régénère les variables, Pogues va écraser tous les noms des libellés et identifiants et il faudra tout renommer à la main. Cela peut vite devenir fastidieux sur de gros tableaux ou QCM.
+Ici, seuls les champs _Identifiant_ et _Libellé_ sont modifiables. Ces champs sont importants pour la documentation de vos variables dans la suite du processus de l'enquête ! Le libellé (description) et l'identifiant doivent vous permettre de vous repérer dans l'ensemble des variables du questionnaire.
 
-    Les autres champs ne sont pas modifiables car sont **directement associés aux paramètres de la question**. Si jamais ces informations sont incorrectes, c'est que votre question l'est aussi. Il faut alors retourner sur l'onglet "Format des réponses" et changer ces paramètres en conséquence.
+!!! warning 
+    À chaque fois qu'on régénère les variables, Pogues va écraser tous les noms des libellés et identifiants et il faudra tout renommer à la main. Cela peut vite devenir fastidieux sur de gros tableaux ou QCM.
+
+Les autres champs ne sont pas modifiables car sont **directement associés aux paramètres de la question**. Si jamais ces informations sont incorrectes, c'est que votre question l'est aussi. Il faut alors retourner sur l'onglet "Format des réponses" et changer ces paramètres en conséquence.
 
 ??? success "Solution"
     Pogues est enfin content ! Il ne râle plus et on peut enfin **sauvegarder** notre questionnaire.
