@@ -1,6 +1,17 @@
-# :people_hugging: Problèmes les plus fréquents
+# :people_hugging: Support utilisateur de l'atelier de conception
 
-## **Génération KO pour la visualisation depuis Pogues**
+## Assistance utilisateurs
+
+### Vous rencontrez des difficultés pour spécifier votre questionnaire ? 
+
+Pas de panique, les experts de l'atelier de conception sont disponibles pour vous aider :sunglasses: !
+Vous pouvez nous joindre par [messagerie](mailto:atelier-conception-enquetes@insee.fr).
+
+Avant d'écrire votre message, on vous invite à parcourir la section suivante avec les problèmes les plus fréquemment rencontrés par nos utilisateurs.
+
+## Problèmes les plus fréquents
+
+### **Génération KO pour la visualisation depuis Pogues**
 
 Lors d'une visualisation, un message "Une erreur a été rencontrée" apparaît. 
 
@@ -11,23 +22,23 @@ Lors d'une visualisation, un message "Une erreur a été rencontrée" apparaît.
     - si toutes les séquences se génèrent, il y a probablement un problème de boucles ou de doublons. En effet, des listes (dans les QCM ou QCU) peuvent avoir le même nom, notamment pour les questionnaires qui font appel à la composition. 
 
         
-## **Affichage à tort de questions filtrées**
+### **Affichage à tort de questions filtrées**
 Principe général : si un filtre ne se valorise pas ou pas bien, la question est affichée donc si la question s'affiche "à tort", le filtre est probablement faux.
 
 !!! tip "Contrôler le filtre"
     - vérifier que les autres variables dans le même filtre sont également affichées  
     - ajouter des déclarations contenant les variables impliquées dans le filtre afin de contrôler leurs valeurs
 
-## **Filtre qui englobe la fin du questionnaire**
+### **Filtre qui englobe la fin du questionnaire**
 Lorsqu'un filtre englobe toute la fin du questionnaire, un bug peut être constaté car Pogues ne peut pas rediriger l'utilisateur vers la prochaine question, car il n'y en a pas.
 
 !!! tip "Ajouter une séquence de fin"
     Pour éviter ce désagrément, on vous conseille d'ajouter une séquence de fin, sur laquelle on ne pose aucun filtre (faire au plus simple, juste une séquence avec une déclaration "Fin").
 
-## **(Non)Affichage des déclarations**
+### **(Non)Affichage des déclarations**
 Les déclarations s'affichent en fonction des modes décrits dans Pogues : pas de mode, pas d'affichage et réciproquement si pas d'affichage, il manque probablement le mode
 
-## **Génération KO pour Spécification et Papier**
+### **Génération KO pour Spécification et Papier**
 Dans le cas où **uniquement** la génération Papier ou Spécification ne fonctionnent pas, il se peut que ce soit à cause d'un caractère `*` présent dans un libellé ou une déclaration.
 
 !!! danger
@@ -42,7 +53,7 @@ Dans le cas où **uniquement** la génération Papier ou Spécification ne fonct
     Ou encore avec plus de clarté `Nombre de services ***x*** jours ...` = "Nombre de services ***x*** jours ..." 
 
 
-## **VTL avec opérations d’agrégation**
+### **VTL avec opérations d’agrégation**
 Dans le cas où l'on veut définir une expression VTL **faisant des opérations sur les éléments d'une variable vecteur**, hors d'un tableau ou d'une boucle (à un niveau questionnaire), il faut passer par une variable calculée, sinon **le VTL est en erreur** 
 
 ??? example "Exemple avec un contrôle"
@@ -55,7 +66,7 @@ Dans le cas où l'on veut définir une expression VTL **faisant des opérations 
     `sum($SALAIRE$) > 5000` | :x:
      `$SUM_SALAIRE$ > 5000`  | :white_check_mark:
 
-## **Recherche sur liste KO en visualisation**
+### **Recherche sur liste KO en visualisation**
 
 La nomenclature sélectionnée pour une recherche sur liste (suggester) peut mal être chargée lors d'une visualisation. On a alors un message `Erreur lors du chargement de la liste`.
 ![alt text](../img/support/suggester-error-loading.png)
@@ -80,7 +91,7 @@ Dans ce cas, il s'agit d'un conflit entre plusieurs questions qui ont été cré
         !!! note ""
             On peut remarquer que la question semble être *désélectionnée* alors que la variable est bien générée. C'est le signe qu'on est bien dans le cas décrit ci-dessus !
 
-## **Generation KO Boucle + Tableau dynamique**
+### **Generation KO Boucle + Tableau dynamique**
 
 Erreur lors d'une visualisation :
 ```bash
