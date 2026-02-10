@@ -6,12 +6,6 @@ Ce tutoriel décrit pas à pas la création d'un questionnaire pour aider les no
 
 L'objectif est de vous permettre de démarrer sereinement avec l'outil : pour les fonctionnalités plus sophistiquées, rendez-vous dans le [:octicons-rocket-16: guide](../🚀_Guide/index.md).
 
-!!! warning ":construction: Pogues évolue en continu pour mieux répondre aux besoins des utilisateurs ! Le tutoriel est en cours de mise à jour pour prendre en compte ces évolutions :construction:"
-    Il est encore utilisable mais certaines fonctionnalités décrites ne sont plus à jour. <br>
-    Les pages qui n'ont pas encore été mises à jour commencent par un bloc comme tel
-    !!! danger "Page à mettre à jour"
-    En cas de doute, **se référer au [:octicons-rocket-16: guide](../🚀_Guide/index.md)**
-
 !!! note
     27/07/2023 - Le guide de référence pour les enquêtes entreprises de la filière historique Coltrane reste [celui-ci](https://inseefr.github.io/Pogues/fr/guide-utilisateur/guide-utilisateur.html).
 

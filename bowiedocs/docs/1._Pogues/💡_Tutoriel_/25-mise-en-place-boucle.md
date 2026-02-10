@@ -20,7 +20,7 @@ Dans ce tutoriel, on va mettre en place le premier cas uniquement.
 
 ## Création de la boucle
 
-Nous allons remplir les champs suivants :
+Les paramètres qui définissent une boucle :
 
 - _Identifiant_ avec comme toujours un identifiant de la forme `MON_IDENTIFIANT`
 - _Basé sur_ à remplir uniquement pour les boucles liées (on les base sur un objet existant tel qu'une boucle principale ou sur un tableau dynamique)
@@ -45,5 +45,20 @@ Dans notre cas, on spécifiera ces valeurs :
     L'interface de création des boucles nous guide pour paramètrer la configuration de la boucle en fonction du contexte de visualisation (ménage / entreprise). Il convient de bien les respecter.
 
 
+Nous venons de créer notre première boucle :clap:.
 
+En visualisant notre questionnaire par exemple en web ménage, on remarque qu'il est difficile de différencier les itérations des différents collègues : ajoutons un peu de personnalisation à la boucle.
 
+## Personnalisation de la boucle
+
+Pogues nous permet d'utiliser des [variables systèmes](../../🚀_Guide/Variables/variables-globales/) bien sympathiques, notamment GLOBAL_ITERATION_INDEX qui donne la position dans une boucle. 
+
+Utilisons la pour indiquer à notre répondant où il en est dans son remplissage de boucle. On modifie le libellé de la sous-séquence sur laquelle on boucle.
+![Ajout de la personnalisation dans le libellé de sous-séquence de la boucle](../../img/pogues/utiliser-global-it-index.png)
+
+??? success "Visualisation d'une occurrence de boucle collègue après personnalisation"
+    ![Visualisation boucle personnalisées](../../img/pogues/visu-boucle-perso.png)
+
+Il est bien évidemment possible de personnaliser encore plus notre boucle, par exemple en collectant les prénoms des collègues dans une première boucle puis en faisant une boucle liée où on pose les questions sur chaque collègue. 
+
+Maintenant qu'on vous a donné les bases, on vous laisse découvrir toutes les possibilités de l'outil !
