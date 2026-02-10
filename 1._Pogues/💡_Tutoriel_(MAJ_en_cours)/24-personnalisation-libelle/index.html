@@ -693,9 +693,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creation-de-la-variable-calculee-persolib" class="md-nav__link">
+  <a href="#creation-de-la-variable-calculee-prenomlib" class="md-nav__link">
     <span class="md-ellipsis">
-      Création de la variable calculée PERSOLIB
+      Création de la variable calculée PRENOMLIB
     </span>
   </a>
   
@@ -2997,9 +2997,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creation-de-la-variable-calculee-persolib" class="md-nav__link">
+  <a href="#creation-de-la-variable-calculee-prenomlib" class="md-nav__link">
     <span class="md-ellipsis">
-      Création de la variable calculée PERSOLIB
+      Création de la variable calculée PRENOMLIB
     </span>
   </a>
   
@@ -3030,27 +3030,24 @@
 
 
 <h1 id="personnalisation-dun-libelle">Personnalisation d'un libellé</h1>
-<div class="admonition danger">
-<p class="admonition-title">Page à mettre à jour</p>
-</div>
 <p>Vous l'avez remarqué, le champ qui permet la création d'un libellé de question n'est pas un champ texte ordinaire. Il s'agit en effet d'un éditeur de code VTL !</p>
 <p>Cela signifie que l'on peut utiliser le langage VTL pour personnaliser le libellé, le rendre dynamique.</p>
-<p>On propose ici de créer une variable calculée permettant d'afficher le prénom du répondant s'il a été renseigné et de proposer un présentation plus générique si ce n'est pas le cas (pour rappel, le contrôle posé sur la remplissage du prénom n'est pas bloquant !).</p>
-<h2 id="creation-de-la-variable-calculee-persolib">Création de la variable calculée <code class="highlight"><span class="n">PERSOLIB</span></code></h2>
-<p>Comme précédemment, au sein d'une question, dans l'onglet <em>Variables calculées</em>, on crée la variable <code class="highlight"><span class="n">PERSOLIB</span></code> dont la valeur est :</p>
+<p>On propose ici de créer une variable calculée permettant d'afficher le prénom du répondant s'il a été renseigné et de proposer une présentation plus générique si ce n'est pas le cas (pour rappel, le contrôle posé sur la remplissage du prénom n'est pas bloquant !).</p>
+<h2 id="creation-de-la-variable-calculee-prenomlib">Création de la variable calculée <code class="highlight"><span class="n">PRENOMLIB</span></code></h2>
+<p>Comme précédemment, au sein d'une question, dans l'onglet <em>Variables calculées</em>, on crée la variable <code class="highlight"><span class="n">PRENOMLIB</span></code> dont la valeur est :</p>
 <ul>
 <li>la variable PRENOM si elle est renseignée</li>
 <li>le texte "Cher répondant, " si ce n'est pas le cas.</li>
 </ul>
 <details class="success">
 <summary>Solution</summary>
-<p><code class="highlight"><span class="n">if</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="s">&quot;Cher répondant, &quot;</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; ,&quot;</span></code></p>
+<p><a class="glightbox" href="../../../img/pogues/creation-prenomlib.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création PRENOMLIB" src="../../../img/pogues/creation-prenomlib.png" /></a></p>
 </details>
 <h2 id="personnalisation-du-libelle-de-la-question-appreciation">Personnalisation du libellé de la question <code class="highlight"><span class="n">APPRECIATION</span></code></h2>
-<p>On peut retourner sur la question dont l'identifiant est <code class="highlight"><span class="n">APPRECIATION</span></code>, pour modifier son libellé de manière à commencer par le texte produit par la variable <code class="highlight"><span class="n">PERSOLIB</span></code>.</p>
+<p>On peut retourner sur la question dont l'identifiant est <code class="highlight"><span class="n">APPRECIATION</span></code>, pour modifier son libellé de manière à commencer par le texte produit par la variable <code class="highlight"><span class="n">PRENOMLIB</span></code>.</p>
 <details class="success">
 <summary>Solution</summary>
-<p><code class="highlight"><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">$</span><span class="n">PERSOLIB</span><span class="o">$</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; avez-vous apprécié l&#39;exercice ?&quot;</span></code></p>
+<p><a class="glightbox" href="../../../img/pogues/question-prenomlib.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Question avec prénom personnalisé" src="../../../img/pogues/question-prenomlib.png" /></a></p>
 </details>
 
 
