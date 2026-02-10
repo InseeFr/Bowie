@@ -329,8 +329,6 @@
       
         
       
-        
-      
     
     
     
@@ -733,27 +731,6 @@
   
   <span class="md-ellipsis">
     Mise en place d'une boucle
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../26-personnalisation-questionniaire/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Personnaliser son questionnaire
   </span>
   
 
@@ -3053,29 +3030,33 @@
 
 
 <h1 id="utilisation-dune-variable-calculee">Utilisation d'une variable calculée</h1>
-<div class="admonition danger">
-<p class="admonition-title">Page à mettre à jour</p>
-</div>
 <p>Pogues permet la création de trois types de variables dans le questionnaire :</p>
 <ol>
 <li>les <em>variables collectées</em> : celles qui sont valorisées par les réponses aux questions,</li>
 <li>les <em>variables calculées</em> : elles sont produites à partir d'une expression VTL,</li>
 <li>les <em>variables externes</em> : elles sont valorisées par des données externes qui seront injectées dans le questionnaire.</li>
 </ol>
+<div class="admonition abstract">
+<p class="admonition-title">Pour aller plus loin</p>
+<ul>
+<li><a href="../../%F0%9F%9A%80_Guide/Variables/">Les variables</a></li>
+</ul>
+</div>
 <p>Nous allons voir dans cette section comment mobiliser le deuxième type de variable pour mettre en place un contrôle sur la réponse à la question sur les activités professionnelles (<code class="highlight"><span class="n">ACTIVITES</span></code>).</p>
 <h2 id="creation-de-la-variable">Création de la variable</h2>
-<p>Pour créer une variable calculée, il suffit d'entrer dans le détail d'une question, n'importe laquelle (via le bouton <em>Voir le détail</em>), puis de sélectionner l'onglet <em>Variables calculées</em>.</p>
-<p>Cet onglet liste l'ensemble des variables calculées du questionnaire.</p>
+<p>Pour créer une variable calculée, il faut aller dans le menu de gestion des variables, bouton dans le menu de gauche puis de cliquer sur le bouton <em>Créer une variable</em>.</p>
+<p><a class="glightbox" href="../../../img/pogues/menu-variables.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Menu Variables" src="../../../img/pogues/menu-variables.png" /></a></p>
+<p>Cette page liste l'ensemble des variables du questionnaire présentées par <a href="../../%F0%9F%9A%80_Guide/Variables/portee/">Niveau de calcul</a>.</p>
 <p>Plusieurs champs sont à compléter :</p>
 <ul>
-<li><em>Libellé</em> : un texte court pour identifier la variable</li>
 <li><em>Identifiant</em> : un identifiant de la forme <code class="highlight"><span class="n">MON_IDENTIFIANT</span></code></li>
+<li><em>Libellé</em> : un texte court pour décrire la variable</li>
 <li><em>Formule</em> : l'expression VTL qui valorise la variable</li>
+<li><em>Niveau de calcul</em> : dans le cas général, la portée est <em>Questionnaire</em>, la variable est mobilisable dans l'ensemble du questionnaire. Pour des variables qui sont créées dans une occurence de boucle ou de tableau, il faut préciser que la portée se limite à cette boucle ou ce tableau.</li>
 <li><em>Type de réponse</em> : comme pour une variable collectée, on renseigne les caractéristiques de la variable</li>
 <li>Autres champs associés au type de réponse</li>
-<li><em>Portée</em> : dans le cas général, la portée est <em>Questionnaire</em>, la variable est mobilisable dans l'ensemble du questionnaire. Pour des variables qui sont créées dans une occurence de boucle ou de tableau, il faut préciser que la portée se limite à cette boucle ou ce tableau.</li>
 </ul>
-<p>Notre variable aura comme identifiant <code class="highlight"><span class="n">SOMME</span></code>, et aura comme valeur l'addition des variables produites par le <a href="15-creation-tableau.md">tableau créé précédemment</a> :</p>
+<p>Notre variable aura comme identifiant <code class="highlight"><span class="n">SOMME</span></code>, et aura comme valeur l'addition des variables produites par le <a href="../16-creation-tableau/">tableau créé précédemment</a> :</p>
 <div class="highlight"><pre><span></span><code><span class="n">```vtl</span>
 <span class="n">nvl($ACTIVITES11$, 0) +</span>
 <span class="n">nvl($ACTIVITES21$, 0) +</span>
@@ -3084,21 +3065,19 @@
 <span class="n">nvl($ACTIVITES51$, 0)</span>
 <span class="n">```</span>
 </code></pre></div>
+<p><a class="glightbox" href="../../../img/pogues/creation-var-calculee.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création d'une variable calculée" src="../../../img/pogues/creation-var-calculee.png" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>On utilise ici la fonction <code class="highlight"><span class="n">nvl</span></code> qui permet de renvoyer une valeur par défaut si la variable est nulle. En effet, si on ne valorise pas une case du tableau, la variable correspondante aura comme valeur <code class="highlight"><span class="n">null</span></code> ce qui ne permet pas de faire la somme.</p>
 <p>On lit <code class="highlight"><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">ACTIVITES11</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span></code> ainsi : si la variable <code class="highlight"><span class="o">$</span><span class="n">ACTIVITES11</span><span class="o">$</span></code> est <code class="highlight"><span class="n">null</span></code>, on renvoie <code class="highlight"><span class="m">0</span></code> sinon on renvoie sa valeur.</p>
 </div>
+<p>Jusqu'ici nous n'avions que des variables collectées dans la liste des variables tandis que la variable nouvellement créée <code class="highlight"><span class="n">SOMME</span></code> à pour type <em>Calculée</em>. Le survol du bouton permet d'afficher la formule de calcul.</p>
 <h2 id="utilisation-de-la-variable">Utilisation de la variable</h2>
-<p>On peut maintenant ajouter un contrôle sur la question <code class="highlight"><span class="n">ACTIVITES</span></code> pour s'assurer que la ventilation est égale à 100%. Vous pouvez pour cela vous appuyer sur ce que l'on a vu <a href="../21-ajout-controle/">précédemment</a> et sur le <a href="../../%F0%9F%92%BB_VTL/">guide VTL</a>... Pour les plus pressés d'entre vous, vous pouvez regarder la solution ci-dessous. <img alt="😃" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f603.svg" title=":smiley:" /></p>
-<details class="example">
-<summary>Solution</summary>
-<p>La formule pour le contrôle pourra être <code class="highlight"><span class="o">$</span><span class="n">SOMME</span><span class="o">$</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="m">100</span></code>, l'opérateur <code class="highlight"><span class="o">&lt;&gt;</span></code> signifiant "différent de".</p>
-<p>Par ailleurs, le message du contrôle pourra inclure la somme des ventilations déjà fournies :</p>
-<div class="highlight"><pre><span></span><code><span class="s">&quot;Votre total doit être égal à 100% (&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>
-<span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">SOMME</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span>
-<span class="s">&quot;)&quot;</span>
-</code></pre></div>
+<p>On peut maintenant ajouter un contrôle sur la question <code class="highlight"><span class="n">ACTIVITES</span></code> pour s'assurer que la ventilation est égale à 100%. Vous pouvez pour cela vous appuyer sur ce que l'on a vu <a href="../21-ajout-controle/">précédemment</a> et sur le <a href="../../%F0%9F%92%BB_VTL/">guide VTL</a>... </p>
+<p><a class="glightbox" href="../../../img/pogues/controle-ventilation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="solution contrôle ventilation" src="../../../img/pogues/controle-ventilation.png" /></a></p>
+<details class="success">
+<summary>Visualisation</summary>
+<p><a class="glightbox" href="../image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image.png" /></a></p>
 </details>
 
 
