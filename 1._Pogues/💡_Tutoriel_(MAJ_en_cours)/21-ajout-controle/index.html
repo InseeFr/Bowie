@@ -2979,24 +2979,22 @@
 
 
 <h1 id="ajout-dun-controle">Ajout d'un contrôle</h1>
-<div class="admonition danger">
-<p class="admonition-title">Page à mettre à jour</p>
-</div>
 <p>On souhaite pouvoir s'assurer d'une bonne qualité de réponse aux différentes questions que l'on propose. Pour cela, on peut utiliser le mécanisme de contrôle inhérent aux outils de l'atelier.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Actuellement, seuls les contrôles de format, par exemple une valeur minimum dans un champ numérique, sont bloquants. Les contrôles de cohérence comme celui que l'on s'apprête à créer ne bloque pas le déroulement du questionnaire.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Pour aller plus loin</p>
+<ul>
+<li><a href="../../%F0%9F%9A%80_Guide/23-controles/">Les contrôles</a></li>
+</ul>
 </div>
 <p>Ici, on va créer un contrôle affichant un message d'incitation si l'on ne donne pas son prénom.</p>
-<p>Pour cela, on va modifier la question dont l'identifiant est PRENOM (en cliquant sur _Voir le détail).</p>
-<p><a class="glightbox" href="../../../img/pogues/controle-modification-question.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Modification de la question PRENOM" src="../../../img/pogues/controle-modification-question.png" /></a></p>
+<p>Pour cela, on va modifier la question dont l'identifiant est PRENOM (en cliquant sur <em>Voir le détail</em>).</p>
 <p>On choisit ensuite l'onglet <em>Contrôles</em>.</p>
 <p>Pour créer un contrôle, il faut remplir quatre champs :</p>
 <ul>
 <li><em>Description du contrôle</em> Un texte permettant de décrire le contrôle,</li>
 <li><em>Condition d'affichage</em> Une expression VTL qui déclenche le contrôle,</li>
 <li><em>Message d'erreur</em> Le texte qui s'affiche lorsque l'erreur est levée,</li>
-<li><em>Criticité</em> Un champ informatif sur le degré d'importance de l'erreur (actuellement n'a aucune incidence sur l'affichage).</li>
+<li><em>Criticité</em> Un champ informatif sur le degré d'importance de l'erreur (<em>Avertissement (Non bloquant)</em> ou <em>Erreur (Bloquant)</em>).</li>
 </ul>
 <p>On veut déclencher le contrôle en cas de non-réponse, on va tester dans notre cas :</p>
 <ul>
