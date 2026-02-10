@@ -61,5 +61,5 @@ On peut maintenant ajouter un contrôle sur la question `ACTIVITES` pour s'assur
 ![solution contrôle ventilation](../../img/pogues/controle-ventilation.png)
 
 ??? success "Visualisation" 
-    ![alt text](image.png)
+    ![Visualisation contrôle](../../img/pogues/visualisation-controle-activites.png)
    
