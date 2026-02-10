@@ -3012,40 +3012,47 @@
 
 
 <h1 id="mise-en-place-dune-boucle">Mise en place d'une boucle</h1>
-<div class="admonition danger">
-<p class="admonition-title">Page à mettre à jour</p>
-</div>
-<p>Une boucle permet de répéter une partie du questionnaire (au niveau séquence ou sous-séquence), à partir de valeurs prédéterminées ou de variables du questionnaire.</p>
+<p>Une boucle permet de répéter une partie du questionnaire (une séquence ou une sous-séquence), à partir de valeurs prédéterminées ou de variables du questionnaire.</p>
 <p>Dans notre cas d'usage, on souhaite répéter la sous-séquence "Parlez-nous de votre collègue autant de fois que le nombre de collègue qui a été donné à la questions précédente "Combien de personnes partagent votre bureau ?".</p>
 <p>On va donc mobiliser la variable <code class="highlight"><span class="n">COMBIEN_PARTAGE</span></code> dans une boucle.</p>
 <p>Pour créer la boucle, on clique sur le bouton "+ Boucle" dans la barre d'actions.</p>
-<p>La fenêtre qui s'ouvre propose plusieurs champs que l'on va mobiliser de deux manières différentes :</p>
+<p>La fenêtre qui s'ouvre propose plusieurs champs que l'on peut mobiliser de deux manières différentes :</p>
 <ol>
-<li>pour une boucle utilisant des valeurs fixes ou des variables du questionnaire</li>
-<li>pour une boucle s'appuyant sur une structure répétée comme une autre boucle ou un tableau dynamique.</li>
+<li>pour une boucle utilisant des valeurs fixes ou des variables du questionnaire (<em>boucle principale</em>);</li>
+<li>pour une boucle s'appuyant sur une structure répétée comme une autre boucle ou un tableau dynamique (<em>boucle liée</em>).</li>
 </ol>
 <p>Dans ce tutoriel, on va mettre en place le premier cas uniquement.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Pour le deuxième type d'utilisation, la section du guide est en cours de création <img alt="😓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f613.svg" title=":sweat:" /></p>
+<div class="admonition abstract">
+<p class="admonition-title">Pour aller plus loin</p>
+<ul>
+<li><a href="../../%F0%9F%9A%80_Guide/24-boucles/">Les boucles</a></li>
+</ul>
 </div>
 <h2 id="creation-de-la-boucle">Création de la boucle</h2>
 <p>Nous allons remplir les champs suivants :</p>
 <ul>
 <li><em>Identifiant</em> avec comme toujours un identifiant de la forme <code class="highlight"><span class="n">MON_IDENTIFIANT</span></code></li>
-<li><em>Minimum</em> le nombre minimum d'itérations, qui peut être une valeur fixe (par exemple <code class="highlight"><span class="m">2</span></code>, ou une variable)</li>
-<li><em>Maximum</em> le nombre maximum d'itération, là aussi une valeur fixe ou une variable</li>
+<li><em>Basé sur</em> à remplir uniquement pour les boucles liées (on les base sur un objet existant tel qu'une boucle principale ou sur un tableau dynamique)</li>
+<li><em>Nombre d'occurrences max identique à min</em> permet de ne remplir qu'une fois la taille de la boucle si le nombre d'occurrence est fixe (fixé par une formule ou un nombre donné) </li>
+<li><em>Nombre minimum d'occurrences</em> le nombre minimum d'itérations, qui peut être une valeur fixe (par exemple <code class="highlight"><span class="m">2</span></code>, ou une variable)</li>
+<li><em>Nombre maximum d'occurrences</em> le nombre maximum d'itération, là aussi une valeur fixe ou une variable</li>
+<li><em>Afficher toutes les occurrences sur une seule page</em> uniquement pour les boucles principales, lorsqu'il y a un nombre restreint de questions et qu'il est pertinent de proposer toutes les itérations d'un seul tenant en visualisation web ménage ou enquêteur (par exemple questions portant sur les membres d'un logement)</li>
+<li><em>Libellé du bouton d'ajout</em> à remplir quand le nombre minimum d'itérations est différent du nombre maximal</li>
 <li><em>Début</em> la séquence ou la sous-séquence à partir de laquelle commence la répétition</li>
 <li><em>Fin</em> la séquence ou la sous-séquence sur laquelle termine la boucle ; comme pour les filtres, cet élément de fin est inclus dans la boucle.</li>
 </ul>
 <p>Dans notre cas, on spécifiera ces valeurs :</p>
 <ul>
-<li><em>Identifiant</em> <code class="highlight"><span class="n">BOUCLE</span></code> (oui, on fait simple <img alt="😄" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f604.svg" title=":smile:" />)</li>
-<li><em>Minimum</em> le chiffre <code class="highlight"><span class="m">1</span></code></li>
-<li><em>Maximum</em> l'expression VTL <code class="highlight"><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">COMBIEN_PARTAGE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span></code>, ce qui permet d'avoir <code class="highlight"><span class="m">1</span></code> si la question précédente n'a pas été répondue ou la valeur de la réponse si on l'a obtenue</li>
+<li><em>Identifiant</em> <code class="highlight"><span class="n">BOUCLE_COLLEGUE</span></code> (oui, on fait simple <img alt="😄" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f604.svg" title=":smile:" />)</li>
+<li><em>Nombre d'occurrences</em> l'expression VTL <code class="highlight"><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">COMBIEN_PARTAGE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span></code>, ce qui permet d'avoir <code class="highlight"><span class="m">1</span></code> si la question précédente n'a pas été répondue ou la valeur de la réponse si on l'a obtenue</li>
 <li><em>Début</em> la sous-séquence <code class="highlight"><span class="n">COLLEGUE</span></code></li>
 <li><em>Fin</em> la sous-séquence <code class="highlight"><span class="n">COLLEGUE</span></code></li>
 </ul>
+<p><a class="glightbox" href="../../../img/pogues/boucle-collegue.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création boucle collègue" src="../../../img/pogues/boucle-collegue.png" /></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>L'interface de création des boucles nous guide pour paramètrer la configuration de la boucle en fonction du contexte de visualisation (ménage / entreprise). Il convient de bien les respecter.</p>
+</div>
 
 
 
