@@ -10,6 +10,6 @@ Renseigner :
 
 La variable source du sexe n'est pas un attribut à renseigner obligatoirement pour faire fonctionner la question de type liens deux à deux. Touefois, elle est indispensable pour accéder aux variables globales décrivant les parents, enfants et conjoints. 
 
-![Création des liens 2 à 2](../../img/pogues/creer-lien-2-2.png)
+![Création des liens 2 à 2](../../../img/pogues/creer-lien-2-2.png)
 
 

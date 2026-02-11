@@ -40,11 +40,12 @@ Il y a 4 jeux de variables :
 
 Prenons un exemple avec une famille de 5 personnes : 
 
-![Famille pour les liens](../../img/pogues/famille-liens.png)
+![Famille pour les liens](../../../img/pogues/famille-liens.png)
 
 C'est Laura qui répond au questionnaire, elle déclare d'abord son conjoint, puis les enfants et termine par le grand-père.
 Le vecteur prénom associé est 
-![Vecteur prénom liens](../../img/pogues/vecteur-prenom-liens.png)
+
+![Vecteur prénom liens](../../../img/pogues/vecteur-prenom-liens.png)
 
 to be continued
 
