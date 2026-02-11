@@ -29,7 +29,7 @@ On ne peut en revanche pas les utiliser hors boucle.
 
 ## Variables globales issues des liens deux à deux
 
-La variable collectées sous-jacente à une question de type [lien deux à deux](../Questions/16-liens-2a2.md) est une matrice qu'il est difficile de mobiliser dans le questionnaire avec le langage VTL. Aussi, on vous fournit des variables système sous forme de vecteur, facile à manipuler dans le questionnaire.
+La variable collectée sous-jacente à une question de type [lien deux à deux](../Questions/16-liens-2a2.md) est une matrice qu'il est difficile de mobiliser dans le questionnaire avec le langage VTL. Aussi, on vous fournit des variables système sous forme de vecteurs, faciles à manipuler dans le questionnaire.
 
 ### Présentation des variables
 
@@ -46,10 +46,13 @@ Reprenons l'exemple de la famille de Laura :
 
 ![Famille pour les liens](../../../img/pogues/famille-liens.png)
 
-Les variables globales issues des liens deux à deux sont disponibles et correctement calculées dès que la question sur les liens est renseignée dans le questionnaire. **Elles sont utilisables directement dans le questionnaire Pogues au sein d'une boucle basée sur le prénom** sans calculer de variable intermédiaire.
+Les variables globales issues des liens deux à deux sont disponibles et correctement calculées dès que la question sur les liens est renseignée dans le questionnaire. **Elles sont utilisables directement dans le questionnaire Pogues au sein d'une boucle basée sur le prénom sans calculer de variable intermédiaire**.
 
-Pour l'exemple, nous allons créer des variables calculées qui permettent de voir ce qu'il y a dedans.
-Par exemple on va créer PARENT1_PRENOM = nvl(GLOBAL_PARENT1_PRENOM,"") qui correspond à la variable brute avec gestion du null (resp. PARENT2_PRENOM). Les variables sont de niveau de calcul la boucle dans laquelle on collecte la variable source du prénom.
+
+Dans un **but pédagogique**, nous allons créer des variables calculées qui permettent de voir ce qu'il y a dedans.
+Par exemple on va créer PARENT1_PRENOM = nvl(GLOBAL_PARENT1_PRENOM,"") qui correspond à la variable brute avec gestion du null. Les variables sont de niveau de calcul la boucle dans laquelle on collecte la variable source du prénom.
+
+On fait pareil avec le prénom du deuxième parent PARENT2_PRENOM = nvl(GLOBAL_PARENT2_PRENOM,"").
 
 Il est possible de faire la même chose avec le sexe des parents afin de personnaliser le questionnaire en utilisant les termes mère/père au lieu de parent.
 
