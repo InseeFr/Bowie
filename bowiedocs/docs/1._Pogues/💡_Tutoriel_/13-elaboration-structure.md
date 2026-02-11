@@ -53,7 +53,7 @@ Nous allons créer maintenant une question simple, `T_DATENAIS`, mais avec un no
 On a besoin pour ce type de question de spécifier un format (AAAA-MM-JJ, AAAA-MM, AAAA) et des bornes minimum et maximum, décrites selon le format choisi.
 
 !!! example "Cas pratique"
-    Placez vous sur la sous-séquence `THL_DHL` puis créez une nouvelle question simple avec les information suivantes :
+    Placez vous sur la sous-séquence `CARACTERISTIQUES` puis créez une nouvelle question simple avec les informations suivantes :
 
     - _Libellé_ : "Quelle est votre date de naissance ?"
     - _Identifiant_ : `T_DATENAIS`
