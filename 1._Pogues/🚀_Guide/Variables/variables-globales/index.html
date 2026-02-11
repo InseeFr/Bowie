@@ -3134,7 +3134,7 @@ On ne peut en revanche pas les utiliser hors boucle.</p>
 </code></pre></div></p>
 </div>
 <h2 id="variables-globales-issues-des-liens-deux-a-deux">Variables globales issues des liens deux à deux</h2>
-<p>La variable collectées sous-jacente à une question de type <a href="../../Questions/16-liens-2a2/">lien deux à deux</a> est une matrice qu'il est difficile de mobiliser dans le questionnaire avec le langage VTL. Aussi, on vous fournit des variables système sous forme de vecteur, facile à manipuler dans le questionnaire.</p>
+<p>La variable collectée sous-jacente à une question de type <a href="../../Questions/16-liens-2a2/">lien deux à deux</a> est une matrice qu'il est difficile de mobiliser dans le questionnaire avec le langage VTL. Aussi, on vous fournit des variables système sous forme de vecteurs, faciles à manipuler dans le questionnaire.</p>
 <h3 id="presentation-des-variables">Présentation des variables</h3>
 <p>Il y a 4 jeux de variables : </p>
 <ul>
@@ -3146,9 +3146,10 @@ On ne peut en revanche pas les utiliser hors boucle.</p>
 <h3 id="exemple">Exemple</h3>
 <p>Reprenons l'exemple de la famille de Laura :</p>
 <p><a class="glightbox" href="../../../../img/pogues/famille-liens.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Famille pour les liens" src="../../../../img/pogues/famille-liens.png" /></a></p>
-<p>Les variables globales issues des liens deux à deux sont disponibles et correctement calculées dès que la question sur les liens est renseignée dans le questionnaire. <strong>Elles sont utilisables directement dans le questionnaire Pogues au sein d'une boucle basée sur le prénom</strong> sans calculer de variable intermédiaire.</p>
-<p>Pour l'exemple, nous allons créer des variables calculées qui permettent de voir ce qu'il y a dedans.
-Par exemple on va créer PARENT1_PRENOM = nvl(GLOBAL_PARENT1_PRENOM,"") qui correspond à la variable brute avec gestion du null (resp. PARENT2_PRENOM). Les variables sont de niveau de calcul la boucle dans laquelle on collecte la variable source du prénom.</p>
+<p>Les variables globales issues des liens deux à deux sont disponibles et correctement calculées dès que la question sur les liens est renseignée dans le questionnaire. <strong>Elles sont utilisables directement dans le questionnaire Pogues au sein d'une boucle basée sur le prénom sans calculer de variable intermédiaire</strong>.</p>
+<p>Dans un <strong>but pédagogique</strong>, nous allons créer des variables calculées qui permettent de voir ce qu'il y a dedans.
+Par exemple on va créer PARENT1_PRENOM = nvl(GLOBAL_PARENT1_PRENOM,"") qui correspond à la variable brute avec gestion du null. Les variables sont de niveau de calcul la boucle dans laquelle on collecte la variable source du prénom.</p>
+<p>On fait pareil avec le prénom du deuxième parent PARENT2_PRENOM = nvl(GLOBAL_PARENT2_PRENOM,"").</p>
 <p>Il est possible de faire la même chose avec le sexe des parents afin de personnaliser le questionnaire en utilisant les termes mère/père au lieu de parent.</p>
 <p><a class="glightbox" href="../../../../img/pogues/global-parent-prenom.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variable magique prénoms des parents" src="../../../../img/pogues/global-parent-prenom.png" /></a></p>
 <p>Pour savoir si un individu de la boucle a déclaré au moins un parent dans le logement, il suffit de tester la nullité de GLOBAL_PARENT1_PRENOM dans une boucle.</p>
