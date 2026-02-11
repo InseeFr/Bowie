@@ -1828,6 +1828,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Les questions liens deux à deux
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1837,6 +1848,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#un-exemple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Un exemple
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2944,6 +2983,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#un-exemple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Un exemple
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2958,15 +3014,32 @@
 
 
 <h1 id="les-questions-liens-deux-a-deux">Les questions liens deux à deux</h1>
-<p>Ce type de question est aujourd'hui exclusivement réservée au tronc commun des ménages : elle permet de caractériser les liens entre les différents habitants du logement. Elle se compose d'un ensemble de "listes déroulantes" demandant les liens entre tous les habitants du logement</p>
+<p>Ce type de question est aujourd'hui exclusivement réservée au <strong>tronc commun des ménages</strong> : elle permet de caractériser les liens entre les différents habitants du logement. Elle se compose d'un ensemble de "listes déroulantes" demandant les liens entre tous les habitants du logement.</p>
 <p>Renseigner :</p>
 <ul>
 <li>la <em>variable source du prénom</em>, </li>
 <li>la <em>variable source du sexe</em>,</li>
 <li>la <em>liste de codes</em> permettant de décrire les différents liens possibles.</li>
 </ul>
-<p>La variable source du sexe n'est pas un attribut à renseigner obligatoirement pour faire fonctionner la question de type liens deux à deux. Touefois, elle est indispensable pour accéder aux variables globales décrivant les parents, enfants et conjoints. </p>
+<p>La variable source du sexe n'est pas un attribut à renseigner obligatoirement pour faire fonctionner la question de type liens deux à deux. Toutefois, elle est indispensable pour accéder aux <a href="../../Variables/variables-globales/#variables-globales-issues-des-liens-deux-a-deux">variables globales décrivant les parents, enfants et conjoints</a>. </p>
 <p><a class="glightbox" href="../../../../img/pogues/creer-lien-2-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création des liens 2 à 2" src="../../../../img/pogues/creer-lien-2-2.png" /></a></p>
+<div class="admonition tips la liste de codes pour les liens entre les habitants du logement au t1-2026">
+<p class="admonition-title">Tips</p>
+<p>La liste de codes à utiliser pour les liens entre les habitants du logement est maintenue par la division RTI et en partie internalisée dans les outils de l'atelier pour la fouriture des liens réciproques.
+Il est impératif de l'utiliser sans modifications.</p>
+<p><a class="glightbox" href="../../../../img/pogues/modalites-liens.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Liste de codes des liens 2 à 2 au T1-2026" src="../../../../img/pogues/modalites-liens.png" /></a></p>
+</div>
+<h2 id="un-exemple">Un exemple</h2>
+<p>Prenons un exemple avec une famille de 5 personnes : </p>
+<p><a class="glightbox" href="../../../../img/pogues/famille-liens.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Famille pour les liens" src="../../../../img/pogues/famille-liens.png" /></a></p>
+<p>C'est Laura qui répond au questionnaire, elle déclare d'abord son conjoint, puis les enfants et termine par le grand-père. Elle déclare les liens sans se tromper <img alt="🤓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f913.svg" title=":nerd:" /> </p>
+<p>Voici les données telles qu'elles sont collectées :</p>
+<p><a class="glightbox" href="../../../../img/pogues/matrice-liens.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Matrice des liens" src="../../../../img/pogues/matrice-liens.png" /></a></p>
+<p>Cette matrice des liens collectés est difficile à exploiter en cours de questionnaire avec les fonctions VTL à notre disposition, c'est pourquoi on met à votre disposition des variables globales permettant de mobiliser les principales informations utiles au questionnement (prénom et sexe des parents, prénom du conjoint, liste des prénoms des enfants).</p>
+<div class="admonition abstract">
+<p class="admonition-title">Pour aller plus loin</p>
+<p><a href="../../Variables/variables-globales/#variables-globales-issues-des-liens-deux-a-deux">Les variables globales issues des liens deux à deux</a></p>
+</div>
 
 
 
