@@ -4,11 +4,12 @@ Ce type de question est aujourd'hui exclusivement réservée au tronc commun des
 
 Renseigner :
 
-- la _variable source_, c'est-à-dire la variable qui sera utilisée pour la boucle (le prénom dans le cas du TCM)
+- la _variable source du prénom_, 
+- la _variable source du sexe_,
 - la _liste de codes_ permettant de décrire les différents liens possibles.
 
-!!! tip "Astuce"
+La variable source du sexe n'est pas un attribut à renseigner obligatoirement pour faire fonctionner la question de type liens deux à deux. Touefois, elle est indispensable pour accéder aux variables globales décrivant les parents, enfants et conjoints. 
 
-    Cette variable fait partie des modules de base proposés par le TCM.
+<img width="772" height="825" alt="Création des liens 2 à 2" src="https://github.com/user-attachments/assets/7911152d-28cd-48b2-a211-ea11b31ce936" />
 
-##
+
