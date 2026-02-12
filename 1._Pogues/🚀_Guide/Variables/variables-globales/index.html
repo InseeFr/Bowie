@@ -3138,25 +3138,47 @@ On ne peut en revanche pas les utiliser hors boucle.</p>
 <h3 id="presentation-des-variables">Présentation des variables</h3>
 <p>Il y a 4 jeux de variables : </p>
 <ul>
-<li>GLOBAL_PARENT1_PRENOM et GLOBAL_PARENT1_SEXE : un vecteur avec le prénom (resp. sexe) du premier parent déclaré pour chaque personne de la boucle prénom </li>
-<li>GLOBAL_PARENT2_PRENOM et GLOBAL_PARENT2_SEXE : un vecteur avec le prénom (resp. sexe) du deuxième parent déclaré pour chaque personne de la boucle prénom  </li>
-<li>GLOBAL_CONJOINT : un vecteur avec le prénom du (premier) conjoint déclaré pour chaque personne de la boucle prénom </li>
-<li>GLOBAL_ENFANTS_PRENOMS : un vecteur avec la liste des prénoms des enfants pour chaque personne de la boucle prénom, s'il y a au moins 2 enfants les prénoms sont séparés par des <code class="highlight"><span class="c1">#</span></code></li>
+<li><code class="highlight"><span class="n">GLOBAL_PARENT1_PRENOM</span></code> et <code class="highlight"><span class="n">GLOBAL_PARENT1_SEXE</span></code> : un vecteur avec le prénom (resp. sexe) du premier parent déclaré pour chaque personne de la boucle prénom </li>
+<li><code class="highlight"><span class="n">GLOBAL_PARENT2_PRENOM</span></code> et <code class="highlight"><span class="n">GLOBAL_PARENT2_SEXE</span></code> : un vecteur avec le prénom (resp. sexe) du deuxième parent déclaré pour chaque personne de la boucle prénom  </li>
+<li><code class="highlight"><span class="n">GLOBAL_CONJOINT</span></code> : un vecteur avec le prénom du (premier) conjoint déclaré pour chaque personne de la boucle prénom </li>
+<li><code class="highlight"><span class="n">GLOBAL_ENFANTS_PRENOMS</span></code> : un vecteur avec la liste des prénoms des enfants pour chaque personne de la boucle prénom, s'il y a au moins 2 enfants les prénoms sont séparés par des <code class="highlight"><span class="c1">#</span></code></li>
 </ul>
 <h3 id="exemple">Exemple</h3>
-<p>Reprenons l'exemple de la famille de Laura :</p>
+<p>Prenons un exemple avec une famille de 5 personnes :</p>
 <p><a class="glightbox" href="../../../../img/pogues/famille-liens.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Famille pour les liens" src="../../../../img/pogues/famille-liens.png" /></a></p>
 <p>Les variables globales issues des liens deux à deux sont disponibles et correctement calculées dès que la question sur les liens est renseignée dans le questionnaire. <strong>Elles sont utilisables directement dans le questionnaire Pogues au sein d'une boucle basée sur le prénom sans calculer de variable intermédiaire</strong>.</p>
-<p>Dans un <strong>but pédagogique</strong>, nous allons créer des variables calculées qui permettent de voir ce qu'il y a dedans.
-Par exemple on va créer PARENT1_PRENOM = nvl(GLOBAL_PARENT1_PRENOM,"") qui correspond à la variable brute avec gestion du null. Les variables sont de niveau de calcul la boucle dans laquelle on collecte la variable source du prénom.</p>
-<p>On fait pareil avec le prénom du deuxième parent PARENT2_PRENOM = nvl(GLOBAL_PARENT2_PRENOM,"").</p>
-<p>Il est possible de faire la même chose avec le sexe des parents afin de personnaliser le questionnaire en utilisant les termes mère/père au lieu de parent.</p>
+<p>Dans un <strong>but pédagogique</strong>, nous allons créer des variables calculées qui permettent de voir commet se présentent les variables et comment les utiliser.</p>
+<p>Pour voir ce qu'il y a dans la variable globale donnant le prénom du premier parent, on va par exemple on va créer 
+<div class="highlight"><pre><span></span><code><span class="n">`PARENT1_PRENOM`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="n">`GLOBAL_PARENT1_PRENOM`</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+qui correspond à la variable brute avec gestion du null. Les variables sont de niveau de calcul la boucle dans laquelle on collecte la variable source du prénom. Vous remarquez ici qu'on utilise les variables globales sans les entourer de <code class="highlight"><span class="o">$</span></code> comme pour <code class="highlight"><span class="n">GLOBAL_ITERATION_INDEX</span></code>.</p>
+<p><a class="glightbox" href="../../../../img/pogues/creer-global-parent1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création de la variable prénom premier parent" src="../../../../img/pogues/creer-global-parent1.png" /></a></p>
+<p>On fait pareil avec le prénom du deuxième parent 
+<div class="highlight"><pre><span></span><code><span class="n">`PARENT2_PRENOM`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="n">`GLOBAL_PARENT2_PRENOM`</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="n">.</span>
+</code></pre></div></p>
 <p><a class="glightbox" href="../../../../img/pogues/global-parent-prenom.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variable magique prénoms des parents" src="../../../../img/pogues/global-parent-prenom.png" /></a></p>
-<p>Pour savoir si un individu de la boucle a déclaré au moins un parent dans le logement, il suffit de tester la nullité de GLOBAL_PARENT1_PRENOM dans une boucle.</p>
-<p>De la même manière on peut obtenir les prénoms du conojoint pour chaque individu de la boucle en utilisant GLOBAL_CONJOINT_PRENOM (un seul conjoint possible, le premier déclaré) tel que CONJOINT_PRENOM = nvl(GLOBAL_CONJOINT_PRENOM,"")</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Il est possible de faire la même chose avec le sexe des parents afin de personnaliser le questionnaire en utilisant les termes mère/père au lieu de parent.</p>
+</div>
+<p>Pour savoir si un individu de la boucle a déclaré au moins un parent dans le logement, il suffit de tester la nullité de <code class="highlight"><span class="n">GLOBAL_PARENT1_PRENOM</span></code> <strong>dans une boucle</strong>. On peut également utiliser le prénom et le sexe de ce premier parent pour poser d'autres questions.</p>
+<p>De la même manière, on peut obtenir les prénoms du conjoint pour chaque individu de la boucle en utilisant <code class="highlight"><span class="n">GLOBAL_CONJOINT_PRENOM</span></code> (un seul conjoint possible, le premier déclaré) tel que 
+<div class="highlight"><pre><span></span><code><span class="n">`CONJOINT_PRENOM`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="n">`GLOBAL_CONJOINT_PRENOM`</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+</code></pre></div></p>
 <p><a class="glightbox" href="../../../../img/pogues/global-conjoint.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variable magique prénom du conjoint" src="../../../../img/pogues/global-conjoint.png" /></a></p>
-<p>On peut également fournir la listes des enfants pour chaque personne du logement. Dans la variable GLOBAL_ENFANTS_PRENOMS, on récupère la liste des prénoms des enfants, chaque prénom étant séparé par le caractère spécial <code class="highlight"><span class="c1">#</span></code>. On n'a pas souhaité utliser les caractères usuels tels que la virgule ou le point-virgule pour ne pas créer de confusion lors des exports csv. </p>
-<p>Pour avoir une liste de prénoms utilisable dans une déclaration, on mobilise la fonction VTL <code class="highlight"><span class="n">replace</span></code> pour substituer le <code class="highlight"><span class="c1">#</span></code> par un caractère de notre choix. </p>
+<div class="admonition tips">
+<p class="admonition-title">Astuce</p>
+<p>Pour afficher la phrase "Untel est le conjoint de untel", on peut par exemple faire une déclaration de la forme suivante : 
+<div class="highlight"><pre><span></span><code><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">`$T_PRENOM$`</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>
+<span class="n">if</span><span class="w"> </span><span class="nf">isnull</span><span class="p">(</span><span class="n">`GLOBAL_CONJOINT_PRENOM`</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="s">&quot;n&#39;a pas de conjoint dans le logement.&quot;</span>
+<span class="n">else</span><span class="w"> </span><span class="s">&quot;est le conjoint de : &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="n">`GLOBAL_CONJOINT_PRENOM`</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="w"> </span>
+</code></pre></div>
+Dans le cas de Laura, on aura le résultat "Laura est le conjoint de : Laurent", dans le cas de Marcel, on aura "Marcel n'a pas de conjoint dans le logement".</p>
+</div>
+<p>On peut également fournir la listes des enfants pour chaque personne du logement. Dans la variable <code class="highlight"><span class="n">GLOBAL_ENFANTS_PRENOMS</span></code>, on récupère la liste des prénoms des enfants, chaque prénom étant séparé par le caractère spécial <code class="highlight"><span class="c1">#</span></code>. On n'a pas souhaité utliser les caractères usuels tels que la virgule ou le point-virgule pour ne pas créer de confusion lors des exports csv. </p>
+<p>Pour avoir une liste de prénoms utilisable dans une déclaration, on mobilise la fonction VTL <code class="highlight"><span class="n">replace</span></code> pour substituer le <code class="highlight"><span class="c1">#</span></code> par un caractère de notre choix avec la formule 
+<div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="nf">replace</span><span class="p">(</span><span class="n">`GLOBAL_ENFANTS_PRENOMS`</span><span class="p">,</span><span class="s">&quot;#&quot;</span><span class="p">,</span><span class="s">&quot;, &quot;</span><span class="p">),</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span>
+</code></pre></div></p>
 <p><a class="glightbox" href="../../../../img/pogues/VTL-replace.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création liste des enfants sans dièse" src="../../../../img/pogues/VTL-replace.png" /></a></p>
 <p>Voici un aperçu des variables donnant la liste des enfants :</p>
 <p><a class="glightbox" href="../../../../img/pogues/liste-enfants.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="liste des enfants" src="../../../../img/pogues/liste-enfants.png" /></a></p>
