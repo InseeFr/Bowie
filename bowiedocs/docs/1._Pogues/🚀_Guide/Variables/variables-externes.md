@@ -4,9 +4,9 @@
 Pogues permet de référencer dans le questionnaire des variables externes, c'est à dire des variables qui sont fournies au chargement du questionnaire lors de la collecte, en provenance d'un fichier de données produit à partir de données connues et attachées à l'unité enquêtée.
 
 !!! danger 
-Le _typage_ disponible dans Pogues pour ces variables est celui disponible par ailleurs pour les variables collectées et calculées, mais l'outil impose un format texte afin d'être facilement lu tout au long de la chaîne de traitement : l'ensemble des variables externes injectées dans le questionnaire sont du __texte__.
+    Le _typage_ disponible dans Pogues pour ces variables est celui disponible par ailleurs pour les variables collectées et calculées, mais l'outil impose un format texte afin d'être facilement lu tout au long de la chaîne de traitement : l'ensemble des variables externes injectées dans le questionnaire sont du __texte__.
 
-    Impact : si ces variables doivent être utilisées comme numériques, il faut alors les transformer avec la fonction [cast()](../../💻_VTL/fonctions-vtl.md/#cast):
+    **Impact :** si ces variables doivent être utilisées comme des nombres, il faut alors passer par une variable calculée avec le bon type et utiliser la fonction [cast()](../../💻_VTL/fonctions-vtl.md/#cast) et quel :
 
     ```vtl
     cast($VAR_EXT$, integer)
