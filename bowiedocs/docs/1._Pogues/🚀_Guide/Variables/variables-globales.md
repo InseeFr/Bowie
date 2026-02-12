@@ -1,4 +1,4 @@
-# Les variables globales
+# Les variables globales ✨
 
 !!! question "Définition"
     Les variables globales sont des variables fournies directement par le moteur de contrôle des questionnaires.
@@ -27,7 +27,7 @@ On ne peut en revanche pas les utiliser hors boucle.
     "Prénom de l'individu " || cast(GLOBAL_ITERATION_INDEX,string)
     ```
 
-## Variables globales issues des liens deux à deux
+## Variables globales issues des liens deux à deux ✨
 
 Le format des données collectées lors d'une question de type [lien deux à deux](../Questions/16-liens-2a2.md) ne permet pas à ce jour de mobiliser simplement, en cours de collecte chaque lien. Aussi, on vous fournit des variables système sous forme de vecteurs, faciles à manipuler avec des formules VTL dans le questionnaire.
 
