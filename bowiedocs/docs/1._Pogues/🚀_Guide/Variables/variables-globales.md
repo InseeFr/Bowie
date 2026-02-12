@@ -29,7 +29,7 @@ On ne peut en revanche pas les utiliser hors boucle.
 
 ## Variables globales issues des liens deux à deux
 
-La variable collectée sous-jacente à une question de type [lien deux à deux](../Questions/16-liens-2a2.md) est une matrice qu'il est difficile de mobiliser dans le questionnaire avec le langage VTL. Aussi, on vous fournit des variables système sous forme de vecteurs, faciles à manipuler dans le questionnaire.
+Le format des données collectées lors d'une question de type [lien deux à deux](../Questions/16-liens-2a2.md) ne permet pas à ce jour de mobiliser simplement, en cours de collecte chaque lien. Aussi, on vous fournit des variables système sous forme de vecteurs, faciles à manipuler avec des formules VTL dans le questionnaire.
 
 ### Présentation des variables
 

@@ -1,6 +1,6 @@
 # Les questions liens deux à deux
 
-Ce type de question est aujourd'hui exclusivement réservée au **tronc commun des ménages** : elle permet de caractériser les liens entre les différents habitants du logement. Elle se compose d'un ensemble de "listes déroulantes" demandant les liens entre tous les habitants du logement.
+Ce type de question est aujourd'hui exclusivement réservée au **tronc commun des ménages** : elle permet de **collecter les liens familiaux** entre les différents habitants du logement. Elle se compose d'un ensemble de "listes déroulantes" demandant les liens entre tous les habitants du logement.
 
 Renseigner :
 
@@ -32,8 +32,7 @@ Voici les données telles qu'elles sont collectées :
 
 ![Matrice des liens](../../../img/pogues/matrice-liens.png)
 
-
-Cette matrice des liens collectés est difficile à exploiter en cours de questionnaire avec les fonctions VTL à notre disposition, c'est pourquoi on met à votre disposition des variables globales permettant de mobiliser les principales informations utiles au questionnement (prénom et sexe des parents, prénom du conjoint, liste des prénoms des enfants).
+Le format des données collectées lors d'une question de type lien deux à deux ne permet pas à ce jour de mobiliser simplement, en cours de collecte chaque lien, c'est pourquoi on met à votre disposition des variables globales permettant de mobiliser les principales informations utiles au questionnement (prénom et sexe des parents, prénom du conjoint, liste des prénoms des enfants).
 
 !!!abstract "Pour aller plus loin"
     [Les variables globales issues des liens deux à deux](../Variables/variables-globales.md#variables-globales-issues-des-liens-deux-a-deux)
