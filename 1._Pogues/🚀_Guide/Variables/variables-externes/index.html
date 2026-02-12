@@ -3035,14 +3035,11 @@
 <p>Pogues permet de référencer dans le questionnaire des variables externes, c'est à dire des variables qui sont fournies au chargement du questionnaire lors de la collecte, en provenance d'un fichier de données produit à partir de données connues et attachées à l'unité enquêtée.</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-</div>
 <p>Le <em>typage</em> disponible dans Pogues pour ces variables est celui disponible par ailleurs pour les variables collectées et calculées, mais l'outil impose un format texte afin d'être facilement lu tout au long de la chaîne de traitement : l'ensemble des variables externes injectées dans le questionnaire sont du <strong>texte</strong>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">Impact</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">ces</span><span class="w"> </span><span class="n">variables</span><span class="w"> </span><span class="n">doivent</span><span class="w"> </span>ê<span class="n">tre</span><span class="w"> </span><span class="n">utilisées</span><span class="w"> </span><span class="n">comme</span><span class="w"> </span><span class="n">numériques</span><span class="p">,</span><span class="w"> </span><span class="n">il</span><span class="w"> </span><span class="n">faut</span><span class="w"> </span><span class="n">alors</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">transformer</span><span class="w"> </span><span class="n">avec</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">fonction</span><span class="w"> </span><span class="p">[</span><span class="nf">cast</span><span class="p">()](</span><span class="n">..</span><span class="o">/</span><span class="n">..</span><span class="o">/</span>💻_<span class="n">VTL</span><span class="o">/</span><span class="n">fonctions</span><span class="o">-</span><span class="n">vtl.md</span><span class="o">/</span><span class="c1">#cast):</span>
-
-<span class="n">```vtl</span>
-<span class="n">cast($VAR_EXT$, integer)</span>
-<span class="n">```</span>
+<p><strong>Impact :</strong> si ces variables doivent être utilisées comme des nombres, il faut alors passer par une variable calculée avec le bon type et utiliser la fonction <a href="../../../%F0%9F%92%BB_VTL/fonctions-vtl/#cast">cast()</a> et quel :</p>
+<div class="highlight"><pre><span></span><code><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR_EXT</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">integer</span><span class="p">)</span>
 </code></pre></div>
+</div>
 <h2 id="creation-dune-variable-externe">Création d'une variable externe</h2>
 <p>✨ On crée les variables externes via le menu "Variables" en cliquant sur le bouton en haut à droite "Créer une variable".</p>
 <div class="admonition abstract">
