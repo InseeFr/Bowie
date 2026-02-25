@@ -13,7 +13,7 @@ La variable source du sexe n'est pas un attribut à renseigner obligatoirement p
 ![Création des liens 2 à 2](../../../img/pogues/creer-lien-2-2.png)
 
 !!!tips La liste de codes pour les liens entre les habitants du logement au T1-2026
-    La liste de codes à utiliser pour les liens entre les habitants du logement est maintenue par la division RTI et en partie internalisée dans les outils de l'atelier pour la fouriture des liens réciproques.
+    La liste de codes à utiliser pour les liens entre les habitants du logement est maintenue par la division RTI et en partie internalisée dans les outils de l'atelier pour la fourniture des liens réciproques.
     Il est impératif de l'utiliser sans modifications.
 
     ![Liste de codes des liens 2 à 2 au T1-2026](../../../img/pogues/modalites-liens.png)
