@@ -67,15 +67,15 @@ Pour ce logement de 5 personnes, on voit que la liste des liens à remplir et de
 !!! example "Remplissage du questionnaire en visualisation enquêteur"
     === "1. Laura" 
         Ici on fait le choix de ne pas spécifier de déclaration sur la sous-séquence afin de ne pas afficher la page de présentation de la sous-séquence. On collecte les 4 liens qui lient Laura et les autres habitants du logement.
-       ![Liens de Laura](../../../img/pogues/liens-laura.png)
-    === "2. Laurent" 
-    On collecte 3 liens et on rappelle le lien symétrique de celui déjà collecté auprès de Laura.
-       ![Liens de Laurent](../../../img/pogues/liens-laurent.png)
-    === "3. Jade" 
+        ![Liens de Laura](../../../img/pogues/liens-laura.png)
+    === "2. Laurent"
+        On collecte 3 liens et on rappelle le lien symétrique de celui déjà collecté auprès de Laura.
+        ![Liens de Laurent](../../../img/pogues/liens-laurent.png)
+    === "3. Jade"
         ![Liens de Jade](../../../img/pogues/liens-jade.png)
-    === "4. Noé" 
+    === "4. Noé"
         ![Liens de Noé](../../../img/pogues/liens-noe.png)
-    === "5. Marcel" 
+    === "5. Marcel"
         ![Liens de Marcel](../../../img/pogues/liens-marcel.png)
  
 
