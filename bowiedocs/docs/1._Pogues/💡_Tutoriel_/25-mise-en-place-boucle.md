@@ -51,7 +51,7 @@ En visualisant notre questionnaire par exemple en web ménage, on remarque qu'il
 
 ## Personnalisation de la boucle
 
-Pogues nous permet d'utiliser des [variables systèmes](../../🚀_Guide/Variables/variables-globales/) bien sympathiques, notamment GLOBAL_ITERATION_INDEX qui donne la position dans une boucle. 
+Pogues nous permet d'utiliser des [variables systèmes](../🚀_Guide/Variables/variables-globales.md) bien sympathiques, notamment GLOBAL_ITERATION_INDEX qui donne la position dans une boucle. 
 
 Utilisons la pour indiquer à notre répondant où il en est dans son remplissage de boucle. On modifie le libellé de la sous-séquence sur laquelle on boucle.
 ![Ajout de la personnalisation dans le libellé de sous-séquence de la boucle](../../img/pogues/utiliser-global-it-index.png)

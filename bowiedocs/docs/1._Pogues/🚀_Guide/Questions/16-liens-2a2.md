@@ -34,10 +34,10 @@ On peut ajouter une déclaration sur la page de la sous-séquence si on le souha
 
 ### Avec une boucle : une page par habitant du logement ✨
 
-Pour disposer d'une page par habitants, il suffit de poser une boucle sur la sous-séquence qui contient la question de lien deux à deux. Cette boucle est liée à la boucle principale qui permet de collecter les prénoms.
+Pour disposer d'une page par habitants, il suffit de poser une boucle sur la sous-séquence (ou une séquence) qui contient la question de lien deux à deux. Cette boucle est liée à la boucle principale qui permet de collecter les prénoms.
 
-!!! warning
-    Pour éviter d'avoir une page de sous-séquence (titre de la sous-séquence, déclarations) entre chaque itération de la boucle (habitant), il suffit de ne pas mettre de déclarations lorsqu'on spécifie la sous-séquence.
+!!! tip "Astuce"
+    Pour éviter d'avoir une page de sous-séquence (titre de la sous-séquence, déclarations) entre chaque itération de la boucle (habitant), il suffit de **ne pas mettre de déclarations** lorsqu'on spécifie la sous-séquence.
 
 
 ## Un exemple

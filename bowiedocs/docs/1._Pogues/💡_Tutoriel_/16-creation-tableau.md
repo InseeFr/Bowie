@@ -52,7 +52,7 @@ Il ne reste qu'à générer les variables puis à valider la question.
 
 
 !!! abstract "Pour aller plus loin"  
-    -  [Les tableaux](../../🚀_Guide/Tableaux/)
+    -  [Les tableaux](../🚀_Guide/Tableaux/index.md)
 
 
 Pour finir cette sous séquence, on va créer une question simple de type numérique pour interroger notre enquêté sur le nombre de collègues qui partagent son bureau.
