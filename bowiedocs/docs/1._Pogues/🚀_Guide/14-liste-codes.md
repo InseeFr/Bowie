@@ -137,7 +137,8 @@ Lors de la création d'une question avec réponse à choix unique ou multiple, o
 
 Il est possible de filtrer, pour des questions de type QCM (réponse booléenne uniquement) ou QCU, une liste de modalités selon une formule VTL.
 
-!!! danger "Fonctionnalité non supportée pour les [QCM avec réponses sous forme de batterie de questions](./Questions/17-reponse-choix-multiple.md)"
+!!! danger "Fonctionnalité non supportée pour les [:octicons-link-16:Réponse QCM avec réponses sous forme de batterie de questions](./Questions/17-reponse-choix-multiple.md)"
+
 
 === "Ajouter un `Filtre`"
     On renseigne le filtre dans un éditeur VTL accessible via le bouton `Ajouter un filtre`

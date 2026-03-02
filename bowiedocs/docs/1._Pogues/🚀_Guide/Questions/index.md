@@ -11,8 +11,8 @@ Pour créer une question, cliquer sur `+ Question` et remplir les champs suivant
 
 - modifier les `modes de collecte` si la question ne concerne pas tous les modes associés au questionnaire (non fonctionnel en 2024)
 - préciser le `type de question` :
-    - Réponse `simple` (texte, date, nombre, booléen ou durée) -> [:octicons-file-symlink-file-16:](13-reponse-simple.md)
-    - Réponse `à choix unique` (QCU, liste déroulante, [:octicons-file-symlink-file-16: suggester-autocomplétion](15b-suggester.md)) -> [:octicons-file-symlink-file-16:](15-reponse-choix-unique.md)
-    - `Liens deux à deux` -> [:octicons-file-symlink-file-16:](16-liens-2a2.md)
-    - Réponse `à choix multiple` (cf. batterie de questions) -> [:octicons-file-symlink-file-16:](17-reponse-choix-multiple.md)
-    - `Tableau` -> [:octicons-file-symlink-file-16:](../Tableaux/index.md)
+    - [:octicons-link-16:Réponse simple](13-reponse-simple.md) (texte, date, nombre, booléen ou durée)
+    - [:octicons-link-16:Réponse à choix unique](15-reponse-choix-unique.md) (QCU, liste déroulante, [:octicons-link-16: suggester-autocomplétion](15b-suggester.md))
+    - [:octicons-link-16:Liens deux à deux](16-liens-2a2.md)
+    - [:octicons-link-16:Réponse à choix multiple](17-reponse-choix-multiple.md) (cf. batterie de questions)
+    - [:octicons-link-16:Tableau](../Tableaux/index.md)

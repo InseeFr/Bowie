@@ -13,11 +13,13 @@ theme:
     - navigation.footer
     - navigation.indexes
     - content.code.copy
+    - navigation.instant.preview
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/InseeFr/Bowie/
 markdown_extensions:
+  - attr_list
   - admonition
   - tables
   - pymdownx.details
@@ -35,8 +37,6 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
-  
-  - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
