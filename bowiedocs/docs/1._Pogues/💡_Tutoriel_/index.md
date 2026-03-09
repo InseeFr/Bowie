@@ -18,7 +18,7 @@ L'objectif est de vous permettre de démarrer sereinement avec l'outil : pour le
 ## Présentation du questionnaire pour le tutoriel 📄
 
 ### Contexte
-Étude des **relations aux travail** auprès d'individus.
+Étude des **relations au travail** auprès d'individus.
 
 ### Structure
 Nous allons créer un questionnaire avec la structure suivante :

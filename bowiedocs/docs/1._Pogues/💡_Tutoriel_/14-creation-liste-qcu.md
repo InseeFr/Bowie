@@ -33,3 +33,7 @@ On crée une question de type "Réponse à choix unique", de type saisie "Bouton
     - _Choix de la liste de codes_ : L_SEXE
 
 Comme d'habitude, on n'oublie pas de générer les variables collectées avant de valider la question.
+
+
+## Suite
+Nous allons maintenant poursuivre avec la [création de questions à choix multiples et recherche sur liste](15-creation-qcm.md).

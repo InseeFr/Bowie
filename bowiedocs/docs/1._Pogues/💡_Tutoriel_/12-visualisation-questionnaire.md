@@ -40,4 +40,4 @@ graph TD
     - [Personnaliser un questionnaire](../🚀_Guide/Personnalisation/index.md)
 
 ## Suite
-Nous allons maintenant poursuivre la création des questions de la séquence "Quelques informations sur vous".
+Nous allons maintenant poursuivre la [création des questions de la séquence "Quelques informations sur vous"](13-elaboration-structure.md).

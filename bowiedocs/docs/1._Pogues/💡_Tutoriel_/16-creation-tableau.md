@@ -61,3 +61,6 @@ Pour finir cette sous séquence, on va créer une question simple de type numér
 ??? success "Solution"
     ![Sous-séquence travail](../../img/pogues/seq-travail-complet.png)
     
+
+## Suite
+Nous allons maintenant poursuivre la [finalisation de la structure du questionnaire](17-finalisation-structure.md).

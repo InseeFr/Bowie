@@ -54,7 +54,7 @@ Notre variable aura comme identifiant `SOMME`, et aura comme valeur l'addition d
 Jusqu'ici nous n'avions que des variables collectées dans la liste des variables tandis que la variable nouvellement créée `SOMME` à pour type _Calculée_. Le survol du bouton permet d'afficher la formule de calcul.
 
 
-## Utilisation de la variable
+## Usage dans un contrôle
 
 On peut maintenant ajouter un contrôle sur la question `ACTIVITES` pour s'assurer que la ventilation est égale à 100%. Vous pouvez pour cela vous appuyer sur ce que l'on a vu [précédemment](21-ajout-controle.md) et sur le [guide VTL](../💻_VTL/index.md)... 
 
@@ -63,3 +63,6 @@ On peut maintenant ajouter un contrôle sur la question `ACTIVITES` pour s'assur
 ??? success "Visualisation" 
     ![Visualisation contrôle](../../img/pogues/visualisation-controle-activites.png)
    
+
+## Suite
+Nous allons maintenant poursuivre avec la [personnalisation de libellés](24-personnalisation-libelle.md).

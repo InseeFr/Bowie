@@ -8,6 +8,7 @@ L'utilisation de filtres permet de déterminer l'affichage (ou non) d'une ou plu
 
 Pour cela, nous allons nous appuyer sur la fonctionnalité "Filtre" de Pogues mais aussi sur le langage VTL pour l'expression de la condition.
 
+## Création du filtre
 Pour créer un filtre, il suffit de cliquer sur le bouton "+ Filtre" dans la barre d'action. La fenêtre modale qui s'ouvre affiche les champs :
 
 - _Description_ : un libellé qui sera visible sur le questionnaire papier et remplacera le filtre dynamique des questionnaires web ou enquêteur
@@ -45,3 +46,6 @@ Le filtre que l'on vient de créer devient visible dans la vue d'ensemble du que
 
 ![Résultat du filtre](../../img/pogues/filtre-resultat.png)
 
+
+## Suite
+Nous allons maintenant poursuivre avec l'[ajout d'un contrôle de cohérence](21-ajout-controle.md).

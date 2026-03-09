@@ -24,3 +24,7 @@ On peut retourner sur la question dont l'identifiant est `APPRECIATION`, pour mo
 ??? success "Solution"
 
     ![Question avec prénom personnalisé](../../img/pogues/question-prenomlib.png)
+
+
+## Suite
+Nous allons maintenant poursuivre avec la [mise en place d'une boucle](25-mise-en-place-boucle.md).

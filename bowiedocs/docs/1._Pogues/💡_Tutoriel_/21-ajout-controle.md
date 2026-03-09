@@ -7,6 +7,8 @@ On souhaite pouvoir s'assurer d'une bonne qualité de réponse aux différentes 
 
 Ici, on va créer un contrôle affichant un message d'incitation si l'on ne donne pas son prénom.
 
+## Création du contrôle
+
 Pour cela, on va modifier la question dont l'identifiant est PRENOM (en cliquant sur _Voir le détail_).
 
 On choisit ensuite l'onglet _Contrôles_.
@@ -35,3 +37,7 @@ $PRENOM$ = "" or isnull($PRENOM$)
 On aura une configuration sensiblement similaire à :point_down:
 
 ![Configuration du contrôle](../../img/pogues/controle-configuration.png)
+
+
+## Suite
+Nous allons maintenant poursuivre avec la [création d'une infobulle](22-ajout-infobulle.md).

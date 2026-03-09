@@ -46,3 +46,6 @@ Et on sera encore plus satisfait lorsqu'on aura vu comment filtrer la question p
 
 
 
+
+## Suite
+Nous allons maintenant poursuivre avec la [création d'un tableau](16-creation-tableau.md).
