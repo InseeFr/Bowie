@@ -39,6 +39,19 @@ Pour disposer d'une page par habitants, il suffit de poser une boucle sur la sou
 !!! tip "Astuce"
     Pour éviter d'avoir une page de sous-séquence (titre de la sous-séquence, déclarations) entre chaque itération de la boucle (habitant), il suffit de **ne pas mettre de déclarations** lorsqu'on spécifie la sous-séquence.
 
+!!! example "Illustration avec un questionnaire simplifé dans Pogues"
+    ![alt text](../../../img/pogues/2a2-links-loop-example.png)
+
+    - Boucle principale `HABITANTS` posée sur la séquence `S1`
+    - Boucle liée `HABITANTS_LIENS` posée sur la sous-séquence `LIENS`
+
+!!! warning "Habitant quittant le ménage"
+    Dans le cas où on veut indiquer qu'un habitant quitte le ménage en supprimant la valeur de son prénom dans la boucle principale, on s'attend à ce que la question sur les liens qu'il a avec le reste des habitants ne soit pas posé. Pour l'affichage des liens sur une même page, ce filtrage se fait automatiquement, mais pour l'affichage des des liens page par page, **il faut ajouter une condition dans le champ `SAUF` de la boucle liée posée sur la séquence (ou sous-séquence) des liens.  
+    En reprenant l'exemple ci-dessus, il faut ajouter dans la boucle `HABITANTS_LIENS` la condition 
+    ```
+    nvl($PRENOM$, "") = ""
+    ```
+    ![alt text](../../../img/pogues/2a2-links-loop-sauf-condition.png)
 
 ## Un exemple
 
