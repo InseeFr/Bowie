@@ -3204,6 +3204,22 @@ Il est impératif de l'utiliser sans modifications.</p>
 <p class="admonition-title">Astuce</p>
 <p>Pour éviter d'avoir une page de sous-séquence (titre de la sous-séquence, déclarations) entre chaque itération de la boucle (habitant), il suffit de <strong>ne pas mettre de déclarations</strong> lorsqu'on spécifie la sous-séquence.</p>
 </div>
+<div class="admonition example">
+<p class="admonition-title">Illustration avec un questionnaire simplifé dans Pogues</p>
+<p><a class="glightbox" href="../../../../img/pogues/2a2-links-loop-example.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/2a2-links-loop-example.png" /></a></p>
+<ul>
+<li>Boucle principale <code class="highlight"><span class="n">HABITANTS</span></code> posée sur la séquence <code class="highlight"><span class="n">S1</span></code></li>
+<li>Boucle liée <code class="highlight"><span class="n">HABITANTS_LIENS</span></code> posée sur la sous-séquence <code class="highlight"><span class="n">LIENS</span></code></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Habitant quittant le ménage</p>
+<p>Dans le cas où on veut indiquer qu'un habitant quitte le ménage en supprimant la valeur de son prénom dans la boucle principale, on s'attend à ce que la question sur les liens qu'il a avec le reste des habitants ne soit pas posé. Pour l'affichage des liens sur une même page, ce filtrage se fait automatiquement, mais pour l'affichage des des liens page par page, **il faut ajouter une condition dans le champ <code class="highlight"><span class="n">SAUF</span></code> de la boucle liée posée sur la séquence (ou sous-séquence) des liens.<br />
+En reprenant l'exemple ci-dessus, il faut ajouter dans la boucle <code class="highlight"><span class="n">HABITANTS_LIENS</span></code> la condition 
+<div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+</code></pre></div>
+<a class="glightbox" href="../../../../img/pogues/2a2-links-loop-sauf-condition.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/2a2-links-loop-sauf-condition.png" /></a></p>
+</div>
 <h2 id="un-exemple">Un exemple</h2>
 <p>Prenons un exemple avec une famille de 5 personnes : </p>
 <p><a class="glightbox" href="../../../../img/pogues/famille-liens.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Famille pour les liens" src="../../../../img/pogues/famille-liens.png" /></a></p>
