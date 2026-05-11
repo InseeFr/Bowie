@@ -15,11 +15,19 @@ Il existe 3 types de réponse pour les questions QCU (question à choix unique).
 Avant de spécifier la question QCU avec une réponse de type sélection dans une liste de codes, il faut avoir créer la liste de codes.
 ![Créer un QCU réponse dans une liste de codes](../../../img/pogues/Creer_QCU_liste_codes.png)
 
-La démarche pour créer une liste de codes est détaillée dans le tutoriel, [Création d'une réponse basée sur une liste](../../💡_Tutoriel_/14-creation-liste-qcu.md). On y retrouve également les conseils pour créer la question.
+Plus de détails dans la page [Les listes de codes](../14-liste-codes.md).
 
-#### Possibilité de filtrer les modalités
+La démarche pas-à-pas pour créer une question QCU basée sur une liste de codes est détaillée dans le tutoriel, [Création d'une réponse basée sur une liste](../../💡_Tutoriel_/14-creation-liste-qcu.md).
 
-Il est possible de filtrer la liste de modalités associée à la QCU selon des formules VTL. Pour plus d'info, voir la doc [Filtrer une liste de codes](../14-liste-codes.md/#filtrer-une-liste-de-codes)
+#### Filtrer les modalités
+
+Il est possible de filtrer la liste de modalités associée à la QCU selon des formules VTL. Pour plus d'info, voir la doc [Filtrer une liste de codes](../14-liste-codes.md/#filtrer-une-liste-de-codes).
+
+#### Ajouter une demande de précision
+
+On peut laisser la possibilité à l'enquêté d'apporter un complément textuel à la réponse QCU basée sur une liste de codes lorqu'on a dans la liste une modalité "Autre".
+
+Plus de détails dans la page [Les listes de codes](../14-liste-codes.md#ajouter-un-préciser).
 
 #### Caractère obligatoire
 
@@ -35,7 +43,20 @@ Plus de détails dans la page [Suggester](15b-suggester.md).
 
 ### Variable du questionnaire
 
+Il est possible de créer une question de type QCU basée sur une **variable de portée une boucle ou un tableau dynamique** (ie, la variable est un vecteur, elle contient plusieurs valeurs) : les valeurs de la variable seront utilisées comme modalité du QCU.
 
+
+!!! example "Cas pratique"
+    Pour spécifier la question, on remplit les champs suivants dans Pogues :
+
+
+    - _Type de question_ : Réponse à choix unique
+    - _Type de réponse_ : Variable
+    - _Choisir une boucle_ : Sélectionner la portée de la variable que vous voulez utiliser comme base du QCU --> la boucle ou le tableau dynamique
+    - _Choisir une variable_ : Sélectionner la variable souhaitée
+    - _Type de saisie_ : Bouton radio ou liste déroulante
+
+Les modalités de la question sont contituées des valeurs du vecteur (par exemple les valeurs du vecteur PRENOM collectées dans une boucle, un vecteur de produits préremplis pour un tableau dynamique etc).
 
 ## Types de saisie
 
