@@ -1843,9 +1843,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#possibilite-de-filtrer-les-modalites" class="md-nav__link">
+  <a href="#filtrer-les-modalites" class="md-nav__link">
     <span class="md-ellipsis">
-      Possibilité de filtrer les modalités
+      Filtrer les modalités
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ajouter-une-demande-de-precision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ajouter une demande de précision
     </span>
   </a>
   
@@ -3109,9 +3118,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#possibilite-de-filtrer-les-modalites" class="md-nav__link">
+  <a href="#filtrer-les-modalites" class="md-nav__link">
     <span class="md-ellipsis">
-      Possibilité de filtrer les modalités
+      Filtrer les modalités
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ajouter-une-demande-de-precision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ajouter une demande de précision
     </span>
   </a>
   
@@ -3222,9 +3240,13 @@
 <h3 id="liste-de-codes">Liste de codes</h3>
 <p>Avant de spécifier la question QCU avec une réponse de type sélection dans une liste de codes, il faut avoir créer la liste de codes.
 <a class="glightbox" href="../../../../img/pogues/Creer_QCU_liste_codes.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Créer un QCU réponse dans une liste de codes" src="../../../../img/pogues/Creer_QCU_liste_codes.png" /></a></p>
-<p>La démarche pour créer une liste de codes est détaillée dans le tutoriel, <a href="../../../%F0%9F%92%A1_Tutoriel_/14-creation-liste-qcu/">Création d'une réponse basée sur une liste</a>. On y retrouve également les conseils pour créer la question.</p>
-<h4 id="possibilite-de-filtrer-les-modalites">Possibilité de filtrer les modalités</h4>
-<p>Il est possible de filtrer la liste de modalités associée à la QCU selon des formules VTL. Pour plus d'info, voir la doc <a href="../../14-liste-codes/#filtrer-une-liste-de-codes">Filtrer une liste de codes</a></p>
+<p>Plus de détails dans la page <a href="../../14-liste-codes/">Les listes de codes</a>.</p>
+<p>La démarche pas-à-pas pour créer une question QCU basée sur une liste de codes est détaillée dans le tutoriel, <a href="../../../%F0%9F%92%A1_Tutoriel_/14-creation-liste-qcu/">Création d'une réponse basée sur une liste</a>.</p>
+<h4 id="filtrer-les-modalites">Filtrer les modalités</h4>
+<p>Il est possible de filtrer la liste de modalités associée à la QCU selon des formules VTL. Pour plus d'info, voir la doc <a href="../../14-liste-codes/#filtrer-une-liste-de-codes">Filtrer une liste de codes</a>.</p>
+<h4 id="ajouter-une-demande-de-precision">Ajouter une demande de précision</h4>
+<p>On peut laisser la possibilité à l'enquêté d'apporter un complément textuel à la réponse QCU basée sur une liste de codes lorqu'on a dans la liste une modalité "Autre".</p>
+<p>Plus de détails dans la page <a href="../../14-liste-codes/#ajouter-un-préciser">Les listes de codes</a>.</p>
 <h4 id="caractere-obligatoire">Caractère obligatoire</h4>
 <p>Parmi les questions de type QCU, seules les questions QCU de type liste de codes permettent d'ajouter un caractère obligatoire à la question.</p>
 <h3 id="recherche-sur-liste-suggester">Recherche sur liste (Suggester)</h3>
@@ -3232,6 +3254,19 @@
 <p>Le type de réponse est imposé : c'est une liste déroulante dans laquelle l'enquêté sélectionne la modalité correspondant à sa situation.</p>
 <p>Plus de détails dans la page <a href="../15b-suggester/">Suggester</a>.</p>
 <h3 id="variable-du-questionnaire">Variable du questionnaire</h3>
+<p>Il est possible de créer une question de type QCU basée sur une <strong>variable de portée une boucle ou un tableau dynamique</strong> (ie, la variable est un vecteur, elle contient plusieurs valeurs) : les valeurs de la variable seront utilisées comme modalité du QCU.</p>
+<div class="admonition example">
+<p class="admonition-title">Cas pratique</p>
+<p>Pour spécifier la question, on remplit les champs suivants dans Pogues :</p>
+<ul>
+<li><em>Type de question</em> : Réponse à choix unique</li>
+<li><em>Type de réponse</em> : Variable</li>
+<li><em>Choisir une boucle</em> : Sélectionner la portée de la variable que vous voulez utiliser comme base du QCU --&gt; la boucle ou le tableau dynamique</li>
+<li><em>Choisir une variable</em> : Sélectionner la variable souhaitée</li>
+<li><em>Type de saisie</em> : Bouton radio ou liste déroulante</li>
+</ul>
+</div>
+<p>Les modalités de la question sont contituées des valeurs du vecteur (par exemple les valeurs du vecteur PRENOM collectées dans une boucle, un vecteur de produits préremplis pour un tableau dynamique etc).</p>
 <h2 id="types-de-saisie">Types de saisie</h2>
 <h3 id="bouton-radio">Bouton-radio</h3>
 <p>Ergonomie web standard pour ce type de réponse, on ne peut pas décocher la réponse à la question (on peut changer la réponse, mais on ne peut pas supprimer une réponse)). Exemple classique : Oui/Non, tranche de taille
