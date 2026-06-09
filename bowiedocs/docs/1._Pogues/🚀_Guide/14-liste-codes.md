@@ -1,26 +1,28 @@
 # Les listes de codes
 
 ## Les listes de codes
-On accède aux différentes listes de codes via le bouton sur la gauche
-![alt text](../../img/pogues/list-code-menu.png)
+On accède aux différentes listes de codes via le menu `Listes de codes` sur la gauche.
 
-On arrive ensuite sur la page de gestion des listes de codes du questionnaire
+![Menu des listes de code](../../img/pogues/list-code-menu.png)
+
+On arrive ensuite sur la page de gestion des listes de codes du questionnaire.
+
 ![list code home](../../img/pogues/list-code-home.png)
 !!! abstract "Légende"
     1. `Identifiant` du questionnaire
     1. `Bouton de création` d'une nouvelle liste de codes
     1. `Nom` d'une liste de codes
     1. `Liste de codes`
-        1. Colonne associée au `Code` des différentes modalités
-        1. Colonne associée au `Libellé` des différentes modalités
+        1. `Code` des différentes modalités
+        1. `Libellé` des différentes modalités
         1. Une `Modalité` avec ses valeurs associées (`Code` et `Libellé`)
-    1. `Nombre de question` utilisant cette liste de codes
+    1. `Nombre de questions` utilisant cette liste de codes
         
-        !!! tip "Un clique ou un survol permet d'afficher la liste des questions."
+        !!! tip "Un clic ou un survol de la souris permet d'afficher la liste des questions qui utilisent la liste."
     1. Bouton pour `Modifier`, `Dupliquer` ou `Supprimer` une liste de codes.
         
-        !!! warning "La suppression est grisée car on na peut supprimer une liste de codes utilisée par des questions."
-    1. Flèche permettant de visualiser le `détail` d'une liste de codes en ouvrant la fenêtre (possibilité à l'inverse de la fermée quand cette dernière est déjà ouverte).
+        !!! warning "Le bouton de suppression est grisé quand on ne peut supprimer une liste de codes car utilisée par des questions."
+    1. Flèche permettant de déplier / replier le `détail` d'une liste de codes.
 
 ## Gérer les listes de codes
 
@@ -28,26 +30,30 @@ On arrive ensuite sur la page de gestion des listes de codes du questionnaire
 
 ### Créer une nouvelle liste de codes
 
-Après avoir appuyé sur le bouton de création d'une nouvelle liste de codes, la page suivante s'affiche
+Après avoir appuyé sur le bouton de création d'une nouvelle liste de codes, la page suivante s'affiche : 
 
 ![list code creation](../../img/pogues/list-code-creation.png)
+
 !!! abstract "Légende"
     1. `Nom` de la liste de codes
+    1. Bouton permettant d'importer un fichier csv contenant une liste de codes (complète ou partielle, voir [Importer une liste de codes au format csv](#importer-une-liste-de-codes-au-format-csv))
     1. Une `Modalité`
         - `Code` de la modalité avec un champ texte
         - `Libellé` de la modalité avec un éditeur `VTL`
         - `Ajouter` une `Modalité` **enfant** (voir [gestion des niveaux](#gestion-des-niveaux))
         - `Supprimer` une `Modalité`
     1. `Ajouter` une nouvelle `Modalité`
-    1. `Créer` (ou `Annuler`) la liste de codes 
+    1. `Annuler` la création de la liste de codes 
+    1. `Créer` la liste de codes
 
-!!! warning "Champs requis"
-    Pour créer une liste de codes, il faut au moins
-    
+
+#### Saisir une liste de codes
+Pour créer une liste de codes, il faut au moins : 
+  
     - Un nom
     - Une modalité avec un code et un libellé (la formule VTL associée doit être valide)  
 
-#### Gestion des niveaux
+##### Gestion des niveaux
 
 Il est possible d'avoir plusieurs niveaux de modalités dans une même liste de codes
 
@@ -84,6 +90,25 @@ Il est possible d'avoir plusieurs niveaux de modalités dans une même liste de 
 ??? exemple "Exemple complet"
     ![alt text](../../img/pogues/list-code-level-complete-exemple.png)
 
+
+
+#### Importer une liste de codes au format csv
+
+Il est possible d'importer une liste de modalités (code + libellé) dans Pogues. Cette fonctionnalité est particulièrement intéressante lorsque la liste de codes est longue (évite la saisie dans Pogues).
+
+![Import liste de codes](../../img/pogues/list-code-import.png)
+
+!!! abstract "Légende"
+    1. `Nom` de la liste de codes
+    1. Rappel des consignes sur le format du fichier csv attendu
+    1. Le bouton `Sélectionner un fichier CSV` permet d'ouvrir l'exporateur Windows pour choisir un fichier. Une visualisation du fichier csv est disponible juste après le télechargement du fichier. Il est possible de recommencer la sélection du fichier csv plusieurs fois sur la même page. Chaque téléchargement écrase le précédent.
+    1. Possibilité de saisir manuellement en complément d'autres modalités : l'import du fichier csv complète la saisie interactive dans Pogues, on peut combiner les deux modes d'ajout de codes.
+    1. `Ajouter` une nouvelle `Modalité`
+    1. `Annuler` / `Créer` la liste de codes
+
+Quand on importe des doublons (première colonne avec des valeurs en double) dans le fichier csv ou en complément avec la saisie manuelle, c'est la valeur la plus récente (la dernière valeur lue du fichier) qui est prise en compte. 
+
+!!! danger "La gestion des niveaux n'est possible que pour les modalités créées par saisie dans Pogues, pas par import de fichier csv."
 
 ### Éditer une nouvelle liste de codes
 
