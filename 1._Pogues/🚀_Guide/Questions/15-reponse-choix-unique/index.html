@@ -1890,6 +1890,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Variable du questionnaire">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtrer-les-modalites_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtrer les modalités
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -3165,6 +3180,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Variable du questionnaire">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtrer-les-modalites_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtrer les modalités
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -3267,6 +3297,48 @@
 </ul>
 </div>
 <p>Les modalités de la question sont contituées des valeurs du vecteur (par exemple les valeurs du vecteur PRENOM collectées dans une boucle, un vecteur de produits préremplis pour un tableau dynamique etc).</p>
+<h4 id="filtrer-les-modalites_1">Filtrer les modalités</h4>
+<div class="admonition danger">
+<p class="admonition-title">Fonctionnalité non supportée pour les <a href="./Tableaux/index.md"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"/></svg></span>Réponses QCU dans un tableau</a>, uniquement dans une question simple !</p>
+</div>
+<p>Il est possible de filtrer les modalités d'un QCU basé sur une variable du questionnaire (collectée, externe ou calculée) en remplissant le champ <code class="highlight"><span class="n">Filtre</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">modalités</span></code> avec une formule VTL. </p>
+<p>La question QCU peut être positionnée au sein d'une boucle ou en dehors.</p>
+<p>La formule VTL s'applique en exploitant des variables de portée questionnaire ou de même portée que la variable décrivant les modalités du QCU.</p>
+<p>Par exemple, je peux filtrer la variable <code class="highlight"><span class="n">PRENOM</span></code> issue d'une boucle <code class="highlight"><span class="n">BOUCLE_PRENOM</span></code> utilisant dans ma formule VTL toute variable de portée <code class="highlight"><span class="n">BOUCLE_PRENOM</span></code> qu'elle soit collectée, externe ou calculée.</p>
+<p><a class="glightbox" href="../../../../img/pogues/QCU-variableM-filtre.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Filtrer un QCU variable issue d'une boucle ménage" src="../../../../img/pogues/QCU-variableM-filtre.png" /></a></p>
+<p>La même logique d'affichage que pour le filtre d'une question est mise en oeuvre :</p>
+<table>
+<thead>
+<tr>
+<th>Validité de la Formule VTL</th>
+<th>Condition d'affichage</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pas de formule</td>
+<td>/</td>
+<td>la modalité est affichée</td>
+</tr>
+<tr>
+<td>❌</td>
+<td><code class="highlight"><span class="n">ERROR</span></code></td>
+<td>la modalité est affichée</td>
+</tr>
+<tr>
+<td>✅</td>
+<td><code class="highlight"><span class="kc">TRUE</span></code></td>
+<td>la modalité est affichée</td>
+</tr>
+<tr>
+<td>✅</td>
+<td><code class="highlight"><span class="kc">FALSE</span></code></td>
+<td>la modalité n'est pas affichée</td>
+</tr>
+</tbody>
+</table>
+<p>Cette fonctionnalité s'applique également aux variables de portée un tableau dynamique : je peux créé une question simple de type réponse à choix unique avec des modalités basées sur une variable de portée un tableau dynamique (variable collectée, calculée ou externe) et filtrer les modalités pour ne proposer que celle ayant certaines caractéristiques que je peux décrire avec des variables de portée questionnaire ou le même tableau dynamique que la variable de base ou des valeurs fixes.</p>
 <h2 id="types-de-saisie">Types de saisie</h2>
 <h3 id="bouton-radio">Bouton-radio</h3>
 <p>Ergonomie web standard pour ce type de réponse, on ne peut pas décocher la réponse à la question (on peut changer la réponse, mais on ne peut pas supprimer une réponse)). Exemple classique : Oui/Non, tranche de taille
