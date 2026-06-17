@@ -60,7 +60,7 @@ Les modalités de la question sont contituées des valeurs du vecteur (par exemp
 
 #### Filtrer les modalités
 
-!!! danger "Fonctionnalité non supportée pour les [:octicons-link-16:Réponses QCU dans un tableau](./Tableaux/index.md), uniquement dans une question simple !"
+!!! danger "Fonctionnalité non supportée pour les [:octicons-link-16:Réponses QCU dans un tableau](../../🚀_Guide/Tableaux/index.md), uniquement dans une question simple !"
 
 
 Il est possible de filtrer les modalités d'un QCU basé sur une variable du questionnaire (collectée, externe ou calculée) en remplissant le champ `Filtre de modalités` avec une formule VTL. 
