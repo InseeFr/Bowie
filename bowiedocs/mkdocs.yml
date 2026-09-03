@@ -3,12 +3,28 @@ site_url: https://inseefr.github.io/Bowie/
 theme:
   name: material
   language: fr
+  favicon : assets/bowie-zap-circle.png
   icon:
     logo: material/lightning-bolt-circle
+    annotation: material/help-circle
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
   palette:
-    scheme: default
-    primary: blue grey
-    accent: deep orange
+    # Light Mode
+    - scheme: default
+      toggle:
+          icon: material/theme-light-dark
+          name: Light mode
+      primary: blue grey
+      accent: deep orange
+
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/theme-light-dark
+        name: Dark mode
+      primary: deep purple
+      accent: cyan
   features:
     - navigation.footer
     - navigation.indexes

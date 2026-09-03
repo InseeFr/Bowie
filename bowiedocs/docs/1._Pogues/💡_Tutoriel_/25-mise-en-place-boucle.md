@@ -63,6 +63,6 @@ Il est bien évidemment possible de personnaliser encore plus notre boucle, par 
 
 ## Corrigé
 
-Vous pouvez comparer votre création avec le [corrigé de l'exercice](https://conception-questionnaires.demo.insee.io/questionnaire/ml82b1lb).
+Vous pouvez comparer votre création avec le [corrigé de l'exercice](https://conception-questionnaires-demo.insee.fr/questionnaire/ml82b1lb).
 
 Maintenant qu'on vous a donné les bases, on vous laisse découvrir toutes les possibilités de l'outil !
