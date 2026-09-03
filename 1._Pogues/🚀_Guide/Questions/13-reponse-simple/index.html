@@ -214,7 +214,7 @@
         
   
   <span class="md-ellipsis">
-    Un atelier de conception d'enquêtes
+    atelier de conception d'enquêtes
   </span>
   
 
@@ -752,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%F0%9F%92%BB_VTL/fonctions-vtl/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%BB_VTL/1-fonctions-vtl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -773,11 +773,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%F0%9F%92%BB_VTL/migration-xpath-vers-vtl/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%BB_VTL/2-guide-vtl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    XPath et VTL, les différences
+    Concepts VTL dans Pogues
   </span>
   
 
@@ -794,11 +794,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%F0%9F%92%BB_VTL/vtl/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%BB_VTL/3-migration-xpath-vers-vtl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Guide VTL Pogues
+    XPath et VTL, les différences
   </span>
   
 
@@ -3118,7 +3118,7 @@ Ex de condition d'affichage d'un contrôle pour indiquer qu'un champ texte est v
 <ul>
 <li>A l'initialisation du questionnaire, tout champ date vaut <code class="highlight"><span class="n">null</span></code></li>
 <li>Quand on saisit une valeur, ex pour juste une année <code class="highlight"><span class="m">2025</span></code>, puis qu'on efface cette valeur du champ, alors le champ date vaut <code class="highlight"><span class="n">null</span></code> comme au début.VTL</li>
-<li>Pour gérer un champ Date vide il suffit d'utiliser <a href="../../../%F0%9F%92%BB_VTL/fonctions-vtl/#isnull">isnull()</a>
+<li>Pour gérer un champ Date vide il suffit d'utiliser <a href="../../../%F0%9F%92%BB_VTL/1-fonctions-vtl/#isnull">isnull()</a>
     <div class="highlight"><pre><span></span><code><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">DATE</span><span class="o">$</span><span class="p">)</span>
 </code></pre></div></li>
 </ul>
@@ -3134,7 +3134,7 @@ Ex de condition d'affichage d'un contrôle pour indiquer qu'un champ texte est v
 <a class="glightbox" href="../../../../img/pogues/date_input.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/date_input.png" /></a></p>
 <p>alors la variabel <code class="highlight"><span class="n">ANNEE_NAIS</span></code> aura la valeur <code class="highlight"><span class="s">&quot;2025-02-01&quot;</span></code> est sera un texte</p>
 </details>
-<p>C'est pourquoi il est nécessaire de transtyper en utilisant la fonction <a href="../../../%F0%9F%92%BB_VTL/fonctions-vtl/#cast">cast()</a> ces variables en <code class="highlight"><span class="n">date</span></code> pour les comparer. Voir <a href="../../../%F0%9F%92%BB_VTL/fonctions-vtl/#__tabbed_5_3">exemple d'utilisation</a></p>
+<p>C'est pourquoi il est nécessaire de transtyper en utilisant la fonction <a href="../../../%F0%9F%92%BB_VTL/1-fonctions-vtl/#cast">cast()</a> ces variables en <code class="highlight"><span class="n">date</span></code> pour les comparer. Voir <a href="../../../%F0%9F%92%BB_VTL/1-fonctions-vtl/#__tabbed_5_3">exemple d'utilisation</a></p>
 </li>
 <li>
 <p>Dans cette même logique, cela veut dire que l'on peut directement afficher une variable de type date dans un libellé dans utiliser</p>
@@ -3166,7 +3166,7 @@ Ex de condition d'affichage d'un contrôle pour indiquer qu'un champ texte est v
 <ul>
 <li>A l'initialisation du questionnaire, tout champ nombre vaut <code class="highlight"><span class="n">null</span></code></li>
 <li>Quand on saisie une valeur, ex <code class="highlight"><span class="m">86</span></code>, puis qu'on efface cette valeur du champ, alors le champ nombre vaut <code class="highlight"><span class="n">null</span></code> comme au début.</li>
-<li>Pour gérer un champ Nombre vide il suffit d'utiliser <a href="../../../%F0%9F%92%BB_VTL/fonctions-vtl/#isnull">isnull()</a>
+<li>Pour gérer un champ Nombre vide il suffit d'utiliser <a href="../../../%F0%9F%92%BB_VTL/1-fonctions-vtl/#isnull">isnull()</a>
     <div class="highlight"><pre><span></span><code><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">NOMBRE</span><span class="o">$</span><span class="p">)</span>
 </code></pre></div></li>
 </ul>
@@ -3200,7 +3200,7 @@ Ex de condition d'affichage d'un contrôle pour indiquer qu'une case de type boo
 <ul>
 <li>A l'initialisation du questionnaire, tout champ durée vaut <code class="highlight"><span class="n">null</span></code>.</li>
 <li>Quand on saisie une valeur, ex <code class="highlight"><span class="m">2025</span></code> et <code class="highlight"><span class="m">12</span></code> pour année/mois, puis qu'on efface ces deux valeurs des champs, alors le champ durée vaut <code class="highlight"><span class="n">null</span></code> comme au début.</li>
-<li>Pour gérer un champ Durée vide il suffit d'utiliser <a href="../../../%F0%9F%92%BB_VTL/fonctions-vtl/#isnull">isnull()</a>
+<li>Pour gérer un champ Durée vide il suffit d'utiliser <a href="../../../%F0%9F%92%BB_VTL/1-fonctions-vtl/#isnull">isnull()</a>
     <div class="highlight"><pre><span></span><code><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">DUREE</span><span class="o">$</span><span class="p">)</span>
 </code></pre></div></li>
 </ul>

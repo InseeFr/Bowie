@@ -8,10 +8,10 @@
       
       
       
-        <link rel="canonical" href="https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%92%BB_VTL/vtl/">
+        <link rel="canonical" href="https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%92%BB_VTL/3-migration-xpath-vers-vtl/">
       
       
-        <link rel="prev" href="../migration-xpath-vers-vtl/">
+        <link rel="prev" href="../2-guide-vtl/">
       
       
         <link rel="next" href="../../%F0%9F%93%9D_Cas_pratiques/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Guide VTL Pogues - Atelier de Conception d'Enquêtes (Bowie)</title>
+        <title>XPath et VTL, les différences - Atelier de Conception d'Enquêtes (Bowie)</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#guide-vtl-pogues" class="md-skip">
+        <a href="#xpath-et-vtl-les-differences" class="md-skip">
           Aller au contenu
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Guide VTL Pogues
+              XPath et VTL, les différences
             
           </span>
         </div>
@@ -214,7 +214,7 @@
         
   
   <span class="md-ellipsis">
-    Un atelier de conception d'enquêtes
+    atelier de conception d'enquêtes
   </span>
   
 
@@ -754,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fonctions-vtl/" class="md-nav__link">
+      <a href="../1-fonctions-vtl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -775,11 +775,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../migration-xpath-vers-vtl/" class="md-nav__link">
+      <a href="../2-guide-vtl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    XPath et VTL, les différences
+    Concepts VTL dans Pogues
   </span>
   
 
@@ -809,7 +809,7 @@
           
   
   <span class="md-ellipsis">
-    Guide VTL Pogues
+    XPath et VTL, les différences
   </span>
   
 
@@ -820,7 +820,7 @@
         
   
   <span class="md-ellipsis">
-    Guide VTL Pogues
+    XPath et VTL, les différences
   </span>
   
 
@@ -842,64 +842,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vtl" class="md-nav__link">
+  <a href="#changements-au-niveau-du-langage" class="md-nav__link">
     <span class="md-ellipsis">
-      VTL
+      Changements au niveau du langage
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utiliser-vtl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Utiliser VTL
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fonctionnalites-de-lediteur" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fonctionnalités de l’éditeur
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bases-de-la-syntaxe" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bases de la syntaxe
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#libelles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Libellés
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Libellés">
+    <nav class="md-nav" aria-label="Changements au niveau du langage">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#creation-dun-lien" class="md-nav__link">
+  <a href="#quelques-operateurs-identiques" class="md-nav__link">
     <span class="md-ellipsis">
-      Création d'un lien
+      Quelques opérateurs identiques
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#infobulles" class="md-nav__link">
+  <a href="#quelques-operateurs-differents" class="md-nav__link">
     <span class="md-ellipsis">
-      Infobulles
+      Quelques opérateurs différents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilisation-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilisation de texte
     </span>
   </a>
   
@@ -911,173 +884,104 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#controles" class="md-nav__link">
+  <a href="#changements-dus-au-format-des-variables-passage-xforms-lunatic" class="md-nav__link">
     <span class="md-ellipsis">
-      Contrôles
+      Changements dûs au format des variables (passage XForms -&gt; Lunatic)
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Changements dûs au format des variables (passage XForms -> Lunatic)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nature-des-modalites-de-reponse-aux-qcm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nature des modalités de réponse aux QCM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprendre-et-gerer-le-vide-et-la-nullite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprendre et gérer le vide et la nullité
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comprendre et gérer le vide et la nullité">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generalites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Généralités
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sommer-des-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sommer des variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tester-la-nullitele-vide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tester la nullité/le vide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#personnaliser-un-libelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personnaliser un libellé
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controles-et-variables-calculees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôles et variables calculées
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controles-dans-les-qcm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôles dans les QCM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#variables-calculees" class="md-nav__link">
+  <a href="#et-si-le-questionnaire-ne-peut-pas-etre-visualise-ou-se-visualise-mal" class="md-nav__link">
     <span class="md-ellipsis">
-      Variables calculées
+      Et si le questionnaire ne peut pas être visualisé ou se visualise mal ?
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#filtres" class="md-nav__link">
-    <span class="md-ellipsis">
-      Filtres
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fonctions-et-operateurs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fonctions et opérateurs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Fonctions et opérateurs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#logique" class="md-nav__link">
-    <span class="md-ellipsis">
-      Logique
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chaines-de-caracteres" class="md-nav__link">
-    <span class="md-ellipsis">
-      Chaînes de caractères
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Chaînes de caractères">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#remplacer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remplacer
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cookbook" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cookbook
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Cookbook">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#duree" class="md-nav__link">
-    <span class="md-ellipsis">
-      Durée
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Durée">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#calcul-de-duree" class="md-nav__link">
-    <span class="md-ellipsis">
-      Calcul de durée
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#controler-un-depassement-de-borne" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contrôler un dépassement de borne
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#liste-a-choix-multiples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Liste à choix multiples
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Liste à choix multiples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#compter-le-nombre-de-choix" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compter le nombre de choix
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#boucles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Boucles
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Boucles">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#premiet-et-dernier-elements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Premiet et dernier éléments
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3219,64 +3123,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vtl" class="md-nav__link">
+  <a href="#changements-au-niveau-du-langage" class="md-nav__link">
     <span class="md-ellipsis">
-      VTL
+      Changements au niveau du langage
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utiliser-vtl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Utiliser VTL
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fonctionnalites-de-lediteur" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fonctionnalités de l’éditeur
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bases-de-la-syntaxe" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bases de la syntaxe
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#libelles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Libellés
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Libellés">
+    <nav class="md-nav" aria-label="Changements au niveau du langage">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#creation-dun-lien" class="md-nav__link">
+  <a href="#quelques-operateurs-identiques" class="md-nav__link">
     <span class="md-ellipsis">
-      Création d'un lien
+      Quelques opérateurs identiques
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#infobulles" class="md-nav__link">
+  <a href="#quelques-operateurs-differents" class="md-nav__link">
     <span class="md-ellipsis">
-      Infobulles
+      Quelques opérateurs différents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilisation-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilisation de texte
     </span>
   </a>
   
@@ -3288,173 +3165,104 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#controles" class="md-nav__link">
+  <a href="#changements-dus-au-format-des-variables-passage-xforms-lunatic" class="md-nav__link">
     <span class="md-ellipsis">
-      Contrôles
+      Changements dûs au format des variables (passage XForms -&gt; Lunatic)
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Changements dûs au format des variables (passage XForms -> Lunatic)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nature-des-modalites-de-reponse-aux-qcm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nature des modalités de réponse aux QCM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprendre-et-gerer-le-vide-et-la-nullite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprendre et gérer le vide et la nullité
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comprendre et gérer le vide et la nullité">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generalites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Généralités
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sommer-des-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sommer des variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tester-la-nullitele-vide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tester la nullité/le vide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#personnaliser-un-libelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personnaliser un libellé
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controles-et-variables-calculees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôles et variables calculées
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controles-dans-les-qcm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôles dans les QCM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#variables-calculees" class="md-nav__link">
+  <a href="#et-si-le-questionnaire-ne-peut-pas-etre-visualise-ou-se-visualise-mal" class="md-nav__link">
     <span class="md-ellipsis">
-      Variables calculées
+      Et si le questionnaire ne peut pas être visualisé ou se visualise mal ?
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#filtres" class="md-nav__link">
-    <span class="md-ellipsis">
-      Filtres
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fonctions-et-operateurs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fonctions et opérateurs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Fonctions et opérateurs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#logique" class="md-nav__link">
-    <span class="md-ellipsis">
-      Logique
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chaines-de-caracteres" class="md-nav__link">
-    <span class="md-ellipsis">
-      Chaînes de caractères
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Chaînes de caractères">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#remplacer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remplacer
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cookbook" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cookbook
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Cookbook">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#duree" class="md-nav__link">
-    <span class="md-ellipsis">
-      Durée
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Durée">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#calcul-de-duree" class="md-nav__link">
-    <span class="md-ellipsis">
-      Calcul de durée
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#controler-un-depassement-de-borne" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contrôler un dépassement de borne
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#liste-a-choix-multiples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Liste à choix multiples
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Liste à choix multiples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#compter-le-nombre-de-choix" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compter le nombre de choix
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#boucles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Boucles
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Boucles">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#premiet-et-dernier-elements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Premiet et dernier éléments
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3473,193 +3281,205 @@
                   
 
 
-<h1 id="guide-vtl-pogues">Guide VTL Pogues</h1>
-<p>Ce document guide l’utilisateur de Pogues dans son usage du langage VTL.</p>
-<h2 id="vtl">VTL</h2>
-<p><a href="https://sdmx.org/?page_id=5096">VTL</a> (Validation and Transformation Language) est un langage de programmation né dans le giron du standard de description de données agrégées SDMX. Ce langage est adopté ou en cours d’adoption par les mêmes utilisateurs que SDMX, essentiellement des banques centrales et des instituts nationaux de statistiques.</p>
-<p>Bien que conçu initialement pour le traitement de données agrégées (eg des tableaux ou cubes de données), le langage est suffisamment souple pour qu’on puisse l’utiliser pour exprimer des contrôles, comme dans le cas des contrôles mis en oeuvre dans le cadre d’un questionnement.</p>
-<p>On a donc choisi ce langage comme expression des contrôles et du dynamisme dans les questionnaires conçus dans Pogues dont la cible est les nouveaux outils de collecte développés dans le cadre du programme Metallica.</p>
-<p>Les éléments les plus importants à retenir de l’usage de VTL dans Pogues :</p>
-<ul>
-<li>l’écriture se fait via un éditeur de code VTL,</li>
-<li>les références aux variables doivent être encadrées par des <code class="highlight"><span class="o">$</span></code></li>
-<li>il est dans le plus souvent nécessaire de gérer le cas où la variable n’est pas encore ou plus renseignée - sa valeur est nulle : <code class="highlight"><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;valeur si nulle&quot;</span><span class="p">)</span></code>,</li>
-<li>VTL fournit un certain nombre de fonctions utilitaires - comme <code class="highlight"><span class="n">cast</span></code>et<code class="highlight"><span class="n">nvl</span></code> - on répertorie les plus utiles dans ce document.</li>
-</ul>
-<h2 id="utiliser-vtl">Utiliser VTL</h2>
-<p>VTL est utilisé dès que l’on souhaite :</p>
-<ul>
-<li>créer un libellé personnalisé</li>
-<li>définir un contrôle</li>
-<li>créer une variable calculée</li>
-<li>définir la condition d’un filtre</li>
-</ul>
-<p>Les champs correspondants dans Pogues proposent dans la plupart des cas un <strong>éditeur VTL</strong> :</p>
-<p><a class="glightbox" href="../../../img/vtl/code-list-editor.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Editeur VTL" src="../../../img/vtl/code-list-editor.png" title="Éditeur VTL" /></a></p>
-<h2 id="fonctionnalites-de-lediteur">Fonctionnalités de l’éditeur</h2>
-<p>L’éditeur fournit :</p>
-<ul>
-<li>un soulignement syntaxique</li>
-<li>une autocomplétion des fonctions et variables</li>
-<li>une gestion des erreurs de syntaxe</li>
-</ul>
-<h2 id="bases-de-la-syntaxe">Bases de la syntaxe</h2>
-<p>Une chaîne de caractères s’écrit en encadrant du texte par deux double quote ("), par exemple :</p>
-<div class="highlight"><pre><span></span><code><span class="s">&quot;Voici un texte.&quot;</span>
-</code></pre></div>
-<p>Un entier s’écrira simplement :</p>
-<div class="highlight"><pre><span></span><code><span class="m">42</span>
-</code></pre></div>
-<p>Un chiffre avec décimales :</p>
-<div class="highlight"><pre><span></span><code><span class="m">3.14159</span>
-</code></pre></div>
-<h2 id="libelles">Libellés</h2>
-<p>Voici un exemple de syntaxe pour un libellé personnalisé :</p>
-<p><a class="glightbox" href="../../../img/vtl/vtl-in-pogues-custom-label.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Libellé personnalisé" src="../../../img/vtl/vtl-in-pogues-custom-label.png" title="Libellé personnalisé" /></a></p>
-<p>On utilise ici l’opérateur VTL <code class="highlight"><span class="o">||</span></code> qui permet de concaténer des chaînes de caractères, ou une chaîne de caractères et une variable (ici <code class="highlight"><span class="n">NOM</span></code>).</p>
-<div class="admonition warning">
-<p class="admonition-title">Attention!</p>
-<p>Pour des raisons d’implémentation historique, il est encore nécessaire d’encadrer les noms de variables par <code class="highlight"><span class="o">$</span></code>. Ainsi, <strong>on pourra rechercher la variable</strong> <code class="highlight"><span class="n">NOM</span></code> <strong>en la tapant telle quelle dans l’éditeur</strong>, puis on ajoutera <code class="highlight"><span class="o">$</span></code> en préfixe et suffixe, pour obtenir <code class="highlight"><span class="o">$</span><span class="n">NOM</span><span class="o">$</span></code>.</p>
+<h1 id="xpath-et-vtl-les-differences">XPath et VTL, les différences</h1>
+<p>Ce document est un résumé permettant de traduire rapidement quelques fonctions ou syntaxes fréquemment utilisées dans les questionnaires entreprises saisis dans Pogues.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pour (re)découvrir de façon plus approfondie et détaillée le langage VTL, <a href="../2-guide-vtl/">le guide VTL de référence est ici</a>.</p>
 </div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Dans l’exemple précédent, on ne gère pas le cas où la variable n’a pas été remplie. Pour anticiper ce cas, on peut utiliser la fonction VTL <code class="highlight"><span class="n">nvl</span></code>, le libellé personnalisé devient ainsi :</p>
-<p><a class="glightbox" href="../../../img/vtl/vtl-in-pogues-custom-label-nvl.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Fonction nvl" src="../../../img/vtl/vtl-in-pogues-custom-label-nvl.png" title="Fonction nvl" /></a><em>Libellé personnalisé avec gestion de la nullité</em></p>
-<p>Plus d’infos sur l’usage de <code class="highlight"><span class="n">nvl</span></code> plus bas.</p>
-</div>
-<p>On pourra mobiliser dans un libellé personnalisé des variables collectées, calculées ou externes.</p>
-<h3 id="creation-dun-lien">Création d'un lien</h3>
-<p>Pour créer un lien hypertexte, on s'appuie sur la syntaxe Markdown :</p>
-<div class="highlight"><pre><span></span><code><span class="s">&quot;Voici un [lien](http://monlien.fr).&quot;</span>
-</code></pre></div>
-<h3 id="infobulles">Infobulles</h3>
-<p>La syntaxe pour la création d’un infobulle est la suivante :</p>
-<div class="highlight"><pre><span></span><code><span class="n">Mon</span><span class="w"> </span><span class="n">libellé</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">question</span><span class="w"> </span><span class="n">avec</span><span class="w"> </span><span class="p">[</span><span class="n">une</span><span class="w"> </span><span class="n">infobulle</span><span class="p">](</span><span class="n">.</span><span class="w"> </span><span class="s">&quot;dont voici le contenu&quot;</span><span class="p">)</span><span class="n">.</span>
-</code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Attention!</p>
-<p>Il faut bien respecter la syntaxe pour le contenu de l’infobulle : un <code class="highlight"><span class="n">.</span></code> avant le texte entouré de guillemets <code class="highlight"><span class="s">&quot;</span></code>.</p>
-</div>
-<h2 id="controles">Contrôles</h2>
-<p>Un exemple de contrôle sur une valeur numérique :</p>
-<p><a class="glightbox" href="../../../img/vtl/vtl-in-pogues-simple-control.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Exemple de contrôle" src="../../../img/vtl/vtl-in-pogues-simple-control.png" title="Exemple de contrôle" /></a><em>Libellé personnalisé avec gestion de la nullité</em></p>
-<h2 id="variables-calculees">Variables calculées</h2>
-<p>Pogues permet de créer des variables calculées à partir de variables collectées. Par exemple, pour sommer les revenus de l’enquêté et de son conjoint on écrira :</p>
-<p><a class="glightbox" href="../../../img/vtl/vtl-in-pogues-computed-variable-earnings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variable calculée pour le revenu" src="../../../img/vtl/vtl-in-pogues-computed-variable-earnings.png" /></a></p>
-<p>L'expression VTL étant :</p>
-<div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">REVENUS</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">REVENUS_CONJOINT</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="filtres">Filtres</h2>
-<p>Voici un exemple de filtre simple exprimé en VTL :</p>
-<p><a class="glightbox" href="../../../img/vtl/vtl-in-pogues-simple-filter.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Filtre simple" src="../../../img/vtl/vtl-in-pogues-simple-filter.png" title="Filtre simple" /></a><em>Un filtre simple</em></p>
-<p><span class="label label-rounded label-primary">À noter</span> À ce jour, le champ “Condition d’affichage” du filtre n’utilise pas l’éditeur VTL.</p>
-<p>Toutes formes d’expression booléenne est valide :</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Possible</span>
-<span class="o">$</span><span class="n">MA_VARIABLE_CHAINE</span><span class="o">$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;a value&quot;</span>
-
-<span class="c1"># Ou</span>
-<span class="o">$</span><span class="n">MA_VARIABLE_NUMERIQUE</span><span class="o">$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">42</span>
-
-<span class="c1"># Plus direct</span>
-<span class="o">$</span><span class="n">MA_VARIABLE_BOOLEENNE</span><span class="o">$</span>
-</code></pre></div>
-<p>Un exemple plus complexe combinant plusieurs variables avec des “et” (<code class="highlight"><span class="n">and</span></code>) et des “ou” (<code class="highlight"><span class="n">or</span></code>) :</p>
-<div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VARIABLE_EXCLUSIVE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="nf">and</span>
-<span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">AUTRE_VARIABLE_1</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">AUTRE_VARIABLE_2</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">AUTRE_VARIABLE_3</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">))</span>
-</code></pre></div>
-<h2 id="fonctions-et-operateurs">Fonctions et opérateurs</h2>
-<p>L’usage de VTL dans Pogues et les outils de collecte s’appuie sur les bibliothèques Lunatic (pour les composants graphiques) et Trevas (qui fournit le moteur VTL).</p>
-<p>C’est l’état d’avancement de cette dernière qui permet de connaître les opérateurs et fonctions disponibles : la référence est donc la <a href="https://inseefr.github.io/Trevas-TS/docs/coverage">page de suivi de l’implémentation</a>.</p>
-<h3 id="logique">Logique</h3>
+<h2 id="changements-au-niveau-du-langage">Changements au niveau du langage</h2>
+<h3 id="quelques-operateurs-identiques">Quelques opérateurs identiques</h3>
 <table>
 <thead>
 <tr>
-<th>Nom</th>
-<th>Symbole</th>
-<th>Exemple</th>
+<th>Opérateur ou fonction</th>
+<th>Xpath</th>
+<th>VTL</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Ou</td>
-<td>or</td>
-<td>true or false</td>
+<td>A est égal à B</td>
+<td>A = B</td>
+<td>A = B</td>
 </tr>
 <tr>
-<td>Et</td>
+<td>A plus B</td>
+<td>A + B</td>
+<td>A + B</td>
+</tr>
+<tr>
+<td>A moins B</td>
+<td>A - B</td>
+<td>A - B</td>
+</tr>
+<tr>
+<td>A fois B</td>
+<td>A * B</td>
+<td>A * B</td>
+</tr>
+<tr>
+<td>et logique</td>
 <td>and</td>
-<td>true and false</td>
+<td>and</td>
+</tr>
+<tr>
+<td>ou logique</td>
+<td>or</td>
+<td>or</td>
 </tr>
 </tbody>
 </table>
-<h3 id="chaines-de-caracteres">Chaînes de caractères</h3>
-<h4 id="remplacer">Remplacer</h4>
+<h3 id="quelques-operateurs-differents">Quelques opérateurs différents</h3>
 <table>
 <thead>
 <tr>
-<th>Nom</th>
-<th>Symbole</th>
-<th>Exemple</th>
+<th>Opérateur ou fonction</th>
+<th>Xpath</th>
+<th>VTL</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Remplacement</td>
-<td>replace</td>
-<td><code class="highlight"><span class="nf">replace</span><span class="p">(</span><span class="s">&quot;bag&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;g&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;c&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># → bac</span></code></td>
+<td>A différent de B</td>
+<td>A != B</td>
+<td>A &lt;&gt; B</td>
+</tr>
+<tr>
+<td>A divisé par B</td>
+<td>A div B</td>
+<td>A / B</td>
+</tr>
+<tr>
+<td>sous-chaine de longueur 2, à partir du 1er caractère</td>
+<td>substring(A,1,2)</td>
+<td>substr(A,1,2)</td>
+</tr>
+<tr>
+<td>concaténer A, B</td>
+<td>concat(A,B )</td>
+<td>A || B</td>
+</tr>
+<tr>
+<td>nullité (cf.  infra)</td>
+<td>A = ''</td>
+<td>isnull(A)</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition tip">
-<p class="admonition-title">Aide</p>
-<p>Une page référençant les fonctions les plus utilisées avec des exemples est disponible <a href="../fonctions-vtl/">ici</a></p>
-</div>
-<h2 id="cookbook">Cookbook</h2>
-<h3 id="duree">Durée</h3>
-<h4 id="calcul-de-duree">Calcul de durée</h4>
-<p>Pour calculer une durée à partir de variables collectées de type Date :</p>
-<div class="highlight"><pre><span></span><code><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">ARRIVEE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">DEPART</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span>
-</code></pre></div>
-<p>Qui fournira le résultat en millisecondes. Pour avoir l'équivalent en jour on pourra écrire :</p>
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">ARRIVEE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">DEPART</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">86400000</span>
-</code></pre></div>
-<p>Pour plus de clarté, le calcul de la durée brute pourra être déportée dans une variable calculée, nommée par exemple <code class="highlight"><span class="n">DUREE</span></code>, l'obtention du nombre de jours se fera alors à travers la formule :</p>
-<div class="highlight"><pre><span></span><code><span class="o">$</span><span class="n">DUREE</span><span class="o">$</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">86400000</span>
-</code></pre></div>
-<h4 id="controler-un-depassement-de-borne">Contrôler un dépassement de borne</h4>
-<p>Une variable de type Durée aura une des formes suivantes :</p>
+<h3 id="utilisation-de-texte">Utilisation de texte</h3>
+<p>Dans les contrôles ou les filtres décrits dans Pogues, on n'utilise plus (comme c'était le cas en Xpath) les simples <code class="highlight"><span class="s">&#39;</span></code> mais des guillemets <code class="highlight"><span class="s">&quot;</span></code>.</p>
+<p><strong>Exemples</strong> :</p>
 <ul>
-<li>pour une mesure en "années/mois" : <code class="highlight"><span class="n">PnaYnmM</span></code> où <code class="highlight"><span class="n">na</span></code> sera le nombre d'années et <code class="highlight"><span class="n">nm</span></code> le nombre de mois (par exemple : <code class="highlight"><span class="n">P3Y10M</span></code> pour "trois ans et dix mois")</li>
-<li>pour une mesure en "heures/mois" : <code class="highlight"><span class="n">PTnhHnmM</span></code> avec <code class="highlight"><span class="n">nh</span></code> le nombre d'heures et <code class="highlight"><span class="n">nm</span></code> le nombre de minutes (<code class="highlight"><span class="n">PT12H30M</span></code> pour "douze heures et trente minutes").</li>
+<li>Filtre : <code class="highlight"><span class="o">$</span><span class="n">VAR_TEXTE</span><span class="o">$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="o">$</span><span class="n">VAR_TEXTE</span><span class="o">$</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;2&quot;</span></code></li>
+<li>Contrôle : <code class="highlight"><span class="o">$</span><span class="n">VAR_TEXTE</span><span class="o">$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="o">$</span><span class="n">VAR_NUMERIQUE</span><span class="o">$</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">1000</span></code></li>
 </ul>
-<p>Un contrôle typique est de s'assurer qu'on ne dépasse pas une borne max par exemple. Dans ce cas-là, on modifiera la valeur jusqu'à obtenir une valeur numérique, comme dans l'exemple ci-dessous :</p>
-<div class="highlight"><span class="filename">valeur initiale de DUREE : PT12H30M</span><pre><span></span><code><span class="nf">cast</span><span class="p">(</span>
-<span class="w">    </span><span class="nf">replace</span><span class="p">(</span>
-<span class="w">        </span><span class="nf">replace</span><span class="p">(</span>
-<span class="w">            </span><span class="nf">replace</span><span class="p">(</span><span class="o">$</span><span class="n">DUREE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PT&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">),</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="s">&quot;12H30M&quot;</span>
-<span class="w">        </span><span class="s">&quot;M&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">),</span><span class="w">                       </span><span class="o">//</span><span class="w"> </span><span class="s">&quot;12H30&quot;</span>
-<span class="w">    </span><span class="s">&quot;H&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="p">),</span><span class="w">                          </span><span class="o">//</span><span class="w"> </span><span class="s">&quot;12.30&quot;</span>
-<span class="n">number</span><span class="p">)</span><span class="w">                                 </span><span class="o">//</span><span class="w"> </span><span class="m">12.30</span>
-<span class="o">&gt;</span><span class="w"> </span><span class="m">7.3</span><span class="w">                                   </span><span class="o">//</span><span class="w"> </span><span class="n">true</span>
-</code></pre></div>
-<h3 id="liste-a-choix-multiples">Liste à choix multiples</h3>
-<h4 id="compter-le-nombre-de-choix">Compter le nombre de choix</h4>
-<p>On souhaite calculer le nombre de cases cochées dans une liste à choix multiples. Les variables considérées sont nommmées dans notre cas <code class="highlight"><span class="n">QCM1</span></code> à <code class="highlight"><span class="n">QCM4</span></code>. Le code sera alors :</p>
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM1</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM2</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM3</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM4</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
-</code></pre></div>
-<p><span class="label label-rounded label-primary">À noter</span> Cette solution est fastidieuse et difficile à mettre en place pour des longues listes. Des fonctionnalités non-encore disponibles dans VTL permettront à terme une expression plus directe de ce calcul.</p>
-<h3 id="boucles">Boucles</h3>
-<h4 id="premiet-et-dernier-elements">Premiet et dernier éléments</h4>
-<p>Imaginons une boucle permettant de collecter des prénoms (à travers la variable <code class="highlight"><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span></code>). Les fonctions <code class="highlight"><span class="n">first_value</span></code> et <code class="highlight"><span class="n">last_value</span></code> permettent de récupérer respectivement le premier élément de la variable vectorielle <code class="highlight"><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span></code> en écrivant :</p>
-<div class="highlight"><pre><span></span><code><span class="nf">first_value</span><span class="p">(</span><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="w"> </span><span class="nf">over</span><span class="p">())</span>
-</code></pre></div>
-<p>ou</p>
-<div class="highlight"><pre><span></span><code><span class="nf">last_value</span><span class="p">(</span><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="w"> </span><span class="nf">over</span><span class="p">())</span>
-</code></pre></div>
-<p>...par exemple à travers une variable calculée.</p>
+<h2 id="changements-dus-au-format-des-variables-passage-xforms-lunatic">Changements dûs au format des variables (passage XForms -&gt; Lunatic)</h2>
+<p>Le format des variables a évolué ce qui conduit à quelques évolutions dans la manière de formuler filtres ou contrôles.</p>
+<h3 id="nature-des-modalites-de-reponse-aux-qcm">Nature des modalités de réponse aux QCM</h3>
+<p>En VTL, on ne retourne plus des "0" / "1" ou des "" / "1" pour les modalités de réponse à un QCM, mais <strong>true</strong> si une modalité est cochée, <strong>null</strong> ou <strong>false</strong> si elle ne l'est pas. Cf. partie "les contrôles dans les QCM".</p>
+<h3 id="comprendre-et-gerer-le-vide-et-la-nullite">Comprendre et gérer le vide et la nullité</h3>
+<h4 id="generalites">Généralités</h4>
+<p>En xforms, la non-réponse était systématiquement une chaîne vide quel que soit le format.
+Dans le format Lunatic en revanche, un champ qui n’est pas encore rempli par le répondant est de valeur <strong>"null"</strong>, que ce soit un champ nombre, texte, un QCU, un QCM etc.
+Quand le répondant saisit une réponse, on va collecter un nombre, du texte, un booléen (valeurs true/false, cf. supra).
+<img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> Lorsque le répondant saisit une réponse puis l'efface, le champ collecté n'est pas systématiquement remis à <strong>null</strong> : il redeviendra <strong>null</strong> pour un champ nombre mais vaudra "" pour du texte, et false pour une modalité de QCM décochée.</p>
+<table>
+<thead>
+<tr>
+<th>Champ collecté</th>
+<th>jamais saisi</th>
+<th>répondu / coché</th>
+<th>effacé/décoché</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nombre</td>
+<td>null</td>
+<td>123</td>
+<td>null</td>
+</tr>
+<tr>
+<td>Texte</td>
+<td>null</td>
+<td>"xyz"</td>
+<td>""</td>
+</tr>
+<tr>
+<td>Modalité de QCM</td>
+<td>null</td>
+<td>true</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Modalité de QCU</td>
+<td>null</td>
+<td>un code (décrit dans Pogues)</td>
+<td>impossible</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sommer-des-variables">Sommer des variables</h4>
+<p>Quand on manipule des variables numériques en VTL, il faut se prémunir de ce null ou ce "" puisqu'en VTL, la valorisation de VAR1_NUMERIQUE + VAR2_NUMERIQUE, si VAR2_NUMERIQUE est non rempli, vaudra null (alors qu'on pourrait s'attendre à ce que la somme soit VAR1_NUMERIQUE).
+Pour cela, on utilise la fonction <strong>nvl</strong> qui permet de proposer une valeur en cas de null ou de "" :  nvl(\$MA_VARIABLE$, "valeur si nulle") c'est-à-dire : si \$MA_VARIABLE$ n'est pas renseignée, lui affecter la valeur si nulle, sinon lui affecter \$MA_VARIABLE$.</p>
+<p><strong>Exemple</strong>:</p>
+<ul>
+<li><code class="highlight"><span class="o">$</span><span class="n">VAR1_NUMERIQUE</span><span class="o">$</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">$</span><span class="n">VAR2_NUMERIQUE</span><span class="o">$</span></code> =&gt; <code class="highlight"><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR1_NUMERIQUE</span><span class="o">$</span><span class="p">,</span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR2_NUMERIQUE</span><span class="o">$</span><span class="p">,</span><span class="m">0</span><span class="p">)</span></code></li>
+</ul>
+<h4 id="tester-la-nullitele-vide">Tester la nullité/le vide</h4>
+<p>On peut vouloir détecter des potentielles non-réponses (par exemple pour ne pas déclencher un contrôle entre 2 variables VAR_A et VAR_B, si une des 2 variables n'est pas renseignée). Pour cela, on va devoir tester la nullité des variables et, en fonction de la nature de la variable collectée, s'assurer que l'on n'a pas aussi une chaîne vide.
+Plusieurs syntaxes sont possibles :</p>
+<ul>
+<li><code class="highlight"><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">VAR_NUMERIQUE</span><span class="o">$</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">pour</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">variables</span><span class="w"> </span><span class="n">numériques</span><span class="p">)</span></code></li>
+<li><code class="highlight"><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">VAR_TEXTE</span><span class="o">$</span><span class="p">)</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="o">$</span><span class="n">VAR_TEXTE</span><span class="o">$=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="p">(</span><span class="n">pour</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">textes</span><span class="p">)</span><span class="n">.</span></code></li>
+<li><code class="highlight"><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">VAR_QCM1</span><span class="o">$</span><span class="p">)</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="o">$</span><span class="n">VAR_QCM1</span><span class="o">$</span><span class="w"> </span><span class="p">(</span><span class="n">pour</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">modalités</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">QCM</span><span class="p">)</span><span class="n">.</span></code></li>
+<li><code class="highlight"><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">VAR_QCU</span><span class="o">$</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">pour</span><span class="w"> </span><span class="n">un</span><span class="w"> </span><span class="n">QCU</span><span class="p">)</span></code></li>
+</ul>
+<p>On peut également tirer partie de la fonction <strong>nvl</strong> :</p>
+<ul>
+<li><code class="highlight"><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR_TEXTE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span></code></li>
+<li><code class="highlight"><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR_QCM_1</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span></code></li>
+</ul>
+<h3 id="personnaliser-un-libelle">Personnaliser un libellé</h3>
+<p>Trois éléments assez différents de Xpath :</p>
+<ul>
+<li>on utilise l’opérateur VTL <strong>||</strong> qui permet de concaténer des chaînes de caractères, ou une chaîne de caractères et une variable.</li>
+<li>pour être utilisées dans un libellé, les variables numériques collectées doivent être converties en chaînes de caractères (fonction <strong>cast</strong>)</li>
+<li>les variables externes, <em>quelle que soit leur nature</em>, sont vues comme des variables Texte, qui peuvent donc être utilisées dans des libellés (de questions, de déclarations, de messages d'erreur)</li>
+</ul>
+<p><strong>Exemples</strong> :</p>
+<ul>
+<li><code class="highlight"><span class="s">&quot;Hello&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">$</span><span class="n">VAR_TEXTE</span><span class="o">$</span></code></li>
+<li><code class="highlight"><span class="s">&quot;En &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">$</span><span class="n">VAR_TEXTE_EXTERNE</span><span class="o">$</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot;, votre activité est-elle toujours &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">$</span><span class="n">VAR_TEXTE_EXTERNE2</span><span class="o">$</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; ?&quot;</span></code></li>
+<li><code class="highlight"><span class="s">&quot;Votre chiffre d&#39;affaires est de &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR1_NUMERIQUE</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; euros et votre effectif de &quot;</span><span class="w"> </span><span class="o">||</span><span class="w">  </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR2_NUMERIQUE</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; personnes&quot;</span><span class="n">.</span></code></li>
+<li><code class="highlight"><span class="s">&quot;Vous venez de déclarer un chiffre d&#39;affaires de &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR1_NUMERIQUE</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; euros alors qu&#39;il était de &quot;</span><span class="w"> </span><span class="o">||</span><span class="w">  </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR2_NUMERIQUE_EXTERNE</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; euros l&#39;an dernier&quot;</span><span class="n">.</span></code>
+ou
+ <code class="highlight"><span class="s">&quot;Vous venez de déclarer un chiffre d&#39;affaires de &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR1_NUMERIQUE</span><span class="o">$</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; euros alors qu&#39;il était de &quot;</span><span class="w"> </span><span class="o">||</span><span class="w">   </span><span class="o">$</span><span class="n">VAR2_NUMERIQUE_EXTERNE</span><span class="o">$</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot; euros l&#39;an dernier&quot;</span><span class="n">.</span></code></li>
+</ul>
+<h3 id="controles-et-variables-calculees">Contrôles et variables calculées</h3>
+<p>Il est assez simple d'écrire des contrôles ou de calculer des variables à partir des données collectées ou externes dès lors qu'on dispose des opérateurs (cf. infra), qu'on a compris le principe de la nullité et qu'on connaît la nature des variables, en particulier celles des variables externes.</p>
+<p><strong>Exemples</strong> :</p>
+<ul>
+<li><code class="highlight"><span class="n">sans</span><span class="w"> </span><span class="n">gestion</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">null</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">if</span><span class="w"> </span><span class="o">$</span><span class="n">VAR_NUMERIQUE</span><span class="o">$</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="w"> </span><span class="o">==&gt;</span><span class="w"> </span><span class="n">renvoie</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">null</span></code></li>
+<li><code class="highlight"><span class="n">gestion</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">null</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">if</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR_NUMERIQUE</span><span class="o">$</span><span class="p">,</span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="n">then</span><span class="w">  </span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="o">==&gt;</span><span class="w"> </span><span class="n">renvoie</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">null</span></code></li>
+<li><code class="highlight"><span class="n">variable</span><span class="w"> </span><span class="nf">externe </span><span class="p">(</span><span class="n">on</span><span class="w"> </span><span class="n">doit</span><span class="w"> </span><span class="n">convertir</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="n">numérique</span><span class="w"> </span><span class="n">pour</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">comparer</span><span class="w"> </span>à<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="n">par</span><span class="w"> </span><span class="n">exemple</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="n">if</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR2_NUMERIQUE_EXTERNE</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">VAR2_NUMERIQUE_EXTERNE</span><span class="o">$</span><span class="p">,</span><span class="n">integer</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="s">&quot;0&quot;</span></code></li>
+<li><code class="highlight"><span class="o">$</span><span class="n">VAR_SOMME</span><span class="o">$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR1_NUMERIQUE</span><span class="p">,</span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR2_NUMERIQUE</span><span class="o">$</span><span class="p">,</span><span class="m">0</span><span class="p">)</span></code></li>
+</ul>
+<h3 id="controles-dans-les-qcm">Contrôles dans les QCM</h3>
+<p>Dans la nouvelle filière, on ne retourne plus des 0 / 1 pour les modalités de réponse à un QCM, mais des true si une modalité est cochée, null si elle ne l'est pas et false si elle est décochée.
+Les contrôles ou filtres impliquant ces variables doivent prendre en compte ces aspects.</p>
+<p><strong>Exemples</strong> :</p>
+<ul>
+<li>tester que QCM1 est cochée (pour un filtre par exemple) =&gt;  <code class="highlight"><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM1</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span></code></li>
+<li>tester une modalité exclusive (ici par exemple QCM4 ne peut pas être cochée si QCM1, QCM2, ou QCM3 l'est) =&gt; <code class="highlight"><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM4</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM3</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="p">)</span><span class="w"> </span><span class="nf">or </span><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM4</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM2</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="p">)</span><span class="w"> </span><span class="nf">or </span><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM4</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM1</span><span class="o">$</span><span class="p">,</span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="p">))</span></code></li>
+</ul>
+<h2 id="et-si-le-questionnaire-ne-peut-pas-etre-visualise-ou-se-visualise-mal">Et si le questionnaire ne peut pas être visualisé ou se visualise mal ?</h2>
+<ul>
+<li>Si la visualisation du questionnaire ne fonctionne pas, il est possible de visualiser chaque séquence/sous-séquence l'une après l'autre, afin de déterminer quelle séquence/sous-séquence pose un problème, puis quelle question.</li>
+<li>Si une question filtrée s'affiche à tort, c'est que le filtre est incorrect (variable mal décrite, inexistante)</li>
+<li>Si es déclarations n’apparaissent pas, penser à vérifier que le(s) mode(s) de collecte est(sont) bien coché(s).</li>
+</ul>
 
 
 
@@ -3689,7 +3509,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../migration-xpath-vers-vtl/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: XPath et VTL, les différences">
+          <a href="../2-guide-vtl/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Concepts VTL dans Pogues">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3699,7 +3519,7 @@
                 Précédent
               </span>
               <div class="md-ellipsis">
-                XPath et VTL, les différences
+                Concepts VTL dans Pogues
               </div>
             </div>
           </a>

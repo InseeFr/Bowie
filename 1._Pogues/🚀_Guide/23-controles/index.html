@@ -214,7 +214,7 @@
         
   
   <span class="md-ellipsis">
-    Un atelier de conception d'enquêtes
+    atelier de conception d'enquêtes
   </span>
   
 
@@ -752,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%92%BB_VTL/fonctions-vtl/" class="md-nav__link">
+      <a href="../../%F0%9F%92%BB_VTL/1-fonctions-vtl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -773,11 +773,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%92%BB_VTL/migration-xpath-vers-vtl/" class="md-nav__link">
+      <a href="../../%F0%9F%92%BB_VTL/2-guide-vtl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    XPath et VTL, les différences
+    Concepts VTL dans Pogues
   </span>
   
 
@@ -794,11 +794,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%92%BB_VTL/vtl/" class="md-nav__link">
+      <a href="../../%F0%9F%92%BB_VTL/3-migration-xpath-vers-vtl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Guide VTL Pogues
+    XPath et VTL, les différences
   </span>
   
 
@@ -3299,7 +3299,7 @@ Il faut visualiser le questionnaire <strong>dans son entièreté</strong>. <br><
 </div>
 </div>
 </div>
-<p>Voir d'autres <a href="../../%F0%9F%92%BB_VTL/vtl/#cookbook">exemples</a></p>
+<p>Voir d'autres <a href="../../%F0%9F%92%BB_VTL/2-guide-vtl/#cookbook">exemples</a></p>
 <h2 id="comportements">Comportements</h2>
 <h3 id="avertissement-non-bloquant">Avertissement (Non bloquant)</h3>
 <table>
@@ -3368,7 +3368,7 @@ Il faut visualiser le questionnaire <strong>dans son entièreté</strong>. <br><
 <div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Date - Nombre - Durée</label><label for="__tabbed_2_2">Texte</label><label for="__tabbed_2_3">Booléen</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Pour ces types, la formule VTL est simple avec seulement l'utilisation de <a href="../../%F0%9F%92%BB_VTL/fonctions-vtl/#isnull"><strong>isnull()</strong></a>
+<p>Pour ces types, la formule VTL est simple avec seulement l'utilisation de <a href="../../%F0%9F%92%BB_VTL/1-fonctions-vtl/#isnull"><strong>isnull()</strong></a>
 <div class="highlight"><pre><span></span><code><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">VAR</span><span class="o">$</span><span class="p">)</span>
 </code></pre></div></p>
 </div>
@@ -3377,7 +3377,7 @@ Il faut visualiser le questionnaire <strong>dans son entièreté</strong>. <br><
 On peut gérer ça des deux manière suivantes : 
 <div class="highlight"><pre><span></span><code><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">VAR</span><span class="p">)</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="o">$</span><span class="n">VAR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
 </code></pre></div>
-Ou en utilisant la fonction <a href="../../%F0%9F%92%BB_VTL/fonctions-vtl/#nvl"><strong>nvl()</strong></a> :</p>
+Ou en utilisant la fonction <a href="../../%F0%9F%92%BB_VTL/1-fonctions-vtl/#nvl"><strong>nvl()</strong></a> :</p>
 <div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
 </code></pre></div>
 </div>
@@ -3386,7 +3386,7 @@ Ou en utilisant la fonction <a href="../../%F0%9F%92%BB_VTL/fonctions-vtl/#nvl">
 On peut gérer ça des deux manière suivantes : 
 <div class="highlight"><pre><span></span><code><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">VAR</span><span class="p">)</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="o">$</span><span class="n">VAR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">false</span>
 </code></pre></div>
-Ou en utilisant la fonction <a href="../../%F0%9F%92%BB_VTL/fonctions-vtl/#nvl"><strong>nvl()</strong></a> :</p>
+Ou en utilisant la fonction <a href="../../%F0%9F%92%BB_VTL/1-fonctions-vtl/#nvl"><strong>nvl()</strong></a> :</p>
 <div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">false</span>
 </code></pre></div>
 </div>
