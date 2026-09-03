@@ -17,7 +17,6 @@ theme:
           name: Light mode
       primary: blue grey
       accent: deep orange
-
     # Dark Mode
     - scheme: slate
       toggle:
@@ -37,13 +36,16 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/InseeFr/Bowie/
 markdown_extensions:
+  - abbr
   - attr_list
+  - md_in_html
   - admonition
   - tables
   - pymdownx.details
   - pymdownx.caret
   - pymdownx.mark
   - pymdownx.tilde
+  - pymdownx.snippets
   - pymdownx.highlight:
       default_lang: 'r'
   - pymdownx.inlinehilite:
