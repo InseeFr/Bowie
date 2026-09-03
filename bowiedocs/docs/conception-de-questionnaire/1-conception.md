@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Les types de questions et formats de réponses
 
 Les choix de typologie de réponses, et en particulier de terminologie suscitent parfois des incompréhensions liées au décalage entre un vocabulaire « contrôlé » (calqué sur une description formelle), et un vocabulaire « courant ». Le plus souvent, on englobe dans le terme « question », le libellé de la question ET son champ de réponse. Par exemple la question « Quel est votre parfum de glace préféré ? » pourra prendre plusieurs formes :

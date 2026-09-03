@@ -6,7 +6,7 @@ L'application web permettant cette réponse aux questionnaires utilise la bibili
 
 Stromae DSFR est le nouvel orchestrateur pour les questionnaires web. Il sera utilisé pour les collectes des enquêtes dès le mois d'août 2024.
 
-Pour en savoir plus sur [Stromae DSFR](https://inseefr.github.io/stromae-dsfr/docs/intro).
+Pour en savoir plus sur [Stromae DSFR](https://inseefr.github.io/stromae-dsfr/docs/docs/intro/).
 
 Vous trouverez également ci-dessous un bref récapitulatif des fonctionnalités nouvelles de cet orchestrateur.
 

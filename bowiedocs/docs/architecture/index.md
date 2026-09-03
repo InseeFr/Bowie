@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Architecture
 
 Bowie est une solution composite dont les services sont fournis par différents logiciels s'articulant les uns avec les autres.

@@ -8,14 +8,8 @@ L'ajout d'une [infobulle](https://fr.wikipedia.org/wiki/Infobulle) est possible 
 Le texte de ma question contenant [une infobulle](. "Contenu de l'infobulle.").
 ```
 
-Le positionnement des simples et doubles quotes, ainsi que des autres éléments typographiques est crucial ici.
-
-!!!tip
-
-    Attention notamment à la position du point `.` dans la parenthèse, on doit avoir :
-    
-    parenthèse ouvrante :arrow_right: point :arrow_right: espace :arrow_right: double quote :arrow_right: texte :arrow_right: double quote :arrow_right: parenthèse fermante
-    :point_right: `(. "texte")`
+!!! asbtract "Pour aller plus loin"
+    - [Les infobulles](../🚀_Guide/22-info-bulle.md)
 
 ## Création de l'infobulle
 

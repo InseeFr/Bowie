@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Les éléments dynamiques : contrôles, filtres et personnalisation
 
 ## Les contrôles

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Comment (bien) concevoir un questionnaire...
 
 Le questionnaire est le media destiné à l’enquêté. La **conception de questionnaire** recouvre de multiples travaux qui portent tout à la fois sur l’élaboration du **contenu du questionnaire** et donc le choix des informations que l’on souhaite collecter pour répondre à une

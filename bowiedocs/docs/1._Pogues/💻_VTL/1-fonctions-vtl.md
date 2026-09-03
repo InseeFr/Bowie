@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2 
+---
+
 # Fonctions VTL et usages
 
 ## Liste des opérateurs

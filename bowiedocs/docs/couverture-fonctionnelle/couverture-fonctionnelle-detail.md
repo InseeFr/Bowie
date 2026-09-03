@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Couverture fonctionnelle détaillée (mai 2024)
 
 On liste dans le tableau ci-dessous - avec un détail assez fin - ce que l'on sait spécifier dans un questionnaire conçu à travers les outils de la filière.

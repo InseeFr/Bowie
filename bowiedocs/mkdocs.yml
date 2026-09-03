@@ -30,6 +30,8 @@ theme:
     - navigation.indexes
     - content.code.copy
     - navigation.instant.preview
+    - search.suggest
+    - search.highlight
 extra:
   social:
     - icon: fontawesome/brands/github

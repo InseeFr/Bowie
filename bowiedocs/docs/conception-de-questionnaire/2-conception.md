@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Les boucles
 
 On appelle boucle le questionnement répétitif d’un ensemble de questions. Une boucle ne peut concerner que des séquences (ou sous-séquences) entières.

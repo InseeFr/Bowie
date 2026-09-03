@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Une mise en forme standardisée, pourquoi et comment ? 
 
 La construction d’un outil de génération de questionnaire commun à toutes les enquêtes a facilité la standardisation d’un certain nombre de choix de conception, de structure, et de mise en forme des questionnaires. Ces choix, qui constituent un cadre pour la mise en œuvre de questionnaires homogènes, relèvent des bonnes pratiques décrites précédemment. 

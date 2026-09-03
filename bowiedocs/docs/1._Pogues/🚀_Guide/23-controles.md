@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2 
+---
+
 # Les contrôles
 
 Un contrôle permet de vérifier la qualité des informations saisies au sein d'un questionnaire.

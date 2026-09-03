@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Les déclarations
 
 Les déclarations sont une ou des phrases figurant sous les questions, titre de séquence ou de sous-séquences.

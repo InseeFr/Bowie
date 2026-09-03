@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Métadonnées
 
 Deux choix très forts ont été faits à l'Insee :
