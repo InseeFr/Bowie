@@ -36,8 +36,15 @@ graph TD
 ```
 
 !!! abstract "Pour aller plus loin"
-    - [Visualiser un questionnaire](../🚀_Guide/Questionnaire/42-sauvegarder-visualiser.md)
-    - [Personnaliser un questionnaire](../🚀_Guide/Personnalisation/index.md)
+
+    <div class="grid cards" markdown>
+
+    - __[Visualiser un questionnaire :material-arrow-right-bold-box-outline:](../🚀_Guide/Questionnaire/42-sauvegarder-visualiser.md)__
+    - __[Personnaliser un questionnaire :material-arrow-right-bold-box-outline:](../🚀_Guide/Personnalisation/index.md)__
+
+    </div>
+
+
 
 ## Suite
-Nous allons maintenant poursuivre la [création des questions de la séquence "Quelques informations sur vous"](13-elaboration-structure.md).
+[Création des questions de la séquence "Quelques informations sur vous"](13-elaboration-structure.md){ .md-button }

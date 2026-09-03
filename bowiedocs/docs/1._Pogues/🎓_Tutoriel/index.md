@@ -23,16 +23,21 @@ L'objectif est de vous permettre de démarrer sereinement avec l'outil : pour le
 ### Structure
 Nous allons créer un questionnaire avec la structure suivante :
 
-- Séquence "Quelques informations sur vous" :
-    - Questions sur la personne interrogée pour décrire ses caractéristiques sociales
-- Sous-séquence "Parlez-nous de vos collègues" :
-    - Questions sur les relations avec les collègues dans une boucle 
-- Séquence "Avis sur l'exercice" :
-    - Questions concernant l'exercice pour clôturer le questionnaire
-- Séquence "Fin"
+`Séquence "Quelques informations sur vous"`
+
+:   Questions sur la personne interrogée pour décrire ses caractéristiques sociales...
+
+`Sous-séquence "Parlez-nous de vos collègues" :`
+
+:   Questions sur les relations avec les collègues dans une boucle...
+
+`Séquence "Avis sur l'exercice" :`
+
+:   Questions concernant l'exercice pour clôturer le questionnaire...
+
+`Séquence "Fin"`
 
 !!! tip
     Nous détaillerons toutes ces notions dans les parties suivantes.
 
-## C'est parti ! 🚀
-Débutons par la [création d'un questionnaire](10-creation-questionnaire.md).
+[:material-rocket-launch: Commencer le tutoriel](10-creation-questionnaire.md){ .md-button }

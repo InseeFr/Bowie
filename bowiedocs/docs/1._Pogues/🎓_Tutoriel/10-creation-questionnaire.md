@@ -64,4 +64,4 @@ Par défaut ces champs sont vides et ne sont pas proposés lors de la création 
 
 
 ## Suite
-Nous allons maintenant créer une [première séquence](11-creation-premiere-sequence.md).
+[créer une première séquence](11-creation-premiere-sequence.md){ .md-button }

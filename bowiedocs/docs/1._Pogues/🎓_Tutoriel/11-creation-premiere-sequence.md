@@ -53,7 +53,12 @@ Pour finaliser la création, on appuie sur le bouton "Valider" en bas de la fen�
       ![Création des séquences](../../img/pogues/creation-séquence.png)
 
 !!! abstract "Pour aller plus loin"
-    - [Les Séquences](../🚀_Guide/10-sequences.md)
+
+    <div class="grid cards" markdown>
+
+    - __[Les Séquences :material-arrow-right-bold-box-outline:](../🚀_Guide/10-sequences.md)__
+
+    </div>
 
 Mais ce n'est pas fini... On peut voir que le questionnaire est toujours mécontent et nous indique qu'il faut aussi créer au moins une question, ce que nous allons faire de ce pas ! 
 
@@ -113,12 +118,17 @@ Les autres champs ne sont pas modifiables car sont **directement associés aux p
 ??? success "Solution"
     Pogues est enfin content ! Il ne râle plus et on peut enfin **sauvegarder** notre questionnaire.
     ![Questionnaire-séquences-1ère-question](../../img/pogues/survey-with-1st-question.png)
-    
+
 !!! abstract "Pour aller plus loin"
-    - [Les questions](../🚀_Guide/Questions/index.md)
-    - [Variables Collectées](../🚀_Guide/Variables/variables-collectees.md)
-    - [Nommage des variables](../🚀_Guide/Variables/nommage.md)
-    - [Les questions simples de type texte](../🚀_Guide/Questions/13-reponse-simple.md/#type-de-reponse-texte)
+
+    <div class="grid cards" markdown>
+
+    - __[Les questions :material-arrow-right-bold-box-outline:](../🚀_Guide/Questions/index.md)__
+    - __[Variables Collectées :material-arrow-right-bold-box-outline:](../🚀_Guide/Variables/variables-collectees.md)__
+    - __[Nommage des variables :material-arrow-right-bold-box-outline:](../🚀_Guide/Variables/nommage.md)__
+    - __[Les questions simples de type texte :material-arrow-right-bold-box-outline:](../🚀_Guide/Questions/13-reponse-simple.md/#type-de-reponse-texte)__
+
+    </div>
 
 ## Sauvegarde du questionnaire
 
@@ -130,4 +140,5 @@ Un simple clic sur le bouton "Sauvegarder" de la barre d'action fait l'affaire.
     Vous pouvez facilement gérer la liste de vos sauvegardes avec le menu [**historique**](../🚀_Guide/29-historique.md) ✨
 
 ## Suite
-Nous allons maintenant [visualiser le questionnaire](12-visualisation-questionnaire.md).
+[Visualiser le questionnaire](12-visualisation-questionnaire.md){ .md-button }
+
