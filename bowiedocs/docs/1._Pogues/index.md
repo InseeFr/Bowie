@@ -9,29 +9,29 @@ C'est une interface graphique de conception de questionnaires permettant la cré
 -   :material-school: __Tutoriel__
     
     ---
-    Pour débuter, ou se rafraîchir la mémoire, le plus simple est de se former avec le tutoriel 
+    Pour débuter, ou se rafraîchir la mémoire, le plus simple est de se former
 
-    [:material-arrow-right-drop-circle-outline: S'autoformer](./💡_Tutoriel_/index.md)
+    [S'autoformer :material-arrow-right-bold-box-outline:](./🎓_Tutoriel/index.md){ .md-button }
 
 -    :material-file-code-outline: __VTL__
     
     ---
-    Une partie spécialement dédié au VTL est disponible.
+    Une partie spécialement dédié au VTL
 
-    [:material-arrow-right-drop-circle-outline: Explorer le VTL](./💻_VTL/index.md)
+    [Explorer le VTL :material-arrow-right-bold-box-outline:](./💻_VTL/index.md){ .md-button }
 
--   :material-rocket-launch: __Guide__
+-   :material-rocket-launch: __Guide__ 
 
     ---
     Pour les utilisateurs déjà aguerris, le guide permettra d'approfondir les notions et de trouver des solutions clés en main à certains de vos besoins de conception.
 
-    [:material-arrow-right-drop-circle-outline: Approfondier ses connaissances](./🚀_Guide/index.md)
+    [Aller plus loin dans Pogues :material-arrow-right-bold-box-outline:](./🚀_Guide/index.md){ .md-button }
 
 -   :material-playlist-star: __Cas Pratiques__
     
     ---
-    Enfin des cas pratiques sont proposés et constituent des guides d'implémentation pas-à-pas sur des sujets particuliers.
+    Des cas pratiques sont proposés et constituent des guides d'implémentation pas-à-pas sur des sujets particuliers.
 
-    [:material-arrow-right-drop-circle-outline: Approfondier ses connaissances](./📝_Cas_pratiques/index.md)
+    [Étudier les cas :material-arrow-right-bold-box-outline:](./📝_Cas_pratiques/index.md){ .md-button }
 
 </div>

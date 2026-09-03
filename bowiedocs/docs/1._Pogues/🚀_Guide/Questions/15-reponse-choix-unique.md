@@ -17,7 +17,7 @@ Avant de spécifier la question QCU avec une réponse de type sélection dans un
 
 Plus de détails dans la page [Les listes de codes](../14-liste-codes.md).
 
-La démarche pas-à-pas pour créer une question QCU basée sur une liste de codes est détaillée dans le tutoriel, [Création d'une réponse basée sur une liste](../../💡_Tutoriel_/14-creation-liste-qcu.md).
+La démarche pas-à-pas pour créer une question QCU basée sur une liste de codes est détaillée dans le tutoriel, [Création d'une réponse basée sur une liste](../../🎓_Tutoriel/14-creation-liste-qcu.md).
 
 #### Filtrer les modalités
 
