@@ -88,7 +88,7 @@ On reprend le principe de la somme en ligne vu plus haut, mais cette fois-ci on 
 
 !!! tip "Astuce"
 
-    Pour avoir un total correct même si toutes les cases ne sont pas remplies, il est nécessaire d'utiliser [la fonction `nvl`](../../💻_VTL/fonctions-vtl.md/#nvl).
+    Pour avoir un total correct même si toutes les cases ne sont pas remplies, il est nécessaire d'utiliser [la fonction `nvl`](../../💻_VTL/1-fonctions-vtl.md/#nvl).
 
     Par exemple :
 

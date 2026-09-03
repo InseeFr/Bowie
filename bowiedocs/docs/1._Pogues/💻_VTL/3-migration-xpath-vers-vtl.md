@@ -4,7 +4,7 @@ Ce document est un résumé permettant de traduire rapidement quelques fonctions
 
 !!! note
 
-    Pour (re)découvrir de façon plus approfondie et détaillée le langage VTL, [le guide VTL de référence est ici](../💻_VTL/vtl.md).
+    Pour (re)découvrir de façon plus approfondie et détaillée le langage VTL, [le guide VTL de référence est ici](../💻_VTL/2-guide-vtl.md).
 
 ## Changements au niveau du langage
 

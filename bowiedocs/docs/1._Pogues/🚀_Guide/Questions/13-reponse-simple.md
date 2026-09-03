@@ -29,7 +29,7 @@ Pour créer une question de type **Réponse simple**, remplir, pour toutes les v
 !!! info
     - A l'initialisation du questionnaire, tout champ date vaut `null`
     - Quand on saisit une valeur, ex pour juste une année `2025`, puis qu'on efface cette valeur du champ, alors le champ date vaut `null` comme au début.VTL
-    - Pour gérer un champ Date vide il suffit d'utiliser [isnull()](../../💻_VTL/fonctions-vtl.md/#isnull)
+    - Pour gérer un champ Date vide il suffit d'utiliser [isnull()](../../💻_VTL/1-fonctions-vtl.md/#isnull)
         ```
         isnull($DATE$)
         ```
@@ -43,7 +43,7 @@ Pour créer une question de type **Réponse simple**, remplir, pour toutes les v
 
             alors la variabel `ANNEE_NAIS` aura la valeur `"2025-02-01"` est sera un texte
 
-        C'est pourquoi il est nécessaire de transtyper en utilisant la fonction [cast()](../../💻_VTL/fonctions-vtl.md/#cast) ces variables en `date` pour les comparer. Voir [exemple d'utilisation](../../💻_VTL/fonctions-vtl.md/#__tabbed_5_3)
+        C'est pourquoi il est nécessaire de transtyper en utilisant la fonction [cast()](../../💻_VTL/1-fonctions-vtl.md/#cast) ces variables en `date` pour les comparer. Voir [exemple d'utilisation](../../💻_VTL/1-fonctions-vtl.md/#__tabbed_5_3)
 
     - Dans cette même logique, cela veut dire que l'on peut directement afficher une variable de type date dans un libellé dans utiliser
 
@@ -68,7 +68,7 @@ Pour créer une question de type **Réponse simple**, remplir, pour toutes les v
 !!! info
     - A l'initialisation du questionnaire, tout champ nombre vaut `null`
     - Quand on saisie une valeur, ex `86`, puis qu'on efface cette valeur du champ, alors le champ nombre vaut `null` comme au début.
-    - Pour gérer un champ Nombre vide il suffit d'utiliser [isnull()](../../💻_VTL/fonctions-vtl.md/#isnull)
+    - Pour gérer un champ Nombre vide il suffit d'utiliser [isnull()](../../💻_VTL/1-fonctions-vtl.md/#isnull)
         ```
         isnull($NOMBRE$)
         ```
@@ -97,7 +97,7 @@ Pour créer une question de type **Réponse simple**, remplir, pour toutes les v
 !!! info
     - A l'initialisation du questionnaire, tout champ durée vaut `null`.
     - Quand on saisie une valeur, ex `2025` et `12` pour année/mois, puis qu'on efface ces deux valeurs des champs, alors le champ durée vaut `null` comme au début.
-    - Pour gérer un champ Durée vide il suffit d'utiliser [isnull()](../../💻_VTL/fonctions-vtl.md/#isnull)
+    - Pour gérer un champ Durée vide il suffit d'utiliser [isnull()](../../💻_VTL/1-fonctions-vtl.md/#isnull)
         ```
         isnull($DUREE$)
         ```

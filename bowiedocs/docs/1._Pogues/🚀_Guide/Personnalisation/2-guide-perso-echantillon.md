@@ -78,7 +78,7 @@ Par exemple, pour une variable externe `PRENOM`, on fournira un fichier contenan
         ```
 
 !!! warning "Type des variables externes"
-    - Toutes les variables externes sont importées avec en tant que texte (= type `string`). **il faut donc bien penser à utiliser la fonction de [cast()](../../💻_VTL/fonctions-vtl.md/#cast) au besoin**  
+    - Toutes les variables externes sont importées avec en tant que texte (= type `string`). **il faut donc bien penser à utiliser la fonction de [cast()](../../💻_VTL/1-fonctions-vtl.md/#cast) au besoin**  
 
 !!!warning "Maximum 10 UE"
 
