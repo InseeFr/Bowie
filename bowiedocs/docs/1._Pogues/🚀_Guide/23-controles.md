@@ -286,5 +286,5 @@ match_characters(
 
 Pour référence, des questionnaires illustrant ces contrôles sont disponibles dans l'environnement de demo, sous le timbre *DOCUMENTATION*.
 
-- Un [questionnaire implémentant les contrôles de Siret, Siren et Rna](https://conception-questionnaires-demo.insee.fr/questionnaire/m4tmy4kl) 
-- Un [questionnaire similaire](https://conception-questionnaires-demo.insee.fr/questionnaire/m74nlrpj) où les contrôles ne se déclenchent aussi quand le champ est vide 
+- Un [questionnaire implémentant les contrôles de Siret, Siren et Rna :materialopen-in-new:](https://conception-questionnaires.insee.fr/questionnaire/m4tmy4kl) 
+- Un [questionnaire similaire](https://conception-questionnaires.insee.fr/questionnaire/m74nlrpj) où les contrôles ne se déclenchent aussi quand le champ est vide 

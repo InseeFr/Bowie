@@ -32,4 +32,4 @@ Vous pouvez maintenant créer en autonomie en question qui manquent : `TEMPS_PAR
 
 
 ## Suite
-Nous allons maintenant poursuivre avec la [mise en place d'un filtre](20-mise-en-place-filtre.md).
+[Mise en place d'un filtre](20-mise-en-place-filtre.md){ .md-button }

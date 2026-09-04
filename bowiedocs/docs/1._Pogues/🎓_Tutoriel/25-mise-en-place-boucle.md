@@ -16,7 +16,14 @@ La fenêtre qui s'ouvre propose plusieurs champs que l'on peut mobiliser de deux
 Dans ce tutoriel, on va mettre en place le premier cas uniquement.
 
 !!! abstract "Pour aller plus loin"
-    - [Les boucles](../🚀_Guide/24-boucles.md)
+
+    <div class="grid cards" markdown>
+
+    - __[Les boucles :material-arrow-right-bold-box-outline:](../🚀_Guide/24-boucles.md)__
+
+    </div>
+
+!!! abstract "Pour aller plus loin"
 
 ## Création de la boucle
 
@@ -63,6 +70,6 @@ Il est bien évidemment possible de personnaliser encore plus notre boucle, par 
 
 ## Corrigé
 
-Vous pouvez comparer votre création avec le [corrigé de l'exercice](https://conception-questionnaires-demo.insee.fr/questionnaire/ml82b1lb).
+Vous pouvez comparer votre création avec le [corrigé de l'exercice :material-open-in-new:](https://conception-questionnaires-demo.insee.fr/questionnaire/ml82b1lb).
 
 Maintenant qu'on vous a donné les bases, on vous laisse découvrir toutes les possibilités de l'outil !

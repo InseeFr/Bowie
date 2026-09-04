@@ -7,7 +7,12 @@ Pogues permet la création de trois types de variables dans le questionnaire :
 3. les _variables externes_ : elles sont valorisées par des données externes qui seront injectées dans le questionnaire.
 
 !!! abstract "Pour aller plus loin"
-    - [Les variables](../🚀_Guide/Variables/index.md)
+
+    <div class="grid cards" markdown>
+
+    - __[Les variables :material-arrow-right-bold-box-outline:](../🚀_Guide/Variables/index.md)__
+
+    </div>
 
 
 Nous allons voir dans cette section comment mobiliser le deuxième type de variable pour mettre en place un contrôle sur la réponse à la question sur les activités professionnelles (`ACTIVITES`).
@@ -65,4 +70,4 @@ On peut maintenant ajouter un contrôle sur la question `ACTIVITES` pour s'assur
    
 
 ## Suite
-Nous allons maintenant poursuivre avec la [personnalisation de libellés](24-personnalisation-libelle.md).
+[Personnalisation de libellés](24-personnalisation-libelle.md){ .md-button }

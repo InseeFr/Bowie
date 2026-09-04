@@ -82,5 +82,5 @@ Le filtre a pour formule `$KISH_INDICATOR$ = 1`.
 
 ## Questionnaire exemple
 
-Pour référence, un [questionnaire implémentant cette solution](https://conception-questionnaires-demo.insee.fr/questionnaire/l8lfytfu) est disponible dans l'environnement de demo, sous le timbre DOCUMENTATION
+Pour référence, un [questionnaire implémentant cette solution :materialopen-in-new:](https://conception-questionnaires.insee.fr/questionnaire/l8lfytfu) est disponible dans l'environnement de demo, sous le timbre DOCUMENTATION
 

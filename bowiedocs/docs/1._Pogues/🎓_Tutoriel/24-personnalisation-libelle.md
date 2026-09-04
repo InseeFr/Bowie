@@ -6,6 +6,14 @@ Cela signifie que l'on peut utiliser le langage VTL pour personnaliser le libell
 
 On propose ici de créer une variable calculée permettant d'afficher le prénom du répondant s'il a été renseigné et de proposer une présentation plus générique si ce n'est pas le cas (pour rappel, le contrôle posé sur la remplissage du prénom n'est pas bloquant !).
 
+!!! abstract "Pour aller plus loin"
+
+    <div class="grid cards" markdown>
+
+    - __[Exemples de personnalisation d'un libellé :material-arrow-right-bold-box-outline:](../📝_Cas_pratiques/personnaliser-libelles.md)__
+
+    </div>
+
 ## Création de la variable calculée `PRENOMLIB`
 
 Comme précédemment, au sein d'une question, dans l'onglet _Variables calculées_, on crée la variable `PRENOMLIB` dont la valeur est :
@@ -27,4 +35,4 @@ On peut retourner sur la question dont l'identifiant est `APPRECIATION`, pour mo
 
 
 ## Suite
-Nous allons maintenant poursuivre avec la [mise en place d'une boucle](25-mise-en-place-boucle.md).
+[Mise en place d'une boucle](25-mise-en-place-boucle.md){ .md-button }

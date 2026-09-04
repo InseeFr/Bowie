@@ -13,7 +13,12 @@ On crée une nouvelle liste L_SEXE avec les modalités classiques "1" = "Homme",
 ![Créer liste de codes](../../img/pogues/tuto-nouvelle-liste-codes.png)
 
 !!! abstract "Pour aller plus loin"  
-    -  [Les listes de codes](../🚀_Guide/14-liste-codes.md).
+
+    <div class="grid cards" markdown>
+
+    - __[Les listes de codes :material-arrow-right-bold-box-outline:](../🚀_Guide/14-liste-codes.md)__
+
+    </div>
 
 
 ## Création de la question
@@ -36,4 +41,4 @@ Comme d'habitude, on n'oublie pas de générer les variables collectées avant d
 
 
 ## Suite
-Nous allons maintenant poursuivre avec la [création de questions à choix multiples et recherche sur liste](15-creation-qcm.md).
+[Création de questions à choix multiples et recherche sur liste](15-creation-qcm.md){ .md-button }

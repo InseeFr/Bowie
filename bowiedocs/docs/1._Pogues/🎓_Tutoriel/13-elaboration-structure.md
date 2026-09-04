@@ -44,7 +44,12 @@ Faire de même avec les deux autres sous-séquences :
     ![alt text](../../img/pogues/sub-seq-creation-solution.png)
 
 !!! abstract "Pour aller plus loin"
-    - [Les sous-séquences](../🚀_Guide/11-sous-sequences.md)
+
+    <div class="grid cards" markdown>
+
+    - __[Les sous-séquences :material-arrow-right-bold-box-outline:](../🚀_Guide/11-sous-sequences.md)__
+
+    </div>
 
 
 ### Question sur la date de naissance
@@ -69,7 +74,13 @@ On a besoin pour ce type de question de spécifier un format (AAAA-MM-JJ, AAAA-M
 Générez la variable puis validez.
 
 !!! abstract "Pour aller plus loin"
-    - [Les questions simples de type date](../🚀_Guide/Questions/13-reponse-simple.md/#type-de-reponse-date)
+
+    <div class="grid cards" markdown>
+
+    - __[Les questions simples de type date :material-arrow-right-bold-box-outline:](../🚀_Guide/Questions/13-reponse-simple.md/#type-de-reponse-date)__
+
+    </div>
+
 
 Ici on récupère bien une date au format année/mois/jour. Nous verrons plus tard comment réutiliser cette variable collectée pour calculer l'âge via justement ce qu'on appelle une "variable calculée".
 
@@ -94,7 +105,12 @@ Lorsqu'on est satisfaits des changements réalisés, **on sauvegarde !**
 !!! tip "N'hésitez pas à varier les contextes de visualisation durant tout ce tutoriel"
 
 !!! abstract "Pour aller plus loin"
-    - [La visualisation web](../../5._Orchestrateurs/Stromae-DSFR/index.md)
+
+    <div class="grid cards" markdown>
+
+    - __[La visualisation web :material-arrow-right-bold-box-outline:](../../5._Orchestrateurs/Stromae-DSFR/index.md)__
+
+    </div>
 
 ## Suite
-Nous allons maintenant voir comment créer une [question à choix unique (QCU)](14-creation-liste-qcu.md).
+[Créer une question à choix unique (QCU)](14-creation-liste-qcu.md){ .md-button }

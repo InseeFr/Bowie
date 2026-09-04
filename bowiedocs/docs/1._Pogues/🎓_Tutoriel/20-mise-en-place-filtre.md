@@ -40,7 +40,12 @@ Il nous reste à préciser que le filtre à pour champ d'action la question `T_N
 ![Configuration du filtre](../../img/pogues/filtre-configuration.png)
 
 !!! abstract "Pour aller plus loin"
-    - [Les filtres](../🚀_Guide/25-filtres.md)
+
+    <div class="grid cards" markdown>
+
+    - __[Les filtres :material-arrow-right-bold-box-outline:](../🚀_Guide/25-filtres.md)__
+
+    </div>
 
 Le filtre que l'on vient de créer devient visible dans la vue d'ensemble du questionnaire (sur les éléments choisis dans _Début_ et _Fin_), on peut le modifier en cliquant dessus.
 
@@ -48,4 +53,4 @@ Le filtre que l'on vient de créer devient visible dans la vue d'ensemble du que
 
 
 ## Suite
-Nous allons maintenant poursuivre avec l'[ajout d'un contrôle de cohérence](21-ajout-controle.md).
+[Ajout d'un contrôle de cohérence](21-ajout-controle.md){ .md-button }

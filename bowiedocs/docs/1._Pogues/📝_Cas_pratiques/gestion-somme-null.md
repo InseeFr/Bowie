@@ -53,4 +53,4 @@ SUM_TAB = sum($NULL_CHECK_TAB_COL$)
 
 ## Questionnaire exemple
 
-Pour référence, un [questionnaire implémentant cette solution](https://conception-questionnaires-demo.insee.fr/questionnaire/m2iwuqca) est disponible dans l'environnement de demo, sous le timbre DOCUMENTATION
+Pour référence, un [questionnaire implémentant cette solution :materialopen-in-new:](https://conception-questionnaires.insee.fr/questionnaire/m2iwuqca) est disponible dans l'environnement de demo, sous le timbre DOCUMENTATION

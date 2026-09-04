@@ -9,7 +9,12 @@ Le texte de ma question contenant [une infobulle](. "Contenu de l'infobulle.").
 ```
 
 !!! asbtract "Pour aller plus loin"
-    - [Les infobulles](../🚀_Guide/22-info-bulle.md)
+
+    <div class="grid cards" markdown>
+
+    - __[Les infobulles :material-arrow-right-bold-box-outline:](../🚀_Guide/22-info-bulle.md)__
+
+    </div>
 
 ## Création de l'infobulle
 
@@ -19,4 +24,4 @@ Pour notre questionnaire, on propose l'ajout d'une infobulle sur le terme "en mo
 
 
 ## Suite
-Nous allons maintenant poursuivre l'[implémentation d'une variable calculée](23-utilisation-variable-calculee.md).
+[Implémentation d'une variable calculée](23-utilisation-variable-calculee.md){ .md-button }

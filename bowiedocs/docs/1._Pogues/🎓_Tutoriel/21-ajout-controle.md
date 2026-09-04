@@ -3,7 +3,12 @@
 On souhaite pouvoir s'assurer d'une bonne qualité de réponse aux différentes questions que l'on propose. Pour cela, on peut utiliser le mécanisme de contrôle inhérent aux outils de l'atelier.
 
 !!! abstract "Pour aller plus loin"
-    - [Les contrôles](../🚀_Guide/23-controles.md)
+
+    <div class="grid cards" markdown>
+
+    - __[Les contrôles :material-arrow-right-bold-box-outline:](../🚀_Guide/23-controles.md)__
+
+    </div>
 
 Ici, on va créer un contrôle affichant un message d'incitation si l'on ne donne pas son prénom.
 
@@ -40,4 +45,4 @@ On aura une configuration sensiblement similaire à :point_down:
 
 
 ## Suite
-Nous allons maintenant poursuivre avec la [création d'une infobulle](22-ajout-infobulle.md).
+[Création d'une infobulle](22-ajout-infobulle.md){ .md-button }

@@ -52,7 +52,12 @@ Il ne reste qu'à générer les variables puis à valider la question.
 
 
 !!! abstract "Pour aller plus loin"  
-    -  [Les tableaux](../🚀_Guide/Tableaux/index.md)
+
+    <div class="grid cards" markdown>
+
+    - __[Les tableaux :material-arrow-right-bold-box-outline:](../🚀_Guide/Tableaux/index.md)__
+
+    </div>
 
 
 Pour finir cette sous séquence, on va créer une question simple de type numérique pour interroger notre enquêté sur le nombre de collègues qui partagent son bureau.
@@ -63,4 +68,4 @@ Pour finir cette sous séquence, on va créer une question simple de type numér
     
 
 ## Suite
-Nous allons maintenant poursuivre la [finalisation de la structure du questionnaire](17-finalisation-structure.md).
+[Finalisation de la structure du questionnaire](17-finalisation-structure.md){ .md-button }

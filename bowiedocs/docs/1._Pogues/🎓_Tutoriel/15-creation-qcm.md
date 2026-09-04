@@ -28,7 +28,12 @@ Ensuite on va ajouter une question de type recherche sur liste (QCU recherche su
 Pogues propose un certain nombre de listes de nomenclatures mutualisées pour satisfaire le plus grand nombre d'enquêtes : nationalités, nationalités étrangères, départements, communes, professions par sexe, diplômes, les activités (NAF sur 2 positions) etc. Pour mobiliser les listes de nomenclatures ont utilise un composant recherche sur liste (suggester). 
 
 !!! abstract "Pour aller plus loin"  
-    -  [Le suggester](../🚀_Guide/Questions/15b-suggester.md)
+
+    <div class="grid cards" markdown>
+
+    -  __[Le suggester :material-arrow-right-bold-box-outline:](../🚀_Guide/Questions/15b-suggester.md)__
+
+    </div>
 
 - on crée une question avec le libellé "Quelle est votre nationalité étrangère ?" et l'identifiant "T_NATIONETR"
 - le _Type de question_ est "Réponse à choix unique"
@@ -44,8 +49,5 @@ Et on sera encore plus satisfait lorsqu'on aura vu comment filtrer la question p
 ??? success "Solution"
     ![Sous-séquence Caractéristiques](../../img/pogues/seq-carac-complet.png)
 
-
-
-
 ## Suite
-Nous allons maintenant poursuivre avec la [création d'un tableau](16-creation-tableau.md).
+[Création d'un tableau](16-creation-tableau.md){ .md-button }
