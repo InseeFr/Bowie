@@ -16,7 +16,7 @@ On a donc choisi ce langage comme expression des contrôles et du dynamisme dans
     - il est dans le plus souvent nécessaire de gérer le cas où la variable n’est pas encore ou plus renseignée - sa valeur est nulle : `nvl($MA_VARIABLE$, "valeur si nulle")`,
     - VTL fournit un certain nombre de fonctions utilitaires - comme `cast`et`nvl` - on répertorie les plus utiles dans ce document.
 
-### Utiliser VTL
+#### Utiliser VTL
 
 VTL est utilisé dès que l’on souhaite :
 
@@ -29,7 +29,7 @@ Les champs correspondants dans Pogues proposent dans la plupart des cas un **éd
 
 ![Editeur VTL](../../img/vtl/code-list-editor.png 'Éditeur VTL')
 
-### Fonctionnalités de l’éditeur
+#### Fonctionnalités de l’éditeur
 
 L’éditeur fournit :
 
@@ -37,7 +37,7 @@ L’éditeur fournit :
 - une autocomplétion des fonctions et variables
 - une gestion des erreurs de syntaxe
 
-### Bases de la syntaxe
+#### Bases de la syntaxe
 
 Une chaîne de caractères s’écrit en encadrant du texte par deux double quote ("), par exemple :
 ```
@@ -52,13 +52,9 @@ Un chiffre avec décimales :
 3.14159
 ```
 
-!!! abstract "Pour aller plus loin"
-    - [Liste des fonctions VTL et leur usages](1-fonctions-vtl.md)
-
-
 ## Quelques exemples d'utilisation du VTL dans Pogues
 
-### Dans les libellés de question
+#### Dans les libellés de question
 
 Voici un exemple de syntaxe pour un libellé personnalisé :
 
@@ -80,7 +76,7 @@ On utilise ici l’opérateur VTL `||` qui permet de concaténer des chaînes de
 
 On pourra mobiliser dans un libellé personnalisé des variables collectées, calculées ou externes.
 
-### Création d'un lien
+#### Création d'un lien
 
 Pour créer un lien hypertexte, on s'appuie sur la syntaxe Markdown :
 
@@ -88,7 +84,7 @@ Pour créer un lien hypertexte, on s'appuie sur la syntaxe Markdown :
 "Voici un [lien](http://monlien.fr)."
 ```
 
-### Dans les Infobulles
+#### Dans les Infobulles
 
 La syntaxe pour la création d’un infobulle est la suivante :
 
@@ -100,13 +96,13 @@ Mon libellé de question avec [une infobulle](. "dont voici le contenu").
 
     Il faut bien respecter la syntaxe pour le contenu de l’infobulle : un `.` avant le texte entouré de guillemets `"`.
 
-## Dans les contrôles
+#### Dans les contrôles
 
 Un exemple de contrôle sur une valeur numérique :
 
 ![Exemple de contrôle](../..//img/vtl/vtl-in-pogues-simple-control.png 'Exemple de contrôle')_Libellé personnalisé avec gestion de la nullité_
 
-## Dans les formules variables calculées
+#### Dans les formules variables calculées
 
 Pogues permet de créer des variables calculées à partir de variables collectées. Par exemple, pour sommer les revenus de l’enquêté et de son conjoint on écrira :
 
@@ -118,7 +114,7 @@ L'expression VTL étant :
 nvl($REVENUS$, 0) + nvl($REVENUS_CONJOINT$, 0)
 ```
 
-## Dans les conditions d'affichage des filtres
+#### Dans les conditions d'affichage des filtres
 
 Voici un exemple de filtre simple exprimé en VTL :
 
@@ -146,48 +142,19 @@ nvl($VARIABLE_EXCLUSIVE$, false) and
 (nvl($AUTRE_VARIABLE_1$, false) or nvl($AUTRE_VARIABLE_2$, false) or nvl($AUTRE_VARIABLE_3$, false))
 ```
 
-## Fonctions et opérateurs
 
-L’usage de VTL dans Pogues et les outils de collecte s’appuie sur les bibliothèques Lunatic (pour les composants graphiques) et Trevas (qui fournit le moteur VTL).
+## Quelques cas pratiques
 
-C’est l’état d’avancement de cette dernière qui permet de connaître les opérateurs et fonctions disponibles : la référence est donc la [page de suivi de l’implémentation](https://inseefr.github.io/Trevas-TS/docs/coverage).
-
-### Logique
-
-| Nom | Symbole | Exemple        |
-| --- | ------- | -------------- |
-| Ou  | or      | true or false  |
-| Et  | and     | true and false |
-
-### Chaînes de caractères
-
-#### Remplacer
-
-| Nom          | Symbole | Exemple                            |
-| ------------ | ------- | ---------------------------------- |
-| Remplacement | replace | `replace("bag", "g", "c") # → bac` |
-
-!!! tip "Aide"
-    Une page référençant les fonctions les plus utilisées avec des exemples est disponible [ici](1-fonctions-vtl.md)
-
-## Cookbook
-
-### Durée
-
-#### Calcul de durée
+#### Calculer une durée
 
 Pour calculer une durée à partir de variables collectées de type Date :
-
 ```
 cast($ARRIVEE$, date, "YYYY-MM-DD") - cast($DEPART$, date, "YYYY-MM-DD")
 ```
-
 Qui fournira le résultat en millisecondes. Pour avoir l'équivalent en jour on pourra écrire :
-
 ```
 (cast($ARRIVEE$, date, "YYYY-MM-DD") - cast($DEPART$, date, "YYYY-MM-DD")) / 86400000
 ```
-
 Pour plus de clarté, le calcul de la durée brute pourra être déportée dans une variable calculée, nommée par exemple `DUREE`, l'obtention du nombre de jours se fera alors à travers la formule :
 
 ```
@@ -214,9 +181,7 @@ number)                                 // 12.30
 > 7.3                                   // true
 ```
 
-### Liste à choix multiples
-
-#### Compter le nombre de choix
+#### Compter le nombre de choix dans un QCM
 
 On souhaite calculer le nombre de cases cochées dans une liste à choix multiples. Les variables considérées sont nommmées dans notre cas `QCM1` à `QCM4`. Le code sera alors :
 
@@ -229,9 +194,7 @@ On souhaite calculer le nombre de cases cochées dans une liste à choix multipl
 
 <span class="label label-rounded label-primary">À noter</span> Cette solution est fastidieuse et difficile à mettre en place pour des longues listes. Des fonctionnalités non-encore disponibles dans VTL permettront à terme une expression plus directe de ce calcul.
 
-### Boucles
-
-#### Premiet et dernier éléments
+#### Premiet et dernier éléments d'un vecteur
 
 Imaginons une boucle permettant de collecter des prénoms (à travers la variable `$PRENOM$`). Les fonctions `first_value` et `last_value` permettent de récupérer respectivement le premier élément de la variable vectorielle `$PRENOM$` en écrivant :
 

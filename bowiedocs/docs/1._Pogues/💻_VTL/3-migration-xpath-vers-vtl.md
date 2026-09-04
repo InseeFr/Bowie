@@ -1,4 +1,4 @@
-# XPath et VTL, les différences
+# Migration XPath vers VTL
 
 Ce document est un résumé permettant de traduire rapidement quelques fonctions ou syntaxes fréquemment utilisées dans les questionnaires entreprises saisis dans Pogues.
 

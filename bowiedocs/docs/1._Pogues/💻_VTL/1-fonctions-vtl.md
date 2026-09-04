@@ -3,9 +3,14 @@ search:
   boost: 2 
 ---
 
-# Fonctions VTL et usages
+# Fonctions et opérateurs
 
-## Liste des opérateurs
+!!! info ""
+    L’usage de VTL dans Pogues et les outils de collecte s’appuie sur les bibliothèques Lunatic (pour les composants graphiques) et Trevas (qui fournit le moteur VTL).
+
+    C’est l’état d’avancement de cette dernière qui permet de connaître les opérateurs et fonctions disponibles : la référence est donc la [page de suivi de l’implémentation](https://inseefr.github.io/Trevas-TS/docs/coverage).
+
+### Liste des opérateurs
 
 |    VTL     | Opérateur         |
 |:----------:| ----------------- |
@@ -19,6 +24,13 @@ search:
 |  `A / B`   | A divisé par B    |
 | `A \|\| B` | concaténer A et B |
 
+### Logique
+
+| Nom | Symbole | Exemple          |
+| --- | ------- | ---------------- |
+| Ou  | `or `   | `true or false`  |
+| Et  | `and`   | `true and false` |
+
 ## Liste de fonctions
 
 ### Les plus utilisés
@@ -31,6 +43,8 @@ search:
 | [**`in ...`**](#in)       | Teste l'appartenance d'une valeur à un ensemble    |
 | [**`if ... then ... else ...`**](#if-then-else)  | Teste si un condition est vraie, _et retourne le contenu du then_ ou fausse, _et retourne le contenu du else_ |
 | [**`current_date()`**](#current_date)  | Retourne la date du jour au format `date` |
+| [**`replace()`**](#replace)  | Remplace dans une chaîne de caractère les occurrences de `<old>` par `new`|
+
 
 
 
@@ -350,6 +364,31 @@ search:
         cast($DATE_NAIS$,date,"YYYY-MM-DD") > cast(current_date(),date,"YYYY-MM-DD")
         ```
 
+
+##### replace
+
+!!! question "Utilité"
+    Quand on veut changer le contenu d'un texte en ciblant spécifiquement une valeur. Cela peut être un simple caractère (lettre, chiffre, simbole) ou une sous-chaîne de caractère (le prénom par exemple).
+
+!!! abstract "Syntaxe"
+    ```
+    replace(<var>, <old>, <new>)
+    ```
+
+    - `var` : chaîne de caractère dans lequel on veut appliquer le remplacement
+    - `old` : sous-chaîne de caractère que l'on veut remplacer
+    - `new` : nouvelle sous-chaîne de caractère
+
+=== "Simple caractère"
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
+    | --- | ---| --- |
+    | `bag` | `replace("$MA_VARIABLE$", "g", "c")` | `bac` |
+    | `Toto, Titi, Tata` | `replace($MA_VARIABLE$, ",", " ;")` | `Toto ; Titi ; Tata` |
+    | `abcde` | `replace($MA_VARIABLE$, "f", " X")` | `abcde` |
+=== "Sous chaîne"
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
+    | --- | ---| --- |
+    | `il est malade, mais il va bien !` | `ceil($MA_VARIABLE$, "il", "elle")` | `elle est malade, mais elle va bien !` |
 
 ##### abs
 
