@@ -22,7 +22,7 @@
     
     
       
-        <title>Fonctions VTL et usages - Atelier de Conception d'Enquêtes (Bowie)</title>
+        <title>Fonctions et opérateurs - Atelier de Conception d'Enquêtes (Bowie)</title>
       
     
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fonctions-vtl-et-usages" class="md-skip">
+        <a href="#fonctions-et-operateurs" class="md-skip">
           Aller au contenu
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fonctions VTL et usages
+              Fonctions et opérateurs
             
           </span>
         </div>
@@ -803,7 +803,7 @@
           
   
   <span class="md-ellipsis">
-    Fonctions VTL et usages
+    Fonctions et opérateurs
   </span>
   
 
@@ -814,7 +814,7 @@
         
   
   <span class="md-ellipsis">
-    Fonctions VTL et usages
+    Fonctions et opérateurs
   </span>
   
 
@@ -839,6 +839,15 @@
   <a href="#liste-des-operateurs" class="md-nav__link">
     <span class="md-ellipsis">
       Liste des opérateurs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logique
     </span>
   </a>
   
@@ -951,6 +960,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      replace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#abs" class="md-nav__link">
     <span class="md-ellipsis">
       abs
@@ -1050,7 +1068,7 @@
         
   
   <span class="md-ellipsis">
-    XPath et VTL, les différences
+    Migration XPath vers VTL
   </span>
   
 
@@ -3198,6 +3216,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#logique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logique
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#liste-de-fonctions" class="md-nav__link">
     <span class="md-ellipsis">
       Liste de fonctions
@@ -3304,6 +3331,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      replace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#abs" class="md-nav__link">
     <span class="md-ellipsis">
       abs
@@ -3377,8 +3413,12 @@
                   
 
 
-<h1 id="fonctions-vtl-et-usages">Fonctions VTL et usages</h1>
-<h2 id="liste-des-operateurs">Liste des opérateurs</h2>
+<h1 id="fonctions-et-operateurs">Fonctions et opérateurs</h1>
+<div class="admonition info">
+<p>L’usage de VTL dans Pogues et les outils de collecte s’appuie sur les bibliothèques Lunatic (pour les composants graphiques) et Trevas (qui fournit le moteur VTL).</p>
+<p>C’est l’état d’avancement de cette dernière qui permet de connaître les opérateurs et fonctions disponibles : la référence est donc la <a href="https://inseefr.github.io/Trevas-TS/docs/coverage">page de suivi de l’implémentation</a>.</p>
+</div>
+<h3 id="liste-des-operateurs">Liste des opérateurs</h3>
 <table>
 <thead>
 <tr>
@@ -3425,6 +3465,28 @@
 </tr>
 </tbody>
 </table>
+<h3 id="logique">Logique</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Symbole</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ou</td>
+<td><code class="highlight"><span class="n">or</span></code></td>
+<td><code class="highlight"><span class="n">true</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">false</span></code></td>
+</tr>
+<tr>
+<td>Et</td>
+<td><code class="highlight"><span class="n">and</span></code></td>
+<td><code class="highlight"><span class="n">true</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">false</span></code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="liste-de-fonctions">Liste de fonctions</h2>
 <h3 id="les-plus-utilises">Les plus utilisés</h3>
 <table>
@@ -3462,6 +3524,10 @@
 <tr>
 <td><a href="#current_date"><strong><code class="highlight"><span class="nf">current_date</span><span class="p">()</span></code></strong></a></td>
 <td>Retourne la date du jour au format <code class="highlight"><span class="n">date</span></code></td>
+</tr>
+<tr>
+<td><a href="#replace"><strong><code class="highlight"><span class="nf">replace</span><span class="p">()</span></code></strong></a></td>
+<td>Remplace dans une chaîne de caractère les occurrences de <code class="highlight"><span class="o">&lt;</span><span class="n">old</span><span class="o">&gt;</span></code> par <code class="highlight"><span class="n">new</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -4166,6 +4232,71 @@ Pour se faire on utilise le transtypage en texte avec la fonction <a href="#cast
 </div>
 </div>
 </details>
+<h5 id="replace">replace</h5>
+<div class="admonition question">
+<p class="admonition-title">Utilité</p>
+<p>Quand on veut changer le contenu d'un texte en ciblant spécifiquement une valeur. Cela peut être un simple caractère (lettre, chiffre, simbole) ou une sous-chaîne de caractère (le prénom par exemple).</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Syntaxe</p>
+<div class="highlight"><pre><span></span><code><span class="nf">replace</span><span class="p">(</span><span class="o">&lt;</span><span class="n">var</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="o">&lt;</span><span class="n">old</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="o">&lt;</span><span class="n">new</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li><code class="highlight"><span class="n">var</span></code> : chaîne de caractère dans lequel on veut appliquer le remplacement</li>
+<li><code class="highlight"><span class="n">old</span></code> : sous-chaîne de caractère que l'on veut remplacer</li>
+<li><code class="highlight"><span class="n">new</span></code> : nouvelle sous-chaîne de caractère</li>
+</ul>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Simple caractère</label><label for="__tabbed_14_2">Sous chaîne</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Valeur de <code class="highlight"><span class="n">MA_VARIABLE</span></code></th>
+<th>Fonction</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="highlight"><span class="n">bag</span></code></td>
+<td><code class="highlight"><span class="nf">replace</span><span class="p">(</span><span class="s">&quot;$MA_VARIABLE$&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;g&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;c&quot;</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="n">bac</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="n">Toto</span><span class="p">,</span><span class="w"> </span><span class="n">Titi</span><span class="p">,</span><span class="w"> </span><span class="n">Tata</span></code></td>
+<td><code class="highlight"><span class="nf">replace</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;,&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; ;&quot;</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="n">Toto</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">Titi</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">Tata</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="n">abcde</span></code></td>
+<td><code class="highlight"><span class="nf">replace</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;f&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; X&quot;</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="n">abcde</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Valeur de <code class="highlight"><span class="n">MA_VARIABLE</span></code></th>
+<th>Fonction</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="highlight"><span class="n">il</span><span class="w"> </span><span class="n">est</span><span class="w"> </span><span class="n">malade</span><span class="p">,</span><span class="w"> </span><span class="n">mais</span><span class="w"> </span><span class="n">il</span><span class="w"> </span><span class="n">va</span><span class="w"> </span><span class="n">bien</span><span class="w"> </span><span class="o">!</span></code></td>
+<td><code class="highlight"><span class="nf">ceil</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;il&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;elle&quot;</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="n">elle</span><span class="w"> </span><span class="n">est</span><span class="w"> </span><span class="n">malade</span><span class="p">,</span><span class="w"> </span><span class="n">mais</span><span class="w"> </span><span class="n">elle</span><span class="w"> </span><span class="n">va</span><span class="w"> </span><span class="n">bien</span><span class="w"> </span><span class="o">!</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 <h5 id="abs">abs</h5>
 <p><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f6a7.svg" title=":construction:" /> Coming soon ...</p>
 <h5 id="ceil">ceil</h5>
@@ -4181,7 +4312,7 @@ Pour se faire on utilise le transtypage en texte avec la fonction <a href="#cast
 <li><code class="highlight"><span class="n">var</span></code> : nombre à arrondir</li>
 </ul>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Positif</label><label for="__tabbed_14_2">Négatif</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Positif</label><label for="__tabbed_15_2">Négatif</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -4256,7 +4387,7 @@ Pour se faire on utilise le transtypage en texte avec la fonction <a href="#cast
 <li><code class="highlight"><span class="n">var</span></code> : nombre à arrondir</li>
 </ul>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Positif</label><label for="__tabbed_15_2">Négatif</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Positif</label><label for="__tabbed_16_2">Négatif</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -4330,7 +4461,7 @@ Pour se faire on utilise le transtypage en texte avec la fonction <a href="#cast
 <li><code class="highlight"><span class="n">diviseur</span></code> : valeur par laquelle on veut diviser <code class="highlight"><span class="n">var</span></code></li>
 </ul>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Nombre</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Nombre</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -4364,7 +4495,7 @@ Pour se faire on utilise le transtypage en texte avec la fonction <a href="#cast
 </div>
 <details class="example">
 <summary>Exemple d'utilisation</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Précision d'un nombre</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">Précision d'un nombre</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Si on veut vérifier qu'une variable <code class="highlight"><span class="n">JOUR</span></code> est renseignée avec une précision à là demi-journée près, on peut écrire un contrôle avec la condition d'affichage suivante : <br />
@@ -4390,7 +4521,7 @@ Pour se faire on utilise le transtypage en texte avec la fonction <a href="#cast
 <li><code class="highlight"><span class="n">precision</span></code> : nombre de chiffre après la virgule <code class="highlight"><span class="n">var</span></code></li>
 </ul>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="18:3"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><input id="__tabbed_18_3" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">Precision 0</label><label for="__tabbed_18_2">Precision 1</label><label for="__tabbed_18_3">Precision 2</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:3"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><input id="__tabbed_19_3" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">Precision 0</label><label for="__tabbed_19_2">Precision 1</label><label for="__tabbed_19_3">Precision 2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
