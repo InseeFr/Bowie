@@ -17,7 +17,7 @@ Après habilitation par l'atelier de conception, il suffit d'utiliser [l'url de 
 
 ## Connexion pour un utilisateur SSM ou statistique publique
 
-Lors de votre première connexion depuis [l’url de l’application :material-open-in-new :material-open-in-new:](https://conception-questionnaires.insee.fr/){target="_blank"}, pensez bien à utiliser **le bouton « S'identifier avec ProConnect »** avant de saisir votre identifiant / mot de passe, la connexion directe avec identifiant  / mot de passe est inopérante.
+Lors de votre première connexion depuis [l’url de l’application :material-open-in-new:](https://conception-questionnaires.insee.fr/){target="_blank"}, pensez bien à utiliser **le bouton « S'identifier avec ProConnect »** avant de saisir votre identifiant / mot de passe, la connexion directe avec identifiant  / mot de passe est inopérante.
 
 ![S'authentifier via ProConnect](../../img/pogues/auth-proconnect.png)
 
