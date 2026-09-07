@@ -2,7 +2,7 @@
 
 Ce document guide l’utilisateur de Pogues dans son usage du langage VTL.
 
-## VTL - qu’es aquò ?
+## VTL - Quésaco ?
 
 [VTL](https://sdmx.org/?page_id=5096) (Validation and Transformation Language) est un langage de programmation né dans le giron du standard de description de données agrégées SDMX. Ce langage est adopté ou en cours d’adoption par les mêmes utilisateurs que SDMX, essentiellement des banques centrales et des instituts nationaux de statistiques.
 
