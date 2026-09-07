@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -3220,12 +3220,12 @@
 <li>la <em>liste de codes</em> permettant de décrire les différents liens possibles.</li>
 </ul>
 <p>La variable source du sexe n'est pas un attribut à renseigner obligatoirement pour faire fonctionner la question de type liens deux à deux. Toutefois, elle est indispensable pour accéder aux <a href="../../Variables/variables-globales/#variables-globales-issues-des-liens-deux-a-deux">variables globales décrivant les parents, enfants et conjoints</a>. </p>
-<p><a class="glightbox" href="../../../../img/pogues/creer-lien-2-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création des liens 2 à 2" src="../../../../img/pogues/creer-lien-2-2.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création des liens 2 à 2" src="../../../../img/pogues/creer-lien-2-2.png" /></a></p>
 <div class="admonition tips la liste de codes pour les liens entre les habitants du logement au t1-2026">
 <p class="admonition-title">Tips</p>
 <p>La liste de codes à utiliser pour les liens entre les habitants du logement est maintenue par la division RTI et en partie internalisée dans les outils de l'atelier pour la fourniture des liens réciproques.
 Il est impératif de l'utiliser sans modifications.</p>
-<p><a class="glightbox" href="../../../../img/pogues/modalites-liens.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Liste de codes des liens 2 à 2 au T1-2026" src="../../../../img/pogues/modalites-liens.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Liste de codes des liens 2 à 2 au T1-2026" src="../../../../img/pogues/modalites-liens.png" /></a></p>
 </div>
 <h2 id="deux-presentations-possibles">Deux présentations possibles</h2>
 <p>Lors du remplissage du questionnaire on déclare les liens entre les habitants du logement en choisissant la nature du lien dans une liste déroulante. </p>
@@ -3242,7 +3242,7 @@ Il est impératif de l'utiliser sans modifications.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Illustration avec un questionnaire simplifé dans Pogues</p>
-<p><a class="glightbox" href="../../../../img/pogues/2a2-links-loop-example.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/2a2-links-loop-example.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/2a2-links-loop-example.png" /></a></p>
 <ul>
 <li>Boucle principale <code class="highlight"><span class="n">HABITANTS</span></code> posée sur la séquence <code class="highlight"><span class="n">S1</span></code></li>
 <li>Boucle liée <code class="highlight"><span class="n">HABITANTS_LIENS</span></code> posée sur la sous-séquence <code class="highlight"><span class="n">LIENS</span></code></li>
@@ -3254,12 +3254,12 @@ Il est impératif de l'utiliser sans modifications.</p>
 En reprenant l'exemple ci-dessus, il faut ajouter dans la boucle <code class="highlight"><span class="n">HABITANTS_LIENS</span></code> la condition 
 <div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
 </code></pre></div>
-<a class="glightbox" href="../../../../img/pogues/2a2-links-loop-sauf-condition.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/2a2-links-loop-sauf-condition.png" /></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/2a2-links-loop-sauf-condition.png" /></a></p>
 </div>
 <h2 id="un-exemple">Un exemple</h2>
 <p>Prenons un exemple avec une famille de 5 personnes : </p>
-<p><a class="glightbox" href="../../../../img/pogues/famille-liens.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Famille pour les liens" src="../../../../img/pogues/famille-liens.png" /></a></p>
-<p>C'est Laura qui répond au questionnaire, elle déclare d'abord son conjoint, puis les enfants et termine par le grand-père. Elle déclare les liens sans se tromper <img alt="🤓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f913.svg" title=":nerd:" /> </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Famille pour les liens" src="../../../../img/pogues/famille-liens.png" /></a></p>
+<p>C'est Laura qui répond au questionnaire, elle déclare d'abord son conjoint, puis les enfants et termine par le grand-père. Elle déclare les liens sans se tromper <img alt="🤓" class="twemoji" src="../../../../assets/external/cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f913.svg" title=":nerd:"> </p>
 <h3 id="le-remplissage-du-questionnaire">Le remplissage du questionnaire</h3>
 <h4 id="cas-sans-boucle-tous-les-habitants-sur-la-meme-page">Cas sans boucle (tous les habitants sur la même page)</h4>
 <div class="admonition example">
@@ -3268,10 +3268,10 @@ En reprenant l'exemple ci-dessus, il faut ajouter dans la boucle <code class="hi
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>En présence d'une déclaration sur la sous-séquence, on affiche une page de présentation des liens.
-<a class="glightbox" href="../../../../img/pogues/prez-ss-seq-liens22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Page de présentation de la sous-séquence" src="../../../../img/pogues/prez-ss-seq-liens22.png" /></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Page de présentation de la sous-séquence" src="../../../../img/pogues/prez-ss-seq-liens22.png" /></a></p>
 </div>
 <div class="tabbed-block">
-<p><a class="glightbox" href="../../../../img/pogues/remplissage-ss-boucle-liens22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Remplissage des liens sans boucle" src="../../../../img/pogues/remplissage-ss-boucle-liens22.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Remplissage des liens sans boucle" src="../../../../img/pogues/remplissage-ss-boucle-liens22.png" /></a></p>
 </div>
 </div>
 </div>
@@ -3284,27 +3284,27 @@ En reprenant l'exemple ci-dessus, il faut ajouter dans la boucle <code class="hi
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Ici on fait le choix de ne pas spécifier de déclaration sur la sous-séquence afin de ne pas afficher la page de présentation de la sous-séquence. On collecte les 4 liens qui lient Laura et les autres habitants du logement.
-<a class="glightbox" href="../../../../img/pogues/liens-laura.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Liens de Laura" src="../../../../img/pogues/liens-laura.png" /></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Liens de Laura" src="../../../../img/pogues/liens-laura.png" /></a></p>
 </div>
 <div class="tabbed-block">
 <p>On collecte 3 liens et on rappelle le lien symétrique de celui déjà collecté auprès de Laura.
-<a class="glightbox" href="../../../../img/pogues/liens-laurent.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Liens de Laurent" src="../../../../img/pogues/liens-laurent.png" /></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Liens de Laurent" src="../../../../img/pogues/liens-laurent.png" /></a></p>
 </div>
 <div class="tabbed-block">
-<p><a class="glightbox" href="../../../../img/pogues/liens-jade.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Liens de Jade" src="../../../../img/pogues/liens-jade.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Liens de Jade" src="../../../../img/pogues/liens-jade.png" /></a></p>
 </div>
 <div class="tabbed-block">
-<p><a class="glightbox" href="../../../../img/pogues/liens-noe.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Liens de Noé" src="../../../../img/pogues/liens-noe.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Liens de Noé" src="../../../../img/pogues/liens-noe.png" /></a></p>
 </div>
 <div class="tabbed-block">
-<p><a class="glightbox" href="../../../../img/pogues/liens-marcel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Liens de Marcel" src="../../../../img/pogues/liens-marcel.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Liens de Marcel" src="../../../../img/pogues/liens-marcel.png" /></a></p>
 </div>
 </div>
 </div>
 </div>
 <h3 id="les-donnees-collectees">Les données collectées</h3>
 <p>Voici les données telles qu'elles sont collectées :</p>
-<p><a class="glightbox" href="../../../../img/pogues/matrice-liens.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Matrice des liens" src="../../../../img/pogues/matrice-liens.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Matrice des liens" src="../../../../img/pogues/matrice-liens.png" /></a></p>
 <p>Le format des données collectées lors d'une question de type lien deux à deux ne permet pas à ce jour de mobiliser simplement, en cours de collecte chaque lien, c'est pourquoi on met à votre disposition des variables globales permettant de mobiliser les principales informations utiles au questionnement (prénom et sexe des parents, prénom du conjoint, liste des prénoms des enfants).</p>
 <div class="admonition abstract">
 <p class="admonition-title">Pour aller plus loin</p>
@@ -3417,5 +3417,9 @@ En reprenant l'exemple ci-dessus, il faut ajouter dans la boucle <code class="hi
       <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -3022,7 +3022,7 @@
 Elles sont accessibles en lecture seule pour les variables collectées et en édition pour les variables calculées et externes avec un classement par portée (niveau de calcul pour les boucles et les tableaux).</p>
 <div class="admonition abstract">
 <p class="admonition-title">Variables d'un questionnaire</p>
-<p><a class="glightbox" href="../../../img/pogues/variable-list.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="variable-list" src="../../../img/pogues/variable-list.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="variable-list" src="../../../img/pogues/variable-list.png" /></a></p>
 <ol>
 <li><code class="highlight"><span class="n">id</span></code> : identifiant du questionnaire</li>
 <li><code class="highlight"><span class="n">filtres</span></code> : permet de filtrer selon certains critères la liste des variables affichées<ol>
@@ -3152,5 +3152,9 @@ Elles sont accessibles en lecture seule pour les variables collectées et en éd
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

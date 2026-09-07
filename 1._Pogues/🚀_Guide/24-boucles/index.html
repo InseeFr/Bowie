@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -3183,16 +3183,16 @@ Ex : ensemble des questions pour identifier une personnes, <code class="highligh
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Affichage des occurrences sur la même page</label><label for="__tabbed_2_2">Affichage d'une occurrence par page</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><a class="glightbox" href="../../../img/pogues/loop-all-occu-same-page.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/loop-all-occu-same-page.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/loop-all-occu-same-page.png" /></a></p>
 </div>
 <div class="tabbed-block">
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Page 1</label><label for="__tabbed_3_2">Page 2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><a class="glightbox" href="../../../img/pogues/loop-all-occu-by-page-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/loop-all-occu-by-page-1.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/loop-all-occu-by-page-1.png" /></a></p>
 </div>
 <div class="tabbed-block">
-<p><a class="glightbox" href="../../../img/pogues/loop-all-occu-by-page-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/loop-all-occu-by-page-2.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/loop-all-occu-by-page-2.png" /></a></p>
 </div>
 </div>
 </div>
@@ -3223,7 +3223,7 @@ Ex : ensemble des questions pour identifier une personnes, <code class="highligh
 <p>En reprenant l'exemple du paragraphe précédent, on pourrait par exemple exclure les mineurs avec la formule VTL :</p>
 <div class="highlight"><pre><span></span><code><span class="n">AGE</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">18</span>
 </code></pre></div>
-<p>Ou mieux, exclure les individus hors champs en nous appuyant sur l'indicatrice calculée ! <img alt="😃" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f603.svg" title=":smiley:" /></p>
+<p>Ou mieux, exclure les individus hors champs en nous appuyant sur l'indicatrice calculée ! <img alt="😃" class="twemoji" src="../../../assets/external/cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f603.svg" title=":smiley:"></p>
 
 
 
@@ -3331,5 +3331,9 @@ Ex : ensemble des questions pour identifier une personnes, <code class="highligh
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

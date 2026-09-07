@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -3113,7 +3113,7 @@
 </code></pre></div></li>
 <li>
 <p>On visualise et on va sur la page de notre tableau
-    <a class="glightbox" href="../../../img/pogues/somme_tab_null_init.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/somme_tab_null_init.png" /></a></p>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/somme_tab_null_init.png" /></a></p>
 <div class="admonition tip">
 <p class="admonition-title">info</p>
 <p>Quand on arrive au début du questionnaire sans rien avoir remplie, <code class="highlight"><span class="n">CA</span></code> est un vecteur vide, <code class="highlight"><span class="p">[]</span></code> <br>
@@ -3122,8 +3122,8 @@ Donc <code class="highlight"><span class="n">SUM_TAB</span><span class="w"> </sp
 </li>
 <li>
 <p>On décide de remplir uniquement la première et la troisième ligne, on obtient le résultat suivant : 
-<a class="glightbox" href="../../../img/pogues/somme_tab_null.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/somme_tab_null.png" /></a>
-<strong>La somme des CA vaut <code class="highlight"><span class="n">null</span></code></strong> <img alt="🤯" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f92f.svg" title=":exploding_head:" /> </p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/somme_tab_null.png" /></a>
+<strong>La somme des CA vaut <code class="highlight"><span class="n">null</span></code></strong> <img alt="🤯" class="twemoji" src="../../../assets/external/cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f92f.svg" title=":exploding_head:"> </p>
 </li>
 </ul>
 <h2 id="cause">Cause</h2>
@@ -3147,14 +3147,14 @@ Voir <a href="../../%F0%9F%9A%80_Guide/Questions/13-reponse-simple/#type-de-repo
 </code></pre></div></p>
 </li>
 </ol>
-<p><strong>Et on obtient le résultat voulu</strong> <img alt="🎉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f389.svg" title=":tada:" /></p>
-<p><a class="glightbox" href="../../../img/pogues/somme_tab_null_res.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/somme_tab_null_res.png" /></a></p>
+<p><strong>Et on obtient le résultat voulu</strong> <img alt="🎉" class="twemoji" src="../../../assets/external/cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f389.svg" title=":tada:"></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/somme_tab_null_res.png" /></a></p>
 <div class="admonition tips">
 <p class="admonition-title">Info</p>
 <p>Voir <strong><a href="../../%F0%9F%9A%80_Guide/24-boucles/#portee-des-variables-champ-niveau-de-calcul">portée des variables</a></strong> pour plus de détails sur comment utilisé le niveau de calcul</p>
 </div>
 <h2 id="questionnaire-exemple">Questionnaire exemple</h2>
-<p>Pour référence, un <a href="https://conception-questionnaires.insee.fr/questionnaire/m2iwuqca">questionnaire implémentant cette solution :materialopen-in-new:</a> est disponible dans l'environnement de demo, sous le timbre DOCUMENTATION</p>
+<p>Pour référence, un <a href="https://conception-questionnaires.insee.fr/questionnaire/m2iwuqca" target="_blank">questionnaire implémentant cette solution <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a> est disponible dans l'environnement de demo, sous le timbre DOCUMENTATION</p>
 
 
 
@@ -3262,5 +3262,9 @@ Voir <a href="../../%F0%9F%9A%80_Guide/Questions/13-reponse-simple/#type-de-repo
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

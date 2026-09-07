@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -3080,7 +3080,7 @@
 <p>✨ On crée les variables externes via le menu "Variables" en cliquant sur le bouton en haut à droite "Créer une variable".</p>
 <div class="admonition abstract">
 <p class="admonition-title">Nouvelle variable externe</p>
-<p><a class="glightbox" href="../../../../img/pogues/var-creation-external.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/var-creation-external.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/var-creation-external.png" /></a></p>
 <ol>
 <li><code class="highlight"><span class="n">Type</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">variable</span><span class="o">*</span></code> : permet de sélectionner le type de variable souhaité : calculée ou externe</li>
 <li><code class="highlight"><span class="n">Variable</span><span class="w"> </span><span class="n">réinitialisable</span></code> : attribut réservé aux enquêtes ayant un protocole complexe de collecte concurrentielle enquêteur / web : il peut arriver que l'enquêteur reprenne la main sur un questionnaire web et ait besoin de "supprimer" les réponses web : on offrira donc à l'enquêteur, dans Sabiane, la possibilité de remettre les données du questionnaire à vide. L'attribut <code class="highlight"><span class="n">Variable</span><span class="w"> </span><span class="n">réinitialisable</span></code> permet de tagger les variables qu'on permet de vider.</li>
@@ -3224,5 +3224,9 @@ Par exemple : pour un vecteur de produits appelé PRODUITS, dans le fichier de p
       <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

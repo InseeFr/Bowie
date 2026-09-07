@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -3305,7 +3305,7 @@
 <p>Il existe 3 types de réponse pour les questions QCU (question à choix unique). Les types de réponses correspondent à la façon dont on va décrire les modalités de réponses proposées à l'enquêté.</p>
 <h3 id="liste-de-codes">Liste de codes</h3>
 <p>Avant de spécifier la question QCU avec une réponse de type sélection dans une liste de codes, il faut avoir créer la liste de codes.
-<a class="glightbox" href="../../../../img/pogues/Creer_QCU_liste_codes.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Créer un QCU réponse dans une liste de codes" src="../../../../img/pogues/Creer_QCU_liste_codes.png" /></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Créer un QCU réponse dans une liste de codes" src="../../../../img/pogues/Creer_QCU_liste_codes.png" /></a></p>
 <p>Plus de détails dans la page <a href="../../14-liste-codes/">Les listes de codes</a>.</p>
 <p>La démarche pas-à-pas pour créer une question QCU basée sur une liste de codes est détaillée dans le tutoriel, <a href="../../../%F0%9F%8E%93_Tutoriel/14-creation-liste-qcu/">Création d'une réponse basée sur une liste</a>.</p>
 <h4 id="filtrer-les-modalites">Filtrer les modalités</h4>
@@ -3341,7 +3341,7 @@
 <p>La question QCU peut être positionnée au sein d'une boucle ou en dehors.</p>
 <p>La formule VTL s'applique en exploitant des variables de portée questionnaire ou de même portée que la variable décrivant les modalités du QCU.</p>
 <p>Par exemple, je peux filtrer la variable <code class="highlight"><span class="n">PRENOM</span></code> issue d'une boucle <code class="highlight"><span class="n">BOUCLE_PRENOM</span></code> utilisant dans ma formule VTL toute variable de portée <code class="highlight"><span class="n">BOUCLE_PRENOM</span></code> qu'elle soit collectée, externe ou calculée.</p>
-<p><a class="glightbox" href="../../../../img/pogues/QCU-variableM-filtre.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Filtrer un QCU variable issue d'une boucle ménage" src="../../../../img/pogues/QCU-variableM-filtre.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Filtrer un QCU variable issue d'une boucle ménage" src="../../../../img/pogues/QCU-variableM-filtre.png" /></a></p>
 <p>La même logique d'affichage que pour le filtre d'une question est mise en oeuvre :</p>
 <table>
 <thead>
@@ -3490,5 +3490,9 @@ Il faut "Spécifier la liste de codes" (c'est-à-dire décrire les modalités de
       <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

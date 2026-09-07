@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -3077,7 +3077,7 @@
 <span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">Filtrée</span><span class="w"> </span><span class="n">sur</span><span class="w"> </span><span class="n">l</span><span class="s">&#39;</span><span class="err">appartenance du libellé en clair à la liste des libellés flous</span>
 </code></pre></div>
 <h2 id="mode-operatoire">Mode opératoire</h2>
-<p>On commence donc par créer la question initiale, avec un type de réponse à choix unique ou via une recherche sur liste (<img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> pas encore directement implémenté dans Pogues). La variable issue de cette réponse sera nommée <code class="highlight"><span class="n">PROFESSION</span></code>.</p>
+<p>On commence donc par créer la question initiale, avec un type de réponse à choix unique ou via une recherche sur liste (<img alt="⚠" class="twemoji" src="../../../assets/external/cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:"> pas encore directement implémenté dans Pogues). La variable issue de cette réponse sera nommée <code class="highlight"><span class="n">PROFESSION</span></code>.</p>
 <p>Pour pouvoir proposer une deuxième question proposant un champ texte libre et une variable de collecte <code class="highlight"><span class="n">PROFESSION_EN_CLAIR</span></code>. Cette question sera filtrée par l'expression :</p>
 <p><code class="highlight"><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">PROFESSION</span><span class="o">$</span><span class="p">)</span></code></p>
 <p>Avant de pouvoir mobiliser cette réponse, nous allons la normaliser pour coller à la liste existante des libellés flous. Cette normalisation :</p>
@@ -3251,5 +3251,9 @@ puis “intermittentduspectacle”</p>
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

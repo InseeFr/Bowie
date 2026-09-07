@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -3153,13 +3153,13 @@
 <h2 id="creation-des-sous-sequences">Création des sous-séquences</h2>
 <p>D’abord, créons les trois sous-séquences. </p>
 <p>Commençons par la sous-séquence <code class="highlight"><span class="n">CARACTERISTIQUES</span></code>. Pour cela on se place dans la séquence qui nous intéresse, sur l'élément sous lequel on veut voir apparaître notre sous-séquence : on clique sur la question <code class="highlight"><span class="n">PRENOM</span></code> puis on clique sur le bouton "Sous-séquence" dans le bandeau du haut.
-<a class="glightbox" href="../../../img/pogues/sub-seq-creation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Créer une sous-séquence" src="../../../img/pogues/sub-seq-creation.png" /></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Créer une sous-séquence" src="../../../img/pogues/sub-seq-creation.png" /></a></p>
 <p>Il suffit ensuite de remplir la modale qui vient de s'ouvrir avec les informations suivantes et valider.</p>
 <ul>
 <li><em>Identifiant</em> : <code class="highlight"><span class="n">CARACTERISTIQUES</span></code></li>
 <li><em>Libellé</em> : "Parlons de vous"</li>
 </ul>
-<p><a class="glightbox" href="../../../img/pogues/sub-seq-creation-modal.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/sub-seq-creation-modal.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/sub-seq-creation-modal.png" /></a></p>
 <p>Faire de même avec les deux autres sous-séquences :</p>
 <ul>
 <li>sous-séquence <code class="highlight"><span class="n">TRAVAIL</span></code> ayant le libellé "Votre environnement de travail";</li>
@@ -3167,7 +3167,7 @@
 </ul>
 <details class="success">
 <summary>Solution</summary>
-<p><a class="glightbox" href="../../../img/pogues/sub-seq-creation-solution.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/sub-seq-creation-solution.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/sub-seq-creation-solution.png" /></a></p>
 </details>
 <div class="admonition abstract">
 <p class="admonition-title">Pour aller plus loin</p>
@@ -3195,7 +3195,7 @@
 </div>
 <details class="success">
 <summary>Solution</summary>
-<p><a class="glightbox" href="../../../img/pogues/question-creation-simple-date.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/question-creation-simple-date.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/question-creation-simple-date.png" /></a></p>
 </details>
 <p>Générez la variable puis validez.</p>
 <div class="admonition abstract">
@@ -3214,7 +3214,7 @@
 </div>
 <p>Cette fois, utilisons la visualisation "Web entreprise". Cette visualisation a la particularité de mettre <strong>toutes les questions d'une même séquence sur la même page</strong>. </p>
 <p>On observe ainsi toute la structure de la première séquence, avec l'enchaînement des sous-séquences et les questions qu'elles contiennent.</p>
-<p><a class="glightbox" href="../../../img/pogues/visu-business.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Visualisation en contexte entrepris" src="../../../img/pogues/visu-business.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Visualisation en contexte entrepris" src="../../../img/pogues/visu-business.png" /></a></p>
 <p>Sur la page suivante, on retrouve la deuxième séquence "Avis sur l'exercice" qui reste à construire.</p>
 <p>Lorsqu'on est satisfaits des changements réalisés, <strong>on sauvegarde !</strong></p>
 <div class="admonition tip">
@@ -3337,5 +3337,9 @@
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

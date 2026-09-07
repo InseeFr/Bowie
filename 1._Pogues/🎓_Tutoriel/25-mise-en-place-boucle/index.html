@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -3120,29 +3120,29 @@
 </ul>
 <p>Dans notre cas, on spécifiera ces valeurs :</p>
 <ul>
-<li><em>Identifiant</em> <code class="highlight"><span class="n">BOUCLE_COLLEGUE</span></code> (oui, on fait simple <img alt="😄" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f604.svg" title=":smile:" />)</li>
+<li><em>Identifiant</em> <code class="highlight"><span class="n">BOUCLE_COLLEGUE</span></code> (oui, on fait simple <img alt="😄" class="twemoji" src="../../../assets/external/cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f604.svg" title=":smile:">)</li>
 <li><em>Nombre d'occurrences</em> l'expression VTL <code class="highlight"><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">COMBIEN_PARTAGE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span></code>, ce qui permet d'avoir <code class="highlight"><span class="m">1</span></code> si la question précédente n'a pas été répondue ou la valeur de la réponse si on l'a obtenue</li>
 <li><em>Début</em> la sous-séquence <code class="highlight"><span class="n">COLLEGUE</span></code></li>
 <li><em>Fin</em> la sous-séquence <code class="highlight"><span class="n">COLLEGUE</span></code></li>
 </ul>
-<p><a class="glightbox" href="../../../img/pogues/boucle-collegue.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création boucle collègue" src="../../../img/pogues/boucle-collegue.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création boucle collègue" src="../../../img/pogues/boucle-collegue.png" /></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>L'interface de création des boucles nous guide pour paramètrer la configuration de la boucle en fonction du contexte de visualisation (ménage / entreprise). Il convient de bien les respecter.</p>
 </div>
-<p>Nous venons de créer notre première boucle <img alt="👏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f44f.svg" title=":clap:" />.</p>
+<p>Nous venons de créer notre première boucle <img alt="👏" class="twemoji" src="../../../assets/external/cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f44f.svg" title=":clap:">.</p>
 <p>En visualisant notre questionnaire par exemple en web ménage, on remarque qu'il est difficile de différencier les itérations des différents collègues : ajoutons un peu de personnalisation à la boucle.</p>
 <h2 id="personnalisation-de-la-boucle">Personnalisation de la boucle</h2>
 <p>Pogues nous permet d'utiliser des <a href="../../%F0%9F%9A%80_Guide/Variables/variables-globales/">variables systèmes</a> bien sympathiques, notamment GLOBAL_ITERATION_INDEX qui donne la position dans une boucle. </p>
 <p>Utilisons la pour indiquer à notre répondant où il en est dans son remplissage de boucle. On modifie le libellé de la sous-séquence sur laquelle on boucle.
-<a class="glightbox" href="../../../img/pogues/utiliser-global-it-index.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Ajout de la personnalisation dans le libellé de sous-séquence de la boucle" src="../../../img/pogues/utiliser-global-it-index.png" /></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Ajout de la personnalisation dans le libellé de sous-séquence de la boucle" src="../../../img/pogues/utiliser-global-it-index.png" /></a></p>
 <details class="success">
 <summary>Visualisation d'une occurrence de boucle collègue après personnalisation</summary>
-<p><a class="glightbox" href="../../../img/pogues/visu-boucle-perso.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Visualisation boucle personnalisées" src="../../../img/pogues/visu-boucle-perso.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Visualisation boucle personnalisées" src="../../../img/pogues/visu-boucle-perso.png" /></a></p>
 </details>
 <p>Il est bien évidemment possible de personnaliser encore plus notre boucle, par exemple en collectant les prénoms des collègues dans une première boucle puis en faisant une boucle liée où on pose les questions sur chaque collègue. </p>
 <h2 id="corrige">Corrigé</h2>
-<p>Vous pouvez comparer votre création avec le <a href="https://conception-questionnaires-demo.insee.fr/questionnaire/ml82b1lb">corrigé de l'exercice <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a>.</p>
+<p>Vous pouvez comparer votre création avec le <a href="https://conception-questionnaires-demo.insee.fr/questionnaire/ml82b1lb" target="_blank">corrigé de l'exercice <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a>.</p>
 <p>Maintenant qu'on vous a donné les bases, on vous laisse découvrir toutes les possibilités de l'outil !</p>
 
 
@@ -3251,5 +3251,9 @@
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

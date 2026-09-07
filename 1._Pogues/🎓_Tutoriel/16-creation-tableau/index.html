@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -3086,7 +3086,7 @@
 <h1 id="creation-dun-tableau">Création d'un tableau</h1>
 <p>Passons aux questions de la sous-séquence "Votre environnement de travail".</p>
 <p>La prochaine question se présente sous la forme d'un tableau dans lequel nous allons capter la ventilation des activités de la personne que l'on interroge à partir d'une liste de modalités L_ACTIVITES à créer dans l'onglet des listes de codes.</p>
-<p><a class="glightbox" href="../../../img/pogues/L_ACTIVITES.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Liste des activités" src="../../../img/pogues/L_ACTIVITES.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Liste des activités" src="../../../img/pogues/L_ACTIVITES.png" /></a></p>
 <p>Créons la question avec avec les éléments suivants:</p>
 <ul>
 <li>le libellé "Quel pourcentage de votre temps de travail consacrez-vous en moyenne à ces différentes activités ?",</li>
@@ -3100,7 +3100,7 @@
 <li><em>Statique</em> → pour la création d'un tableau disposant d'entêtes de lignes créés à partir d'une liste de code.</li>
 </ul>
 <p>Ici, on choisit le format "Liste de codes".</p>
-<p><a class="glightbox" href="../../../img/pogues/tableau-axe-principal.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Tableau axe principal" src="../../../img/pogues/tableau-axe-principal.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Tableau axe principal" src="../../../img/pogues/tableau-axe-principal.png" /></a></p>
 <p>On sélectionne une liste de codes parmi celle disponibles : L_ACTIVITES.</p>
 <h2 id="definition-des-colonnes">Définition des colonnes</h2>
 <p>Pour créer les colonnes du tableau, rendez-vous un peu plus bas dans la section "Information mesurée". Ici, nous souhaitons créer une colonne pour collecter le pourcentage de temps de travail alloué à chacune des activités de la liste.</p>
@@ -3111,7 +3111,7 @@
 <li><em>Unité de mesure</em> "%"</li>
 </ul>
 <p>Puis on valide.</p>
-<p><a class="glightbox" href="../../../img/pogues/tableau-mesure.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Tableau axe principal" src="../../../img/pogues/tableau-mesure.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Tableau axe principal" src="../../../img/pogues/tableau-mesure.png" /></a></p>
 <p>Il ne reste qu'à générer les variables puis à valider la question.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3126,10 +3126,10 @@
 </div>
 </div>
 <p>Pour finir cette sous séquence, on va créer une question simple de type numérique pour interroger notre enquêté sur le nombre de collègues qui partagent son bureau.
-<a class="glightbox" href="../../../img/pogues/QNUM.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Question numérique sur le nombre de collègues" src="../../../img/pogues/QNUM.png" /></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Question numérique sur le nombre de collègues" src="../../../img/pogues/QNUM.png" /></a></p>
 <details class="success">
 <summary>Solution</summary>
-<p><a class="glightbox" href="../../../img/pogues/seq-travail-complet.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Sous-séquence travail" src="../../../img/pogues/seq-travail-complet.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Sous-séquence travail" src="../../../img/pogues/seq-travail-complet.png" /></a></p>
 </details>
 <h2 id="suite">Suite</h2>
 <p><a class="md-button" href="../17-finalisation-structure/">Finalisation de la structure du questionnaire</a></p>
@@ -3240,5 +3240,9 @@
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

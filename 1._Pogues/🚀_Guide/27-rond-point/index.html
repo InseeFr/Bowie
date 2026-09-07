@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -3221,13 +3221,13 @@
 <h2 id="anatomie-du-rond-point">Anatomie du Rond-point</h2>
 <h3 id="dans-pogues">Dans Pogues</h3>
 <p>Le Rond-point se matérialise dans la vision structurelle du questionnaire avant la ou les séquences sur laquelle il va permettre de naviguer.</p>
-<p><a class="glightbox" href="../../../img/pogues/rond-point-vue-structure.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Le Rond-point dans la vue structurelle" src="../../../img/pogues/rond-point-vue-structure.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Le Rond-point dans la vue structurelle" src="../../../img/pogues/rond-point-vue-structure.png" /></a></p>
 <p>Le Rond-point exploite une boucle principale (par exemple : collecte des informations sur les habitants) pour créer sa navigation non-linéaire. Les concepts mobilisés sont très proches de ceux mis en oeuvre pour <a href="../24-boucles/">les boucles</a>.</p>
 <p>Pour ajouter un comportement de type <em>Rond-point</em> dans Pogues:</p>
 <ol>
 <li>il faut cliquer sur <em>+ Rond-point</em> dans la barre des actions après avoir placé la sélection sur la séquence précédent le placement du Rond-point</li>
 <li>dans la fenêtre modale qui s'ouvre, on donne un libellé et un identifiant (<em>NB</em> le libellé sera affiché comme titre dans le questionnaire web)</li>
-<li>l'onglet <em>Boucle</em> va permettre de décrire ce qu'on propose à la réponse via le Rond-point, le fonctionnement est similaire à celui d'une boucle simple <img alt="👇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f447.svg" title=":point_down:" /></li>
+<li>l'onglet <em>Boucle</em> va permettre de décrire ce qu'on propose à la réponse via le Rond-point, le fonctionnement est similaire à celui d'une boucle simple <img alt="👇" class="twemoji" src="../../../assets/external/cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f447.svg" title=":point_down:"></li>
 <li>on donne un identifiant,</li>
 <li>on définit <a href="../24-boucles/#boucle-liee">la boucle principale</a> qu'on exploite</li>
 <li>on peut ajouter dans <em>Sauf</em> une formule pour exclure du questionnement - par exemple <code class="highlight"><span class="o">$</span><span class="n">AGE</span><span class="o">$</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">18</span></code> pour exclure les mineurs (cf. plus bas)</li>
@@ -3237,14 +3237,14 @@
 <li>Enfin la dernière option, <em>Interdire de modifier une occurrence terminée</em>, si elle est cochée, empêchera de modifier une occurrence du Rond-point déjà remplie.</li>
 </ol>
 <p>Voici un exemple de Rond-point finalisé dans Pogues:</p>
-<p><a class="glightbox" href="../../../img/pogues/rond-point-final.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Le Rond-point paramétré" src="../../../img/pogues/rond-point-final.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Le Rond-point paramétré" src="../../../img/pogues/rond-point-final.png" /></a></p>
 <h4 id="usage-du-sauf">Usage du Sauf</h4>
 <p>L'usage suit la même logique que pour les boucles : on utilise des variables, notamment des variables de boucles, pour permettre ou pas la réponse à une occurrence du Rond-point.</p>
 <h4 id="usage-de-la-description-dune-occurrence">Usage de la description d'une occurrence</h4>
 <p>Ce champ va permettre de décrire chaque item, et pour ce faire on peut utiliser une expression VTL et des variables de boucle. Par exemple:</p>
 <p><code class="highlight"><span class="s">&quot;Le questionnaire individuel pour &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span></code></p>
 <p>donnera ce visuel:</p>
-<p><a class="glightbox" href="../../../img/pogues/rond-point-web-libelle.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Visuel d'un libellé pour un item du Rond-point" src="../../../img/pogues/rond-point-web-libelle.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Visuel d'un libellé pour un item du Rond-point" src="../../../img/pogues/rond-point-web-libelle.png" /></a></p>
 <h4 id="usage-des-controles">Usage des contrôles</h4>
 <p>Comme pour les questions, il est possible de définir des contrôles sur un rond point.
 Ces contrôles peuvent être à un niveau <code class="highlight"><span class="n">rond</span><span class="o">-</span><span class="n">point</span></code> ou <code class="highlight"><span class="n">occurrence</span></code>.</p>
@@ -3261,7 +3261,7 @@ et ici <code class="highlight"><span class="n">AGE</span><span class="w"> </span
 Le contrôle apparaîtra donc 2 fois, 1 fois pour ind1 (40) et une fois pour ind3(50). </p>
 <details class="example" open="open">
 <summary>Affichage de contrôles sur un rond-point</summary>
-<p><a class="glightbox" href="../../../img/pogues/control-ront-point.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="controles sur un rond-point" src="../../../img/pogues/control-ront-point.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="controles sur un rond-point" src="../../../img/pogues/control-ront-point.png" /></a></p>
 </details>
 <h3 id="dans-le-questionnaire-web">Dans le questionnaire web</h3>
 <div class="admonition warning">
@@ -3269,7 +3269,7 @@ Le contrôle apparaîtra donc 2 fois, 1 fois pour ind1 (40) et une fois pour ind
 <p>Le Rond-point est uniquement disponible pour les questionnaires web. Il n'est pas supporté par les autres visualisations dont les questionnaires enquêteurs</p>
 </div>
 <p>Voici une vue du Rond-point :</p>
-<p><a class="glightbox" href="../../../img/pogues/rond-point-web-anatomie.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Anatomie du Rond-point dans Stromae DSFR" src="../../../img/pogues/rond-point-web-anatomie.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Anatomie du Rond-point dans Stromae DSFR" src="../../../img/pogues/rond-point-web-anatomie.png" /></a></p>
 <p>Les différents éléments:</p>
 <ol>
 <li>le libellé tel que défini dans Pogues</li>
@@ -3394,5 +3394,9 @@ Le contrôle apparaîtra donc 2 fois, 1 fois pour ind1 (40) et une fois pour ind
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

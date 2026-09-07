@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -3084,7 +3084,7 @@
 
 
 <h1 id="finalisation-structure">Finalisation structure</h1>
-<p>À partir des fonctionnalités vues dans les précédentes section de ce tutoriel, nous sommes capables de continuer la création de la structure du questionnaire suivant le schéma suivant <img alt="👇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f447.svg" title=":point_down:" />.</p>
+<p>À partir des fonctionnalités vues dans les précédentes section de ce tutoriel, nous sommes capables de continuer la création de la structure du questionnaire suivant le schéma suivant <img alt="👇" class="twemoji" src="../../../assets/external/cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f447.svg" title=":point_down:">.</p>
 <h2 id="stucture-complete-du-questionnaire">Stucture complète du questionnaire</h2>
 <table>
 <thead>
@@ -3181,7 +3181,7 @@
 <p>Vous pouvez maintenant créer en autonomie en question qui manquent : <code class="highlight"><span class="n">TEMPS_PARTIEL</span></code>, <code class="highlight"><span class="n">COLLABORATION</span></code>, <code class="highlight"><span class="n">APPRECIATION</span></code> et <code class="highlight"><span class="n">COMMENTAIRE</span></code>. N'oubliez pas au préalable de créer la liste de codes L_OUI_NON pour les questions de type QCU Oui-Non (<code class="highlight"><span class="n">TEMPS_PARTIEL</span></code>, <code class="highlight"><span class="n">COLLABORATION</span></code> et <code class="highlight"><span class="n">APPRECIATION</span></code>).</p>
 <details class="success">
 <summary>Solution</summary>
-<p><a class="glightbox" href="../../../img/pogues/structure-finale.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Structure finale" src="../../../img/pogues/structure-finale.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Structure finale" src="../../../img/pogues/structure-finale.png" /></a></p>
 </details>
 <h2 id="suite">Suite</h2>
 <p><a class="md-button" href="../20-mise-en-place-filtre/">Mise en place d'un filtre</a></p>
@@ -3292,5 +3292,9 @@
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

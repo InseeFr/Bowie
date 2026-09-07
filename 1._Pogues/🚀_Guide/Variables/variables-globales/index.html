@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -3181,18 +3181,18 @@ On ne peut en revanche pas les utiliser hors boucle.</p>
 </ul>
 <h3 id="exemple">Exemple</h3>
 <p>Prenons un exemple avec une famille de 5 personnes :</p>
-<p><a class="glightbox" href="../../../../img/pogues/famille-liens.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Famille pour les liens" src="../../../../img/pogues/famille-liens.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Famille pour les liens" src="../../../../img/pogues/famille-liens.png" /></a></p>
 <p>Les variables globales issues des liens deux à deux sont disponibles et correctement calculées dès que la question sur les liens est renseignée dans le questionnaire. <strong>Elles sont utilisables directement dans le questionnaire Pogues au sein d'une boucle basée sur le prénom sans calculer de variable intermédiaire</strong>.</p>
 <p>Dans un <strong>but pédagogique</strong>, nous allons créer des variables calculées qui permettent de voir commet se présentent les variables et comment les utiliser.</p>
 <p>Pour voir ce qu'il y a dans la variable globale donnant le prénom du premier parent, on va par exemple on va créer <code class="highlight"><span class="n">PARENT1_PRENOM</span></code> avec la formule suivante
 <div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span>`<span class="o">$</span><span class="n">GLOBAL_PARENT1_PRENOM</span><span class="o">$</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 qui correspond à la variable brute avec gestion du null. Les variables sont de niveau de calcul la boucle dans laquelle on collecte la variable source du prénom. Vous remarquez ici qu'on utilise les variables globales sans les entourer de <code class="highlight"><span class="o">$</span></code> comme pour <code class="highlight"><span class="n">GLOBAL_ITERATION_INDEX</span></code>.</p>
-<p><a class="glightbox" href="../../../../img/pogues/creer-global-parent1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création de la variable prénom premier parent" src="../../../../img/pogues/creer-global-parent1.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création de la variable prénom premier parent" src="../../../../img/pogues/creer-global-parent1.png" /></a></p>
 <p>On fait pareil avec le prénom du deuxième parent, <code class="highlight"><span class="n">PARENT2_PRENOM</span></code>
 <div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="n">GLOBAL_PARENT2_PRENOM</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span>
 </code></pre></div></p>
-<p><a class="glightbox" href="../../../../img/pogues/global-parent-prenom.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variable magique prénoms des parents" src="../../../../img/pogues/global-parent-prenom.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variable magique prénoms des parents" src="../../../../img/pogues/global-parent-prenom.png" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Il est possible de faire la même chose avec le sexe des parents afin de personnaliser le questionnaire en utilisant les termes mère/père au lieu de parent.</p>
@@ -3201,7 +3201,7 @@ qui correspond à la variable brute avec gestion du null. Les variables sont de 
 <p>De la même manière, on peut obtenir les prénoms du conjoint pour chaque individu de la boucle en utilisant <code class="highlight"><span class="n">GLOBAL_CONJOINT_PRENOM</span></code> (un seul conjoint possible, le premier déclaré) avec par exemple une variable <code class="highlight"><span class="n">CONJOINT_PRENOM</span></code> et la formule VTL
 <div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="n">GLOBAL_CONJOINT_PRENOM</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span>
 </code></pre></div></p>
-<p><a class="glightbox" href="../../../../img/pogues/global-conjoint.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variable magique prénom du conjoint" src="../../../../img/pogues/global-conjoint.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variable magique prénom du conjoint" src="../../../../img/pogues/global-conjoint.png" /></a></p>
 <div class="admonition tip">
 <p class="admonition-title">Astuce</p>
 <p>Pour afficher la phrase "Untel est le conjoint de untel", on peut par exemple faire une déclaration de la forme suivante : 
@@ -3215,9 +3215,9 @@ Dans le cas de Laura, on aura le résultat "Laura est le conjoint de : Laurent",
 <p>Pour avoir une liste de prénoms utilisable dans une déclaration, on mobilise la fonction VTL <code class="highlight"><span class="n">replace</span></code> pour substituer le <code class="highlight"><span class="c1">#</span></code> par un caractère de notre choix avec la formule 
 <div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="nf">replace</span><span class="p">(</span><span class="n">`GLOBAL_ENFANTS_PRENOMS`</span><span class="p">,</span><span class="s">&quot;#&quot;</span><span class="p">,</span><span class="s">&quot;, &quot;</span><span class="p">),</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
-<p><a class="glightbox" href="../../../../img/pogues/VTL-replace.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création liste des enfants sans dièse" src="../../../../img/pogues/VTL-replace.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création liste des enfants sans dièse" src="../../../../img/pogues/VTL-replace.png" /></a></p>
 <p>Voici un aperçu des variables donnant la liste des enfants :</p>
-<p><a class="glightbox" href="../../../../img/pogues/liste-enfants.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="liste des enfants" src="../../../../img/pogues/liste-enfants.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="liste des enfants" src="../../../../img/pogues/liste-enfants.png" /></a></p>
 
 
 
@@ -3325,5 +3325,9 @@ Dans le cas de Laura, on aura le résultat "Laura est le conjoint de : Laurent",
       <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

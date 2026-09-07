@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -3277,7 +3277,7 @@
 <p>Entre 2 enquêtes, la recherche (paramétrage) est identique pour une même nomenclature.</p>
 <h2 id="page-de-nomenclatures">✨ Page de Nomenclatures</h2>
 <p>On peut maintenant accéder à la page des nomenclatures via un bouton sur le menu à gauche. Cette page est en lecture seule, on ne peut donc pas éditer une nomenclature.</p>
-<p><a class="glightbox" href="../../../../img/pogues/nomenclature-page.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/nomenclature-page.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/nomenclature-page.png" /></a></p>
 <div class="admonition abstract">
 <p class="admonition-title">Légende</p>
 <p>Pour chaque nomenclature, on dispose :</p>
@@ -3293,7 +3293,7 @@
 <summary>Exemple d'utilisation</summary>
 <ol>
 <li>Pour activer cette fonctionnalité, il suffit de sélectionner <code class="highlight"><span class="n">Oui</span></code> pour le champ <strong>"Autoriser une réponse libre"</strong>. (Par défaut ce champ vaut <code class="highlight"><span class="n">Non</span></code>).
-<a class="glightbox" href="../../../../img/pogues/suggester_rep_libre.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/suggester_rep_libre.png" /></a></li>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/suggester_rep_libre.png" /></a></li>
 <li>
 <p>En générant les variables collectées, on remarque que l'on a <strong>2 variables</strong> :</p>
 <ul>
@@ -3302,8 +3302,8 @@
 <p>Variable collectée <code class="highlight"><span class="n">MA_VARIABLE_ARBITRARY</span></code> : <em>correspondant aux recherches infructueuses pour lesquelles l'enquêté / l'enquêteur n'a aucun résultat et choisit de conserver sa saisie.</em></p>
 <details class="note">
 <summary>Nommage de <code class="highlight"><span class="n">MA_VARIABLE_ARBITRARY</span></code></summary>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> Le nom de la seconde variable est automatiquement générée mais est modifiable depuis l'onglet de gestion des variables collectées.
-<a class="glightbox" href="../../../../img/pogues/generate_arbitrary_var_for_suggester.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/generate_arbitrary_var_for_suggester.png" /></a></p>
+<p><img alt="⚠" class="twemoji" src="../../../../assets/external/cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:"> Le nom de la seconde variable est automatiquement générée mais est modifiable depuis l'onglet de gestion des variables collectées.
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/generate_arbitrary_var_for_suggester.png" /></a></p>
 </details>
 </li>
 </ul>
@@ -3314,10 +3314,10 @@
 </li>
 <li>
 <p>Prenons par exemple la nomenclature sur les activités. Si on saisit 'Activités extract' on obtient les echos suivants
-    <a class="glightbox" href="../../../../img/pogues/suggester_act_echo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/suggester_act_echo.png" /></a>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/suggester_act_echo.png" /></a>
     En sélectionnant l'un des echos puis en appuyant sur 'Continuer', alors <code class="highlight"><span class="n">MA_VARIABLE</span></code> prend la valeur de cet echo et <code class="highlight"><span class="n">MA_VARIABLE_ARBITRARY</span></code> est <code class="highlight"><span class="n">null</span></code>.</p>
 <p>Si on saisit 'extractionnn' aucun echo n'est trouvé dans la liste. On a alors la possibilité de sélectionner 'extractionnn' comme réponse.
-<a class="glightbox" href="../../../../img/pogues/suggester_act_echo_not_found.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/suggester_act_echo_not_found.png" /></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/suggester_act_echo_not_found.png" /></a>
 Si on clique sur 'choisir "extractionnn"' puis qu'on clique sur 'Continuer', alors <code class="highlight"><span class="n">MA_VARIABLE_ARBITRARY</span></code> prend la valeur 'extractionnn' et <code class="highlight"><span class="n">MA_VARIABLE</span></code> vaut <code class="highlight"><span class="n">null</span></code>.</p>
 </li>
 </ol>
@@ -3362,7 +3362,7 @@ On souhaite pouvoir récupérer les valeurs en même temps la variable contenant
 <h4 id="etapes">Étapes</h4>
 <ol>
 <li>Créer une variable collectée basée sur une question à choix unique avec recherche sur liste et avec l'id <code class="highlight"><span class="n">SUGG</span></code>.
-<a class="glightbox" href="../../../../img/pogues/var-sugg.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/var-sugg.png" /></a></li>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/var-sugg.png" /></a></li>
 </ol>
 <div class="admonition abstract">
 <p class="admonition-title">Règle de nommage</p>
@@ -3371,7 +3371,7 @@ On souhaite pouvoir récupérer les valeurs en même temps la variable contenant
 <ol>
 <li>Créer une variable calculée <code class="highlight"><span class="n">CALC_VAR</span></code> avec la formule suivante : <br>
 <code class="highlight"><span class="nf">left_join</span><span class="p">(</span><span class="o">$</span><span class="n">SUGG</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;COMMERCE-2024&quot;</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="p">)</span></code>
-<a class="glightbox" href="../../../../img/pogues/ex-var-cal-left-join.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/ex-var-cal-left-join.png" /></a></li>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/ex-var-cal-left-join.png" /></a></li>
 </ol>
 <h4 id="resultats">Résultats</h4>
 <p>Je peux ensuite afficher cette valeur, par exemple dans une déclaration, en appelant la variable calculée <code class="highlight"><span class="n">CALC_VAR</span></code></p>
@@ -3382,11 +3382,11 @@ On souhaite pouvoir récupérer les valeurs en même temps la variable contenant
 <span class="s2">- label : &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">nvl</span><span class="p">(</span><span class="nx">$CALC_VAR$</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 </code></pre></div>
 </details>
-<p><a class="glightbox" href="../../../../img/pogues/ex-declaration-nomenclature-left-join.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/ex-declaration-nomenclature-left-join.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/ex-declaration-nomenclature-left-join.png" /></a></p>
 <h5 id="en-selectionnant-commerce-de-cuivre">En sélectionnant "Commerce de cuivre"</h5>
-<p><a class="glightbox" href="../../../../img/pogues/res-sugg-commerce-cuivre.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/res-sugg-commerce-cuivre.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/res-sugg-commerce-cuivre.png" /></a></p>
 <h5 id="en-selectionnant-commerce-de-lignite">En sélectionnant "Commerce de lignite"</h5>
-<p><a class="glightbox" href="../../../../img/pogues/res-sugg-commerce-lignite.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/res-sugg-commerce-lignite.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/res-sugg-commerce-lignite.png" /></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Détail technique</p>
 <p>Le comportement actuel est temporaire du point de vue du parcours utilisateur dans Pogues. <br>
@@ -3396,7 +3396,7 @@ Elle est bien considérée comme une variable collectée dans Lunatic. On peut l
 Ex : Un bouton qui permet d'ajouter une paire clé/valeur qui indique le nom de la nouvelle variable collectée et le nom de la colonne dans la nomenclature </p>
 </div>
 <h3 id="questionnaire-exemple">Questionnaire exemple</h3>
-<p>Pour référence, un <a href="https://conception-questionnaires.insee.fr/questionnaire/m1holrzlDOC">questionnaire implémentant cette solution :materialopen-in-new:</a> est disponible dans l'environnement de demo, sous le timbre DOCUMENTATION</p>
+<p>Pour référence, un <a href="https://conception-questionnaires.insee.fr/questionnaire/m1holrzlDOC" target="_blank">questionnaire implémentant cette solution <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a> est disponible dans l'environnement de demo, sous le timbre DOCUMENTATION</p>
 
 
 
@@ -3504,5 +3504,9 @@ Ex : Un bouton qui permet d'ajouter une paire clé/valeur qui indique le nom de 
       <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

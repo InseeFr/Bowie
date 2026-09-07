@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -3050,7 +3050,7 @@
 <h1 id="visualisation-du-questionnaire">Visualisation du questionnaire</h1>
 <p>La promesse de Pogues c'est de permettre la visualisation rapide du questionnaire, dans des modes différents.</p>
 <p>Pour cela, en cliquant sur le bouton "Visualiser", on choisit le type de questionnaire que l'on veut générer.</p>
-<p><a class="glightbox" href="../../../img/pogues/visualisation-choix.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Choix des visualisations" src="../../../img/pogues/visualisation-choix.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Choix des visualisations" src="../../../img/pogues/visualisation-choix.png" /></a></p>
 <p>Pour cette première fois, on choisit l'option "Web ménage".</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3066,7 +3066,7 @@
 <details class="success">
 <summary>Solution</summary>
 <p>Vous devriez avoir une question qui s'affiche sous la forme suivante :
-<a class="glightbox" href="../../../img/pogues/visualisation-1st-question.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="visu first question" src="../../../img/pogues/visualisation-1st-question.png" /></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="visu first question" src="../../../img/pogues/visualisation-1st-question.png" /></a></p>
 </details>
 <p>Nous venons de boucler un premier cycle dans la construction d'un questionnaire dans Pogues.</p>
 <pre class="mermaid"><code>graph TD
@@ -3191,5 +3191,9 @@
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

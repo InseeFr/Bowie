@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -857,13 +857,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vtl-ques-aquo" class="md-nav__link">
+  <a href="#vtl-quesaco" class="md-nav__link">
     <span class="md-ellipsis">
-      VTL - qu’es aquò ?
+      VTL - Quésaco ?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="VTL - qu’es aquò ?">
+    <nav class="md-nav" aria-label="VTL - Quésaco ?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3177,13 +3177,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vtl-ques-aquo" class="md-nav__link">
+  <a href="#vtl-quesaco" class="md-nav__link">
     <span class="md-ellipsis">
-      VTL - qu’es aquò ?
+      VTL - Quésaco ?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="VTL - qu’es aquò ?">
+    <nav class="md-nav" aria-label="VTL - Quésaco ?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3355,7 +3355,7 @@
 
 <h1 id="concepts-vtl-dans-pogues">Concepts VTL dans Pogues</h1>
 <p>Ce document guide l’utilisateur de Pogues dans son usage du langage VTL.</p>
-<h2 id="vtl-ques-aquo">VTL - qu’es aquò ?</h2>
+<h2 id="vtl-quesaco">VTL - Quésaco ?</h2>
 <p><a href="https://sdmx.org/?page_id=5096">VTL</a> (Validation and Transformation Language) est un langage de programmation né dans le giron du standard de description de données agrégées SDMX. Ce langage est adopté ou en cours d’adoption par les mêmes utilisateurs que SDMX, essentiellement des banques centrales et des instituts nationaux de statistiques.</p>
 <p>Bien que conçu initialement pour le traitement de données agrégées (eg des tableaux ou cubes de données), le langage est suffisamment souple pour qu’on puisse l’utiliser pour exprimer des contrôles, comme dans le cas des contrôles mis en oeuvre dans le cadre d’un questionnement.</p>
 <p>On a donc choisi ce langage comme expression des contrôles et du dynamisme dans les questionnaires conçus dans Pogues dont la cible est les nouveaux outils de collecte développés dans le cadre du programme Metallica.</p>
@@ -3377,7 +3377,7 @@
 <li>définir la condition d’un filtre</li>
 </ul>
 <p>Les champs correspondants dans Pogues proposent dans la plupart des cas un <strong>éditeur VTL</strong> :</p>
-<p><a class="glightbox" href="../../../img/vtl/code-list-editor.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Editeur VTL" src="../../../img/vtl/code-list-editor.png" title="Éditeur VTL" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Editeur VTL" src="../../../img/vtl/code-list-editor.png" title="Éditeur VTL" /></a></p>
 <h4 id="fonctionnalites-de-lediteur">Fonctionnalités de l’éditeur</h4>
 <p>L’éditeur fournit :</p>
 <ul>
@@ -3398,7 +3398,7 @@ Un chiffre avec décimales :
 <h2 id="quelques-exemples-dutilisation-du-vtl-dans-pogues">Quelques exemples d'utilisation du VTL dans Pogues</h2>
 <h4 id="dans-les-libelles-de-question">Dans les libellés de question</h4>
 <p>Voici un exemple de syntaxe pour un libellé personnalisé :</p>
-<p><a class="glightbox" href="../../../img/vtl/vtl-in-pogues-custom-label.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Libellé personnalisé" src="../../../img/vtl/vtl-in-pogues-custom-label.png" title="Libellé personnalisé" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Libellé personnalisé" src="../../../img/vtl/vtl-in-pogues-custom-label.png" title="Libellé personnalisé" /></a></p>
 <p>On utilise ici l’opérateur VTL <code class="highlight"><span class="o">||</span></code> qui permet de concaténer des chaînes de caractères, ou une chaîne de caractères et une variable (ici <code class="highlight"><span class="n">NOM</span></code>).</p>
 <div class="admonition warning">
 <p class="admonition-title">Attention!</p>
@@ -3407,7 +3407,7 @@ Un chiffre avec décimales :
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Dans l’exemple précédent, on ne gère pas le cas où la variable n’a pas été remplie. Pour anticiper ce cas, on peut utiliser la fonction VTL <code class="highlight"><span class="n">nvl</span></code>, le libellé personnalisé devient ainsi :</p>
-<p><a class="glightbox" href="../../../img/vtl/vtl-in-pogues-custom-label-nvl.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Fonction nvl" src="../../../img/vtl/vtl-in-pogues-custom-label-nvl.png" title="Fonction nvl" /></a><em>Libellé personnalisé avec gestion de la nullité</em></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Fonction nvl" src="../../../img/vtl/vtl-in-pogues-custom-label-nvl.png" title="Fonction nvl" /></a><em>Libellé personnalisé avec gestion de la nullité</em></p>
 <p>Plus d’infos sur l’usage de <code class="highlight"><span class="n">nvl</span></code> plus bas.</p>
 </div>
 <p>On pourra mobiliser dans un libellé personnalisé des variables collectées, calculées ou externes.</p>
@@ -3425,16 +3425,16 @@ Un chiffre avec décimales :
 </div>
 <h4 id="dans-les-controles">Dans les contrôles</h4>
 <p>Un exemple de contrôle sur une valeur numérique :</p>
-<p><a class="glightbox" href="../../../img/vtl/vtl-in-pogues-simple-control.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Exemple de contrôle" src="../../../img/vtl/vtl-in-pogues-simple-control.png" title="Exemple de contrôle" /></a><em>Libellé personnalisé avec gestion de la nullité</em></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Exemple de contrôle" src="../../../img/vtl/vtl-in-pogues-simple-control.png" title="Exemple de contrôle" /></a><em>Libellé personnalisé avec gestion de la nullité</em></p>
 <h4 id="dans-les-formules-variables-calculees">Dans les formules variables calculées</h4>
 <p>Pogues permet de créer des variables calculées à partir de variables collectées. Par exemple, pour sommer les revenus de l’enquêté et de son conjoint on écrira :</p>
-<p><a class="glightbox" href="../../../img/vtl/vtl-in-pogues-computed-variable-earnings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variable calculée pour le revenu" src="../../../img/vtl/vtl-in-pogues-computed-variable-earnings.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variable calculée pour le revenu" src="../../../img/vtl/vtl-in-pogues-computed-variable-earnings.png" /></a></p>
 <p>L'expression VTL étant :</p>
 <div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">REVENUS</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">REVENUS_CONJOINT</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="dans-les-conditions-daffichage-des-filtres">Dans les conditions d'affichage des filtres</h4>
 <p>Voici un exemple de filtre simple exprimé en VTL :</p>
-<p><a class="glightbox" href="../../../img/vtl/vtl-in-pogues-simple-filter.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Filtre simple" src="../../../img/vtl/vtl-in-pogues-simple-filter.png" title="Filtre simple" /></a><em>Un filtre simple</em></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Filtre simple" src="../../../img/vtl/vtl-in-pogues-simple-filter.png" title="Filtre simple" /></a><em>Un filtre simple</em></p>
 <p><span class="label label-rounded label-primary">À noter</span> À ce jour, le champ “Condition d’affichage” du filtre n’utilise pas l’éditeur VTL.</p>
 <p>Toutes formes d’expression booléenne est valide :</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Possible</span>
@@ -3600,5 +3600,9 @@ Pour plus de clarté, le calcul de la durée brute pourra être déportée dans 
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

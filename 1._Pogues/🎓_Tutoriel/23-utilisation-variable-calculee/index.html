@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -3101,7 +3101,7 @@
 <p>Nous allons voir dans cette section comment mobiliser le deuxième type de variable pour mettre en place un contrôle sur la réponse à la question sur les activités professionnelles (<code class="highlight"><span class="n">ACTIVITES</span></code>).</p>
 <h2 id="creation-de-la-variable">Création de la variable</h2>
 <p>Pour créer une variable calculée, il faut aller dans le menu de gestion des variables, bouton dans le menu de gauche puis de cliquer sur le bouton <em>Créer une variable</em>.</p>
-<p><a class="glightbox" href="../../../img/pogues/menu-variables.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Menu Variables" src="../../../img/pogues/menu-variables.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Menu Variables" src="../../../img/pogues/menu-variables.png" /></a></p>
 <p>Cette page liste l'ensemble des variables du questionnaire présentées par <a href="../../%F0%9F%9A%80_Guide/Variables/portee/">Niveau de calcul</a>.</p>
 <p>Plusieurs champs sont à compléter :</p>
 <ul>
@@ -3121,7 +3121,7 @@
 <span class="n">nvl($ACTIVITES51$, 0)</span>
 <span class="n">```</span>
 </code></pre></div>
-<p><a class="glightbox" href="../../../img/pogues/creation-var-calculee.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création d'une variable calculée" src="../../../img/pogues/creation-var-calculee.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Création d'une variable calculée" src="../../../img/pogues/creation-var-calculee.png" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>On utilise ici la fonction <code class="highlight"><span class="n">nvl</span></code> qui permet de renvoyer une valeur par défaut si la variable est nulle. En effet, si on ne valorise pas une case du tableau, la variable correspondante aura comme valeur <code class="highlight"><span class="n">null</span></code> ce qui ne permet pas de faire la somme.</p>
@@ -3130,10 +3130,10 @@
 <p>Jusqu'ici nous n'avions que des variables collectées dans la liste des variables tandis que la variable nouvellement créée <code class="highlight"><span class="n">SOMME</span></code> à pour type <em>Calculée</em>. Le survol du bouton permet d'afficher la formule de calcul.</p>
 <h2 id="usage-dans-un-controle">Usage dans un contrôle</h2>
 <p>On peut maintenant ajouter un contrôle sur la question <code class="highlight"><span class="n">ACTIVITES</span></code> pour s'assurer que la ventilation est égale à 100%. Vous pouvez pour cela vous appuyer sur ce que l'on a vu <a href="../21-ajout-controle/">précédemment</a> et sur le <a href="../../%F0%9F%92%BB_VTL/">guide VTL</a>... </p>
-<p><a class="glightbox" href="../../../img/pogues/controle-ventilation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="solution contrôle ventilation" src="../../../img/pogues/controle-ventilation.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="solution contrôle ventilation" src="../../../img/pogues/controle-ventilation.png" /></a></p>
 <details class="success">
 <summary>Visualisation</summary>
-<p><a class="glightbox" href="../../../img/pogues/visualisation-controle-activites.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Visualisation contrôle" src="../../../img/pogues/visualisation-controle-activites.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Visualisation contrôle" src="../../../img/pogues/visualisation-controle-activites.png" /></a></p>
 </details>
 <h2 id="suite">Suite</h2>
 <p><a class="md-button" href="../24-personnalisation-libelle/">Personnalisation de libellés</a></p>
@@ -3244,5 +3244,9 @@
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

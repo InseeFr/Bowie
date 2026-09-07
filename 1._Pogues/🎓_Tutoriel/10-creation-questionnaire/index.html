@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -3121,9 +3121,9 @@
 
 <h1 id="creation-dun-questionnaire">Création d'un questionnaire</h1>
 <p>Sur la page d'accueil de Pogues, cliquer sur le bouton "Créer un questionnaire" :
-<a class="glightbox" href="../../../img/pogues/creation-questionnaire-go.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Bouton de création d'un questionnaire" src="../../../img/pogues/creation-questionnaire-go.png" /></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Bouton de création d'un questionnaire" src="../../../img/pogues/creation-questionnaire-go.png" /></a></p>
 <p>La fenêtre de création du questionnaire permet de renseigner les paramètres de contexte du questionnaire (identifiant, dynamisme) et de l'enquête (modes de collecte).</p>
-<p><a class="glightbox" href="../../../img/pogues/creation-questionnaire-page.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="creation-questionnaire-page" src="../../../img/pogues/creation-questionnaire-page.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="creation-questionnaire-page" src="../../../img/pogues/creation-questionnaire-page.png" /></a></p>
 <h2 id="identification">Identification</h2>
 <p>Il faut donner un "Titre" au questionnaire. Par défaut, un identifiant sera créé à partir de ce titre, vous pouvez par la suite le modifier en cliquant sur "Voir le détail" depuis la page "Questionnaire".</p>
 <div class="admonition tip">
@@ -3160,7 +3160,7 @@
 <h2 id="information-sur-le-processus">Information sur le processus</h2>
 <p>On peut ajouter des informations "Série", "Opération statistique" et "Campagne" en fonction de l'enquête correspondante telle que décrite dans Bauhaus (processus spécifique au contexte Insee, on ne le détaille pas ici.). 
 Par défaut ces champs sont vides et ne sont pas proposés lors de la création du questionnaire, ils n'ont pas d'influence sur la suite du processus. Vous pouvez les spécifier après création du questionnaire via le bouton "Voir le détail" depuis la page "Questionnaire".
-<a class="glightbox" href="../../../img/pogues/survey-detail-modal.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/survey-detail-modal.png" /></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/survey-detail-modal.png" /></a></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Si vous êtes en train de vous autoformer, vous pouvez choisir n'importe quelles valeurs, cela n'a pas d'impact sur le reste du questionnaire</p>
@@ -3279,5 +3279,9 @@ Il est impératif d'utiliser <strong>uniquement des caractères alphanumériques
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

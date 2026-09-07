@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -3052,9 +3052,9 @@
 <h1 id="gestion-des-erreurs-de-personnalisation">Gestion des erreurs de personnalisation</h1>
 <h2 id="erreur-de-synchronisation">Erreur de synchronisation</h2>
 <p>Lorsqu'on modifie un questionnaire qui a déjà une personnalisation de chargée, et que c'est changement sont structurants pour le questionnaire (potentiellement le questionnaire est <strong>cassé</strong> entre temps), il se peut qu'apparaisse ce bandeau
-<a class="glightbox" href="../../../../img/personnalisation/perso-visu-error.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/personnalisation/perso-visu-error.png" /></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/personnalisation/perso-visu-error.png" /></a></p>
 <p>De même, si on essaye de créer une personnalisation pour un questionnaire cassé, on la pop-up suivante qui apparaît
-<a class="glightbox" href="../../../../img/personnalisation/perso-visu-error-modal.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/personnalisation/perso-visu-error-modal.png" /></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/personnalisation/perso-visu-error-modal.png" /></a></p>
 <div class="admonition tip">
 <p class="admonition-title">Solution</p>
 <ul>
@@ -3168,5 +3168,9 @@
       <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

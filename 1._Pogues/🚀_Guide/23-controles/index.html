@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -3595,7 +3595,7 @@ Ou en utilisant la fonction <a href="../../%F0%9F%92%BB_VTL/1-fonctions-vtl/#nvl
 <h2 id="questionnaire-exemple">Questionnaire exemple</h2>
 <p>Pour référence, des questionnaires illustrant ces contrôles sont disponibles dans l'environnement de demo, sous le timbre <em>DOCUMENTATION</em>.</p>
 <ul>
-<li>Un <a href="https://conception-questionnaires.insee.fr/questionnaire/m4tmy4kl">questionnaire implémentant les contrôles de Siret, Siren et Rna :materialopen-in-new:</a> </li>
+<li>Un <a href="https://conception-questionnaires.insee.fr/questionnaire/m4tmy4kl" target="_blank">questionnaire implémentant les contrôles de Siret, Siren et Rna <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a> </li>
 <li>Un <a href="https://conception-questionnaires.insee.fr/questionnaire/m74nlrpj">questionnaire similaire</a> où les contrôles ne se déclenchent aussi quand le champ est vide </li>
 </ul>
 
@@ -3708,5 +3708,9 @@ Ou en utilisant la fonction <a href="../../%F0%9F%92%BB_VTL/1-fonctions-vtl/#nvl
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
