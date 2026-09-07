@@ -40,4 +40,4 @@ Nous allons créer un questionnaire avec la structure suivante :
 !!! tip
     Nous détaillerons toutes ces notions dans les parties suivantes.
 
-[:material-rocket-launch: Commencer le tutoriel](10-creation-questionnaire.md){ .md-button }
+### [:material-rocket-launch: Commencer le tutoriel](10-creation-questionnaire.md)

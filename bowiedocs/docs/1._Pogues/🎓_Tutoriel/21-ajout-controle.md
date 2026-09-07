@@ -45,4 +45,4 @@ On aura une configuration sensiblement similaire à :point_down:
 
 
 ## Suite
-[Création d'une infobulle](22-ajout-infobulle.md){ .md-button }
+[Création d'une infobulle](22-ajout-infobulle.md)

@@ -50,4 +50,4 @@ Et on sera encore plus satisfait lorsqu'on aura vu comment filtrer la question p
     ![Sous-séquence Caractéristiques](../../img/pogues/seq-carac-complet.png)
 
 ## Suite
-[Création d'un tableau](16-creation-tableau.md){ .md-button }
+[Création d'un tableau](16-creation-tableau.md)

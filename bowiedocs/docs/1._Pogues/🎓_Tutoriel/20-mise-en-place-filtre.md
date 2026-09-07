@@ -53,4 +53,4 @@ Le filtre que l'on vient de créer devient visible dans la vue d'ensemble du que
 
 
 ## Suite
-[Ajout d'un contrôle de cohérence](21-ajout-controle.md){ .md-button }
+[Ajout d'un contrôle de cohérence](21-ajout-controle.md)

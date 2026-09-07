@@ -24,4 +24,4 @@ Pour notre questionnaire, on propose l'ajout d'une infobulle sur le terme "en mo
 
 
 ## Suite
-[Implémentation d'une variable calculée](23-utilisation-variable-calculee.md){ .md-button }
+[Implémentation d'une variable calculée](23-utilisation-variable-calculee.md)

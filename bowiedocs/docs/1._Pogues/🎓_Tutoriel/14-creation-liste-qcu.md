@@ -41,4 +41,4 @@ Comme d'habitude, on n'oublie pas de générer les variables collectées avant d
 
 
 ## Suite
-[Création de questions à choix multiples et recherche sur liste](15-creation-qcm.md){ .md-button }
+[Création de questions à choix multiples et recherche sur liste](15-creation-qcm.md)

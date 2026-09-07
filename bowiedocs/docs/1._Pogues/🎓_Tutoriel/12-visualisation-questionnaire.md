@@ -47,4 +47,4 @@ graph TD
 
 
 ## Suite
-[Création des questions de la séquence "Quelques informations sur vous"](13-elaboration-structure.md){ .md-button }
+[Création des questions de la séquence "Quelques informations sur vous"](13-elaboration-structure.md)

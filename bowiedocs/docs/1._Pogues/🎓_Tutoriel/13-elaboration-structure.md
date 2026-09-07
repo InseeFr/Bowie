@@ -113,4 +113,4 @@ Lorsqu'on est satisfaits des changements réalisés, **on sauvegarde !**
     </div>
 
 ## Suite
-[Créer une question à choix unique (QCU)](14-creation-liste-qcu.md){ .md-button }
+[Créer une question à choix unique (QCU)](14-creation-liste-qcu.md)

@@ -68,4 +68,4 @@ Pour finir cette sous séquence, on va créer une question simple de type numér
     
 
 ## Suite
-[Finalisation de la structure du questionnaire](17-finalisation-structure.md){ .md-button }
+[Finalisation de la structure du questionnaire](17-finalisation-structure.md)

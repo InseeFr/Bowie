@@ -35,4 +35,4 @@ On peut retourner sur la question dont l'identifiant est `APPRECIATION`, pour mo
 
 
 ## Suite
-[Mise en place d'une boucle](25-mise-en-place-boucle.md){ .md-button }
+[Mise en place d'une boucle](25-mise-en-place-boucle.md)

@@ -140,5 +140,4 @@ Un simple clic sur le bouton "Sauvegarder" de la barre d'action fait l'affaire.
     Vous pouvez facilement gérer la liste de vos sauvegardes avec le menu [**historique**](../🚀_Guide/29-historique.md) ✨
 
 ## Suite
-[Visualiser le questionnaire](12-visualisation-questionnaire.md){ .md-button }
-
+[Visualiser le questionnaire](12-visualisation-questionnaire.md)

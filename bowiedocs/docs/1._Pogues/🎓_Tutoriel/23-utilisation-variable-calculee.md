@@ -70,4 +70,4 @@ On peut maintenant ajouter un contrôle sur la question `ACTIVITES` pour s'assur
    
 
 ## Suite
-[Personnalisation de libellés](24-personnalisation-libelle.md){ .md-button }
+[Personnalisation de libellés](24-personnalisation-libelle.md)
