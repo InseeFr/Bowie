@@ -35,11 +35,11 @@ Parmi les questions de type QCU, seules les questions QCU de type liste de codes
 
 ### Recherche sur liste (Suggester)
 
-Le Suggester est le composant de recherche sur liste. Il permet d'offrir une recherche dynamique sur des listes volumineuses avec la présentation d'échos de réponse au fur et à mesure de la saisie.
+Le Suggester est le composant de recherche sur liste. Il permet d'offrir une recherche dynamique sur des listes volumineuses, issues de nomenclatures, avec la présentation d'échos de réponse au fur et à mesure de la saisie.
 
 Le type de réponse est imposé : c'est une liste déroulante dans laquelle l'enquêté sélectionne la modalité correspondant à sa situation.
 
-Plus de détails dans la page [Suggester](15b-suggester.md).
+Plus de détails sur la page dédiée : [Suggester](../f._Nomenclatures/suggester.md).
 
 ### Variable du questionnaire
 

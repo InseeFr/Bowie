@@ -3,11 +3,12 @@
 ## Les listes de codes
 On accède aux différentes listes de codes via le menu `Listes de codes` sur la gauche.
 
-![Menu des listes de code](../../img/pogues/list-code-menu.png)
+![Menu des listes de code](../../../img/pogues/list-code-menu.png)
+
 
 On arrive ensuite sur la page de gestion des listes de codes du questionnaire.
 
-![list code home](../../img/pogues/list-code-home.png)
+![list code home](../../../img/pogues/list-code-home.png)
 !!! abstract "Légende"
     1. `Identifiant` du questionnaire
     1. `Bouton de création` d'une nouvelle liste de codes
@@ -32,7 +33,7 @@ On arrive ensuite sur la page de gestion des listes de codes du questionnaire.
 
 Après avoir appuyé sur le bouton de création d'une nouvelle liste de codes, la page suivante s'affiche : 
 
-![list code creation](../../img/pogues/list-code-creation.png)
+![list code creation](../../../img/pogues/list-code-creation.png)
 
 !!! abstract "Légende"
     1. `Nom` de la liste de codes
@@ -62,33 +63,33 @@ Il est possible d'avoir plusieurs niveaux de modalités dans une même liste de 
 !!! tip "Ajouter des modalité "enfant""
     === "Liste initiale" 
         Quand on clique sur le :octicons-plus-24: à droite de la modalité, cela ajoute une nouvelle modalité enfant.
-        ![alt text](../../img/pogues/list-code-level-init.png)
+        ![alt text](../../../img/pogues/list-code-level-init.png)
     === "Ajouter un enfant"
-        ![alt text](../../img/pogues/list-code-level-add-child.png)
+        ![alt text](../../../img/pogues/list-code-level-add-child.png)
     === "Ajouter un 2ème enfant"
         Si on clique encore sur ce même :octicons-plus-24: cela rajoute une deuxième modalité enfant
-        ![alt text](../../img/pogues/list-code-level-add-second-child.png)
+        ![alt text](../../../img/pogues/list-code-level-add-second-child.png)
     === "Ajouter un petit-enfant"
         En cliquant sur le :octicons-plus-24: de l'enfant on peut aller plus loin dans les niveau et avoir un enfant de l'enfant
-        ![alt text](../../img/pogues/list-code-level-add-grand-child.png)
+        ![alt text](../../../img/pogues/list-code-level-add-grand-child.png)
 
 !!! tip "Changer l'ordre des modalités"
     === "Ordre initial"
         On peut facilement changer l'ordre des modalités ou en supprimer
-        ![alt text](../../img/pogues/list-code-level-init-order.png)
+        ![alt text](../../../img/pogues/list-code-level-init-order.png)
     === "Changer l'ordre"
-        ![alt text](../../img/pogues/list-code-level-changed-order.png)
+        ![alt text](../../../img/pogues/list-code-level-changed-order.png)
 
 !!! tip "Supprimer une modalité avec des enfants"
     === "Liste initiale"
         Quand on clique sur l'icone :octicons-trash-24: à droite de la modalité, cela la modalité parent avec tous ses enfants.
-        ![alt text](../../img/pogues/list-code-level-init-before-delete.png)
+        ![alt text](../../../img/pogues/list-code-level-init-before-delete.png)
     === "Parent 1 supprimé"
-        ![alt text](../../img/pogues/list-code-level-parent-deleted.png)
+        ![alt text](../../../img/pogues/list-code-level-parent-deleted.png)
 
 
 ??? exemple "Exemple complet"
-    ![alt text](../../img/pogues/list-code-level-complete-exemple.png)
+    ![alt text](../../../img/pogues/list-code-level-complete-exemple.png)
 
 
 
@@ -96,7 +97,7 @@ Il est possible d'avoir plusieurs niveaux de modalités dans une même liste de 
 
 Il est possible d'importer une liste de modalités (code + libellé) dans Pogues. Cette fonctionnalité est particulièrement intéressante lorsque la liste de codes est longue (évite la saisie dans Pogues).
 
-![Import liste de codes](../../img/pogues/list-code-import.png)
+![Import liste de codes](../../../img/pogues/list-code-import.png)
 
 !!! abstract "Légende"
     1. `Nom` de la liste de codes
@@ -135,9 +136,9 @@ On peut ensuite, sur une liste de codes déjà existante, exécuter les actions 
 ## Utiliser une liste de codes dans un questionnaire 
 Lors de la création d'une question avec réponse à choix unique ou multiple, on peut sélectionner la liste de codes à associer avec le champ `Choisir une liste de codes*`
 === "Choisir une liste de codes"
-    ![alt text](../../img/pogues/list-code-chose-in-pogues.png)
+    ![alt text](../../../img/pogues/list-code-chose-in-pogues.png)
 === "Liste de codes sélectionnée"
-    ![alt text](../../img/pogues/list-code-selected.png)
+    ![alt text](../../../img/pogues/list-code-selected.png)
 
 ## Ajouter un "Préciser"
 
@@ -147,11 +148,11 @@ Lors de la création d'une question avec réponse à choix unique ou multiple, o
 
 === "Ajouter un `Préciser`"
     Il suffit de cliquer sur le bouton `Ajouter un "Préciser"` puis d'indiquer son contenu dans le champ VTL `Libellé` qui est apparu.
-    ![list-code-preciser](../../img/pogues/list-code-preciser.png)
+    ![list-code-preciser](../../../img/pogues/list-code-preciser.png)
     > Le champ `Identifiant` est généré automatiquement et peut être édité. La valeur saisie par l'enquêté est enregistrée dans cette variable.
 === "Éditer un `Préciser`" 
     Il suffit de cliquer sur le bouton d'édition
-    ![list-code-preciser](../../img/pogues/list-code-preciser-edition.png)
+    ![list-code-preciser](../../../img/pogues/list-code-preciser-edition.png)
 
 !!! note 
     La demande de précision n'est pas associée à la liste de codes en elle-même mais bien à la **question qui utilise cette liste de codes**.
@@ -167,10 +168,10 @@ Il est possible de filtrer, pour des questions de type QCM (réponse booléenne 
 
 === "Ajouter un `Filtre`"
     On renseigne le filtre dans un éditeur VTL accessible via le bouton `Ajouter un filtre`
-    ![alt text](../../img/pogues/code-list-add-filter.png)
+    ![alt text](../../../img/pogues/code-list-add-filter.png)
 === "Éditer un `Filtre`"
     On peut l'éditer via le bouton d'édition
-    ![alt text](../../img/pogues/code-list-edit-filter.png)
+    ![alt text](../../../img/pogues/code-list-edit-filter.png)
 
 La même logique que pour filtrer une question est appliquée : on propose un éditeur VTL conditionnant l'affichage de la modalité avec les règles suivantes :
 
@@ -183,21 +184,21 @@ La même logique que pour filtrer une question est appliquée : on propose un é
 
 ??? example "Exemple"
     Imaginons la liste de code suivante
-    ![alt text](../../img/pogues/code-list-to-filter.png)
+    ![alt text](../../../img/pogues/code-list-to-filter.png)
     On rajoute alors 2 filtres :
 
     - la modalité `En emploi` ne s'affiche que si la variable `AGE` est supérieure à `16`
     - la modalité `À la retraite` ne s'affiche que si la variable `AGE` est supérieure à `62`
 
-    ![alt text](../../img/pogues/code-list-with-filter.png)
+    ![alt text](../../../img/pogues/code-list-with-filter.png)
 
     Ce qui donne les résultats suivants :
 
     === "$AGE$ = `null`"
-        ![alt text](../../img/pogues/code-list-filtered-age-null.png)
+        ![alt text](../../../img/pogues/code-list-filtered-age-null.png)
     === "$AGE$ = `15`"
-        ![alt text](../../img/pogues/code-list-filtered-age-15.png)
+        ![alt text](../../../img/pogues/code-list-filtered-age-15.png)
     === "$AGE$ = `17`"
-        ![alt text](../../img/pogues/code-list-filtered-age-17.png)
+        ![alt text](../../../img/pogues/code-list-filtered-age-17.png)
     === "$AGE$ = `65`"
-        ![alt text](../../img/pogues/code-list-filtered-age-65.png)
+        ![alt text](../../../img/pogues/code-list-filtered-age-65.png)
