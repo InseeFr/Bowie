@@ -11,8 +11,8 @@ Pour créer une question, cliquer sur `+ Question` et remplir les champs suivant
 
 - modifier les `modes de collecte` si la question ne concerne pas tous les modes associés au questionnaire (non fonctionnel en 2024)
 - préciser le `type de question` :
-    - [:octicons-link-16:Réponse simple](13-reponse-simple.md) (texte, date, nombre, booléen ou durée)
-    - [:octicons-link-16:Réponse à choix unique](15-reponse-choix-unique.md) (QCU, liste déroulante, [:octicons-link-16: suggester-autocomplétion](../f._Nomenclatures/suggester.md))
-    - [:octicons-link-16:Liens deux à deux](16-liens-2a2.md)
-    - [:octicons-link-16:Réponse à choix multiple](17-reponse-choix-multiple.md) (cf. batterie de questions)
-    - [:octicons-link-16:Tableau](Tableaux/index.md)
+    - [Réponse simple](13-reponse-simple.md) (texte, date, nombre, booléen ou durée)
+    - [Réponse à choix unique](15-reponse-choix-unique.md) (QCU, liste déroulante, [suggester-autocomplétion](../f._Nomenclatures/1-suggester.md))
+    - [Liens deux à deux](16-liens-2a2.md)
+    - [Réponse à choix multiple](17-reponse-choix-multiple.md) (cf. batterie de questions)
+    - [Tableau](Tableaux/index.md)

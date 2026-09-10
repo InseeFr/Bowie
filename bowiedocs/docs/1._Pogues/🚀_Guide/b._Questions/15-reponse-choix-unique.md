@@ -39,7 +39,7 @@ Le Suggester est le composant de recherche sur liste. Il permet d'offrir une rec
 
 Le type de réponse est imposé : c'est une liste déroulante dans laquelle l'enquêté sélectionne la modalité correspondant à sa situation.
 
-Plus de détails sur la page dédiée : [Suggester](../f._Nomenclatures/suggester.md).
+Plus de détails sur la page dédiée : [Suggester](../f._Nomenclatures/1-suggester.md).
 
 ### Variable du questionnaire
 
@@ -60,7 +60,7 @@ Les modalités de la question sont contituées des valeurs du vecteur (par exemp
 
 #### Filtrer les modalités
 
-!!! danger "Fonctionnalité non supportée pour les [:octicons-link-16:Réponses QCU dans un tableau](../../🚀_Guide/b._Questions/Tableaux/index.md), uniquement dans une question simple !"
+!!! danger "Fonctionnalité non supportée pour les [Réponses QCU dans un tableau](../../🚀_Guide/b._Questions/Tableaux/index.md), uniquement dans une question simple !"
 
 
 Il est possible de filtrer les modalités d'un QCU basé sur une variable du questionnaire (collectée, externe ou calculée) en remplissant le champ `Filtre de modalités` avec une formule VTL. 

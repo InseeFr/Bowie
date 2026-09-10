@@ -10,7 +10,7 @@
 
 - ✅ Réponse `simple` (texte, date, nombre, booléen ou durée) [:octicons-file-symlink-file-16:](13-reponse-simple.md)
 - ✅ Réponse `à choix unique` (QCU, liste déroulante) [:octicons-file-symlink-file-16:](15-reponse-choix-unique.md)
-- ❌ Réponse `à choix unique` de type suggester-autocomplétion [:octicons-file-symlink-file-16:](../f._Nomenclatures/suggester.md)
+- ❌ Réponse `à choix unique` de type suggester-autocomplétion [:octicons-file-symlink-file-16:](../f._Nomenclatures/1-suggester.md)
 - ❌ `Liens deux à deux` [:octicons-file-symlink-file-16:](16-liens-2a2.md)
 - ❌ Réponse `à choix multiple` (cf. batterie de questions) [:octicons-file-symlink-file-16:](17-reponse-choix-multiple.md)
 - ❌ `Tableau` [:octicons-file-symlink-file-16:](../b._Questions/Tableaux/index.md)

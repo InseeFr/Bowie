@@ -1,6 +1,6 @@
 # Question de type Recherche sur liste ("Suggester")
 
-Le composant perm
+Ce composant permet d'offrir une recherche dynamique sur des listes volumineuses, issues de nomenclatures, avec la présentation d'échos de réponse au fur et à mesure de la saisie.
 
 ## Paramètre de base
 On effectue la recherche sur les libellés et/ou les identifiants suivant le paramétrage qui a été choisi pour chacune de ces nomenclatures.
