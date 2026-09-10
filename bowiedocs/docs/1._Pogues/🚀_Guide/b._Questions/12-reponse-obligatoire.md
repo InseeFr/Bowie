@@ -10,13 +10,13 @@
 
 - ✅ Réponse `simple` (texte, date, nombre, booléen ou durée) [:octicons-file-symlink-file-16:](13-reponse-simple.md)
 - ✅ Réponse `à choix unique` (QCU, liste déroulante) [:octicons-file-symlink-file-16:](15-reponse-choix-unique.md)
-- ❌ Réponse `à choix unique` de type suggester-autocomplétion [:octicons-file-symlink-file-16:](15b-suggester.md)
+- ❌ Réponse `à choix unique` de type suggester-autocomplétion [:octicons-file-symlink-file-16:](../f._Nomenclatures/suggester.md)
 - ❌ `Liens deux à deux` [:octicons-file-symlink-file-16:](16-liens-2a2.md)
 - ❌ Réponse `à choix multiple` (cf. batterie de questions) [:octicons-file-symlink-file-16:](17-reponse-choix-multiple.md)
-- ❌ `Tableau` [:octicons-file-symlink-file-16:](../Tableaux/index.md)
+- ❌ `Tableau` [:octicons-file-symlink-file-16:](../b._Questions/Tableaux/index.md)
 
 
-!!! danger "Ne fonctionne pas s'il y a un ["Préciser"](.././14-liste-codes.md/#ajouter-un-preciser) sur l'une des modalités"
+!!! danger "Ne fonctionne pas s'il y a un ["Préciser"](../g._Listes_de_codes/index.md#ajouter-un-preciser) sur l'une des modalités"
     
     Actuellement on peut combiner dans Pogues Variable obligatoire et demande de clarification mais cela ne fonctionne pas en visualisation, le caractère obligatoire est KO. <br>
     Une modification à venir dans l'IHM permettra d'éviter cette spécification inopérante.

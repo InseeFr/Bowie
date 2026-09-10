@@ -6,7 +6,7 @@ On souhaite pouvoir s'assurer d'une bonne qualité de réponse aux différentes 
 
     <div class="grid cards" markdown>
 
-    - __[Les contrôles :material-arrow-right-bold-box-outline:](../🚀_Guide/23-controles.md)__
+    - __[Les contrôles :material-arrow-right-bold-box-outline:](../🚀_Guide/a._Questionnaire/23-controles.md)__
 
     </div>
 

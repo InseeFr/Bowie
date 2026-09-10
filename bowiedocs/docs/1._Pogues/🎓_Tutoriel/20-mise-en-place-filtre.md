@@ -43,7 +43,7 @@ Il nous reste à préciser que le filtre à pour champ d'action la question `T_N
 
     <div class="grid cards" markdown>
 
-    - __[Les filtres :material-arrow-right-bold-box-outline:](../🚀_Guide/25-filtres.md)__
+    - __[Les filtres :material-arrow-right-bold-box-outline:](../🚀_Guide/a._Questionnaire/25-filtres.md)__
 
     </div>
 

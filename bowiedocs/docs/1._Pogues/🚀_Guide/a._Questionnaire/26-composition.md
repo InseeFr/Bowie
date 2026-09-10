@@ -24,13 +24,13 @@ graph TD
 
 Le questionnaire Pogues s'enrichit d'un nouvel élément qui marque cette ou ces références à d'autres questionnaires. :point_down:
 
-![Exemple compo](../../img/pogues/composition-questionnaire-exemple.png)
+![Exemple compo](../../../img/pogues/composition-questionnaire-exemple.png)
 
 ## Ajouter une référence
 
 Pour ajouter une référence, il faut cliquer sur le bouton "Élément externe" de la barre d'actions, qui va vous proposer :
 
-![Élément externe](../../img/pogues/composition-element-externe.png)
+![Élément externe](../../../img/pogues/composition-element-externe.png)
 
 - _Référence au TCM_ : permet d'ajouter une référence à un module du TCM
 - _Référence à un questionnaire_ : permet d'ajouter une référence à tous types de questionnaire
@@ -40,11 +40,11 @@ Nous nous concentrons ici sur les deux premières options. Le fonctionnement qui
 
 Dans la page qui s'ouvre, il suffit de rechercher le questionnaire que l'on veut référencer dans notre questionnaire puis de cliquer sur _Ajouter_.
 
-![Ajouter une référence](../../img/pogues/composition-ajouter.png)
+![Ajouter une référence](../../../img/pogues/composition-ajouter.png)
 
 La référence est ajoutée dans le questionnaire comme un nouvel élément qui est déplaçable comme une séquence.
 
-![Bloc référence](../../img/pogues/composition-bloc-reference.png)
+![Bloc référence](../../../img/pogues/composition-bloc-reference.png)
 
 On peut également ouvrir le questionnaire référencé ou supprimer la référence.
 
@@ -57,7 +57,7 @@ Une fois la référence ajoutée, le questionnaire hôte peut mobiliser :
 
 Il est également possible de filtrer une référence. :point_down:
 
-![Filtre sur référence](../../img/pogues/composition-filtre.png)
+![Filtre sur référence](../../../img/pogues/composition-filtre.png)
 
 ## Précautions et "bonnes pratiques" 👍
 

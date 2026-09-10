@@ -77,7 +77,7 @@ Dans l'onglet "Contrôles" de la question du questionnaire à partir de laquelle
         > 7.3                                   // true
         ```
 
-Voir d'autres [exemples](../💻_VTL/2-guide-vtl.md/#cookbook)
+Voir d'autres [exemples](../../💻_VTL/2-guide-vtl.md#quelques-exemples-dutilisation-du-vtl-dans-pogues)
 
 ## Comportements
 
@@ -108,10 +108,10 @@ Voir d'autres [exemples](../💻_VTL/2-guide-vtl.md/#cookbook)
 Dans la plupart des cas, vérifier une potentielle non-réponse c'est vérifier que la variable sous-jacente n'a pas été valorisée. Il faut donc écrire un contrôle pour tester la **_nullité_**. <br> 
 
 !!! example ""
-    Dépendamment du [type de la variable](./Questions/13-reponse-simple.md), la formule VTL de conditionnant l'affichage du contrôle de non réponse est différente.
+    Dépendamment du [type de la variable](../b._Questions/13-reponse-simple.md), la formule VTL de conditionnant l'affichage du contrôle de non réponse est différente.
 
     === "Date - Nombre - Durée"
-        Pour ces types, la formule VTL est simple avec seulement l'utilisation de [**isnull()**](../💻_VTL/1-fonctions-vtl.md/#isnull)
+        Pour ces types, la formule VTL est simple avec seulement l'utilisation de [**isnull()**](../../💻_VTL/1-fonctions-vtl.md/#isnull)
         ```
         isnull($VAR$)
         ```
@@ -121,7 +121,7 @@ Dans la plupart des cas, vérifier une potentielle non-réponse c'est vérifier 
         ```
         isnull($VAR) or $VAR = ""
         ```
-        Ou en utilisant la fonction [**nvl()**](../💻_VTL/1-fonctions-vtl.md/#nvl) :
+        Ou en utilisant la fonction [**nvl()**](../../💻_VTL/1-fonctions-vtl.md/#nvl) :
 
         ```
         nvl($VAR, "") = ""
@@ -132,7 +132,7 @@ Dans la plupart des cas, vérifier une potentielle non-réponse c'est vérifier 
         ```
         isnull($VAR) or $VAR = false
         ```
-        Ou en utilisant la fonction [**nvl()**](../💻_VTL/1-fonctions-vtl.md/#nvl) :
+        Ou en utilisant la fonction [**nvl()**](../../💻_VTL/1-fonctions-vtl.md/#nvl) :
 
         ```
         nvl($VAR, false) = false
@@ -286,5 +286,5 @@ match_characters(
 
 Pour référence, des questionnaires illustrant ces contrôles sont disponibles dans l'environnement de demo, sous le timbre *DOCUMENTATION*.
 
-- Un [questionnaire implémentant les contrôles de Siret, Siren et Rna :material-open-in-new:](https://conception-questionnaires-demo.insee.fr/questionnaire/m4tmy4kl){target="_blank"} 
-- Un [questionnaire similaire :material-open-in-new:](https://conception-questionnaires-demo.insee.fr/questionnaire/m74nlrpj){target="_blank"}  où les contrôles ne se déclenchent aussi quand le champ est vide 
+- Un [questionnaire implémentant les contrôles de Siret, Siren et Rna :material-open-in-new:](https://conception-questionnaires-demo.insee.fr/a._Questionaire/m4tmy4kl){target="_blank"} 
+- Un [questionnaire similaire :material-open-in-new:](https://conception-questionnaires-demo.insee.fr/a._Questionaire/m74nlrpj){target="_blank"}  où les contrôles ne se déclenchent aussi quand le champ est vide 

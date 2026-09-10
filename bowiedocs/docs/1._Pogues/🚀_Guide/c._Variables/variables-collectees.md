@@ -24,4 +24,4 @@
 
 Dans le cas où certaines cellules d'un tableau ou d'une question à choix multiples ne sont pas à collecter car sans objet ou destinées par exemple à rappeler un total calculé, collecté ou en dur (par exemple 100%), décocher pour chaque cellule concernée le booléen Collectée associée à la variable collectée ad hoc.
 
-Pour plus d'info, voir [Les cases non-collectées](../Tableaux/3-cases-non-collectees.md)
+Pour plus d'info, voir [Les cases non-collectées](../b._Questions/Tableaux/3-cases-non-collectees.md)

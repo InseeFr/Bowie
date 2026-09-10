@@ -14,7 +14,7 @@ Pour créer une question de type **Réponse simple**, remplir, pour toutes les v
     - A l'initialisation du questionnaire, tout champ texte vaut `null`
     - Quand on saisie une valeur, ex `"mon texte"`, puis qu'on efface cette valeur du champ, alors le champ texte vaut `""` et non pas `null` comme au début.
     
-    C'est pourquoi, pour gérer les cas de champ texte vide, il faut **[gérer la nullité](../23-controles.md/#non-reponse)**. On remplace ainsi les valeurs `null` par `""` . <br>
+    C'est pourquoi, pour gérer les cas de champ texte vide, il faut **[gérer la nullité](../a._Questionnaire/23-controles.md/#non-reponse)**. On remplace ainsi les valeurs `null` par `""` . <br>
     Ex de condition d'affichage d'un contrôle pour indiquer qu'un champ texte est vide
     ```
     nvl($VAR$, "") = ""
@@ -79,7 +79,7 @@ Pour créer une question de type **Réponse simple**, remplir, pour toutes les v
     - A l'initialisation du questionnaire, tout champ booléen vaut `null`. La case est visuellement décochée.
     - Quand on coche la case, alors la valeur collectée est `true`, puis quand on décoche, alors la valeur collectée est `false`.
     
-    Comme pour le champ texte, il faut **[gérer le cas de la nullité](../23-controles.md/#non-reponse)**, on remplace les valeurs `null` par `false` pour gérer les cas où la case est décochée. <br>
+    Comme pour le champ texte, il faut **[gérer le cas de la nullité](../a._Questionnaire/23-controles.md/#non-reponse)**, on remplace les valeurs `null` par `false` pour gérer les cas où la case est décochée. <br>
     Ex de condition d'affichage d'un contrôle pour indiquer qu'une case de type booléen n'est pas cochée.
     ```
     nvl($VAR$, false) = false

@@ -10,7 +10,7 @@ Pogues permet la création de trois types de variables dans le questionnaire :
 
     <div class="grid cards" markdown>
 
-    - __[Les variables :material-arrow-right-bold-box-outline:](../🚀_Guide/Variables/index.md)__
+    - __[Les variables :material-arrow-right-bold-box-outline:](../🚀_Guide/c._Variables/index.md)__
 
     </div>
 
@@ -24,7 +24,7 @@ Pour créer une variable calculée, il faut aller dans le menu de gestion des va
 ![Menu Variables](../../img/pogues/menu-variables.png)
 
 
-Cette page liste l'ensemble des variables du questionnaire présentées par [Niveau de calcul](../🚀_Guide/Variables/portee.md).
+Cette page liste l'ensemble des variables du questionnaire présentées par [Niveau de calcul](../🚀_Guide/c._Variables/portee.md).
 
 Plusieurs champs sont à compléter :
 

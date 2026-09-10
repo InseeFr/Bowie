@@ -40,12 +40,12 @@ Par défaut, **toutes les occurrences** d'une boucle sont affichées sur la mêm
     - Regrouper les questions sur l'identité d'une personne (Prénom, Age, Sexe, etc) sur la même page pour **chaque** individu.
     - Ici **une occurrence** = question `PRENOM` + question `SEXE` + question `AGE`
     === "Affichage des occurrences sur la même page"
-        ![alt text](../../img/pogues/loop-all-occu-same-page.png)
+        ![alt text](../../../img/pogues/loop-all-occu-same-page.png)
     === "Affichage d'une occurrence par page"
         === "Page 1"
-            ![alt text](../../img/pogues/loop-all-occu-by-page-1.png)
+            ![alt text](../../../img/pogues/loop-all-occu-by-page-1.png)
         === "Page 2"
-            ![alt text](../../img/pogues/loop-all-occu-by-page-2.png)
+            ![alt text](../../../img/pogues/loop-all-occu-by-page-2.png)
 
 ## Boucle Liée
 
@@ -63,7 +63,7 @@ Pour créer une boucle liée, je remplis :
 
 ## Portée des variables (Champ "Niveau de calcul")
 
-Se référer à la section [Portée des variables](Variables/portee.md)
+Se référer à la section [Portée des variables](../c._Variables/portee.md)
 
 ## Exclusion
 

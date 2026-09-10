@@ -6,12 +6,12 @@ On souhaite parfois qu'une ou plusieurs cases d'un tableau porte une donnée cal
 
 Par exemple dans le tableau de taille fixe suivant où les cases de la dernière colonne représentant la différence entre les deux cases précédentes.:
 
-![Tableau statique avec total en ligne](../../../img/pogues/tf_total_en_ligne_tableau.png)
+![Tableau statique avec total en ligne](../../../../img/pogues/tf_total_en_ligne_tableau.png)
 
 
 ou dans le tableau dynamique où la première colonne est une donnée externe - préremplie : 
 
-![Tableau dynamique avec colonne_prérempli](../../../img/pogues/td-prerempli-non-collecte.png)
+![Tableau dynamique avec colonne_prérempli](../../../../img/pogues/td-prerempli-non-collecte.png)
 
 
 Pour spécifier ce type de comportement, Pogues met à disposition le mécanisme de __case non-collectée__.
@@ -20,11 +20,11 @@ Pour spécifier ce type de comportement, Pogues met à disposition le mécanisme
 
 Une case de tableau est par défaut une variable standard collectée. Dans l'onglet "Variables collectées", on note que par défaut la valeur de Collectée est à Oui :
 
-![Case collectée](../../../img/pogues/tableau_case_collectee.png)
+![Case collectée](../../../../img/pogues/tableau_case_collectee.png)
 
 Si on choisit "Non", on peut alors remplacer la case par une expression VTL, comme ici la différence entre deux variable numériques :
 
-![Case non collectée](../../../img/pogues/tableau_case_non_collectee.png)
+![Case non collectée](../../../../img/pogues/tableau_case_non_collectee.png)
 
 ### Dans un tableau dynamique
 
@@ -32,19 +32,19 @@ Ici, c'est la __colonne entière__ qui peut ne pas être collectée. Les cas d'u
 
 - l'affichage d'une donnée externe (préremplissage par exemple), décrite au préalable :
 
-![Case non collectée](../../../img/pogues/td-prerempli-non-collecte-spec-externe.png)
+![Case non collectée](../../../../img/pogues/td-prerempli-non-collecte-spec-externe.png)
 
 et utilisée ainsi :
 
-![Case non collectée](../../../img/pogues/td-prerempli-non-collecte-spec.png)
+![Case non collectée](../../../../img/pogues/td-prerempli-non-collecte-spec.png)
 
 - l'affichage d'une donnée calculée, calculée ainsi :
 
-![Case non collectée_var_calculée](../../../img/pogues/td-prerempli-non-collecte-var-calculee.png)
+![Case non collectée_var_calculée](../../../../img/pogues/td-prerempli-non-collecte-var-calculee.png)
 
 et utilisée ainsi :
 
-![Case non collectée_var_calculée](../../../img/pogues/td-prerempli-non-collecte-usage-calculee.png)
+![Case non collectée_var_calculée](../../../../img/pogues/td-prerempli-non-collecte-usage-calculee.png)
 
 
 
@@ -68,7 +68,7 @@ où `N` est l'index de la dernière colonne avant la colonne portant le total.
 
 !!! tip "Astuce"
 
-    Pour des expressions un peu longue, il est préférable de passer par une [variable calculée](../Variables/variables-calculees.md).
+    Pour des expressions un peu longue, il est préférable de passer par une [variable calculée](../../c._Variables/variables-calculees.md).
 
 ### Dans un tableau dynamique
 
@@ -88,7 +88,7 @@ On reprend le principe de la somme en ligne vu plus haut, mais cette fois-ci on 
 
 !!! tip "Astuce"
 
-    Pour avoir un total correct même si toutes les cases ne sont pas remplies, il est nécessaire d'utiliser [la fonction `nvl`](../../💻_VTL/1-fonctions-vtl.md/#nvl).
+    Pour avoir un total correct même si toutes les cases ne sont pas remplies, il est nécessaire d'utiliser [la fonction `nvl`](../../../💻_VTL/1-fonctions-vtl.md/#nvl).
 
     Par exemple :
 

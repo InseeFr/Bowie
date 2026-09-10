@@ -13,4 +13,4 @@ Pour créer une question de type **Réponse à choix multiples**, la description
 
 !!! danger "Fonctionnalité non supportée pour les QCM avec **réponses sous forme de batterie de questions**"
 
-Il est possible de filtrer la liste de modalités associée à la QCM selon des formules VTL. Pour plus d'info, voir la doc [Filtrer une liste de codes](../14-liste-codes.md/#filtrer-une-liste-de-codes)
+Il est possible de filtrer la liste de modalités associée à la QCM selon des formules VTL. Pour plus d'info, voir la doc [Filtrer une liste de codes](../g._Listes_de_codes/index.md#filtrer-une-liste-de-codes)

@@ -92,7 +92,7 @@ search:
 
 ??? example "Exemple d'utilisation"
     === "Champ texte vide"
-        Tester si un champ texte, `PRENOM` est vide ou non. _Voir [la note des réponses de type texte](../🚀_Guide/Questions/13-reponse-simple.md/#type-de-reponse-texte)_
+        Tester si un champ texte, `PRENOM` est vide ou non. _Voir [la note des réponses de type texte](../🚀_Guide/b._Questions/13-reponse-simple.md/#type-de-reponse-texte)_
         ```
         nvl($PRENOM$, "") = ""
         ```
@@ -193,13 +193,13 @@ search:
 
             ![alt text](../../img/pogues/vtl_correct_cast.png)
     === "Comparaison de Nombre"
-        Dans le cas où on a une variable externe, comme elles sont de base tout importées comme des textes (cf [import de données externes](../🚀_Guide/Personnalisation/2-guide-perso-echantillon.md#point-dattention)), il faut les transtyper en nombre (`integer`)
+        Dans le cas où on a une variable externe, comme elles sont de base tout importées comme des textes (cf [import de données externes](../🚀_Guide/d._Personnalisation/2-guide-perso-echantillon.md#point-dattention)), il faut les transtyper en nombre (`integer`)
         ```
         cast($VARIABLE_EXTERNE$, integer) < 25
         ```
         Renvoie `true` si la variable externe est inférieur à `25` et `false` sinon.
     === "Comparaison de date"
-        Quand on définit une variable de type date, on collecte en réalité un texte sous un format précis (`AAAA`, `AAAA-MM`, `AAAA-MM-JJ`). Voir [Type de réponse Date](../🚀_Guide/Questions/13-reponse-simple.md/#type-de-reponse-date). <br>
+        Quand on définit une variable de type date, on collecte en réalité un texte sous un format précis (`AAAA`, `AAAA-MM`, `AAAA-MM-JJ`). Voir [Type de réponse Date](../🚀_Guide/b._Questions/13-reponse-simple.md/#type-de-reponse-date). <br>
         Or on ne peut comparer deux textes en terme de supériorité ou infériorité numérique. 
 
         > Si on fait `"1986-01" > "1987-02"`, la moteur VTL ne saura pas comment les interpréter pour la comparaison.

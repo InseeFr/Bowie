@@ -56,7 +56,7 @@ Pour finaliser la création, on appuie sur le bouton "Valider" en bas de la fen�
 
     <div class="grid cards" markdown>
 
-    - __[Les Séquences :material-arrow-right-bold-box-outline:](../🚀_Guide/10-sequences.md)__
+    - __[Les Séquences :material-arrow-right-bold-box-outline:](../🚀_Guide/a._Questionnaire/10-sequences.md)__
 
     </div>
 
@@ -123,10 +123,10 @@ Les autres champs ne sont pas modifiables car sont **directement associés aux p
 
     <div class="grid cards" markdown>
 
-    - __[Les questions :material-arrow-right-bold-box-outline:](../🚀_Guide/Questions/index.md)__
-    - __[Variables Collectées :material-arrow-right-bold-box-outline:](../🚀_Guide/Variables/variables-collectees.md)__
-    - __[Nommage des variables :material-arrow-right-bold-box-outline:](../🚀_Guide/Variables/nommage.md)__
-    - __[Les questions simples de type texte :material-arrow-right-bold-box-outline:](../🚀_Guide/Questions/13-reponse-simple.md/#type-de-reponse-texte)__
+    - __[Les questions :material-arrow-right-bold-box-outline:](../🚀_Guide/b._Questions/index.md)__
+    - __[Variables Collectées :material-arrow-right-bold-box-outline:](../🚀_Guide/c._Variables/variables-collectees.md)__
+    - __[Nommage des variables :material-arrow-right-bold-box-outline:](../🚀_Guide/c._Variables/nommage.md)__
+    - __[Les questions simples de type texte :material-arrow-right-bold-box-outline:](../🚀_Guide/b._Questions/13-reponse-simple.md/#type-de-reponse-texte)__
 
     </div>
 
@@ -137,7 +137,7 @@ Nous disposons maintenant d'un questionnaire simple, contenant une séquence et 
 Un simple clic sur le bouton "Sauvegarder" de la barre d'action fait l'affaire.
 
 !!! tip
-    Vous pouvez facilement gérer la liste de vos sauvegardes avec le menu [**historique**](../🚀_Guide/29-historique.md) ✨
+    Vous pouvez facilement gérer la liste de vos sauvegardes avec le menu [**historique**](../🚀_Guide/e._Historique/index.md)
 
 ## Suite
 [Visualiser le questionnaire](12-visualisation-questionnaire.md)

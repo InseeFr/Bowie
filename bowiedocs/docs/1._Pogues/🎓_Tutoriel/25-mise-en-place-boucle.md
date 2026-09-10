@@ -19,7 +19,7 @@ Dans ce tutoriel, on va mettre en place le premier cas uniquement.
 
     <div class="grid cards" markdown>
 
-    - __[Les boucles :material-arrow-right-bold-box-outline:](../🚀_Guide/24-boucles.md)__
+    - __[Les boucles :material-arrow-right-bold-box-outline:](../🚀_Guide/a._Questionnaire/24-boucles.md)__
 
     </div>
 
@@ -58,7 +58,7 @@ En visualisant notre questionnaire par exemple en web ménage, on remarque qu'il
 
 ## Personnalisation de la boucle
 
-Pogues nous permet d'utiliser des [variables systèmes](../🚀_Guide/Variables/variables-globales.md) bien sympathiques, notamment GLOBAL_ITERATION_INDEX qui donne la position dans une boucle. 
+Pogues nous permet d'utiliser des [variables systèmes](../🚀_Guide/c._Variables/variables-globales.md) bien sympathiques, notamment GLOBAL_ITERATION_INDEX qui donne la position dans une boucle. 
 
 Utilisons la pour indiquer à notre répondant où il en est dans son remplissage de boucle. On modifie le libellé de la sous-séquence sur laquelle on boucle.
 ![Ajout de la personnalisation dans le libellé de sous-séquence de la boucle](../../img/pogues/utiliser-global-it-index.png)
@@ -70,6 +70,6 @@ Il est bien évidemment possible de personnaliser encore plus notre boucle, par 
 
 ## Corrigé
 
-Vous pouvez comparer votre création avec le [corrigé de l'exercice :material-open-in-new:](https://conception-questionnaires-demo.insee.fr/questionnaire/ml82b1lb){target="_blank"}.
+Vous pouvez comparer votre création avec le [corrigé de l'exercice :material-open-in-new:](https://conception-questionnaires-demo.insee.fr/a._Questionaire/ml82b1lb){target="_blank"}.
 
 Maintenant qu'on vous a donné les bases, on vous laisse découvrir toutes les possibilités de l'outil !

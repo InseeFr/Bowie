@@ -28,7 +28,7 @@ On ne peut en revanche pas les utiliser hors boucle.
 
 ## Variables globales issues des liens deux à deux ✨
 
-Le format des données collectées lors d'une question de type [lien deux à deux](../Questions/16-liens-2a2.md) ne permet pas à ce jour de mobiliser simplement, en cours de collecte chaque lien. Aussi, on vous fournit des variables système sous forme de vecteurs, faciles à manipuler avec des formules VTL dans le questionnaire.
+Le format des données collectées lors d'une question de type [lien deux à deux](../b._Questions/16-liens-2a2.md) ne permet pas à ce jour de mobiliser simplement, en cours de collecte chaque lien. Aussi, on vous fournit des variables système sous forme de vecteurs, faciles à manipuler avec des formules VTL dans le questionnaire.
 
 ### Présentation des variables
 

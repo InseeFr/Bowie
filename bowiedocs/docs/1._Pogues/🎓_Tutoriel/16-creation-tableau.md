@@ -55,7 +55,7 @@ Il ne reste qu'à générer les variables puis à valider la question.
 
     <div class="grid cards" markdown>
 
-    - __[Les tableaux :material-arrow-right-bold-box-outline:](../🚀_Guide/Tableaux/index.md)__
+    - __[Les tableaux :material-arrow-right-bold-box-outline:](../🚀_Guide/b._Questions/Tableaux/index.md)__
 
     </div>
 

@@ -47,7 +47,7 @@ Faire de même avec les deux autres sous-séquences :
 
     <div class="grid cards" markdown>
 
-    - __[Les sous-séquences :material-arrow-right-bold-box-outline:](../🚀_Guide/11-sous-sequences.md)__
+    - __[Les sous-séquences :material-arrow-right-bold-box-outline:](../🚀_Guide/a._Questionnaire/11-sous-sequences.md)__
 
     </div>
 
@@ -77,7 +77,7 @@ Générez la variable puis validez.
 
     <div class="grid cards" markdown>
 
-    - __[Les questions simples de type date :material-arrow-right-bold-box-outline:](../🚀_Guide/Questions/13-reponse-simple.md/#type-de-reponse-date)__
+    - __[Les questions simples de type date :material-arrow-right-bold-box-outline:](../🚀_Guide/b._Questions/13-reponse-simple.md/#type-de-reponse-date)__
 
     </div>
 

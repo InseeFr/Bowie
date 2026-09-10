@@ -30,7 +30,7 @@ Bowie est un ensemble de solutions open-source et cohérentes permettant la cré
     ---
     Solutions d'orchestration de ces composants pour la collecte par enquêteur
 
--   __[:material-brush-variant: Public-Enemy](1._Pogues/🚀_Guide/Personnalisation/index.md){ .md-button }__ 
+-   __[:material-brush-variant: Public-Enemy](1._Pogues/🚀_Guide/d._Personnalisation/index.md){ .md-button }__ 
     
     ---
     Personnalisation pour une visualisation enrichie des questionnaires

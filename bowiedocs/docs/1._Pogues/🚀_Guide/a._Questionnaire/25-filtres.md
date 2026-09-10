@@ -22,9 +22,9 @@ Pour créer un filtre, il suffit de cliquer sur le bouton "+ Filtre" dans la bar
     Sur le questionnaire papier figure le champ _Description_ : pas de description, pas de libellé de filtre.
 
 === "Filtres corrects"
-    ![Filtres OK](../../img/pogues/guide-filtres-ok.png)
+    ![Filtres OK](../../../img/pogues/guide-filtres-ok.png)
 === "Filtres incorrects"
-    ![Filtres KO](../../img/pogues/guide-filtres-ko.png)
+    ![Filtres KO](../../../img/pogues/guide-filtres-ko.png)
 
 !!! warning "Cohérence avec les contrôles"
     Si on filtre une question avec un contrôle, il faut rajouter la condition du filtre dans le contrôle pour que ce dernier ne se déclenche pas quand la question n'est pas affiché

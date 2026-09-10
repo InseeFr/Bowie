@@ -54,4 +54,4 @@ Je peux ensuite afficher cette valeur, par exemple dans une déclaration, en app
 
 ### Questionnaire exemple
 
-Pour référence, un [questionnaire implémentant cette solution :material-open-in-new:](https://conception-questionnaires-demo.insee.fr/questionnaire/m1holrzlDOC){target="_blank"} est disponible dans l'environnement de demo, sous le timbre DOCUMENTATION
+Pour référence, un [questionnaire implémentant cette solution :material-open-in-new:](https://conception-questionnaires-demo.insee.fr/a._Questionaire/m1holrzlDOC){target="_blank"} est disponible dans l'environnement de demo, sous le timbre DOCUMENTATION

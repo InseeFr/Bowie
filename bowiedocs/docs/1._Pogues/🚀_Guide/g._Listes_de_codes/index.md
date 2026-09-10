@@ -159,11 +159,11 @@ Lors de la création d'une question avec réponse à choix unique ou multiple, o
     Ainsi pour une même liste de codes on peut avoir différents `Préciser` définis dans différentes questions.
 
 
-## ✨ Filtrer une liste de codes
+## Filtrer une liste de codes
 
 Il est possible de filtrer, pour des questions de type QCM (réponse booléenne uniquement) ou QCU, une liste de modalités selon une formule VTL.
 
-!!! danger "Fonctionnalité non supportée pour les [:octicons-link-16:Réponses QCM avec réponses sous forme de batterie de questions](./Questions/17-reponse-choix-multiple.md) et les [:octicons-link-16:Réponses QCU dans un tableau](./Tableaux/index.md)"
+!!! danger "Fonctionnalité non supportée pour les [:octicons-link-16:Réponses QCM avec réponses sous forme de batterie de questions](../b._Questions/17-reponse-choix-multiple.md) et les [:octicons-link-16:Réponses QCU dans un tableau](../b._Questions/Tableaux/index.md)"
 
 
 === "Ajouter un `Filtre`"

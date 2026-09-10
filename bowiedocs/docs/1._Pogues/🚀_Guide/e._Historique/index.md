@@ -3,7 +3,7 @@
 ## Accéder à l'historique
 
 !!! abstract "Historique des sauvegardes"
-    ![alt text](../../img/pogues/save-description.png)
+    ![alt text](../../../img/pogues/save-description.png)
 
     1. Liste des sauvegardes  du jour
     2. Bouton pour consulter un sauvegarde
@@ -38,7 +38,7 @@
 ## Consulter une sauvegarde d'un questionnaire
 
 !!! abstract "Consultation d'un sauvegarde"
-    ![alt text](../../img/pogues/save-read-only.png)
+    ![alt text](../../../img/pogues/save-read-only.png)
 
     1. Id de la sauvegarde
     2. Bandeau indiquant que le questionnaire est en lecture seule

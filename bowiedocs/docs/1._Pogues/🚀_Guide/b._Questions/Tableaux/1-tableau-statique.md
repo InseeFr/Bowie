@@ -4,11 +4,11 @@ Si on veut créer une question de type Tableau Statique (avec en-tête de lignes
 
 !!! abstract "Description"
     
-    ![alt text](../../../img/pogues/static-tab-legend.png)
+    ![alt text](../../../../img/pogues/static-tab-legend.png)
     
     - l'Axe d'information principal : 
         - [`1`] Format de l'axe principal* : Choisir `Statique`
-        - [`2`] Spécifier la liste de codes. S'il n'y en a pas, veuillez [spécifier une nouvelle liste de codes](../14-liste-codes.md). cette dernière sera utilisée pour l'entête de lignes en première colonne.
+        - [`2`] Spécifier la liste de codes. S'il n'y en a pas, veuillez [spécifier une nouvelle liste de codes](../../g._Listes_de_codes/index.md). cette dernière sera utilisée pour l'entête de lignes en première colonne.
     - [`3`] l'Information mesurée : renseigner la ou les informations de type Réponse simple ou Réponse à choix unique qu'on souhaite collecter. Le résultat sera donc un tableau comprenant une colonne d'en têtes et n colonnes de collecte d'informations
    
 

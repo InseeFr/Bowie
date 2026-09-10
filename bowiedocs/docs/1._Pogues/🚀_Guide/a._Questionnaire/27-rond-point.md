@@ -10,7 +10,7 @@ Le cas typique d'utilisation est pour permettre la réponse non-ordonnée à des
 
 Le Rond-point se matérialise dans la vision structurelle du questionnaire avant la ou les séquences sur laquelle il va permettre de naviguer.
 
-![Le Rond-point dans la vue structurelle](../../img/pogues/rond-point-vue-structure.png)
+![Le Rond-point dans la vue structurelle](../../../img/pogues/rond-point-vue-structure.png)
 
 Le Rond-point exploite une boucle principale (par exemple : collecte des informations sur les habitants) pour créer sa navigation non-linéaire. Les concepts mobilisés sont très proches de ceux mis en oeuvre pour [les boucles](24-boucles.md).
 
@@ -29,7 +29,7 @@ Pour ajouter un comportement de type _Rond-point_ dans Pogues:
 
 Voici un exemple de Rond-point finalisé dans Pogues:
 
-![Le Rond-point paramétré](../../img/pogues/rond-point-final.png)
+![Le Rond-point paramétré](../../../img/pogues/rond-point-final.png)
 
 #### Usage du Sauf
 
@@ -43,7 +43,7 @@ Ce champ va permettre de décrire chaque item, et pour ce faire on peut utiliser
 
 donnera ce visuel:
 
-![Visuel d'un libellé pour un item du Rond-point](../../img/pogues/rond-point-web-libelle.png)
+![Visuel d'un libellé pour un item du Rond-point](../../../img/pogues/rond-point-web-libelle.png)
 
 #### Usage des contrôles 
 
@@ -67,7 +67,7 @@ Le contrôle apparaîtra donc 2 fois, 1 fois pour ind1 (40) et une fois pour ind
 
 ???+ example "Affichage de contrôles sur un rond-point"
 
-    ![controles sur un rond-point](../../img/pogues/control-ront-point.png)
+    ![controles sur un rond-point](../../../img/pogues/control-ront-point.png)
 
 ### Dans le questionnaire web
 
@@ -77,7 +77,7 @@ Le contrôle apparaîtra donc 2 fois, 1 fois pour ind1 (40) et une fois pour ind
 
 Voici une vue du Rond-point :
 
-![Anatomie du Rond-point dans Stromae DSFR](../../img/pogues/rond-point-web-anatomie.png)
+![Anatomie du Rond-point dans Stromae DSFR](../../../img/pogues/rond-point-web-anatomie.png)
 
 Les différents éléments:
 

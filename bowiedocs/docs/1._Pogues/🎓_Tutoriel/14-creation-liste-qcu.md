@@ -16,7 +16,7 @@ On crée une nouvelle liste L_SEXE avec les modalités classiques "1" = "Homme",
 
     <div class="grid cards" markdown>
 
-    - __[Les listes de codes :material-arrow-right-bold-box-outline:](../🚀_Guide/14-liste-codes.md)__
+    - __[Les listes de codes :material-arrow-right-bold-box-outline:](../🚀_Guide/g._Listes_de_codes/index.md)__
 
     </div>
 

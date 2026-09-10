@@ -12,7 +12,7 @@ Le texte de ma question contenant [une infobulle](. "Contenu de l'infobulle.").
 
     <div class="grid cards" markdown>
 
-    - __[Les infobulles :material-arrow-right-bold-box-outline:](../🚀_Guide/22-info-bulle.md)__
+    - __[Les infobulles :material-arrow-right-bold-box-outline:](../🚀_Guide/a._Questionnaire/22-info-bulle.md)__
 
     </div>
 
