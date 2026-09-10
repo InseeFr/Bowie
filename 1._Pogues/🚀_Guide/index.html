@@ -14,7 +14,7 @@
         <link rel="prev" href="../%F0%9F%93%9D_Cas_pratiques/position-boucle/">
       
       
-        <link rel="next" href="a._Questionnaire/10-sequences/">
+        <link rel="next" href="a._Questionnaire/">
       
       
       <link rel="icon" href="../../assets/bowie-zap-circle.png">
@@ -1149,6 +1149,10 @@
     
       
         
+          
+        
+      
+        
       
         
       
@@ -1186,16 +1190,24 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="a._Questionnaire/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     a. Questionnaire
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_5_2">
@@ -1203,6 +1215,8 @@
             a. Questionnaire
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -2274,11 +2288,11 @@
   
   
     <li class="md-nav__item">
-      <a href="f._Nomenclatures/suggester-choix-multi-variable/" class="md-nav__link">
+      <a href="f._Nomenclatures/1-suggester/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Suggester à choix multi-variables (une réponse valorise plusieurs variables)
+    Question de type Recherche sur liste ("Suggester")
   </span>
   
 
@@ -2295,11 +2309,11 @@
   
   
     <li class="md-nav__item">
-      <a href="f._Nomenclatures/suggester/" class="md-nav__link">
+      <a href="f._Nomenclatures/2-suggester-choix-multi-variable/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Question de type Recherche sur liste ("Suggester")
+    Suggester à choix multi-variables (une réponse valorise plusieurs variables)
   </span>
   
 
@@ -3134,10 +3148,49 @@
 <h1 id="guide">Guide</h1>
 <p>Ce guide apporte un éclairage complet sur les fonctionnalités de conception de questionnaire à travers Pogues. 
 Assez fortement revu en juin 2024, il est depuis maintenu à jour régulièrement.</p>
-<p>En cas de sujets de type VTL, se reporter à <a href="../%F0%9F%92%BB_VTL/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M14.25 1c.966 0 1.75.784 1.75 1.75v7.5A1.75 1.75 0 0 1 14.25 12h-3.727c.099 1.041.52 1.872 1.292 2.757A.752.752 0 0 1 11.25 16h-6.5a.75.75 0 0 1-.565-1.243c.772-.885 1.192-1.716 1.292-2.757H1.75A1.75 1.75 0 0 1 0 10.25v-7.5C0 1.784.784 1 1.75 1ZM1.75 2.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25ZM9.018 12H6.982a5.72 5.72 0 0 1-.765 2.5h3.566a5.72 5.72 0 0 1-.765-2.5Z"/></svg></span> Le VTL dans Pogues</a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p>En cas de sujets de type VTL, se reporter à sur <a href="../%F0%9F%92%BB_VTL/">l'utilisation du VTL dans Pogues</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>Ce guide est valide pour les enquêtes participant à la nouvelle filière unique (issue du programme Metallica). Les enquêtes entreprises en filière historique Coltrane doivent se référer <a href="https://inseefr.github.io/Pogues/fr/guide-utilisateur/guide-utilisateur.html">au guide précédent</a>.</p>
+</div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong><a class="md-button" href="a._Questionnaire/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 5v2h-4V5h4M9 5v6H5V5h4m10 8v6h-4v-6h4M9 17v2H5v-2h4M21 3h-8v6h8V3M11 3H3v10h8V3m10 8h-8v10h8V11m-10 4H3v6h8v-6Z"/></svg></span> Questionnaire</a></strong></p>
+<hr />
+<p>Composants permettant de construire un quesitonnaire dans Pogues</p>
+</li>
+<li>
+<p><strong><a class="md-button" href="b._Questions/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H5.2L4 17.2V4h16v12M12.2 5.5c-.9 0-1.6.2-2.1.5-.6.4-.9 1-.8 1.7h2c0-.3.1-.5.3-.6.2-.1.4-.2.7-.2.3 0 .6.1.8.3.2.2.3.4.3.7 0 .3-.1.5-.2.7-.2.2-.4.4-.6.5-.5.3-.9.6-1.1.8-.4.3-.5.6-.5 1.1h2c0-.3.1-.5.1-.7.1-.2.3-.3.5-.5.5-.2.8-.5 1.1-.9.3-.4.4-.8.4-1.2 0-.7-.3-1.3-.8-1.7-.4-.3-1.2-.5-2.1-.5M11 12v2h2v-2h-2Z"/></svg></span> Questions</a></strong></p>
+<hr />
+<p>Types de questions pouvant être posées dans un questionnaire Pogues</p>
+</li>
+<li>
+<p><strong><a class="md-button" href="c._Variables/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 0-2 2v8h2v-4h2v4h2V9a2 2 0 0 0-2-2H3m0 2h2v2H3m12-.5V9a2 2 0 0 0-2-2H9v10h4a2 2 0 0 0 2-2v-1.5a1.54 1.54 0 0 0-1.5-1.5 1.54 1.54 0 0 0 1.5-1.5M13 15h-2v-2h2v2m0-4h-2V9h2m6-2a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-1h-2v1h-2V9h2v1h2V9a2 2 0 0 0-2-2Z"/></svg></span> Variables</a></strong></p>
+<hr />
+<p>Liste des variables collectées, externes et calculées</p>
+</li>
+<li>
+<p><strong><a class="md-button" href="d._Personnalisation/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20.71 4.63-1.34-1.34c-.37-.39-1.02-.39-1.41 0L9 12.25 11.75 15l8.96-8.96c.39-.39.39-1.04 0-1.41M7 14a3 3 0 0 0-3 3c0 1.31-1.16 2-2 2 .92 1.22 2.5 2 4 2a4 4 0 0 0 4-4 3 3 0 0 0-3-3Z"/></svg></span> Personnalisation</a></strong></p>
+<hr />
+<p>Personnaliser un questionnaire avec des données externes et/ou pré-remplies</p>
+</li>
+<li>
+<p><strong><a class="md-button" href="e._Historique/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 8H12v5l4.28 2.54.72-1.21-3.5-2.08V8M13 3a9 9 0 0 0-9 9H1l3.96 4.03L9 12H6a7 7 0 0 1 7-7 7 7 0 0 1 7 7 7 7 0 0 1-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.896 8.896 0 0 0 13 21a9 9 0 0 0 9-9 9 9 0 0 0-9-9"/></svg></span> Historique</a></strong></p>
+<hr />
+<p>Naviguer dans les sauvegardes d'un questionnaire</p>
+</li>
+<li>
+<p><strong><a class="md-button" href="f._Nomenclatures/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5m-1-14c-1.36-.6-3.16-1-4.5-1-1.2 0-2.4.15-3.5.5v11.5c1.1-.35 2.3-.5 3.5-.5 1.34 0 3.14.4 4.5 1V7.5M13 19c1.36-.6 3.16-1 4.5-1 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.34 0-3.14.4-4.5 1V19m1-2.65c.96-.35 2.12-.52 3.5-.52 1.04 0 1.88.08 2.5.24v-1.5a13.884 13.884 0 0 0-6 .19v1.59m0-2.66c.96-.35 2.12-.53 3.5-.53 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23-1.28 0-2.45.15-3.5.45v1.57M14 11c.96-.33 2.12-.5 3.5-.5.91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23-1.32 0-2.5.15-3.5.46V11Z"/></svg></span> Nomenclatures</a></strong> </p>
+<hr />
+<p>Phylosophie et utilisation dans Pogues de listes de codes volumineuses, issues de nomenclatures </p>
+</li>
+<li>
+<p><strong><a class="md-button" href="g._Listes_de_codes/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 5h14v2H7V5m0 8v-2h14v2H7M4 4.5A1.5 1.5 0 0 1 5.5 6 1.5 1.5 0 0 1 4 7.5 1.5 1.5 0 0 1 2.5 6 1.5 1.5 0 0 1 4 4.5m0 6A1.5 1.5 0 0 1 5.5 12 1.5 1.5 0 0 1 4 13.5 1.5 1.5 0 0 1 2.5 12 1.5 1.5 0 0 1 4 10.5M7 19v-2h14v2H7m-3-2.5A1.5 1.5 0 0 1 5.5 18 1.5 1.5 0 0 1 4 19.5 1.5 1.5 0 0 1 2.5 18 1.5 1.5 0 0 1 4 16.5Z"/></svg></span> Listes de codes</a></strong> </p>
+<hr />
+<p>Gestion des listes de codes utilisées dans les questions de type QCU, QCM et tableau</p>
+</li>
+</ul>
 </div>
 
 
@@ -3185,13 +3238,13 @@ Assez fortement revu en juin 2024, il est depuis maintenu à jour régulièremen
         
         
           
-          <a href="a._Questionnaire/10-sequences/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Les séquences">
+          <a href="a._Questionnaire/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Composants permettant de créer un questionnaire dans Pogues">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                Les séquences
+                Composants permettant de créer un questionnaire dans Pogues
               </div>
             </div>
             <div class="md-footer__button md-icon">

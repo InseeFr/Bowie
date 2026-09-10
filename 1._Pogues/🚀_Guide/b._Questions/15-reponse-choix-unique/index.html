@@ -1149,6 +1149,10 @@
     
       
         
+          
+        
+      
+        
       
         
       
@@ -1186,16 +1190,24 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../a._Questionnaire/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     a. Questionnaire
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_5_2">
@@ -1203,6 +1215,8 @@
             a. Questionnaire
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -2448,11 +2462,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../f._Nomenclatures/suggester-choix-multi-variable/" class="md-nav__link">
+      <a href="../../f._Nomenclatures/1-suggester/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Suggester à choix multi-variables (une réponse valorise plusieurs variables)
+    Question de type Recherche sur liste ("Suggester")
   </span>
   
 
@@ -2469,11 +2483,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../f._Nomenclatures/suggester/" class="md-nav__link">
+      <a href="../../f._Nomenclatures/2-suggester-choix-multi-variable/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Question de type Recherche sur liste ("Suggester")
+    Suggester à choix multi-variables (une réponse valorise plusieurs variables)
   </span>
   
 
@@ -3468,7 +3482,7 @@
 <h3 id="recherche-sur-liste-suggester">Recherche sur liste (Suggester)</h3>
 <p>Le Suggester est le composant de recherche sur liste. Il permet d'offrir une recherche dynamique sur des listes volumineuses, issues de nomenclatures, avec la présentation d'échos de réponse au fur et à mesure de la saisie.</p>
 <p>Le type de réponse est imposé : c'est une liste déroulante dans laquelle l'enquêté sélectionne la modalité correspondant à sa situation.</p>
-<p>Plus de détails sur la page dédiée : <a href="../../f._Nomenclatures/suggester/">Suggester</a>.</p>
+<p>Plus de détails sur la page dédiée : <a href="../../f._Nomenclatures/1-suggester/">Suggester</a>.</p>
 <h3 id="variable-du-questionnaire">Variable du questionnaire</h3>
 <p>Il est possible de créer une question de type QCU basée sur une <strong>variable de portée une boucle ou un tableau dynamique</strong> (ie, la variable est un vecteur, elle contient plusieurs valeurs) : les valeurs de la variable seront utilisées comme modalité du QCU.</p>
 <div class="admonition example">
@@ -3485,7 +3499,7 @@
 <p>Les modalités de la question sont contituées des valeurs du vecteur (par exemple les valeurs du vecteur PRENOM collectées dans une boucle, un vecteur de produits préremplis pour un tableau dynamique etc).</p>
 <h4 id="filtrer-les-modalites_1">Filtrer les modalités</h4>
 <div class="admonition danger">
-<p class="admonition-title">Fonctionnalité non supportée pour les <a href="../Tableaux/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"/></svg></span>Réponses QCU dans un tableau</a>, uniquement dans une question simple !</p>
+<p class="admonition-title">Fonctionnalité non supportée pour les <a href="../Tableaux/">Réponses QCU dans un tableau</a>, uniquement dans une question simple !</p>
 </div>
 <p>Il est possible de filtrer les modalités d'un QCU basé sur une variable du questionnaire (collectée, externe ou calculée) en remplissant le champ <code class="highlight"><span class="n">Filtre</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">modalités</span></code> avec une formule VTL. </p>
 <p>La question QCU peut être positionnée au sein d'une boucle ou en dehors.</p>

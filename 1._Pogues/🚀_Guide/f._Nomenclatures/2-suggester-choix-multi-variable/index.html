@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%92%BB_VTL/2-guide-vtl/">
+        <link rel="canonical" href="https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/f._Nomenclatures/2-suggester-choix-multi-variable/">
       
       
-        <link rel="prev" href="../1-fonctions-vtl/">
+        <link rel="prev" href="../1-suggester/">
       
       
-        <link rel="next" href="../3-migration-xpath-vers-vtl/">
+        <link rel="next" href="../../g._Listes_de_codes/">
       
       
-      <link rel="icon" href="../../../assets/bowie-zap-circle.png">
+      <link rel="icon" href="../../../../assets/bowie-zap-circle.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
-        <title>Concepts VTL dans Pogues - Atelier de Conception d'Enquêtes (Bowie)</title>
+        <title>Suggester à choix multi-variables (une réponse valorise plusieurs variables) - Atelier de Conception d'Enquêtes (Bowie)</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -49,19 +49,19 @@
         
         
         
-        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <link rel="stylesheet" href="../../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -70,7 +70,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#concepts-vtl-dans-pogues" class="md-skip">
+        <a href="#suggester-a-choix-multi-variables-une-reponse-valorise-plusieurs-variables" class="md-skip">
           Aller au contenu
         </a>
       
@@ -105,7 +105,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../../.." title="Atelier de Conception d&#39;Enquêtes (Bowie)" class="md-header__button md-logo" aria-label="Atelier de Conception d'Enquêtes (Bowie)" data-md-component="logo">
+    <a href="../../../.." title="Atelier de Conception d&#39;Enquêtes (Bowie)" class="md-header__button md-logo" aria-label="Atelier de Conception d'Enquêtes (Bowie)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.5 20 4.86-9.73H13V4l-5 9.73h3.5V20M12 2c2.75 0 5.1 1 7.05 2.95C21 6.9 22 9.25 22 12s-1 5.1-2.95 7.05C17.1 21 14.75 22 12 22s-5.1-1-7.05-2.95C3 17.1 2 14.75 2 12s1-5.1 2.95-7.05C6.9 3 9.25 2 12 2Z"/></svg>
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Concepts VTL dans Pogues
+              Suggester à choix multi-variables (une réponse valorise plusieurs variables)
             
           </span>
         </div>
@@ -228,7 +228,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Atelier de Conception d&#39;Enquêtes (Bowie)" class="md-nav__button md-logo" aria-label="Atelier de Conception d'Enquêtes (Bowie)" data-md-component="logo">
+    <a href="../../../.." title="Atelier de Conception d&#39;Enquêtes (Bowie)" class="md-nav__button md-logo" aria-label="Atelier de Conception d'Enquêtes (Bowie)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.5 20 4.86-9.73H13V4l-5 9.73h3.5V20M12 2c2.75 0 5.1 1 7.05 2.95C21 6.9 22 9.25 22 12s-1 5.1-2.95 7.05C17.1 21 14.75 22 12 22s-5.1-1-7.05-2.95C3 17.1 2 14.75 2 12s1-5.1 2.95-7.05C6.9 3 9.25 2 12 2Z"/></svg>
@@ -246,7 +246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -294,7 +294,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -375,7 +375,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../%F0%9F%8E%93_Tutoriel/" class="md-nav__link ">
+            <a href="../../../%F0%9F%8E%93_Tutoriel/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -408,7 +408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%8E%93_Tutoriel/00-acces-pogues/" class="md-nav__link">
+      <a href="../../../%F0%9F%8E%93_Tutoriel/00-acces-pogues/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -429,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%8E%93_Tutoriel/10-creation-questionnaire/" class="md-nav__link">
+      <a href="../../../%F0%9F%8E%93_Tutoriel/10-creation-questionnaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -450,7 +450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%8E%93_Tutoriel/11-creation-premiere-sequence/" class="md-nav__link">
+      <a href="../../../%F0%9F%8E%93_Tutoriel/11-creation-premiere-sequence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -471,7 +471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%8E%93_Tutoriel/12-visualisation-questionnaire/" class="md-nav__link">
+      <a href="../../../%F0%9F%8E%93_Tutoriel/12-visualisation-questionnaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -492,7 +492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%8E%93_Tutoriel/13-elaboration-structure/" class="md-nav__link">
+      <a href="../../../%F0%9F%8E%93_Tutoriel/13-elaboration-structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -513,7 +513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%8E%93_Tutoriel/14-creation-liste-qcu/" class="md-nav__link">
+      <a href="../../../%F0%9F%8E%93_Tutoriel/14-creation-liste-qcu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -534,7 +534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%8E%93_Tutoriel/15-creation-qcm/" class="md-nav__link">
+      <a href="../../../%F0%9F%8E%93_Tutoriel/15-creation-qcm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -555,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%8E%93_Tutoriel/16-creation-tableau/" class="md-nav__link">
+      <a href="../../../%F0%9F%8E%93_Tutoriel/16-creation-tableau/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -576,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%8E%93_Tutoriel/17-finalisation-structure/" class="md-nav__link">
+      <a href="../../../%F0%9F%8E%93_Tutoriel/17-finalisation-structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -597,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%8E%93_Tutoriel/20-mise-en-place-filtre/" class="md-nav__link">
+      <a href="../../../%F0%9F%8E%93_Tutoriel/20-mise-en-place-filtre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -618,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%8E%93_Tutoriel/21-ajout-controle/" class="md-nav__link">
+      <a href="../../../%F0%9F%8E%93_Tutoriel/21-ajout-controle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -639,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%8E%93_Tutoriel/22-ajout-infobulle/" class="md-nav__link">
+      <a href="../../../%F0%9F%8E%93_Tutoriel/22-ajout-infobulle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -660,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%8E%93_Tutoriel/23-utilisation-variable-calculee/" class="md-nav__link">
+      <a href="../../../%F0%9F%8E%93_Tutoriel/23-utilisation-variable-calculee/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -681,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%8E%93_Tutoriel/24-personnalisation-libelle/" class="md-nav__link">
+      <a href="../../../%F0%9F%8E%93_Tutoriel/24-personnalisation-libelle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -702,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%8E%93_Tutoriel/25-mise-en-place-boucle/" class="md-nav__link">
+      <a href="../../../%F0%9F%8E%93_Tutoriel/25-mise-en-place-boucle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -728,8 +728,6 @@
                 
   
   
-    
-  
   
   
     
@@ -748,16 +746,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../../%F0%9F%92%BB_VTL/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -774,7 +772,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             💻 VTL
@@ -790,7 +788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1-fonctions-vtl/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%BB_VTL/1-fonctions-vtl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -808,30 +806,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Concepts VTL dans Pogues
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../%F0%9F%92%BB_VTL/2-guide-vtl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -840,188 +818,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#vtl-quesaco" class="md-nav__link">
-    <span class="md-ellipsis">
-      VTL - Quésaco ?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="VTL - Quésaco ?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#utiliser-vtl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Utiliser VTL
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fonctionnalites-de-lediteur" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fonctionnalités de l’éditeur
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bases-de-la-syntaxe" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bases de la syntaxe
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quelques-exemples-dutilisation-du-vtl-dans-pogues" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quelques exemples d'utilisation du VTL dans Pogues
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Quelques exemples d'utilisation du VTL dans Pogues">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dans-les-libelles-de-question" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dans les libellés de question
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creation-dun-lien" class="md-nav__link">
-    <span class="md-ellipsis">
-      Création d'un lien
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dans-les-infobulles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dans les Infobulles
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dans-les-controles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dans les contrôles
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dans-les-formules-variables-calculees" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dans les formules variables calculées
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dans-les-conditions-daffichage-des-filtres" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dans les conditions d'affichage des filtres
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quelques-cas-pratiques" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quelques cas pratiques
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Quelques cas pratiques">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#calculer-une-duree" class="md-nav__link">
-    <span class="md-ellipsis">
-      Calculer une durée
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#controler-un-depassement-de-borne" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contrôler un dépassement de borne
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#compter-le-nombre-de-choix-dans-un-qcm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compter le nombre de choix dans un QCM
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#premiet-et-dernier-elements-dun-vecteur" class="md-nav__link">
-    <span class="md-ellipsis">
-      Premiet et dernier éléments d'un vecteur
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1034,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3-migration-xpath-vers-vtl/" class="md-nav__link">
+      <a href="../../../%F0%9F%92%BB_VTL/3-migration-xpath-vers-vtl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1095,7 +891,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../%F0%9F%93%9D_Cas_pratiques/" class="md-nav__link ">
+            <a href="../../../%F0%9F%93%9D_Cas_pratiques/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1128,7 +924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%93%9D_Cas_pratiques/declarations-complexes/" class="md-nav__link">
+      <a href="../../../%F0%9F%93%9D_Cas_pratiques/declarations-complexes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1149,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%93%9D_Cas_pratiques/gestion-somme-null/" class="md-nav__link">
+      <a href="../../../%F0%9F%93%9D_Cas_pratiques/gestion-somme-null/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1170,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%93%9D_Cas_pratiques/indicatrice-boucle/" class="md-nav__link">
+      <a href="../../../%F0%9F%93%9D_Cas_pratiques/indicatrice-boucle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1191,7 +987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%93%9D_Cas_pratiques/kish/" class="md-nav__link">
+      <a href="../../../%F0%9F%93%9D_Cas_pratiques/kish/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1212,7 +1008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%93%9D_Cas_pratiques/libelles-flous/" class="md-nav__link">
+      <a href="../../../%F0%9F%93%9D_Cas_pratiques/libelles-flous/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1233,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%93%9D_Cas_pratiques/personnaliser-libelles/" class="md-nav__link">
+      <a href="../../../%F0%9F%93%9D_Cas_pratiques/personnaliser-libelles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1254,7 +1050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%93%9D_Cas_pratiques/position-boucle/" class="md-nav__link">
+      <a href="../../../%F0%9F%93%9D_Cas_pratiques/position-boucle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1280,6 +1076,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1306,16 +1104,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../%F0%9F%9A%80_Guide/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1332,7 +1130,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             🚀 Guide
@@ -1394,7 +1192,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../%F0%9F%9A%80_Guide/a._Questionnaire/" class="md-nav__link ">
+            <a href="../../a._Questionnaire/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1427,7 +1225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/a._Questionnaire/10-sequences/" class="md-nav__link">
+      <a href="../../a._Questionnaire/10-sequences/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1448,7 +1246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/a._Questionnaire/11-sous-sequences/" class="md-nav__link">
+      <a href="../../a._Questionnaire/11-sous-sequences/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1469,7 +1267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/a._Questionnaire/21-declarations/" class="md-nav__link">
+      <a href="../../a._Questionnaire/21-declarations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1490,7 +1288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/a._Questionnaire/22-info-bulle/" class="md-nav__link">
+      <a href="../../a._Questionnaire/22-info-bulle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1511,7 +1309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/a._Questionnaire/23-controles/" class="md-nav__link">
+      <a href="../../a._Questionnaire/23-controles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1532,7 +1330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/a._Questionnaire/24-boucles/" class="md-nav__link">
+      <a href="../../a._Questionnaire/24-boucles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1553,7 +1351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/a._Questionnaire/25-filtres/" class="md-nav__link">
+      <a href="../../a._Questionnaire/25-filtres/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1574,7 +1372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/a._Questionnaire/26-composition/" class="md-nav__link">
+      <a href="../../a._Questionnaire/26-composition/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1595,7 +1393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/a._Questionnaire/27-rond-point/" class="md-nav__link">
+      <a href="../../a._Questionnaire/27-rond-point/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1616,7 +1414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/a._Questionnaire/40-controles-integrite/" class="md-nav__link">
+      <a href="../../a._Questionnaire/40-controles-integrite/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1637,7 +1435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/a._Questionnaire/41-fonctionnalites-element/" class="md-nav__link">
+      <a href="../../a._Questionnaire/41-fonctionnalites-element/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1658,7 +1456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/a._Questionnaire/42-sauvegarder-visualiser/" class="md-nav__link">
+      <a href="../../a._Questionnaire/42-sauvegarder-visualiser/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1679,7 +1477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/a._Questionnaire/43-details-suppression/" class="md-nav__link">
+      <a href="../../a._Questionnaire/43-details-suppression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1700,7 +1498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/a._Questionnaire/44-deplacer-element/" class="md-nav__link">
+      <a href="../../a._Questionnaire/44-deplacer-element/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1759,7 +1557,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../%F0%9F%9A%80_Guide/b._Questions/" class="md-nav__link ">
+            <a href="../../b._Questions/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1792,7 +1590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/b._Questions/12-reponse-obligatoire/" class="md-nav__link">
+      <a href="../../b._Questions/12-reponse-obligatoire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1813,7 +1611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/b._Questions/13-reponse-simple/" class="md-nav__link">
+      <a href="../../b._Questions/13-reponse-simple/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1834,7 +1632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/b._Questions/15-reponse-choix-unique/" class="md-nav__link">
+      <a href="../../b._Questions/15-reponse-choix-unique/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1855,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/b._Questions/16-liens-2a2/" class="md-nav__link">
+      <a href="../../b._Questions/16-liens-2a2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1876,7 +1674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/b._Questions/17-reponse-choix-multiple/" class="md-nav__link">
+      <a href="../../b._Questions/17-reponse-choix-multiple/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1921,7 +1719,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../%F0%9F%9A%80_Guide/b._Questions/Tableaux/" class="md-nav__link ">
+            <a href="../../b._Questions/Tableaux/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1954,7 +1752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/b._Questions/Tableaux/1-tableau-statique/" class="md-nav__link">
+      <a href="../../b._Questions/Tableaux/1-tableau-statique/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1975,7 +1773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/b._Questions/Tableaux/2-tableau-dynamique/" class="md-nav__link">
+      <a href="../../b._Questions/Tableaux/2-tableau-dynamique/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1996,7 +1794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/b._Questions/Tableaux/3-cases-non-collectees/" class="md-nav__link">
+      <a href="../../b._Questions/Tableaux/3-cases-non-collectees/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2063,7 +1861,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../%F0%9F%9A%80_Guide/c._Variables/" class="md-nav__link ">
+            <a href="../../c._Variables/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2096,7 +1894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/c._Variables/nommage/" class="md-nav__link">
+      <a href="../../c._Variables/nommage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2117,7 +1915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/c._Variables/portee/" class="md-nav__link">
+      <a href="../../c._Variables/portee/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2138,7 +1936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/c._Variables/variables-calculees/" class="md-nav__link">
+      <a href="../../c._Variables/variables-calculees/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2159,7 +1957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/c._Variables/variables-collectees/" class="md-nav__link">
+      <a href="../../c._Variables/variables-collectees/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2180,7 +1978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/c._Variables/variables-externes/" class="md-nav__link">
+      <a href="../../c._Variables/variables-externes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2201,7 +1999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/c._Variables/variables-globales/" class="md-nav__link">
+      <a href="../../c._Variables/variables-globales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2256,7 +2054,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../%F0%9F%9A%80_Guide/d._Personnalisation/" class="md-nav__link ">
+            <a href="../../d._Personnalisation/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2289,7 +2087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/d._Personnalisation/1-permiers-pas-perso/" class="md-nav__link">
+      <a href="../../d._Personnalisation/1-permiers-pas-perso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2310,7 +2108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/d._Personnalisation/2-guide-perso-echantillon/" class="md-nav__link">
+      <a href="../../d._Personnalisation/2-guide-perso-echantillon/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2331,7 +2129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/d._Personnalisation/3-visualisation-questionnaires-perso/" class="md-nav__link">
+      <a href="../../d._Personnalisation/3-visualisation-questionnaires-perso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2352,7 +2150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/d._Personnalisation/4-gestion-des-erreurs-perso/" class="md-nav__link">
+      <a href="../../d._Personnalisation/4-gestion-des-erreurs-perso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2399,7 +2197,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../%F0%9F%9A%80_Guide/e._Historique/" class="md-nav__link ">
+            <a href="../../e._Historique/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2432,6 +2230,8 @@
                 
   
   
+    
+  
   
   
     
@@ -2448,16 +2248,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_7" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../%F0%9F%9A%80_Guide/f._Nomenclatures/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2474,7 +2274,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5_7">
             <span class="md-nav__icon md-icon"></span>
             f. Nomenclatures
@@ -2490,7 +2290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/f._Nomenclatures/1-suggester/" class="md-nav__link">
+      <a href="../1-suggester/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2508,10 +2308,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../%F0%9F%9A%80_Guide/f._Nomenclatures/2-suggester-choix-multi-variable/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Suggester à choix multi-variables (une réponse valorise plusieurs variables)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2520,6 +2340,101 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-de-mise-en-place" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de mise en place
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemple de mise en place">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nomenclartue-commerce-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nomenclartue Commerce-2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étapes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Résultats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Résultats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#en-selectionnant-commerce-de-cuivre" class="md-nav__link">
+    <span class="md-ellipsis">
+      En sélectionnant "Commerce de cuivre"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-selectionnant-commerce-de-lignite" class="md-nav__link">
+    <span class="md-ellipsis">
+      En sélectionnant "Commerce de lignite"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questionnaire-exemple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questionnaire exemple
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2558,7 +2473,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../%F0%9F%9A%80_Guide/g._Listes_de_codes/" class="md-nav__link ">
+            <a href="../../g._Listes_de_codes/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2627,7 +2542,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../3._Eno/" class="md-nav__link ">
+            <a href="../../../../3._Eno/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2680,7 +2595,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../4._Lunatic/" class="md-nav__link ">
+            <a href="../../../../4._Lunatic/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2739,7 +2654,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../5._Orchestrateurs/" class="md-nav__link ">
+            <a href="../../../../5._Orchestrateurs/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2772,7 +2687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../5._Orchestrateurs/paradata/" class="md-nav__link">
+      <a href="../../../../5._Orchestrateurs/paradata/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2811,7 +2726,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../5._Orchestrateurs/Queen/" class="md-nav__link ">
+            <a href="../../../../5._Orchestrateurs/Queen/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2865,7 +2780,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../5._Orchestrateurs/Stromae-DSFR/" class="md-nav__link ">
+            <a href="../../../../5._Orchestrateurs/Stromae-DSFR/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2926,7 +2841,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../6._%F0%9F%AB%82_Support/" class="md-nav__link ">
+            <a href="../../../../6._%F0%9F%AB%82_Support/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2979,7 +2894,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../architecture/" class="md-nav__link ">
+            <a href="../../../../architecture/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3042,7 +2957,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../conception-de-questionnaire/" class="md-nav__link ">
+            <a href="../../../../conception-de-questionnaire/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3075,7 +2990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../conception-de-questionnaire/0-conception/" class="md-nav__link">
+      <a href="../../../../conception-de-questionnaire/0-conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3096,7 +3011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../conception-de-questionnaire/1-conception/" class="md-nav__link">
+      <a href="../../../../conception-de-questionnaire/1-conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3117,7 +3032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../conception-de-questionnaire/2-conception/" class="md-nav__link">
+      <a href="../../../../conception-de-questionnaire/2-conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3138,7 +3053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../conception-de-questionnaire/3-conception/" class="md-nav__link">
+      <a href="../../../../conception-de-questionnaire/3-conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3159,7 +3074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../conception-de-questionnaire/4-conception/" class="md-nav__link">
+      <a href="../../../../conception-de-questionnaire/4-conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3207,7 +3122,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../couverture-fonctionnelle/" class="md-nav__link ">
+            <a href="../../../../couverture-fonctionnelle/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3240,7 +3155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../couverture-fonctionnelle/couverture-fonctionnelle-detail/" class="md-nav__link">
+      <a href="../../../../couverture-fonctionnelle/couverture-fonctionnelle-detail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3286,7 +3201,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../metadata/" class="md-nav__link ">
+            <a href="../../../../metadata/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3341,37 +3256,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vtl-quesaco" class="md-nav__link">
+  <a href="#exemple-de-mise-en-place" class="md-nav__link">
     <span class="md-ellipsis">
-      VTL - Quésaco ?
+      Exemple de mise en place
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="VTL - Quésaco ?">
+    <nav class="md-nav" aria-label="Exemple de mise en place">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#utiliser-vtl" class="md-nav__link">
+  <a href="#nomenclartue-commerce-2024" class="md-nav__link">
     <span class="md-ellipsis">
-      Utiliser VTL
+      Nomenclartue Commerce-2024
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#fonctionnalites-de-lediteur" class="md-nav__link">
+  <a href="#etapes" class="md-nav__link">
     <span class="md-ellipsis">
-      Fonctionnalités de l’éditeur
+      Étapes
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#bases-de-la-syntaxe" class="md-nav__link">
+  <a href="#resultats" class="md-nav__link">
     <span class="md-ellipsis">
-      Bases de la syntaxe
+      Résultats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Résultats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#en-selectionnant-commerce-de-cuivre" class="md-nav__link">
+    <span class="md-ellipsis">
+      En sélectionnant "Commerce de cuivre"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-selectionnant-commerce-de-lignite" class="md-nav__link">
+    <span class="md-ellipsis">
+      En sélectionnant "Commerce de lignite"
     </span>
   </a>
   
@@ -3381,117 +3315,11 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#quelques-exemples-dutilisation-du-vtl-dans-pogues" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quelques exemples d'utilisation du VTL dans Pogues
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Quelques exemples d'utilisation du VTL dans Pogues">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dans-les-libelles-de-question" class="md-nav__link">
+  <a href="#questionnaire-exemple" class="md-nav__link">
     <span class="md-ellipsis">
-      Dans les libellés de question
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creation-dun-lien" class="md-nav__link">
-    <span class="md-ellipsis">
-      Création d'un lien
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dans-les-infobulles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dans les Infobulles
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dans-les-controles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dans les contrôles
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dans-les-formules-variables-calculees" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dans les formules variables calculées
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dans-les-conditions-daffichage-des-filtres" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dans les conditions d'affichage des filtres
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quelques-cas-pratiques" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quelques cas pratiques
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Quelques cas pratiques">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#calculer-une-duree" class="md-nav__link">
-    <span class="md-ellipsis">
-      Calculer une durée
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#controler-un-depassement-de-borne" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contrôler un dépassement de borne
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#compter-le-nombre-de-choix-dans-un-qcm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compter le nombre de choix dans un QCM
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#premiet-et-dernier-elements-dun-vecteur" class="md-nav__link">
-    <span class="md-ellipsis">
-      Premiet et dernier éléments d'un vecteur
+      Questionnaire exemple
     </span>
   </a>
   
@@ -3517,146 +3345,74 @@
                   
 
 
-<h1 id="concepts-vtl-dans-pogues">Concepts VTL dans Pogues</h1>
-<p>Ce document guide l’utilisateur de Pogues dans son usage du langage VTL.</p>
-<h2 id="vtl-quesaco">VTL - Quésaco ?</h2>
-<p><a href="https://sdmx.org/?page_id=5096">VTL</a> (Validation and Transformation Language) est un langage de programmation né dans le giron du standard de description de données agrégées SDMX. Ce langage est adopté ou en cours d’adoption par les mêmes utilisateurs que SDMX, essentiellement des banques centrales et des instituts nationaux de statistiques.</p>
-<p>Bien que conçu initialement pour le traitement de données agrégées (eg des tableaux ou cubes de données), le langage est suffisamment souple pour qu’on puisse l’utiliser pour exprimer des contrôles, comme dans le cas des contrôles mis en oeuvre dans le cadre d’un questionnement.</p>
-<p>On a donc choisi ce langage comme expression des contrôles et du dynamisme dans les questionnaires conçus dans Pogues dont la cible est les nouveaux outils de collecte développés dans le cadre du programme Metallica.</p>
-<div class="admonition tip">
-<p class="admonition-title">Les éléments les plus importants à retenir de l’usage de VTL dans Pogues</p>
-<ul>
-<li>l’écriture se fait via un éditeur de code VTL,</li>
-<li>les références aux variables doivent être encadrées par des <code class="highlight"><span class="o">$</span></code></li>
-<li>il est dans le plus souvent nécessaire de gérer le cas où la variable n’est pas encore ou plus renseignée - sa valeur est nulle : <code class="highlight"><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;valeur si nulle&quot;</span><span class="p">)</span></code>,</li>
-<li>VTL fournit un certain nombre de fonctions utilitaires - comme <code class="highlight"><span class="n">cast</span></code>et<code class="highlight"><span class="n">nvl</span></code> - on répertorie les plus utiles dans ce document.</li>
-</ul>
+<h1 id="suggester-a-choix-multi-variables-une-reponse-valorise-plusieurs-variables">Suggester à choix multi-variables (une réponse valorise plusieurs variables)</h1>
+<div class="admonition question">
+<p class="admonition-title">Utilité</p>
+<p>Lorsqu'on utilise une question à choix unique avec recherche sur liste ("Suggester"), on peut avoir dans la nomenclature des colonnes autres que l'identifiant et le label.<br />
+On souhaite pouvoir récupérer les valeurs en même temps la variable contenant l'identifiant et les valeurs incluses dans d'autres colonnes.</p>
 </div>
-<h4 id="utiliser-vtl">Utiliser VTL</h4>
-<p>VTL est utilisé dès que l’on souhaite :</p>
-<ul>
-<li>créer un libellé personnalisé</li>
-<li>définir un contrôle</li>
-<li>créer une variable calculée</li>
-<li>définir la condition d’un filtre</li>
-</ul>
-<p>Les champs correspondants dans Pogues proposent dans la plupart des cas un <strong>éditeur VTL</strong> :</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Editeur VTL" src="../../../img/vtl/code-list-editor.png" title="Éditeur VTL" /></a></p>
-<h4 id="fonctionnalites-de-lediteur">Fonctionnalités de l’éditeur</h4>
-<p>L’éditeur fournit :</p>
-<ul>
-<li>un soulignement syntaxique</li>
-<li>une autocomplétion des fonctions et variables</li>
-<li>une gestion des erreurs de syntaxe</li>
-</ul>
-<h4 id="bases-de-la-syntaxe">Bases de la syntaxe</h4>
-<p>Une chaîne de caractères s’écrit en encadrant du texte par deux double quote ("), par exemple :
-<div class="highlight"><pre><span></span><code><span class="s">&quot;Voici un texte.&quot;</span>
+<h2 id="exemple-de-mise-en-place">Exemple de mise en place</h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Dans l'exemple suivant, on souhaite récupérer dans la variable <code class="highlight"><span class="n">CALC_VAR</span></code> la valeur correspondant à la colonne "label" de la nomenclature d'identifiant technique "COMMERCE-2024" lorsqu'on collecte comme identifiant la variable <code class="highlight"><span class="n">SUGG</span></code></p>
+</div>
+<h4 id="nomenclartue-commerce-2024">Nomenclartue <em>Commerce-2024</em></h4>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2444ZZ</td>
+<td>Commerce de cuivre</td>
+</tr>
+<tr>
+<td>0520ZZ</td>
+<td>Commerce de lignite</td>
+</tr>
+</tbody>
+</table>
+<h4 id="etapes">Étapes</h4>
+<ol>
+<li>Créer une variable collectée basée sur une question à choix unique avec recherche sur liste et avec l'id <code class="highlight"><span class="n">SUGG</span></code>.
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/var-sugg.png" /></a></li>
+</ol>
+<div class="admonition abstract">
+<p class="admonition-title">Règle de nommage</p>
+<p>C'est toujours mieux de nommer les variables en MAJUSCULE séparé par des '_'</p>
+</div>
+<ol>
+<li>Créer une variable calculée <code class="highlight"><span class="n">CALC_VAR</span></code> avec la formule suivante : <br>
+<code class="highlight"><span class="nf">left_join</span><span class="p">(</span><span class="o">$</span><span class="n">SUGG</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;COMMERCE-2024&quot;</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="p">)</span></code>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/ex-var-cal-left-join.png" /></a></li>
+</ol>
+<h4 id="resultats">Résultats</h4>
+<p>Je peux ensuite afficher cette valeur, par exemple dans une déclaration, en appelant la variable calculée <code class="highlight"><span class="n">CALC_VAR</span></code></p>
+<details class="example" open="open">
+<summary>Exemple de déclaration en VTL</summary>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;Nomenclature avec les colonnes</span>
+<span class="s2">- id : &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">nvl</span><span class="p">(</span><span class="nx">$SUGG$</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s2">&quot;</span>
+<span class="s2">- label : &quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">nvl</span><span class="p">(</span><span class="nx">$CALC_VAR$</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 </code></pre></div>
-Un entier s’écrira simplement :
-<div class="highlight"><pre><span></span><code><span class="m">42</span>
-</code></pre></div>
-Un chiffre avec décimales :
-<div class="highlight"><pre><span></span><code><span class="m">3.14159</span>
-</code></pre></div></p>
-<h2 id="quelques-exemples-dutilisation-du-vtl-dans-pogues">Quelques exemples d'utilisation du VTL dans Pogues</h2>
-<h4 id="dans-les-libelles-de-question">Dans les libellés de question</h4>
-<p>Voici un exemple de syntaxe pour un libellé personnalisé :</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Libellé personnalisé" src="../../../img/vtl/vtl-in-pogues-custom-label.png" title="Libellé personnalisé" /></a></p>
-<p>On utilise ici l’opérateur VTL <code class="highlight"><span class="o">||</span></code> qui permet de concaténer des chaînes de caractères, ou une chaîne de caractères et une variable (ici <code class="highlight"><span class="n">NOM</span></code>).</p>
+</details>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/ex-declaration-nomenclature-left-join.png" /></a></p>
+<h5 id="en-selectionnant-commerce-de-cuivre">En sélectionnant "Commerce de cuivre"</h5>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/res-sugg-commerce-cuivre.png" /></a></p>
+<h5 id="en-selectionnant-commerce-de-lignite">En sélectionnant "Commerce de lignite"</h5>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../img/pogues/res-sugg-commerce-lignite.png" /></a></p>
 <div class="admonition warning">
-<p class="admonition-title">Attention!</p>
-<p>Pour des raisons d’implémentation historique, il est encore nécessaire d’encadrer les noms de variables par <code class="highlight"><span class="o">$</span></code>. Ainsi, <strong>on pourra rechercher la variable</strong> <code class="highlight"><span class="n">NOM</span></code> <strong>en la tapant telle quelle dans l’éditeur</strong>, puis on ajoutera <code class="highlight"><span class="o">$</span></code> en préfixe et suffixe, pour obtenir <code class="highlight"><span class="o">$</span><span class="n">NOM</span><span class="o">$</span></code>.</p>
+<p class="admonition-title">Détail technique</p>
+<p>Le comportement actuel est temporaire du point de vue du parcours utilisateur dans Pogues. <br>
+En effet, la variable <code class="highlight"><span class="n">CALC_VAR</span></code> est définie dans Pogues comme une variable calculée mais d'un point de vue métier, c'est une variable <strong>collectée</strong>.
+Elle est bien considérée comme une variable collectée dans Lunatic. On peut la récupérer en téléchargeant les données depuis la visualisation DSFR. <br></p>
+<p>A terme, on aura un parcours utilisateur dans Pogues qui sera plus cohérent avec ce concept. <br>
+Ex : Un bouton qui permet d'ajouter une paire clé/valeur qui indique le nom de la nouvelle variable collectée et le nom de la colonne dans la nomenclature </p>
 </div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Dans l’exemple précédent, on ne gère pas le cas où la variable n’a pas été remplie. Pour anticiper ce cas, on peut utiliser la fonction VTL <code class="highlight"><span class="n">nvl</span></code>, le libellé personnalisé devient ainsi :</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Fonction nvl" src="../../../img/vtl/vtl-in-pogues-custom-label-nvl.png" title="Fonction nvl" /></a><em>Libellé personnalisé avec gestion de la nullité</em></p>
-<p>Plus d’infos sur l’usage de <code class="highlight"><span class="n">nvl</span></code> plus bas.</p>
-</div>
-<p>On pourra mobiliser dans un libellé personnalisé des variables collectées, calculées ou externes.</p>
-<h4 id="creation-dun-lien">Création d'un lien</h4>
-<p>Pour créer un lien hypertexte, on s'appuie sur la syntaxe Markdown :</p>
-<div class="highlight"><pre><span></span><code><span class="s">&quot;Voici un [lien](http://monlien.fr).&quot;</span>
-</code></pre></div>
-<h4 id="dans-les-infobulles">Dans les Infobulles</h4>
-<p>La syntaxe pour la création d’un infobulle est la suivante :</p>
-<div class="highlight"><pre><span></span><code><span class="n">Mon</span><span class="w"> </span><span class="n">libellé</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">question</span><span class="w"> </span><span class="n">avec</span><span class="w"> </span><span class="p">[</span><span class="n">une</span><span class="w"> </span><span class="n">infobulle</span><span class="p">](</span><span class="n">.</span><span class="w"> </span><span class="s">&quot;dont voici le contenu&quot;</span><span class="p">)</span><span class="n">.</span>
-</code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Attention!</p>
-<p>Il faut bien respecter la syntaxe pour le contenu de l’infobulle : un <code class="highlight"><span class="n">.</span></code> avant le texte entouré de guillemets <code class="highlight"><span class="s">&quot;</span></code>.</p>
-</div>
-<h4 id="dans-les-controles">Dans les contrôles</h4>
-<p>Un exemple de contrôle sur une valeur numérique :</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Exemple de contrôle" src="../../../img/vtl/vtl-in-pogues-simple-control.png" title="Exemple de contrôle" /></a><em>Libellé personnalisé avec gestion de la nullité</em></p>
-<h4 id="dans-les-formules-variables-calculees">Dans les formules variables calculées</h4>
-<p>Pogues permet de créer des variables calculées à partir de variables collectées. Par exemple, pour sommer les revenus de l’enquêté et de son conjoint on écrira :</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Variable calculée pour le revenu" src="../../../img/vtl/vtl-in-pogues-computed-variable-earnings.png" /></a></p>
-<p>L'expression VTL étant :</p>
-<div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">REVENUS</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">REVENUS_CONJOINT</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
-</code></pre></div>
-<h4 id="dans-les-conditions-daffichage-des-filtres">Dans les conditions d'affichage des filtres</h4>
-<p>Voici un exemple de filtre simple exprimé en VTL :</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Filtre simple" src="../../../img/vtl/vtl-in-pogues-simple-filter.png" title="Filtre simple" /></a><em>Un filtre simple</em></p>
-<p><span class="label label-rounded label-primary">À noter</span> À ce jour, le champ “Condition d’affichage” du filtre n’utilise pas l’éditeur VTL.</p>
-<p>Toutes formes d’expression booléenne est valide :</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Possible</span>
-<span class="o">$</span><span class="n">MA_VARIABLE_CHAINE</span><span class="o">$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;a value&quot;</span>
-
-<span class="c1"># Ou</span>
-<span class="o">$</span><span class="n">MA_VARIABLE_NUMERIQUE</span><span class="o">$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">42</span>
-
-<span class="c1"># Plus direct</span>
-<span class="o">$</span><span class="n">MA_VARIABLE_BOOLEENNE</span><span class="o">$</span>
-</code></pre></div>
-<p>Un exemple plus complexe combinant plusieurs variables avec des “et” (<code class="highlight"><span class="n">and</span></code>) et des “ou” (<code class="highlight"><span class="n">or</span></code>) :</p>
-<div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VARIABLE_EXCLUSIVE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="nf">and</span>
-<span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">AUTRE_VARIABLE_1</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">AUTRE_VARIABLE_2</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">AUTRE_VARIABLE_3</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">))</span>
-</code></pre></div>
-<h2 id="quelques-cas-pratiques">Quelques cas pratiques</h2>
-<h4 id="calculer-une-duree">Calculer une durée</h4>
-<p>Pour calculer une durée à partir de variables collectées de type Date :
-<div class="highlight"><pre><span></span><code><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">ARRIVEE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">DEPART</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span>
-</code></pre></div>
-Qui fournira le résultat en millisecondes. Pour avoir l'équivalent en jour on pourra écrire :
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">ARRIVEE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">cast</span><span class="p">(</span><span class="o">$</span><span class="n">DEPART</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YYYY-MM-DD&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">86400000</span>
-</code></pre></div>
-Pour plus de clarté, le calcul de la durée brute pourra être déportée dans une variable calculée, nommée par exemple <code class="highlight"><span class="n">DUREE</span></code>, l'obtention du nombre de jours se fera alors à travers la formule :</p>
-<div class="highlight"><pre><span></span><code><span class="o">$</span><span class="n">DUREE</span><span class="o">$</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">86400000</span>
-</code></pre></div>
-<h4 id="controler-un-depassement-de-borne">Contrôler un dépassement de borne</h4>
-<p>Une variable de type Durée aura une des formes suivantes :</p>
-<ul>
-<li>pour une mesure en "années/mois" : <code class="highlight"><span class="n">PnaYnmM</span></code> où <code class="highlight"><span class="n">na</span></code> sera le nombre d'années et <code class="highlight"><span class="n">nm</span></code> le nombre de mois (par exemple : <code class="highlight"><span class="n">P3Y10M</span></code> pour "trois ans et dix mois")</li>
-<li>pour une mesure en "heures/mois" : <code class="highlight"><span class="n">PTnhHnmM</span></code> avec <code class="highlight"><span class="n">nh</span></code> le nombre d'heures et <code class="highlight"><span class="n">nm</span></code> le nombre de minutes (<code class="highlight"><span class="n">PT12H30M</span></code> pour "douze heures et trente minutes").</li>
-</ul>
-<p>Un contrôle typique est de s'assurer qu'on ne dépasse pas une borne max par exemple. Dans ce cas-là, on modifiera la valeur jusqu'à obtenir une valeur numérique, comme dans l'exemple ci-dessous :</p>
-<div class="highlight"><span class="filename">valeur initiale de DUREE : PT12H30M</span><pre><span></span><code><span class="nf">cast</span><span class="p">(</span>
-<span class="w">    </span><span class="nf">replace</span><span class="p">(</span>
-<span class="w">        </span><span class="nf">replace</span><span class="p">(</span>
-<span class="w">            </span><span class="nf">replace</span><span class="p">(</span><span class="o">$</span><span class="n">DUREE</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PT&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">),</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="s">&quot;12H30M&quot;</span>
-<span class="w">        </span><span class="s">&quot;M&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">),</span><span class="w">                       </span><span class="o">//</span><span class="w"> </span><span class="s">&quot;12H30&quot;</span>
-<span class="w">    </span><span class="s">&quot;H&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="p">),</span><span class="w">                          </span><span class="o">//</span><span class="w"> </span><span class="s">&quot;12.30&quot;</span>
-<span class="n">number</span><span class="p">)</span><span class="w">                                 </span><span class="o">//</span><span class="w"> </span><span class="m">12.30</span>
-<span class="o">&gt;</span><span class="w"> </span><span class="m">7.3</span><span class="w">                                   </span><span class="o">//</span><span class="w"> </span><span class="n">true</span>
-</code></pre></div>
-<h4 id="compter-le-nombre-de-choix-dans-un-qcm">Compter le nombre de choix dans un QCM</h4>
-<p>On souhaite calculer le nombre de cases cochées dans une liste à choix multiples. Les variables considérées sont nommmées dans notre cas <code class="highlight"><span class="n">QCM1</span></code> à <code class="highlight"><span class="n">QCM4</span></code>. Le code sera alors :</p>
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM1</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM2</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM3</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="p">(</span><span class="nf">if </span><span class="p">(</span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">QCM4</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">true</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
-</code></pre></div>
-<p><span class="label label-rounded label-primary">À noter</span> Cette solution est fastidieuse et difficile à mettre en place pour des longues listes. Des fonctionnalités non-encore disponibles dans VTL permettront à terme une expression plus directe de ce calcul.</p>
-<h4 id="premiet-et-dernier-elements-dun-vecteur">Premiet et dernier éléments d'un vecteur</h4>
-<p>Imaginons une boucle permettant de collecter des prénoms (à travers la variable <code class="highlight"><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span></code>). Les fonctions <code class="highlight"><span class="n">first_value</span></code> et <code class="highlight"><span class="n">last_value</span></code> permettent de récupérer respectivement le premier élément de la variable vectorielle <code class="highlight"><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span></code> en écrivant :</p>
-<div class="highlight"><pre><span></span><code><span class="nf">first_value</span><span class="p">(</span><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="w"> </span><span class="nf">over</span><span class="p">())</span>
-</code></pre></div>
-<p>ou</p>
-<div class="highlight"><pre><span></span><code><span class="nf">last_value</span><span class="p">(</span><span class="o">$</span><span class="n">PRENOM</span><span class="o">$</span><span class="w"> </span><span class="nf">over</span><span class="p">())</span>
-</code></pre></div>
-<p>...par exemple à travers une variable calculée.</p>
+<h3 id="questionnaire-exemple">Questionnaire exemple</h3>
+<p>Pour référence, un <a href="https://conception-questionnaires-demo.insee.fr/a._Questionaire/m1holrzlDOC" target="_blank">questionnaire implémentant cette solution <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a> est disponible dans l'environnement de demo, sous le timbre DOCUMENTATION</p>
 
 
 
@@ -3686,7 +3442,7 @@ Pour plus de clarté, le calcul de la durée brute pourra être déportée dans 
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../1-fonctions-vtl/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Fonctions et opérateurs">
+          <a href="../1-suggester/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Question de type Recherche sur liste (&#34;Suggester&#34;)">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -3696,20 +3452,20 @@ Pour plus de clarté, le calcul de la durée brute pourra être déportée dans 
                 Précédent
               </span>
               <div class="md-ellipsis">
-                Fonctions et opérateurs
+                Question de type Recherche sur liste ("Suggester")
               </div>
             </div>
           </a>
         
         
           
-          <a href="../3-migration-xpath-vers-vtl/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Migration XPath vers VTL">
+          <a href="../../g._Listes_de_codes/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Les listes de codes">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                Migration XPath vers VTL
+                Les listes de codes
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -3758,10 +3514,10 @@ Pour plus de clarté, le calcul de la durée brute pourra être déportée dans 
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes", "content.code.copy", "navigation.instant.preview", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer", "navigation.indexes", "content.code.copy", "navigation.instant.preview", "search.suggest", "search.highlight"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {

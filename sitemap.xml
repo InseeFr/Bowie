@@ -156,6 +156,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/a._Questionnaire/</loc>
+         <lastmod>2026-09-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/a._Questionnaire/10-sequences/</loc>
          <lastmod>2026-09-10</lastmod>
          <changefreq>daily</changefreq>
@@ -346,12 +351,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/f._Nomenclatures/suggester-choix-multi-variable/</loc>
+         <loc>https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/f._Nomenclatures/1-suggester/</loc>
          <lastmod>2026-09-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/f._Nomenclatures/suggester/</loc>
+         <loc>https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/f._Nomenclatures/2-suggester-choix-multi-variable/</loc>
          <lastmod>2026-09-10</lastmod>
          <changefreq>daily</changefreq>
     </url>

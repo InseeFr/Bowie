@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://inseefr.github.io/Bowie/1._Pogues/%F0%9F%9A%80_Guide/g._Listes_de_codes/">
       
       
-        <link rel="prev" href="../f._Nomenclatures/suggester/">
+        <link rel="prev" href="../f._Nomenclatures/2-suggester-choix-multi-variable/">
       
       
         <link rel="next" href="../../../3._Eno/">
@@ -1149,6 +1149,10 @@
     
       
         
+          
+        
+      
+        
       
         
       
@@ -1186,16 +1190,24 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../a._Questionnaire/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     a. Questionnaire
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_5_2">
@@ -1203,6 +1215,8 @@
             a. Questionnaire
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -2274,11 +2288,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../f._Nomenclatures/suggester-choix-multi-variable/" class="md-nav__link">
+      <a href="../f._Nomenclatures/1-suggester/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Suggester à choix multi-variables (une réponse valorise plusieurs variables)
+    Question de type Recherche sur liste ("Suggester")
   </span>
   
 
@@ -2295,11 +2309,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../f._Nomenclatures/suggester/" class="md-nav__link">
+      <a href="../f._Nomenclatures/2-suggester-choix-multi-variable/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Question de type Recherche sur liste ("Suggester")
+    Suggester à choix multi-variables (une réponse valorise plusieurs variables)
   </span>
   
 
@@ -3455,7 +3469,7 @@ Ainsi pour une même liste de codes on peut avoir différents <code class="highl
 <h2 id="filtrer-une-liste-de-codes">Filtrer une liste de codes</h2>
 <p>Il est possible de filtrer, pour des questions de type QCM (réponse booléenne uniquement) ou QCU, une liste de modalités selon une formule VTL.</p>
 <div class="admonition danger">
-<p class="admonition-title">Fonctionnalité non supportée pour les <a href="../b._Questions/17-reponse-choix-multiple/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"/></svg></span>Réponses QCM avec réponses sous forme de batterie de questions</a> et les <a href="../b._Questions/Tableaux/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"/></svg></span>Réponses QCU dans un tableau</a></p>
+<p class="admonition-title">Fonctionnalité non supportée pour les <a href="../b._Questions/17-reponse-choix-multiple/">Réponses QCM avec réponses sous forme de batterie de questions</a> et les <a href="../b._Questions/Tableaux/">Réponses QCU dans un tableau</a></p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Ajouter un <code class="highlight"><span class="n">Filtre</span></code></label><label for="__tabbed_6_2">Éditer un <code class="highlight"><span class="n">Filtre</span></code></label></div>
 <div class="tabbed-content">
@@ -3558,7 +3572,7 @@ On rajoute alors 2 filtres :</p>
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../f._Nomenclatures/suggester/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Question de type Recherche sur liste (&#34;Suggester&#34;)">
+          <a href="../f._Nomenclatures/2-suggester-choix-multi-variable/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Suggester à choix multi-variables (une réponse valorise plusieurs variables)">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -3568,7 +3582,7 @@ On rajoute alors 2 filtres :</p>
                 Précédent
               </span>
               <div class="md-ellipsis">
-                Question de type Recherche sur liste ("Suggester")
+                Suggester à choix multi-variables (une réponse valorise plusieurs variables)
               </div>
             </div>
           </a>
