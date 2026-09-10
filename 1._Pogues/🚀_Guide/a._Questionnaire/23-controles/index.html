@@ -3487,7 +3487,7 @@ Il faut visualiser le questionnaire <strong>dans son entièreté</strong>. <br><
 </div>
 </div>
 </div>
-<p>Voir d'autres <a href="../💻_VTL/2-guide-vtl.md/#cookbook">exemples</a></p>
+<p>Voir d'autres <a href="../../../%F0%9F%92%BB_VTL/2-guide-vtl/#quelques-exemples-dutilisation-du-vtl-dans-pogues">exemples</a></p>
 <h2 id="comportements">Comportements</h2>
 <h3 id="avertissement-non-bloquant">Avertissement (Non bloquant)</h3>
 <table>
@@ -3552,11 +3552,11 @@ Il faut visualiser le questionnaire <strong>dans son entièreté</strong>. <br><
 <h3 id="non-reponse">Non-réponse</h3>
 <p>Dans la plupart des cas, vérifier une potentielle non-réponse c'est vérifier que la variable sous-jacente n'a pas été valorisée. Il faut donc écrire un contrôle pour tester la <strong><em>nullité</em></strong>. <br> </p>
 <div class="admonition example">
-<p>Dépendamment du <a href="./Questions/13-reponse-simple.md">type de la variable</a>, la formule VTL de conditionnant l'affichage du contrôle de non réponse est différente.</p>
+<p>Dépendamment du <a href="../../b._Questions/13-reponse-simple/">type de la variable</a>, la formule VTL de conditionnant l'affichage du contrôle de non réponse est différente.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Date - Nombre - Durée</label><label for="__tabbed_2_2">Texte</label><label for="__tabbed_2_3">Booléen</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Pour ces types, la formule VTL est simple avec seulement l'utilisation de <a href="../💻_VTL/1-fonctions-vtl.md/#isnull"><strong>isnull()</strong></a>
+<p>Pour ces types, la formule VTL est simple avec seulement l'utilisation de <a href="../../../%F0%9F%92%BB_VTL/1-fonctions-vtl/#isnull"><strong>isnull()</strong></a>
 <div class="highlight"><pre><span></span><code><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">VAR</span><span class="o">$</span><span class="p">)</span>
 </code></pre></div></p>
 </div>
@@ -3565,7 +3565,7 @@ Il faut visualiser le questionnaire <strong>dans son entièreté</strong>. <br><
 On peut gérer ça des deux manière suivantes : 
 <div class="highlight"><pre><span></span><code><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">VAR</span><span class="p">)</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="o">$</span><span class="n">VAR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
 </code></pre></div>
-Ou en utilisant la fonction <a href="../💻_VTL/1-fonctions-vtl.md/#nvl"><strong>nvl()</strong></a> :</p>
+Ou en utilisant la fonction <a href="../../../%F0%9F%92%BB_VTL/1-fonctions-vtl/#nvl"><strong>nvl()</strong></a> :</p>
 <div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span>
 </code></pre></div>
 </div>
@@ -3574,7 +3574,7 @@ Ou en utilisant la fonction <a href="../💻_VTL/1-fonctions-vtl.md/#nvl"><stron
 On peut gérer ça des deux manière suivantes : 
 <div class="highlight"><pre><span></span><code><span class="nf">isnull</span><span class="p">(</span><span class="o">$</span><span class="n">VAR</span><span class="p">)</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="o">$</span><span class="n">VAR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">false</span>
 </code></pre></div>
-Ou en utilisant la fonction <a href="../💻_VTL/1-fonctions-vtl.md/#nvl"><strong>nvl()</strong></a> :</p>
+Ou en utilisant la fonction <a href="../../../%F0%9F%92%BB_VTL/1-fonctions-vtl/#nvl"><strong>nvl()</strong></a> :</p>
 <div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">VAR</span><span class="p">,</span><span class="w"> </span><span class="n">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">false</span>
 </code></pre></div>
 </div>
@@ -3747,8 +3747,8 @@ Ou en utilisant la fonction <a href="../💻_VTL/1-fonctions-vtl.md/#nvl"><stron
 <h2 id="questionnaire-exemple">Questionnaire exemple</h2>
 <p>Pour référence, des questionnaires illustrant ces contrôles sont disponibles dans l'environnement de demo, sous le timbre <em>DOCUMENTATION</em>.</p>
 <ul>
-<li>Un <a href="https://conception-questionnaires-demo.insee.fr/questionnaire/m4tmy4kl" target="_blank">questionnaire implémentant les contrôles de Siret, Siren et Rna <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a> </li>
-<li>Un <a href="https://conception-questionnaires-demo.insee.fr/questionnaire/m74nlrpj" target="_blank">questionnaire similaire <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a>  où les contrôles ne se déclenchent aussi quand le champ est vide </li>
+<li>Un <a href="https://conception-questionnaires-demo.insee.fr/a._Questionaire/m4tmy4kl" target="_blank">questionnaire implémentant les contrôles de Siret, Siren et Rna <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a> </li>
+<li>Un <a href="https://conception-questionnaires-demo.insee.fr/a._Questionaire/m74nlrpj" target="_blank">questionnaire similaire <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a>  où les contrôles ne se déclenchent aussi quand le champ est vide </li>
 </ul>
 
 

@@ -3385,29 +3385,29 @@
 <h2 id="decrire-une-case-non-collectee">Décrire une case non-collectée</h2>
 <p>On souhaite parfois qu'une ou plusieurs cases d'un tableau porte une donnée calculée ou externe plutôt qu'une donnée collectée. </p>
 <p>Par exemple dans le tableau de taille fixe suivant où les cases de la dernière colonne représentant la différence entre les deux cases précédentes.:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Tableau statique avec total en ligne" src="../../../img/pogues/tf_total_en_ligne_tableau.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Tableau statique avec total en ligne" src="../../../../../img/pogues/tf_total_en_ligne_tableau.png" /></a></p>
 <p>ou dans le tableau dynamique où la première colonne est une donnée externe - préremplie : </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Tableau dynamique avec colonne_prérempli" src="../../../img/pogues/td-prerempli-non-collecte.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Tableau dynamique avec colonne_prérempli" src="../../../../../img/pogues/td-prerempli-non-collecte.png" /></a></p>
 <p>Pour spécifier ce type de comportement, Pogues met à disposition le mécanisme de <strong>case non-collectée</strong>.</p>
 <h3 id="dans-un-tableau-statique">Dans un tableau statique</h3>
 <p>Une case de tableau est par défaut une variable standard collectée. Dans l'onglet "Variables collectées", on note que par défaut la valeur de Collectée est à Oui :</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Case collectée" src="../../../img/pogues/tableau_case_collectee.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Case collectée" src="../../../../../img/pogues/tableau_case_collectee.png" /></a></p>
 <p>Si on choisit "Non", on peut alors remplacer la case par une expression VTL, comme ici la différence entre deux variable numériques :</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Case non collectée" src="../../../img/pogues/tableau_case_non_collectee.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Case non collectée" src="../../../../../img/pogues/tableau_case_non_collectee.png" /></a></p>
 <h3 id="dans-un-tableau-dynamique">Dans un tableau dynamique</h3>
 <p>Ici, c'est la <strong>colonne entière</strong> qui peut ne pas être collectée. Les cas d'usage les plus fréquents seront :</p>
 <ul>
 <li>l'affichage d'une donnée externe (préremplissage par exemple), décrite au préalable :</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Case non collectée" src="../../../img/pogues/td-prerempli-non-collecte-spec-externe.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Case non collectée" src="../../../../../img/pogues/td-prerempli-non-collecte-spec-externe.png" /></a></p>
 <p>et utilisée ainsi :</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Case non collectée" src="../../../img/pogues/td-prerempli-non-collecte-spec.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Case non collectée" src="../../../../../img/pogues/td-prerempli-non-collecte-spec.png" /></a></p>
 <ul>
 <li>l'affichage d'une donnée calculée, calculée ainsi :</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Case non collectée_var_calculée" src="../../../img/pogues/td-prerempli-non-collecte-var-calculee.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Case non collectée_var_calculée" src="../../../../../img/pogues/td-prerempli-non-collecte-var-calculee.png" /></a></p>
 <p>et utilisée ainsi :</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Case non collectée_var_calculée" src="../../../img/pogues/td-prerempli-non-collecte-usage-calculee.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Case non collectée_var_calculée" src="../../../../../img/pogues/td-prerempli-non-collecte-usage-calculee.png" /></a></p>
 <h2 id="total-en-ligne">Total en ligne</h2>
 <h3 id="dans-un-tableau-statique_1">Dans un tableau statique</h3>
 <p>C'est très proche de l'exemple juste au-dessus : on donnera comme valeur d'un total en ligne la somme des variables collectées des cases de la ligne.</p>
@@ -3421,7 +3421,7 @@
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Astuce</p>
-<p>Pour des expressions un peu longue, il est préférable de passer par une <a href="../Variables/variables-calculees.md">variable calculée</a>.</p>
+<p>Pour des expressions un peu longue, il est préférable de passer par une <a href="../../../c._Variables/variables-calculees/">variable calculée</a>.</p>
 </div>
 <h3 id="dans-un-tableau-dynamique_1">Dans un tableau dynamique</h3>
 <p>Le tableau dynamique ne contient pas de variable collectée pour chaque cellule mais il propose une variable vectorielle pour chaque colonne.</p>
@@ -3433,7 +3433,7 @@
 <p>On reprend le principe de la somme en ligne vu plus haut, mais cette fois-ci on somme toutes les variables collectées d'une même colonne pour l'affecter comme valeur de la case représentant le total (a priori la dernière de la colonne).</p>
 <div class="admonition tip">
 <p class="admonition-title">Astuce</p>
-<p>Pour avoir un total correct même si toutes les cases ne sont pas remplies, il est nécessaire d'utiliser <a href="../../💻_VTL/1-fonctions-vtl.md/#nvl">la fonction <code class="highlight"><span class="n">nvl</span></code></a>.</p>
+<p>Pour avoir un total correct même si toutes les cases ne sont pas remplies, il est nécessaire d'utiliser <a href="../../../../%F0%9F%92%BB_VTL/1-fonctions-vtl/#nvl">la fonction <code class="highlight"><span class="n">nvl</span></code></a>.</p>
 <p>Par exemple :</p>
 <div class="highlight"><pre><span></span><code><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">TABLEAU_FIXE_11</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">TABLEAU_FIXE_21</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kc">...</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">nvl</span><span class="p">(</span><span class="o">$</span><span class="n">TABLEAU_FIXE_N1</span><span class="o">$</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
 </code></pre></div>
