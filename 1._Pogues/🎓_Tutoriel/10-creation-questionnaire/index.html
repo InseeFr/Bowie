@@ -37,7 +37,7 @@
   
   
   
-  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m15.07 11.25-.9.92C13.45 12.89 13 13.5 13 15h-2v-.5c0-1.11.45-2.11 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41a2 2 0 0 0-2-2 2 2 0 0 0-2 2H8a4 4 0 0 1 4-4 4 4 0 0 1 4 4 3.2 3.2 0 0 1-.93 2.25M13 19h-2v-2h2M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-5.53-4.5-10-10-10Z"/></svg>');}</style>
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2v6Z"/></svg>');}</style>
 
 
     
@@ -1170,6 +1170,8 @@
       
         
           
+        
+      
         
       
         
@@ -2470,6 +2472,60 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%F0%9F%9A%80_Guide/h._Detail/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    h. Detail
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_9">
+            <span class="md-nav__icon md-icon"></span>
+            h. Detail
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3289,7 +3345,7 @@
 <p>La fenêtre de création du questionnaire permet de renseigner les paramètres de contexte du questionnaire (identifiant, dynamisme) et de l'enquête (modes de collecte).</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="creation-questionnaire-page" src="../../../img/pogues/creation-questionnaire-page.png" /></a></p>
 <h2 id="identification">Identification</h2>
-<p>Il faut donner un "Titre" au questionnaire. Par défaut, un identifiant sera créé à partir de ce titre, vous pouvez par la suite le modifier en cliquant sur "Voir le détail" depuis la page "Questionnaire".</p>
+<p>Il faut donner un "Titre" au questionnaire. Par défaut, un identifiant sera créé à partir de ce titre, vous pouvez par la suite le modifier en cliquant sur le menu "Détail" sue la gauche.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Par convention, les identifiants des éléments du questionnaire (séquences, boucles, variables, etc.) seront écrits sous la forme <code class="highlight"><span class="n">MON_IDENTIFIANT</span></code>: pas de caractères spéciaux ni d'accents</p>
@@ -3322,9 +3378,8 @@
 </div>
 <p>Pour ce tutoriel, nous choisissons "Filtre" et "VTL".</p>
 <h2 id="information-sur-le-processus">Information sur le processus</h2>
-<p>On peut ajouter des informations "Série", "Opération statistique" et "Campagne" en fonction de l'enquête correspondante telle que décrite dans Bauhaus (processus spécifique au contexte Insee, on ne le détaille pas ici.). 
-Par défaut ces champs sont vides et ne sont pas proposés lors de la création du questionnaire, ils n'ont pas d'influence sur la suite du processus. Vous pouvez les spécifier après création du questionnaire via le bouton "Voir le détail" depuis la page "Questionnaire".
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/survey-detail-modal.png" /></a></p>
+<p>On peut ajouter l'information <strong>Série</strong>, en fonction de l'enquête correspondante telle que décrite dans <a href="https://gestion-metadonnees.insee.fr/">Bauhaus <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a> (processus spécifique au contexte Insee, on ne le détaille pas ici.). <br />
+Par défaut ce champ est vide et n'est pas proposé lors de la création du questionnaire. Il faut le spécifier dans la page "Détail" via le menu à gauche.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Si vous êtes en train de vous autoformer, vous pouvez choisir n'importe quelles valeurs, cela n'a pas d'impact sur le reste du questionnaire</p>
@@ -3332,7 +3387,16 @@ Par défaut ces champs sont vides et ne sont pas proposés lors de la création 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Il est possible de modifier <strong>l'identifiant du questionnaire</strong> qui a été généré automatiquement lors de la création du questionnaire.
-Il est impératif d'utiliser <strong>uniquement des caractères alphanumériques</strong> pour la suite des traitements.</p>
+Il est impératif d'utiliser <strong>uniquement des caractères alphanumériques</strong> pour la suite des traitements.<br />
+La taille maximale est de 10 caractère pour l'identifiant.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Pour aller plus loin</p>
+<div class="grid cards" markdown>
+<ul>
+<li><strong><a href="../../%F0%9F%9A%80_Guide/h._Detail/">Page de Détail <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17 12-5 5v-3H8v-4h4V7l5 5M3 19V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2m2 0h14V5H5v14Z"/></svg></span></a></strong></li>
+</ul>
+</div>
 </div>
 <h2 id="suite">Suite</h2>
 <p><a href="../11-creation-premiere-sequence/">Créer une première séquence</a></p>
