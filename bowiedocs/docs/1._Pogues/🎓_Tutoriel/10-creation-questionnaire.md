@@ -9,7 +9,7 @@ La fenêtre de création du questionnaire permet de renseigner les paramètres d
 
 ## Identification
 
-Il faut donner un "Titre" au questionnaire. Par défaut, un identifiant sera créé à partir de ce titre, vous pouvez par la suite le modifier en cliquant sur "Voir le détail" depuis la page "Questionnaire".
+Il faut donner un "Titre" au questionnaire. Par défaut, un identifiant sera créé à partir de ce titre, vous pouvez par la suite le modifier en cliquant sur le menu "Détail" sue la gauche.
 
 !!! tip
     Par convention, les identifiants des éléments du questionnaire (séquences, boucles, variables, etc.) seront écrits sous la forme `MON_IDENTIFIANT`: pas de caractères spéciaux ni d'accents
@@ -46,10 +46,8 @@ Pour ce tutoriel, nous choisissons "Filtre" et "VTL".
 
 ## Information sur le processus
 
-On peut ajouter des informations "Série", "Opération statistique" et "Campagne" en fonction de l'enquête correspondante telle que décrite dans Bauhaus (processus spécifique au contexte Insee, on ne le détaille pas ici.). 
-Par défaut ces champs sont vides et ne sont pas proposés lors de la création du questionnaire, ils n'ont pas d'influence sur la suite du processus. Vous pouvez les spécifier après création du questionnaire via le bouton "Voir le détail" depuis la page "Questionnaire".
-![alt text](../../img/pogues/survey-detail-modal.png)
-
+On peut ajouter l'information **Série**, en fonction de l'enquête correspondante telle que décrite dans [Bauhaus :material-open-in-new:](https://gestion-metadonnees.insee.fr/) (processus spécifique au contexte Insee, on ne le détaille pas ici.).   
+Par défaut ce champ est vide et n'est pas proposé lors de la création du questionnaire. Il faut le spécifier dans la page "Détail" via le menu à gauche.
 
 !!! tip
     Si vous êtes en train de vous autoformer, vous pouvez choisir n'importe quelles valeurs, cela n'a pas d'impact sur le reste du questionnaire
@@ -58,9 +56,16 @@ Par défaut ces champs sont vides et ne sont pas proposés lors de la création 
 !!! warning
 
     Il est possible de modifier **l'identifiant du questionnaire** qui a été généré automatiquement lors de la création du questionnaire.
-    Il est impératif d'utiliser **uniquement des caractères alphanumériques** pour la suite des traitements.
+    Il est impératif d'utiliser **uniquement des caractères alphanumériques** pour la suite des traitements.  
+    La taille maximale est de 10 caractère pour l'identifiant.
 
+!!! abstract "Pour aller plus loin"
 
+    <div class="grid cards" markdown>
+
+    - __[Page de Détail :material-arrow-right-bold-box-outline:](../🚀_Guide/h._Detail/index.md)__
+
+    </div>
 
 
 ## Suite

@@ -6,7 +6,7 @@ theme:
   favicon : assets/bowie-zap-circle.png
   icon:
     logo: material/lightning-bolt-circle
-    annotation: material/help-circle
+    annotation: material/information-outline
     previous: fontawesome/solid/angle-left
     next: fontawesome/solid/angle-right
   palette:

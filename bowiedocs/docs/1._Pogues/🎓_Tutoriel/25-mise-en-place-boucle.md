@@ -23,8 +23,6 @@ Dans ce tutoriel, on va mettre en place le premier cas uniquement.
 
     </div>
 
-!!! abstract "Pour aller plus loin"
-
 ## Création de la boucle
 
 Les paramètres qui définissent une boucle :
@@ -70,6 +68,6 @@ Il est bien évidemment possible de personnaliser encore plus notre boucle, par 
 
 ## Corrigé
 
-Vous pouvez comparer votre création avec le [corrigé de l'exercice :material-open-in-new:](https://conception-questionnaires-demo.insee.fr/a._Questionaire/ml82b1lb){target="_blank"}.
+Vous pouvez comparer votre création avec le [corrigé de l'exercice :material-open-in-new:](https://conception-questionnaires-demo.insee.fr/Questionaire/ml82b1lb){target="_blank"}.
 
 Maintenant qu'on vous a donné les bases, on vous laisse découvrir toutes les possibilités de l'outil !

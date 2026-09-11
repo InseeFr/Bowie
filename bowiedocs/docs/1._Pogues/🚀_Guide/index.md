@@ -44,6 +44,11 @@ En cas de sujets de type VTL, se reporter à sur [l'utilisation du VTL dans Pogu
     
     ---
     Gestion des listes de codes utilisées dans les questions de type QCU, QCM et tableau
+
+-   __[:material-file-document-outline: Détail](h._Detail/index.md){ .md-button }__ 
+
+    ---
+    Métadonnées du questionnaire comme son titre, sa série, son mode de collecte, etc.
     
 </div>
 
