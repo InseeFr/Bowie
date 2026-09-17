@@ -3308,13 +3308,15 @@
 <h1 id="portee-des-variables">Portée des variables</h1>
 <h3 id="type-de-portee">Type de portée</h3>
 <ul>
-<li><strong>Portée <code class="highlight"><span class="n">Questionnaire</span></code> :</strong> alors toutes les variables vecteurs seront bien considérées comme des vecteurs (liste d’élément). Il est donc possible d’effectuer des opération d’agrégation dessus (sum, count, ect)</li>
-<li><strong>Portée <code class="highlight"><span class="n">Boucle</span><span class="o">/</span><span class="n">Tableau</span></code> (ou <code class="highlight"><span class="o">&lt;</span><span class="n">Vecteur</span><span class="o">&gt;</span></code>) :</strong> alors la variable calculée sera elle aussi un vecteur et la formule VTL associée portera sur toutes les occurrences du vecteur.
+<li><strong>Portée <code class="highlight"><span class="n">Questionnaire</span></code> :</strong> toutes les variables vecteurs seront bien considérées comme des vecteurs (liste d’élément). Il est donc possible d’effectuer des opération d’agrégation dessus (sum, count, ect)</li>
+<li><strong>Portée <code class="highlight"><span class="n">Boucle</span><span class="o">/</span><span class="n">Tableau</span></code> (ou <code class="highlight"><span class="o">&lt;</span><span class="n">Vecteur</span><span class="o">&gt;</span></code>) :</strong> la variable calculée sera elle aussi un vecteur et la formule VTL associée portera sur toutes les occurrences du vecteur.
     Ex : la var calculée <code class="highlight"><span class="n">CALC_VAR</span></code> ayant pour formule VTL <code class="highlight"><span class="o">$</span><span class="n">CA_ENTREPRISE</span><span class="o">$</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">100</span></code> sera donc un vecteur auquel on aura ajouté <code class="highlight"><span class="m">100</span></code> à chaque valeur de <code class="highlight"><span class="o">$</span><span class="n">CA_ENTREPRISE</span><span class="o">$</span></code>.
     <code class="highlight"><span class="o">&lt;</span><span class="n">Vecteur</span><span class="o">&gt;</span></code> prend la valeur du nom d’une boucle ou d’un tableau dynamique.</li>
 </ul>
-<p>!!! question "Champ <em>Niveau de calcul</em>"
-    On définit une portée pour les variables calculées ou externes via par le paramètre <strong><em>Niveau de calcul</em></strong> : il s'agit de préciser si une variable est calculée ou injectée (dans le cas d'une variable externe) au sein d'une boucle, d'un tableau ou dans le contexte du questionnaire dans son ensemble.</p>
+<div class="admonition question">
+<p class="admonition-title">Champ <em>Niveau de calcul</em></p>
+<p>On définit une portée pour les variables calculées ou externes via par le paramètre <strong><em>Niveau de calcul</em></strong> : il s'agit de préciser si une variable est calculée ou injectée (dans le cas d'une variable externe) au sein d'une boucle, d'un tableau ou dans le contexte du questionnaire dans son ensemble.</p>
+</div>
 <h2 id="exemple-pour-les-boucles">Exemple pour les boucles</h2>
 <p>Imaginons une boucle <code class="highlight"><span class="n">B1</span></code> sur un ensemble de questions relatives à des individus. Je veux pouvoir pour chacun d'eux créer une indicatrice permettant de savoir si l'individu est dans le champs en vérifiant son âge (variable collectée <code class="highlight"><span class="n">AGE</span></code>) et sa nationalité (<code class="highlight"><span class="n">NATIONALITE</span></code>).</p>
 <p>Pour cela, je crée une variable calculée de portée <code class="highlight"><span class="n">B1</span></code> dont la formule s'appuie pour chaque occurrence de la boucle (chaque individu) sur les variables <code class="highlight"><span class="n">AGE</span></code> et <code class="highlight"><span class="n">NATIONALITE</span></code> (de chaque individu).</p>
