@@ -82,13 +82,6 @@ On a le choix entre deux type de calcul pour le nombre de lignes :
 
 - Pogues permet de préremplir certaines **colonnes** des tableaux dynamiques, que ce soit par de la donnée externe ou par des variables calculées. Ces **colonnes** ne sont alors pas modifiables en collecte. Voir [Spécifier des données non-collectées](./3-cases-non-collectees.md)
 
-## Calculer des totaux de lignes ou de colonnes
-
-Ces totaux peuvent être ensuite utilisées dans des libellés, des filtres ou des contrôles
-
-- cf. [Total en ligne](./3-cases-non-collectees.md/#total-en-ligne)
-- cf. [Total en colonne](./3-cases-non-collectees.md/#total-en-colonne)
-
 ## Contrôles
 
 Dans l'onglet Contrôles, décrire classiquement le contrôle en VTL mais préciser son niveau : 
@@ -165,3 +158,26 @@ On propose un éditeur VTL conditionnant la possibilité de mettre en lecture se
 | ✅ | `FALSE` | la case est accessible en modification pour l'enquêté  |
 
 Le choix "Non" est sélectionné par défaut : aucune case de la colonne n'est en lecture seule = toutes les cases de la colonne sont modifiables.
+
+## Bonnes pratiques
+
+### Calculer des totaux de lignes ou de colonnes
+
+Ces totaux peuvent être ensuite utilisées dans des libellés, des filtres ou des contrôles
+
+- cf. [Total en ligne](./3-cases-non-collectees.md/#total-en-ligne)
+- cf. [Total en colonne](./3-cases-non-collectees.md/#total-en-colonne)
+
+### Compter le nombre de ligne
+
+Utilisation de la formule VTL `count($COL_1$)` avec `COL_1` la première colonne du tableau, de préférence car représente l'unité du tableau
+
+!!! question "Cas d'utilisation"
+    
+    Définir la dimension d'un tableau dynamique selon celle d'un autre tableau dynamique
+    On distingue deux cas.
+    
+    - **Cas simple :** le 1er tableau dynamique a une dimension avec min=max et sa taille est définie par une variable `NB_LIGNES`. Dans ce cas la dimension du deuxième tableau dynamique sera aussi définie par `NB_LIGNES`
+    - **Cas complexe :** le 1er tableau dynamique a une dimension avec min≠max. Même si on dispose une variable `NB_LIGNES_MIN` en amont, l'enquêté peut **ajouter dynamiquement des lignes** au moment de la collecte.  
+    De ce fait on ne peut pas simplement définir la dimension du deuxième tableau par `NB_LIGNES_MIN` car la taille effective du 1er tableau lors de la collecte peut être `NB_LIGNES_MIN + 3` par exemple.  
+    Dans ce cas, on va **compter** les lignes du 1er tableau grâce à fonction VTL `count()` en utilisant la première colonne du 1er tableau, `COL_1` par exemple. Ainsi, la dimension du deuxième aura la formule `count($COL_1$)`
