@@ -1867,15 +1867,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#calculer-des-totaux-de-lignes-ou-de-colonnes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Calculer des totaux de lignes ou de colonnes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#controles" class="md-nav__link">
     <span class="md-ellipsis">
       Contrôles
@@ -1899,6 +1890,39 @@
       Cases en lecture seule
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bonnes-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bonnes pratiques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bonnes pratiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calculer-des-totaux-de-lignes-ou-de-colonnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculer des totaux de lignes ou de colonnes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compter-le-nombre-de-ligne" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compter le nombre de ligne
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3359,15 +3383,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#calculer-des-totaux-de-lignes-ou-de-colonnes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Calculer des totaux de lignes ou de colonnes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#controles" class="md-nav__link">
     <span class="md-ellipsis">
       Contrôles
@@ -3391,6 +3406,39 @@
       Cases en lecture seule
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bonnes-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bonnes pratiques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bonnes pratiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calculer-des-totaux-de-lignes-ou-de-colonnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculer des totaux de lignes ou de colonnes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compter-le-nombre-de-ligne" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compter le nombre de ligne
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3513,12 +3561,6 @@ Dans le cas où l'utilisateur réponds 5 à la question <code class="highlight">
 <li>
 <p>Pogues permet de préremplir certaines <strong>colonnes</strong> des tableaux dynamiques, que ce soit par de la donnée externe ou par des variables calculées. Ces <strong>colonnes</strong> ne sont alors pas modifiables en collecte. Voir <a href="../3-cases-non-collectees/">Spécifier des données non-collectées</a></p>
 </li>
-</ul>
-<h2 id="calculer-des-totaux-de-lignes-ou-de-colonnes">Calculer des totaux de lignes ou de colonnes</h2>
-<p>Ces totaux peuvent être ensuite utilisées dans des libellés, des filtres ou des contrôles</p>
-<ul>
-<li>cf. <a href="../3-cases-non-collectees/#total-en-ligne">Total en ligne</a></li>
-<li>cf. <a href="../3-cases-non-collectees/#total-en-colonne">Total en colonne</a></li>
 </ul>
 <h2 id="controles">Contrôles</h2>
 <p>Dans l'onglet Contrôles, décrire classiquement le contrôle en VTL mais préciser son niveau : </p>
@@ -3661,6 +3703,26 @@ On veut donc éviter que l'enquêté puisse saisir une valeur dans la colonne <c
 </tbody>
 </table>
 <p>Le choix "Non" est sélectionné par défaut : aucune case de la colonne n'est en lecture seule = toutes les cases de la colonne sont modifiables.</p>
+<h2 id="bonnes-pratiques">Bonnes pratiques</h2>
+<h3 id="calculer-des-totaux-de-lignes-ou-de-colonnes">Calculer des totaux de lignes ou de colonnes</h3>
+<p>Ces totaux peuvent être ensuite utilisées dans des libellés, des filtres ou des contrôles</p>
+<ul>
+<li>cf. <a href="../3-cases-non-collectees/#total-en-ligne">Total en ligne</a></li>
+<li>cf. <a href="../3-cases-non-collectees/#total-en-colonne">Total en colonne</a></li>
+</ul>
+<h3 id="compter-le-nombre-de-ligne">Compter le nombre de ligne</h3>
+<p>Utilisation de la formule VTL <code class="highlight"><span class="nf">count</span><span class="p">(</span><span class="o">$</span><span class="n">COL_1</span><span class="o">$</span><span class="p">)</span></code> avec <code class="highlight"><span class="n">COL_1</span></code> la première colonne du tableau, de préférence car représente l'unité du tableau</p>
+<div class="admonition question">
+<p class="admonition-title">Cas d'utilisation</p>
+<p>Définir la dimension d'un tableau dynamique selon celle d'un autre tableau dynamique
+On distingue deux cas.</p>
+<ul>
+<li><strong>Cas simple :</strong> le 1er tableau dynamique a une dimension avec min=max et sa taille est définie par une variable <code class="highlight"><span class="n">NB_LIGNES</span></code>. Dans ce cas la dimension du deuxième tableau dynamique sera aussi définie par <code class="highlight"><span class="n">NB_LIGNES</span></code></li>
+<li><strong>Cas complexe :</strong> le 1er tableau dynamique a une dimension avec min≠max. Même si on dispose une variable <code class="highlight"><span class="n">NB_LIGNES_MIN</span></code> en amont, l'enquêté peut <strong>ajouter dynamiquement des lignes</strong> au moment de la collecte.<br />
+De ce fait on ne peut pas simplement définir la dimension du deuxième tableau par <code class="highlight"><span class="n">NB_LIGNES_MIN</span></code> car la taille effective du 1er tableau lors de la collecte peut être <code class="highlight"><span class="n">NB_LIGNES_MIN</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">3</span></code> par exemple.<br />
+Dans ce cas, on va <strong>compter</strong> les lignes du 1er tableau grâce à fonction VTL <code class="highlight"><span class="nf">count</span><span class="p">()</span></code> en utilisant la première colonne du 1er tableau, <code class="highlight"><span class="n">COL_1</span></code> par exemple. Ainsi, la dimension du deuxième aura la formule <code class="highlight"><span class="nf">count</span><span class="p">(</span><span class="o">$</span><span class="n">COL_1</span><span class="o">$</span><span class="p">)</span></code></li>
+</ul>
+</div>
 
 
 
