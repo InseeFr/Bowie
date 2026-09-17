@@ -10,11 +10,18 @@ Pour créer une question, cliquer sur `+ Question` et remplir les champs suivant
     Voir également [le nommage des variables](../c._Variables/nommage.md)
 
 - modifier les `modes de collecte` si la question ne concerne pas tous les modes associés au questionnaire (non fonctionnel en 2024)
-- préciser le `type de question` :
+- préciser le `type de question`.
 
+
+## Les différents types de question
 
 <div class="grid cards" markdown>
 
+-   __[:material-alert-octagon-outline: Réponse obligatoire](12-reponse-obligatoire.md){ .md-button }__
+    
+    ---
+    Option pour rendre la réponse à une question obligatoire.
+    
 -   __[:material-form-textbox: Réponse simple](13-reponse-simple.md){ .md-button }__
     
     ---
