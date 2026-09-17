@@ -1,5 +1,21 @@
 # Les Variables dans Pogues
 
+## Notions importantes
+<div class="grid cards" markdown>
+
+-   __[:material-rename-box-outline: Nommage de variable](nommage.md){ .md-button }__
+    
+    ---
+    Convention et conseils
+    
+-   __[:material-spirit-level: Niveau ou "Portée"](portee.md){ .md-button }__
+    
+    ---
+    Notion et exemples d'utilisation
+
+</div>
+
+
 ## Types de variables 
 
 - [**Collectée**](variables-collectees.md) : Donnée principale d'une enquête = information que l'on veut récupérer pour ensuite l’analyser.

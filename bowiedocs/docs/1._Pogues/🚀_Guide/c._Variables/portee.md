@@ -3,12 +3,12 @@
 
 ### Type de portée
 
-- **Portée `Questionnaire` :** alors toutes les variables vecteurs seront bien considérées comme des vecteurs (liste d’élément). Il est donc possible d’effectuer des opération d’agrégation dessus (sum, count, ect)
-- **Portée `Boucle/Tableau` (ou `<Vecteur>`) :** alors la variable calculée sera elle aussi un vecteur et la formule VTL associée portera sur toutes les occurrences du vecteur.
+- **Portée `Questionnaire` :** toutes les variables vecteurs seront bien considérées comme des vecteurs (liste d’élément). Il est donc possible d’effectuer des opération d’agrégation dessus (sum, count, ect)
+- **Portée `Boucle/Tableau` (ou `<Vecteur>`) :** la variable calculée sera elle aussi un vecteur et la formule VTL associée portera sur toutes les occurrences du vecteur.
     Ex : la var calculée `CALC_VAR` ayant pour formule VTL `$CA_ENTREPRISE$ + 100` sera donc un vecteur auquel on aura ajouté `100` à chaque valeur de `$CA_ENTREPRISE$`.
     `<Vecteur>` prend la valeur du nom d’une boucle ou d’un tableau dynamique.
 
-  !!! question "Champ *Niveau de calcul*"
+!!! question "Champ *Niveau de calcul*"
     On définit une portée pour les variables calculées ou externes via par le paramètre **_Niveau de calcul_** : il s'agit de préciser si une variable est calculée ou injectée (dans le cas d'une variable externe) au sein d'une boucle, d'un tableau ou dans le contexte du questionnaire dans son ensemble.
 
 ## Exemple pour les boucles
