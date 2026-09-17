@@ -170,7 +170,7 @@ Ces totaux peuvent être ensuite utilisées dans des libellés, des filtres ou d
 
 ### Compter le nombre de ligne
 
-Utilisation de la formule VTL `count($COL_1$)` avec `COL_1` la première colonne du tableau, de préférence car représente l'unité du tableau
+Utilisation de la formule VTL `count($COL_1$)` avec `COL_1` la première colonne du tableau, de préférence car représente l'unité du tableau.
 
 !!! question "Cas d'utilisation"
     
