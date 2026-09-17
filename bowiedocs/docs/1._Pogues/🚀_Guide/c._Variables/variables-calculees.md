@@ -1,8 +1,8 @@
-# Les variables calculées ✨
+# Les variables calculées
 
 ## Création d'une variable calculée
 
-✨ On crée les variables calculées via le menu "Variables" en cliquant sur le bouton en haut à droite "Créer une variable". 
+On crée les variables calculées via le menu "Variables" en cliquant sur le bouton en haut à droite "Créer une variable". 
 
 !!! abstract "Nouvelle variable calculée"
     ![alt text](../../../img/pogues/var-creation-calculated.png)

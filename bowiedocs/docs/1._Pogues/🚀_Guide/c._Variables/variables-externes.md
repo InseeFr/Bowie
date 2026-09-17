@@ -1,4 +1,4 @@
-# Les variables externes ✨
+# Les variables externes
 
 
 Pogues permet de référencer dans le questionnaire des variables externes, c'est à dire des variables qui sont fournies au chargement du questionnaire lors de la collecte, en provenance d'un fichier de données produit à partir de données connues et attachées à l'unité enquêtée.
@@ -13,8 +13,7 @@ Pogues permet de référencer dans le questionnaire des variables externes, c'es
     ```
 
 ## Création d'une variable externe
-
-✨ On crée les variables externes via le menu "Variables" en cliquant sur le bouton en haut à droite "Créer une variable".
+On crée les variables externes via le menu "Variables" en cliquant sur le bouton en haut à droite "Créer une variable".
 
 !!! abstract "Nouvelle variable externe"
     ![alt text](../../../img/pogues/var-creation-external.png)

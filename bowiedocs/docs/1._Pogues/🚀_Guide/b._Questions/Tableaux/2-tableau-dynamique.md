@@ -1,5 +1,4 @@
-# Les tableaux dynamiques (Maj ✨)
-
+# Les tableaux dynamiques
 On peut vouloir créer des tableaux dont on ne connaît pas à l'avance le nombre de lignes. Ces tableaux se présenteront : 
 
 - sans en-tête de lignes en première colonne
@@ -58,8 +57,8 @@ On a le choix entre deux type de calcul pour le nombre de lignes :
         - et on peut ajouter une ligne pour atteindre le max
             ![alt text](../../../../img/pogues/dyn-tab-nb-line-nb3.png)
 
-!!! tip ""
-    Ici la première colonne est une variable non collectée avec la formule VTL ```"Individu " || cast(GLOBAL_ITERATION_INDEX,string) || ""```
+    !!! tip ""
+        Ici la première colonne est une variable non collectée avec la formule VTL ```"Individu " || cast(GLOBAL_ITERATION_INDEX,string) || ""```
 
 ### Nombre de lignes déterminés par `Formule`
 
@@ -79,7 +78,7 @@ On a le choix entre deux type de calcul pour le nombre de lignes :
 ### Information(s) mesurée(s)
 - Renseigner une information de type `Réponse simple` ou `Réponse à choix unique`
 
-- ✨ On peut aussi [filtrer certaines cases](#filtrer-des-cases) ou rendre c'est dernière en mode [lecture seule](#cases-en-lecture-seule).
+-  On peut aussi [filtrer certaines cases](#filtrer-des-cases) ou rendre c'est dernière en mode [lecture seule](#cases-en-lecture-seule).
 
 - Pogues permet de préremplir certaines **colonnes** des tableaux dynamiques, que ce soit par de la donnée externe ou par des variables calculées. Ces **colonnes** ne sont alors pas modifiables en collecte. Voir [Spécifier des données non-collectées](./3-cases-non-collectees.md)
 
@@ -101,7 +100,7 @@ Dans l'onglet Contrôles, décrire classiquement le contrôle en VTL mais préci
 ![Contrôles par ligne](../../../../img/pogues/controle-tab-dynamique.png)
 
 
-## Filtrer des cases ✨
+## Filtrer des cases
 
 !!! abstract "Objectif"
     Il est possible de filtrer des cases dans un tableau dynamique selon une formule VTL.
@@ -144,7 +143,7 @@ Le choix "Non" est sélectionné par défaut : aucune case de la colonne n'est f
     === "3 case cochés avec 1 case remplie"
         ![alt text](../../../../img/pogues/dyn-tab-filter-cell-ex-5.png)
 
-## Cases en lecture seule ✨
+## Cases en lecture seule 
 !!! abstract "Objectif"
     Le concepteur peut spécifier des règles qui mettent en lecture seule certaines cases d'un tableau dynamique. Cette fonctionnalité est utile par exemple lorsqu'on pré-remplit les données d'un tableau et qu'on ne souhaite pas laisser la possibilité à l'enquêté de modifier les valeurs.
 

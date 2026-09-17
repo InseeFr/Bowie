@@ -30,7 +30,7 @@ Pour créer une telle boucle, il faut remplir les champs suivants :
         - `Début`, l'élément par lequel commence la boucle (une séquence ou une sous-séquence donc)
         - `Fin`, l'élément avec lequel termine la boucle - une séquence si on a commencé par une séquence, une sous-séquence dans l'autre cas.
 
-### Affichage des occurrences (New ✨)
+### Affichage des occurrences
 
 Par défaut, **toutes les occurrences** d'une boucle sont affichées sur la même page. Dans le cas où le nombre d'occurrences max est identique au min, on peut décider de changer cet affichage via le paramètre `Afficher toutes les occurrences sur une seule page` en mettant `NON`
 

@@ -32,7 +32,7 @@ Dans une sous-séquence (ou une séquence), on créé la question de lien deux �
 
 On peut ajouter une déclaration sur la page de la sous-séquence si on le souhaite.
 
-### Avec une boucle : une page par habitant du logement ✨
+### Avec une boucle : une page par habitant du logement
 
 Pour disposer d'une page par habitants, il suffit de poser une boucle sur la sous-séquence (ou une séquence) qui contient la question de lien deux à deux. Cette boucle est liée à la boucle principale qui permet de collecter les prénoms.
 

@@ -84,7 +84,7 @@ Par exemple, pour une variable externe `PRENOM`, on fournira un fichier contenan
 
     - Un fichier de données ne pourra contenir qu'un maximum de 10 unités enquêtées.
 
-## Variables externes et pré-remplissage - JSON (New ✨)
+## Variables externes et pré-remplissage - JSON
 
 Pour récupérer le fichier json attendu du questionnaire, il suffit de faire
 

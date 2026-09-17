@@ -1,4 +1,4 @@
-# Les variables globales ✨
+# Les variables globales
 
 !!! question "Définition"
     Les variables globales sont des variables fournies directement par le moteur de contrôle des questionnaires.

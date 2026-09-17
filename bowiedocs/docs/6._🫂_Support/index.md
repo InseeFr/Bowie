@@ -116,5 +116,5 @@ Check loop 'max' iteration expressions, dynamic table max size expressions.
 
     !!! tip ""
         Il suffit de mettre la même formule pour les deux dimensions `nvl($NBPERS$,1)` ou `$NBPERS$`.
-        Dans notre cas on choisi de mettre `nvl($NBPERS$,1)` pour le tableau et la visu fonctionne de nouveau ✨
+        Dans notre cas on choisi de mettre `nvl($NBPERS$,1)` pour le tableau et la visu fonctionne de nouveau
         ![alt text](../img/support/tab-dim.png)
