@@ -15,10 +15,9 @@
 
 </div>
 
-
 ## Types de variables 
 
-- [**Collectée**](variables-collectees.md) : Donnée principale d'une enquête = information que l'on veut récupérer pour ensuite l’analyser.
+- [**Collectée**](variables-collectees.md) : Donnée principale d'une enquête = information que l'on veut récupérer pour ensuite l’analyser
 - [**Calculée**](variables-calculees.md) : Variable calculée à partir d'autres variables du questionnaire
 - [**Externe**](variables-externes.md) : Variable permettant de personnaliser un questionnaire. Ex : Année de l'enquête
 - [**Globale**](variables-globales.md) : Variables fournies directement par le moteur de contrôle des questionnaires

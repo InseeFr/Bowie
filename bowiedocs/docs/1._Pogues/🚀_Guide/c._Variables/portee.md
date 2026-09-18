@@ -1,5 +1,14 @@
 # Portée des variables
 
+!!! danger "Notion importante à comprendre pour les questionnaires utilisant des **boucles** ou des **tableaux dynamique**"
+
+## Notion de vecteur
+
+Quand une variable collectée est définie au sein d'une boucle, celle si devient donc un vecteur de la même dimension (taille) que la boucle
+
+- EX : Boucle de taille 2 avec à l'intérieur une question `PRENOM` de type texte, pour laquelle l'enquêté saisie "Titi" puis "Tata", on a donc en sortie un vecteur de taille 2 avec les valeurs `["Titi", "Tata"]` 
+
+## Notion de portée
 
 ### Type de portée
 
@@ -33,6 +42,3 @@ Alors on aura les valeurs suivantes pour les variables,
 
 Si on fait ensuite une boucle liée `B2` sur une suite de 3 questions et que cette boucle est basée sur `B1`, lorsque l'on place le filtre avec la formule VTL suivante, `$EST_MAJEUR$` (ce qui équivaut à `$EST_MAJEUR$=true`), alors dans notre cas, on ne posera ses questions que pour le 2eme, 3eme et 4eme individu.
 
-## Exemple pour les tableaux
-
-🚧TODO🚧
