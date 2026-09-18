@@ -1965,6 +1965,25 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#notion-de-vecteur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notion de vecteur
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notion-de-portee" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notion de portée
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notion de portée">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#type-de-portee" class="md-nav__link">
     <span class="md-ellipsis">
       Type de portée
@@ -1972,20 +1991,16 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#exemple-pour-les-boucles" class="md-nav__link">
     <span class="md-ellipsis">
       Exemple pour les boucles
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exemple-pour-les-tableaux" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple pour les tableaux
     </span>
   </a>
   
@@ -3264,6 +3279,25 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#notion-de-vecteur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notion de vecteur
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notion-de-portee" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notion de portée
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notion de portée">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#type-de-portee" class="md-nav__link">
     <span class="md-ellipsis">
       Type de portée
@@ -3271,20 +3305,16 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#exemple-pour-les-boucles" class="md-nav__link">
     <span class="md-ellipsis">
       Exemple pour les boucles
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exemple-pour-les-tableaux" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple pour les tableaux
     </span>
   </a>
   
@@ -3306,6 +3336,15 @@
 
 
 <h1 id="portee-des-variables">Portée des variables</h1>
+<div class="admonition danger">
+<p class="admonition-title">Notion importante à comprendre pour les questionnaires utilisant des <strong>boucles</strong> ou des <strong>tableaux dynamique</strong></p>
+</div>
+<h2 id="notion-de-vecteur">Notion de vecteur</h2>
+<p>Quand une variable collectée est définie au sein d'une boucle, celle si devient donc un vecteur de la même dimension (taille) que la boucle</p>
+<ul>
+<li>EX : Boucle de taille 2 avec à l'intérieur une question <code class="highlight"><span class="n">PRENOM</span></code> de type texte, pour laquelle l'enquêté saisie "Titi" puis "Tata", on a donc en sortie un vecteur de taille 2 avec les valeurs <code class="highlight"><span class="p">[</span><span class="s">&quot;Titi&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Tata&quot;</span><span class="p">]</span></code> </li>
+</ul>
+<h2 id="notion-de-portee">Notion de portée</h2>
 <h3 id="type-de-portee">Type de portée</h3>
 <ul>
 <li><strong>Portée <code class="highlight"><span class="n">Questionnaire</span></code> :</strong> toutes les variables vecteurs seront bien considérées comme des vecteurs (liste d’élément). Il est donc possible d’effectuer des opération d’agrégation dessus (sum, count, ect)</li>
@@ -3331,8 +3370,6 @@
 <li><code class="highlight"><span class="n">EST_MAJEUR</span></code> = <code class="highlight"><span class="p">[</span><span class="n">false</span><span class="p">,</span><span class="n">true</span><span class="p">,</span><span class="n">true</span><span class="p">,</span><span class="n">true</span><span class="p">,</span><span class="n">false</span><span class="p">]</span></code></li>
 </ul>
 <p>Si on fait ensuite une boucle liée <code class="highlight"><span class="n">B2</span></code> sur une suite de 3 questions et que cette boucle est basée sur <code class="highlight"><span class="n">B1</span></code>, lorsque l'on place le filtre avec la formule VTL suivante, <code class="highlight"><span class="o">$</span><span class="n">EST_MAJEUR</span><span class="o">$</span></code> (ce qui équivaut à <code class="highlight"><span class="o">$</span><span class="n">EST_MAJEUR</span><span class="o">$=</span><span class="n">true</span></code>), alors dans notre cas, on ne posera ses questions que pour le 2eme, 3eme et 4eme individu.</p>
-<h2 id="exemple-pour-les-tableaux">Exemple pour les tableaux</h2>
-<p>🚧TODO🚧</p>
 
 
 
