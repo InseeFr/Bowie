@@ -79,7 +79,3 @@ Les variables calculées nécessaires sont :
 Pour ne présenter qu'un seul jeu de questions à l'individu sélectionné, il est nécessaire d'ajouter un filtre sur ces questions à partir du score calculé en amont.
 
 Le filtre a pour formule `$KISH_INDICATOR$ = 1`.
-
-## Questionnaire exemple
-
-Pour référence, un [questionnaire implémentant cette solution :material-open-in-new:](https://conception-questionnaires.insee.fr/a._Questionaire/l8lfytfu){target="_blank"} est disponible dans l'environnement de demo, sous le timbre DOCUMENTATION
