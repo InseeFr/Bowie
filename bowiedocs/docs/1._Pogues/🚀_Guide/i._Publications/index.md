@@ -17,10 +17,14 @@ Pour créer une publication au registre de questionnaire, cliquer sur le bouton 
 ![Menu création instrument de collecte](../../../img/pogues/creer-publication.png)
 !!! abstract "Légende"
     1. Texte d'information sur ce qui va être publier : la sauvegarde en cours du questionnaire. Si vous souhaitez publier une autre sauvegarde, il suffit de la restaurer.
-    1. Bloc d'information sur la série à laquelle le questionnaire est rattaché : les libellé et nom court de la série sont rappelés en lecture seule, pour les modifier il faut aller la page [Détail](../h._Detail/index.md) du questionnaire.
-    1. `Nom` d'une liste de codes
-    1. `Liste de codes`
-        1. `Code` des différentes modalités
-        1. `Libellé` des différentes modalités
-        1. Une `Modalité` avec ses valeurs associées (`Code` et `Libellé`)
-    1. `Nombre de questions` utilisant cette liste de codes
+    1. Bloc d'information sur la série à laquelle le questionnaire est rattaché : les libellé et nom court de la série sont rappelés en lecture seule, pour les modifier il faut aller la page [Détail](../h._Detail/index.md) du questionnaire. Ces deux champs sont obligatoires, si l'un ou l'autre n'est pas disponible dans Pogues, rapprochez-vous de l'unité qualité de l'Insee.
+    1. Description de la publication : un champ texte libre
+    1. Mode de collecte : sélectionner un ou plusieurs modes de collecte: dans le registre, on générera autant d'instruments de collecte que de modes de collecte sélectionnés
+    1. Contexte : Ménages / Entreprise
+    1. Paramètres optionnels pour le contexte Entreprise en mode CAWI : page de collecte des temps de réponse et numérotation des questions
+
+Attention une sauvegarde ne peut être publiée au regsitre qu'une seule fois : si vous souhaitez publier une nouvelle fois une sauvegarde donnée d'un questionnaire, il faut créer une nouvelle sauvegarde.
+
+## La liste des publications d'un questionnaire
+## l'asynchrone
+## visualiser un instrument de collecte
