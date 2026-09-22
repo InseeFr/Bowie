@@ -1,10 +1,10 @@
 # Portée des variables
 
-!!! danger "Notion importante à comprendre pour les questionnaires utilisant des **boucles** ou des **tableaux dynamique**"
+!!! danger "Notion importante à comprendre pour les questionnaires utilisant des **boucles** ou des **tableaux dynamiques**"
 
 ## Notion de vecteur
 
-Quand une variable collectée est définie au sein d'une boucle, celle si devient donc un vecteur de la même dimension (taille) que la boucle
+Quand une variable collectée est définie au sein d'une boucle, celle si est interprétée dans le questionnaire comme un vecteur de la même dimension (taille) que la boucle.
 
 - EX : Boucle de taille 2 avec à l'intérieur une question `PRENOM` de type texte, pour laquelle l'enquêté saisie "Titi" puis "Tata", on a donc en sortie un vecteur de taille 2 avec les valeurs `["Titi", "Tata"]` 
 
