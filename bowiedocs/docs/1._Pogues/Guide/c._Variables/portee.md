@@ -1,44 +1,104 @@
 # Portée des variables
 
-!!! danger "Notion importante à comprendre pour les questionnaires utilisant des **boucles** ou des **tableaux dynamiques**"
+!!! danger "La portée d'une variable est une notion importante à comprendre pour les questionnaires utilisant des **boucles** ou des **tableaux dynamiques**"
 
 ## Notion de vecteur
 
-Quand une variable collectée est définie au sein d'une boucle, celle si est interprétée dans le questionnaire comme un vecteur de la même dimension (taille) que la boucle.
+Dans Pogues, la majorité des variables sont collectées sous forme de **scalaire**(1). Cela change quand on collecte une variable définie au sein d'une boucle ou dans un tableau dynamique. On va alors parler de "variable de boucle".
+{ .annotate }
 
-- EX : Boucle de taille 2 avec à l'intérieur une question `PRENOM` de type texte, pour laquelle l'enquêté saisie "Titi" puis "Tata", on a donc en sortie un vecteur de taille 2 avec les valeurs `["Titi", "Tata"]` 
+1.  Une **variable scalaire** est un conteneur qui ne peut stocker qu'**une seule information** à la fois, comme un nombre unique ou un mot.  
+Par opposition aux tableaux ou aux objets qui sont des collections d'éléments, la variable scalaire représente l'unité de donnée la plus simple.
+
+!!! abstract "Glossaire"
+    - **variable de boucle :** variable collectée définie dans une séquence ou sous-séquence faisant partie d'une boucle.  
+    Pour savoir comment est définie une boucle dans Pogues, se référer à la [page dédiée](../a._Questionnaire/24-boucles.md)
+    - **variable de tableau dynamique :** variable collectée définie en tant que colonne d'un tableau dynamique.  
+    Pour savoir comment est définie un tableau dynamique dans Pogues, se référer à la [page dédiée](../b._Questions/Tableaux/2-tableau-dynamique.md)
+
+!!! info "Info"
+    Pour ne pas se répéter, on va parler dans cette page essentiellement de variables de boucle, mais les mêmes principes s'appliquent aux variables de tableau dynamique
+
+Quand une variable collectée est définie au sein d'une boucle, appellée donc **variable de boucle**, celle si est interprétée dans le questionnaire comme un **vecteur**(1), de la même dimension que la boucle.
+{ .annotate }
+
+1.  Un **vecteur** est une structure de données qui permet de stocker une **liste d'éléments de même type** les uns après les autres. C'est une sorte de tableau flexible : contrairement à un tableau classique dont la taille est figée, le vecteur peut s'agrandir automatiquement quand on y ajoute de nouvelles informations.
+
+!!! example "Exemple"
+    Pour une boucle de taille 2 avec à l'intérieur une question `PRENOM` de type texte, pour laquelle l'enquêté saisie "Titi" pour la première occurrence, puis "Tata" pour la deuxième, la variable `PRENOM` est alors collectée comme un vecteur de taille 2 et les valeurs `["Titi", "Tata"]`
+
+Cette variable sera **interprétée différement** dans une formule VTL selon la **portée** dans laquelle on exécute la formule.
 
 ## Notion de portée
 
-### Type de portée
+Il en existe deux types : **`Questionnaire`** et **`Boucle`**.  
 
-- **Portée `Questionnaire` :** toutes les variables vecteurs seront bien considérées comme des vecteurs (liste d’élément). Il est donc possible d’effectuer des opération d’agrégation dessus (sum, count, ect)
-- **Portée `Boucle/Tableau` (ou `<Vecteur>`) :** la variable calculée sera elle aussi un vecteur et la formule VTL associée portera sur toutes les occurrences du vecteur.
-    Ex : la var calculée `CALC_VAR` ayant pour formule VTL `$CA_ENTREPRISE$ + 100` sera donc un vecteur auquel on aura ajouté `100` à chaque valeur de `$CA_ENTREPRISE$`.
-    `<Vecteur>` prend la valeur du nom d’une boucle ou d’un tableau dynamique.
+### Utilisation dans les formules VTL
+<div class="annotate" markdown>
 
-!!! question "Champ *Niveau de calcul*"
-    On définit une portée pour les variables calculées ou externes via par le paramètre **_Niveau de calcul_** : il s'agit de préciser si une variable est calculée ou injectée (dans le cas d'une variable externe) au sein d'une boucle, d'un tableau ou dans le contexte du questionnaire dans son ensemble.
+- **Portée `Questionnaire` :** Les variables de boucle sont considérées comme des vecteurs. Il est donc possible d’effectuer des opération d’agrégation dessus ([`sum()`](../../VTL/1-fonctions-vtl.md#__tabbed_21_4), [`count()`](../../VTL/1-fonctions-vtl.md#__tabbed_21_1), ect). Les autres variables sont des scalaires.
+- **Portée `Boucle` :** Les variables de boucle sont interprétées `n` fois(1) comme un scalaire, en utilisant chacune de ses valeurs.
+</div>
+1.  dimension de la boucle ou nombre d'occurence
 
-## Exemple pour les boucles
-Imaginons une boucle `B1` sur un ensemble de questions relatives à des individus. Je veux pouvoir pour chacun d'eux créer une indicatrice permettant de savoir si l'individu est dans le champs en vérifiant son âge (variable collectée `AGE`) et sa nationalité (`NATIONALITE`).
+???+ example "Exemple"
+    Imaginons une **variable boucle** `PRENOM` pour laquelle on a saisie les valeurs `"Titi"` et `"Tata"`.
+    On souhaite pour la question suivante demander l'âge et dans son libellé afficher la valeure de `PRENOM`. Si la question suivante est bien définie dans la même boucle ou une boucle liée, alors on pourra le faire via la formule VTL `"Quel âge a " || $PRENOM$ || " ?"`.  
+    Cela donnera pour chacune des occurences les libellés 
 
-Pour cela, je crée une variable calculée de portée `B1` dont la formule s'appuie pour chaque occurrence de la boucle (chaque individu) sur les variables `AGE` et `NATIONALITE` (de chaque individu).
+    - Quel âge a Titi ?
+    - Quel âge a Tata ?
+    !!! info ""
+        La question se situant dans un boucle, la formule VTL est bien interprétée avec une portée **boucle**
+    !!! danger "Mauvaise portée"
+        Si on essaye d'utiliser la variable `$PRENOM$` en dehors d'une boucle(1), ex avec le libellé `"Êtes-vous bien " || $PRENOM$ || " ?"`, alors on aura une erreur VTL car `$PRENOM$` sera interprétée comme un **vecteur** du fait qu'on se trouve dans une portée **questionnaire**. C'est comme si on voulait afficher   
+        Êtes-vous bien ["Titi", "Tata"] ?
+        { .annotate }
 
-![Variable avec portée boucle](../../../img/pogues/guide-boucle-portee.png)
+        1.  c'est à dire dans une question qui n'est pas située dans une séqence ou sous séquence, elle même encadrée par une boucle
+    !!! tip "Fonction d'agrégation"
+        Il est possible de faire intervenir une variable boucle dans une portée questionnaire, il faut cependant utiliser des [fonctions d'agrégations](../../VTL/1-fonctions-vtl.md#agregation). Des exemples se trouvent [ici](../../VTL/1-fonctions-vtl.md#__tabbed_22_1)
 
-**Cas pratique :**  
+### Champ *Niveau de calcul*
+!!! question "Utilité"
+    On définit une portée pour les variables calculées ou externes via par le paramètre **_Niveau de calcul_** : il s'agit de préciser si on prévoit que notre variable soit interprétée 
+    
+    - avec une portée **boucle** -> on sélectionne la boucle `BOUCLE_XXX` dans laquelle on va injecter la variable
+    - avec une portée **questionnaire** -> on sélection `Questionnaire`
 
-On veut contrôler si un individu est majeur ou non pour savoir quelles questions lui poser. On va créer une variable calculée `EST_MAJEUR` de portée `B1` portant sur chaque valeur de `AGE` et vérifiant si `$AGE$ >= 18`
+### Variable calculée de portée boucle
 
-![alt text](../../../img/pogues/check_Is_adult.png)
+!!! question "Utilité"
+    Créer un vecteur à partir d'une variable de boucle.
 
-Si on imagine 5 individu aves les âges suivants : 5 ; 40 ; 24 ; 35 ; 12
+!!! example "Exemple"
+    === "Indicatrice sur l'âge"
+        Imaginons une boucle `B1` sur un ensemble de questions relatives à des individus. Je veux pouvoir pour chacun d'eux créer une indicatrice permettant de savoir si l'individu est dans le champs en vérifiant son âge (variable collectée `AGE`) et sa nationalité (`NATIONALITE`).
 
-Alors on aura les valeurs suivantes pour les variables,
+        Pour cela, je crée une variable calculée de portée `B1` dont la formule s'appuie pour chaque occurrence de la boucle (chaque individu) sur les variables `AGE` et `NATIONALITE` (de chaque individu).
 
-- `AGE` = `[5,40,24,35,12]`
-- `EST_MAJEUR` = `[false,true,true,true,false]`
+        ![Variable avec portée boucle](../../../img/pogues/guide-boucle-portee.png)
 
-Si on fait ensuite une boucle liée `B2` sur une suite de 3 questions et que cette boucle est basée sur `B1`, lorsque l'on place le filtre avec la formule VTL suivante, `$EST_MAJEUR$` (ce qui équivaut à `$EST_MAJEUR$=true`), alors dans notre cas, on ne posera ses questions que pour le 2eme, 3eme et 4eme individu.
+        On veut contrôler si un individu est majeur ou non pour savoir quelles questions lui poser. On va créer une variable calculée `EST_MAJEUR` de portée `B1` portant sur chaque valeur de `AGE` et vérifiant si `$AGE$ >= 18`
+
+        ![alt text](../../../img/pogues/check_Is_adult.png)
+
+        Si on imagine 5 individu aves les âges suivants : 5 ; 40 ; 24 ; 35 ; 12
+
+        Alors on aura les valeurs suivantes pour les variables,
+
+        - `AGE` = `[5,40,24,35,12]`
+        - `EST_MAJEUR` = `[false,true,true,true,false]`
+
+        Si on fait ensuite une boucle liée `B2` sur une suite de 3 questions et que cette boucle est basée sur `B1`, lorsque l'on place le filtre avec la formule VTL suivante, `$EST_MAJEUR$` (ce qui équivaut à `$EST_MAJEUR$=true`), alors dans notre cas, on ne posera ses questions que pour le 2eme, 3eme et 4eme individu.
+    === "Exemple simple"
+        Imaginons une **variable boucle** `$CA_ENTREPRISE$` pour laquelle on a saisie les valeurs `18 000` et `25 000`
+        On définie alors la var calculée `CALC_VAR` ayant pour formule VTL `$CA_ENTREPRISE$ + 100`. On aura donc pour `CA_VAR` en sortie un vecteur auquel on aura ajouté `100` à chaque valeur de `$CA_ENTREPRISE$` : `[18 100, 25 100]`
+
+
+### Variable externe de portée boucle
+
+!!! question "Utilité"
+    Pouvoir injecter un vecteur en tant que variable externe
+
 
