@@ -6,6 +6,14 @@ C'est une interface graphique de conception de questionnaires permettant la cré
 
 <div class="grid cards" markdown>
 
+
+-   :material-rocket-launch: __Guide__ 
+
+    ---
+    Pour les utilisateurs déjà aguerris, le guide permettra d'approfondir les notions et de trouver des solutions clés en main à certains de vos besoins de conception.
+
+    [Aller plus loin dans Pogues :material-arrow-right-bold-box-outline:](./🚀_Guide/index.md){ .md-button }
+
 -   :material-school: __Tutoriel__
     
     ---
@@ -19,13 +27,6 @@ C'est une interface graphique de conception de questionnaires permettant la cré
     Une partie spécialement dédié au VTL
 
     [Explorer le VTL :material-arrow-right-bold-box-outline:](./💻_VTL/index.md){ .md-button }
-
--   :material-rocket-launch: __Guide__ 
-
-    ---
-    Pour les utilisateurs déjà aguerris, le guide permettra d'approfondir les notions et de trouver des solutions clés en main à certains de vos besoins de conception.
-
-    [Aller plus loin dans Pogues :material-arrow-right-bold-box-outline:](./🚀_Guide/index.md){ .md-button }
 
 -   :material-playlist-star: __Cas Pratiques__
     
