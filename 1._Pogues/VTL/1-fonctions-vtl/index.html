@@ -2278,18 +2278,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#liste-des-operateurs" class="md-nav__link">
+  <a href="#operateurs-basiques" class="md-nav__link">
     <span class="md-ellipsis">
-      Liste des opérateurs
+      Opérateurs basiques
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#logique" class="md-nav__link">
+  <a href="#operateurs-de-logique" class="md-nav__link">
     <span class="md-ellipsis">
-      Logique
+      Opérateurs de logique
     </span>
   </a>
   
@@ -2318,6 +2318,15 @@
   <a href="#numeriques" class="md-nav__link">
     <span class="md-ellipsis">
       Numériques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agrégation
     </span>
   </a>
   
@@ -2459,6 +2468,15 @@
   <a href="#round" class="md-nav__link">
     <span class="md-ellipsis">
       round
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operateurs-dagregration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operateurs d'agrégration
     </span>
   </a>
   
@@ -3424,18 +3442,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#liste-des-operateurs" class="md-nav__link">
+  <a href="#operateurs-basiques" class="md-nav__link">
     <span class="md-ellipsis">
-      Liste des opérateurs
+      Opérateurs basiques
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#logique" class="md-nav__link">
+  <a href="#operateurs-de-logique" class="md-nav__link">
     <span class="md-ellipsis">
-      Logique
+      Opérateurs de logique
     </span>
   </a>
   
@@ -3464,6 +3482,15 @@
   <a href="#numeriques" class="md-nav__link">
     <span class="md-ellipsis">
       Numériques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agrégation
     </span>
   </a>
   
@@ -3610,6 +3637,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#operateurs-dagregration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operateurs d'agrégration
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3635,7 +3671,7 @@
 <p>L’usage de VTL dans Pogues et les outils de collecte s’appuie sur les bibliothèques Lunatic (pour les composants graphiques) et Trevas (qui fournit le moteur VTL).</p>
 <p>C’est l’état d’avancement de cette dernière qui permet de connaître les opérateurs et fonctions disponibles : la référence est donc la <a href="https://inseefr.github.io/Trevas-TS/docs/coverage">page de suivi de l’implémentation</a>.</p>
 </div>
-<h3 id="liste-des-operateurs">Liste des opérateurs</h3>
+<h3 id="operateurs-basiques">Opérateurs basiques</h3>
 <table>
 <thead>
 <tr>
@@ -3682,7 +3718,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="logique">Logique</h3>
+<h3 id="operateurs-de-logique">Opérateurs de logique</h3>
 <table>
 <thead>
 <tr>
@@ -3780,6 +3816,46 @@
 <tr>
 <td><a href="#round"><strong><code class="highlight"><span class="nf">round</span><span class="p">()</span></code></strong></a></td>
 <td>Retourne la valeur d'un nombre arrondi à l'entier le plus proche</td>
+</tr>
+</tbody>
+</table>
+<h3 id="agregation">Agrégation</h3>
+<div class="admonition danger">
+<p class="admonition-title">Ne fonctionne que sur des vecteurs</p>
+<p>Il faut que la variable utilisée soit une <strong>variable de boucle</strong> interprétée dans un portée <strong>Questionnaire</strong> afin qu'elle soit utilisée dans la formule VTL comme un vecteur.<br />
+Pour plus d'information, voir les pages sur la <a href="../../Guide/c._Variables/portee/"><strong>notion de portée</strong></a></p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#__tabbed_21_1"><strong><code class="highlight"><span class="nf">count</span><span class="p">()</span></code></strong></a></td>
+<td>Retourne la taille du vecteur</td>
+</tr>
+<tr>
+<td><a href="#__tabbed_21_2"><strong><code class="highlight"><span class="nf">min</span><span class="p">()</span></code></strong></a></td>
+<td>Retourne la plus petite valeur du vecteur</td>
+</tr>
+<tr>
+<td><a href="#__tabbed_21_3"><strong><code class="highlight"><span class="nf">max</span><span class="p">()</span></code></strong></a></td>
+<td>Retourne la plus grande valeur du vecteur</td>
+</tr>
+<tr>
+<td><a href="#__tabbed_21_4"><strong><code class="highlight"><span class="nf">sum</span><span class="p">()</span></code></strong></a></td>
+<td>Retourne la somme des valeurs du vecteur</td>
+</tr>
+<tr>
+<td><a href="#__tabbed_21_5"><strong><code class="highlight"><span class="nf">median</span><span class="p">()</span></code></strong></a></td>
+<td>Retourne la médiane des valeurs du vecteur</td>
+</tr>
+<tr>
+<td><a href="#__tabbed_21_6"><strong><code class="highlight"><span class="nf">avg</span><span class="p">()</span></code></strong></a></td>
+<td>Retourne la moyenne des valeurs du vecteur</td>
 </tr>
 </tbody>
 </table>
@@ -4901,6 +4977,250 @@ Pour se faire on utilise le transtypage en texte avec la fonction <a href="#cast
 </div>
 </div>
 </div>
+<h5 id="operateurs-dagregration">Operateurs d'agrégration</h5>
+<div class="admonition abstract">
+<p class="admonition-title">Syntaxe</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:6"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><input id="__tabbed_20_3" name="__tabbed_20" type="radio" /><input id="__tabbed_20_4" name="__tabbed_20" type="radio" /><input id="__tabbed_20_5" name="__tabbed_20" type="radio" /><input id="__tabbed_20_6" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">count</label><label for="__tabbed_20_2">min</label><label for="__tabbed_20_3">max</label><label for="__tabbed_20_4">sum</label><label for="__tabbed_20_5">median</label><label for="__tabbed_20_6">avg</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nf">count</span><span class="p">(</span><span class="o">&lt;</span><span class="n">var</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li><code class="highlight"><span class="n">var</span></code> : vecteur</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nf">min</span><span class="p">(</span><span class="o">&lt;</span><span class="n">var</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li><code class="highlight"><span class="n">var</span></code> : vecteur</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nf">max</span><span class="p">(</span><span class="o">&lt;</span><span class="n">var</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li><code class="highlight"><span class="n">var</span></code> : vecteur</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nf">sum</span><span class="p">(</span><span class="o">&lt;</span><span class="n">var</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li><code class="highlight"><span class="n">var</span></code> : vecteur</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nf">median</span><span class="p">(</span><span class="o">&lt;</span><span class="n">var</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li><code class="highlight"><span class="n">var</span></code> : vecteur</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nf">avg</span><span class="p">(</span><span class="o">&lt;</span><span class="n">var</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li><code class="highlight"><span class="n">var</span></code> : vecteur</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:6"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><input id="__tabbed_21_3" name="__tabbed_21" type="radio" /><input id="__tabbed_21_4" name="__tabbed_21" type="radio" /><input id="__tabbed_21_5" name="__tabbed_21" type="radio" /><input id="__tabbed_21_6" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">count</label><label for="__tabbed_21_2">min</label><label for="__tabbed_21_3">max</label><label for="__tabbed_21_4">sum</label><label for="__tabbed_21_5">median</label><label for="__tabbed_21_6">avg</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Valeur de <code class="highlight"><span class="n">MA_VARIABLE</span></code></th>
+<th>Fonction</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="highlight"><span class="p">[</span><span class="s">&quot;Toto&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Tata&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Titi&quot;</span><span class="p">]</span></code></td>
+<td><code class="highlight"><span class="nf">count</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">3</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="p">[</span><span class="s">&quot;Toto&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Tata&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">null</span><span class="p">]</span></code></td>
+<td><code class="highlight"><span class="nf">count</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">3</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="p">[</span><span class="s">&quot;Toto&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Titi&quot;</span><span class="p">]</span></code></td>
+<td><code class="highlight"><span class="nf">count</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">2</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="p">[</span><span class="m">678</span><span class="p">,</span><span class="w"> </span><span class="m">24</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="n">null</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">]</span></code></td>
+<td><code class="highlight"><span class="nf">count</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">6</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="p">[</span><span class="m">678</span><span class="p">,</span><span class="w"> </span><span class="m">24</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">]</span></code></td>
+<td><code class="highlight"><span class="nf">count</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">4</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Valeur de <code class="highlight"><span class="n">MA_VARIABLE</span></code></th>
+<th>Fonction</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="highlight"><span class="p">[</span><span class="m">678</span><span class="p">,</span><span class="w"> </span><span class="m">24</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="n">null</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">]</span></code></td>
+<td><code class="highlight"><span class="nf">min</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="n">null</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="p">[</span><span class="m">678</span><span class="p">,</span><span class="w"> </span><span class="m">24</span><span class="p">,</span><span class="w"> </span><span class="m">22</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">]</span></code></td>
+<td><code class="highlight"><span class="nf">min</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">6</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Valeur de <code class="highlight"><span class="n">MA_VARIABLE</span></code></th>
+<th>Fonction</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="highlight"><span class="p">[</span><span class="m">678</span><span class="p">,</span><span class="w"> </span><span class="m">24</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="n">null</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">]</span></code></td>
+<td><code class="highlight"><span class="nf">max</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="n">null</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="p">[</span><span class="m">678</span><span class="p">,</span><span class="w"> </span><span class="m">24</span><span class="p">,</span><span class="w"> </span><span class="m">22</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">]</span></code></td>
+<td><code class="highlight"><span class="nf">max</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">678</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Valeur de <code class="highlight"><span class="n">MA_VARIABLE</span></code></th>
+<th>Fonction</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="highlight"><span class="p">[</span><span class="m">678</span><span class="p">,</span><span class="w"> </span><span class="m">24</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="n">null</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">]</span></code></td>
+<td><code class="highlight"><span class="nf">sum</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="n">null</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="p">[</span><span class="m">678</span><span class="p">,</span><span class="w"> </span><span class="m">24</span><span class="p">,</span><span class="w"> </span><span class="m">22</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">]</span></code></td>
+<td><code class="highlight"><span class="nf">sum</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">730</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Valeur de <code class="highlight"><span class="n">MA_VARIABLE</span></code></th>
+<th>Fonction</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="highlight"><span class="p">[</span><span class="m">678</span><span class="p">,</span><span class="w"> </span><span class="m">24</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="n">null</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">]</span></code></td>
+<td><code class="highlight"><span class="nf">median</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="n">null</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="p">[</span><span class="m">678</span><span class="p">,</span><span class="w"> </span><span class="m">24</span><span class="p">,</span><span class="w"> </span><span class="m">22</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">]</span></code></td>
+<td><code class="highlight"><span class="nf">median</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">23</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="p">[</span><span class="m">678</span><span class="p">,</span><span class="w"> </span><span class="m">24</span><span class="p">,</span><span class="w"> </span><span class="m">21</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">]</span></code></td>
+<td><code class="highlight"><span class="nf">median</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">22.5</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="p">[</span><span class="m">678</span><span class="p">,</span><span class="w"> </span><span class="m">24</span><span class="p">,</span><span class="w"> </span><span class="m">22</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">]</span></code></td>
+<td><code class="highlight"><span class="nf">median</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">22</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Valeur de <code class="highlight"><span class="n">MA_VARIABLE</span></code></th>
+<th>Fonction</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="highlight"><span class="p">[</span><span class="m">678</span><span class="p">,</span><span class="w"> </span><span class="m">24</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="n">null</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">]</span></code></td>
+<td><code class="highlight"><span class="nf">avg</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="n">null</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="p">[</span><span class="m">678</span><span class="p">,</span><span class="w"> </span><span class="m">24</span><span class="p">,</span><span class="w"> </span><span class="m">22</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">]</span></code></td>
+<td><code class="highlight"><span class="nf">avg</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">182.5</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="p">[</span><span class="m">678</span><span class="p">,</span><span class="w"> </span><span class="m">24</span><span class="p">,</span><span class="w"> </span><span class="m">22</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">]</span></code></td>
+<td><code class="highlight"><span class="nf">avg</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">182.75</span></code></td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="p">[</span><span class="m">678</span><span class="p">,</span><span class="w"> </span><span class="m">24</span><span class="p">,</span><span class="w"> </span><span class="m">22</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">]</span></code></td>
+<td><code class="highlight"><span class="nf">avg</span><span class="p">(</span><span class="o">$</span><span class="n">MA_VARIABLE</span><span class="o">$</span><span class="p">)</span></code></td>
+<td><code class="highlight"><span class="m">183</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<details class="example">
+<summary>Exemples d'utilisation</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">count</label><label for="__tabbed_22_2">sum</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><a href="../../Guide/b._Questions/Tableaux/2-tableau-dynamique/#compter-le-nombre-de-ligne">Compter le nombre de lignes d'un tableau</a></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><a href="../../Guide/b._Questions/Tableaux/2-tableau-dynamique/#calculer-des-totaux-de-lignes-ou-de-colonnes">Calculer des totaux de lignes ou de colonnes d'un tableau</a></li>
+</ul>
+</div>
+</div>
+</div>
+</details>
 
 
 
