@@ -107,7 +107,7 @@ search:
             ```
             $CA$ > 24 000
             ```
-            Si l'enquêté ne répond rien à `CA`, alors la filtre va être évalué avec `null > 24 000` ce qui renvoie une erreur et donc on affiche la question dans tous les cas (voir [comportement filtre](../../6._🫂_Support/index.md/#affichage-a-tort-de-questions-filtrees) pour plus de détails). Or on aurait aimé que si l'enquêté ne réponde rien ce soit comme si il avait un `CA` de `0`.
+            Si l'enquêté ne répond rien à `CA`, alors la filtre va être évalué avec `null > 24 000` ce qui renvoie une erreur et donc on affiche la question dans tous les cas (voir [comportement filtre](../../6._Support/index.md/#affichage-a-tort-de-questions-filtrees) pour plus de détails). Or on aurait aimé que si l'enquêté ne réponde rien ce soit comme si il avait un `CA` de `0`.
         === "Condition implicite :white_check_mark:"
             ```
             nvl($CA$, 0) >  24 000
