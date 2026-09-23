@@ -3230,9 +3230,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#les-publications-au-registre-de-questionnaires_1" class="md-nav__link">
+  <a href="#la-publication-depuis-pogues-dans-le-registre-de-questionnaires" class="md-nav__link">
     <span class="md-ellipsis">
-      Les publications au registre de questionnaires
+      La publication depuis Pogues dans le registre de questionnaires
     </span>
   </a>
   
@@ -3244,6 +3244,30 @@
       La création d'une publication
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="La création d'une publication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#publier-un-instrument-de-collecte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publier un instrument de collecte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mes-demandes-de-publication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mes demandes de publication
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3272,22 +3296,24 @@
 
 
 <h1 id="les-publications-au-registre-de-questionnaires">Les publications au registre de questionnaires</h1>
-<h2 id="les-publications-au-registre-de-questionnaires_1">Les publications au registre de questionnaires</h2>
-<p>Avant de partir en collecte, lorsque la spécification du questionnaire sous Pogues est terminée, il est possible de publier la sauvagarde courante d'un questionnaire au registre de questionnaires. Cette fonctionnalité vise à mettre à disposition de l'ensemble du système d'information de la filière un instrument de collecte dans le cadre de l'automatisation.</p>
-<p>Le terme instrument de collecte désigne le questionnaire au format json Lunatic (un questionnaire Pogues généré pour les orchestrateurs dans un mode de collecte défini). On lui attache des métadonnées telles que les nomenclatures et le questionnaire au format xml DDI.</p>
+<h2 id="la-publication-depuis-pogues-dans-le-registre-de-questionnaires">La publication depuis Pogues dans le registre de questionnaires</h2>
+<p>Avant de partir en collecte, lorsque la spécification du questionnaire sous Pogues est terminée, il est possible de <strong>publier la sauvagarde courante d'un questionnaire</strong> au registre de questionnaires. Cette fonctionnalité vise à mettre à disposition de l'ensemble du système d'information de la filière un instrument de collecte et ses métadonnées dans le cadre de l'automatisation des enquêtes.</p>
+<p>Le terme instrument de collecte désigne le questionnaire au format json Lunatic : un questionnaire Pogues généré pour les orchestrateurs dans un mode de collecte et un contexte définis et avec éventuellement des paramètres définis. </p>
+<p>On lui associe des métadonnées telles que les nomenclatures et le questionnaire au format xml DDI.</p>
 <h2 id="la-creation-dune-publication">La création d'une publication</h2>
-<p>On accède à la page de gestion des publications d'instruments de collecte via le menu <code class="highlight"><span class="n">Publications</span></code> sur la gauche.</p>
+<p>On accède à la page de gestion des publications des instruments de collecte via le menu <code class="highlight"><span class="n">Publications</span></code> sur la gauche.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Menu Publications" src="../../../img/pogues/publications-menu.png" /></a></p>
+<h3 id="publier-un-instrument-de-collecte">Publier un instrument de collecte</h3>
 <p>Pour créer une publication au registre de questionnaire, cliquer sur le bouton <code class="highlight"><span class="n">Publier</span><span class="w"> </span><span class="n">un</span><span class="w"> </span><span class="n">instrument</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">collecte</span></code></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="image.png" /></a>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Menu création instrument de collecte" src="../../../img/pogues/creer-publication.png" /></a></p>
 <div class="admonition abstract">
 <p class="admonition-title">Légende</p>
 <ol>
-<li>Texte d'information sur ce qui va être publier : la sauvegarde en cours du questionnaire. Si vous souhaitez publier une autre sauvegarde, il suffit de la restaurer.</li>
-<li>Bloc d'information sur la série à laquelle le questionnaire est rattaché : les libellé et nom court de la série sont rappelés en lecture seule, pour les modifier il faut aller la page <a href="../h._Detail/">Détail</a> du questionnaire. Ces deux champs sont obligatoires, si l'un ou l'autre n'est pas disponible dans Pogues, rapprochez-vous de l'unité qualité de l'Insee.</li>
+<li>Texte d'information sur l'action de publication : on publie la sauvegarde en cours du questionnaire. Si vous souhaitez publier une autre sauvegarde, il faut la restaurer.</li>
+<li>Bloc d'information sur la série à laquelle le questionnaire est rattaché : les libellé et nom court de la série sont rappelés en lecture seule. Pour les modifier il faut aller la page <a href="../h._Detail/">Détail</a> du questionnaire. Ces deux champs sont obligatoires, si l'un ou l'autre n'est pas disponible dans Pogues, rapprochez-vous de l'unité qualité de l'Insee.</li>
 <li>Description de la publication : un champ texte libre</li>
-<li>Mode de collecte : sélectionner un ou plusieurs modes de collecte: dans le registre, on générera autant d'instruments de collecte que de modes de collecte sélectionnés</li>
+<li>Mode de collecte : sélectionner un ou plusieurs modes de collecte. Les modes proposés sont limités à ceux déclarés dans la page détail du questionnaire. Dans le registre, on générera autant d'instruments de collecte que de modes de collecte sélectionnés</li>
 <li>Contexte : Ménages / Entreprise</li>
 <li>Paramètres optionnels pour le contexte Entreprise en mode CAWI : page de collecte des temps de réponse et numérotation des questions</li>
 <li>Boutons <code class="highlight"><span class="n">Annuler</span></code> / <code class="highlight"><span class="n">Publier</span></code> pour annuler la demande et retourner à la page des publication ou valider la demande de publication</li>
@@ -3295,15 +3321,33 @@
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Attention</p>
-<p>Une sauvegarde ne peut être publiée au registre qu'une seule fois : si vous souhaitez publier une nouvelle fois une sauvegarde donnée d'un questionnaire, il faut créer une nouvelle sauvegarde.</p>
+<p>Une sauvegarde d'un questionnaire ne peut être publiée au registre qu'une seule fois : si vous souhaitez publier une nouvelle fois une sauvegarde donnée d'un questionnaire, il faut créer une nouvelle sauvegarde.</p>
 </div>
 <p>Le processus de publication est asynchrone : lorsque vous validez la création de la demande de publication d'un instrument de collecte, une nouvelle entrée apparaît dans le bloc <code class="highlight"><span class="n">Mes</span><span class="w"> </span><span class="n">demandes</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">publication</span></code> pendant le temps nécessaire à la génération de l'instrument de collecte (quelques secondes).</p>
+<h3 id="mes-demandes-de-publication">Mes demandes de publication</h3>
 <p>Cette entrée comporte le rappel des informations liées à la demande : description de la publication, mode, contexte, paramètres optionnels éventuels, l'identifiant de la sauvegarde Pogues sur laquelle se base la publication, l'auteur, la date de la demande.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="En cours création instrument de collecte" src="../../../img/pogues/creer-publication-en_cours.png" /></a></p>
-<p>Lorsqu'on rafraîchit la page, on voit le résultat de la demande : 
-- en cas d'échec, l'entrée reste dans le bloc des demandes, le badge de statut passe de "En cours" à "Echec" avec mention de l'erreur qui a conduit à l'échec (en général une erreur de génération Eno lors de la création du questionnaire au format Lunatic)
-- en cas de succès, l'entrée passe dans le bloc des publications.</p>
+<p>Lorsqu'on rafraîchit la page, on voit le résultat de la demande : </p>
+<ul>
+<li>en cas d'échec, l'entrée reste dans le bloc des demandes, le badge de statut passe de "En cours" à "Echec" avec mention de l'erreur qui a conduit à l'échec (en général une erreur de génération Eno lors de la création du questionnaire au format Lunatic). <ul>
+<li>La notification d'échec peut être effacée grâce à l'icône 🗑️. </li>
+<li>Vous pouvez corriger votre questionnaire et recommencer une demande de publication ou contacter l'atelier de conception en cas de difficulté.</li>
+</ul>
+</li>
+<li>en cas de succès, l'entrée passe dans le bloc des publications.</li>
+</ul>
 <h2 id="la-liste-des-publications-dun-questionnaire">La liste des publications d'un questionnaire</h2>
+<p>Le bloc <code class="highlight"><span class="n">Mes</span><span class="w"> </span><span class="n">publications</span></code> comporte la liste des publications réussies d'un questionnaire. Chaque publication se base sur une sauvegarde différente. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Détail d'une publication" src="../../../img/pogues/detail-publication.png" /></a></p>
+<p>On retrouve pour chacune les éléments suivants :</p>
+<div class="admonition abstract">
+<p class="admonition-title">Légende</p>
+<ol>
+<li>Les informations générales sur la publication : Description, auteur, date de la publication, contexte (Ménages / Entreprise) ainsi que le rappel de la sauvegarde Pogues utilisée</li>
+<li>Pour chaque instrument de collecte, un bandeau dépliable avec le résumé des caractéristiques particulières : mode de collecte, numéro de version (incrémenté à chaque fois qu'un questionnaire est publié dans un mode), paramètres optionnels, identifiant de l'instrument de collecte avec un bouton permettant de copier l'identifiant</li>
+<li>Un bouton permttant d'ouvrir un nouvel onglet pour visualiser l'instrument de collecte</li>
+</ol>
+</div>
 
 
 
