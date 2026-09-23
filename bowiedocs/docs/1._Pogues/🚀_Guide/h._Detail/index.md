@@ -7,7 +7,11 @@ Page permettant de saisir les métatonnées du questionnaires. Elle est composé
 - `Nom court` : Identifiant métier (arbitraire actuellement car pas d'impact sur le reste du processus)
 - `Série` (optionel) : Valeurs provenant d'RMéS. Il faut sélectionner l'enquête correspondante telle que décrite dans [Bauhaus :material-open-in-new:](https://gestion-metadonnees.insee.fr/)
 - `DDI Agency` : Non modifiable pour l'instance de l'Insee. Valeur technique pour la génération du DDI 
-- `Mode de collecte` : Quatre modes de collecte sont disponibles, CAPI(1), CATI(2), CAWI(3) et PAPI(4). Possibilité de sélectionner une ou plusieurs modalités.
+- `Mode de collecte` : Quatre modes de collecte sont disponibles, avec la possibilité de sélectionner une ou plusieurs des modalités suivantes
+    - CAPI(1)
+    - CATI(2)
+    - CAWI(3)
+    - PAPI(4)
 - `Spécification dynamique` : la gestion de l'affichage ou non des objets ("Redirection" ou "Filtre")
 - `Spécification des formules` : le langage utilisé pour les contrôles, filtres, calculs de variables ("XPath" ou "VTL")
 

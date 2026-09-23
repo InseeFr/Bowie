@@ -27,8 +27,10 @@ theme:
   features:
     - navigation.footer
     - navigation.indexes
-    - content.code.copy
     - navigation.instant.preview
+    - navigation.tabs
+    - navigation.path
+    - content.code.copy
     - search.suggest
     - search.highlight
 extra:
@@ -62,8 +64,8 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - tables
 plugins:
-  - glightbox
   - search
-  - privacy:
-      links_attr_map:
-        target: _blank
+  - awesome-nav
+  - blog:
+      blog_dir: versions
+  - glightbox

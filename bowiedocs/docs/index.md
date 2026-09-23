@@ -1,6 +1,13 @@
 # :octicons-zap-16: atelier de conception d'enquêtes
 
+![](assets/bowie.png){ width="280" align=left } 
+
 Bowie est un ensemble de solutions open-source et cohérentes permettant la création de questionnaires à travers le principe de [métadonnées actives](metadata/index.md).
+
+
+Développé à l'Insee en [open-source :material-github:](https://github.com/InseeFr/Bowie), il s'articule idéalement pour la mise en oeuvre de collectes de données avec la plateforme de collecte _open-source_ de l'Insee.
+
+#### Outils
 
 <div class="grid cards" markdown>
 
@@ -36,5 +43,3 @@ Bowie est un ensemble de solutions open-source et cohérentes permettant la cré
     Personnalisation pour une visualisation enrichie des questionnaires
 
 </div>
-
-Bowie est développé à l'Insee en [open-source :material-github:](https://github.com/InseeFr/Bowie). Il s'articule idéalement pour la mise en oeuvre de collectes de données avec la plateforme de collecte _open-source_ de l'Insee.

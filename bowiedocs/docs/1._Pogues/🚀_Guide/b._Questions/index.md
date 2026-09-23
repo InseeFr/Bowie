@@ -25,8 +25,8 @@ Pour créer une question, cliquer sur `+ Question` et remplir les champs suivant
 -   __[:material-form-textbox: Réponse simple](13-reponse-simple.md){ .md-button }__
     
     ---
-    - "simple" : [texte](13-reponse-simple.md#type-de-réponse-texte), [nombre](13-reponse-simple.md#type-de-réponse-nombre), [booléen](13-reponse-simple.md#type-de-réponse-booléen) 
-    - "temporelle" : [date](13-reponse-simple.md#type-de-réponse-date), [durée](13-reponse-simple.md#type-de-réponse-durée)
+    - "simple" : [texte](13-reponse-simple.md#type-de-reponse-texte), [nombre](13-reponse-simple.md#type-de-reponse-nombre), [booléen](13-reponse-simple.md#type-de-reponse-booleen) 
+    - "temporelle" : [date](13-reponse-simple.md#type-de-reponse-date), [durée](13-reponse-simple.md#type-de-reponse-duree)
 
 -   __[:material-checkbox-multiple-marked-circle-outline: Réponse à choix unique](15-reponse-choix-unique.md){ .md-button }__
 
