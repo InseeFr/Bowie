@@ -77,7 +77,7 @@ Dans l'onglet "Contrôles" de la question du questionnaire à partir de laquelle
         > 7.3                                   // true
         ```
 
-Voir d'autres [exemples](../../💻_VTL/2-guide-vtl.md#quelques-exemples-dutilisation-du-vtl-dans-pogues)
+Voir d'autres [exemples](../../VTL/2-guide-vtl.md#quelques-exemples-dutilisation-du-vtl-dans-pogues)
 
 ## Comportements
 
@@ -111,7 +111,7 @@ Dans la plupart des cas, vérifier une potentielle non-réponse c'est vérifier 
     Dépendamment du [type de la variable](../b._Questions/13-reponse-simple.md), la formule VTL de conditionnant l'affichage du contrôle de non réponse est différente.
 
     === "Date - Nombre - Durée"
-        Pour ces types, la formule VTL est simple avec seulement l'utilisation de [**isnull()**](../../💻_VTL/1-fonctions-vtl.md/#isnull)
+        Pour ces types, la formule VTL est simple avec seulement l'utilisation de [**isnull()**](../../VTL/1-fonctions-vtl.md/#isnull)
         ```
         isnull($VAR$)
         ```
@@ -121,7 +121,7 @@ Dans la plupart des cas, vérifier une potentielle non-réponse c'est vérifier 
         ```
         isnull($VAR) or $VAR = ""
         ```
-        Ou en utilisant la fonction [**nvl()**](../../💻_VTL/1-fonctions-vtl.md/#nvl) :
+        Ou en utilisant la fonction [**nvl()**](../../VTL/1-fonctions-vtl.md/#nvl) :
 
         ```
         nvl($VAR, "") = ""
@@ -132,7 +132,7 @@ Dans la plupart des cas, vérifier une potentielle non-réponse c'est vérifier 
         ```
         isnull($VAR) or $VAR = false
         ```
-        Ou en utilisant la fonction [**nvl()**](../../💻_VTL/1-fonctions-vtl.md/#nvl) :
+        Ou en utilisant la fonction [**nvl()**](../../VTL/1-fonctions-vtl.md/#nvl) :
 
         ```
         nvl($VAR, false) = false

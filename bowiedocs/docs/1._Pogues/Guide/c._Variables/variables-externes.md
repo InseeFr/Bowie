@@ -6,7 +6,7 @@ Pogues permet de référencer dans le questionnaire des variables externes, c'es
 !!! danger 
     Le _typage_ disponible dans Pogues pour ces variables est celui disponible par ailleurs pour les variables collectées et calculées, mais l'outil impose un format texte afin d'être facilement lu tout au long de la chaîne de traitement : l'ensemble des variables externes injectées dans le questionnaire sont du __texte__.
 
-    **Impact :** si ces variables doivent être utilisées comme des nombres, il faut alors passer par une variable calculée avec le bon type et utiliser la fonction [cast()](../../💻_VTL/1-fonctions-vtl.md/#cast) et quel :
+    **Impact :** si ces variables doivent être utilisées comme des nombres, il faut alors passer par une variable calculée avec le bon type et utiliser la fonction [cast()](../../VTL/1-fonctions-vtl.md/#cast) et quel :
 
     ```vtl
     cast($VAR_EXT$, integer)
@@ -29,7 +29,7 @@ On crée les variables externes via le menu "Variables" en cliquant sur le bouto
 
     1. `Type de réponse*` : parmi Texte, Date, Nombre, Booléen (cf. Création d'une question de type réponse simple)
       > Suivant la valeur sélectionnée, d'autres champs associés au type apparaissent.
-      > Plus de détails sur les différents types [ici](../../🚀_Guide/b._Questions/13-reponse-simple.md)
+      > Plus de détails sur les différents types [ici](../../Guide/b._Questions/13-reponse-simple.md)
 
 ## Ajouter des variables externes de portée Boucle
 

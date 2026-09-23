@@ -10,7 +10,7 @@ Pogues permet la création de trois types de variables dans le questionnaire :
 
     <div class="grid cards" markdown>
 
-    - __[Les variables :material-arrow-right-bold-box-outline:](../🚀_Guide/c._Variables/index.md)__
+    - __[Les variables :material-arrow-right-bold-box-outline:](../Guide/c._Variables/index.md)__
 
     </div>
 
@@ -24,7 +24,7 @@ Pour créer une variable calculée, il faut aller dans le menu de gestion des va
 ![Menu Variables](../../img/pogues/menu-variables.png)
 
 
-Cette page liste l'ensemble des variables du questionnaire présentées par [Niveau de calcul](../🚀_Guide/c._Variables/portee.md).
+Cette page liste l'ensemble des variables du questionnaire présentées par [Niveau de calcul](../Guide/c._Variables/portee.md).
 
 Plusieurs champs sont à compléter :
 
@@ -61,7 +61,7 @@ Jusqu'ici nous n'avions que des variables collectées dans la liste des variable
 
 ## Usage dans un contrôle
 
-On peut maintenant ajouter un contrôle sur la question `ACTIVITES` pour s'assurer que la ventilation est égale à 100%. Vous pouvez pour cela vous appuyer sur ce que l'on a vu [précédemment](21-ajout-controle.md) et sur le [guide VTL](../💻_VTL/index.md)... 
+On peut maintenant ajouter un contrôle sur la question `ACTIVITES` pour s'assurer que la ventilation est égale à 100%. Vous pouvez pour cela vous appuyer sur ce que l'on a vu [précédemment](21-ajout-controle.md) et sur le [guide VTL](../VTL/index.md)... 
 
 ![solution contrôle ventilation](../../img/pogues/controle-ventilation.png)
 

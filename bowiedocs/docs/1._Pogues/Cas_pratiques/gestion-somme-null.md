@@ -28,7 +28,7 @@ Ici, le vecteur `CA` est composé des valeurs suivant : `[63, null, 28]`. Or VTL
 
 !!! warning "Attention"
     Contrairement à un champ texte ou un booléen, quand on efface la valeur (décocher ou supprimer la valeur du champ) d'un champ de type nombre, alors cette variable est remise à null. <br>
-    Voir [le type nombre](../🚀_Guide/b._Questions/13-reponse-simple.md#type-de-reponse-nombre) pour plus de détail.
+    Voir [le type nombre](../Guide/b._Questions/13-reponse-simple.md#type-de-reponse-nombre) pour plus de détail.
 
 
 ## Solution
@@ -49,7 +49,7 @@ SUM_TAB = sum($NULL_CHECK_TAB_COL$)
 ![alt text](../../img/pogues/somme_tab_null_res.png)
 
 !!! tips "Info"
-    Voir **[portée des variables](../🚀_Guide/c._Variables/portee.md)** pour plus de détails sur comment utilisé le niveau de calcul
+    Voir **[portée des variables](../Guide/c._Variables/portee.md)** pour plus de détails sur comment utilisé le niveau de calcul
 
 ## Questionnaire exemple
 

@@ -19,7 +19,7 @@ Dans ce tutoriel, on va mettre en place le premier cas uniquement.
 
     <div class="grid cards" markdown>
 
-    - __[Les boucles :material-arrow-right-bold-box-outline:](../🚀_Guide/a._Questionnaire/24-boucles.md)__
+    - __[Les boucles :material-arrow-right-bold-box-outline:](../Guide/a._Questionnaire/24-boucles.md)__
 
     </div>
 
@@ -56,7 +56,7 @@ En visualisant notre questionnaire par exemple en web ménage, on remarque qu'il
 
 ## Personnalisation de la boucle
 
-Pogues nous permet d'utiliser des [variables systèmes](../🚀_Guide/c._Variables/variables-globales.md) bien sympathiques, notamment GLOBAL_ITERATION_INDEX qui donne la position dans une boucle. 
+Pogues nous permet d'utiliser des [variables systèmes](../Guide/c._Variables/variables-globales.md) bien sympathiques, notamment GLOBAL_ITERATION_INDEX qui donne la position dans une boucle. 
 
 Utilisons la pour indiquer à notre répondant où il en est dans son remplissage de boucle. On modifie le libellé de la sous-séquence sur laquelle on boucle.
 ![Ajout de la personnalisation dans le libellé de sous-séquence de la boucle](../../img/pogues/utiliser-global-it-index.png)

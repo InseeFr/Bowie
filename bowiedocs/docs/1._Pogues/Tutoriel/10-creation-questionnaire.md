@@ -63,7 +63,7 @@ Par défaut ce champ est vide et n'est pas proposé lors de la création du ques
 
     <div class="grid cards" markdown>
 
-    - __[Page de Détail :material-arrow-right-bold-box-outline:](../🚀_Guide/h._Detail/index.md)__
+    - __[Page de Détail :material-arrow-right-bold-box-outline:](../Guide/h._Detail/index.md)__
 
     </div>
 

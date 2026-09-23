@@ -10,7 +10,7 @@ On propose ici de créer une variable calculée permettant d'afficher le prénom
 
     <div class="grid cards" markdown>
 
-    - __[Exemples de personnalisation d'un libellé :material-arrow-right-bold-box-outline:](../📝_Cas_pratiques/personnaliser-libelles.md)__
+    - __[Exemples de personnalisation d'un libellé :material-arrow-right-bold-box-outline:](../Cas_pratiques/personnaliser-libelles.md)__
 
     </div>
 

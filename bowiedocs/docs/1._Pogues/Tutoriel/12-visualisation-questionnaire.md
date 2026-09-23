@@ -39,8 +39,8 @@ graph TD
 
     <div class="grid cards" markdown>
 
-    - __[Visualiser un questionnaire :material-arrow-right-bold-box-outline:](../🚀_Guide/a._Questionnaire/42-sauvegarder-visualiser.md)__
-    - __[Personnaliser un questionnaire :material-arrow-right-bold-box-outline:](../🚀_Guide/d._Personnalisation/index.md)__
+    - __[Visualiser un questionnaire :material-arrow-right-bold-box-outline:](../Guide/a._Questionnaire/42-sauvegarder-visualiser.md)__
+    - __[Personnaliser un questionnaire :material-arrow-right-bold-box-outline:](../Guide/d._Personnalisation/index.md)__
 
     </div>
 

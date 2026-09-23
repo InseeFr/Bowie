@@ -4,7 +4,7 @@ Pogues est l'interface graphique permettant de créer des questionnaires.
 
 Ce tutoriel décrit pas à pas la création d'un questionnaire pour aider les nouveaux utilisateurs de Pogues à se familiariser avec l'outil en implémentant les éléments les plus utilisés : séquences, questions, aides à l'enquêté, filtres, boucles... 
 
-L'objectif est de vous permettre de démarrer sereinement avec l'outil : pour les fonctionnalités plus sophistiquées, rendez-vous dans le [:material-rocket-launch-outline: guide](../🚀_Guide/index.md).
+L'objectif est de vous permettre de démarrer sereinement avec l'outil : pour les fonctionnalités plus sophistiquées, rendez-vous dans le [:material-rocket-launch-outline: guide](../Guide/index.md).
 
 !!! note
     27/07/2023 - Le guide de référence pour les enquêtes entreprises de la filière historique Coltrane reste [celui-ci](https://inseefr.github.io/Pogues/fr/guide-utilisateur/guide-utilisateur.html).

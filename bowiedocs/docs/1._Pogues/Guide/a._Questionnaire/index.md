@@ -2,7 +2,7 @@
 
 Naviguez dans le menu à gauche pour voir comment construire un questionnaire dans Pogues.
 
-N'hésitez pas non plus à aller faire un tour dans le [:material-school-outline: tutoriel](../../🎓_Tutoriel/index.md) si c'est la première fois que vous faite du Pogues
+N'hésitez pas non plus à aller faire un tour dans le [:material-school-outline: tutoriel](../../Tutoriel/index.md) si c'est la première fois que vous faite du Pogues
 
 <div class="grid cards" markdown>
 

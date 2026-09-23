@@ -31,7 +31,7 @@ Pogues propose un certain nombre de listes de nomenclatures mutualisées pour sa
 
     <div class="grid cards" markdown>
 
-    -  __[Le suggester :material-arrow-right-bold-box-outline:](../🚀_Guide/f._Nomenclatures/1-suggester.md)__
+    -  __[Le suggester :material-arrow-right-bold-box-outline:](../Guide/f._Nomenclatures/1-suggester.md)__
 
     </div>
 

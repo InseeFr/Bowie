@@ -23,4 +23,4 @@ On crée les variables calculées via le menu "Variables" en cliquant sur le bou
 
     1. `Type de réponse*` : parmi Texte, Date, Nombre, Booléen (cf. Création d'une question de type réponse simple)
       > Suivant la valeur sélectionnée, d'autres champs associés au type apparaissent.
-      > Plus de détails sur les différents types [ici](../../🚀_Guide/b._Questions/13-reponse-simple.md)
+      > Plus de détails sur les différents types [ici](../../Guide/b._Questions/13-reponse-simple.md)

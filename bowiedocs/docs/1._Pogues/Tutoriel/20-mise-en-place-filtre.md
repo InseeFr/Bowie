@@ -2,7 +2,7 @@
 
 !!!note
 
-    À partir de cette section, il est utile de s'être familiarisé avec VTL en parcourant [le guide dédié](../💻_VTL/index.md) et le consultant régulièrement.
+    À partir de cette section, il est utile de s'être familiarisé avec VTL en parcourant [le guide dédié](../VTL/index.md) et le consultant régulièrement.
 
 L'utilisation de filtres permet de déterminer l'affichage (ou non) d'une ou plusieurs séquences, sous-séquences ou questions.
 
@@ -16,7 +16,7 @@ Pour créer un filtre, il suffit de cliquer sur le bouton "+ Filtre" dans la bar
 - _Début_ : détermine où commence la couverture du filtre
 - _Fin_ : détermine où termine la couverture du filtre.
 
-Le cas d'usage dans le cadre de ce tutoriel est l'affichage de la question (["Quelle est votre nationalité étrangère ?"](../🎓_Tutoriel/15-creation-qcm.md#creation-dune-question-qcu-recherche-sur-liste)) conditionné à la réponse à la question qui précède (["Quelle est votre nationalité ?"](../🎓_Tutoriel/15-creation-qcm.md#creation-dune-question-a-choix-multiple)). On veut donc s'assurer que la 3è modalité associée à cette question (`T_NATIO`) a été sélectionnée par le répondant  à la bonne valeur : `T_NATIO3` ici qui est le code associé à la modalité "Etrangère" doit valoir `TRUE`.
+Le cas d'usage dans le cadre de ce tutoriel est l'affichage de la question (["Quelle est votre nationalité étrangère ?"](../Tutoriel/15-creation-qcm.md#creation-dune-question-qcu-recherche-sur-liste)) conditionné à la réponse à la question qui précède (["Quelle est votre nationalité ?"](../Tutoriel/15-creation-qcm.md#creation-dune-question-a-choix-multiple)). On veut donc s'assurer que la 3è modalité associée à cette question (`T_NATIO`) a été sélectionnée par le répondant  à la bonne valeur : `T_NATIO3` ici qui est le code associé à la modalité "Etrangère" doit valoir `TRUE`.
 
 Notre condition d'affichage est donc :
 
@@ -43,7 +43,7 @@ Il nous reste à préciser que le filtre à pour champ d'action la question `T_N
 
     <div class="grid cards" markdown>
 
-    - __[Les filtres :material-arrow-right-bold-box-outline:](../🚀_Guide/a._Questionnaire/25-filtres.md)__
+    - __[Les filtres :material-arrow-right-bold-box-outline:](../Guide/a._Questionnaire/25-filtres.md)__
 
     </div>
 

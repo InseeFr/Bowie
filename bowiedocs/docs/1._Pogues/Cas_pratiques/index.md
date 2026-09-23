@@ -8,5 +8,5 @@ Cette section présente un ensemble de cas pratiques que vous pouvez réaliser e
 - [Sélection du Kish](kish.md)
 - [Collecte par libellés flous](libelles-flous.md)
 - [Personnaliser un libellé](personnaliser-libelles.md)
-- [Index de la position dans une boucle](../🚀_Guide/c._Variables/variables-globales.md)
-- [Suggester à choix multi-variables (une réponse valorise plusieurs variables)](../🚀_Guide/f._Nomenclatures/2-suggester-choix-multi-variable.md)
+- [Index de la position dans une boucle](../Guide/c._Variables/variables-globales.md)
+- [Suggester à choix multi-variables (une réponse valorise plusieurs variables)](../Guide/f._Nomenclatures/2-suggester-choix-multi-variable.md)

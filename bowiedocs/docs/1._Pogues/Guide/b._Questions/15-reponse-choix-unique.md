@@ -17,7 +17,7 @@ Avant de spécifier la question QCU avec une réponse de type sélection dans un
 
 Plus de détails dans la page [Les listes de codes](../g._Listes_de_codes/index.md).
 
-La démarche pas-à-pas pour créer une question QCU basée sur une liste de codes est détaillée dans le tutoriel, [Création d'une réponse basée sur une liste](../../🎓_Tutoriel/14-creation-liste-qcu.md).
+La démarche pas-à-pas pour créer une question QCU basée sur une liste de codes est détaillée dans le tutoriel, [Création d'une réponse basée sur une liste](../../Tutoriel/14-creation-liste-qcu.md).
 
 #### Filtrer les modalités
 
@@ -60,7 +60,7 @@ Les modalités de la question sont contituées des valeurs du vecteur (par exemp
 
 #### Filtrer les modalités
 
-!!! danger "Fonctionnalité non supportée pour les [Réponses QCU dans un tableau](../../🚀_Guide/b._Questions/Tableaux/index.md), uniquement dans une question simple !"
+!!! danger "Fonctionnalité non supportée pour les [Réponses QCU dans un tableau](../../Guide/b._Questions/Tableaux/index.md), uniquement dans une question simple !"
 
 
 Il est possible de filtrer les modalités d'un QCU basé sur une variable du questionnaire (collectée, externe ou calculée) en remplissant le champ `Filtre de modalités` avec une formule VTL. 
