@@ -1,0 +1,9 @@
+nav:
+  - index.md
+  - Pogues: 1._Pogues
+  - Autres Outils:
+    - Eno: 3._Eno
+    - Lunatic: 4._Lunatic
+    - Orchestrateurs: 5._Orchestrateurs
+  - 🫂 Support: 6._Support
+  - Versions: versions

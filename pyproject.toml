@@ -10,7 +10,7 @@ readme = "README.md"
 python = "^3.10"
 mkdocs-material = "^9.5"
 mkdocs-glightbox = "^0.3.2"
-
+mkdocs-awesome-nav = "*"
 
 [build-system]
 requires = ["poetry-core"]
