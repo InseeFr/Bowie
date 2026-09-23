@@ -168,7 +168,7 @@ Ces totaux peuvent être ensuite utilisées dans des libellés, des filtres ou d
 - cf. [Total en ligne](./3-cases-non-collectees.md/#total-en-ligne)
 - cf. [Total en colonne](./3-cases-non-collectees.md/#total-en-colonne)
 
-### Compter le nombre de ligne
+### Compter le nombre de lignes
 
 Utilisation de la formule VTL `count($COL_1$)` avec `COL_1` la première colonne du tableau, de préférence car représente l'unité du tableau.
 

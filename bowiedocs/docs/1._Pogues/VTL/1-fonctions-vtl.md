@@ -10,7 +10,7 @@ search:
 
     C’est l’état d’avancement de cette dernière qui permet de connaître les opérateurs et fonctions disponibles : la référence est donc la [page de suivi de l’implémentation](https://inseefr.github.io/Trevas-TS/docs/coverage).
 
-### Liste des opérateurs
+### Opérateurs basiques
 
 |    VTL     | Opérateur         |
 |:----------:| ----------------- |
@@ -24,7 +24,7 @@ search:
 |  `A / B`   | A divisé par B    |
 | `A \|\| B` | concaténer A et B |
 
-### Logique
+### Opérateurs de logique
 
 | Nom | Symbole | Exemple          |
 | --- | ------- | ---------------- |
@@ -45,9 +45,6 @@ search:
 | [**`current_date()`**](#current_date)  | Retourne la date du jour au format `date` |
 | [**`replace()`**](#replace)  | Remplace dans une chaîne de caractère les occurrences de `<old>` par `new`|
 
-
-
-
 ### Numériques
 | Method      | Description                          |
 | ----------- | ------------------------------------ |
@@ -58,6 +55,19 @@ search:
 | [**`mod()`**](#mod)     | Retourne le modulo = le reste d'une division entière  |
 | [**`round()`**](#round)     | Retourne la valeur d'un nombre arrondi à l'entier le plus proche  |
 
+### Agrégation
+!!! danger "Ne fonctionne que sur des vecteurs"
+    Il faut que la variable utilisée soit une **variable de boucle** interprétée dans un portée **Questionnaire** afin qu'elle soit utilisée dans la formule VTL comme un vecteur.  
+    Pour plus d'information, voir les pages sur la [**notion de portée**](../Guide/c._Variables/portee.md)
+
+| Method      | Description                          |
+| ----------- | ------------------------------------ |
+| [**`count()`**](#__tabbed_21_1)     | Retourne la taille du vecteur|
+| [**`min()`**](#__tabbed_21_2)     | Retourne la plus petite valeur du vecteur  |
+| [**`max()`**](#__tabbed_21_3)     | Retourne la plus grande valeur du vecteur |
+| [**`sum()`**](#__tabbed_21_4)     | Retourne la somme des valeurs du vecteur |
+| [**`median()`**](#__tabbed_21_5)     | Retourne la médiane des valeurs du vecteur |
+| [**`avg()`**](#__tabbed_21_6)     | Retourne la moyenne des valeurs du vecteur |
 
 ## Détail des fonctions
 ##### nvl
@@ -522,3 +532,89 @@ search:
     | `-5.058` | `round($MA_VARIABLE$, 2)` | `-5.06` |
     | `-5.952` | `round($MA_VARIABLE$, 2)` | `-5.95` |
     
+##### Operateurs d'agrégration
+    
+!!! abstract "Syntaxe"
+
+    === "count"
+        ```
+        count(<var>)
+        ```
+
+        - `var` : vecteur
+    === "min"
+        ```
+        min(<var>)
+        ```
+        
+        - `var` : vecteur
+    === "max"
+        ```
+        max(<var>)
+        ```
+        
+        - `var` : vecteur
+    === "sum"
+        ```
+        sum(<var>)
+        ```
+        
+        - `var` : vecteur
+    === "median"
+        ```
+        median(<var>)
+        ```
+        
+        - `var` : vecteur
+    === "avg"
+        ```
+        avg(<var>)
+        ```
+        
+        - `var` : vecteur
+
+=== "count"
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
+    | --- | ---| --- |
+    | `["Toto", "Tata", "Titi"]` | `count($MA_VARIABLE$)`   | `3` |
+    | `["Toto", "Tata", null]` | `count($MA_VARIABLE$)`   | `3` |
+    | `["Toto", "Titi"]` | `count($MA_VARIABLE$)`   | `2` |
+    | `[678, 24, 9, 40, null, 5]` | `count($MA_VARIABLE$)`   | `6` |
+    | `[678, 24, 9, 5]` | `count($MA_VARIABLE$)`   | `4` |
+=== "min"
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
+    | --- | ---| --- |
+    | `[678, 24, 9, 40, null, 5]` | `min($MA_VARIABLE$)`   | `null` |
+    | `[678, 24, 22, 6]` | `min($MA_VARIABLE$)`   | `6` |
+=== "max"
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
+    | --- | ---| --- |
+    | `[678, 24, 9, 40, null, 5]` | `max($MA_VARIABLE$)`   | `null` |
+    | `[678, 24, 22, 6]` | `max($MA_VARIABLE$)`   | `678` |
+=== "sum"
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
+    | --- | ---| --- |
+    | `[678, 24, 9, 40, null, 5]` | `sum($MA_VARIABLE$)`   | `null` |
+    | `[678, 24, 22, 6]` | `sum($MA_VARIABLE$)`   | `730` |
+=== "median"
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
+    | --- | ---| --- |
+    | `[678, 24, 9, 40, null, 5]` | `median($MA_VARIABLE$)`   | `null` |
+    | `[678, 24, 22, 6]` | `median($MA_VARIABLE$)`   | `23` |
+    | `[678, 24, 21, 6]` | `median($MA_VARIABLE$)`   | `22.5` |
+    | `[678, 24, 22, 6, 8]` | `median($MA_VARIABLE$)`   | `22` |
+=== "avg"
+    | Valeur de `MA_VARIABLE` | Fonction | Résultat |
+    | --- | ---| --- |
+    | `[678, 24, 9, 40, null, 5]` | `avg($MA_VARIABLE$)`   | `null` |
+    | `[678, 24, 22, 6]` | `avg($MA_VARIABLE$)`   | `182.5` |
+    | `[678, 24, 22, 7]` | `avg($MA_VARIABLE$)`   | `182.75` |
+    | `[678, 24, 22, 8]` | `avg($MA_VARIABLE$)`   | `183` |
+
+??? example "Exemples d'utilisation"
+    === "count"
+        
+        - [Compter le nombre de lignes d'un tableau](../Guide/b._Questions/Tableaux/2-tableau-dynamique.md#compter-le-nombre-de-ligne)
+    === "sum"
+        
+        - [Calculer des totaux de lignes ou de colonnes d'un tableau](../Guide/b._Questions/Tableaux/2-tableau-dynamique.md#calculer-des-totaux-de-lignes-ou-de-colonnes)

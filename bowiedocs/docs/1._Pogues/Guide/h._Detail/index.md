@@ -14,9 +14,7 @@ Page permettant de saisir les métatonnées du questionnaires. Elle est composé
     - PAPI(4)
 - `Spécification dynamique` : la gestion de l'affichage ou non des objets ("Redirection" ou "Filtre")
 - `Spécification des formules` : le langage utilisé pour les contrôles, filtres, calculs de variables ("XPath" ou "VTL")
-
 </div>
-
 1.  pour les enquêtes en face-à-face par l'intermédiaire d'un enquêteur
 2.  pour les enquêtes par téléphone
 3.  pour les enquêtes via Internet
