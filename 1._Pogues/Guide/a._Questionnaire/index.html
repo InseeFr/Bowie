@@ -550,14 +550,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
     
     
       
@@ -795,95 +787,11 @@
   
   
     <li class="md-nav__item">
-      <a href="40-controles-integrite/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Contrôles d'intégrité du questionnaire
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="41-fonctionnalites-element/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Fonctionnalités liés à un élément du questionnaire
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="42-sauvegarder-visualiser/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sauvegarder ou Visualiser le questionnaire
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="43-details-suppression/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Voir le détail / Supprimer
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="44-deplacer-element/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Déplacer des éléments par glisser/déposer
   </span>
   
 
@@ -3279,6 +3187,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#composants-dun-questionnaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      Composants d'un questionnaire
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sauvegarder-ou-visualiser-le-questionnaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sauvegarder ou Visualiser le questionnaire
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3293,8 +3227,23 @@
 
 
 <h1 id="composants-permettant-de-creer-un-questionnaire-dans-pogues">Composants permettant de créer un questionnaire dans Pogues</h1>
-<p>Naviguez dans le menu à gauche pour voir comment construire un questionnaire dans Pogues.</p>
+<div class="admonition info">
+<p class="admonition-title">Contrôles d'intégrité du questionnaire</p>
+<ul>
+<li>le questionnaire doit comporter au moins une séquence et une question</li>
+<li>unicité des identifiants de question, séquence ou sous-séquence</li>
+<li>unicité des identifiants de variables collectées, externes ou calculées</li>
+</ul>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Attention lors du déplacement des éléments par glisser/déposer</p>
+<p>Le déplacement d'une séquence ou sous-séquence déplacent aussi les sous-séquences ou questions qui lui sont reliées.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Comment bien débuter avec Pogues</p>
 <p>N'hésitez pas non plus à aller faire un tour dans le <a href="../../Tutoriel/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3m6.82 6L12 12.72 5.18 9 12 5.28 18.82 9M17 16l-5 2.72L7 16v-3.73L12 15l5-2.73V16Z"/></svg></span> tutoriel</a> si c'est la première fois que vous faite du Pogues</p>
+</div>
+<h2 id="composants-dun-questionnaire">Composants d'un questionnaire</h2>
 <div class="grid cards">
 <ul>
 <li>
@@ -3326,6 +3275,17 @@
 </li>
 </ul>
 </div>
+<h2 id="sauvegarder-ou-visualiser-le-questionnaire">Sauvegarder ou Visualiser le questionnaire</h2>
+<p>Il est possible de sauvegarder ou de visualiser le questionnaire à tout moment via les boutons dédiés en haut de page.</p>
+<div class="admonition warning">
+<p>Il n'est pas possible de dupliquer un questionnaire non sauvegardé</p>
+</div>
+<ul>
+<li>Sans modification en cours du questionnaire
+<a class="glightbox" href="../../../img/pogues/visualisation-no-modification.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/visualisation-no-modification.png" /></a></li>
+<li>Avec des modifications non sauvegardées
+<a class="glightbox" href="../../../img/pogues/visualisation-with-modification.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../img/pogues/visualisation-with-modification.png" /></a></li>
+</ul>
 
 
 
