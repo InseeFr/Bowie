@@ -46,7 +46,7 @@ Cette entrée comporte le rappel des informations liées à la demande : descrip
 Lorsqu'on rafraîchit la page, on voit le résultat de la demande : 
 
  -  en cas d'échec, l'entrée reste dans le bloc des demandes, le badge de statut passe de "En cours" à "Echec" avec mention de l'erreur qui a conduit à l'échec (en général une erreur de génération Eno lors de la création du questionnaire au format Lunatic). 
-    - La notification d'échec peut être effacée grâce à l'icône 🗑️. 
+    - La notification d'échec peut être effacée grâce à l'icône :material-trash-can-outline:. 
     - Vous pouvez corriger votre questionnaire et recommencer une demande de publication ou contacter l'atelier de conception en cas de difficulté.
  -  en cas de succès, l'entrée passe dans le bloc des publications.
 
