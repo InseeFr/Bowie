@@ -1,11 +1,17 @@
 # Les publications au registre de questionnaires
 
 ## La publication depuis Pogues dans le registre de questionnaires
-Avant de partir en collecte, lorsque la spécification du questionnaire sous Pogues est terminée, il est possible de **publier la sauvagarde courante d'un questionnaire** au registre de questionnaires. Cette fonctionnalité vise à mettre à disposition de l'ensemble du système d'information de la filière un instrument de collecte et ses métadonnées dans le cadre de l'automatisation des enquêtes.
 
-Le terme instrument de collecte désigne le questionnaire au format json Lunatic : un questionnaire Pogues généré pour les orchestrateurs dans un mode de collecte et un contexte définis et avec éventuellement des paramètres définis. 
+Lorsque la spécification du questionnaire sous Pogues est terminée, il est possible de publier, à partir de la sauvegarde courante d'un questionnaire, des instruments de collecte dans le registre de questionnaires.
 
-On lui associe des métadonnées telles que les nomenclatures et le questionnaire au format xml DDI.
+_Qu'est ce qu'un instrument de collecte ?_
+
+Le terme instrument de collecte désigne la déclinaison du questionnaire Pogues dans une forme adaptée au mode de collecte (sur internet, par enquêteur). Il dépend également du contexte - collecte d'une enquête entreprises ou ménages.
+Un même questionnaire peut donc donner naissance à plusieurs instruments, selon les modes de collecte prévus. Ces instruments de collecte sont des fichiers au format Json Lunatic, et utilisés par les orchestrateurs.
+
+La publication dans le registre consiste donc à créer dans le registre, à partir d’une version donnée du questionnaire Pogues, un ou plusieurs instruments de collecte correspondant aux modes de collecte souhaités.
+
+Dans le registre on associe aussi à l'instrument de collecte des métadonnées telles que les nomenclatures et le questionnaire au format xml DDI.
 
 ## La création d'une publication
 
@@ -40,7 +46,7 @@ Cette entrée comporte le rappel des informations liées à la demande : descrip
 Lorsqu'on rafraîchit la page, on voit le résultat de la demande : 
 
  -  en cas d'échec, l'entrée reste dans le bloc des demandes, le badge de statut passe de "En cours" à "Echec" avec mention de l'erreur qui a conduit à l'échec (en général une erreur de génération Eno lors de la création du questionnaire au format Lunatic). 
-    - La notification d'échec peut être effacée grâce à l'icône 🗑️. 
+    - La notification d'échec peut être effacée grâce à l'icône :material-trash-can-outline:. 
     - Vous pouvez corriger votre questionnaire et recommencer une demande de publication ou contacter l'atelier de conception en cas de difficulté.
  -  en cas de succès, l'entrée passe dans le bloc des publications.
 
