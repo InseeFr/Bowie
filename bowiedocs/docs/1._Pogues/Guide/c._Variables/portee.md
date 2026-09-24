@@ -1,45 +1,47 @@
 # Portée des variables
 
-!!! danger "La portée d'une variable est une notion importante à comprendre pour les questionnaires utilisant des **boucles** ou des **tableaux dynamiques**"
+!!! danger "Important"
+    La portée d'une variable est une notion importante à comprendre pour les questionnaires utilisant des **boucles** ou des **tableaux dynamiques**"
 
 ## Notion de vecteur
 
-Dans Pogues, la majorité des variables sont collectées sous forme de **scalaire**(1). Cela change quand on collecte une variable définie au sein d'une boucle ou dans un tableau dynamique. On va alors parler de "variable de boucle".
+Dans Pogues, la majorité des variables sont collectées sous forme de **scalaire**(1). Cela change quand on collecte une variable définie au sein d'une boucle ou dans un tableau dynamique. On va alors parler de **"variable de boucle"**.  
+Elle est interprétée dans le questionnaire comme un **vecteur**(2), de la même dimension que la boucle.
 { .annotate }
 
 1.  Une **variable scalaire** est un conteneur qui ne peut stocker qu'**une seule information** à la fois, comme un nombre unique ou un mot.  
 Par opposition aux tableaux ou aux objets qui sont des collections d'éléments, la variable scalaire représente l'unité de donnée la plus simple.
+2.  Un **vecteur** est une structure de données qui permet de stocker une **liste d'éléments de même type** les uns après les autres. C'est une sorte de tableau flexible : contrairement à un tableau classique dont la taille est figée, le vecteur peut s'agrandir automatiquement quand on y ajoute de nouvelles informations.
 
 !!! abstract "Glossaire"
     - **variable de boucle :** variable collectée définie dans une séquence ou sous-séquence faisant partie d'une boucle.  
     Pour savoir comment est définie une boucle dans Pogues, se référer à la [page dédiée](../a._Questionnaire/24-boucles.md)
     - **variable de tableau dynamique :** variable collectée définie en tant que colonne d'un tableau dynamique.  
     Pour savoir comment est définie un tableau dynamique dans Pogues, se référer à la [page dédiée](../b._Questions/Tableaux/2-tableau-dynamique.md)
+    !!! note "Note"
+        Pour ne pas se répéter, on va parler dans cette page essentiellement de variables de boucle, mais les mêmes principes s'appliquent aux variables de tableau dynamique
 
-!!! info "Info"
-    Pour ne pas se répéter, on va parler dans cette page essentiellement de variables de boucle, mais les mêmes principes s'appliquent aux variables de tableau dynamique
-
-Quand une variable collectée est définie au sein d'une boucle, appellée donc **variable de boucle**, celle si est interprétée dans le questionnaire comme un **vecteur**(1), de la même dimension que la boucle.
-{ .annotate }
-
-1.  Un **vecteur** est une structure de données qui permet de stocker une **liste d'éléments de même type** les uns après les autres. C'est une sorte de tableau flexible : contrairement à un tableau classique dont la taille est figée, le vecteur peut s'agrandir automatiquement quand on y ajoute de nouvelles informations.
 
 !!! example "Exemple"
     Pour une boucle de taille 2 avec à l'intérieur une question `PRENOM` de type texte, pour laquelle l'enquêté saisie "Titi" pour la première occurrence, puis "Tata" pour la deuxième, la variable `PRENOM` est alors collectée comme un vecteur de taille 2 et les valeurs `["Titi", "Tata"]`
 
-Cette variable sera **interprétée différement** dans une formule VTL selon la **portée** dans laquelle on exécute la formule.
-
 ## Notion de portée
 
-Il en existe deux types : **`Questionnaire`** et **`Boucle`**.  
+!!! warning "Point de vigilance"
+    Cette variable sera **interprétée différement** dans une formule VTL selon la **portée** dans laquelle on exécute la formule.
 
-### Utilisation dans les formules VTL
+    Il en existe deux types : **`Questionnaire`** et **`Boucle`**.  
+
+### Exécution de formules VTL selon la portée
 <div class="annotate" markdown>
 
-- **Portée `Questionnaire` :** Les variables de boucle sont considérées comme des vecteurs. Il est donc possible d’effectuer des opération d’agrégation dessus ([`sum()`](../../VTL/1-fonctions-vtl.md#__tabbed_21_4), [`count()`](../../VTL/1-fonctions-vtl.md#__tabbed_21_1), ect). Les autres variables sont des scalaires.
-- **Portée `Boucle` :** Les variables de boucle sont interprétées `n` fois(1) comme un scalaire, en utilisant chacune de ses valeurs.
+- **Portée `Questionnaire` :** Les variables hors boucle d'un questionnaire sont des scalaires(1) et peuvent être utilisées directement dans les formules VTL. Les variables de boucle sont des vecteurs(2). Ces derniers ne sont pas exploitables tel quel dans une formule VTL. Il faut passer par des [fonctions d'agrégations](../../VTL/1-fonctions-vtl.md#agregation). Des exemples se trouvent [ici](../../VTL/1-fonctions-vtl.md#__tabbed_22_1).
+- **Portée `Boucle` :** Les variables de boucle sont interprétées `n` fois(3) comme un scalaire, en utilisant chacune de ses valeur, successivement et dans l'ordre.
 </div>
-1.  dimension de la boucle ou nombre d'occurence
+
+1.  Une valeur unique au niveau du questionnaire
+2.  Plusieurs valeur au niveau du questionnaire
+3.  Dimension ou nombre d'occurence de la boucle
 
 ???+ example "Exemple"
     Imaginons une **variable boucle** `PRENOM` pour laquelle on a saisie les valeurs `"Titi"` et `"Tata"`.
@@ -56,8 +58,8 @@ Il en existe deux types : **`Questionnaire`** et **`Boucle`**.
         { .annotate }
 
         1.  c'est à dire dans une question qui n'est pas située dans une séqence ou sous séquence, elle même encadrée par une boucle
-    !!! tip "Fonction d'agrégation"
-        Il est possible de faire intervenir une variable boucle dans une portée questionnaire, il faut cependant utiliser des [fonctions d'agrégations](../../VTL/1-fonctions-vtl.md#agregation). Des exemples se trouvent [ici](../../VTL/1-fonctions-vtl.md#__tabbed_22_1)
+    !!! tip "Passer d'une vecteur à un scalaire"
+        Il est possible d’effectuer des opérations d’agrégation sur les valeurs qui composent un vecteur ([`sum()`](../../VTL/1-fonctions-vtl.md#__tabbed_21_4), [`count()`](../../VTL/1-fonctions-vtl.md#__tabbed_21_1), ect). Le résulat issue de l'agrégation sera alors utilisable dans une **portée Questionnaire**
 
 ### Champ *Niveau de calcul*
 !!! question "Utilité"
