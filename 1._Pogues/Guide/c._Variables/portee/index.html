@@ -1278,9 +1278,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#utilisation-dans-les-formules-vtl" class="md-nav__link">
+  <a href="#execution-de-formules-vtl-selon-la-portee" class="md-nav__link">
     <span class="md-ellipsis">
-      Utilisation dans les formules VTL
+      Exécution de formules VTL selon la portée
     </span>
   </a>
   
@@ -3313,9 +3313,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#utilisation-dans-les-formules-vtl" class="md-nav__link">
+  <a href="#execution-de-formules-vtl-selon-la-portee" class="md-nav__link">
     <span class="md-ellipsis">
-      Utilisation dans les formules VTL
+      Exécution de formules VTL selon la portée
     </span>
   </a>
   
@@ -3370,13 +3370,16 @@
 
 <h1 id="portee-des-variables">Portée des variables</h1>
 <div class="admonition danger">
-<p class="admonition-title">La portée d'une variable est une notion importante à comprendre pour les questionnaires utilisant des <strong>boucles</strong> ou des <strong>tableaux dynamiques</strong></p>
+<p class="admonition-title">Important</p>
+<p>La portée d'une variable est une notion importante à comprendre pour les questionnaires utilisant des <strong>boucles</strong> ou des <strong>tableaux dynamiques</strong>"</p>
 </div>
 <h2 id="notion-de-vecteur">Notion de vecteur</h2>
-<p class="annotate">Dans Pogues, la majorité des variables sont collectées sous forme de <strong>scalaire</strong>(1). Cela change quand on collecte une variable définie au sein d'une boucle ou dans un tableau dynamique. On va alors parler de "variable de boucle".</p>
+<p class="annotate">Dans Pogues, la majorité des variables sont collectées sous forme de <strong>scalaire</strong>(1). Cela change quand on collecte une variable définie au sein d'une boucle ou dans un tableau dynamique. On va alors parler de <strong>"variable de boucle"</strong>.<br />
+Elle est interprétée dans le questionnaire comme un <strong>vecteur</strong>(2), de la même dimension que la boucle.</p>
 <ol>
 <li>Une <strong>variable scalaire</strong> est un conteneur qui ne peut stocker qu'<strong>une seule information</strong> à la fois, comme un nombre unique ou un mot.<br />
 Par opposition aux tableaux ou aux objets qui sont des collections d'éléments, la variable scalaire représente l'unité de donnée la plus simple.</li>
+<li>Un <strong>vecteur</strong> est une structure de données qui permet de stocker une <strong>liste d'éléments de même type</strong> les uns après les autres. C'est une sorte de tableau flexible : contrairement à un tableau classique dont la taille est figée, le vecteur peut s'agrandir automatiquement quand on y ajoute de nouvelles informations.</li>
 </ol>
 <div class="admonition abstract">
 <p class="admonition-title">Glossaire</p>
@@ -3386,31 +3389,32 @@ Pour savoir comment est définie une boucle dans Pogues, se référer à la <a h
 <li><strong>variable de tableau dynamique :</strong> variable collectée définie en tant que colonne d'un tableau dynamique.<br />
 Pour savoir comment est définie un tableau dynamique dans Pogues, se référer à la <a href="../../b._Questions/Tableaux/2-tableau-dynamique/">page dédiée</a></li>
 </ul>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Pour ne pas se répéter, on va parler dans cette page essentiellement de variables de boucle, mais les mêmes principes s'appliquent aux variables de tableau dynamique</p>
 </div>
-<p class="annotate">Quand une variable collectée est définie au sein d'une boucle, appellée donc <strong>variable de boucle</strong>, celle si est interprétée dans le questionnaire comme un <strong>vecteur</strong>(1), de la même dimension que la boucle.</p>
-<ol>
-<li>Un <strong>vecteur</strong> est une structure de données qui permet de stocker une <strong>liste d'éléments de même type</strong> les uns après les autres. C'est une sorte de tableau flexible : contrairement à un tableau classique dont la taille est figée, le vecteur peut s'agrandir automatiquement quand on y ajoute de nouvelles informations.</li>
-</ol>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
 <p>Pour une boucle de taille 2 avec à l'intérieur une question <code class="highlight"><span class="n">PRENOM</span></code> de type texte, pour laquelle l'enquêté saisie "Titi" pour la première occurrence, puis "Tata" pour la deuxième, la variable <code class="highlight"><span class="n">PRENOM</span></code> est alors collectée comme un vecteur de taille 2 et les valeurs <code class="highlight"><span class="p">[</span><span class="s">&quot;Titi&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Tata&quot;</span><span class="p">]</span></code></p>
 </div>
-<p>Cette variable sera <strong>interprétée différement</strong> dans une formule VTL selon la <strong>portée</strong> dans laquelle on exécute la formule.</p>
 <h2 id="notion-de-portee">Notion de portée</h2>
+<div class="admonition warning">
+<p class="admonition-title">Point de vigilance</p>
+<p>Cette variable sera <strong>interprétée différement</strong> dans une formule VTL selon la <strong>portée</strong> dans laquelle on exécute la formule.</p>
 <p>Il en existe deux types : <strong><code class="highlight"><span class="n">Questionnaire</span></code></strong> et <strong><code class="highlight"><span class="n">Boucle</span></code></strong>.  </p>
-<h3 id="utilisation-dans-les-formules-vtl">Utilisation dans les formules VTL</h3>
+</div>
+<h3 id="execution-de-formules-vtl-selon-la-portee">Exécution de formules VTL selon la portée</h3>
 <div class="annotate">
 <ul>
-<li><strong>Portée <code class="highlight"><span class="n">Questionnaire</span></code> :</strong> Les variables de boucle sont considérées comme des vecteurs. Il est donc possible d’effectuer des opération d’agrégation dessus (<a href="../../../VTL/1-fonctions-vtl/#__tabbed_21_4"><code class="highlight"><span class="nf">sum</span><span class="p">()</span></code></a>, <a href="../../../VTL/1-fonctions-vtl/#__tabbed_21_1"><code class="highlight"><span class="nf">count</span><span class="p">()</span></code></a>, ect). Les autres variables sont des scalaires.</li>
-<li><strong>Portée <code class="highlight"><span class="n">Boucle</span></code> :</strong> Les variables de boucle sont interprétées <code class="highlight"><span class="n">n</span></code> fois(1) comme un scalaire, en utilisant chacune de ses valeurs.</li>
+<li><strong>Portée <code class="highlight"><span class="n">Questionnaire</span></code> :</strong> Les variables hors boucle d'un questionnaire sont des scalaires(1) et peuvent être utilisées directement dans les formules VTL. Les variables de boucle sont des vecteurs(2). Ces derniers ne sont pas exploitables tel quel dans une formule VTL. Il faut passer par des <a href="../../../VTL/1-fonctions-vtl/#agregation">fonctions d'agrégations</a>. Des exemples se trouvent <a href="../../../VTL/1-fonctions-vtl/#__tabbed_22_1">ici</a>.</li>
+<li><strong>Portée <code class="highlight"><span class="n">Boucle</span></code> :</strong> Les variables de boucle sont interprétées <code class="highlight"><span class="n">n</span></code> fois(3) comme un scalaire, en utilisant chacune de ses valeur, successivement et dans l'ordre.</li>
 </ul>
 </div>
 <ol>
-<li>dimension de la boucle ou nombre d'occurence</li>
+<li>Une valeur unique au niveau du questionnaire</li>
+<li>Plusieurs valeur au niveau du questionnaire</li>
+<li>Dimension ou nombre d'occurence de la boucle</li>
 </ol>
 <details class="example" open="open">
 <summary>Exemple</summary>
@@ -3433,8 +3437,8 @@ Cela donnera pour chacune des occurences les libellés </p>
 </ol>
 </div>
 <div class="admonition tip">
-<p class="admonition-title">Fonction d'agrégation</p>
-<p>Il est possible de faire intervenir une variable boucle dans une portée questionnaire, il faut cependant utiliser des <a href="../../../VTL/1-fonctions-vtl/#agregation">fonctions d'agrégations</a>. Des exemples se trouvent <a href="../../../VTL/1-fonctions-vtl/#__tabbed_22_1">ici</a></p>
+<p class="admonition-title">Passer d'une vecteur à un scalaire</p>
+<p>Il est possible d’effectuer des opérations d’agrégation sur les valeurs qui composent un vecteur (<a href="../../../VTL/1-fonctions-vtl/#__tabbed_21_4"><code class="highlight"><span class="nf">sum</span><span class="p">()</span></code></a>, <a href="../../../VTL/1-fonctions-vtl/#__tabbed_21_1"><code class="highlight"><span class="nf">count</span><span class="p">()</span></code></a>, ect). Le résulat issue de l'agrégation sera alors utilisable dans une <strong>portée Questionnaire</strong></p>
 </div>
 </details>
 <h3 id="champ-niveau-de-calcul">Champ <em>Niveau de calcul</em></h3>
