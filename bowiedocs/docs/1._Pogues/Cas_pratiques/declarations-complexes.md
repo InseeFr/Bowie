@@ -46,8 +46,7 @@ ou encore :
 "Rappel de la dépense 1 en € : " || nvl(cast($VAR1$,string),"///") || " 
 Dépense 2  : " || nvl(cast($VAR2$,string),"///") || " 
 Dépense 3 : " || nvl(cast($VAR3$,string),"///") || " 
-Dépense 4 : " || nvl(cast($VAR4$,string),"///") ```
-
+Dépense 4 : " || nvl(cast($VAR4$,string),"///")
 ```
 
 !!!note
