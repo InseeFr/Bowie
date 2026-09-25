@@ -77,8 +77,6 @@ Dans l'onglet "Contrôles" de la question du questionnaire à partir de laquelle
         > 7.3                                   // true
         ```
 
-Voir d'autres [exemples](../../VTL/2-guide-vtl.md#quelques-exemples-dutilisation-du-vtl-dans-pogues)
-
 ## Comportements
 
 ### Avertissement (Non bloquant)
