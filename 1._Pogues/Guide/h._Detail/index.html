@@ -101,7 +101,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
     <a href="../../.." title="Atelier de Conception d&#39;Enquêtes (Bowie)" class="md-header__button md-logo" aria-label="Atelier de Conception d'Enquêtes (Bowie)" data-md-component="logo">
       
@@ -203,14 +205,8 @@
     
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
 <nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
@@ -326,7 +322,13 @@
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -3075,6 +3077,8 @@
       
         
       
+        
+      
     
     
       
@@ -3152,6 +3156,29 @@
 
               
             
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../versions/category/pogues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pogues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3207,7 +3234,8 @@
 <li><code class="highlight"><span class="n">Titre</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">questionnaire</span></code> : Libellé du questionnaire</li>
 <li><code class="highlight"><span class="n">Nom</span><span class="w"> </span><span class="n">court</span></code> : Identifiant métier (arbitraire actuellement car pas d'impact sur le reste du processus)</li>
 <li><code class="highlight"><span class="n">Série</span></code> (optionel) : Valeurs provenant d'RMéS. Il faut sélectionner l'enquête correspondante telle que décrite dans <a href="https://gestion-metadonnees.insee.fr/">Bauhaus <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg></span></a></li>
-<li><code class="highlight"><span class="n">DDI</span><span class="w"> </span><span class="n">Agency</span></code> : Non modifiable pour l'instance de l'Insee. Valeur technique pour la génération du DDI </li>
+<li><code class="highlight"><span class="n">DDI</span><span class="w"> </span><span class="n">Agency</span></code> (non modifiable pour l'instance de l'Insee) : Valeur technique pour la génération du DDI </li>
+<li><code class="highlight"><span class="n">Timbre</span></code> : Permet de modifier le timbre de façon autonome, notamment suite à la duplication d'un questionnaire.</li>
 <li><code class="highlight"><span class="n">Mode</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">collecte</span></code> : Quatre modes de collecte sont disponibles, avec la possibilité de sélectionner une ou plusieurs des modalités suivantes<ul>
 <li>CAPI(1)</li>
 <li>CATI(2)</li>
@@ -3330,7 +3358,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes", "navigation.instant.preview", "navigation.tabs", "navigation.path", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes", "navigation.instant.preview", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

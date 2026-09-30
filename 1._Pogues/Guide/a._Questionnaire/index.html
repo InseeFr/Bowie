@@ -101,7 +101,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
     <a href="../../.." title="Atelier de Conception d&#39;Enquêtes (Bowie)" class="md-header__button md-logo" aria-label="Atelier de Conception d'Enquêtes (Bowie)" data-md-component="logo">
       
@@ -203,14 +205,8 @@
     
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
 <nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
@@ -326,7 +322,13 @@
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -3075,6 +3077,8 @@
       
         
       
+        
+      
     
     
       
@@ -3143,6 +3147,29 @@
   
   <span class="md-ellipsis">
     Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../versions/category/pogues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pogues
   </span>
   
 
@@ -3227,6 +3254,10 @@
 
 
 <h1 id="composants-permettant-de-creer-un-questionnaire-dans-pogues">Composants permettant de créer un questionnaire dans Pogues</h1>
+<div class="admonition tip">
+<p class="admonition-title">Bien débuter avec Pogues</p>
+<p>N'hésitez pas non plus à aller faire un tour dans le <a href="../../Tutoriel/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3m6.82 6L12 12.72 5.18 9 12 5.28 18.82 9M17 16l-5 2.72L7 16v-3.73L12 15l5-2.73V16Z"/></svg></span> tutoriel</a> si c'est la première fois que vous faite du Pogues</p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Contrôles d'intégrité du questionnaire</p>
 <ul>
@@ -3235,13 +3266,14 @@
 <li>unicité des identifiants de variables collectées, externes ou calculées</li>
 </ul>
 </div>
+<div class="admonition info">
+<p class="admonition-title">Duplication</p>
+<p>Il est possible de dupliquer un questionnaire via le bouton <code class="highlight"><span class="n">Dupliquer</span></code>. La version du questionnaire ainsi dupliquée s'ouvre dans un nouvel onglet, directement accessible à l'édition.<br />
+De plus, le timbre associé est le même timbre que celui de l'utilisateur.</p>
+</div>
 <div class="admonition danger">
 <p class="admonition-title">Attention lors du déplacement des éléments par glisser/déposer</p>
 <p>Le déplacement d'une séquence ou sous-séquence déplacent aussi les sous-séquences ou questions qui lui sont reliées.</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Comment bien débuter avec Pogues</p>
-<p>N'hésitez pas non plus à aller faire un tour dans le <a href="../../Tutoriel/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3m6.82 6L12 12.72 5.18 9 12 5.28 18.82 9M17 16l-5 2.72L7 16v-3.73L12 15l5-2.73V16Z"/></svg></span> tutoriel</a> si c'est la première fois que vous faite du Pogues</p>
 </div>
 <h2 id="composants-dun-questionnaire">Composants d'un questionnaire</h2>
 <div class="grid cards">
@@ -3387,7 +3419,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes", "navigation.instant.preview", "navigation.tabs", "navigation.path", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.indexes", "navigation.instant.preview", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
