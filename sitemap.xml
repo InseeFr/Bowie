@@ -451,6 +451,46 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://inseefr.github.io/Bowie/versions/2025/08/20/-bowie-1210/</loc>
+         <lastmod>2026-09-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/versions/2025/10/15/-bowie-1220/</loc>
+         <lastmod>2026-09-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/versions/2025/12/04/-bowie-1230/</loc>
+         <lastmod>2026-09-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/versions/2026/01/20/-bowie-1240/</loc>
+         <lastmod>2026-09-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/versions/2026/02/17/-bowie-1250/</loc>
+         <lastmod>2026-09-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/versions/2026/03/04/-bowie-1260/</loc>
+         <lastmod>2026-09-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/versions/2026/05/18/-bowie-1270/</loc>
+         <lastmod>2026-09-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/versions/2026/06/09/-bowie-1280/</loc>
+         <lastmod>2026-09-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://inseefr.github.io/Bowie/versions/2026/06/24/-bowie-1290/</loc>
          <lastmod>2026-09-30</lastmod>
          <changefreq>daily</changefreq>
@@ -466,6 +506,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://inseefr.github.io/Bowie/versions/archive/2025/</loc>
+         <lastmod>2026-09-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://inseefr.github.io/Bowie/versions/category/pogues/</loc>
          <lastmod>2026-09-30</lastmod>
          <changefreq>daily</changefreq>
@@ -477,6 +522,11 @@
     </url>
     <url>
          <loc>https://inseefr.github.io/Bowie/versions/category/bowie/</loc>
+         <lastmod>2026-09-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://inseefr.github.io/Bowie/versions/page/2/</loc>
          <lastmod>2026-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
