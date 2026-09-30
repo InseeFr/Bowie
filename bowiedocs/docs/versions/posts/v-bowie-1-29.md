@@ -2,6 +2,9 @@
 date: 2026-06-24
 categories:
   - Bowie
+tags:
+  - Pogues 3.4.0
+  - Eno
 authors: 
     - bowie_team
 ---

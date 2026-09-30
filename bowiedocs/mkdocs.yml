@@ -29,6 +29,7 @@ theme:
     - navigation.indexes
     - navigation.instant.preview
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.path
     - content.code.copy
     - search.suggest

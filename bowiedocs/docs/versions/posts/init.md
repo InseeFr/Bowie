@@ -9,5 +9,5 @@ authors:
 # ✨ Mise en places des versions dans la documentation Bowie
 
 Initialement postées sur la dépôt GitHub de Bowie github.com/InseeFr/Bowie/releases.
-Permet de regrouper toutes les évolutions liées aux outils de la filière d'enquête.
+Permet de regrouper toutes les évolutions liées aux outils de l'atelier de conception'.
 

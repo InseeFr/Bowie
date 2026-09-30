@@ -1,5 +1,7 @@
 # Composants permettant de créer un questionnaire dans Pogues
 
+!!! tip "Bien débuter avec Pogues"
+    N'hésitez pas non plus à aller faire un tour dans le [:material-school-outline: tutoriel](../../Tutoriel/index.md) si c'est la première fois que vous faite du Pogues
 
 !!! info "Contrôles d'intégrité du questionnaire"
 
@@ -7,12 +9,12 @@
     - unicité des identifiants de question, séquence ou sous-séquence
     - unicité des identifiants de variables collectées, externes ou calculées
 
+!!! info "Duplication"
+    Il est possible de dupliquer un questionnaire via le bouton `Dupliquer`. La version du questionnaire ainsi dupliquée s'ouvre dans un nouvel onglet, directement accessible à l'édition.  
+    De plus, le timbre associé est le même timbre que celui de l'utilisateur.
 
 !!! danger "Attention lors du déplacement des éléments par glisser/déposer"
     Le déplacement d'une séquence ou sous-séquence déplacent aussi les sous-séquences ou questions qui lui sont reliées.
-
-!!! tip "Comment bien débuter avec Pogues"
-    N'hésitez pas non plus à aller faire un tour dans le [:material-school-outline: tutoriel](../../Tutoriel/index.md) si c'est la première fois que vous faite du Pogues
 
 ## Composants d'un questionnaire 
 

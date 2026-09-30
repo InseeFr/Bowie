@@ -6,7 +6,8 @@ Page permettant de saisir les métatonnées du questionnaires. Elle est composé
 - `Titre du questionnaire` : Libellé du questionnaire
 - `Nom court` : Identifiant métier (arbitraire actuellement car pas d'impact sur le reste du processus)
 - `Série` (optionel) : Valeurs provenant d'RMéS. Il faut sélectionner l'enquête correspondante telle que décrite dans [Bauhaus :material-open-in-new:](https://gestion-metadonnees.insee.fr/)
-- `DDI Agency` : Non modifiable pour l'instance de l'Insee. Valeur technique pour la génération du DDI 
+- `DDI Agency` (non modifiable pour l'instance de l'Insee) : Valeur technique pour la génération du DDI 
+- `Timbre` : Permet de modifier le timbre de façon autonome, notamment suite à la duplication d'un questionnaire.
 - `Mode de collecte` : Quatre modes de collecte sont disponibles, avec la possibilité de sélectionner une ou plusieurs des modalités suivantes
     - CAPI(1)
     - CATI(2)
