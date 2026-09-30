@@ -2,16 +2,11 @@
 date: 2026-06-24
 categories:
   - Bowie
-tags:
-  - Pogues 3.4.0
-  - Eno
 authors: 
     - bowie_team
 ---
 
 # 🚀 Bowie 1.29.0 
-
-Des nouveautés et quelques corrections de bugs, en particulier :
 
 🌟 Il est maintenant possible de filtrer les modalités d'un QCU basé sur une variable du questionnaire (collectée, externe ou calculée).
 La formule VTL s'applique en exploitant des variables de portée questionnaire ou de même portée que la variable décrivant les modalités du QCU.
