@@ -80,16 +80,21 @@ Par exemple, pour une variable externe `PRENOM`, on fournira un fichier contenan
 !!! warning "Type des variables externes"
     - Toutes les variables externes sont importées avec en tant que texte (= type `string`). **il faut donc bien penser à utiliser la fonction de [cast()](../../VTL/1-fonctions-vtl.md/#cast) au besoin**  
 
-!!!warning "Maximum 10 UE"
+!!! warning "Maximum 10 UE"
 
     - Un fichier de données ne pourra contenir qu'un maximum de 10 unités enquêtées.
 
 ## Variables externes et pré-remplissage - JSON
 
+!!! warning "Limite de taille pour une valeur"
+    Pour une variable que l'on veut préremplire via le fichier json de perso, une limite de 800 caractère est imposée.
+
 Pour récupérer le fichier json attendu du questionnaire, il suffit de faire
 
-1. une visualisation simple depuis Pogues (ex visualisation Web ménage)
-1. remplir les question que l'on souhaite pré-saisir et télécharger le fichier de données
+=== "Étape 1 - Visualisation"
+    Une visualisation simple depuis Pogues (ex visualisation Web ménage)
+=== "Étape 2 - Saisie des réponses"
+    Remplir les question que l'on souhaite pré-saisir et télécharger le fichier de données
     Ici on saisie des valeurs pour la variable PRENOM qui est dans une boucle
     ![alt text](../../../img/personnalisation/ex-download-collected-data.png)
     un récupère un json de la forme suivante
@@ -117,53 +122,25 @@ Pour récupérer le fichier json attendu du questionnaire, il suffit de faire
         }
     }
     ```
-1. On charge ensuite le fichier
+=== "Étape 3 - Chargement du fichier"
+    On charge ensuite le fichier
 
     ![alt text](../../../img/personnalisation/perso-upload-data.png)
 
     ??? warning "Variables externes manquantes"
-        Dans une visualisation simple depuis Pogues, il n'y a pas de variables externes, donc il n'y en a pas dans le json de données téléchargé non plus. Il faut les ajouter si besoin dans l'attribut `"EXTERNAL"`
+        Détails [ici](4-gestion-des-erreurs-perso.md#variables-externes-manquantes)
 
-        Ex : dans mon cas il me manque la variable externe `ADR` car elle est définie dans mon questionnaire mais pas dans mon fichier json. Un message d'erreur apparait alors au moment de charger le fichier
-        ![alt text](../../../img/personnalisation/perso-upload-json-with-missing-data.png)
-
-        Il suffit de modifier le fichier ane ajoutant un attribut `"ADR"` dans `"EXTERNAL"` pour que cela fonctionne.
-    
-        ```json
-        {
-            "data": {
-                "CALCULATED": {},
-                "EXTERNAL": {
-                    "ADR": "mon adresse"
-                },
-                "COLLECTED": {
-                    "T_NHAB": {
-                        "COLLECTED": 2
-                    },
-                    "T_PRENOM": {
-                        "COLLECTED": [
-                            "Pipo",
-                            "Popi"
-                        ]
-                    }
-                }
-            },
-            "stateData": {
-                "state": "INIT",
-                "date": 1755698985271,
-                "currentPage": "3"
-            }
-        }
-        ```
-
-1. Enfin on valide
+=== "Étape 4 - Validation"
+    Enfin on valide
     ![alt text](../../../img/personnalisation/perso-validate.png)
 
     On clique sur valider dans la pop-up de confirmation pour finaliser la création de la personnalisation 
 
 !!! tip "Plusieurs UE en même temps"
 
-    Il est possible de charger plusieurs UE en même temps. Il suffit d'avoir un fichier json sous forme de liste, `[{"data" : {...}},{"data" : {...}},{"data" : {...}}]` et avec chaque object `{"data" : {...}}` représentant chaque UE.
+    Il est possible de charger **plusieurs UE en même temps**.  
+    Il suffit d'avoir un fichier json sous forme de liste, `[{"data" : {...}},{"data" : {...}},{"data" : {...}}]`  
+    Chaque objet `{"data" : {...}}` représente une UE.
     ```json
     [
         {
