@@ -4,6 +4,8 @@ categories:
   - Bowie
 authors: 
     - bowie_team
+search:
+  boost: 0.29
 ---
 
 # 🚀 Bowie 1.29.0 

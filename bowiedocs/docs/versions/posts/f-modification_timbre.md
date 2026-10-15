@@ -6,6 +6,8 @@ authors:
     - bowie_team
 links:
   - test: index.md
+search:
+  boost: 0.5
 ---
 
 # ✨ Affecter un nouveau timbre à un questionnaire 
